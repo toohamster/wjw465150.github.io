@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>Groovy_Sql_知识点整理.md</title>
+<title>a.md</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
 <!--
@@ -716,163 +716,20 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
 <body>
 <div id="generated-toc"></div>
-<h3 id="groovy-sql-">Groovy Sql 知识点整理</h3>
-<h4 id="-x-sql-">[X] 使用Sql对象查询</h4>
-<pre><code class="brush: groovy">import groovy.sql.*;
-
-Sql sql = new Sql(dataSource)
-或者
-Sql sql = Sql.newInstance("jdbc:mysql://localhost:3306/test", "root",  "xxxxxxx", "com.mysql.jdbc.Driver");
-</code></pre>
-<h4 id="-x-">[X] 处理每一行</h4>
-<pre><code class="brush: groovy">sql.eachRow("select * from user", { println it.id + " -- ${it.username} --"});
-</code></pre>
-<h4 id="-x-">[X] 取第一行</h4>
-<pre><code class="brush: groovy">row = sql.firstRow("select username, password from user")
-println "Row: columnA = ${row.username} and columnB = ${row.password}"
-</code></pre>
-<h4 id="-x-">[X] 获得所有行的集合</h4>
-<pre><code class="brush: groovy">def rows = sql.rows("select * from PROJECT where name like 'Gra%'")
-assert rows.size() == 2
-println rows.join('/n')
-</code></pre>
-<p>输出结果:  </p>
-<blockquote>
-<p>[ID:20, NAME:Grails, URL:<a href="http://grails.org">http://grails.org</a>]<br>[ID:40, NAME:Gradle, URL:<a href="http://gradle.org">http://gradle.org</a>]  </p>
-</blockquote>
-<h4 id="-x-">[X] 插入操作</h4>
-<pre><code class="brush: groovy">username = "yue"
-password = "O'shea"
-
-sql.execute("insert into user (username, password) values (${username}, ${password})")
-
-//another insert demo use prepareStatment
-username = "yue"
-password = "wu"
-
-sql.execute("insert into user (username, password) values (?,?)", [username, password])
-</code></pre>
-<h4 id="-x-">[X] 更新操作</h4>
-<pre><code class="brush: groovy">comment = "test"
-
-sql.executeUpdate("update user set password = ? where id=?", [comment,4])
-</code></pre>
-<blockquote>
-<p>也可以用<code>sql.execute("update user set password = ? where id=?", [comment,4])</code>  </p>
-</blockquote>
-<h4 id="-x-">[X] 删除操作</h4>
-<pre><code class="brush: groovy">sql.execute("delete from word where word_id = ?" , [5])
-</code></pre>
-<h4 id="-x-executeupdate-">[X] executeUpdate(),更新,删除或插入操作</h4>
-<pre><code class="brush: groovy">new File( "foo.csv" ). splitEachLine ( "," ) { params -&gt;
-result = sql.executeUpdate("INSERT INTO cities(CITY_ID,CITY_NAME,/
-            COUNTRY,COUNTRY_ISO_CODE) values(?,?,?,?)",params);
-println "${result} line has been added." ;
-
-
-foo.csv 文件的内容如下:
-88,ShenZhen,China,CN
-89,Ji'an,China,CN
-
-executeUpdate() 返回受影响的行数,每次 insert 只影会一行,所以执行后控制台输出为:
-1 lines has been added
-1 lines has been added
-
-execute(),可用来执行所有的 Sql 语句.它用来执行更新,删除或插入语句后,可用 sql.getUpdateCount() 得到受影响的行数.可惜的是执行查询时没法直接获得查得记录的行数.
-最后,对 GroovySQL 使用的延伸还是必须去看 groovy.sql.Sql 的 API 说明(http://groovy.codehaus.org/gapi/groovy/sql/Sql.html ),还需去关注其他一些方法如:
-executeInsert(),firstRow(),query(),queryEach(), rows(),等各方法的使用,还有 GroovySQL 是如何处理 Blob 类型的.
-</code></pre>
-<h4 id="-x-pojo-">[X] POJO映射</h4>
-<p>如果类的属性和表的字段名一致的话就可以这么做</p>
-<pre><code class="brush: groovy">class Person {  //注意:要没有任何构造函数
-  String name,product;
-  int age;
+<h4 id="-x-">[X] 构造函数</h4>
+<pre><code class="brush: groovy">class Vender {
+  String name,product
 }
 
-//在业务逻辑层就可以这么用直接返回list
-def getPersons() {
-  def persons = []
-  sql.eachRow("Select * from user") {
-    persons &lt;&lt; new Person(it.toRowResult())
-  }
-  return persons
-}
+//用Map来构造
+def v1 = new Vender(['name':'myname1','product':'myproduct1']);
+println v1.properties;
+
+//用命名参数来构造
+def v2 = new Vender('name':'myname2','product':'myproduct2');
+println v2.properties;
 </code></pre>
-<blockquote>
-<p>注意: 属性名一定要跟数据库表里的字段名一模一样(包括大小写)!  </p>
-</blockquote>
-<h4 id="-x-">[X] 调用存储过程</h4>
-<pre><code class="brush: groovy">sql.call("call PA_PPRM_PivotCar.P_Tran(?,?,?)",['3','cheng','m'])
-</code></pre>
-<h4 id="-x-">[X] 事务处理</h4>
-<p>在对数据库进行增加,更新或者删除时,需要考虑事务性,以保证数据的完整性.<br>对于此,Groovy同样提供了一个非常方便的用法.对于需要在同一个事务中完成的代码,<br>可以使用Sql或者DataSet的withTransaction(Closure)方法实现,参见如下代码: </p>
-<pre><code class="brush: groovy">db.withTransaction{ 
-    for (int i=0;i&lt;5;i++){ 
-
-        blogs.add( 
-
-        content:"dateset using"+i, 
-
-        author_id:3, 
-
-        date_created:new Date()) 
-
-    } 
-
-    db.execute ("delete from iblog where i&gt;20")     //第8行
-
-}
-</code></pre>
-<blockquote>
-<p>上述代码中,由于在第8行代码会出错,所以整段代码不会在blog表中插入新的纪录的.读者可以将withTransaction方法去掉,再看看程序运行的结果.   </p>
-</blockquote>
-<h4 id="-x-">[X] 控制事务的另一种方法</h4>
-<pre><code class="brush: groovy">def conn = dataSource.getConnection()
-
-要对事务进行控制,首先要获取数据源的 Connection 对象,不能直接控制 dataSource 对象的 autoCommit 方法,我还没有搞清楚为什么.
-然后是设置 Connection 对象的 autoCommit 为 false ,即由我们自己来控制事务.
-     conn.setAutoCommit( false )
-
-使用 Connection 对象来初始化 Sql 对象.
-       Sql sql = new Sql(conn)
-
-然后是我们属性的事务控制方法, try…catch 语句.
-       try{
-
-然后调用多个存储过程.
-            sql. call ( "call PA_PPRM_PivotCar.P_Tran(?,?,?)" ,[ '3' , 'cheng' , 'm' ])
-            sql. call ( "call PA_PPRM_PivotCar.P_Tran(?,?,?)" ,[ '1' , 'feng' , 'm' ])
-
-commit 事务.
-           conn.commit()
-       catch (java.sql.SQLException e){
-如果失败,则回滚.
-          conn.rollback()
-          throw e;
-      }finally{
-最后,记得关闭 Connection 对象,因为 dataSource 对象会为你自动关闭 Connection 对象,但是你从 dataSource 对象中获取了 Connection 对象的话,就需要你自己关闭 Connection 对象.
-        sql.close()
-        conn.close()
-      }
-</code></pre>
-<blockquote>
-<p>关闭Sql<br>Finally, we should clean up:<br>sql.close()<br>If we are using a DataSource and we haven't enabled statement caching,<br>then strictly speaking the final close() method isn't required - as all connection handling is performed transparently on our behalf;<br>however, it doesn't hurt to have it there as it will return silently in that case.  </p>
-</blockquote>
-<h4 id="-x-dataset">[X] DataSet</h4>
-<p>DataSet将SQL语句隐藏,将数据集放入到一个Map中.可以对这个Map中内容进行查询,增加.请看如下代码:   </p>
-<pre><code class="brush: groovy">def blogs=db.dataSet('blog') /*new DataSet(db, 'blog')或者db.dataSet(Blog)*/  
-blogs.each{ println it } 
-blogs.add(      
-    content:'dateset using', 
-    author_id:3, 
-    date_created:new Date()
-) 
-blogs.findAll {it.id&gt;1 }.sort{it.version desc}.each { println it }
-</code></pre>
-<blockquote>
-<p>从上述代码中可以看到,创建DateSet实例后,就能够获得一个Map,<br>可以对这个Map执行findAll(whereClosure)以及 sort(sortClosure).而这里增加数据使用的是add(Map)方法.<br>DataSet是不是简化了代码?但是DataSet不能取代SQL,DataSet只适用于单一的表,<br>对于更复杂一些的结构比如JOIN返回的结果,就要使用SQL了.比如使用SQL将复杂的结果生成一个视图,之后用DataSet来访问这个视图.  </p>
-</blockquote>
-<h4 id="-x-">[X] 结束!</h4>
+<p>输出:<br>[product:myproduct1, class:class Vender, name:myname1]<br>[product:myproduct2, class:class Vender, name:myname2]  </p>
 
 </body>
 </html>
