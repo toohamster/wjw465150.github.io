@@ -1,6 +1,6 @@
 d = new dTree("d");
 <!--
-d.add("0","-1","Git","my_data/index.html ");
+d.add("0","-1","Git","my_data/default.html");
 d.add("1","0","1. 起步","my_data/ch1-0.html");
 d.add("2","0","2. Git 基础","my_data/ch2-0.html");
 d.add("3","0","3. Git 分支","my_data/ch3-0.html");

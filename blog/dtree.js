@@ -243,11 +243,17 @@ dTree.prototype.node = function(node, nodeId) {
 
 	if (node.url) {
 
-		str += '<a id="s' + this.obj + nodeId + '" class="' + ((this.config.useSelection) ? ((node._is ? 'nodeSel' : 'node')) : 'node') + '" target="body" href="' + node.url + '"';
+		//@wjw_comment: str += '<a id="s' + this.obj + nodeId + '" class="' + ((this.config.useSelection) ? ((node._is ? 'nodeSel' : 'node')) : 'node') + '" target="body" href="' + node.url + '"';
+		str += '<a id="s' + this.obj + nodeId + '" class="' + ((this.config.useSelection) ? ((node._is ? 'nodeSel' : 'node')) : 'node') + '" href="' + node.url + '"';
 
 		if (node.title) str += ' title="' + node.title + '"';
 
-		if (node.target) str += ' target="' + node.target + '"';
+		//@wjw 修复target不起作用问题!
+		if (node.target) {
+		  str += ' target="' + node.target + '"';
+		} else {
+		  str += ' target="body"';
+		}
 
 		if (this.config.useStatusText) str += ' onmouseover="window.status=\'' + node.name + '\';return true;" onmouseout="window.status=\'\';return true;" ';
 
@@ -261,7 +267,7 @@ dTree.prototype.node = function(node, nodeId) {
 
 	else if ((!this.config.folderLinks || !node.url) && node._hc && node.pid != this.root.id)
 
-		str += '<a href="javascript: ' + this.obj + '.o(' + nodeId + ');" class="node">';
+		str += '<a href="javascript: ' + this.obj + '.o(' + nodeId + ');" class="node" title="'+node.name+'">';
 
 	str += node.name;
 
