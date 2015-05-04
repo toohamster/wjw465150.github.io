@@ -722,13 +722,13 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
 <body>
 <div id="generated-toc"></div>
-<h2 id="-wjw-redis-">(WJW)Redis高可用安装笔记</h2>
-<h3 id="-x-">[x] 安装环境介绍:</h3>
+<h2 id="-1-">(WJW)Redis高可用安装笔记</h2>
+<h3 id="-2-">[x] 安装环境介绍:</h3>
 <blockquote>
 <p> Master: T1<br> Slave: T2<br> VIP: 192.168.68.45  </p>
 </blockquote>
 <hr>
-<h3 id="-x-redis-master-slave-">[x] 安装Redis(Master,Slave)</h3>
+<h3 id="-3-">[x] 安装Redis(Master,Slave)</h3>
 <p><strong>注意:</strong> 安装redis前flushall的修改  </p>
 <blockquote>
 <p> 查找<code>src/redis.c</code>文件,把<br>     <code>{"flushdb",flushdbCommand,1,"w",0,NULL,0,0,0,0,0},</code><br>     <code>{"flushall",flushallCommand,1,"w",0,NULL,0,0,0,0,0},</code><br> 修改成:<br>     <code>{"xflushdb",flushdbCommand,1,"w",0,NULL,0,0,0,0,0},</code><br>     <code>{"xflushall",flushallCommand,1,"w",0,NULL,0,0,0,0,0},</code>   </p>
@@ -744,7 +744,7 @@ tar zxvf ./redis-2.8.17.tar.gz
 cd redis-2.8.17
 make PREFIX=/opt/redis install
 </code></pre>
-<h4 id="-x-redis-master-slave-opt-redis-bin-startredis-sh">[x] Redis启动脚本(Master,Slave):/opt/redis/bin/startRedis.sh</h4>
+<h4 id="-4-">[x] Redis启动脚本(Master,Slave):/opt/redis/bin/startRedis.sh</h4>
 <pre><code class="brush: bash">#!/bin/bash
 
 basedir=`dirname $0`
@@ -753,7 +753,7 @@ cd $basedir
 
 nohup ./redis-server ./redis.conf &gt; /dev/null 2&gt;&amp;1 &amp;
 </code></pre>
-<h4 id="-x-redis-master-slave-opt-redis-bin-stopredis-sh">[x] Redis停止脚本(Master,Slave):/opt/redis/bin/StopRedis.sh</h4>
+<h4 id="-5-">[x] Redis停止脚本(Master,Slave):/opt/redis/bin/StopRedis.sh</h4>
 <pre><code class="brush: bash">#!/bin/sh
 
 basedir=`dirname $0`
@@ -762,7 +762,7 @@ cd $basedir
 
 ./redis-cli -h localhost -a 123456 shutdown
 </code></pre>
-<h4 id="-x-redis-master-slave-opt-redis-bin-redis-conf">[x] Redis配置文件(Master,Slave):/opt/redis/bin/redis.conf</h4>
+<h4 id="-6-">[x] Redis配置文件(Master,Slave):/opt/redis/bin/redis.conf</h4>
 <pre><code class="brush: bash">#requirepass 123456
 
 pidfile /opt/redis/bin/redis.pid
@@ -822,7 +822,7 @@ auto-aof-rewrite-min-size 64mb
 #为减少磁盘操作,暂缓重写阶段的磁盘同步
 no-appendfsync-on-rewrite no
 </code></pre>
-<h3 id="-x-keepalived-master-slave-">[x] 安装Keepalived(Master,Slave):</h3>
+<h3 id="-7-">[x] 安装Keepalived(Master,Slave):</h3>
 <pre><code class="brush: bash">#wget http://www.keepalived.org/software/keepalived-1.2.13.tar.gz
 tar zxvf keepalived-1.2.13.tar.gz
 cd ./keepalived-1.2.13
@@ -839,13 +839,13 @@ chkconfig --add keepalived
 #chkconfig --level 35 keepalived on
 #service keepalived start
 </code></pre>
-<h4 id="-x-notify_-">[x]  notify_*解释</h4>
+<h4 id="-8-">[x]  notify_*解释</h4>
 <pre><code class="brush: text">Keepalived在转换状态时会依照状态来呼叫:
 当进入Master状态时会呼叫notify_master
 当进入Backup状态时会呼叫notify_backup
 当发现异常情况时(track_script,track_interface失败)进入Fault状态呼叫notify_fault
 当Keepalived程序终止时则呼叫notify_stop
-</code></pre><h4 id="-x-master-">[x] 在Master上创建如下配置文件:</h4>
+</code></pre><h4 id="-9-">[x] 在Master上创建如下配置文件:</h4>
 <p><code>vim /etc/keepalived/keepalived.conf</code></p>
 <pre><code class="brush: text">! Configuration File for keepalived
 
@@ -888,7 +888,7 @@ vrrp_instance VI_1 {
     notify_fault  /etc/keepalived/scripts/redis_fault.sh
     notify_stop   /etc/keepalived/scripts/redis_stop.sh
 }
-</code></pre><h4 id="-x-slave-">[x] 在Slave上创建如下配置文件:</h4>
+</code></pre><h4 id="-10-">[x] 在Slave上创建如下配置文件:</h4>
 <p><code>vim /etc/keepalived/keepalived.conf</code></p>
 <pre><code class="brush: text">! Configuration File for keepalived
 
@@ -931,7 +931,7 @@ vrrp_instance VI_1 {
     notify_fault  /etc/keepalived/scripts/redis_fault.sh
     notify_stop   /etc/keepalived/scripts/redis_stop.sh
 }
-</code></pre><h4 id="-x-master-slave-redis-">[x] 在Master和Slave上创建监控Redis的脚本:</h4>
+</code></pre><h4 id="-11-">[x] 在Master和Slave上创建监控Redis的脚本:</h4>
 <p><code>mkdir /etc/keepalived/scripts/</code>
 <code>vi /etc/keepalived/scripts/redis_check.sh</code></p>
 <pre><code class="brush: bash">#!/bin/bash
@@ -947,7 +947,7 @@ else
   exit 1
 fi
 </code></pre>
-<h4 id="-x-master-slave-notify_fault-notify_stop-">[x] 在Master与Slave创建如下脚本<code>notify_fault</code>和<code>notify_stop</code>:</h4>
+<h4 id="-12-">[x] 在Master与Slave创建如下脚本<code>notify_fault</code>和<code>notify_stop</code>:</h4>
 <p><code>vim /etc/keepalived/scripts/redis_fault.sh</code></p>
 <pre><code class="brush: bash">#!/bin/bash
 
@@ -964,7 +964,7 @@ LOGFILE=/var/log/keepalived-redis-state.log
 
 echo "${C_DATE} [stop]" &gt;&gt; $LOGFILE
 </code></pre>
-<h4 id="-x-master-notity_master-notify_backup-">[x] 在Master上创建<code>notity_master</code>与<code>notify_backup</code>脚本:</h4>
+<h4 id="-13-">[x] 在Master上创建<code>notity_master</code>与<code>notify_backup</code>脚本:</h4>
 <p><code>vim /etc/keepalived/scripts/redis_master.sh</code></p>
 <pre><code class="brush: bash">#!/bin/bash
 
@@ -999,7 +999,7 @@ echo "${C_DATE} [backup]" &gt;&gt; $LOGFILE
 echo "Run SLAVEOF cmd ..." &gt;&gt; $LOGFILE
 $REDISCLI SLAVEOF T2 6379 &gt;&gt; $LOGFILE  2&gt;&amp;1
 </code></pre>
-<h4 id="-x-slave-notity_master-notify_backup-">[x] 在Slave上创建<code>notity_master</code>与<code>notify_backup</code>脚本:</h4>
+<h4 id="-14-">[x] 在Slave上创建<code>notity_master</code>与<code>notify_backup</code>脚本:</h4>
 <p><code>vim /etc/keepalived/scripts/redis_master.sh</code></p>
 <pre><code class="brush: bash">#!/bin/bash
 
@@ -1034,9 +1034,9 @@ echo "${C_DATE} [backup]" &gt;&gt; $LOGFILE
 echo "Run SLAVEOF cmd ..." &gt;&gt; $LOGFILE
 $REDISCLI SLAVEOF T1 6379 &gt;&gt; $LOGFILE  2&gt;&amp;1
 </code></pre>
-<h4 id="-x-master-slave-">[x] 在Master和Slave上,给监控脚本都加上可执行权限:</h4>
+<h4 id="-15-">[x] 在Master和Slave上,给监控脚本都加上可执行权限:</h4>
 <p><code>chmod +x /etc/keepalived/scripts/*.sh</code></p>
-<h3 id="-x-">[x] 启动步骤:</h3>
+<h3 id="-16-">[x] 启动步骤:</h3>
 <ol>
 <li><p>启动Master上的Redis
 <code>/opt/redis/bin/startRedis.sh</code></p>

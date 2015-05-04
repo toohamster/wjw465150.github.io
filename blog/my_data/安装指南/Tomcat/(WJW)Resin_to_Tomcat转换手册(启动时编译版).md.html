@@ -722,34 +722,34 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
 <body>
 <div id="generated-toc"></div>
-<h2 id="-wjw-resin_to_tomcat-">(WJW)Resin_to_Tomcat转换手册(启动时编译版)</h2>
-<h4 id="-x-etc-hosts-">[x] <code>/etc/hosts</code>文件里添加:</h4>
+<h2 id="-1-">(WJW)Resin_to_Tomcat转换手册(启动时编译版)</h2>
+<h4 id="-2-">[x] <code>/etc/hosts</code>文件里添加:</h4>
 <blockquote>
 <p>192.168.1.200   youyuan-baby<br>192.168.1.200   sqs-youyuan-baby<br>192.168.1.200   solr-youyuan-baby  </p>
 </blockquote>
-<h4 id="-x-tomcat_youyuan-tar-gz-opt-app-">[x] 解压<code>tomcat_youyuan.tar.gz</code>文件到<code>/opt/app/</code>目录下:</h4>
+<h4 id="-3-">[x] 解压<code>tomcat_youyuan.tar.gz</code>文件到<code>/opt/app/</code>目录下:</h4>
 <blockquote>
 <p>tar zxvf tomcat_youyuan.tar.gz</p>
 </blockquote>
-<h4 id="-x-opt-app-tomcat_youyuan-lib-">[x] 检查 <code>/opt/app/tomcat_youyuan/lib/</code>目录下是否有以下文件:</h4>
+<h4 id="-4-">[x] 检查 <code>/opt/app/tomcat_youyuan/lib/</code>目录下是否有以下文件:</h4>
 <pre><code class="brush: text">wjw-org.glassfish.jsp.api-2.2.2.v201112011158.jar
 wjw-ResinJndiDBPool.jar
-</code></pre><h4 id="-x-opt-app-tomcat_youyuan-conf-3-">[x] 检查<code>/opt/app/tomcat_youyuan/conf/</code>目录里是否有以下3个文件:</h4>
+</code></pre><h4 id="-5-">[x] 检查<code>/opt/app/tomcat_youyuan/conf/</code>目录里是否有以下3个文件:</h4>
 <pre><code class="brush: text">db_pool.properties  
 logging.properties  
 resin.xml
-</code></pre><h4 id="-x-opt-app-tomcat_youyuan-conf-server-xml-">[x] 编辑:<code>/opt/app/tomcat_youyuan/conf/server.xml</code>文件,添加:</h4>
+</code></pre><h4 id="-6-">[x] 编辑:<code>/opt/app/tomcat_youyuan/conf/server.xml</code>文件,添加:</h4>
 <pre><code class="brush: xml">        &lt;Context displayName="youyuan" docBase="/opt/app/htdocs/" path="" sessionCookieDomain=".youyuan.com"/&gt;
 </code></pre>
-<h4 id="-x-opt-app-tomcat_youyuan-conf-web-xml-checkinterval-0-">[x] 编辑:<code>/opt/app/tomcat_youyuan/conf/web.xml</code>文件,修改: <code>checkInterval为0</code></h4>
+<h4 id="-7-">[x] 编辑:<code>/opt/app/tomcat_youyuan/conf/web.xml</code>文件,修改: <code>checkInterval为0</code></h4>
 <pre><code class="brush: xml">        &lt;init-param&gt;
             &lt;param-name&gt;checkInterval&lt;/param-name&gt;
             &lt;param-value&gt;0&lt;/param-value&gt;
         &lt;/init-param&gt;
 </code></pre>
-<h4 id="-x-webapp-opt-app-htdocs-">[x] 把有缘的webapp文件复制到<code>/opt/app/htdocs/</code>目录下</h4>
-<h4 id="-x-wjw-hessian-4-0-38-jar-wjw-ant-jsp-jar-htdocs-web-inf-lib-">[x]  复制文件: <code>wjw-hessian-4.0.38.jar,wjw-ant-jsp.jar</code>到<code>htdocs/WEB-INF/lib/</code>目录下</h4>
-<h4 id="-x-htdocs-web-inf-web-xml-">[x] <code>htdocs/WEB-INF/web.xml</code>文件里</h4>
+<h4 id="-8-">[x] 把有缘的webapp文件复制到<code>/opt/app/htdocs/</code>目录下</h4>
+<h4 id="-9-">[x]  复制文件: <code>wjw-hessian-4.0.38.jar,wjw-ant-jsp.jar</code>到<code>htdocs/WEB-INF/lib/</code>目录下</h4>
+<h4 id="-10-">[x] <code>htdocs/WEB-INF/web.xml</code>文件里</h4>
 <ul>
 <li>替换: <code>&lt;web-app xmlns="http://caucho.com/ns/resin"         xmlns:resin="http://caucho.com/ns/resin/core"&gt;</code>
 为:<pre><code class="brush: xml">&lt;web-app xmlns="http://java.sun.com/xml/ns/javaee"

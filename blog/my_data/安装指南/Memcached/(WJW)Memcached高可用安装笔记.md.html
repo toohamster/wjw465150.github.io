@@ -722,17 +722,20 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
 <body>
 <div id="generated-toc"></div>
-<h2 id="-wjw-memcached-">(WJW)Memcached高可用安装笔记</h2>
-<h3 id="-x-">[x] 安装环境介绍:</h3>
+<h2 id="-1-">(WJW)Memcached高可用安装笔记</h2>
+<h3 id="-2-">[x] 安装环境介绍:</h3>
 <blockquote>
 <p> Master: T1<br> Slave: T2<br> VIP: 192.168.68.46  </p>
 </blockquote>
 <hr>
 <blockquote>
-<p> memcached-1.2.8-repcached-2.2.1,是memcached1.2.x的扩展，目的是实现memcached的数据复制属性，来实现memcached的数据备份。该扩展可以使memcached通过异步数据复制实现memcached的数据复制/备份功能，同时支持Memcached的所有操作指令。<br> 它是一个单master单slave的方案,但它的 master/slave都是可读写的,而且可以相互同步,依赖libevent-1.4.X库,不能使用libevent-2.X库<br> 但是要注意安装memcached后, 如果再安装repcached的完整安装包,会有冲突.<br> 如果已经安装了memcached,打算换成repcached,卸载memcached,然后安装完整repcached包<br> 如果安装的系统是64位的,可以增加选项: --enable-64bit<br> 注意: memcached-repcached只支持文本协议!  </p>
+<p> memcached-1.4.13-repcached-2.3.1,是memcached1.4.x的扩展，目的是实现memcached的数据复制属性，来实现memcached的数据备份。该扩展可以使memcached通过异步数据复制实现memcached的数据复制/备份功能，同时支持Memcached的所有操作指令。<br> 它是一个单master单slave的方案,但它的 master/slave都是可读写的,而且可以相互同步,依赖libevent-1.4.X库,不能使用libevent-2.X库<br> 但是要注意安装memcached后, 如果再安装repcached的完整安装包,会有冲突.<br> 如果已经安装了memcached,打算换成repcached,卸载memcached,然后安装完整repcached包<br> 如果安装的系统是64位的,可以增加选项: --enable-64bit<br> 注意: memcached-repcached只支持文本协议!  </p>
 </blockquote>
-<h3 id="-x-memcached-repcached-master-slave-">[x] 安装Memcached的repcached版本(Master,Slave)</h3>
-<h4 id="1-libevent-http-www-monkey-org-provos-libevent-1-4-13-stable-tar-gz-">1.安装libevent(<a href="http://www.monkey.org/~provos/libevent-1.4.13-stable.tar.gz">http://www.monkey.org/~provos/libevent-1.4.13-stable.tar.gz</a>)</h4>
+<h3 id="-3-">[x] 安装Memcached的repcached版本(Master,Slave)</h3>
+<h4 id="-4-">0.安装依赖工具</h4>
+<pre><code class="brush: bash">yum install automake autoconf libtool
+</code></pre>
+<h4 id="-5-">1.安装libevent(<a href="http://www.monkey.org/~provos/libevent-1.4.13-stable.tar.gz">http://www.monkey.org/~provos/libevent-1.4.13-stable.tar.gz</a>)</h4>
 <pre><code class="brush: bash">tar -zxvf libevent-1.4.13-stable.tar.gz
 cd libevent-1.4.13-stable
 ./configure --prefix=/usr/local
@@ -742,9 +745,23 @@ make
 make install
 cd ..
 </code></pre>
-<h4 id="2-memcached-repcached-http-downloads-sourceforge-net-repcached-memcached-1-2-8-repcached-2-2-1-tar-gz-">2.安装memcached-repcached(<a href="http://downloads.sourceforge.net/repcached/memcached-1.2.8-repcached-2.2.1.tar.gz">http://downloads.sourceforge.net/repcached/memcached-1.2.8-repcached-2.2.1.tar.gz</a>)</h4>
-<pre><code class="brush: bash">tar -zxvf memcached-1.2.8-repcached-2.2.1.tar.gz
-cd memcached-1.2.8-repcached-2.2.1
+<h4 id="-6-">2.安装memcached-repcached</h4>
+<p>集成补丁的安装:</p>
+<pre><code class="brush: bash">tar -zxvf memcached-1.4.13-repcached-2.3.1.tar.gz
+cd memcached-1.4.13-repcached-2.3.1
+./configure --with-libevent=/usr/local/lib/ --enable-replication --enable-64bit
+make uninstall
+make clean
+make
+make install
+</code></pre>
+<p>或者,直接打补丁安装:</p>
+<pre><code class="brush: bash">wget http://mdounin.ru/files/repcached-2.3.1-1.4.13.patch.gz  
+wget http://memcached.googlecode.com/files/memcached-1.4.13.tar.gz  
+gzip -d repcached-2.3.1-1.4.13.patch.gz
+tar xzvf memcached-1.4.13.tar.gz
+patch -p0 -i repcached-2.3.1-1.4.13.patch    #对memcached源码进行patch
+cd memcached-1.4.13
 ./configure --with-libevent=/usr/local/lib/ --enable-replication --enable-64bit
 make uninstall
 make clean
@@ -771,7 +788,7 @@ make[2]: *** [memcached-memcached.o] 错误 1
 # define IOV_MAX 1024
 #endif
 </code></pre><p><strong>注意:如果运行<code>/usr/local/bin/memcached -h</code>的时候报错:<code>找不到libevent</code></strong><br>执行: <code>ln -s /usr/local/lib/libevent-1.4.so.2 /usr/lib64/libevent-1.4.so.2</code><br>技巧: <code>执行ldd /usr/local/bin/memcached</code>,看缺少那些库!  </p>
-<h4 id="3-master-memcached-etc-rc-d-init-d-memcached-unix-">3. Master上的Memcached启动停止脚本:/etc/rc.d/init.d/memcached(注意:文件格式一定要是unix的)</h4>
+<h4 id="-7-">3. Master上的Memcached启动停止脚本:/etc/rc.d/init.d/memcached(注意:文件格式一定要是unix的)</h4>
 <p>编辑: <code>vi /etc/rc.d/init.d/memcached</code></p>
 <pre><code class="brush: bash">#!/bin/sh
 #
@@ -835,7 +852,7 @@ exit 0
 chkconfig --add memcached
 #chkconfig --level 35 memcached on
 </code></pre>
-<h4 id="4-slave-memcached-etc-rc-d-init-d-memcached-unix-">4. Slave上的Memcached启动停止脚本:/etc/rc.d/init.d/memcached(注意:文件格式一定要是unix的)</h4>
+<h4 id="-8-">4. Slave上的Memcached启动停止脚本:/etc/rc.d/init.d/memcached(注意:文件格式一定要是unix的)</h4>
 <p>编辑: <code>vi /etc/rc.d/init.d/memcached</code></p>
 <pre><code class="brush: bash">#!/bin/sh
 #
@@ -898,7 +915,7 @@ exit 0
 <pre><code class="brush: text">chmod +x /etc/rc.d/init.d/memcached
 chkconfig --add memcached
 #chkconfig --level 35 memcached on
-</code></pre><h3 id="-x-keepalived-master-slave-">[x] 安装Keepalived(Master,Slave):</h3>
+</code></pre><h3 id="-9-">[x] 安装Keepalived(Master,Slave):</h3>
 <pre><code class="brush: bash">#wget http://www.keepalived.org/software/keepalived-1.2.13.tar.gz
 tar zxvf keepalived-1.2.13.tar.gz
 cd ./keepalived-1.2.13
@@ -914,13 +931,13 @@ cp /usr/local/etc/keepalived/keepalived.conf /etc/keepalived/
 chkconfig --add keepalived
 #chkconfig --level 35 keepalived on
 </code></pre>
-<h4 id="-x-notify_-">[x]  notify_*解释</h4>
+<h4 id="-10-">[x]  notify_*解释</h4>
 <pre><code class="brush: text">Keepalived在转换状态时会依照状态来呼叫：
 当进入Master状态时会呼叫notify_master
 当进入Backup状态时会呼叫notify_backup
 当发现异常情况时(track_script,track_interface失败)进入Fault状态呼叫notify_fault
 当Keepalived程序终止时则呼叫notify_stop
-</code></pre><h4 id="-x-master-">[x] 在Master上创建如下配置文件：</h4>
+</code></pre><h4 id="-11-">[x] 在Master上创建如下配置文件：</h4>
 <p><code>vim /etc/keepalived/keepalived.conf</code></p>
 <pre><code class="brush: text">! Configuration File for keepalived
 
@@ -963,7 +980,7 @@ vrrp_instance VI_1 {
     notify_fault  /etc/keepalived/scripts/memcached_fault.sh
     notify_stop   /etc/keepalived/scripts/memcached_stop.sh
 }
-</code></pre><h4 id="-x-slave-">[x] 在Slave上创建如下配置文件：</h4>
+</code></pre><h4 id="-12-">[x] 在Slave上创建如下配置文件：</h4>
 <p><code>vim /etc/keepalived/keepalived.conf</code></p>
 <pre><code class="brush: text">! Configuration File for keepalived
 
@@ -1006,8 +1023,8 @@ vrrp_instance VI_1 {
     notify_fault  /etc/keepalived/scripts/memcached_fault.sh
     notify_stop   /etc/keepalived/scripts/memcached_stop.sh
 }
-</code></pre><h4 id="-x-master-slave-memcached-">[x] 在Master和Slave上创建监控memcached的脚本:</h4>
-<h5 id="chk_memcached">chk_memcached</h5>
+</code></pre><h4 id="-13-">[x] 在Master和Slave上创建监控memcached的脚本:</h4>
+<h5 id="-14-">chk_memcached</h5>
 <p><code>mkdir /etc/keepalived/scripts/</code>
 <code>vi /etc/keepalived/scripts/memcached_check.sh</code></p>
 <pre><code class="brush: bash">#!/bin/bash
@@ -1024,7 +1041,7 @@ else
  exit 1
 fi
 </code></pre>
-<h5 id="notity_master">notity_master</h5>
+<h5 id="-15-">notity_master</h5>
 <p><code>vim /etc/keepalived/scripts/memcached_master.sh</code></p>
 <pre><code class="brush: bash">#!/bin/bash
 
@@ -1033,7 +1050,7 @@ LOGFILE="/var/log/keepalived-memcached-state.log"
 
 echo "${C_DATE} [master]" &gt;&gt; $LOGFILE
 </code></pre>
-<h5 id="notify_backup">notify_backup</h5>
+<h5 id="-16-">notify_backup</h5>
 <p><code>vim /etc/keepalived/scripts/memcached_backup.sh</code></p>
 <pre><code class="brush: bash">#!/bin/bash
 
@@ -1042,7 +1059,7 @@ LOGFILE="/var/log/keepalived-memcached-state.log"
 
 echo "${C_DATE} [backup]" &gt;&gt; $LOGFILE
 </code></pre>
-<h5 id="notify_fault">notify_fault</h5>
+<h5 id="-17-">notify_fault</h5>
 <p><code>vim /etc/keepalived/scripts/memcached_fault.sh</code></p>
 <pre><code class="brush: bash">#!/bin/bash
 
@@ -1051,7 +1068,7 @@ LOGFILE=/var/log/keepalived-memcached-state.log
 
 echo "${C_DATE} [fault]" &gt;&gt; $LOGFILE
 </code></pre>
-<h5 id="notify_stop">notify_stop</h5>
+<h5 id="-18-">notify_stop</h5>
 <p><code>vim /etc/keepalived/scripts/memcached_stop.sh</code></p>
 <pre><code class="brush: bash">#!/bin/bash
 
@@ -1060,9 +1077,9 @@ LOGFILE=/var/log/keepalived-memcached-state.log
 
 echo "${C_DATE} [stop]" &gt;&gt; $LOGFILE
 </code></pre>
-<h4 id="-x-">[x] 给监控脚本都加上可执行权限：</h4>
+<h4 id="-19-">[x] 给监控脚本都加上可执行权限：</h4>
 <p><code>chmod +x /etc/keepalived/scripts/*.sh</code></p>
-<h3 id="-x-">[x] 启动步骤:</h3>
+<h3 id="-20-">[x] 启动步骤:</h3>
 <ol>
 <li><p>启动Master上的Memcached
 <code>service memcached start</code></p>
@@ -1077,8 +1094,8 @@ echo "${C_DATE} [stop]" &gt;&gt; $LOGFILE
 <code>service keepalived start</code></p>
 </li>
 </ol>
-<h3 id="-x-">[X] 附录:</h3>
-<h4 id="1-memcache">1.手工启动memcache</h4>
+<h3 id="-21-">[X] 附录:</h3>
+<h4 id="-22-">1.手工启动memcache</h4>
 <pre><code class="brush: text">#这里的-u memcache 必须与启动memcached 进程的用户保持一直，否则无法完成复制！
 主节点1: (11311是服务监听端口,11411是数据同步端口;-x 指定replicaIP,-X指定replica监听端口) 
 /usr/local/bin/memcached -m 200 -v -u root -l 0.0.0.0 -p 11311 -X 11411 -x ${主节点2}

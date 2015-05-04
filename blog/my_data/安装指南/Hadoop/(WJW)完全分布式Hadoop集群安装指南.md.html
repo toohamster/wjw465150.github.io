@@ -728,7 +728,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
 <body>
 <div id="generated-toc"></div>
-<h1 id="-wjw-hadoop-hdfs-mapreduce-">(WJW)高可用,完全分布式Hadoop集群HDFS和MapReduce安装配置指南</h1>
+<h1 id="-1-">(WJW)高可用,完全分布式Hadoop集群HDFS和MapReduce安装配置指南</h1>
 <blockquote>
 <p>为了部署HA集群,应该准备以下事情:    </p>
 <ul>
@@ -737,7 +737,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 </ul>
 </blockquote>
 <hr>
-<h2 id="-x-">[X] 安装环境:</h2>
+<h2 id="-2-">[X] 安装环境:</h2>
 <ul>
 <li>系统版本:CentOS 6.3 x86_64</li>
 <li>JAVA版本:JDK-1.7.0_25</li>
@@ -793,19 +793,19 @@ ntpq -p
 </li>
 </ul>
 <hr>
-<h2 id="-x-hadoop">[X] 编译hadoop</h2>
+<h2 id="-3-">[X] 编译hadoop</h2>
 <p>在hadoop84上操作</p>
-<h3 id="-1-hadoop-2-2-0-src-tar-gz-hadoop84-opt-">[1] 拷贝<code>hadoop-2.2.0-src.tar.gz</code>到hadoop84的<code>/opt</code>目录下,然后执行:</h3>
+<h3 id="-4-">[1] 拷贝<code>hadoop-2.2.0-src.tar.gz</code>到hadoop84的<code>/opt</code>目录下,然后执行:</h3>
 <pre><code class="brush: bash">cd /opt
 tar zxvf ./hadoop-2.2.0-src.tar.gz
 </code></pre>
-<h3 id="-2-yum-">[2] YUM安装依赖库:</h3>
+<h3 id="-5-">[2] YUM安装依赖库:</h3>
 <pre><code class="brush: bash">yum install autoconfautomake libtool cmake zlib-devel
 yum install ncurses-devel
 yum install openssl-devel
 yum install gcc*
 </code></pre>
-<h3 id="-3-protobuf">[3] 下载并安装配置:protobuf</h3>
+<h3 id="-6-">[3] 下载并安装配置:protobuf</h3>
 <pre><code class="brush: bash">cd /tmp
 wget http://protobuf.googlecode.com/files/protobuf-2.5.0.tar.gz
 tar -zxvf protobuf-2.5.0.tar.gz
@@ -816,12 +816,12 @@ make install
 ldconfig
 rm -rf /tmp/protobuf-2.5.0/
 </code></pre>
-<h3 id="-4-findbugs">[4] 下载并配置:findbugs</h3>
+<h3 id="-7-">[4] 下载并配置:findbugs</h3>
 <pre><code class="brush: bash">http://sourceforge.net/projects/findbugs/files/findbugs/2.0.2/findbugs-2.0.2.tar.gz/download
 解压:tar -zxvf ./findbugs-2.0.2.tar.gz
 配置环境变量FINDBUGS_HOME: export FINDBUGS_HOME=/path to your extract directory  #例如: export FINDBUGS_HOME=/opt/findbugs-2.0.2
 </code></pre>
-<h3 id="-5-hadoop">[5] 构建二进制版Hadoop</h3>
+<h3 id="-8-">[5] 构建二进制版Hadoop</h3>
 <pre><code class="brush: text">编辑`/opt/hadoop-2.2.0-src/hadoop-common-project/hadoop-auth/pom.xml`文件,
 在
     &lt;dependency&gt;
@@ -846,8 +846,8 @@ mvn package -Pdist,native,docs -DskipTests -Dtar
 <p>注意: 不要使用最新的Maven3.1.x和Maven3.2.x,与Maven3.0.x存在兼容性问题,所以老是出现java.lang.NoClassDefFoundError: org/sonatype/aether/graph/DependencyFilter之类的错误.    </p>
 </blockquote>
 <hr>
-<h2 id="-x-hadoop">[X] 安装Hadoop</h2>
-<h3 id="-1-">[1] 解压</h3>
+<h2 id="-9-">[X] 安装Hadoop</h2>
+<h3 id="-10-">[1] 解压</h3>
 <pre><code class="brush: text">cp /opt/hadoop-2.2.0-src/hadoop-dist/target/hadoop-2.2.0.tar.gz /opt
 cd /opt
 tar -zxvf ./hadoop-2.2.0.tar.gz
@@ -855,7 +855,7 @@ mv hadoop-2.2.0  /opt/hadoop
 </code></pre><blockquote>
 <p>注意: 先在namenode服务器上都安装hadoop版本即可,datanode先不用安装,待会修改完配置后统一安装datanode!    </p>
 </blockquote>
-<h3 id="-2-">[2] 配置环境变量</h3>
+<h3 id="-11-">[2] 配置环境变量</h3>
 <p>修改<code>/opt/hadoop/libexec/hadoop-config.sh</code>,在最前面添加:</p>
 <pre><code class="brush: bash">#-&gt;@wjw_add
 export JAVA_HOME=/usr/java/default
@@ -869,9 +869,9 @@ export YARN_LOG_DIR=${HADOOP_LOG_DIR}
 <blockquote>
 <p><code>hadoop-config.sh</code>会被其他所有的脚本来调用,可以把环境变量,JVM参数等都配置在这里!  </p>
 </blockquote>
-<h2 id="-x-hadoop">[X] 配置Hadoop</h2>
+<h2 id="-12-">[X] 配置Hadoop</h2>
 <p>先在<code>hdaoop84</code>上配置,我们需要修改如下几个地方:    </p>
-<h3 id="-1-opt-hadoop-etc-hadoop-core-site-xml-">[1] 修改<code>/opt/hadoop/etc/hadoop/core-site.xml</code>,内容为如下:</h3>
+<h3 id="-13-">[1] 修改<code>/opt/hadoop/etc/hadoop/core-site.xml</code>,内容为如下:</h3>
 <pre><code class="brush: xml">&lt;?xml version="1.0"?&gt;
 &lt;?xml-stylesheet type="text/xsl" href="configuration.xsl"?&gt;
 &lt;configuration&gt;
@@ -888,7 +888,7 @@ export YARN_LOG_DIR=${HADOOP_LOG_DIR}
 <blockquote>
 <p><code>fs.default.name</code> 因为我们会启动2个namenode,每个namenode的位置不一样,那么切换后,用户也要修改代码,很麻烦,<br>因此<code>fs.default.name</code>使用一个逻辑路径,用户就可以不必担心namenode切换带来的路径不一致问题了.<br><code>hadoop.tmp.dir</code> 是hadoop文件系统依赖的基础配置,很多路径都依赖它.如果hdfs-site.xml中不配 置namenode和datanode的存放位置,默认就放在这个路径中.  </p>
 </blockquote>
-<h3 id="-2-opt-hadoop-etc-hadoop-hdfs-site-xml-">[2] 修改<code>/opt/hadoop/etc/hadoop/hdfs-site.xml</code>,内容如下:</h3>
+<h3 id="-14-">[2] 修改<code>/opt/hadoop/etc/hadoop/hdfs-site.xml</code>,内容如下:</h3>
 <pre><code class="brush: xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;?xml-stylesheet type="text/xsl" href="configuration.xsl"?&gt;
 &lt;configuration&gt;
@@ -953,7 +953,7 @@ export YARN_LOG_DIR=${HADOOP_LOG_DIR}
 <blockquote>
 <p><code>dfs.replication</code> HDFS文件的副本数.如果你只有3个datanode,但是你却指定副本数为4,是不会生效的,因为每个datanode上只能存放一个副本.<br><code>dfs.namenode.name.dir</code> namenode的数据的存放位置<br><code>dfs.datanode.data.dir</code> namenode的数据的存放位置<br><code>dfs.nameservices</code> 命名空间的逻辑名称.如果使用HDFS Federation,可以配置多个命名空间的名称,使用逗号分开即可.<br><code>dfs.ha.namenodes.[nameservice ID]</code> 命名空间中所有namenode的唯一标示名称.可以配置多个,使用逗号分隔.该名称是可以让datanode知道每个集群的所有namenode.当前,每个集群最多只能配置两个namenode.<br><code>dfs.namenode.rpc-address.[nameservice ID].[namenode ID]</code> 每个namenode监听的RPC地址<br><code>dfs.namenode.http-address.[nameservice ID].[namenode ID]</code> 每个namenode监听的http地址<br><code>dfs.namenode.shared.edits.dir</code> 这是namenode读写JNS组的uri.通过这个uri,namenodes可以读写edit log内容.URI的格式"qjournal://host1:port1;host2:port2;host3:port3/journalId".<br> 这里的host1,host2,host3指的是Journal Node的地址,这里必须是奇数个,至少3个;其中journalId是集群的唯一标识符,对于多个联邦命名空间,也使用同一个journalId.<br><code>dfs.client.failover.proxy.provider.[nameservice ID]</code> 这里配置HDFS客户端连接到Active namenode的一个java类.<br><code>dfs.ha.fencing.methods</code> 配置active namenode出错时的处理类.当active namenode出错时,一般需要关闭该进程.处理方式可以是ssh也可以是shell.推荐使用ssh!<br><code>fs.journalnode.edits.dir</code> 这是journalnode进程保持逻辑状态的路径.这是在linux服务器文件的绝对路径.    </p>
 </blockquote>
-<h3 id="-3-opt-hadoop-etc-hadoop-yarn-site-xml-">[3] 修改<code>/opt/hadoop/etc/hadoop/yarn-site.xml</code>,内容如下:</h3>
+<h3 id="-15-">[3] 修改<code>/opt/hadoop/etc/hadoop/yarn-site.xml</code>,内容如下:</h3>
 <pre><code class="brush: text">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;configuration&gt;
   &lt;property&gt;
@@ -968,7 +968,7 @@ export YARN_LOG_DIR=${HADOOP_LOG_DIR}
 </code></pre><blockquote>
 <p><code>yarn.resourcemanager.hostname</code> 指的是运行ResourceManager机器所在的节点.<br><code>yarn.nodemanager.aux-services</code> 在hadoop2.2.0版本中是mapreduce_shuffle,一定要看清楚.</p>
 </blockquote>
-<h3 id="-4-opt-hadoop-etc-hadoop-mapred-site-xml-template-">[4] 修改<code>/opt/hadoop/etc/hadoop/mapred-site.xml.template</code>,内容如下:</h3>
+<h3 id="-16-">[4] 修改<code>/opt/hadoop/etc/hadoop/mapred-site.xml.template</code>,内容如下:</h3>
 <p>先执行:<code>cp /opt/hadoop/etc/hadoop/mapred-site.xml.template /opt/hadoop/etc/hadoop/mapred-site.xml</code>    </p>
 <pre><code class="brush: text">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;?xml-stylesheet type="text/xsl" href="configuration.xsl"?&gt;
@@ -981,14 +981,14 @@ export YARN_LOG_DIR=${HADOOP_LOG_DIR}
 </code></pre><blockquote>
 <p><code>mapreduce.framework.name</code> 指的是使用yarn运行mapreduce程序.    </p>
 </blockquote>
-<h3 id="-5-opt-hadoop-etc-hadoop-slaves-">[5] 修改<code>/opt/hadoop/etc/hadoop/slaves</code>,内容如下:</h3>
+<h3 id="-17-">[5] 修改<code>/opt/hadoop/etc/hadoop/slaves</code>,内容如下:</h3>
 <pre><code class="brush: text">hadoop85
 hadoop86
 hadoop87
 </code></pre><blockquote>
 <p>表示以上三个节点作为datanode和nodemanager节点.    </p>
 </blockquote>
-<h3 id="-6-hadoop-">[6] 把配置好的hadoop复制到其他节点:</h3>
+<h3 id="-18-">[6] 把配置好的hadoop复制到其他节点:</h3>
 <p>执行如下操作即可</p>
 <pre><code class="brush: bash">ssh hadoop84
 ssh hadoop85
@@ -999,48 +999,48 @@ scp -r /opt/hadoop/ root@hadoop86:/opt/
 scp -r /opt/hadoop/ root@hadoop87:/opt/
 </code></pre>
 <p><strong>自此整个集群基本搭建完毕,接下来就是启动hadoop集群了.</strong>    </p>
-<h2 id="-x-hdfs-mapreduce-">[X] 执行命令启动HDFS和MapReduce集群:</h2>
+<h2 id="-19-">[X] 执行命令启动HDFS和MapReduce集群:</h2>
 <p><strong>以下命令严格注意执行顺序,不能颠倒!</strong>    </p>
-<h3 id="-1-">[1] 创建目录:</h3>
+<h3 id="-20-">[1] 创建目录:</h3>
 <p>在hadoop84执行命令:    </p>
 <pre><code class="brush: bash">ssh hadoop84 'mkdir -p /opt/hadoop_data/tmp /opt/hadoop_data/namenode /opt/hadoop_data/datanode /opt/hadoop_data/journal'
 ssh hadoop85 'mkdir -p /opt/hadoop_data/tmp /opt/hadoop_data/namenode /opt/hadoop_data/datanode /opt/hadoop_data/journal'
 ssh hadoop86 'mkdir -p /opt/hadoop_data/tmp /opt/hadoop_data/namenode /opt/hadoop_data/datanode /opt/hadoop_data/journal'
 ssh hadoop87 'mkdir -p /opt/hadoop_data/tmp /opt/hadoop_data/namenode /opt/hadoop_data/datanode /opt/hadoop_data/journal'
 </code></pre>
-<h3 id="-2-journalnode-">[2] 启动JournalNode集群:</h3>
+<h3 id="-21-">[2] 启动JournalNode集群:</h3>
 <p>在hadoop84执行命令:    </p>
 <pre><code class="brush: bash">ssh hadoop85 '/opt/hadoop/sbin/hadoop-daemon.sh start journalnode'
 ssh hadoop86 '/opt/hadoop/sbin/hadoop-daemon.sh start journalnode'
 ssh hadoop87 '/opt/hadoop/sbin/hadoop-daemon.sh start journalnode'
 </code></pre>
-<h3 id="-3-1-namenode-">[3] 格式化第1个NameNode:</h3>
+<h3 id="-22-">[3] 格式化第1个NameNode:</h3>
 <p>在hadoop84执行命令:</p>
 <pre><code class="brush: bash">ssh hadoop84 '/opt/hadoop/bin/hdfs namenode -format -clusterId cluster1'
 </code></pre>
-<h3 id="-4-1-namenode-">[4] 启动第1个NameNode:</h3>
+<h3 id="-23-">[4] 启动第1个NameNode:</h3>
 <p>在hadoop84执行命令:</p>
 <pre><code class="brush: bash">ssh hadoop84 '/opt/hadoop/sbin/hadoop-daemon.sh start namenode'
 </code></pre>
-<h3 id="-5-2-namenode-">[5] 格式化第2个NameNode:</h3>
+<h3 id="-24-">[5] 格式化第2个NameNode:</h3>
 <p>在hadoop84执行命令:</p>
 <pre><code class="brush: bash">ssh hadoop85 '/opt/hadoop/bin/hdfs namenode -bootstrapStandby'
 </code></pre>
-<h3 id="-6-2-namenode-">[6] 启动第2个NameNode:</h3>
+<h3 id="-25-">[6] 启动第2个NameNode:</h3>
 <p>在hadoop84执行命令:</p>
 <pre><code class="brush: bash">ssh hadoop85 '/opt/hadoop/sbin/hadoop-daemon.sh start namenode'
 </code></pre>
 <blockquote>
 <p>这时候,使用浏览器访问 <a href="http://hadoop84:50070">http://hadoop84:50070</a> 和 <a href="http://hadoop85:50070">http://hadoop85:50070</a><br>如果能够看到两个页面,证明NameNode启动成功了.这时,两个NameNode的状态都是standby.    </p>
 </blockquote>
-<h3 id="-7-active-">[7] 转换active:</h3>
+<h3 id="-26-">[7] 转换active:</h3>
 <p>在hadoop84执行命令:</p>
 <pre><code class="brush: bash">ssh hadoop84 '/opt/hadoop/bin/hdfs haadmin -failover --forceactive hadoop85 hadoop84'
 </code></pre>
 <blockquote>
 <p>再使用浏览器访问 <a href="http://hadoop84:50070">http://hadoop84:50070</a> 和 <a href="http://hadoop85:50070">http://hadoop85:50070</a><br>会发现hadoop84节点变为active,hadoop85还是standby.</p>
 </blockquote>
-<h3 id="-8-datanodes-">[8] 启动DataNodes:</h3>
+<h3 id="-27-">[8] 启动DataNodes:</h3>
 <p>在hadoop84执行命令:</p>
 <pre><code class="brush: bash">ssh hadoop84 '/opt/hadoop/sbin/hadoop-daemons.sh start datanode'
 </code></pre>
@@ -1052,7 +1052,7 @@ ssh hadoop87 '/opt/hadoop/sbin/hadoop-daemon.sh start journalnode'
 <p>你如果想实验一下NameNode切换,执行命令<code>hdfs haadmin -failover --forceactive hadoop84 hadoop85</code>
 这时候观察hadoop84和hadoop85的状态,就会发现,已经改变了.<br>如果向上传数据,还需要修改core-site.xml中的fs.default.name的值,改为hdfs://hadoop85:9000 才行.    </p>
 </blockquote>
-<h3 id="-9-mapreduce-">[9] 启动MapReduce:</h3>
+<h3 id="-28-">[9] 启动MapReduce:</h3>
 <p>在hadoop84执行命令</p>
 <pre><code class="brush: bash">ssh hadoop84 '/opt/hadoop/sbin/start-yarn.sh'
 </code></pre>
@@ -1060,12 +1060,12 @@ ssh hadoop87 '/opt/hadoop/sbin/hadoop-daemon.sh start journalnode'
 <p>用浏览器访问 <a href="http://hbase84:8088">http://hbase84:8088</a></p>
 </blockquote>
 <hr>
-<h1 id="-x-">[X] 附录:</h1>
-<h2 id="-x-ha-">[X] HA的问题:</h2>
+<h1 id="-29-">[X] 附录:</h1>
+<h2 id="-30-">[X] HA的问题:</h2>
 <blockquote>
 <p>大家都知道在hadoop2中对HDFS的改进很大,实现了NameNode的HA;<br>也增加了ResourceManager.但是ResourceManager也可以实现HA.<br>你没看错,确实是ResourceManager的HA.注意是在Apache Hadoop 2.4.1版本中开始加入的,可不是任意一个版本.    </p>
 </blockquote>
-<h2 id="-x-hadoop2-ha-startall-sh">[X] hadoop2的HA配置一键运行脚本startall.sh</h2>
+<h2 id="-31-">[X] hadoop2的HA配置一键运行脚本startall.sh</h2>
 <pre><code class="brush: bash">#!/bin/sh
 
 #synchronize all config files

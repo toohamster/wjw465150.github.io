@@ -716,8 +716,8 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
 <body>
 <div id="generated-toc"></div>
-<h3 id="-wjw-tomcat7-">(WJW)tomcat7安装文档</h3>
-<h3 id="-x-linux-centos-6-2-x64-">[X] Linux环境: CentOs 6.2 X64 以上</h3>
+<h3 id="-1-">(WJW)tomcat7安装文档</h3>
+<h3 id="-2-">[X] Linux环境: CentOs 6.2 X64 以上</h3>
 <ul>
 <li>彻底关闭SELINUX</li>
 <li>关闭IPV6</li>
@@ -787,12 +787,12 @@ net.netfilter.nf_conntrack_tcp_timeout_established = 180
 <pre><code class="brush: text">session    required     /lib64/security/pam_limits.so
 </code></pre></li>
 </ul>
-<h3 id="-x-jdk-">[X] JDK安装</h3>
+<h3 id="-3-">[X] JDK安装</h3>
 <ul>
 <li>Sun的JDK 1.7 Update 40以上</li>
 <li>需要rpm安装</li>
 </ul>
-<h3 id="-x-tomcat-">[X] Tomcat安装</h3>
+<h3 id="-4-">[X] Tomcat安装</h3>
 <ul>
 <li><p>创建www用户</p>
 <pre><code class="brush: text">groupadd www -g 58
@@ -806,10 +806,10 @@ useradd -u 58 -g www www
 chmod +x /data/app/tomcat7/wrapper_home/sbin/wrapper-linux-x86-64
 </code></pre></li>
 </ul>
-<h3 id="-x-tomcat-">[X] Tomcat配置</h3>
+<h3 id="-5-">[X] Tomcat配置</h3>
 <ul>
 <li>配置文件在: <code>/data/app/tomcat7/wrapper_home/conf/wrapper.conf</code>文件里,可修改的参数是:
-```<h1 id="-wjw_add-environment-variable-definition">-&gt;@wjw_add Environment Variable Definition</h1>
+```<h1 id="-6-">-&gt;@wjw_add Environment Variable Definition</h1>
 set.default.JAVA_HOME=/usr/java/default</li>
 </ul>
 <p>set.default.JVM_Xms=-Xms512m
@@ -823,7 +823,7 @@ set.default.STOP_Port=-DstopPort=8005</p>
 <p>set.default.JMX_Port=5678
 set.default.JMX_User=tomcat
 set.default.JMX_Password=tomcat</p>
-<h1 id="-wjw_add-environment-variable-definition">&lt;-@wjw_add Environment Variable Definition</h1>
+<h1 id="-7-">&lt;-@wjw_add Environment Variable Definition</h1>
 <pre><code class="brush: text">
 * tomcat的状态日志: `/data/app/tomcat7/logs/wrapper-tomcat7.log`
 * tomcat存取日志: `/data/app/tomcat7/logs/localhost_access_log.YYYY-MM-DD.txt`
@@ -842,7 +842,7 @@ Usage: /data/app/tomcat7/bin/tomcat [ console | start | stop | restart | status 
 ### [X] 附录:
 #####  [X] 开机启动tomcat
   修改/etc/rc.d/rc.local, 添加:```su www -c '/data/app/tomcat7/bin/tomcat start'
-</code></pre><h5 id="-x-apr">[X] 安装APR</h5>
+</code></pre><h5 id="-8-">[X] 安装APR</h5>
 <p>1.如果没有安装SSL,就先安装SSL,首选用:<code>yum -y install openssl openssl-devel</code>
 或者,用源代码安装:解压缩<code>openssl-1.0.1e.tar.gz</code>  </p>
 <pre><code class="brush: text">tar -zxvf openssl-1.0.1e.tar.gz

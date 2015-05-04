@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>(WJW)Docker安装笔记.md</title>
+<title>(WJW)安装Memcached.md</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
 <!--
@@ -702,13 +702,13 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
 <script language="JavaScript" type="text/javascript">
 <!--
-;(function(){typeof(require)!='undefined'?SyntaxHighlighter=require('shCore').SyntaxHighlighter:null;function Brush(){};Brush.prototype=new SyntaxHighlighter.Highlighter();Brush.aliases=['text','plain'];SyntaxHighlighter.brushes.Plain=Brush;typeof(exports)!='undefined'?exports.Brush=Brush:null})();
+;(function(){typeof(require)!='undefined'?SyntaxHighlighter=require('shCore').SyntaxHighlighter:null;function Brush(){var keywords='if fi then elif else for do done until while break continue case function return in eq ne ge le';var commands='alias apropos awk basename bash bc bg builtin bzip2 cal cat cd cfdisk chgrp chmod chown chrootcksum clear cmp comm command cp cron crontab csplit cut date dc dd ddrescue declare df diff diff3 dig dir dircolors dirname dirs du echo egrep eject enable env ethtool eval exec exit expand export expr false fdformat fdisk fg fgrep file find fmt fold format free fsck ftp gawk getopts grep groups gzip hash head history hostname id ifconfig import install join kill less let ln local locate logname logout look lpc lpr lprint lprintd lprintq lprm ls lsof make man mkdir mkfifo mkisofs mknod more mount mtools mv netstat nice nl nohup nslookup open op passwd paste pathchk ping popd pr printcap printenv printf ps pushd pwd quota quotacheck quotactl ram rcp read readonly renice remsync rm rmdir rsync screen scp sdiff sed select seq set sftp shift shopt shutdown sleep sort source split ssh strace su sudo sum symlink sync tail tar tee test time times touch top traceroute trap tr true tsort tty type ulimit umask umount unalias uname unexpand uniq units unset unshar useradd usermod users uuencode uudecode v vdir vi watch wc whereis which who whoami Wget xargs yes';this.regexList=[{regex:/^#!.*$/gm,css:'preprocessor bold'},{regex:/\/[\w-\/]+/gm,css:'plain'},{regex:SyntaxHighlighter.regexLib.singleLinePerlComments,css:'comments'},{regex:SyntaxHighlighter.regexLib.doubleQuotedString,css:'string'},{regex:SyntaxHighlighter.regexLib.singleQuotedString,css:'string'},{regex:new RegExp(this.getKeywords(keywords),'gm'),css:'keyword'},{regex:new RegExp(this.getKeywords(commands),'gm'),css:'functions'}]}Brush.prototype=new SyntaxHighlighter.Highlighter();Brush.aliases=['bash','shell'];SyntaxHighlighter.brushes.Bash=Brush;typeof(exports)!='undefined'?exports.Brush=Brush:null})();
 -->
 </script>
 
 <script language="JavaScript" type="text/javascript">
 <!--
-;(function(){typeof(require)!='undefined'?SyntaxHighlighter=require('shCore').SyntaxHighlighter:null;function Brush(){var keywords='if fi then elif else for do done until while break continue case function return in eq ne ge le';var commands='alias apropos awk basename bash bc bg builtin bzip2 cal cat cd cfdisk chgrp chmod chown chrootcksum clear cmp comm command cp cron crontab csplit cut date dc dd ddrescue declare df diff diff3 dig dir dircolors dirname dirs du echo egrep eject enable env ethtool eval exec exit expand export expr false fdformat fdisk fg fgrep file find fmt fold format free fsck ftp gawk getopts grep groups gzip hash head history hostname id ifconfig import install join kill less let ln local locate logname logout look lpc lpr lprint lprintd lprintq lprm ls lsof make man mkdir mkfifo mkisofs mknod more mount mtools mv netstat nice nl nohup nslookup open op passwd paste pathchk ping popd pr printcap printenv printf ps pushd pwd quota quotacheck quotactl ram rcp read readonly renice remsync rm rmdir rsync screen scp sdiff sed select seq set sftp shift shopt shutdown sleep sort source split ssh strace su sudo sum symlink sync tail tar tee test time times touch top traceroute trap tr true tsort tty type ulimit umask umount unalias uname unexpand uniq units unset unshar useradd usermod users uuencode uudecode v vdir vi watch wc whereis which who whoami Wget xargs yes';this.regexList=[{regex:/^#!.*$/gm,css:'preprocessor bold'},{regex:/\/[\w-\/]+/gm,css:'plain'},{regex:SyntaxHighlighter.regexLib.singleLinePerlComments,css:'comments'},{regex:SyntaxHighlighter.regexLib.doubleQuotedString,css:'string'},{regex:SyntaxHighlighter.regexLib.singleQuotedString,css:'string'},{regex:new RegExp(this.getKeywords(keywords),'gm'),css:'keyword'},{regex:new RegExp(this.getKeywords(commands),'gm'),css:'functions'}]}Brush.prototype=new SyntaxHighlighter.Highlighter();Brush.aliases=['bash','shell'];SyntaxHighlighter.brushes.Bash=Brush;typeof(exports)!='undefined'?exports.Brush=Brush:null})();
+;(function(){typeof(require)!='undefined'?SyntaxHighlighter=require('shCore').SyntaxHighlighter:null;function Brush(){};Brush.prototype=new SyntaxHighlighter.Highlighter();Brush.aliases=['text','plain'];SyntaxHighlighter.brushes.Plain=Brush;typeof(exports)!='undefined'?exports.Brush=Brush:null})();
 -->
 </script>
 
@@ -722,185 +722,120 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
 <body>
 <div id="generated-toc"></div>
-<h3 id="-1-">(WJW)Docker安装笔记</h3>
-<h4 id="-2-">[X] 一、禁用selinux</h4>
-<p>由于Selinux和LXC有冲突,所以需要禁用selinux.编辑/etc/selinux/config,设置两个关键变量.</p>
-<pre><code class="brush: text">SELINUX=disabled
-SELINUXTYPE=targeted
-</code></pre><h4 id="-3-">[X] 二、安装Fedora EPEL源</h4>
-<pre><code class="brush: bash">rpm -ivh ./epel-release-6-8.noarch.rpm  
-或者:  
-#yum install http://ftp.riken.jp/Linux/fedora/epel/6/x86_64/epel-release-6-8.noarch.rpm
+<h1 id="-1-">(WJW)安装Memcached</h1>
+<h2 id="-2-">[1] yum安装(也可以源码安装,在"make依赖库"目录下):</h2>
+<pre><code class="brush: bash">yum install automake autoconf libtool
 </code></pre>
-<h4 id="-4-">[X] 三、添加hop5.repo源</h4>
-<pre><code class="brush: bash">cp ./hop5.repo /etc/yum.repos.d        
-或者:  
-#cd /etc/yum.repos.d        
-#wget http://www.hop5.in/yum/el6/hop5.repo
+<h2 id="-3-">[2] 安装<a href="https://github.com/libevent/libevent/releases">libevent</a></h2>
+<pre><code class="brush: bash">tar -zxvf libevent-1.4.13-stable.tar.gz
+cd libevent-1.4.13-stable
+./configure --prefix=/usr/local
+make uninstall
+make clean
+make
+make install
+cd ..
 </code></pre>
-<h4 id="-5-">[X] 四、安装Docker</h4>
-<h4 id="-6-">yum安装</h4>
-<h5 id="-7-">[X] 升级带aufs模块的3.10内核(可选)</h5>
-<pre><code class="brush: bash">yum install kernel-ml-aufs kernel-ml-aufs-devel
-</code></pre>
+<h2 id="-4-">[3] 安装<a href="http://memcached.org/">memcached</a></h2>
+<p><strong>注意:</strong> 安装Memcached前<code>flush_all</code>的修改  </p>
 <blockquote>
-<ol>
-<li>修改grub的主配置文件/etc/grub.conf，设置default=0，表示第一个title下的内容为默认启动的kernel（一般新安装的内核在第一个位置）。</li>
-<li>重启系统<code>reboot now</code>,</li>
-<li><p>然后执行<code>uname -r</code>,查看是否已经是3.10内核!</p>
+<p>  查找:<code>memcached.c</code>文件,把<br>      <code>} else if (ntokens &gt;= 2 &amp;&amp; ntokens &lt;= 4 &amp;&amp; (strcmp(tokens[COMMAND_TOKEN].value, "flush_all") == 0)) {</code><br>  修改成:<br>      <code>} else if (ntokens &gt;= 2 &amp;&amp; ntokens &lt;= 4 &amp;&amp; (strcmp(tokens[COMMAND_TOKEN].value, "xflush_all") == 0)) {</code>  </p>
+<p>  如果是Memcached-Repcached版本,还要把<code>replication.c</code>里的:<br>      <code>char *s = "flush_all ";</code><br>  修改成:<br>      <code>char *s = "xflush_all ";</code>  </p>
+</blockquote>
+<pre><code class="brush: bash">tar zxvf ./memcached-1.4.22.tar.gz
+cd ./memcached-1.4.22
+./configure --with-libevent=/usr/local/lib/ --enable-64bit
+make uninstall
+make clean
+make
+make install
+cd ..
+</code></pre>
+<p><strong>注意:</strong> 如果make的时候报错  </p>
 <blockquote>
-<p>[root@localhost ~]# uname -r<br>3.10.5-3.el6.x86_64  </p>
+<p>  memcached.c: 在函数'add_iov'中:<br>  memcached.c:696:30: 错误: 'IOV_MAX'未声明(在此函数内第一次使用)<br>  memcached.c:696:30: 附注: 每个未声明的标识符在其出现的函数内只报告一次<br>  make[2]: <em>*</em> [memcached-memcached.o] 错误 1  </p>
 </blockquote>
-</li>
-<li><p>执行<code>grep aufs /proc/filesystems</code>,查看内核是否支持aufs!</p>
+<p>需要修改<code>memcached.c</code>文件:</p>
+<pre><code class="brush: text">/* FreeBSD 4.x doesn't have IOV_MAX exposed. */
+#ifndef IOV_MAX
+#if defined(__FreeBSD__) || defined(__APPLE__)
+# define IOV_MAX 1024
+#endif
+#endif
+</code></pre><p>改成:  </p>
+<pre><code class="brush: text">/* FreeBSD 4.x doesn't have IOV_MAX exposed. */
+#ifndef IOV_MAX
+# define IOV_MAX 1024
+#endif
+</code></pre><p><strong>注意:</strong>  如果运行<code>/usr/local/bin/memcached -h</code>的时候报错:<code>找不到libevent</code><strong>  
+</strong>执行:<strong> <code>ln -s /usr/local/lib/libevent-1.4.so.2 /usr/lib64/libevent-1.4.so.2</code>  
+</strong>技巧:** <code>执行ldd /usr/local/bin/memcached</code>,看缺少那些库!  </p>
+<h2 id="-5-">[4] 终端调试运行:</h2>
+<p>执行: <code>/usr/local/bin/memcached -m 100 -u root -p 11411</code><br>也可以启动多个守护进程,但是端口不能重复<br>启动参数说明:  </p>
 <blockquote>
-<p> [root@localhost ~]# grep aufs /proc/filesystems<br> nodev    aufs</p>
+<p>  -d 选项是启动一个守护进程,<br>  -m 是分配给Memcache使用的内存数量,单位是MB,默认64MB<br>  -M return error on memory exhausted (rather than removing items)<br>  -u 是运行Memcache的用户,如果当前为root 的话,需要使用此参数指定用户.<br>  -l 是监听的服务器IP地址,默认为所有网卡.<br>  -p 是设置Memcache的TCP监听的端口,最好是1024以上的端口<br>  -c 选项是最大运行的并发连接数,默认是1024<br>  -P 是设置保存Memcache的pid文件<br>  -f chunk size growth factor (default: 1.25)<br>  -I Override the size of each slab page. Adjusts max item size(1.4.2版本新增)  </p>
 </blockquote>
-</li>
-</ol>
-</blockquote>
-<h5 id="-8-">[X] 安装docker</h5>
-<pre><code class="brush: bash">yum install redhat-lsb
-
-yum install iptables
-chkconfig ip6tables off
-chkconfig iptables off
-service ip6tables stop
-service iptables stop
-
-yum install device-mapper-libs
-yum install libcgroup*
-yum install docker-io
-</code></pre>
-<p>如果报错:<code>Error: Cannot retrieve metalink for repository: epel. Please verify its path and try again</code>  </p>
-<pre><code class="brush: text">解决办法是编辑/etc/yum.repos.d/epel.repo，把基础的恢复，镜像的地址注释掉
-
-#baseurl
-mirrorlist
-
-改成
-
-baseurl
-#mirrorlist
-
-然后执行: yum clean all
-</code></pre><pre><code class="brush: text">=============================================================================================================================================================================================================================================
- Package                                                       Arch                                                  Version                                                       Repository                                           Size
-=============================================================================================================================================================================================================================================
-Installing:
- docker-io                                                     x86_64                                                1.2.0-3.el6                                                   epel                                                4.2 M
-Installing for dependencies:
- lua-alt-getopt                                                noarch                                                0.7.0-1.el6                                                   epel                                                6.9 k
- lua-filesystem                                                x86_64                                                1.4.2-1.el6                                                   epel                                                 24 k
- lua-lxc                                                       x86_64                                                1.0.6-1.el6                                                   epel                                                 15 k
- lxc                                                           x86_64                                                1.0.6-1.el6                                                   epel                                                120 k
- lxc-libs                                                      x86_64                                                1.0.6-1.el6                                                   epel                                                248 k
-
-Transaction Summary
-=============================================================================================================================================================================================================================================
-Install       6 Package(s)
-
-Downloading Packages:
-(1/6): docker-io-1.2.0-3.el6.x86_64.rpm                                                                                                                                                                               | 4.2 MB     00:02
-(2/6): lua-alt-getopt-0.7.0-1.el6.noarch.rpm                                                                                                                                                                          | 6.9 kB     00:00
-(3/6): lua-filesystem-1.4.2-1.el6.x86_64.rpm                                                                                                                                                                          |  24 kB     00:00
-(4/6): lua-lxc-1.0.6-1.el6.x86_64.rpm                                                                                                                                                                                 |  15 kB     00:00
-(5/6): lxc-1.0.6-1.el6.x86_64.rpm                                                                                                                                                                                     | 120 kB     00:00
-(6/6): lxc-libs-1.0.6-1.el6.x86_64.rpm                                                                                                                                                                                | 248 kB     00:00
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-</code></pre><h4 id="-9-">rpm手工安装:</h4>
-<p>先执行</p>
-<pre><code class="brush: bash">rpm --nodeps -ev $(rpm -qa | grep -i 'device-mapper-libs-')
-rpm --nodeps -ev $(rpm -qa | grep -i 'device-mapper-')
-rpm --nodeps -ev $(rpm -qa | grep -i 'device-mapper-event-libs-')
-rpm --nodeps -ev $(rpm -qa | grep -i 'device-mapper-event-')
-
-rpm -ivh ./device-mapper-event-1.02.90-2.el6.x86_64.rpm ./device-mapper-event-libs-1.02.90-2.el6.x86_64.rpm ./device-mapper-1.02.90-2.el6.x86_64.rpm ./device-mapper-libs-1.02.90-2.el6.x86_64.rpm
-</code></pre>
-<p>再执行</p>
-<pre><code class="brush: bash">rpm -ivh ./lxc-libs-1.0.6-1.el6.x86_64.rpm
-rpm -ivh ./lua-alt-getopt-0.7.0-1.el6.noarch.rpm
-rpm -ivh ./lua-filesystem-1.4.2-1.el6.x86_64.rpm
-rpm -ivh ./lua-lxc-1.0.6-1.el6.x86_64.rpm
-rpm -ivh ./lxc-1.0.6-1.el6.x86_64.rpm
-#6.4版本以下需要 rpm -ivh ./libcgroup-0.40.rc1-5.el6.x86_64.rpm
-rpm -ivh ./docker-io-1.4.1-2.el6.x86_64.rpm
-</code></pre>
-<h4 id="-10-">[X] 五、初步验证docker</h4>
-<p>  输入<code>docker -h</code>,如果有如下输出,就证明docker在形式上已经安装成功.</p>
-<pre><code class="brush: text"># docker -h 
-Usage of docker: 
-  -D=false: Enable debug mode 
-  -H=[]: Multiple tcp://host:port or unix://path/to/socket to bind in daemon mode, single connection otherwise 
-  -api-enable-cors=false: Enable CORS headers in the remote API 
-  -b="": Attach containers to a pre-existing network bridge; use 'none' to disable container networking
-  -bip="": Use this CIDR notation address for the network bridge's IP, not compatible with -b 
-  -d=false: Enable daemon mode 
-  -dns=[]: Force docker to use specific DNS servers 
-  -g="/var/lib/docker": Path to use as the root of the docker runtime 
-  -icc=true: Enable inter-container communication 
-  -ip="0.0.0.0": Default IP address to use when binding container ports 
-  -iptables=true: Disable docker's addition of iptables rules 
-  -p="/var/run/docker.pid": Path to use for daemon PID file
-  -r=true: Restart previously running containers 
-  -s="": Force the docker runtime to use a specific storage driver 
-  -v=false: Print version information and quit
-</code></pre><h4 id="-11-">[X] 六 、启动docker服务:</h4>
-<pre><code class="brush: text">chkconfig docker on
-service docker start
-#docker -d -H unix:///var/run/docker.sock
-</code></pre><h4 id="-12-">[X] 七 、查找映象:</h4>
-<p><code>docker search 映象名字</code>
-从index.docker.io搜寻所需镜像.
-去<a href="https://index.docker.io获取镜像相关的信息">https://index.docker.io获取镜像相关的信息</a>.</p>
-<h4 id="-13-">[X] 八 、进入 Docker 容器:</h4>
-<p>创建<code>vi /bin/docker-enter.sh</code></p>
+<h2 id="-6-">[X] 附录:</h2>
+<h3 id="-7-">memcached启动停止脚本:<code>/etc/rc.d/init.d/memcached</code>(注意:文件格式一定要是unix的)</h3>
+<p>vi <code>/etc/rc.d/init.d/memcached</code>  </p>
 <pre><code class="brush: bash">#!/bin/sh
+#
+# memcached: MemCached Daemon
+#
+# chkconfig: - 90 25
+# description: MemCached Daemon
+#
+# Source function library.
+. /etc/rc.d/init.d/functions
+. /etc/sysconfig/network
+#[ ${NETWORKING} = "no" ] &amp;&amp; exit 0
+#[ -r /etc/sysconfig/dund ] || exit 0
+#. /etc/sysconfig/dund
+#[ -z "$DUNDARGS" ] &amp;&amp; exit 0
 
-if [ -e $(dirname "$0")/nsenter ]; then
-  # with boot2docker, nsenter is not in the PATH but it is in the same folder
-  NSENTER=$(dirname "$0")/nsenter
-else
-  NSENTER=nsenter
-fi
+start() {
+  echo -n $"Starting memcached: "
 
-if [ -z "$1" ]; then
-  echo "Usage: `basename "$0"` CONTAINER [COMMAND [ARG]...]"
-  echo ""
-  echo "Enters the Docker CONTAINER and executes the specified COMMAND."
-  echo "If COMMAND is not specified, runs an interactive shell in CONTAINER."
-else
-  PID=$(docker inspect --format "{{.State.Pid}}" "$1")
-  if [ -z "$PID" ]; then
+  daemon $MEMCACHED -u daemon -d -m 100 -p 11411 -P ${PID_FILE}
+
+  echo
+}
+
+stop() {
+  echo -n $"Shutting down memcached: "
+  killproc -p ${PID_FILE} memcached
+  echo
+}
+
+MEMCACHED="/usr/local/bin/memcached"
+PID_FILE="/tmp/memcached_repcached.pid"
+
+[ -f $MEMCACHED ] || exit 1
+
+# See how we were called.
+case "$1" in
+  start)
+    start
+    ;;
+  stop)
+    stop
+    ;;
+  restart)
+    stop
+    sleep 3
+    start
+    ;;
+  status)
+    status -p ${PID_FILE} memcached
+    ;;
+  *)
+    echo $"Usage: $0 {start|stop|restart|status}"
     exit 1
-  fi
-  shift
+esac
 
-  OPTS="--target $PID --mount --uts --ipc --net --pid --"
+exit 0
+</code></pre>
+<p><strong>添加可执行:</strong> <code>chmod +x /etc/rc.d/init.d/memcached</code></p>
 
-  if [ -z "$1" ]; then
-    # No command given.
-    # Use su to clear all host environment variables except for TERM,
-    # initialize the environment variables HOME, SHELL, USER, LOGNAME, PATH,
-    # and start a login shell.
-    "$NSENTER" $OPTS su - root
-  else
-    # Use env to clear all host environment variables.
-    "$NSENTER" $OPTS env --ignore-environment -- "$@"
-  fi
-fi
-</code></pre>
-<p>加上可执行<code>chmod +x /bin/docker-enter.sh</code><br>运行<code>docker-enter.sh &lt;container id&gt;</code>,这样就进入到指定的容器中!  </p>
-<h4 id="-14-">[X] 附录:低版本的Redhat(6.3)可能要手动挂载cgroup</h4>
-<p>  我们首选禁用cgroup对应服务cgconfig.</p>
-<pre><code class="brush: bash">  service cgconfig stop # 关闭服务 
-  chkconfig cgconfig off # 取消开机启动
-</code></pre>
-<p>  然后挂载cgroup,可以命令行挂载</p>
-<pre><code class="brush: bash">  mount -t cgroup none /cgroup  #仅本次有效
-</code></pre>
-<p>  或者修改配置文件,编辑<code>/etc/fstab</code>,加入</p>
-<pre><code class="brush: text">none                    /cgroup                 cgroup  defaults        0 0
-</code></pre>
 </body>
 </html>
