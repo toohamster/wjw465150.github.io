@@ -59,10 +59,11 @@ d.add("55","14","如何安全的存储用户的密码","my_data/加密&破解/�
 d.add("56","14","java验证license破解手记","my_data/加密&破解/java验证license破解手记.htm");
 d.add("57","15","修改java字节码(.class)文件","my_data/字节码操作/修改java字节码(.class)文件.htm");
 d.add("58","15","使用javassist修改class文件","my_data/字节码操作/使用javassist修改class文件.htm");
-d.add("59","23","SO_KEEPALIVE","my_data/network/Socket参数说明/SO_KEEPALIVE.htm");
-d.add("60","23","SO_LINGER","my_data/network/Socket参数说明/SO_LINGER.htm");
-d.add("61","23","SO_REUSEADDR","my_data/network/Socket参数说明/SO_REUSEADDR.htm");
-d.add("62","23","TCP_NODELAY","my_data/network/Socket参数说明/TCP_NODELAY.htm");
-d.add("63","39","ForkJoinPool用法","my_data/并发&多线程/ForkJoinPool用法/ForkJoinPool用法.htm");
+d.add("59","16","JMX连接池","my_data/JMX/JMX连接池.html");
+d.add("60","23","SO_KEEPALIVE","my_data/network/Socket参数说明/SO_KEEPALIVE.htm");
+d.add("61","23","SO_LINGER","my_data/network/Socket参数说明/SO_LINGER.htm");
+d.add("62","23","SO_REUSEADDR","my_data/network/Socket参数说明/SO_REUSEADDR.htm");
+d.add("63","23","TCP_NODELAY","my_data/network/Socket参数说明/TCP_NODELAY.htm");
+d.add("64","39","ForkJoinPool用法","my_data/并发&多线程/ForkJoinPool用法/ForkJoinPool用法.htm");
 document.write(d);
 //-->
