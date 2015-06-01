@@ -51,11 +51,11 @@ d.add("47","28","Notes about Groovy's DataSet","my_data/Groovy专辑/Sql/Notes_a
 d.add("48","28","Use Sql under transaction","my_data/Groovy专辑/Sql/Use Sql under transaction.htm");
 d.add("49","28","Batch Sql","my_data/Groovy专辑/Sql/Batch_Sql.htm");
 d.add("50","29","Add Methods Dynamically to Classes with ExpandoMetaClass","my_data/Groovy专辑/Goodness/Add Methods Dynamically to Classes with ExpandoMetaClass.htm");
-d.add("51","29","Annotion-Create a Singleton Class","e:/WJW_EBOOK/wjw465150.github.io/git_wjw465150.github.io/blog/my_data/Groovy专辑/Goodness/Annotion-Create a Singleton Class.htm");
-d.add("52","29","Annotion-Easy toString Creation for Our Classes","e:/WJW_EBOOK/wjw465150.github.io/git_wjw465150.github.io/blog/my_data/Groovy专辑/Goodness/Annotion-Easy toString Creation for Our Classes.htm");
-d.add("53","29","Annotion-Generate equals and hashcode Methods with EqualsAndHashCode Annotation","e:/WJW_EBOOK/wjw465150.github.io/git_wjw465150.github.io/blog/my_data/Groovy专辑/Goodness/Annotion-Generate equals and hashcode Methods with EqualsAndHashCode Annotation.htm");
-d.add("54","29","Annotion-Making a Class Immutable","e:/WJW_EBOOK/wjw465150.github.io/git_wjw465150.github.io/blog/my_data/Groovy专辑/Goodness/Annotion-Making a Class Immutable.htm");
-d.add("55","29","Annotion-Tuple Constructor Creation","e:/WJW_EBOOK/wjw465150.github.io/git_wjw465150.github.io/blog/my_data/Groovy专辑/Goodness/Annotion-Tuple Constructor Creation.htm");
+d.add("51","29","Annotion-Create a Singleton Class","my_data/Groovy专辑/Goodness/Annotion-Create a Singleton Class.htm");
+d.add("52","29","Annotion-Easy toString Creation for Our Classes","my_data/Groovy专辑/Goodness/Annotion-Easy toString Creation for Our Classes.htm");
+d.add("53","29","Annotion-Generate equals and hashcode Methods with EqualsAndHashCode Annotation","my_data/Groovy专辑/Goodness/Annotion-Generate equals and hashcode Methods with EqualsAndHashCode Annotation.htm");
+d.add("54","29","Annotion-Making a Class Immutable","my_data/Groovy专辑/Goodness/Annotion-Making a Class Immutable.htm");
+d.add("55","29","Annotion-Tuple Constructor Creation","my_data/Groovy专辑/Goodness/Annotion-Tuple Constructor Creation.htm");
 d.add("56","29","Annotion-Use Builder AST Transformation for Fluent API","my_data/Groovy专辑/Goodness/Annotion-Use Builder AST Transformation for Fluent API.htm");
 d.add("57","29","Base-Padding Strings","my_data/Groovy专辑/Goodness/Base-Padding Strings.htm");
 d.add("58","29","Base-the Switch Statement","my_data/Groovy专辑/Goodness/Base-the Switch Statement.htm");

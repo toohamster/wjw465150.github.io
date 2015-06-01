@@ -1039,8 +1039,10 @@ read_buffer_size=8M
 read_rnd_buffer_size=8M
 
 #InnoDB
+# You can set .._buffer_pool_size up to 50 - 80 % of RAM but beware of setting memory usage too high
 innodb_buffer_pool_size=1G
 innodb_additional_mem_pool_size=20M
+#innodb_data_file_path=ibdata1:${实际大小};ibdata2:4G;ibdata3:8G:autoextend
 
 #galera innodb参数
 binlog_format=ROW
@@ -1118,8 +1120,10 @@ read_buffer_size=8M
 read_rnd_buffer_size=8M
 
 #InnoDB
+# You can set .._buffer_pool_size up to 50 - 80 % of RAM but beware of setting memory usage too high
 innodb_buffer_pool_size=1G
 innodb_additional_mem_pool_size=20M
+#innodb_data_file_path=ibdata1:${实际大小};ibdata2:4G;ibdata3:8G:autoextend
 
 #galera innodb参数
 binlog_format=ROW
@@ -1190,8 +1194,10 @@ read_buffer_size=8M
 read_rnd_buffer_size=8M
 
 #InnoDB
+# You can set .._buffer_pool_size up to 50 - 80 % of RAM but beware of setting memory usage too high
 innodb_buffer_pool_size=1G
 innodb_additional_mem_pool_size=20M
+#innodb_data_file_path=ibdata1:${实际大小};ibdata2:4G;ibdata3:8G:autoextend
 
 #galera innodb参数
 binlog_format=ROW
