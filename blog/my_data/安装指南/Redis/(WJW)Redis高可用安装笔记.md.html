@@ -740,8 +740,8 @@ mkdir /opt/redis
 mkdir /opt/redis/log
 mkdir /opt/redis/db
 
-tar zxvf ./redis-2.8.17.tar.gz
-cd redis-2.8.17
+tar zxvf ./redis-2.8.22.tar.gz
+cd redis-2.8.22
 make PREFIX=/opt/redis install
 </code></pre>
 <h4 id="-4-">[x] Redis启动脚本(Master,Slave):/opt/redis/bin/startRedis.sh</h4>
@@ -820,7 +820,13 @@ auto-aof-rewrite-percentage 100
 auto-aof-rewrite-min-size 64mb
 
 #为减少磁盘操作,暂缓重写阶段的磁盘同步
-no-appendfsync-on-rewrite no
+no-appendfsync-on-rewrite yes
+
+#慢查
+#下面的时间单位是微秒,所以1000000就是1秒.注意,负数时间会禁用慢查询日志,而0则会强制记录所有命令.
+slowlog-log-slower-than 10000
+#这个长度没有限制.只要有足够的内存就行.你可以通过 SLOWLOG RESET 来释放内存.(注:慢查日志是在内存里)
+slowlog-max-len 128
 </code></pre>
 <h3 id="-7-">[x] 安装Keepalived(Master,Slave):</h3>
 <pre><code class="brush: bash">#wget http://www.keepalived.org/software/keepalived-1.2.13.tar.gz
