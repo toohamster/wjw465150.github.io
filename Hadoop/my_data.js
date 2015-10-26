@@ -25,5 +25,6 @@ d.add("21","19","Hadoop2 Mapreduce实例WordCount体验","my_data/MapReduce/Hado
 d.add("22","19","从hadoop2.2，HBase0.96 mapreduce操作","my_data/MapReduce/从hadoop2.2，HBase0.96_mapreduce操作.htm");
 d.add("23","19","Hadoop2.2.0 mapreduce 例子","my_data/MapReduce/Hadoop2.2.0_mapreduce_例子.htm");
 d.add("24","19","多个MapReduce任务实现任务间相互依赖","my_data/MapReduce/多个MapReduce任务实现任务间相互依赖.htm");
+d.add("25","19","Hadoop多用户资源管理–Fair Scheduler介绍与配置","my_data/MapReduce/Hadoop多用户资源管理–Fair Scheduler介绍与配置.htm");
 document.write(d);
 //-->
