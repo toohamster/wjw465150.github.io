@@ -1,0 +1,99 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Run Java Application From Build Script</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<DIV class="post-body entry-content" 
+style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; BORDER-BOTTOM: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; FONT: 300 16px/28px 'Helvetica Neue', Helvetica, Arial, sans-serif; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: 0px; WIDOWS: 1; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">
+<P 
+style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 20px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px">Gradle 
+has a special task to run a Java class from the build script:<SPAN 
+class=Apple-converted-space>&nbsp;</SPAN><A 
+style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px" 
+href="http://www.gradle.org/0.9-rc-1/docs/javadoc/org/gradle/api/tasks/JavaExec.html"><CODE 
+style="BORDER-TOP: rgb(212,217,217) 1px solid; BORDER-RIGHT: rgb(212,217,217) 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: rgb(212,217,217) 1px solid; COLOR: rgb(59,59,59); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; FONT: 0.93em/24px Menlo, Monaco, 'Liberation Mono', Consolas, monospace; PADDING-LEFT: 4px; MARGIN: 0px; BORDER-LEFT: rgb(212,217,217) 1px solid; PADDING-RIGHT: 4px; BACKGROUND-COLOR: rgb(239,241,241); font-stretch: normal; border-radius: 0px; text-shadow: none">org.gradle.api.tasks.JavaExec</CODE></A>. 
+We can for example create a new task of type<CODE 
+style="BORDER-TOP: rgb(212,217,217) 1px solid; BORDER-RIGHT: rgb(212,217,217) 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: rgb(212,217,217) 1px solid; COLOR: rgb(59,59,59); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; FONT: 0.93em/24px Menlo, Monaco, 'Liberation Mono', Consolas, monospace; PADDING-LEFT: 4px; MARGIN: 0px; BORDER-LEFT: rgb(212,217,217) 1px solid; PADDING-RIGHT: 4px; BACKGROUND-COLOR: rgb(239,241,241); font-stretch: normal; border-radius: 0px; text-shadow: none">JavaExec</CODE><SPAN 
+class=Apple-converted-space>&nbsp;</SPAN>and use a closure to configure the 
+task. We can set the main class, classpath, arguments, JVM arguments and more to 
+run the application.</P>
+<P 
+style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 20px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px">Gradle 
+also has the<SPAN class=Apple-converted-space>&nbsp;</SPAN><CODE 
+style="BORDER-TOP: rgb(212,217,217) 1px solid; BORDER-RIGHT: rgb(212,217,217) 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: rgb(212,217,217) 1px solid; COLOR: rgb(59,59,59); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; FONT: 0.93em/24px Menlo, Monaco, 'Liberation Mono', Consolas, monospace; PADDING-LEFT: 4px; MARGIN: 0px; BORDER-LEFT: rgb(212,217,217) 1px solid; PADDING-RIGHT: 4px; BACKGROUND-COLOR: rgb(239,241,241); font-stretch: normal; border-radius: 0px; text-shadow: none">javaexec()</CODE><SPAN 
+class=Apple-converted-space>&nbsp;</SPAN>method available as part of a Gradle 
+project. This means we can invoke<SPAN 
+class=Apple-converted-space>&nbsp;</SPAN><CODE 
+style="BORDER-TOP: rgb(212,217,217) 1px solid; BORDER-RIGHT: rgb(212,217,217) 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: rgb(212,217,217) 1px solid; COLOR: rgb(59,59,59); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; FONT: 0.93em/24px Menlo, Monaco, 'Liberation Mono', Consolas, monospace; PADDING-LEFT: 4px; MARGIN: 0px; BORDER-LEFT: rgb(212,217,217) 1px solid; PADDING-RIGHT: 4px; BACKGROUND-COLOR: rgb(239,241,241); font-stretch: normal; border-radius: 0px; text-shadow: none">javaexec()</CODE><SPAN 
+class=Apple-converted-space>&nbsp;</SPAN>directly from the build script and use 
+the same closure to configure the Java application that we want to invoke.</P>
+<P 
+style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 20px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px">Suppose 
+we have a simple Java application:</P><PRE class=brush:java style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; FONT: 16px/24px Menlo, Monaco, 'Liberation Mono', Consolas, monospace; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch: normal">// File: src/main/java/com/mrhaki/java/Simple.java
+package com.mrhaki.java;
+
+public class Simple {
+
+    public static void main(String[] args) {
+        System.out.println(System.getProperty("simple.message") + args[0] + " from Simple.");
+    }
+
+}
+</PRE>
+<P 
+style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 20px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px">And 
+we have the following Gradle build file to run<SPAN 
+class=Apple-converted-space>&nbsp;</SPAN><CODE 
+style="BORDER-TOP: rgb(212,217,217) 1px solid; BORDER-RIGHT: rgb(212,217,217) 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: rgb(212,217,217) 1px solid; COLOR: rgb(59,59,59); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; FONT: 0.93em/24px Menlo, Monaco, 'Liberation Mono', Consolas, monospace; PADDING-LEFT: 4px; MARGIN: 0px; BORDER-LEFT: rgb(212,217,217) 1px solid; PADDING-RIGHT: 4px; BACKGROUND-COLOR: rgb(239,241,241); font-stretch: normal; border-radius: 0px; text-shadow: none">Simple</CODE>:</P><PRE class=brush:groovy style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; FONT: 16px/24px Menlo, Monaco, 'Liberation Mono', Consolas, monospace; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch: normal">// File: build.gradle
+apply plugin: 'java'
+
+task(runSimple, dependsOn: 'classes', type: JavaExec) {
+    main = 'com.mrhaki.java.Simple'
+    classpath = sourceSets.main.runtimeClasspath
+    args 'mrhaki'
+    systemProperty 'simple.message', 'Hello '
+}
+
+defaultTasks 'runSimple'
+
+// javaexec() method also available for direct invocation
+// javaexec {
+//    main = 'com.mrhaki.java.Simple'
+//    classpath = sourceSets.main.runtimeClasspath
+//    args 'mrhaki'
+//    systemProperty 'simple.message', 'Hello '
+// }
+</PRE>
+<P 
+style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 20px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px">We 
+can execute our Gradle build script and get the following output:</P><PRE class=brush:plain style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; FONT: 16px/24px Menlo, Monaco, 'Liberation Mono', Consolas, monospace; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch: normal">$ gradle
+:compileJava
+:processResources
+:classes
+:runSimple
+Hello mrhaki from Simple.
+
+BUILD SUCCESSFUL
+
+Total time: 4.525 secs
+</PRE>
+<P 
+style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 20px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px"></P>
+<DIV 
+style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; CLEAR: both; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px"></DIV></DIV>
+<DIV id=social-sharing-buttons class=clearfix 
+style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; BORDER-BOTTOM: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 8px; PADDING-TOP: 0px; FONT: 300 16px/28px 'Helvetica Neue', Helvetica, Arial, sans-serif; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: 0px; WIDOWS: 1; DISPLAY: block; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><BR 
+class=Apple-interchange-newline></DIV></body>
+</html>
