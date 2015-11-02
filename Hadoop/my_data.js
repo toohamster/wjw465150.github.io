@@ -1,6 +1,6 @@
 d = new dTree("d");
 <!--
-d.add("0","-1","Hadoop资料","");
+d.add("0","-1","Hadoop参考大全","");
 d.add("1","0","Hadoop2.2.0集群的HA高可靠的最简单配置","my_data/Hadoop2.2.0集群的HA高可靠的最简单配置/Hadoop2.2.0集群的HA高可靠的最简单配置.htm");
 d.add("2","0","hadoop2.2.0集群的MapReduce的最简单配","my_data/Hadoop2.2.0集群的MapReduce的最简单配置.htm");
 d.add("3","0","Hadoop2.x完整安装配置","my_data/Hadoop2.x完整安装配置/Hadoop2.x完整安装配置.htm");
