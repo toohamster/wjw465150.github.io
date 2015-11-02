@@ -1,6 +1,6 @@
 d = new dTree("d");
 <!--
-d.add("0","-1","HBase参考大全","");
+d.add("0","-1","HBase资料","");
 d.add("1","0","Hbase关键的几个点","my_data/Hbase关键的几个点.htm");
 d.add("2","0","Mongodb VS Hbase","my_data/Mongodb_VS_Hbase.htm");
 d.add("3","0","HBASE启动脚本/Shell解析","my_data/HBASE启动脚本_Shell解析_.htm");
