@@ -1,0 +1,70 @@
+<!-- saved from url=http://www.oschina.net/discuss/thread/336 -->
+<script>
+window.onerror = new Function("return(false);")
+</script><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML minmax_bound="true"><HEAD minmax_bound="true"><TITLE minmax_bound="true">Linux&nbsp;下的硬盘读写速度测试工具&nbsp; - 开源中国社区</TITLE><LINK media=screen 
+href="osc-common.css" type=text/css rel=stylesheet 
+minmax_bound="true"><LINK media=screen href="osc-list.css" type=text/css 
+rel=stylesheet minmax_bound="true"><LINK href="osc-bbs.css_v=20090619" 
+type=text/css rel=stylesheet minmax_bound="true"><LINK media=screen 
+href="thickbox.css" type=text/css rel=stylesheet minmax_bound="true">
+<SCRIPT src="jquery.js" type=text/javascript 
+minmax_bound="true"></SCRIPT>
+
+<SCRIPT src="jquery.form.js" type=text/javascript 
+minmax_bound="true"></SCRIPT>
+
+<SCRIPT src="common.js" type=text/javascript minmax_bound="true"></SCRIPT>
+
+<SCRIPT src="thickbox.js" type=text/javascript 
+minmax_bound="true"></SCRIPT>
+</HEAD>
+
+<BODY minmax_bound="true">
+
+<DIV id=OSC_screen minmax_bound="true">
+
+<TABLE cellSpacing=0 cellPadding=0 width="100%" minmax_bound="true">
+
+<TBODY minmax_bound="true">
+
+<TR minmax_bound="true">
+
+<TD class=ThreadList id=MainContent 
+style="PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px" 
+vAlign=top minmax_bound="true">
+
+<DIV class=Thread minmax_bound="true">
+
+<DIV class=content minmax_bound="true"><!--StartFragment--><H3 minmax_bound="true">Linux 下的硬盘读写速度测试工具</H3>
+<TABLE class=blog-content border=0 minmax_bound="true">
+<TBODY minmax_bound="true">
+<TR minmax_bound="true">
+<TD minmax_bound="true">
+<P minmax_bound="true">执行一下以下命令看看你服务器的磁盘性能如何。 <BR minmax_bound="true"><BR 
+minmax_bound="true">hdparm -Tt /dev/sda <BR minmax_bound="true"><BR 
+minmax_bound="true">以下是 2块 希捷 ES2 SATA 500G 做 Raid0 的速度 <BR 
+minmax_bound="true"><BR minmax_bound="true">[root@admin ~]# hdparm -Tt /dev/sda 
+<BR minmax_bound="true">/dev/sda: <BR minmax_bound="true">Timing cached reads:&nbsp; 
+18916 MB in&nbsp; 1.99 seconds = 9484.20 MB/sec <BR minmax_bound="true">Timing 
+buffered disk reads:&nbsp; 586 MB in&nbsp; 3.00 seconds = 195.06 MB/sec <BR 
+minmax_bound="true"><BR minmax_bound="true">以下是 3块希捷 ES2 SATA 500G 做 Raid 5 的速度 
+<BR minmax_bound="true"><BR minmax_bound="true">[root@web ~]# hdparm -Tt 
+/dev/sda <BR minmax_bound="true">/dev/sda: <BR minmax_bound="true">Timing cached 
+reads:&nbsp; 18896 MB in&nbsp; 1.99 seconds = 9473.25 MB/sec <BR 
+minmax_bound="true">Timing buffered disk reads:&nbsp; 368 MB in&nbsp; 3.00 seconds = 
+122.55 MB/sec <BR minmax_bound="true"><BR minmax_bound="true">以下是 2块希捷 ES SATA 
+250G Raid 0 的速度 <BR minmax_bound="true"><BR minmax_bound="true">[root@app1 ~]# 
+hdparm -Tt /dev/sda <BR minmax_bound="true">/dev/sda: <BR 
+minmax_bound="true">Timing cached reads:&nbsp; 18028 MB in&nbsp; 1.97 seconds = 9149.56 
+MB/sec <BR minmax_bound="true">Timing buffered disk reads:&nbsp; 292 MB in&nbsp; 3.02 
+seconds =&nbsp; 96.54 MB/sec</P></TD></TR></TBODY></TABLE><!--EndFragment--></DIV>
+</DIV>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+</BODY>
+</HTML>
