@@ -1,77 +1,78 @@
-<HTML><HEAD>
-<META HTTP-EQUIV=Content-Type CONTENT=text/html; charset=gb2312>
-<title>  {!!!}¸ß¸ºÔØÏµÍ³£¬ÍøÂç²ÎÊıµ÷Õû  </title>
+ï»¿<HTML><HEAD>
+<META HTTP-EQUIV=Content-Type CONTENT=text/html; charset=UTF-8>
+<title>{!!!}é«˜è´Ÿè½½ç³»ç»Ÿï¼Œç½‘ç»œå‚æ•°è°ƒæ•´</title>
 <style type="text/css">
 <!--
-.9t {font-size: 9pt; color: #000000; font-family: "ËÎÌå";}
+.9t {font-size: 9pt; color: #000000; font-family: "å®‹ä½“";}
 -->
 </style></HEAD>
-<body bgcolor="#FFFFFF">
+<body bgcolor="#ffffff">
 <table width="90%" border="0" align="center" ><tr><td>
 <PRE class="9t">
-µ÷Õû/etc/sysctl.conf 
+è°ƒæ•´/etc/sysctl.conf 
 
 
-Java´úÂë 
+Javaä»£ç  
 net.ipv4.tcp_syncookies = 1  
 net.ipv4.tcp_syncookies = 1
-±íÊ¾¿ªÆôSYN Cookies¡£µ±³öÏÖSYNµÈ´ı¶ÓÁĞÒç³öÊ±£¬ÆôÓÃcookiesÀ´´¦Àí£¬¿É·À·¶ÉÙÁ¿SYN¹¥»÷£¬Ä¬ÈÏÎª0£¬±íÊ¾¹Ø±Õ£» 
+è¡¨ç¤ºå¼€å¯SYN Cookiesã€‚å½“å‡ºç°SYNç­‰å¾…é˜Ÿåˆ—æº¢å‡ºæ—¶ï¼Œå¯ç”¨cookiesæ¥å¤„ç†ï¼Œå¯é˜²èŒƒå°‘é‡SYNæ”»å‡»ï¼Œé»˜è®¤ä¸º0ï¼Œè¡¨ç¤ºå…³é—­ï¼› 
 
 
-Java´úÂë 
+Javaä»£ç  
 net.ipv4.tcp_tw_reuse = 1  
 net.ipv4.tcp_tw_reuse = 1
-±íÊ¾¿ªÆôÖØÓÃ¡£ÔÊĞí½«TIME-WAIT socketsÖØĞÂÓÃÓÚĞÂµÄTCPÁ¬½Ó£¬Ä¬ÈÏÎª0£¬±íÊ¾¹Ø±Õ£» 
+è¡¨ç¤ºå¼€å¯é‡ç”¨ã€‚å…è®¸å°†TIME-WAIT socketsé‡æ–°ç”¨äºæ–°çš„TCPè¿æ¥ï¼Œé»˜è®¤ä¸º0ï¼Œè¡¨ç¤ºå…³é—­ï¼› 
 
 
-Java´úÂë 
+Javaä»£ç  
 net.ipv4.tcp_tw_recycle = 1  
 net.ipv4.tcp_tw_recycle = 1
-±íÊ¾¿ªÆôTCPÁ¬½ÓÖĞTIME-WAIT socketsµÄ¿ìËÙ»ØÊÕ£¬Ä¬ÈÏÎª0£¬±íÊ¾¹Ø±Õ¡£ 
+è¡¨ç¤ºå¼€å¯TCPè¿æ¥ä¸­TIME-WAIT socketsçš„å¿«é€Ÿå›æ”¶ï¼Œé»˜è®¤ä¸º0ï¼Œè¡¨ç¤ºå…³é—­ã€‚ 
 
 
-Java´úÂë 
+Javaä»£ç  
 net.ipv4.tcp_fin_timeout = 30  
 net.ipv4.tcp_fin_timeout = 30
-±íÊ¾Èç¹ûÌ×½Ó×ÖÓÉ±¾¶ËÒªÇó¹Ø±Õ£¬Õâ¸ö²ÎÊı¾ö¶¨ÁËËü±£³ÖÔÚFIN-WAIT-2×´Ì¬µÄÊ±¼ä¡£ 
+è¡¨ç¤ºå¦‚æœå¥—æ¥å­—ç”±æœ¬ç«¯è¦æ±‚å…³é—­ï¼Œè¿™ä¸ªå‚æ•°å†³å®šäº†å®ƒä¿æŒåœ¨FIN-WAIT-2çŠ¶æ€çš„æ—¶é—´ã€‚ 
 
 
-Java´úÂë 
+Javaä»£ç  
 net.ipv4.tcp_keepalive_time = 1200   
 net.ipv4.tcp_keepalive_time = 1200 
-±íÊ¾µ±keepaliveÆğÓÃµÄÊ±ºò£¬TCP·¢ËÍkeepaliveÏûÏ¢µÄÆµ¶È¡£È±Ê¡ÊÇ2Ğ¡Ê±£¬¸ÄÎª20·ÖÖÓ¡£ 
+è¡¨ç¤ºå½“keepaliveèµ·ç”¨çš„æ—¶å€™ï¼ŒTCPå‘é€keepaliveæ¶ˆæ¯çš„é¢‘åº¦ã€‚ç¼ºçœæ˜¯2å°æ—¶ï¼Œæ”¹ä¸º20åˆ†é’Ÿã€‚ 
 
 
-Java´úÂë 
+Javaä»£ç  
 net.ipv4.ip_local_port_range = 1024 65000   
 net.ipv4.ip_local_port_range = 1024 65000 
-±íÊ¾ÓÃÓÚÏòÍâÁ¬½ÓµÄ¶Ë¿Ú·¶Î§¡£È±Ê¡Çé¿öÏÂºÜĞ¡£º32768µ½61000£¬¸ÄÎª1024µ½65000¡£ 
+è¡¨ç¤ºç”¨äºå‘å¤–è¿æ¥çš„ç«¯å£èŒƒå›´ã€‚ç¼ºçœæƒ…å†µä¸‹å¾ˆå°ï¼š32768åˆ°61000ï¼Œæ”¹ä¸º1024åˆ°65000ã€‚ 
 
 
-Java´úÂë 
+Javaä»£ç  
 net.ipv4.tcp_max_syn_backlog = 8192   
 net.ipv4.tcp_max_syn_backlog = 8192 
-±íÊ¾SYN¶ÓÁĞµÄ³¤¶È£¬Ä¬ÈÏÎª1024£¬¼Ó´ó¶ÓÁĞ³¤¶ÈÎª8192£¬¿ÉÒÔÈİÄÉ¸ü¶àµÈ´ıÁ¬½ÓµÄÍøÂçÁ¬½ÓÊı¡£ 
+è¡¨ç¤ºSYNé˜Ÿåˆ—çš„é•¿åº¦ï¼Œé»˜è®¤ä¸º1024ï¼ŒåŠ å¤§é˜Ÿåˆ—é•¿åº¦ä¸º8192ï¼Œå¯ä»¥å®¹çº³æ›´å¤šç­‰å¾…è¿æ¥çš„ç½‘ç»œè¿æ¥æ•°ã€‚ 
 
 
-Èç¹û¸ß¸ºÔØÏµÍ³Ê¹ÓÃÁËnetfilter/iptables£¬µ÷ÕûÒÔÏÂ²ÎÊı 
+å¦‚æœé«˜è´Ÿè½½ç³»ç»Ÿä½¿ç”¨äº†netfilter/iptablesï¼Œè°ƒæ•´ä»¥ä¸‹å‚æ•° 
 
-Java´úÂë 
+Javaä»£ç  
 net.ipv4.ip_conntrack_max = 655360   
 net.ipv4.ip_conntrack_max = 655360 
-ÔÚÄÚºËÄÚ´æÖĞnetfilter¿ÉÒÔÍ¬Ê±´¦ÀíµÄ¡°ÈÎÎñ¡±£¨Á¬½Ó¸ú×ÙÌõÄ¿£© 
+åœ¨å†…æ ¸å†…å­˜ä¸­netfilterå¯ä»¥åŒæ—¶å¤„ç†çš„â€œä»»åŠ¡â€ï¼ˆè¿æ¥è·Ÿè¸ªæ¡ç›®ï¼‰ 
 
 
-Java´úÂë 
+Javaä»£ç  
 net.ipv4.netfilter.ip_conntrack_tcp_timeout_established = 180  
 net.ipv4.netfilter.ip_conntrack_tcp_timeout_established = 180
-¸ú×ÙµÄÁ¬½Ó³¬Ê±½áÊøÊ±¼ä 
+è·Ÿè¸ªçš„è¿æ¥è¶…æ—¶ç»“æŸæ—¶é—´ 
 
 
-È»ºóÖ´ĞĞ/sbin/sysctl -pÈÃ²ÎÊıÉúĞ§ 
+ç„¶åæ‰§è¡Œ/sbin/sysctl -pè®©å‚æ•°ç”Ÿæ•ˆ 
  
 </PRE>
 </td></tr></table>
+<P>&nbsp;</P>
 
-</Body>
+</body>
 </HTML>

@@ -1,28 +1,28 @@
-<HTML><HEAD>
-<META HTTP-EQUIV=Content-Type CONTENT=text/html; charset=gb2312>
-<title>  ÅäÖÃCVSÖ¸ÄÏ  </title>
+ï»¿<HTML><HEAD>
+<META HTTP-EQUIV=Content-Type CONTENT=text/html; charset=UTF-8>
+<title>é…ç½®CVSæŒ‡å—</title>
 <style type="text/css">
 <!--
-.9t {font-size: 9pt; color: #000000; font-family: "ËÎÌå";}
+.9t {font-size: 9pt; color: #000000; font-family: "å®‹ä½“";}
 -->
 </style></HEAD>
-<body bgcolor="#FFFFFF">
+<body bgcolor="#ffffff">
 <table width="90%" border="0" align="center" ><tr><td>
 <PRE class="9t">
-1.ÅäÖÃCVS·şÎñ
+1.é…ç½®CVSæœåŠ¡
   adduser cvsroot
   passwd cvsroot
-2.ÒÔcvsrootµÄÓÃ»§µÇÂ½,´´½¨CVS·şÎñÊ¹ÓÃÄ¿Â¼
+2.ä»¥cvsrootçš„ç”¨æˆ·ç™»é™†,åˆ›å»ºCVSæœåŠ¡ä½¿ç”¨ç›®å½•
   mkdir /repository
   chmod 770 /repository
   chmod g+s /repository
-3.³õÊ¼»¯CVSµÄ·şÎñÄ¿Â¼
+3.åˆå§‹åŒ–CVSçš„æœåŠ¡ç›®å½•
   cvs -d /repository init
-  ³õÊ¼»¯ºó,ÔÚ/repositoryÄ¿Â¼ÏÂ×Ô¶¯½¨Á¢CVSROOTÄ¿Â¼,ÆäÖĞ´æÓĞCVS·şÎñµÄÏµÍ³ÎÄ¼ş
-4.Ìí¼ÓÓÃ»§
+  åˆå§‹åŒ–å,åœ¨/repositoryç›®å½•ä¸‹è‡ªåŠ¨å»ºç«‹CVSROOTç›®å½•,å…¶ä¸­å­˜æœ‰CVSæœåŠ¡çš„ç³»ç»Ÿæ–‡ä»¶
+4.æ·»åŠ ç”¨æˆ·
   adduser user1 -g cvsroot -s /bin/false
-  ²ÎÊı-s /bin/false±íÊ¾²»ÔÊĞíÓÃ»§Ö±½ÓµÇÂ½·şÎñÆ÷
-5.½¨Á¢Æô¶¯ÎÄ¼ş,ÔÚ/etc/xinetd.dÄ¿Â¼ÖĞ½¨Á¢CVS·şÎñµÄÆô¶¯ÅäÖÃÎÄ¼ş
+  å‚æ•°-s /bin/falseè¡¨ç¤ºä¸å…è®¸ç”¨æˆ·ç›´æ¥ç™»é™†æœåŠ¡å™¨
+5.å»ºç«‹å¯åŠ¨æ–‡ä»¶,åœ¨/etc/xinetd.dç›®å½•ä¸­å»ºç«‹CVSæœåŠ¡çš„å¯åŠ¨é…ç½®æ–‡ä»¶
 vi /etc/xinetd.d/cvspserver
 #######################
 service cvspserver
@@ -38,14 +38,15 @@ service cvspserver
   log_on_failure += USERID
 }
 #######################
-6.½«ÆÕÍ¨¿ª·¢ÈËÔ±µÄÕËºÅ¼ÓÈëCVS·şÎñ¹ÜÀíÕËºÅµÄ×éÖĞ
+6.å°†æ™®é€šå¼€å‘äººå‘˜çš„è´¦å·åŠ å…¥CVSæœåŠ¡ç®¡ç†è´¦å·çš„ç»„ä¸­
   vi /etc/group
-7.ÖØÆôxinet·şÎñ
+7.é‡å¯xinetæœåŠ¡
   /etc/init.d/xinetd restart
   
  
 </PRE>
 </td></tr></table>
+<P>&nbsp;</P>
 
-</Body>
+</body>
 </HTML>

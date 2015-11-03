@@ -1,13 +1,13 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>linux���ļ������Ĳ鿴����</title>
+<title>linux打开文件数量的查看方法</title>
 <meta name="GENERATOR" content="WinCHM">
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
 html,body { 
 	/* Default Font */
-	font-family: ����, Arial, Helvetica, sans-serif;
+	font-family: 宋体, Arial, Helvetica, sans-serif;
 	font-size: 10pt;
 }
 </style>
@@ -15,8 +15,8 @@ html,body {
 </head>
 
 <body>
-<P>cat /proc/sys/fs/file-nr <BR>���ļ��� file-max ��أ���������ֵ�� <BR>�ѷ����ļ��������Ŀ 
-��ʹ���ļ��������Ŀ �ļ�����������Ŀ </P>
-<P>�鿴���н��̵��ļ�����<BR>lsof | wc -l</P>
-<P>�鿴ĳ�����̴򿪵��ļ���<BR>lsof -p ${pid} | wc -l<BR></P></body>
+<P>cat /proc/sys/fs/file-nr <BR>该文件与 file-max 相关，它有三个值： <BR>已分配文件句柄的数目 
+已使用文件句柄的数目 文件句柄的最大数目 </P>
+<P>查看所有进程的文件打开数<BR>lsof | wc -l</P>
+<P>查看某个进程打开的文件数<BR>lsof -p ${pid} | wc -l<BR></P></body>
 </html>

@@ -1,54 +1,54 @@
-<HTML><HEAD>
-<META HTTP-EQUIV=Content-Type CONTENT=text/html; charset=gb2312>
-<title>  {!!!}²é¿´Linux°æ±¾  </title>
+ï»¿<HTML><HEAD>
+<META HTTP-EQUIV=Content-Type CONTENT=text/html; charset=UTF-8>
+<title>{!!!}æŸ¥çœ‹Linuxç‰ˆæœ¬</title>
 <style type="text/css">
 <!--
-.9t {font-size: 9pt; color: #000000; font-family: "ËÎÌå";}
+.9t {font-size: 9pt; color: #000000; font-family: "å®‹ä½“";}
 -->
 </style></HEAD>
-<body bgcolor="#FFFFFF">
+<body bgcolor="#ffffff">
 <table width="90%" border="0" align="center" ><tr><td>
 <PRE class="9t">
-²é¿´CPUĞÅÏ¢: 
+æŸ¥çœ‹CPUä¿¡æ¯: 
 # cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c
       8  Intel(R) Xeon(R) CPU            E5410   @ 2.33GHz
-(¿´µ½ÓĞ8¸öÂß¼­CPU, Ò²ÖªµÀÁËCPUĞÍºÅ)
+(çœ‹åˆ°æœ‰8ä¸ªé€»è¾‘CPU, ä¹ŸçŸ¥é“äº†CPUå‹å·)
 
 # cat /proc/cpuinfo | grep physical | uniq -c
       4 physical id      : 0
       4 physical id      : 1
-(ËµÃ÷Êµ¼ÊÉÏÊÇÁ½¿Å4ºËµÄCPU) 
+(è¯´æ˜å®é™…ä¸Šæ˜¯ä¸¤é¢—4æ ¸çš„CPU) 
 
-²é¿´ÄÚ ´æĞÅÏ¢:
+æŸ¥çœ‹å†… å­˜ä¿¡æ¯:
 # cat /proc/meminfo 
 
-²é¿´µ±Ç°²Ù×÷ÏµÍ³·¢ĞĞ°æĞÅÏ¢:
+æŸ¥çœ‹å½“å‰æ“ä½œç³»ç»Ÿå‘è¡Œç‰ˆä¿¡æ¯:
 # cat /etc/issue
 
-²é¿´»úÆ÷ĞÍºÅ:
+æŸ¥çœ‹æœºå™¨å‹å·:
 # dmidecode | grep "Product Name" 
 
-²é¿´Íø¿¨ĞÅÏ¢:
+æŸ¥çœ‹ç½‘å¡ä¿¡æ¯:
 # dmesg | grep -i eth
 
-1. ²é¿´ÄÚºË°æ±¾ÃüÁî£º 
+1. æŸ¥çœ‹å†…æ ¸ç‰ˆæœ¬å‘½ä»¤ï¼š 
 
-¡¡¡¡1) [root@q1test01 ~]# cat /proc/version 
+ã€€ã€€1) [root@q1test01 ~]# cat /proc/version 
 
-¡¡¡¡ Linux version 2.6.9-22.ELsmp (bhcompile@crowe.devel.redhat.com) (gcc version 3.4.4 20050721 (Red Hat 3.4.4-2)) #1 SMP Mon Sep 19 
+ã€€ã€€ Linux version 2.6.9-22.ELsmp (bhcompile@crowe.devel.redhat.com) (gcc version 3.4.4 20050721 (Red Hat 3.4.4-2)) #1 SMP Mon Sep 19 
 18:00:54 EDT 2005 
 
-¡¡¡¡2) [root@q1test01 ~]# uname -a 
+ã€€ã€€2) [root@q1test01 ~]# uname -a 
 
-¡¡¡¡Linux q1test01 2.6.9-22.ELsmp #1 SMP Mon Sep 19 18:00:54 EDT 2005 x86_64 x86_64 x86_64 GNU/Linux 
+ã€€ã€€Linux q1test01 2.6.9-22.ELsmp #1 SMP Mon Sep 19 18:00:54 EDT 2005 x86_64 x86_64 x86_64 GNU/Linux 
 
-¡¡¡¡3) [root@q1test01 ~]# uname -r 
+ã€€ã€€3) [root@q1test01 ~]# uname -r 
 
-¡¡¡¡2.6.9-22.ELsmp 
+ã€€ã€€2.6.9-22.ELsmp 
 
-2.²é¿´linuxµÄ°æ±¾Ö÷ÒªÓĞÈıÖÖ·½·¨£º
+2.æŸ¥çœ‹linuxçš„ç‰ˆæœ¬ä¸»è¦æœ‰ä¸‰ç§æ–¹æ³•ï¼š
 
-1) µÇÂ¼µ½·şÎñÆ÷Ö´ĞĞ lsb_release -a £¬¼´¿ÉÁĞ³öËùÓĞ°æ±¾ĞÅÏ¢£¬ÀıÈç£º
+1) ç™»å½•åˆ°æœåŠ¡å™¨æ‰§è¡Œ lsb_release -a ï¼Œå³å¯åˆ—å‡ºæ‰€æœ‰ç‰ˆæœ¬ä¿¡æ¯ï¼Œä¾‹å¦‚ï¼š
 
 [root@3.5.5Biz-46 ~]# lsb_release -a 
 LSB Version: 1.3
@@ -58,23 +58,23 @@ Release: 4
 Codename: NahantUpdate1
 [root@3.5.5Biz-46 ~]# 
 
-Õâ¸öÃüÁîÊÊÓÃÓÚËùÓĞµÄlinux£¬°üÀ¨Redhat¡¢SuSE¡¢DebianµÈ·¢ĞĞ°æ¡£
+è¿™ä¸ªå‘½ä»¤é€‚ç”¨äºæ‰€æœ‰çš„linuxï¼ŒåŒ…æ‹¬Redhatã€SuSEã€Debianç­‰å‘è¡Œç‰ˆã€‚
 
-2) µÇÂ¼µ½linuxÖ´ĞĞcat /etc/redhat-release £¬ÀıÈçÈçÏÂ£º
+2) ç™»å½•åˆ°linuxæ‰§è¡Œcat /etc/redhat-release ï¼Œä¾‹å¦‚å¦‚ä¸‹ï¼š
 [root@3.5.5Biz-46 ~]# cat /etc/redhat-release 
 Red Hat Enterprise Linux AS release 4 (Nahant Update 1)
 [root@3.5.5Biz-46 ~]# 
 
-ÕâÖÖ·½Ê½ÏÂ¿ÉÒÔÖ±½Ó¿´µ½¾ßÌåµÄ°æ±¾ºÅ£¬±ÈÈç AS4 Update 1
+è¿™ç§æ–¹å¼ä¸‹å¯ä»¥ç›´æ¥çœ‹åˆ°å…·ä½“çš„ç‰ˆæœ¬å·ï¼Œæ¯”å¦‚ AS4 Update 1
 
-3£©µÇÂ¼µ½linuxÖ´ĞĞrpm -q redhat-release £¬ÀıÈçÈçÏÂ
+3ï¼‰ç™»å½•åˆ°linuxæ‰§è¡Œrpm -q redhat-release ï¼Œä¾‹å¦‚å¦‚ä¸‹
 
 [root@3.5.5Biz-46 ~]# rpm -q redhat-release
 redhat-release-4AS-2.4
 [root@3.5.5Biz-46 ~]# 
 
-ÕâÖÖ·½Ê½ÏÂ¿É¿´µ½Ò»¸öËùÎ½µÄreleaseºÅ£¬±ÈÈçÉÏ±ßµÄÀı×ÓÊÇ2.4
-Õâ¸öreleaseºÅºÍÊµ¼ÊµÄ°æ±¾Ö®¼ä´æÔÚÒ»¶¨µÄ¶ÔÓ¦¹ØÏµ£¬ÈçÏÂ£º
+è¿™ç§æ–¹å¼ä¸‹å¯çœ‹åˆ°ä¸€ä¸ªæ‰€è°“çš„releaseå·ï¼Œæ¯”å¦‚ä¸Šè¾¹çš„ä¾‹å­æ˜¯2.4
+è¿™ä¸ªreleaseå·å’Œå®é™…çš„ç‰ˆæœ¬ä¹‹é—´å­˜åœ¨ä¸€å®šçš„å¯¹åº”å…³ç³»ï¼Œå¦‚ä¸‹ï¼š
 
 redhat-release-3AS-1 -&gt; Redhat Enterprise Linux AS 3
 redhat-release-3AS-7.4 -&gt; Redhat Enterprise Linux AS 3 Update 4
@@ -84,10 +84,10 @@ redhat-release-4AS-3 -&gt; Redhat Enterprise Linux AS 4 Update 2
 redhat-release-4AS-4.1 -&gt; Redhat Enterprise Linux AS 4 Update 3
 redhat-release-4AS-5.5 -&gt; Redhat Enterprise Linux AS 4 Update 4
 
-×¢Òâ£ºµÚ£¨2£©£¨3£©Á½ÖÖ·½·¨Ö»¶ÔRedhat LinuxÓĞĞ§
+æ³¨æ„ï¼šç¬¬ï¼ˆ2ï¼‰ï¼ˆ3ï¼‰ä¸¤ç§æ–¹æ³•åªå¯¹Redhat Linuxæœ‰æ•ˆ
  
 </PRE>
 </td></tr></table>
 
-</Body>
+</body>
 </HTML>

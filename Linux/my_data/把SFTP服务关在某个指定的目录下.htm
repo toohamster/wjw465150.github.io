@@ -1,13 +1,13 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>{!!!}°ÑSFTP·şÎñ¹ØÔÚÄ³¸öÖ¸¶¨µÄÄ¿Â¼ÏÂ</title>
+<title>{!!!}æŠŠSFTPæœåŠ¡å…³åœ¨æŸä¸ªæŒ‡å®šçš„ç›®å½•ä¸‹</title>
 <meta name="GENERATOR" content="WinCHM">
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
 html,body { 
 	/* Default Font */
-	font-family: ËÎÌå, Arial, Helvetica, sans-serif;
+	font-family: å®‹ä½“, Arial, Helvetica, sans-serif;
 	font-size: 10pt;
 }
 </style>
@@ -15,23 +15,23 @@ html,body {
 </head>
 
 <body>
-<P>opensshµÄĞÅÏ¢Îª£º<BR>openssh-clients-5.3p1-20.el6_0.3.x86_64<BR>openssh-server-5.3p1-20.el6_0.3.x86_64<BR>openssh-5.3p1-20.el6_0.3.x86_64</P>
-<P>1. Ìí¼ÓÓÃ»§<BR><FONT style="BACKGROUND-COLOR: #c0dcc0">useradd -d /data/sftp -s 
+<P>opensshçš„ä¿¡æ¯ä¸ºï¼š<BR>openssh-clients-5.3p1-20.el6_0.3.x86_64<BR>openssh-server-5.3p1-20.el6_0.3.x86_64<BR>openssh-5.3p1-20.el6_0.3.x86_64</P>
+<P>1. æ·»åŠ ç”¨æˆ·<BR><FONT style="BACKGROUND-COLOR: #c0dcc0">useradd -d /data/sftp -s 
 /sbin/nologin -M sftp</FONT></P>
-<P>#-d /data/sftp£ºÖ¸¶¨ÓÃ»§µÄÖ÷Ä¿Â¼Îª/data/sftp<BR>#-s 
-/sbin/nologin£ºÖ¸¶¨ÓÃ»§²»ÄÜµÇÂ¼<BR>#-M£º²»´´½¨Ö÷Ä¿Â¼</P>
+<P>#-d /data/sftpï¼šæŒ‡å®šç”¨æˆ·çš„ä¸»ç›®å½•ä¸º/data/sftp<BR>#-s 
+/sbin/nologinï¼šæŒ‡å®šç”¨æˆ·ä¸èƒ½ç™»å½•<BR>#-Mï¼šä¸åˆ›å»ºä¸»ç›®å½•</P>
 <P><FONT style="BACKGROUND-COLOR: #c0dcc0">passwd sftp</FONT></P>
-<P>2. ÅäÖÃsshd_config<BR>vi /etc/ssh/sshd_config</P>
-<P><FONT style="BACKGROUND-COLOR: #c0dcc0">#½«ÒÔÏÂĞĞ×¢ÊÍ£¬¸ü»»³Éinternal-sftp<BR>#Subsystem sftp 
+<P>2. é…ç½®sshd_config<BR>vi /etc/ssh/sshd_config</P>
+<P><FONT style="BACKGROUND-COLOR: #c0dcc0">#å°†ä»¥ä¸‹è¡Œæ³¨é‡Šï¼Œæ›´æ¢æˆinternal-sftp<BR>#Subsystem sftp 
 /usr/libexec/openssh/sftp-server<BR>Subsystem sftp internal-sftp</FONT></P>
-<P><FONT style="BACKGROUND-COLOR: #c0dcc0">#Ìí¼ÓÒÔÏÂĞĞ <BR>Match User sftp&nbsp; 
-#Òª±»¹ØÆğÀ´µÄÊ¹ÓÃÕß<BR>ChrootDirectory /data/sftp&nbsp; #Òª¹ØÔÚÄÇ¸öÄ¿Â¼ÏÂ<BR>X11Forwarding 
+<P><FONT style="BACKGROUND-COLOR: #c0dcc0">#æ·»åŠ ä»¥ä¸‹è¡Œ <BR>Match User sftp&nbsp; 
+#è¦è¢«å…³èµ·æ¥çš„ä½¿ç”¨è€…<BR>ChrootDirectory /data/sftp&nbsp; #è¦å…³åœ¨é‚£ä¸ªç›®å½•ä¸‹<BR>X11Forwarding 
 no<BR>AllowTcpForwarding no<BR>ForceCommand internal-sftp</FONT></P>
-<P>3. ÅäÖÃÄ¿Â¼È¨ÏŞ<BR><FONT style="BACKGROUND-COLOR: #c0dcc0">mkdir -p 
+<P>3. é…ç½®ç›®å½•æƒé™<BR><FONT style="BACKGROUND-COLOR: #c0dcc0">mkdir -p 
 /data/sftp<BR>chown -R root:root /data/sftp<BR>chmod 0755 /data/sftp</FONT></P>
-<P>#Ä¿Â¼È¨ÏŞĞèÒª×¢Òâ£º<BR>#a. ÓÉChrootDirectoryÖ¸¶¨µÄÄ¿Â¼¿ªÊ¼Ò»Ö±ÍùÉÏµ½ÏµÍ³¸ùÄ¿Â¼ÎªÖ¹µÄÄ¿Â¼ÓµÓĞÕß¶¼Ö»ÄÜÊÇroot<BR>#b. 
-ÓÉChrootDirectoryÖ¸¶¨µÄÄ¿Â¼¿ªÊ¼Ò»Ö±ÍùÉÏµ½ÏµÍ³¸ùÄ¿Â¼ÎªÖ¹¶¼²»¿ÉÒÔ¾ßÓĞÈº×éĞ´ÈëÈ¨ÏŞ</P>
+<P>#ç›®å½•æƒé™éœ€è¦æ³¨æ„ï¼š<BR>#a. ç”±ChrootDirectoryæŒ‡å®šçš„ç›®å½•å¼€å§‹ä¸€ç›´å¾€ä¸Šåˆ°ç³»ç»Ÿæ ¹ç›®å½•ä¸ºæ­¢çš„ç›®å½•æ‹¥æœ‰è€…éƒ½åªèƒ½æ˜¯root<BR>#b. 
+ç”±ChrootDirectoryæŒ‡å®šçš„ç›®å½•å¼€å§‹ä¸€ç›´å¾€ä¸Šåˆ°ç³»ç»Ÿæ ¹ç›®å½•ä¸ºæ­¢éƒ½ä¸å¯ä»¥å…·æœ‰ç¾¤ç»„å†™å…¥æƒé™</P>
 <P><FONT style="BACKGROUND-COLOR: #c0dcc0">mkdir -p /data/sftp/upload<BR>chown 
--R sftp:sftp /data/sftp/upload&nbsp;&nbsp; #Õâ¸öÄ¿Â¼ÎªsftpÓÃ»§ÓµÓĞÈ¨ÏŞµÄ×ÓÄ¿Â¼</FONT></P>
-<P>4. ÖØÆôsshd<BR>#ÏÈÓÃÒÔÏÂÃüÁî²âÊÔÅäÖÃÎÄ¼ş&nbsp; <BR><FONT style="BACKGROUND-COLOR: #c0dcc0">sshd -T<BR>service sshd 
+-R sftp:sftp /data/sftp/upload&nbsp;&nbsp; #è¿™ä¸ªç›®å½•ä¸ºsftpç”¨æˆ·æ‹¥æœ‰æƒé™çš„å­ç›®å½•</FONT></P>
+<P>4. é‡å¯sshd<BR>#å…ˆç”¨ä»¥ä¸‹å‘½ä»¤æµ‹è¯•é…ç½®æ–‡ä»¶&nbsp; <BR><FONT style="BACKGROUND-COLOR: #c0dcc0">sshd -T<BR>service sshd 
 restart</FONT></P></body>

@@ -1,8 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN"><!-- Source is http://lovesoo.org/linux-sar-command-detailed.html -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>linux sar命令详解 | 大爱</title> 
+<title>linux sar命令详解</title> 
 <meta name="description" content="sar（System Activity Reporter系统活动情况报告）是目前 Linux 上最为全面的系统性能分析工具之一，可以从多方面对系统的活动进行报告，包括：文件的读写情况、系统调用的使用情况、磁盘I/O、CPU效率、内存使用状况、进程活动及IPC有关的活动等。本文主要以CentOS 6.3 x64系统为例，介绍sar命令。" />
 <meta name="keywords" content="CentOS,CPU,I/O,Linux,sar,内存,性能分析,磁盘" />
 <link rel="stylesheet" href="index_files/style.css" type="text/css" media="screen" />
@@ -86,12 +86,7 @@ function() {$(this).fadeTo("fast", 1);
 });
 </script>
 <!-- PNG -->
-<!--[if lt IE 7]>
-<script type="text/javascript" src="index_files/pngfix.js"></script>
-<script type="text/javascript">
-DD_belatedPNG.fix('.boxCaption,.top_box,.logo,.reply,.imgcat');
-</script>
-<![endif]-->
+
 <!-- 图片延迟加载 -->
 <script type="text/javascript" src="index_files/lazyload.js"></script>
 <script type="text/javascript">
@@ -135,14 +130,11 @@ if (window.attachEvent) window.attachEvent("onload", sfHover);
         zoom.style.fontSize = size + 'px';
     }
 </script>
-<div id="content">
-			 <!-- menu --><!-- end: menu -->
+<div id="content"><!-- menu --><!-- end: menu -->
 		<div class="entry_box_s">
-		  <div class="entry_title_box">
-			  <!-- 分类图标 --><!-- end: 分类图标 -->
+		  <div class="entry_title_box"><!-- 分类图标 --><!-- end: 分类图标 -->
 				<div class="entry_title">linux sar命令详解</div>
-		  </div>
-			<!-- end: entry_title_box -->
+		  </div><!-- end: entry_title_box -->
 			<div class="entry">
 			  <div id="entry">
 																			  <p><span class='wp_keywordlink_affiliate'><a href="http://lovesoo.org/tag/sar" title="查看 sar 中的全部文章" target="_blank">sar</a></span>（System Activity Reporter系统活动情况报告）是目前 <span class='wp_keywordlink_affiliate'><a href="http://lovesoo.org/tag/linux" title="查看 Linux 中的全部文章" target="_blank">Linux</a></span> 上最为全面的系统<span class='wp_keywordlink_affiliate'><a href="http://lovesoo.org/tag/%e6%80%a7%e8%83%bd%e5%88%86%e6%9e%90" title="查看 性能分析 中的全部文章" target="_blank">性能分析</a></span>工具之一，可以从多方面对系统的活动进行报告，包括：文件的读写情况、系统调用的使用情况、<span class='wp_keywordlink_affiliate'><a href="http://lovesoo.org/tag/%e7%a3%81%e7%9b%98" title="查看 磁盘 中的全部文章" target="_blank">磁盘</a></span><span class='wp_keywordlink_affiliate'><a href="http://lovesoo.org/tag/io" title="查看 I/O 中的全部文章" target="_blank">I/O</a></span>、<span class='wp_keywordlink_affiliate'><a href="http://lovesoo.org/tag/cpu" title="查看 CPU 中的全部文章" target="_blank">CPU</a></span>效率、<span class='wp_keywordlink_affiliate'><a href="http://lovesoo.org/tag/%e5%86%85%e5%ad%98" title="查看 内存 中的全部文章" target="_blank">内存</a></span>使用状况、进程活动及IPC有关的活动等。本文主要以<span class='wp_keywordlink_affiliate'><a href="http://lovesoo.org/tag/centos" title="查看 CentOS 中的全部文章" target="_blank">CentOS</a></span> 6.3 x64系统为例，介绍<span class='wp_keywordlink_affiliate'><a href="http://lovesoo.org/tag/sar" title="查看 sar 中的全部文章" target="_blank">sar</a></span>命令。</p>
@@ -152,7 +144,7 @@ if (window.attachEvent) window.attachEvent("onload", sfHover);
 <p>t为采样间隔，n为采样次数，默认值是1；</p>
 <p>-o file表示将命令结果以二进制格式存放在文件中，file 是文件名。</p>
 <p>options 为命令行选项，sar命令常用选项如下：</p>
-<p><img src="index_files/082112_1144_linuxsar1.png" alt="" /></p>
+<p><IMG alt="" src="index_files/082112_1144_linuxsar1.png" ></p>
 <p>-A：所有报告的总和</p>
 <p>-u：输出<span class='wp_keywordlink_affiliate'><a href="http://lovesoo.org/tag/cpu" title="查看 CPU 中的全部文章" target="_blank">CPU</a></span>使用情况的统计信息</p>
 <p>-v：输出inode、文件和其他内核表的统计信息</p>
@@ -204,7 +196,7 @@ if (window.attachEvent) window.attachEvent("onload", sfHover);
 <p>例如，每10秒采样一次，连续采样3次，监控内存分页：</p>
 <p>sar -r 10 3</p>
 <p>屏幕显示如下：</p>
-<p><img src="http://lovesoo.org/wp-content/uploads/2012/08/082112_1144_linuxsar2.png" alt="" /></p>
+<p><img src="http://lovesoo.org/wp-content/uploads/2012/08/082112_1144_linuxsar2.png" alt="" ></p>
 <p>输出项说明：</p>
 <p>kbmemfree：这个值和free命令中的free值基本一致,所以它不包括buffer和cache的空间.</p>
 <p>kbmemused：这个值和free命令中的used值基本一致,所以它包括buffer和cache的空间.</p>
@@ -216,7 +208,7 @@ if (window.attachEvent) window.attachEvent("onload", sfHover);
 <p>例如，每10秒采样一次，连续采样3次，监控内存分页：</p>
 <p>sar -B 10 3</p>
 <p>屏幕显示如下：</p>
-<p><img src="http://lovesoo.org/wp-content/uploads/2012/08/082112_1144_linuxsar3.png" alt="" /></p>
+<p><img src="http://lovesoo.org/wp-content/uploads/2012/08/082112_1144_linuxsar3.png" alt="" ></p>
 <p>输出项说明：</p>
 <p>pgpgin/s：表示每秒从<span class='wp_keywordlink_affiliate'><a href="http://lovesoo.org/tag/%e7%a3%81%e7%9b%98" title="查看 磁盘 中的全部文章" target="_blank">磁盘</a></span>或SWAP置换到内存的字节数(KB)</p>
 <p>pgpgout/s：表示每秒从内存置换到<span class='wp_keywordlink_affiliate'><a href="http://lovesoo.org/tag/%e7%a3%81%e7%9b%98" title="查看 磁盘 中的全部文章" target="_blank">磁盘</a></span>或SWAP的字节数(KB)</p>
@@ -259,7 +251,7 @@ if (window.attachEvent) window.attachEvent("onload", sfHover);
 <p>ldavg-15：过去15分钟的系统平均负载</p>
 <h1>7. 系统交换活动信息监控</h1>
 <p>例如，每10秒采样一次，连续采样3次，监控系统交换活动信息：</p>
-<p>sar -    W 10 3</p>
+<p>sar -&nbsp;&nbsp;&nbsp;&nbsp;W 10 3</p>
 <p>屏幕显示如下：</p>
 <p>19:39:50 pswpin/s pswpout/s</p>
 <p>19:40:00 0.00 0.00</p>
@@ -273,11 +265,11 @@ if (window.attachEvent) window.attachEvent("onload", sfHover);
 <p>例如，每10秒采样一次，连续采样3次，报告设备使用情况，需键入如下命令：</p>
 <p># sar -d 10 3 –p</p>
 <p>屏幕显示如下：</p>
-<p>17:45:54    DEV    tps    rd_sec/s    wr_sec/s    avgrq-sz    avgqu-sz    await    svctm    %util</p>
-<p>17:46:04    scd0    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00</p>
-<p>17:46:04    sda    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00</p>
-<p>17:46:04    vg_livedvd-lv_root    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00</p>
-<p>17:46:04    vg_livedvd-lv_swap    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00</p>
+<p>17:45:54&nbsp;&nbsp;&nbsp;&nbsp;DEV&nbsp;&nbsp;&nbsp;&nbsp;tps&nbsp;&nbsp;&nbsp;&nbsp;rd_sec/s&nbsp;&nbsp;&nbsp;&nbsp;wr_sec/s&nbsp;&nbsp;&nbsp;&nbsp;avgrq-sz&nbsp;&nbsp;&nbsp;&nbsp;avgqu-sz&nbsp;&nbsp;&nbsp;&nbsp;await&nbsp;&nbsp;&nbsp;&nbsp;svctm&nbsp;&nbsp;&nbsp;&nbsp;%util</p>
+<p>17:46:04&nbsp;&nbsp;&nbsp;&nbsp;scd0&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00</p>
+<p>17:46:04&nbsp;&nbsp;&nbsp;&nbsp;sda&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00</p>
+<p>17:46:04&nbsp;&nbsp;&nbsp;&nbsp;vg_livedvd-lv_root&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00</p>
+<p>17:46:04&nbsp;&nbsp;&nbsp;&nbsp;vg_livedvd-lv_swap&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00&nbsp;&nbsp;&nbsp;&nbsp;0.00</p>
 <p>其中：</p>
 <p>参数-p可以打印出sda,hdc等磁盘设备名称,如果不用参数-p,设备节点则有可能是dev8-0,dev22-0</p>
 <p>tps:每秒从物理磁盘I/O的次数.多个逻辑请求会被合并为一个I/O磁盘请求,一次传输的大小是不确定的.</p>
@@ -294,28 +286,23 @@ if (window.attachEvent) window.attachEvent("onload", sfHover);
 <p>怀疑CPU存在瓶颈，可用 sar -u 和 sar -q 等来查看</p>
 <p>怀疑内存存在瓶颈，可用 sar -B、sar -r 和 sar -W 等来查看</p>
 <p>怀疑I/O存在瓶颈，可用 sar -b、sar -u 和 sar -d 等来查看</p>
-<br /><div style='float:left'><!-- Baidu Button BEGIN -->
-<script type="text/javascript" id="bdshare_js" data="type=slide&img=1&pos=left&uid=21485" ></script>
+<br ><div style="FLOAT: left"><!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=1&amp;pos=left&amp;uid=21485"></script>
 <script type="text/javascript" id="bdshell_js"></script>
 <script type="text/javascript">
 		var bds_config = {"bdTop":200};
 		document.getElementById("bdshell_js").src = "http://share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
 </script>
-<!-- Baidu Button END --></div><br /><br /><br />										<div class="clear"></div>
+<!-- Baidu Button END --></div><br ><br ><br >										<div class="clear"></div>
 				</div>
 			</div>
 			<div class="clear"></div>
-			<!-- end: entry -->
+<P><!-- end: entry -->
 			<i class="lt"></i>
-			<i class="rt"></i>
-		</div>
-		<!-- ad -->
-								<!-- entrymeta --><!-- end: entrymeta --><!-- relatedposts --><!-- end: relatedposts -->
-	<div class="ct"></div>
-	<!-- You can start editing here. -->
-			<!-- If comments are closed. --></div>
-<!-- end: content --><div class="clear"></div>
-<!-- 页脚 --><!-- 首页页脚 -->
+			<i class="rt"></i></P>
+<P>&nbsp;</P>
+		</div><!-- ad --><!-- entrymeta --><!-- end: entrymeta --><!-- relatedposts --><!-- end: relatedposts -->
+	<div class="ct"></div><!-- You can start editing here. --><!-- If comments are closed. --></div><!-- end: content --><div class="clear"></div><!-- 页脚 --><!-- 首页页脚 -->
  <div class="clear"></div>
 </div>
 <span id='wpmp_analytics'></span></body></html>

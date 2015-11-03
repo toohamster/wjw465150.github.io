@@ -1,18 +1,19 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 
 <HTML lang=zh-CN xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" 
-jQuery1282095456186="8" sizcache="2" sizset="0"><HEAD><TITLE>Nginx SSL/HTTPS ÅäÖÃ - ¿ªÔ´ÖĞ¹úÉçÇø</TITLE><LINK 
+jQuery1282095456186="8" sizcache="2" sizset="0"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>ä½¿ç”¨OpenSSLç”Ÿæˆè¯ä¹¦</title><LINK 
 rel="shortcut icon" type=image/x-icon href="favicon.ico"><LINK 
 rel=stylesheet type=text/css href="oschina.css_ver=20100810" 
 media=screen><LINK rel=stylesheet type=text/css href="thickbox.css" 
 media=screen>
 <LINK title=OSChina rel=search type=application/opensearchdescription+xml 
-href="open-search.xml"><LINK title=¿ªÔ´ÖĞ¹ú×îĞÂÈí¼ş rel=alternate 
+href="open-search.xml"><LINK title=å¼€æºä¸­å›½æœ€æ–°è½¯ä»¶ rel=alternate 
 type=application/rss+xml href="rss"><LINK 
-title=¿ªÔ´ÖĞ¹ú×îĞÂĞÂÎÅ rel=alternate type=application/rss+xml 
-href="rss"><LINK title=¿ªÔ´ÖĞ¹ú×îĞÂÌÖÂÛ»°Ìâ rel=alternate 
+title=å¼€æºä¸­å›½æœ€æ–°æ–°é—» rel=alternate type=application/rss+xml 
+href="rss"><LINK title=å¼€æºä¸­å›½æœ€æ–°è®¨è®ºè¯é¢˜ rel=alternate 
 type=application/rss+xml href="rss"><LINK 
-title=¿ªÔ´ÖĞ¹ú×îĞÂ²©¿Í rel=alternate type=application/rss+xml 
+title=å¼€æºä¸­å›½æœ€æ–°åšå®¢ rel=alternate type=application/rss+xml 
 href="rss">
 <STYLE>
     body,table,input,textarea,select {font-family:Verdana,sans-serif;}
@@ -22,34 +23,34 @@ href="ui.css"><LINK
 rel=stylesheet 
 href="window.css"></HEAD>
 
-<BODY jQuery1282095456186="7" sizcache="2" sizset="0">
+<BODY sizset="0" sizcache="2" jQuery1282095456186="7">
 
-<DIV id=OSC_Screen jQuery1282095456186="6" sizcache="2" sizset="0">
+<DIV id="OSC_Screen" sizset="0" sizcache="2" jQuery1282095456186="6">
 
-<DIV id=OSC_Content class=CenterDiv sizcache="2" sizset="1">
+<DIV id=OSC_Content class="CenterDiv" sizset="1" sizcache="2">
 
-<DIV style="MARGIN-TOP: 10px" class=ThreadMain sizcache="2" sizset="1">
+<DIV style="MARGIN-TOP: 10px" class="ThreadMain" sizset="1" sizcache="2">
 
 <TABLE style="MARGIN-TOP: 5px" id=ThreadTable cellSpacing=1 cellPadding=1 
-width="100%" sizcache="2" sizset="3">
+width="100%" sizset="3" sizcache="2">
 
-<TBODY id=posts sizcache="2" sizset="3">
+<TBODY id="posts" sizset="3" sizcache="2">
 
-<TR class=Thread sizcache="2" sizset="3">
+<TR class="Thread" sizset="3" sizcache="2">
 
 <TD class=ThreadBody>
 
-<DIV class=TextContent><!--StartFragment--><P>Ê¹ÓÃOpenSSLÉú³ÉÖ¤Êé</P>
-<P>1¡¢Éú³ÉRSAÃÜÔ¿µÄ·½·¨</P>
+<DIV class=TextContent><!--StartFragment--><P>ä½¿ç”¨OpenSSLç”Ÿæˆè¯ä¹¦</P>
+<P>1ã€ç”ŸæˆRSAå¯†é’¥çš„æ–¹æ³•</P>
 <P>openssl genrsa -des3 -out privkey.pem 
-2048<BR>Õâ¸öÃüÁî»áÉú³ÉÒ»¸ö2048Î»µÄÃÜÔ¿£¬Í¬Ê±ÓĞÒ»¸ödes3·½·¨¼ÓÃÜµÄÃÜÂë£¬Èç¹ûÄã²»ÏëÒªÃ¿´Î¶¼ÊäÈëÃÜÂë£¬¿ÉÒÔ¸Ä³É£º<BR>openssl genrsa 
--out privkey.pem 2048<BR>½¨ÒéÓÃ2048Î»ÃÜÔ¿£¬ÉÙÓÚ´Ë¿ÉÄÜ»á²»°²È«»òºÜ¿ì½«²»°²È«¡£</P>
-<P>2¡¢Éú³ÉÒ»¸öÖ¤ÊéÇëÇó<BR>openssl req -new -key privkey.pem -out 
-cert.csr<BR>Õâ¸öÃüÁî½«»áÉú³ÉÒ»¸öÖ¤ÊéÇëÇó£¬µ±È»£¬ÓÃµ½ÁËÇ°ÃæÉú³ÉµÄÃÜÔ¿privkey.pemÎÄ¼ş<BR>ÕâÀï½«Éú³ÉÒ»¸öĞÂµÄÎÄ¼şcert.csr£¬¼´Ò»¸öÖ¤ÊéÇëÇóÎÄ¼ş£¬Äã¿ÉÒÔÄÃ×ÅÕâ¸öÎÄ¼şÈ¥Êı×ÖÖ¤Êé°ä·¢»ú¹¹£¨¼´CA£©ÉêÇëÒ»¸öÊı×ÖÖ¤Êé¡£CA»á¸øÄãÒ»¸öĞÂµÄÎÄ¼şcacert.pem£¬ÄÇ²ÅÊÇÄãµÄÊı×ÖÖ¤Êé¡£</P>
-<P>Èç¹ûÊÇ×Ô¼º×ö²âÊÔ£¬ÄÇÃ´Ö¤ÊéµÄÉêÇë»ú¹¹ºÍ°ä·¢»ú¹¹¶¼ÊÇ×Ô¼º¡£¾Í¿ÉÒÔÓÃÏÂÃæÕâ¸öÃüÁîÀ´Éú³ÉÖ¤Êé£º<BR>openssl req -new -x509 -key 
+2048<BR>è¿™ä¸ªå‘½ä»¤ä¼šç”Ÿæˆä¸€ä¸ª2048ä½çš„å¯†é’¥ï¼ŒåŒæ—¶æœ‰ä¸€ä¸ªdes3æ–¹æ³•åŠ å¯†çš„å¯†ç ï¼Œå¦‚æœä½ ä¸æƒ³è¦æ¯æ¬¡éƒ½è¾“å…¥å¯†ç ï¼Œå¯ä»¥æ”¹æˆï¼š<BR>openssl genrsa 
+-out privkey.pem 2048<BR>å»ºè®®ç”¨2048ä½å¯†é’¥ï¼Œå°‘äºæ­¤å¯èƒ½ä¼šä¸å®‰å…¨æˆ–å¾ˆå¿«å°†ä¸å®‰å…¨ã€‚</P>
+<P>2ã€ç”Ÿæˆä¸€ä¸ªè¯ä¹¦è¯·æ±‚<BR>openssl req -new -key privkey.pem -out 
+cert.csr<BR>è¿™ä¸ªå‘½ä»¤å°†ä¼šç”Ÿæˆä¸€ä¸ªè¯ä¹¦è¯·æ±‚ï¼Œå½“ç„¶ï¼Œç”¨åˆ°äº†å‰é¢ç”Ÿæˆçš„å¯†é’¥privkey.pemæ–‡ä»¶<BR>è¿™é‡Œå°†ç”Ÿæˆä¸€ä¸ªæ–°çš„æ–‡ä»¶cert.csrï¼Œå³ä¸€ä¸ªè¯ä¹¦è¯·æ±‚æ–‡ä»¶ï¼Œä½ å¯ä»¥æ‹¿ç€è¿™ä¸ªæ–‡ä»¶å»æ•°å­—è¯ä¹¦é¢å‘æœºæ„ï¼ˆå³CAï¼‰ç”³è¯·ä¸€ä¸ªæ•°å­—è¯ä¹¦ã€‚CAä¼šç»™ä½ ä¸€ä¸ªæ–°çš„æ–‡ä»¶cacert.pemï¼Œé‚£æ‰æ˜¯ä½ çš„æ•°å­—è¯ä¹¦ã€‚</P>
+<P>å¦‚æœæ˜¯è‡ªå·±åšæµ‹è¯•ï¼Œé‚£ä¹ˆè¯ä¹¦çš„ç”³è¯·æœºæ„å’Œé¢å‘æœºæ„éƒ½æ˜¯è‡ªå·±ã€‚å°±å¯ä»¥ç”¨ä¸‹é¢è¿™ä¸ªå‘½ä»¤æ¥ç”Ÿæˆè¯ä¹¦ï¼š<BR>openssl req -new -x509 -key 
 privkey.pem -out cacert.pem -days 
-1095<BR>Õâ¸öÃüÁî½«ÓÃÉÏÃæÉú³ÉµÄÃÜÔ¿privkey.pemÉú³ÉÒ»¸öÊı×ÖÖ¤Êécacert.pem</P>
-<P>ÅäÖÃnginx<BR><BR>server<BR>{<BR>listen 443;<BR>ssl on;<BR>ssl_certificate 
+1095<BR>è¿™ä¸ªå‘½ä»¤å°†ç”¨ä¸Šé¢ç”Ÿæˆçš„å¯†é’¥privkey.pemç”Ÿæˆä¸€ä¸ªæ•°å­—è¯ä¹¦cacert.pem</P>
+<P>é…ç½®nginx<BR><BR>server<BR>{<BR>listen 443;<BR>ssl on;<BR>ssl_certificate 
 /var/www/sslkey/cacert.pem;<BR>ssl_certificate_key 
 /var/www/sslkey/privkey.pem;<BR>server_name 192.168.1.1;<BR>index index.html 
 index.htm index.php;<BR>root /var/www/test;<BR>}</P><!--EndFragment--></DIV>
@@ -60,5 +61,7 @@ index.htm index.php;<BR>root /var/www/test;<BR>}</P><!--EndFragment--></DIV>
 </DIV>
 </DIV>
 </DIV>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
 </BODY>
 </HTML>

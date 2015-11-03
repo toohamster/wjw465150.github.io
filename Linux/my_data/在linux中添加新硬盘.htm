@@ -1,50 +1,51 @@
-<HTML><HEAD>
-<META HTTP-EQUIV=Content-Type CONTENT=text/html; charset=gb2312>
-<title>  ÔÚlinuxÖĞÌí¼ÓĞÂÓ²ÅÌ  </title>
+ï»¿<HTML><HEAD>
+<META HTTP-EQUIV=Content-Type CONTENT=text/html; charset=UTF-8>
+<title>åœ¨linuxä¸­æ·»åŠ æ–°ç¡¬ç›˜</title>
 <style type="text/css">
 <!--
-.9t {font-size: 9pt; color: #000000; font-family: "ËÎÌå";}
+.9t {font-size: 9pt; color: #000000; font-family: "å®‹ä½“";}
 -->
 </style></HEAD>
-<body bgcolor="#FFFFFF">
+<body bgcolor="#ffffff">
 <table width="90%" border="0" align="center" ><tr><td>
 <PRE class="9t">
-ÔÚlinuxÖĞÌí¼ÓĞÂÓ²ÅÌ
+åœ¨linuxä¸­æ·»åŠ æ–°ç¡¬ç›˜
 
-×¼±¸ÔÚVMWareÖĞ×°oracle,Í»È»·¢ÏÖÓ²ÅÌ¿Õ¼ä²»¹»ÓÃ,Ö»ºÃĞÂ¼ÓÒ»¸öĞéÄâSCSIÓ²ÅÌ.
+å‡†å¤‡åœ¨VMWareä¸­è£…oracle,çªç„¶å‘ç°ç¡¬ç›˜ç©ºé—´ä¸å¤Ÿç”¨,åªå¥½æ–°åŠ ä¸€ä¸ªè™šæ‹ŸSCSIç¡¬ç›˜.
 
 #fdisk /dev/sdb
-½øÈëfdiskÃüÁîÄ£Ê½,°´m²é¿´°ïÖúµÃÖª,n´´½¨ĞÂÇø
+è¿›å…¥fdiskå‘½ä»¤æ¨¡å¼,æŒ‰mæŸ¥çœ‹å¸®åŠ©å¾—çŸ¥,nåˆ›å»ºæ–°åŒº
 Command (m for help):n
-ÊäÈëp´´½¨Ö÷·ÖÇø(Ò»¹²¿É½¨4¸ö,ÕâÀïÎÒÖ»ÓĞ½¨Ò»¸ö¾Íok)
+è¾“å…¥påˆ›å»ºä¸»åˆ†åŒº(ä¸€å…±å¯å»º4ä¸ª,è¿™é‡Œæˆ‘åªæœ‰å»ºä¸€ä¸ªå°±ok)
 Command action 
    e   extended    
    p   primary partition (1-4)  P
-ÊäÈë·ÖÇø±àºÅ1
-Partion number(1-4)£º1
-First Cylinder(1-1014,default 1):  1  \\µÚÒ»¸öÖ÷·ÖÇøÆğÊ¼µÄ´ÅÅÌÖùÃæ 
-Last cylindet or +siza or +sizeM or +sizeK:2048M  \\·ÖÇø´óĞ¡,ÎÒĞÂÔöµÄÓ²ÅÌÒ»¹²2G
+è¾“å…¥åˆ†åŒºç¼–å·1
+Partion number(1-4)ï¼š1
+First Cylinder(1-1014,default 1):  1  \\ç¬¬ä¸€ä¸ªä¸»åˆ†åŒºèµ·å§‹çš„ç£ç›˜æŸ±é¢ 
+Last cylindet or +siza or +sizeM or +sizeK:2048M  \\åˆ†åŒºå¤§å°,æˆ‘æ–°å¢çš„ç¡¬ç›˜ä¸€å…±2G
 
-ok,·ÖÇøÍê±Ï.½ÓÏÂÀ´¸ñÊ½»¯
+ok,åˆ†åŒºå®Œæ¯•.æ¥ä¸‹æ¥æ ¼å¼åŒ–
 
-#mkfs -t ext3 -c /dev/sdb1  \\¸ñÊ½»¯µÚ¶ş¸öÓ²ÅÌµÄ·ÖÇø1Îªext3ÎÄ¼şÏµÍ³
+#mkfs -t ext3 -c /dev/sdb1  \\æ ¼å¼åŒ–ç¬¬äºŒä¸ªç¡¬ç›˜çš„åˆ†åŒº1ä¸ºext3æ–‡ä»¶ç³»ç»Ÿ
 
-½ÓÏÂÀ´°Ñ·ÖÇø¹ÒÔØµ½Ä³¸öÄ¿Â¼
+æ¥ä¸‹æ¥æŠŠåˆ†åŒºæŒ‚è½½åˆ°æŸä¸ªç›®å½•
 
-#mkdir oracle  \\½¨Á¢/oracleÄ¿Â¼
+#mkdir oracle  \\å»ºç«‹/oracleç›®å½•
 #mount /dev/sdb1 /oracle  
 
-µ«ÕâÑùÃ¿´ÎÖØÆô¶¼ÒªÖØĞÂ¼ÓÔØ,ËùÒÔÒªĞŞ¸Ä/etc/fstabÒÔ×Ô¶¯¼ÓÔØ
+ä½†è¿™æ ·æ¯æ¬¡é‡å¯éƒ½è¦é‡æ–°åŠ è½½,æ‰€ä»¥è¦ä¿®æ”¹/etc/fstabä»¥è‡ªåŠ¨åŠ è½½
 #vi /etc/fstab
-ÔÚÄ©Î²¼ÓÉÏ
+åœ¨æœ«å°¾åŠ ä¸Š
 /dev/sdb1               /oracle                    ext3    defaults        1 2 
 
-¸ã¶¨ÊÕ¹¤!
+æå®šæ”¶å·¥!
 
 
  
 </PRE>
 </td></tr></table>
+<P>&nbsp;</P>
 
-</Body>
+</body>
 </HTML>
