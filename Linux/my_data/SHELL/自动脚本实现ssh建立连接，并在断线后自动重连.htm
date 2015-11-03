@@ -1,12 +1,12 @@
-<HTML><HEAD>
-<META HTTP-EQUIV=Content-Type CONTENT=text/html; charset=gb2312>
-<title>  ×Ô¶¯½Å±¾ÊµÏÖssh½¨Á¢Á¬½Ó£¬²¢ÔÚ¶ÏÏßºó×Ô¶¯ÖØÁ¬  </title>
+ï»¿<HTML><HEAD>
+<META HTTP-EQUIV=Content-Type CONTENT=text/html; charset=UTF-8>
+<title>è‡ªåŠ¨è„šæœ¬å®ç°sshå»ºç«‹è¿æ¥ï¼Œå¹¶åœ¨æ–­çº¿åè‡ªåŠ¨é‡è¿</title>
 <style type="text/css">
 <!--
-.9t {font-size: 9pt; color: #000000; font-family: "ËÎÌå";}
+.9t {font-size: 9pt; color: #000000; font-family: "å®‹ä½“";}
 -->
 </style></HEAD>
-<body bgcolor="#FFFFFF">
+<body bgcolor="#ffffff">
 <table width="90%" border="0" align="center" ><tr><td>
 <PRE class="9t">
 #!/bin/sh
@@ -16,13 +16,13 @@ do
 	date
 	if [ "`netstat -ant|grep 7777|grep ESTABLISHED`" = "" ]; then
 		ps -eo pid,cmd|grep "ssh -p 7777"|sed 's/^ *\(.*\) *$/\1/'|cut -d' ' -f1|xargs kill
-		echo ²»ÔÚÏß£¬¿ªÊ¼Á¬½Ó...
+		echo ä¸åœ¨çº¿ï¼Œå¼€å§‹è¿æ¥...
 		ssh -p 7777 -R 2222:127.0.0.1:22 -qfnN yourSshUser@your.3322.org &amp;
 		sleep 10s
 		netstat -ant|grep 7777
 		sleep 30s
 	else
-		echo ÒÑÔÚÏß£¬30sºóÔÙ²âÊÔ
+		echo å·²åœ¨çº¿ï¼Œ30såå†æµ‹è¯•
 		sleep 30s
 	fi
 }
@@ -30,6 +30,8 @@ done
  
 </PRE>
 </td></tr></table>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
 
-</Body>
+</body>
 </HTML>

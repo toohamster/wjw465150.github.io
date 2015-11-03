@@ -1,9 +1,10 @@
-!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+ï»¿!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 
 <HTML dir=ltr xml:lang="zh-CN" 
-xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>ÓÃXtrabackup±¸·İMySQL - Database - Tech - JavaEyeÂÛÌ³</TITLE><LINK 
+xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>ç”¨Xtrabackupå¤‡ä»½MySQL</title><LINK 
 href="favicon.ico" type=image/x-icon rel="shortcut icon"><LINK 
-title=JavaEyeÂÛÌ³ href="Tech" type=application/rss+xml 
+title=JavaEyeè®ºå› href="Tech" type=application/rss+xml 
 rel=alternate><LINK media=screen 
 href="forum.css_1251168558" type=text/css 
 rel=stylesheet>
@@ -28,66 +29,66 @@ type=text/css rel=stylesheet>
 
 <TD class=postcontent>
 
-<DIV class="postbody clearfix"><!--StartFragment--><H2>ÓÃXtrabackup±¸·İMySQL</H2>
-<P class=first>ÎÄµµ°æ±¾: 0.6.2, ¸üĞÂÊ±¼ä: Wednesday, May 09 2009 9:50</P>
+<DIV class="postbody clearfix"><!--StartFragment--><H2>ç”¨Xtrabackupå¤‡ä»½MySQL</H2>
+<P class=first>æ–‡æ¡£ç‰ˆæœ¬: 0.6.2, æ›´æ–°æ—¶é—´: Wednesday, May 09 2009 9:50</P>
 <P class=first>&nbsp;</P>
 <P 
 class=first>http://liuyuanzhi.blogspot.com/2009/05/mysql-backup-with-xtrabackup-06.html</P>
 <P class=first>&nbsp;</P>
-<H3>XtrabackupÊÇÊ²Ã´</H3>
+<H3>Xtrabackupæ˜¯ä»€ä¹ˆ</H3>
 <P class=first>Xtrabackup 
-ÊÇpercona¹«Ë¾£¨mysqlperformanceblog£©µÄ¿ªÔ´ÏîÄ¿£¬Ä¿µÄÊÇÊµÏÖÀàËÆinnodb¹Ù·½µÄÈÈ±¸·İ¹¤¾ßInnoDB Hot 
-BackupµÄ¹¦ÄÜ¡£µ«ÆäÊµXtrabackup»¹Ìá¹©ÁË¶îÍâµÄ¹¦ÄÜ£¨µ«Ò²ÓĞÃ»ÊµÏÖµÄ¹¦ÄÜ£©¡£ XtrabackupÖĞ°üº¬Á½¸ö¹¤¾ß£º</P>
+æ˜¯perconaå…¬å¸ï¼ˆmysqlperformanceblogï¼‰çš„å¼€æºé¡¹ç›®ï¼Œç›®çš„æ˜¯å®ç°ç±»ä¼¼innodbå®˜æ–¹çš„çƒ­å¤‡ä»½å·¥å…·InnoDB Hot 
+Backupçš„åŠŸèƒ½ã€‚ä½†å…¶å®Xtrabackupè¿˜æä¾›äº†é¢å¤–çš„åŠŸèƒ½ï¼ˆä½†ä¹Ÿæœ‰æ²¡å®ç°çš„åŠŸèƒ½ï¼‰ã€‚ Xtrabackupä¸­åŒ…å«ä¸¤ä¸ªå·¥å…·ï¼š</P>
 <UL>
-<LI>xtrabackup - ÓÃÓÚÈÈ±¸·İinnodb, xtradb±íµÄ¹¤¾ß£¬²»ÄÜ±¸·İÆäËû±í¡£ 
-<LI>innobackupex - ¶Ôxtrabackup·â×°µÄperl½Å±¾£¬Ìá¹©ÁËmyisam±í±¸·İµÄÄÜÁ¦¡£ </LI></UL>
-<H3>Xtrabackup¿ÉÒÔ×öÊ²Ã´</H3>
+<LI>xtrabackup - ç”¨äºçƒ­å¤‡ä»½innodb, xtradbè¡¨çš„å·¥å…·ï¼Œä¸èƒ½å¤‡ä»½å…¶ä»–è¡¨ã€‚ 
+<LI>innobackupex - å¯¹xtrabackupå°è£…çš„perlè„šæœ¬ï¼Œæä¾›äº†myisamè¡¨å¤‡ä»½çš„èƒ½åŠ›ã€‚ </LI></UL>
+<H3>Xtrabackupå¯ä»¥åšä»€ä¹ˆ</H3>
 <UL>
-<LI>ÔÚÏß(ÈÈ)±¸·İÕû¸ö¿âµÄInnoDB, XtraDB±í 
-<LI>ÔÚxtrabackupµÄÉÏÒ»´ÎÕû¿â±¸·İ»ù´¡ÉÏ×öÔöÁ¿±¸·İ£¨innodb only£© 
-<LI>ÒÔÁ÷µÄĞÎÊ½²úÉú±¸·İ£¬¿ÉÒÔÖ±½Ó±£´æµ½Ô¶³Ì»úÆ÷ÉÏ£¨±¾»úÓ²ÅÌ¿Õ¼ä²»×ãÊ±ºÜÓĞÓÃ£© </LI></UL>
-<H3>XtrabackupÈçºÎ¹¤×÷µÄ</H3>
+<LI>åœ¨çº¿(çƒ­)å¤‡ä»½æ•´ä¸ªåº“çš„InnoDB, XtraDBè¡¨ 
+<LI>åœ¨xtrabackupçš„ä¸Šä¸€æ¬¡æ•´åº“å¤‡ä»½åŸºç¡€ä¸Šåšå¢é‡å¤‡ä»½ï¼ˆinnodb onlyï¼‰ 
+<LI>ä»¥æµçš„å½¢å¼äº§ç”Ÿå¤‡ä»½ï¼Œå¯ä»¥ç›´æ¥ä¿å­˜åˆ°è¿œç¨‹æœºå™¨ä¸Šï¼ˆæœ¬æœºç¡¬ç›˜ç©ºé—´ä¸è¶³æ—¶å¾ˆæœ‰ç”¨ï¼‰ </LI></UL>
+<H3>Xtrabackupå¦‚ä½•å·¥ä½œçš„</H3>
 <UL>
-<LI>xtrabackup - ¾ßÌåÔ­ÀíÓĞ´ıÑĞ¾¿¡£¡£¡£ 
-<LI>innobackupexÕû¿â±¸·İ 
+<LI>xtrabackup - å…·ä½“åŸç†æœ‰å¾…ç ”ç©¶ã€‚ã€‚ã€‚ 
+<LI>innobackupexæ•´åº“å¤‡ä»½ 
 <OL>
-<LI>µ÷ÓÃxtrabackup¶Ôinnodb±í¿Õ¼äÎÄ¼ş£¨ÕâÒ»Ë²¼äµÄÓ³ÏñTime1£©±¸·İ£¬¶øÔÚÕâ¸öinnodb±í±¸·İÆÚ¼äÊı¾İ¿âÊÇ²»¼ÓËøµÄ£¬Íâ²¿¿ÉÒÔ¼ÌĞøÍù¿âÀïÔö¼õÊı¾İ£¨Õâ²ÅÄÜ½ĞÈÈ±¸·İ£©¡£¶øÔÚTime1ºÍTime2ÕâÁ½¸öÊ±¼äµãÖ®¼äµÄ¸Ä¶¯ÓÉÒ»¸öÏß³Ì²»¶ÏµØÉ¨innodb 
-log»ñµÃ(ChangeSet1)¡£ 
-<LI>ËøËùÓĞ¿â¡£ 
-<LI>ÒÔÖ±½Ó¿½±´µÄ·½Ê½±¸·İfrm,MYD,MYI,MRG,TRG,TRN,opt¸ñÊ½µÄÎÄ¼ş¡£ 
-<LI>²½Öè3ÖĞµÄÊı¾İ±¸·İÍê±ÏÊ±(Time2)£¬Í£Ö¹É¨innodb logµÄÏß³Ì£¬°ÑChangeSet1µÄÊı¾İ¿½±´µ½±¸·İÖĞ¡£ 
-<LI>½âËøËùÓĞ¿â¡£ 
-<LI>ÖÕÖ¹¹ÒÆğ£¬±¸·İÍê±Ï¡£ </LI></OL></LI></UL>
-<H3>×¢ÒâÒªµã</H3>
+<LI>è°ƒç”¨xtrabackupå¯¹innodbè¡¨ç©ºé—´æ–‡ä»¶ï¼ˆè¿™ä¸€ç¬é—´çš„æ˜ åƒTime1ï¼‰å¤‡ä»½ï¼Œè€Œåœ¨è¿™ä¸ªinnodbè¡¨å¤‡ä»½æœŸé—´æ•°æ®åº“æ˜¯ä¸åŠ é”çš„ï¼Œå¤–éƒ¨å¯ä»¥ç»§ç»­å¾€åº“é‡Œå¢å‡æ•°æ®ï¼ˆè¿™æ‰èƒ½å«çƒ­å¤‡ä»½ï¼‰ã€‚è€Œåœ¨Time1å’ŒTime2è¿™ä¸¤ä¸ªæ—¶é—´ç‚¹ä¹‹é—´çš„æ”¹åŠ¨ç”±ä¸€ä¸ªçº¿ç¨‹ä¸æ–­åœ°æ‰«innodb 
+logè·å¾—(ChangeSet1)ã€‚ 
+<LI>é”æ‰€æœ‰åº“ã€‚ 
+<LI>ä»¥ç›´æ¥æ‹·è´çš„æ–¹å¼å¤‡ä»½frm,MYD,MYI,MRG,TRG,TRN,optæ ¼å¼çš„æ–‡ä»¶ã€‚ 
+<LI>æ­¥éª¤3ä¸­çš„æ•°æ®å¤‡ä»½å®Œæ¯•æ—¶(Time2)ï¼Œåœæ­¢æ‰«innodb logçš„çº¿ç¨‹ï¼ŒæŠŠChangeSet1çš„æ•°æ®æ‹·è´åˆ°å¤‡ä»½ä¸­ã€‚ 
+<LI>è§£é”æ‰€æœ‰åº“ã€‚ 
+<LI>ç»ˆæ­¢æŒ‚èµ·ï¼Œå¤‡ä»½å®Œæ¯•ã€‚ </LI></OL></LI></UL>
+<H3>æ³¨æ„è¦ç‚¹</H3>
 <UL>
-<LI>¸ù¾İinnobackupexµÄÔ­Àí¿ÉÖªËü²»ÊÇÕæÕıµÄÈÈ±¸·İ£¬MyISAM±íÔ½ÉÙÔ½Ğ¡¾ÍÔ½ÓĞÀû¡£ÒªÀûÓÃXtrabackupµÄºÃ´¦¾Í¾¡Á¿ÓÃinnodb±í¡£ 
-<LI>»¹Ô­±¸·İÇ°¹Ø±Õmysql·şÎñ£»»¹Ô­±¸·İºó¼ì²éÊı¾İÎÄ¼şÈ¨ÏŞÊÇ·ñÕıÈ·¡£ 
-<LI>ĞÔÄÜ£º±¸·İÒ»¸öÊı¾İÄ¿Â¼×Ü´óĞ¡5.6G£¬ÆäÖĞibdata 
-2G£¬×ÜÊ±¼ä4·ÖÖÓ£¬Ëø±íÊ±¼ä2.5·ÖÖÓ¡£Èç¹ûÓÃmysqldump×öÕâ¸ö¿âµÄ±¸·İËø±íÊ±¼äÊÇ5-8±¶¡£ </LI></UL>
-<H3>²Ù×÷</H3>
-<H4>Õû¿â±¸·İ£¬»Ö¸´£¨º¬myisam)</H4><PRE class=src><SPAN style="FONT-WEIGHT: bold; COLOR: #b8b8b8">#### </SPAN>
-<SPAN style="FONT-WEIGHT: bold; COLOR: #b8b8b8">±¸·İ
+<LI>æ ¹æ®innobackupexçš„åŸç†å¯çŸ¥å®ƒä¸æ˜¯çœŸæ­£çš„çƒ­å¤‡ä»½ï¼ŒMyISAMè¡¨è¶Šå°‘è¶Šå°å°±è¶Šæœ‰åˆ©ã€‚è¦åˆ©ç”¨Xtrabackupçš„å¥½å¤„å°±å°½é‡ç”¨innodbè¡¨ã€‚ 
+<LI>è¿˜åŸå¤‡ä»½å‰å…³é—­mysqlæœåŠ¡ï¼›è¿˜åŸå¤‡ä»½åæ£€æŸ¥æ•°æ®æ–‡ä»¶æƒé™æ˜¯å¦æ­£ç¡®ã€‚ 
+<LI>æ€§èƒ½ï¼šå¤‡ä»½ä¸€ä¸ªæ•°æ®ç›®å½•æ€»å¤§å°5.6Gï¼Œå…¶ä¸­ibdata 
+2Gï¼Œæ€»æ—¶é—´4åˆ†é’Ÿï¼Œé”è¡¨æ—¶é—´2.5åˆ†é’Ÿã€‚å¦‚æœç”¨mysqldumpåšè¿™ä¸ªåº“çš„å¤‡ä»½é”è¡¨æ—¶é—´æ˜¯5-8å€ã€‚ </LI></UL>
+<H3>æ“ä½œ</H3>
+<H4>æ•´åº“å¤‡ä»½ï¼Œæ¢å¤ï¼ˆå«myisam)</H4><PRE class=src><SPAN style="FONT-WEIGHT: bold; COLOR: #b8b8b8">#### </SPAN>
+<SPAN style="FONT-WEIGHT: bold; COLOR: #b8b8b8">å¤‡ä»½
 </SPAN>
 <SPAN style="FONT-WEIGHT: bold; COLOR: #b8b8b8"># </SPAN>
-<SPAN style="FONT-WEIGHT: bold; COLOR: #b8b8b8">ÎªÁË¼õÉÙ±¸·İ¶Ô·şÎñµÄÓ°Ïì£¬¿É¼Ó²ÎÊı--throttle=&lt;Ã¿ÃëIO´ÎÊı&gt; / --sleep=&lt;Î¢Ãë&gt;ÏŞÖÆIO
+<SPAN style="FONT-WEIGHT: bold; COLOR: #b8b8b8">ä¸ºäº†å‡å°‘å¤‡ä»½å¯¹æœåŠ¡çš„å½±å“ï¼Œå¯åŠ å‚æ•°--throttle=&lt;æ¯ç§’IOæ¬¡æ•°&gt; / --sleep=&lt;å¾®ç§’&gt;é™åˆ¶IO
 </SPAN>
 innobackupex --user=root /data/backup/mysql
 
 <SPAN style="FONT-WEIGHT: bold; COLOR: #b8b8b8">#### </SPAN>
-<SPAN style="FONT-WEIGHT: bold; COLOR: #b8b8b8">»Ö¸´
+<SPAN style="FONT-WEIGHT: bold; COLOR: #b8b8b8">æ¢å¤
 </SPAN>
 <SPAN style="FONT-WEIGHT: bold; COLOR: #b8b8b8"># </SPAN>
-<SPAN style="FONT-WEIGHT: bold; COLOR: #b8b8b8">ºóÃæµÄÈÕÆÚÄ¿Â¼ÊÇ±¸·İÊ±ÓÉinnobackupex´´½¨µÄ
+<SPAN style="FONT-WEIGHT: bold; COLOR: #b8b8b8">åé¢çš„æ—¥æœŸç›®å½•æ˜¯å¤‡ä»½æ—¶ç”±innobackupexåˆ›å»ºçš„
 </SPAN>
 innobackupex --copy-back --defaults-file=/etc/my.cnf /data/backup/mysql/2009-05-06_17-44-37
 </PRE>
-<H4>±¸·İÊ±´ò°ü</H4><PRE class=src><SPAN style="FONT-WEIGHT: bold; COLOR: #b8b8b8">#### </SPAN>
-<SPAN style="FONT-WEIGHT: bold; COLOR: #b8b8b8">±¸·İ
+<H4>å¤‡ä»½æ—¶æ‰“åŒ…</H4><PRE class=src><SPAN style="FONT-WEIGHT: bold; COLOR: #b8b8b8">#### </SPAN>
+<SPAN style="FONT-WEIGHT: bold; COLOR: #b8b8b8">å¤‡ä»½
 </SPAN>
 innobackupex --user=root --stream=tar ./ | gzip - &gt; /data/backup/mysql/latest.tar.gz
 
 <SPAN style="FONT-WEIGHT: bold; COLOR: #b8b8b8">#### </SPAN>
-<SPAN style="FONT-WEIGHT: bold; COLOR: #b8b8b8">»Ö¸´
+<SPAN style="FONT-WEIGHT: bold; COLOR: #b8b8b8">æ¢å¤
 </SPAN>
 <SPAN style="FONT-WEIGHT: bold; COLOR: #f5deb3">cd</SPAN>
  /data/backup/mysql
@@ -95,7 +96,7 @@ mkdir tmp
 tar xfzi latest.tar.gz -Ctmp
 innobackupex --copy-back --defaults-file=/etc/my.cnf /data/backup/mysql/tmp
 </PRE>
-<H4>Ö±½Ó±¸·İµ½Ô¶³Ì»úÆ÷</H4><PRE class=src>innobackupex --stream=tar ./  | ssh user@host cat <SPAN style="COLOR: #ff6347">"&gt;"</SPAN>
+<H4>ç›´æ¥å¤‡ä»½åˆ°è¿œç¨‹æœºå™¨</H4><PRE class=src>innobackupex --stream=tar ./  | ssh user@host cat <SPAN style="COLOR: #ff6347">"&gt;"</SPAN>
   backup.tar</PRE><!--EndFragment--></DIV>
 </TD>
 </TR>
@@ -104,5 +105,7 @@ innobackupex --copy-back --defaults-file=/etc/my.cnf /data/backup/mysql/tmp
 </DIV>
 </DIV>
 </DIV>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
 </BODY>
 </HTML>

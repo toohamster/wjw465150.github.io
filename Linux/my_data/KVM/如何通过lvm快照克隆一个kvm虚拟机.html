@@ -1,7 +1,7 @@
-<html>
+ï»¿<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=gb2312">
-<title>ÈçºÎÍ¨¹ılvm¿ìÕÕ¿ËÂ¡Ò»¸ökvmĞéÄâ»ú</title>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>å¦‚ä½•é€šè¿‡lvmå¿«ç…§å…‹éš†ä¸€ä¸ªkvmè™šæ‹Ÿæœº</title>
 <style>body {
   font-family: Helvetica, arial, sans-serif;
   font-size: 14px;
@@ -307,9 +307,9 @@ window.onscroll = function() {
 
 </head>
 <body>
-<h2 id="L............lvm..................kvm.........">ÈçºÎÍ¨¹ılvm¿ìÕÕ¿ËÂ¡Ò»¸ökvmĞéÄâ»ú</h2>
+<h2 id="L............lvm..................kvm.........">å¦‚ä½•é€šè¿‡lvmå¿«ç…§å…‹éš†ä¸€ä¸ªkvmè™šæ‹Ÿæœº</h2>
 
-<p>1.ÎªĞéÄâ»ú´´½¨¿ìÕÕ</p>
+<p>1.ä¸ºè™šæ‹Ÿæœºåˆ›å»ºå¿«ç…§</p>
 
 <p><code>lvs</code></p>
 
@@ -321,7 +321,7 @@ window.onscroll = function() {
 
 <p><code>lvcreate -L 1G -s -n vserver2 /dev/vol0/vserver</code></p>
 
-<blockquote><p> Logical volume ¡°vserver2¡± created
+<blockquote><p> Logical volume â€œvserver2â€ created
 [root@desktop2 ~]# lvs
   LV           VG   Attr   LSize   Origin  Snap%  Move Log Copy%  Convert
   home         vol0 -wi-ao 512.00m                                     <br>
@@ -330,12 +330,12 @@ window.onscroll = function() {
   vserver-snap vol0 swi-a-   4.00g vserver   0.89                      <br>
   vserver2     vol0 swi-a-   1.00g vserver   0.00</p></blockquote>
 
-<p>2.Éú³ÉĞÂµÄuuid
+<p>2.ç”Ÿæˆæ–°çš„uuid
 <code>uuidgen</code></p>
 
 <blockquote><p>1440f78a-3f93-4a84-be09-bef93c3188e3</p></blockquote>
 
-<p>3.µ¼³övserverĞéÄâ»úµÄÅäÖÃĞÅÏ¢,²¢ĞŞ¸Ä<strong style="COLOR: #f00">4´¦</strong>¿Í»§»¯ĞÅÏ¢,×¢ÒâºìÉ«²¿·Ö <code>virsh dumpxml vserver &gt; /tmp/vserver2.xml</code><br>
+<p>3.å¯¼å‡ºvserverè™šæ‹Ÿæœºçš„é…ç½®ä¿¡æ¯,å¹¶ä¿®æ”¹<strong style="COLOR: #f00">4å¤„</strong>å®¢æˆ·åŒ–ä¿¡æ¯,æ³¨æ„çº¢è‰²éƒ¨åˆ† <code>virsh dumpxml vserver &gt; /tmp/vserver2.xml</code><br>
     <code>vim /tmp/vserver2.xml</code></p>
 
 <blockquote>
@@ -398,14 +398,14 @@ or other application using the libvirt API.
 &lt;/domain&gt;
 </code></pre></blockquote>
 
-<p>4.Éú³É¿ËÂ¡ĞéÄâ»ú</p>
+<p>4.ç”Ÿæˆå…‹éš†è™šæ‹Ÿæœº</p>
 
 <p><code>virsh define /tmp/vserver2.xml</code></p>
 
 <blockquote><pre><code>Domain vserver2 defined from /tmp/vserver2.xml
 </code></pre></blockquote>
 
-<p>5.Æô¶¯¿ËÂ¡ĞéÄâ»ú  <br>
+<p>5.å¯åŠ¨å…‹éš†è™šæ‹Ÿæœº  <br>
 <code>virsh start vserver2</code></p>
 
 <blockquote><pre><code>Domain vserver2 started
@@ -416,68 +416,70 @@ or other application using the libvirt API.
 <blockquote><pre><code>Id Name                State    
 3 vserver2             running
 </code></pre></blockquote>	
-<div><p>¿ìËÙ¼¼ÇÉ:<br/><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">Ò»¡¢kvm¿ìÕÕÓë»Ö¸´</SPAN><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1¡¢ÎªÔ­ĞéÄâ»úËùÔÚµÄlv×öÒ»¸ö¿ìÕÕ¡£</SPAN><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">lvcreate 
--L 2G -sn kvmSS /dev/vg/kvm&nbsp; (Ò»°ã¿ìÕÕ´óĞ¡ÊÇËŞÖ÷µÄ15-20%)</SPAN><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">2¡¢ĞŞ¸Ä/etc/libvirt/qemu/ĞéÄâ»úÃû.xml£¬½«´ËÅäÖÃÎÄ¼şÀïĞéÄâ»úlvÃû,¸Ä³ÉĞéÄâ»ú¿ìÕÕÃû¡£</SPAN><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">vim 
-/etc/libvirt/qemu/ĞéÄâ»úÃû.xml</SPAN><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp; 
-&lt;source dev=¡®ĞéÄâ»ú¿ìÕÕÃû¡¯&gt;</SPAN><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">3¡¢ÖØÆô¶¯¼ÆËã»ú£¬¼´¿ÉÊ¹ÓÃ¿ìÕÕĞéÄâ»ú¡£</SPAN><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">4¡¢»Ö¸´£¬µ±¿ìÕÕĞéÄâ»úÅªÂÒ»òÅª»µÁË£¬¿ÉÒÔÖ±½ÓÓÃ»ØÔ­Ê¼µÄĞéÄâ»ú×öÒ»¸ö¿ìÕÕ£¬ÔÙÓÃÉÏÃæÍ¬ÑùµÄ·½·¨£¬Ö¸ÏòÕâĞÂ½¨µÄ¿ìÕÕ¡£</SPAN><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">¶ş¡¢¿ìËÙÖÆÔì¶àÌ¨ĞéÄâ»ú</SPAN><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1¡¢ÎªÔ­ĞéÄâ»úËùÔÚµÄlv×öÒ»¸ö¿ìÕÕ¡£</SPAN><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">lvcreate 
--L 2G -sn kvmSS /dev/vg/kvm&nbsp; (Ò»°ã¿ìÕÕ´óĞ¡ÊÇËŞÖ÷µÄ15-20%)</SPAN><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">2¡¢¸´ÖÆ/etc/libvirt/qemu/ĞéÄâ»úÃû.xml²¢¸ÄÃûÎª/etc/libvirt/qemu/ĞéÄâ»úÃû1.xml</SPAN><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">cp 
-/etc/libvirt/qemu/ĞéÄâ»úÃû.xml /etc/libvirt/qemu/ĞéÄâ»úÃû1.xml</SPAN><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">3¡¢ĞŞ¸Ä 
-/etc/libvirt/qemu/ĞéÄâ»úÃû1.xml</SPAN><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">vim 
-/etc/libvirt/qemu/ĞéÄâ»ú1.xml £¨ĞŞ¸ÄÒ»ÏÂ¼¸Ïî£¬Ëæ±ã¸ÄÖ»ÒªÓëÔ­À´²»Ò»Ñù¾Í¿ÉÒÔÁË¡££©±ÈÈç£º</SPAN><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&lt;name&gt;1kvmSS&lt;/name&gt;</SPAN><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&lt;uuid&gt;395ae05e-c118-e460-4de4-7f58e08f8aa1&lt;/uuid&gt;</SPAN><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&lt;source 
-dev=¡®ĞéÄâ»ú¿ìÕÕÃû¡¯&gt;</SPAN><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&lt;mac 
+<div><p>å¿«é€ŸæŠ€å·§:<br><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">ä¸€ã€kvmå¿«ç…§ä¸æ¢å¤</SPAN><BR 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1ã€ä¸ºåŸè™šæ‹Ÿæœºæ‰€åœ¨çš„lvåšä¸€ä¸ªå¿«ç…§ã€‚</SPAN><BR 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">lvcreate 
+-L 2G -sn kvmSS /dev/vg/kvm&nbsp; (ä¸€èˆ¬å¿«ç…§å¤§å°æ˜¯å®¿ä¸»çš„15-20%)</SPAN><BR 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">2ã€ä¿®æ”¹/etc/libvirt/qemu/è™šæ‹Ÿæœºå.xmlï¼Œå°†æ­¤é…ç½®æ–‡ä»¶é‡Œè™šæ‹Ÿæœºlvå,æ”¹æˆè™šæ‹Ÿæœºå¿«ç…§åã€‚</SPAN><BR 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">vim 
+/etc/libvirt/qemu/è™šæ‹Ÿæœºå.xml</SPAN><BR 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp; 
+&lt;source dev=â€˜è™šæ‹Ÿæœºå¿«ç…§åâ€™&gt;</SPAN><BR 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">3ã€é‡å¯åŠ¨è®¡ç®—æœºï¼Œå³å¯ä½¿ç”¨å¿«ç…§è™šæ‹Ÿæœºã€‚</SPAN><BR 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">4ã€æ¢å¤ï¼Œå½“å¿«ç…§è™šæ‹Ÿæœºå¼„ä¹±æˆ–å¼„åäº†ï¼Œå¯ä»¥ç›´æ¥ç”¨å›åŸå§‹çš„è™šæ‹Ÿæœºåšä¸€ä¸ªå¿«ç…§ï¼Œå†ç”¨ä¸Šé¢åŒæ ·çš„æ–¹æ³•ï¼ŒæŒ‡å‘è¿™æ–°å»ºçš„å¿«ç…§ã€‚</SPAN><BR 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><BR 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">äºŒã€å¿«é€Ÿåˆ¶é€ å¤šå°è™šæ‹Ÿæœº</SPAN><BR 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1ã€ä¸ºåŸè™šæ‹Ÿæœºæ‰€åœ¨çš„lvåšä¸€ä¸ªå¿«ç…§ã€‚</SPAN><BR 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">lvcreate 
+-L 2G -sn kvmSS /dev/vg/kvm&nbsp; (ä¸€èˆ¬å¿«ç…§å¤§å°æ˜¯å®¿ä¸»çš„15-20%)</SPAN><BR 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">2ã€å¤åˆ¶/etc/libvirt/qemu/è™šæ‹Ÿæœºå.xmlå¹¶æ”¹åä¸º/etc/libvirt/qemu/è™šæ‹Ÿæœºå1.xml</SPAN><BR 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">cp 
+/etc/libvirt/qemu/è™šæ‹Ÿæœºå.xml /etc/libvirt/qemu/è™šæ‹Ÿæœºå1.xml</SPAN><BR 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">3ã€ä¿®æ”¹ 
+/etc/libvirt/qemu/è™šæ‹Ÿæœºå1.xml</SPAN><BR 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">vim 
+/etc/libvirt/qemu/è™šæ‹Ÿæœº1.xml ï¼ˆä¿®æ”¹ä¸€ä¸‹å‡ é¡¹ï¼Œéšä¾¿æ”¹åªè¦ä¸åŸæ¥ä¸ä¸€æ ·å°±å¯ä»¥äº†ã€‚ï¼‰æ¯”å¦‚ï¼š</SPAN><BR 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&lt;name&gt;1kvmSS&lt;/name&gt;</SPAN><BR 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&lt;uuid&gt;395ae05e-c118-e460-4de4-7f58e08f8aa1&lt;/uuid&gt;</SPAN><BR 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&lt;source 
+dev=â€˜è™šæ‹Ÿæœºå¿«ç…§åâ€™&gt;</SPAN><BR 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&lt;mac 
 address='52:54:00:a7:11:cb'/&gt;</SPAN><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">4¡¢virsh 
-define ĞéÄâ»úÃû1.xml (¶¨ÒåĞéÄâ»ú)</SPAN><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">5¡¢virsh 
-start ĞéÄâ»úÃû1 £¨ĞÂµÄĞéÄâ»ú¾Í¿ÉÒÔÊ¹ÓÃÀ²¡£ºÇºÇ£©</SPAN><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">Èç¹ûÓöµ½ĞéÄâ»úÍø¿¨Æô¶¯Ê§°ÜÌáÊ¾device 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">4ã€virsh 
+define è™šæ‹Ÿæœºå1.xml (å®šä¹‰è™šæ‹Ÿæœº)</SPAN><BR 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">5ã€virsh 
+start è™šæ‹Ÿæœºå1 ï¼ˆæ–°çš„è™šæ‹Ÿæœºå°±å¯ä»¥ä½¿ç”¨å•¦ã€‚å‘µå‘µï¼‰</SPAN><BR 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><BR 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">å¦‚æœé‡åˆ°è™šæ‹Ÿæœºç½‘å¡å¯åŠ¨å¤±è´¥æç¤ºdevice 
 eth0 does not seem</SPAN><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">¿ÉÒÔifconfig 
--a ²é¿´Íø¿¨µÄÃû×ÖÊÇ·ñ²»ÊÇeth0.</SPAN><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">Èç¹û²»ÊÇ£¬ip 
-link set ethX name eth0</SPAN></p></div>
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">å¯ä»¥ifconfig 
+-a æŸ¥çœ‹ç½‘å¡çš„åå­—æ˜¯å¦ä¸æ˜¯eth0.</SPAN><BR 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">å¦‚æœä¸æ˜¯ï¼Œip 
+link set ethX name eth0</SPAN></p><p><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Arial, Helvetica, simsun, u5b8bu4f53; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"> 
+    </SPAN>&nbsp;</p></div>
 </body>

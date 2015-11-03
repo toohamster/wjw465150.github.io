@@ -1,13 +1,13 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>LVM¾í¹ÜÀíÖ¸ÄÏ</title>
+<title>LVMå·ç®¡ç†æŒ‡å—</title>
 <meta name="GENERATOR" content="WinCHM">
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
 html,body { 
 	/* Default Font */
-	font-family: ËÎÌå, Arial, Helvetica, sans-serif;
+	font-family: å®‹ä½“, Arial, Helvetica, sans-serif;
 	font-size: 10pt;
 }
 </style>
@@ -15,45 +15,46 @@ html,body {
 </head>
 
 <body>
-<P><STRONG><FONT size=3>µÚ1²½£ºÔÚÓ²ÅÌÉÏ´´½¨Ò»¸öLVM·ÖÇø¡£Ê¹ÓÃfdisk»òÕßÆäËüµÄ·ÖÇø¹¤¾ßÀ´´´½¨Ò»¸öLVM·ÖÇø¡£Linux 
-LVMµÄ·ÖÇøÀàĞÍÎª8e¡£</FONT></STRONG>  <BR>¡¡¡¡# fdisk 
-/dev/hda<BR>¡¡¡¡press p (to print the partition table) <BR>¡¡¡¡and n (to create a 
-new partition)<BR>¡¡¡¡ <BR>
-<strong>µÚ2²½£º´´½¨Ò»¸öÎïÀí¾í¡£ÏÂÊöÃüÁî½«ÔÚ·ÖÇøµÄÆğÊ¼´¦´´½¨Ò»¸ö¾í×éÃèÊö·û£º</strong><BR>¡¡¡¡# pvcreate 
-/dev/hda6<BR>¡¡¡¡pvcreate -- -physical volume "/dev/hda6" successfully 
-created<BR>¡¡¡¡# pvcreate /dev/hda7<BR>¡¡¡¡pvcreate- -- physical volume "/dev/hda7" 
-successfully created<BR>¡¡¡¡ <BR>
-<strong>µÚ3²½£º´´½¨Ò»¸ö¾í×é¡£Í¨¹ıÏÂÃæµÄ·½·¨´´½¨Ò»¸öĞÂµÄ¾í×é£¬²¢ÇÒÌí¼ÓÁ½¸öÎïÀí¾í£º</strong><BR>¡¡¡¡# 
-vgcreate test_vg /dev/hda6 /dev/hda7<BR>¡¡¡¡vgcreate- -- INFO: using default 
-physical extent size 4 MB<BR>¡¡¡¡vgcreate- -- INFO: maximum logical volume size is 
-255.99 Gigabyte<BR>¡¡¡¡vgcreate- -- doing automatic backup of volume group 
-"test_vg"<BR>¡¡¡¡vgcreate- -- volume group "test_vg" successfully created and 
-activated<BR>¡¡¡¡ 
-<BR>¡¡¡¡ÉÏÊöÃüÁî½«´´½¨Ò»¸öÃûÎªtest_vg£¬°üº¬ÓĞ/dev/hda6ºÍ/dev/hda7Á½¸öÎïÀí¾íµÄ¾í×é¡£Ê¹ÓÃÏÂÃæÃüÁîÀ´¼¤»î¾í×é£º <BR>¡¡¡¡# 
-vgchange -ay test_vg<BR>¡¡¡¡ <BR>¡¡¡¡Ê¹ÓÃ¡°vgdisplay¡±ÃüÁîÀ´²é¿´Ëù½¨Á¢¾í×éµÄÏ¸½ÚĞÅÏ¢¡£ <BR>¡¡¡¡# 
-vgdisplay<BR>¡¡¡¡--- Volume group ---<BR>¡¡¡¡VG Name test_vg<BR>¡¡¡¡VG Access 
-read/write<BR>¡¡¡¡VG Status available/resizable<BR>¡¡¡¡VG # 0<BR>¡¡¡¡MAX LV 
-256<BR>¡¡¡¡Cur LV 1<BR>¡¡¡¡Open LV 0<BR>¡¡¡¡MAX LV Size 255.99 GB<BR>¡¡¡¡Max PV 
-256<BR>¡¡¡¡Cur PV 2<BR>¡¡¡¡Act PV 2<BR>¡¡¡¡VG Size 3.91 GB<BR>¡¡¡¡PE Size 4 
-MB<BR>¡¡¡¡Total PE 1000<BR>¡¡¡¡Alloc PE / Size 256 / 1 GB<BR>¡¡¡¡Free PE / Size 744 / 
-2.91 GB<BR>¡¡¡¡VG UUID 
-T34zIt-HDPs-uo6r-cBDT-UjEq-EEPB-GF435E<BR>¡¡¡¡<BR>
-<strong>µÚ4²½£º´´½¨Ò»¸öÂß¼­¾í¡£Ê¹ÓÃlvcreateÃüÁîÔÚ¾í×éÖĞ´´½¨Ò»¸öÂß¼­¾í£º 
-</strong><BR>¡¡¡¡# lvcreate -L 2G -n logvol1 
-test_vg<BR>¡¡¡¡<BR>
-<strong>µÚ5²½£º´´½¨ÎÄ¼şÏµÍ³¡£ÔÚ¸ÃÂß¼­¾íÉÏÑ¡ÔñÊ¹ÓÃreiserfsÈÕÖ¾ÎÄ¼şÏµÍ³£º</strong><BR>¡¡¡¡# mkreiserfs 
-/dev/test_vg/logvol1<BR>¡¡¡¡ <BR>¡¡¡¡Ê¹ÓÃmountÃüÁîÀ´¼ÓÔØĞÂ´´½¨µÄÎÄ¼şÏµÍ³¡£ <BR>¡¡¡¡# mount -t reiserfs 
+<P><STRONG><FONT size=3>ç¬¬1æ­¥ï¼šåœ¨ç¡¬ç›˜ä¸Šåˆ›å»ºä¸€ä¸ªLVMåˆ†åŒºã€‚ä½¿ç”¨fdiskæˆ–è€…å…¶å®ƒçš„åˆ†åŒºå·¥å…·æ¥åˆ›å»ºä¸€ä¸ªLVMåˆ†åŒºã€‚Linux 
+LVMçš„åˆ†åŒºç±»å‹ä¸º8eã€‚</FONT></STRONG>  <BR>ã€€ã€€# fdisk 
+/dev/hda<BR>ã€€ã€€press p (to print the partition table) <BR>ã€€ã€€and n (to create a 
+new partition)<BR>ã€€ã€€ <BR>
+<strong>ç¬¬2æ­¥ï¼šåˆ›å»ºä¸€ä¸ªç‰©ç†å·ã€‚ä¸‹è¿°å‘½ä»¤å°†åœ¨åˆ†åŒºçš„èµ·å§‹å¤„åˆ›å»ºä¸€ä¸ªå·ç»„æè¿°ç¬¦ï¼š</strong><BR>ã€€ã€€# pvcreate 
+/dev/hda6<BR>ã€€ã€€pvcreate -- -physical volume "/dev/hda6" successfully 
+created<BR>ã€€ã€€# pvcreate /dev/hda7<BR>ã€€ã€€pvcreate- -- physical volume "/dev/hda7" 
+successfully created<BR>ã€€ã€€ <BR>
+<strong>ç¬¬3æ­¥ï¼šåˆ›å»ºä¸€ä¸ªå·ç»„ã€‚é€šè¿‡ä¸‹é¢çš„æ–¹æ³•åˆ›å»ºä¸€ä¸ªæ–°çš„å·ç»„ï¼Œå¹¶ä¸”æ·»åŠ ä¸¤ä¸ªç‰©ç†å·ï¼š</strong><BR>ã€€ã€€# 
+vgcreate test_vg /dev/hda6 /dev/hda7<BR>ã€€ã€€vgcreate- -- INFO: using default 
+physical extent size 4 MB<BR>ã€€ã€€vgcreate- -- INFO: maximum logical volume size is 
+255.99 Gigabyte<BR>ã€€ã€€vgcreate- -- doing automatic backup of volume group 
+"test_vg"<BR>ã€€ã€€vgcreate- -- volume group "test_vg" successfully created and 
+activated<BR>ã€€ã€€ 
+<BR>ã€€ã€€ä¸Šè¿°å‘½ä»¤å°†åˆ›å»ºä¸€ä¸ªåä¸ºtest_vgï¼ŒåŒ…å«æœ‰/dev/hda6å’Œ/dev/hda7ä¸¤ä¸ªç‰©ç†å·çš„å·ç»„ã€‚ä½¿ç”¨ä¸‹é¢å‘½ä»¤æ¥æ¿€æ´»å·ç»„ï¼š <BR>ã€€ã€€# 
+vgchange -ay test_vg<BR>ã€€ã€€ <BR>ã€€ã€€ä½¿ç”¨â€œvgdisplayâ€å‘½ä»¤æ¥æŸ¥çœ‹æ‰€å»ºç«‹å·ç»„çš„ç»†èŠ‚ä¿¡æ¯ã€‚ <BR>ã€€ã€€# 
+vgdisplay<BR>ã€€ã€€--- Volume group ---<BR>ã€€ã€€VG Name test_vg<BR>ã€€ã€€VG Access 
+read/write<BR>ã€€ã€€VG Status available/resizable<BR>ã€€ã€€VG # 0<BR>ã€€ã€€MAX LV 
+256<BR>ã€€ã€€Cur LV 1<BR>ã€€ã€€Open LV 0<BR>ã€€ã€€MAX LV Size 255.99 GB<BR>ã€€ã€€Max PV 
+256<BR>ã€€ã€€Cur PV 2<BR>ã€€ã€€Act PV 2<BR>ã€€ã€€VG Size 3.91 GB<BR>ã€€ã€€PE Size 4 
+MB<BR>ã€€ã€€Total PE 1000<BR>ã€€ã€€Alloc PE / Size 256 / 1 GB<BR>ã€€ã€€Free PE / Size 744 / 
+2.91 GB<BR>ã€€ã€€VG UUID 
+T34zIt-HDPs-uo6r-cBDT-UjEq-EEPB-GF435E<BR>ã€€ã€€<BR>
+<strong>ç¬¬4æ­¥ï¼šåˆ›å»ºä¸€ä¸ªé€»è¾‘å·ã€‚ä½¿ç”¨lvcreateå‘½ä»¤åœ¨å·ç»„ä¸­åˆ›å»ºä¸€ä¸ªé€»è¾‘å·ï¼š 
+</strong><BR>ã€€ã€€# lvcreate -L 2G -n logvol1 
+test_vg<BR>ã€€ã€€<BR>
+<strong>ç¬¬5æ­¥ï¼šåˆ›å»ºæ–‡ä»¶ç³»ç»Ÿã€‚åœ¨è¯¥é€»è¾‘å·ä¸Šé€‰æ‹©ä½¿ç”¨reiserfsæ—¥å¿—æ–‡ä»¶ç³»ç»Ÿï¼š</strong><BR>ã€€ã€€# mkreiserfs 
+/dev/test_vg/logvol1<BR>ã€€ã€€ <BR>ã€€ã€€ä½¿ç”¨mountå‘½ä»¤æ¥åŠ è½½æ–°åˆ›å»ºçš„æ–‡ä»¶ç³»ç»Ÿã€‚ <BR>ã€€ã€€# mount -t reiserfs 
 /dev/test_vg/logvol1 
-/mnt/lv1<BR>¡¡¡¡<BR>
-<strong>µÚ6²½£ºÔÚ/etc/fstabºÍ/etc/lilo.confÖĞÌí¼ÓÒ»¸öÈë¿Ú¡£ÔÚ/etc/fstabÖĞ¼ÓÈëÒÔÏÂÈë¿Ú£¬ÔÚÆô¶¯Ê±¼ÓÔØÎÄ¼şÏµÍ³£º</strong><BR>¡¡¡¡/dev/test_vg/logvol1 /mnt/lv1 reiserfs defaults 1 1</P>
-<P><strong>µÚ7²½£ºĞŞ¸ÄÂß¼­¾íµÄ´óĞ¡¡£¿ÉÒÔÊ¹ÓÃlvextendÃüÁî·½±ãµØĞŞ¸ÄÂß¼­¾íµÄ´óĞ¡£¬Ôö¼ÓÂß¼­¾í´óĞ¡µÄ·½·¨ÈçÏÂ£º</strong><BR>¡¡¡¡# lvextend -L +1G 
-/dev/test_vg/logvol1<BR>¡¡¡¡lvextend -- extending logical volume 
-"/dev/test_vg/logvol1" to 3GB<BR>¡¡¡¡lvextend -- doing automatic backup of volume 
-group "test_vg"<BR>¡¡¡¡lvextend -- logical volume "/dev/test_vg/logvol1" 
-successfully extended<BR>¡¡¡¡ <BR>
-<strong>µÚ8²½£º ÀàËÆµÄ£¬¼õĞ¡Âß¼­¾í´óĞ¡µÄ·½·¨ÈçÏÂ£º</strong><BR>¡¡¡¡# lvreduce -L -1G 
-/dev/test_vg/logvol1<BR>¡¡¡¡lvreduce -- -Warning: reducing active logical volume to 
-2GB<BR>¡¡¡¡lvreduce- -- This may destroy your data (filesystem etc.)<BR>¡¡¡¡lvreduce 
--- -do you really want to reduce "/dev/test_vg/lv1"? [y/n]: y<BR>¡¡¡¡lvreduce- -- 
-doing automatic backup of volume group "test_vg"<BR>¡¡¡¡lvreduce- -- logical 
-volume "/dev/test_vg/lv1" successfully reduced<BR></P></body>
+/mnt/lv1<BR>ã€€ã€€<BR>
+<strong>ç¬¬6æ­¥ï¼šåœ¨/etc/fstabå’Œ/etc/lilo.confä¸­æ·»åŠ ä¸€ä¸ªå…¥å£ã€‚åœ¨/etc/fstabä¸­åŠ å…¥ä»¥ä¸‹å…¥å£ï¼Œåœ¨å¯åŠ¨æ—¶åŠ è½½æ–‡ä»¶ç³»ç»Ÿï¼š</strong><BR>ã€€ã€€/dev/test_vg/logvol1 /mnt/lv1 reiserfs defaults 1 1</P>
+<P><strong>ç¬¬7æ­¥ï¼šä¿®æ”¹é€»è¾‘å·çš„å¤§å°ã€‚å¯ä»¥ä½¿ç”¨lvextendå‘½ä»¤æ–¹ä¾¿åœ°ä¿®æ”¹é€»è¾‘å·çš„å¤§å°ï¼Œå¢åŠ é€»è¾‘å·å¤§å°çš„æ–¹æ³•å¦‚ä¸‹ï¼š</strong><BR>ã€€ã€€# lvextend -L +1G 
+/dev/test_vg/logvol1<BR>ã€€ã€€lvextend -- extending logical volume 
+"/dev/test_vg/logvol1" to 3GB<BR>ã€€ã€€lvextend -- doing automatic backup of volume 
+group "test_vg"<BR>ã€€ã€€lvextend -- logical volume "/dev/test_vg/logvol1" 
+successfully extended<BR>ã€€ã€€ <BR>
+<strong>ç¬¬8æ­¥ï¼š ç±»ä¼¼çš„ï¼Œå‡å°é€»è¾‘å·å¤§å°çš„æ–¹æ³•å¦‚ä¸‹ï¼š</strong><BR>ã€€ã€€# lvreduce -L -1G 
+/dev/test_vg/logvol1<BR>ã€€ã€€lvreduce -- -Warning: reducing active logical volume to 
+2GB<BR>ã€€ã€€lvreduce- -- This may destroy your data (filesystem etc.)<BR>ã€€ã€€lvreduce 
+-- -do you really want to reduce "/dev/test_vg/lv1"? [y/n]: y<BR>ã€€ã€€lvreduce- -- 
+doing automatic backup of volume group "test_vg"<BR>ã€€ã€€lvreduce- -- logical 
+volume "/dev/test_vg/lv1" successfully reduced<BR></P>
+<P>&nbsp;</P></body>

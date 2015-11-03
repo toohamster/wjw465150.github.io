@@ -1,9 +1,9 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>linux ÈÕÖ¾logger</title>
+<title>linux æ—¥å¿—logger</title>
 <meta name="GENERATOR" content="WinCHM">
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
 html,body { 
 	/* Default Font */
@@ -16,366 +16,370 @@ html,body {
 
 <body>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="LINE-HEIGHT: 1.5"><STRONG><SPAN style="FONT-SIZE: 16px">Ò» 
-Í¨¹ıloggerÃüÁî¼ÇÂ¼ÈÕÖ¾</SPAN></STRONG></SPAN></P>
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="LINE-HEIGHT: 1.5"><STRONG><SPAN style="FONT-SIZE: 16px">ä¸€ 
+é€šè¿‡loggerå‘½ä»¤è®°å½•æ—¥å¿—</SPAN></STRONG></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">logger ÊÇÒ»¸öshell 
-ÃüÁî½Ó¿Ú£¬¿ÉÒÔÍ¨¹ı¸Ã½Ó¿ÚÊ¹ÓÃSyslogµÄÏµÍ³ÈÕÖ¾Ä£¿é£¬»¹¿ÉÒÔ´ÓÃüÁîĞĞÖ±½ÓÏòÏµÍ³ÈÕÖ¾ÎÄ¼şĞ´ÈëÒ»ĞĞĞÅÏ¢¡£</SPAN></SPAN></P>
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">logger æ˜¯ä¸€ä¸ªshell 
+å‘½ä»¤æ¥å£ï¼Œå¯ä»¥é€šè¿‡è¯¥æ¥å£ä½¿ç”¨Syslogçš„ç³»ç»Ÿæ—¥å¿—æ¨¡å—ï¼Œè¿˜å¯ä»¥ä»å‘½ä»¤è¡Œç›´æ¥å‘ç³»ç»Ÿæ—¥å¿—æ–‡ä»¶å†™å…¥ä¸€è¡Œä¿¡æ¯ã€‚</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">ÈÕÖ¾µÄ¼¶±ğ</SPAN></SPAN></P>
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">æ—¥å¿—çš„çº§åˆ«</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="FONT-SIZE: 16px"><SPAN 
-style="LINE-HEIGHT: 1.5">facility£º&nbsp;<BR><BR>auth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-£­ÓÃ»§ÊÚÈ¨&nbsp;<BR>authpriv&nbsp;&nbsp; 
-£­ÊÚÈ¨ºÍ°²È«&nbsp;<BR>cron&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; £­¼Æ»®ÈÎÎñ£ºat 
-,cron&nbsp;<BR>daemon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;£­ÏµÍ³ÊØ»¤½ø³Ì&nbsp;<BR>kern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-£­ÓëÄÚºËÓĞ¹ØÏµµÄĞÅÏ¢&nbsp;<BR>lpr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-£­Óë´òÓ¡·şÎñÓĞ¹ØµÄĞÅÏ¢¡£&nbsp;<BR>mail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-£­Óëµç×ÓÓÊ¼şÓĞ¹ØµÄĞÅÏ¢&nbsp;<BR>news&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-£­À´×ÔĞÂÎÅ·şÎñÆ÷µÄĞÅÏ¢&nbsp;<BR>syslog&nbsp;&nbsp;&nbsp;&nbsp; £­ÓÉ syslog 
-Éú³ÉµÄĞÅÏ¢&nbsp;<BR>user&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-&nbsp;£­ÓÃ»§µÄ³ÌĞòÉú³ÉµÄĞÅÏ¢£¬Ä¬ÈÏ¡£&nbsp;<BR>uucp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; £­ÓÉ uucp 
-Éú³ÉµÄĞÅÏ¢&nbsp;<BR>local0~7&nbsp; 
-&nbsp;£­À´¶¨Òå±¾µØ²ßÂÔ&nbsp;<BR><BR>level:<BR><BR>level¶¨ÒåÏûÏ¢µÄ½ô¼±³Ì¶È¡£°´ÑÏÖØ³Ì¶ÈÓÉ¸ßµ½µÍË³ĞòÅÅÁĞÎª£ºemerg 
-=panic£¨¸ÃÏµÍ³²»¿ÉÓÃ£©&nbsp;<BR>alert&nbsp;&nbsp;&nbsp; 
-£­ĞèÒªÁ¢¼´²ÉÈ¡µÄ¶¯×÷&nbsp;<BR>crit&nbsp;&nbsp;&nbsp;&nbsp; 
-£­ÁÙ½ç×´Ì¬&nbsp;<BR>err&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-£­´íÎó×´Ì¬¡£µÈÍ¬error&nbsp;<BR>warning&nbsp;&nbsp;£­Ô¤¾¯ĞÅÏ¢£¬µÈÍ¬warn&nbsp;<BR>notice&nbsp;&nbsp; 
-£­Õı³£µ«ÊÇÒª×¢Òâ&nbsp;<BR>info&nbsp;&nbsp;&nbsp;&nbsp; 
-£­Õı³£ÏûÏ¢&nbsp;<BR>debug&nbsp;&nbsp;&nbsp;&nbsp;£­µ÷ÊÔ&nbsp;<BR>none&nbsp;&nbsp;&nbsp;&nbsp; 
-£­Ò»°ãµÄĞÅÏ¢&nbsp;<BR><BR></SPAN><SPAN 
-style="LINE-HEIGHT: 1.5">1¡¢½â¾ö·½·¨£º</SPAN></SPAN></P>
+style="LINE-HEIGHT: 1.5">facilityï¼š&nbsp;<BR><BR>auth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ï¼ç”¨æˆ·æˆæƒ&nbsp;<BR>authpriv&nbsp;&nbsp; 
+ï¼æˆæƒå’Œå®‰å…¨&nbsp;<BR>cron&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ï¼è®¡åˆ’ä»»åŠ¡ï¼šat 
+,cron&nbsp;<BR>daemon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ï¼ç³»ç»Ÿå®ˆæŠ¤è¿›ç¨‹&nbsp;<BR>kern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ï¼ä¸å†…æ ¸æœ‰å…³ç³»çš„ä¿¡æ¯&nbsp;<BR>lpr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ï¼ä¸æ‰“å°æœåŠ¡æœ‰å…³çš„ä¿¡æ¯ã€‚&nbsp;<BR>mail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ï¼ä¸ç”µå­é‚®ä»¶æœ‰å…³çš„ä¿¡æ¯&nbsp;<BR>news&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ï¼æ¥è‡ªæ–°é—»æœåŠ¡å™¨çš„ä¿¡æ¯&nbsp;<BR>syslog&nbsp;&nbsp;&nbsp;&nbsp; ï¼ç”± syslog 
+ç”Ÿæˆçš„ä¿¡æ¯&nbsp;<BR>user&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;ï¼ç”¨æˆ·çš„ç¨‹åºç”Ÿæˆçš„ä¿¡æ¯ï¼Œé»˜è®¤ã€‚&nbsp;<BR>uucp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ï¼ç”± uucp 
+ç”Ÿæˆçš„ä¿¡æ¯&nbsp;<BR>local0~7&nbsp; 
+&nbsp;ï¼æ¥å®šä¹‰æœ¬åœ°ç­–ç•¥&nbsp;<BR><BR>level:<BR><BR>levelå®šä¹‰æ¶ˆæ¯çš„ç´§æ€¥ç¨‹åº¦ã€‚æŒ‰ä¸¥é‡ç¨‹åº¦ç”±é«˜åˆ°ä½é¡ºåºæ’åˆ—ä¸ºï¼šemerg 
+=panicï¼ˆè¯¥ç³»ç»Ÿä¸å¯ç”¨ï¼‰&nbsp;<BR>alert&nbsp;&nbsp;&nbsp; 
+ï¼éœ€è¦ç«‹å³é‡‡å–çš„åŠ¨ä½œ&nbsp;<BR>crit&nbsp;&nbsp;&nbsp;&nbsp; 
+ï¼ä¸´ç•ŒçŠ¶æ€&nbsp;<BR>err&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ï¼é”™è¯¯çŠ¶æ€ã€‚ç­‰åŒerror&nbsp;<BR>warning&nbsp;&nbsp;ï¼é¢„è­¦ä¿¡æ¯ï¼Œç­‰åŒwarn&nbsp;<BR>notice&nbsp;&nbsp; 
+ï¼æ­£å¸¸ä½†æ˜¯è¦æ³¨æ„&nbsp;<BR>info&nbsp;&nbsp;&nbsp;&nbsp; 
+ï¼æ­£å¸¸æ¶ˆæ¯&nbsp;<BR>debug&nbsp;&nbsp;&nbsp;&nbsp;ï¼è°ƒè¯•&nbsp;<BR>none&nbsp;&nbsp;&nbsp;&nbsp; 
+ï¼ä¸€èˆ¬çš„ä¿¡æ¯&nbsp;<BR><BR></SPAN><SPAN 
+style="LINE-HEIGHT: 1.5">1ã€è§£å†³æ–¹æ³•ï¼š</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN 
-style="FONT-SIZE: 16px">±à¼­syslog.conf£¬</SPAN></SPAN></P>
+style="FONT-SIZE: 16px">ç¼–è¾‘syslog.confï¼Œ</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">#vi 
 /etc/syslog.conf</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN 
-style="FONT-SIZE: 16px">ÔÚµÚÒ»ĞĞ¼ÓÈëlocal3.none,Ê¹µÃÉè±¸local3µÄÈÕÖ¾²»¼ÇÂ¼ÔÚmessagesÎÄ¼şÀï£¬</SPAN></SPAN></P>
+style="FONT-SIZE: 16px">åœ¨ç¬¬ä¸€è¡ŒåŠ å…¥local3.none,ä½¿å¾—è®¾å¤‡local3çš„æ—¥å¿—ä¸è®°å½•åœ¨messagesæ–‡ä»¶é‡Œï¼Œ</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px"># Log anything (except 
 mail) of level info or higher.</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px"># Don't log private 
 authentication messages!</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN 
 style="FONT-SIZE: 16px">*.info;mail.none;authpriv.none;cron.none;local1.none;local3.none 
 /var/log/messages</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN 
-style="FONT-SIZE: 16px">½«Éè±¸local3µÄËùÓĞ¼¶±ğµÄĞÅÏ¢¶¼¼ÇÂ¼ÔÚuserlogÎÄ¼şÀï£¬</SPAN></SPAN></P>
+style="FONT-SIZE: 16px">å°†è®¾å¤‡local3çš„æ‰€æœ‰çº§åˆ«çš„ä¿¡æ¯éƒ½è®°å½•åœ¨userlogæ–‡ä»¶é‡Œï¼Œ</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">#user 
 log</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">local3.* 
 /var/log/userlog</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN 
-style="FONT-SIZE: 16px">ÖØĞÂ¼ÓÔØsyslog·şÎñµÄÅäÖÃÎÄ¼ş£¬</SPAN></SPAN></P>
+style="FONT-SIZE: 16px">é‡æ–°åŠ è½½syslogæœåŠ¡çš„é…ç½®æ–‡ä»¶ï¼Œ</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">$ service syslog 
 reload</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">2¡¢²âÊÔ£º</SPAN></SPAN></P>
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">2ã€æµ‹è¯•ï¼š</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN 
-style="FONT-SIZE: 16px">²âÊÔ»úÆ÷µÄ»·¾³£º</SPAN></SPAN></P>
+style="FONT-SIZE: 16px">æµ‹è¯•æœºå™¨çš„ç¯å¢ƒï¼š</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">OS£ºRed Hat Enterprise 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">OSï¼šRed Hat Enterprise 
 Linux 5 update 3</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">Network: 192.168.0.100/24 
 Gateway:192.168.0.1</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">$&nbsp;ping 192.168.0.1 | 
 logger -it logger_test -p local3.notice &amp;</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">ÃüÁîlogger -it logger_test 
--p local3.noticeÖĞµÄ²ÎÊıº¬Òå£º</SPAN></SPAN></P>
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">å‘½ä»¤logger -it logger_test 
+-p local3.noticeä¸­çš„å‚æ•°å«ä¹‰ï¼š</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">-i 
-ÔÚÃ¿ĞĞ¶¼¼ÇÂ¼½ø³ÌID</SPAN></SPAN></P>
+åœ¨æ¯è¡Œéƒ½è®°å½•è¿›ç¨‹ID</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">-t logger_test 
-Ã¿ĞĞ¼ÇÂ¼¶¼¼ÓÉÏ¡°logger_test¡±Õâ¸ö±êÇ©</SPAN></SPAN></P>
+æ¯è¡Œè®°å½•éƒ½åŠ ä¸Šâ€œlogger_testâ€è¿™ä¸ªæ ‡ç­¾</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">-p local3.notice 
-ÉèÖÃ¼ÇÂ¼µÄÉè±¸ºÍ¼¶±ğ</SPAN></SPAN></P>
+è®¾ç½®è®°å½•çš„è®¾å¤‡å’Œçº§åˆ«</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN 
-style="FONT-SIZE: 16px">pingÃüÁîµÄÊä³ö³É¹¦Êä³öµ½/var/log/userlogÎÄ¼şÖĞ£¬ÊµÑé³É¹¦¡£</SPAN></SPAN></P>
+style="FONT-SIZE: 16px">pingå‘½ä»¤çš„è¾“å‡ºæˆåŠŸè¾“å‡ºåˆ°/var/log/userlogæ–‡ä»¶ä¸­ï¼Œå®éªŒæˆåŠŸã€‚</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="FONT-SIZE: 16px"><SPAN style="LINE-HEIGHT: 1.5"></SPAN></SPAN>&nbsp;</P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="FONT-SIZE: 14px">3¡¢<STRONG>loggerÃüÁîÄ¬ÈÏµÄÈÕÖ¾±£´æÔÚ 
-/var/log/messagesÖĞ</STRONG>£¬ÀıÈç£º</SPAN></P>
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="FONT-SIZE: 14px">3ã€<STRONG>loggerå‘½ä»¤é»˜è®¤çš„æ—¥å¿—ä¿å­˜åœ¨ 
+/var/log/messagesä¸­</STRONG>ï¼Œä¾‹å¦‚ï¼š</SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="FONT-SIZE: 14px">ÃüÁî£ºlogger -it log_test log self test</SPAN></P>
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="FONT-SIZE: 14px">å‘½ä»¤ï¼šlogger -it log_test log self test</SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="FONT-SIZE: 14px">Êä³ö£ºtail -f /var/log/messages</SPAN></P>
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="FONT-SIZE: 14px">è¾“å‡ºï¼štail -f /var/log/messages</SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="FONT-SIZE: 14px">Mar 17 22:41:54 localhost log_test[8673]: log self 
 test</SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="FONT-SIZE: 14px"></SPAN>&nbsp;</P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="LINE-HEIGHT: 1.5"><STRONG><SPAN style="FONT-SIZE: 16px">¶ş 
-ÈÕÖ¾»Ø¾í</SPAN></STRONG></SPAN></P>
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="LINE-HEIGHT: 1.5"><STRONG><SPAN style="FONT-SIZE: 16px">äºŒ 
+æ—¥å¿—å›å·</SPAN></STRONG></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN 
-style="FONT-SIZE: 16px">ÏµÍ³Ê±Ê±¿Ì¿Ì¶¼ÔÚ²úÉúÈÕÖ¾£¬Èç¹û²»¼°Ê±ÇåÀí£¬ºÜ¿ì¾Í»á¹àÂúÓ²ÅÌ£¬µ«Èç¹ûÒªÊÖ¹¤ÇåÀí£¬ÓÖºÜÂé·³¡£ÕâÖÖÇé¿öÏÂ£¬logrotate 
-Õâ¸ö³ÌĞòºÜºÃµÄÍê³ÉÕâ¸öÈÎÎñ¡£</SPAN></SPAN></P>
+style="FONT-SIZE: 16px">ç³»ç»Ÿæ—¶æ—¶åˆ»åˆ»éƒ½åœ¨äº§ç”Ÿæ—¥å¿—ï¼Œå¦‚æœä¸åŠæ—¶æ¸…ç†ï¼Œå¾ˆå¿«å°±ä¼šçŒæ»¡ç¡¬ç›˜ï¼Œä½†å¦‚æœè¦æ‰‹å·¥æ¸…ç†ï¼Œåˆå¾ˆéº»çƒ¦ã€‚è¿™ç§æƒ…å†µä¸‹ï¼Œlogrotate 
+è¿™ä¸ªç¨‹åºå¾ˆå¥½çš„å®Œæˆè¿™ä¸ªä»»åŠ¡ã€‚</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">logrotate 
-ÓÃÀ´°Ñ¾ÉµÄÈÕÖ¾ÎÄ¼şÉ¾³ı£¬²¢´´½¨ĞÂµÄÈÕÖ¾ÎÄ¼ş£¬ÎÒÃÇ°ÑËü½Ğ×ö¡°×ª´¢¡±¡£ÎÒÃÇ¿ÉÒÔ¸ù¾İÈÕÖ¾ÎÄ¼şµÄ´óĞ¡£¬Ò²¿ÉÒÔ¸ù¾İÆäÌìÊıÀ´×ª´¢£¬Õâ¸ö¹ı³ÌÒ»°ãÍ¨¹ıÒ»¸ö½Ğ×öcrondµÄÊØ»¤½ø³ÌÀ´Ö´ĞĞ£¬logrotate 
-»¹¿ÉÒÔÓÃÓÚÑ¹ËõÈÕÖ¾ÎÄ¼ş£¬ÒÔ¼°·¢ËÍÈÕÖ¾µ½Ö¸¶¨µÄE-mail ¡£</SPAN></SPAN></P>
+ç”¨æ¥æŠŠæ—§çš„æ—¥å¿—æ–‡ä»¶åˆ é™¤ï¼Œå¹¶åˆ›å»ºæ–°çš„æ—¥å¿—æ–‡ä»¶ï¼Œæˆ‘ä»¬æŠŠå®ƒå«åšâ€œè½¬å‚¨â€ã€‚æˆ‘ä»¬å¯ä»¥æ ¹æ®æ—¥å¿—æ–‡ä»¶çš„å¤§å°ï¼Œä¹Ÿå¯ä»¥æ ¹æ®å…¶å¤©æ•°æ¥è½¬å‚¨ï¼Œè¿™ä¸ªè¿‡ç¨‹ä¸€èˆ¬é€šè¿‡ä¸€ä¸ªå«åšcrondçš„å®ˆæŠ¤è¿›ç¨‹æ¥æ‰§è¡Œï¼Œlogrotate 
+è¿˜å¯ä»¥ç”¨äºå‹ç¼©æ—¥å¿—æ–‡ä»¶ï¼Œä»¥åŠå‘é€æ—¥å¿—åˆ°æŒ‡å®šçš„E-mail ã€‚</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="FONT-SIZE: 16px"><SPAN style="LINE-HEIGHT: 1.5">logrotate µÄÅäÖÃÎÄ¼şÊÇ 
-/etc/logrotate.conf¡£Ö÷Òª²ÎÊıÈçÏÂ±í£º<BR>²ÎÊı 
-¹¦ÄÜ<BR>compress&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-Í¨¹ıgzip 
-Ñ¹Ëõ×ª´¢ÒÔºóµÄÈÕÖ¾<BR>nocompress&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-²»ĞèÒªÑ¹ËõÊ±£¬ÓÃÕâ¸ö²ÎÊı<BR>copytruncate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ÓÃÓÚ»¹ÔÚ´ò¿ªÖĞµÄÈÕÖ¾ÎÄ¼ş£¬°Ñµ±Ç°ÈÕÖ¾±¸·İ²¢½Ø¶Ï<BR>nocopytruncate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-±¸·İÈÕÖ¾ÎÄ¼şµ«ÊÇ²»½Ø¶Ï<BR>create mode owner group 
-×ª´¢ÎÄ¼ş£¬Ê¹ÓÃÖ¸¶¨µÄÎÄ¼şÄ£Ê½´´½¨ĞÂµÄÈÕÖ¾ÎÄ¼ş<BR>nocreate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-²»½¨Á¢ĞÂµÄÈÕÖ¾ÎÄ¼ş<BR>delaycompress&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-style="LINE-HEIGHT: 1.5">ºÍ compress 
-Ò»ÆğÊ¹ÓÃÊ±£¬×ª´¢µÄÈÕÖ¾ÎÄ¼şµ½ÏÂÒ»´Î×ª´¢Ê±²ÅÑ¹Ëõ<BR>nodelaycompress&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-¸²¸Ç delaycompress Ñ¡Ïî£¬×ª´¢Í¬Ê±Ñ¹Ëõ¡£<BR>errors 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="FONT-SIZE: 16px"><SPAN style="LINE-HEIGHT: 1.5">logrotate çš„é…ç½®æ–‡ä»¶æ˜¯ 
+/etc/logrotate.confã€‚ä¸»è¦å‚æ•°å¦‚ä¸‹è¡¨ï¼š<BR>å‚æ•° 
+åŠŸèƒ½<BR>compress&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+é€šè¿‡gzip 
+å‹ç¼©è½¬å‚¨ä»¥åçš„æ—¥å¿—<BR>nocompress&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ä¸éœ€è¦å‹ç¼©æ—¶ï¼Œç”¨è¿™ä¸ªå‚æ•°<BR>copytruncate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ç”¨äºè¿˜åœ¨æ‰“å¼€ä¸­çš„æ—¥å¿—æ–‡ä»¶ï¼ŒæŠŠå½“å‰æ—¥å¿—å¤‡ä»½å¹¶æˆªæ–­<BR>nocopytruncate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+å¤‡ä»½æ—¥å¿—æ–‡ä»¶ä½†æ˜¯ä¸æˆªæ–­<BR>create mode owner group 
+è½¬å‚¨æ–‡ä»¶ï¼Œä½¿ç”¨æŒ‡å®šçš„æ–‡ä»¶æ¨¡å¼åˆ›å»ºæ–°çš„æ—¥å¿—æ–‡ä»¶<BR>nocreate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ä¸å»ºç«‹æ–°çš„æ—¥å¿—æ–‡ä»¶<BR>delaycompress&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="LINE-HEIGHT: 1.5">å’Œ compress 
+ä¸€èµ·ä½¿ç”¨æ—¶ï¼Œè½¬å‚¨çš„æ—¥å¿—æ–‡ä»¶åˆ°ä¸‹ä¸€æ¬¡è½¬å‚¨æ—¶æ‰å‹ç¼©<BR>nodelaycompress&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+è¦†ç›– delaycompress é€‰é¡¹ï¼Œè½¬å‚¨åŒæ—¶å‹ç¼©ã€‚<BR>errors 
 address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-×¨´¢Ê±µÄ´íÎóĞÅÏ¢·¢ËÍµ½Ö¸¶¨µÄEmail 
-µØÖ·<BR>ifempty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-¼´Ê¹ÊÇ¿ÕÎÄ¼şÒ²×ª´¢£¬Õâ¸öÊÇ logrotate 
-µÄÈ±Ê¡Ñ¡Ïî¡£<BR>notifempty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-Èç¹ûÊÇ¿ÕÎÄ¼şµÄ»°£¬²»×ª´¢<BR>mail 
+ä¸“å‚¨æ—¶çš„é”™è¯¯ä¿¡æ¯å‘é€åˆ°æŒ‡å®šçš„Email 
+åœ°å€<BR>ifempty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+å³ä½¿æ˜¯ç©ºæ–‡ä»¶ä¹Ÿè½¬å‚¨ï¼Œè¿™ä¸ªæ˜¯ logrotate 
+çš„ç¼ºçœé€‰é¡¹ã€‚<BR>notifempty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+å¦‚æœæ˜¯ç©ºæ–‡ä»¶çš„è¯ï¼Œä¸è½¬å‚¨<BR>mail 
 address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-°Ñ×ª´¢µÄÈÕÖ¾ÎÄ¼ş·¢ËÍµ½Ö¸¶¨µÄE-mail 
-µØÖ·<BR>nomail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-×ª´¢Ê±²»·¢ËÍÈÕÖ¾ÎÄ¼ş<BR>olddir 
+æŠŠè½¬å‚¨çš„æ—¥å¿—æ–‡ä»¶å‘é€åˆ°æŒ‡å®šçš„E-mail 
+åœ°å€<BR>nomail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+è½¬å‚¨æ—¶ä¸å‘é€æ—¥å¿—æ–‡ä»¶<BR>olddir 
 directory&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-style="LINE-HEIGHT: 1.5">×ª´¢ºóµÄÈÕÖ¾ÎÄ¼ş·ÅÈëÖ¸¶¨µÄÄ¿Â¼£¬±ØĞëºÍµ±Ç°ÈÕÖ¾ÎÄ¼şÔÚÍ¬Ò»¸öÎÄ¼şÏµÍ³<BR>noolddir&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-×ª´¢ºóµÄÈÕÖ¾ÎÄ¼şºÍµ±Ç°ÈÕÖ¾ÎÄ¼ş·ÅÔÚÍ¬Ò»¸öÄ¿Â¼ÏÂ<BR>prerotate/endscript&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-style="LINE-HEIGHT: 1.5">ÔÚ×ª´¢ÒÔÇ°ĞèÒªÖ´ĞĞµÄÃüÁî¿ÉÒÔ·ÅÈëÕâ¸ö¶Ô£¬ÕâÁ½¸ö¹Ø¼ü×Ö±ØĞëµ¥¶À³ÉĞĞ<BR>postrotate/endscript&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-style="LINE-HEIGHT: 1.5">ÔÚ×ª´¢ÒÔºóĞèÒªÖ´ĞĞµÄÃüÁî¿ÉÒÔ·ÅÈëÕâ¸ö¶Ô£¬ÕâÁ½¸ö¹Ø¼ü×Ö±ØĞëµ¥¶À³ÉĞĞ<BR>daily&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ö¸¶¨×ª´¢ÖÜÆÚÎªÃ¿Ìì<BR>weekly&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-Ö¸¶¨×ª´¢ÖÜÆÚÎªÃ¿ÖÜ<BR>monthly&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-Ö¸¶¨×ª´¢ÖÜÆÚÎªÃ¿ÔÂ<BR>rotate 
+style="LINE-HEIGHT: 1.5">è½¬å‚¨åçš„æ—¥å¿—æ–‡ä»¶æ”¾å…¥æŒ‡å®šçš„ç›®å½•ï¼Œå¿…é¡»å’Œå½“å‰æ—¥å¿—æ–‡ä»¶åœ¨åŒä¸€ä¸ªæ–‡ä»¶ç³»ç»Ÿ<BR>noolddir&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+è½¬å‚¨åçš„æ—¥å¿—æ–‡ä»¶å’Œå½“å‰æ—¥å¿—æ–‡ä»¶æ”¾åœ¨åŒä¸€ä¸ªç›®å½•ä¸‹<BR>prerotate/endscript&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="LINE-HEIGHT: 1.5">åœ¨è½¬å‚¨ä»¥å‰éœ€è¦æ‰§è¡Œçš„å‘½ä»¤å¯ä»¥æ”¾å…¥è¿™ä¸ªå¯¹ï¼Œè¿™ä¸¤ä¸ªå…³é”®å­—å¿…é¡»å•ç‹¬æˆè¡Œ<BR>postrotate/endscript&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="LINE-HEIGHT: 1.5">åœ¨è½¬å‚¨ä»¥åéœ€è¦æ‰§è¡Œçš„å‘½ä»¤å¯ä»¥æ”¾å…¥è¿™ä¸ªå¯¹ï¼Œè¿™ä¸¤ä¸ªå…³é”®å­—å¿…é¡»å•ç‹¬æˆè¡Œ<BR>daily&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;æŒ‡å®šè½¬å‚¨å‘¨æœŸä¸ºæ¯å¤©<BR>weekly&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+æŒ‡å®šè½¬å‚¨å‘¨æœŸä¸ºæ¯å‘¨<BR>monthly&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+æŒ‡å®šè½¬å‚¨å‘¨æœŸä¸ºæ¯æœˆ<BR>rotate 
 count&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-style="LINE-HEIGHT: 1.5">Ö¸¶¨ÈÕÖ¾ÎÄ¼şÉ¾³ıÖ®Ç°×ª´¢µÄ´ÎÊı£¬0 Ö¸Ã»ÓĞ±¸·İ£¬5 Ö¸±£Áô5 ¸ö±¸·İ<BR>tabootext [+] 
+style="LINE-HEIGHT: 1.5">æŒ‡å®šæ—¥å¿—æ–‡ä»¶åˆ é™¤ä¹‹å‰è½¬å‚¨çš„æ¬¡æ•°ï¼Œ0 æŒ‡æ²¡æœ‰å¤‡ä»½ï¼Œ5 æŒ‡ä¿ç•™5 ä¸ªå¤‡ä»½<BR>tabootext [+] 
 list&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-style="LINE-HEIGHT: 1.5">²»×ª´¢Ö¸¶¨À©Õ¹ÃûµÄÎÄ¼ş£¬È±Ê¡µÄÀ©Õ¹ÃûÊÇ£º.rpm-orig .rpmsave 
+style="LINE-HEIGHT: 1.5">ä¸è½¬å‚¨æŒ‡å®šæ‰©å±•åçš„æ–‡ä»¶ï¼Œç¼ºçœçš„æ‰©å±•åæ˜¯ï¼š.rpm-orig .rpmsave 
 size&nbsp;size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-style="LINE-HEIGHT: 1.5">µ±ÈÕÖ¾ÎÄ¼şµ½´ïÖ¸¶¨µÄ´óĞ¡Ê±²Å×ª´¢£¬¿ÉÒÔÖ¸¶¨bytes(È±Ê¡)ÒÔ¼°KB(sizek)»òÕßMB 
+style="LINE-HEIGHT: 1.5">å½“æ—¥å¿—æ–‡ä»¶åˆ°è¾¾æŒ‡å®šçš„å¤§å°æ—¶æ‰è½¬å‚¨ï¼Œå¯ä»¥æŒ‡å®šbytes(ç¼ºçœ)ä»¥åŠKB(sizek)æˆ–è€…MB 
 (sizem).</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">ÏµÍ³¶Ô logrotate 
-µÄÖ´ĞĞºÍ²Ù×÷£º</SPAN></SPAN></P>
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">ç³»ç»Ÿå¯¹ logrotate 
+çš„æ‰§è¡Œå’Œæ“ä½œï¼š</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN 
-style="FONT-SIZE: 16px">ÔÚ/etc/cron.daily/Â·¾¶ÏÂ£¬ÓĞÒ»¸ölogrotate 
-µÄshell½Å±¾£¬ËùÒÔcron³ÌĞò»áÃ¿Ììµ÷ÓÃÒ»´Îlogrotate³ÌĞò£¬È»ºólogrotate³ÌĞò»ØÈ¥¼ì²éÈÕÖ¾ÎÄ¼şÊÇ·ñ·ûºÏ»Ø¹öÌõ¼ş£¬²¢Ö´ĞĞÏàÓ¦¶¯×÷¡£</SPAN></SPAN></P>
+style="FONT-SIZE: 16px">åœ¨/etc/cron.daily/è·¯å¾„ä¸‹ï¼Œæœ‰ä¸€ä¸ªlogrotate 
+çš„shellè„šæœ¬ï¼Œæ‰€ä»¥cronç¨‹åºä¼šæ¯å¤©è°ƒç”¨ä¸€æ¬¡logrotateç¨‹åºï¼Œç„¶ålogrotateç¨‹åºå›å»æ£€æŸ¥æ—¥å¿—æ–‡ä»¶æ˜¯å¦ç¬¦åˆå›æ»šæ¡ä»¶ï¼Œå¹¶æ‰§è¡Œç›¸åº”åŠ¨ä½œã€‚</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">Ö´ĞĞ²Ù×÷£º/usr/sbin/logrotate 
-/etc/cron.daily/logrotate.conf£»</SPAN></SPAN></P>
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">æ‰§è¡Œæ“ä½œï¼š/usr/sbin/logrotate 
+/etc/cron.daily/logrotate.confï¼›</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN 
-style="FONT-SIZE: 16px">ÔÚ/etc/logrotate.confÎÄ¼şÖĞ£¬ÓĞÈçÏÂÑ¡Ïî£º</SPAN></SPAN></P>
+style="FONT-SIZE: 16px">åœ¨/etc/logrotate.confæ–‡ä»¶ä¸­ï¼Œæœ‰å¦‚ä¸‹é€‰é¡¹ï¼š</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px"># RPM packages drop log 
 rotation information into this directory</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">include 
 /etc/logrotate.d</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN 
-style="FONT-SIZE: 16px">Õâ¸öÑ¡ÏîËµÃ÷ÔÚÖ´ĞĞlogrotate³ÌĞòÊ±£¬Í¬Ê±Ö´ĞĞ/etc/logrotatedÄ¿Â¼ÏÂµÄËùÓĞ½Å±¾¡£</SPAN></SPAN></P>
+style="FONT-SIZE: 16px">è¿™ä¸ªé€‰é¡¹è¯´æ˜åœ¨æ‰§è¡Œlogrotateç¨‹åºæ—¶ï¼ŒåŒæ—¶æ‰§è¡Œ/etc/logrotatedç›®å½•ä¸‹çš„æ‰€æœ‰è„šæœ¬ã€‚</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN 
-style="FONT-SIZE: 16px">Ö´ĞĞ¶¯×÷Ê¾Àı£ºÃ¿ÔÂÇå³ı/var/log/wtmpÄ¿Â¼ÖĞµÄÏà¹ØÄÚÈİ£º</SPAN></SPAN></P>
+style="FONT-SIZE: 16px">æ‰§è¡ŒåŠ¨ä½œç¤ºä¾‹ï¼šæ¯æœˆæ¸…é™¤/var/log/wtmpç›®å½•ä¸­çš„ç›¸å…³å†…å®¹ï¼š</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">/var/log/wtmp 
 {</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">monthly</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">create 0664 root 
 root</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">rotate 
 1</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">}</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">ÊµÑé£º</SPAN></SPAN></P>
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">å®éªŒï¼š</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">1.</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">»·¾³: Red Hat Enterprise 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">ç¯å¢ƒ: Red Hat Enterprise 
 Linux 5.3</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">ÊµÑéÃèÊö:</SPAN></SPAN></P>
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">å®éªŒæè¿°:</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN 
-style="FONT-SIZE: 16px">£¨1£©ÓÃCronÖ´ĞĞlogrotateÃüÁî£¬Ã¿·ÖÖÓ¼ì²éÒ»´ÎÄ¿±êÈÕÖ¾ÎÄ¼şÊÇ·ñÂú×ã»Ø¾íÏŞÖÆ¡££¨2£©ÅäÖÃ/etc/logrotate.conf 
-»òÕß½¨Á¢Ò»¸ö×Ô¶¨ÒåµÄ/etc/logrotate.d /userlog</SPAN></SPAN></P>
+style="FONT-SIZE: 16px">ï¼ˆ1ï¼‰ç”¨Cronæ‰§è¡Œlogrotateå‘½ä»¤ï¼Œæ¯åˆ†é’Ÿæ£€æŸ¥ä¸€æ¬¡ç›®æ ‡æ—¥å¿—æ–‡ä»¶æ˜¯å¦æ»¡è¶³å›å·é™åˆ¶ã€‚ï¼ˆ2ï¼‰é…ç½®/etc/logrotate.conf 
+æˆ–è€…å»ºç«‹ä¸€ä¸ªè‡ªå®šä¹‰çš„/etc/logrotate.d /userlog</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">£¨3£©±à¼­/etc/syslog.conf 
-Ê¹µÃ¼ÇÂ¼µÄÈÕÖ¾ĞÅÏ¢¿ÉÒÔĞ´Èëµ½/var/log/userlogÖĞ¡£</SPAN></SPAN></P>
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">ï¼ˆ3ï¼‰ç¼–è¾‘/etc/syslog.conf 
+ä½¿å¾—è®°å½•çš„æ—¥å¿—ä¿¡æ¯å¯ä»¥å†™å…¥åˆ°/var/log/userlogä¸­ã€‚</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">$&nbsp;crontab 
 -e</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">* * * * * 
-/usr/sbin/logrotate /etc/logrotate.conf //Ğ´ÈëÕâÌõÃüÁî</SPAN></SPAN></P>
+/usr/sbin/logrotate /etc/logrotate.conf //å†™å…¥è¿™æ¡å‘½ä»¤</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">$&nbsp;vi 
 /etc/logrotate.conf</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN 
-style="FONT-SIZE: 16px">***Ê¡ÂÔ***</SPAN></SPAN></P>
+style="FONT-SIZE: 16px">***çœç•¥***</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">/var/log/userlog 
 {</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">daily</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">size 10k 
-////ÔÚÕâÀïµ¥Î»´óĞ¡Ğ´Ãô¸ĞÓ¦£¬Ó¦Îª k or M</SPAN></SPAN></P>
+////åœ¨è¿™é‡Œå•ä½å¤§å°å†™æ•æ„Ÿåº”ï¼Œåº”ä¸º k or M</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">create 0664 root 
 root</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">rotate 
 3</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN 
 style="FONT-SIZE: 16px">prerotate</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">/bin/kill -HUP `cat 
 /var/run/syslogd.pid 2&gt; /dev/null` 2&gt; /dev/null</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">/bin/kill -HUP `cat 
 /var/run/rsyslogd.pid 2&gt; /dev/null` 2&gt; /dev/null</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN 
 style="FONT-SIZE: 16px">endscript</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">}</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="FONT-SIZE: 16px"><SPAN 
-style="LINE-HEIGHT: 1.5">ÔÚÕâÀïÒ»¶¨Òª¼ÓprerotateÕâ¶Î½Å±¾£¬ÕâÑù¿ÉÒÔÊ¹syslog³ÌĞòÖØĞÂ¶ÁÈ¡ÅäÖÃÎÄ¼ş£¬ÕâÑù×öµÄ×÷ÓÃÊÇÈÃsyslog³ÌĞòÊÍ·Å¶ÔuserlogÎÄ¼ş³ÖÓĞµÄÎÄ¼şÃèÊö·û£¬·ñÔò¼´Ê¹ÈÕÖ¾ÎÄ¼ş</SPAN><SPAN 
-style="LINE-HEIGHT: 1.5">»Ø¹ö£¬syslogÒ²²»»áÏòĞÂ²úÉúµÄÈÕÖ¾ÎÄ¼şĞ´Êı¾İ¡£¾Ù¸öÀı×Ó£¬Èç¹û²»¼ÓÕâ¶Î½Å±¾£¬¼´Ê¹logrotate³ÌĞò½«userlogÎÄ¼ş½Ø¶Ï²¢ÖØÃüÃûÎªuserlog.1£¬µ«ÊÇsyslog³ÌĞòÈÔÈ»»áÏòÔ­userlogÎÄ¼ş¼´userlog.1ÖĞĞ´ÈëÊı¾İ¡£</SPAN></SPAN></P>
+style="LINE-HEIGHT: 1.5">åœ¨è¿™é‡Œä¸€å®šè¦åŠ prerotateè¿™æ®µè„šæœ¬ï¼Œè¿™æ ·å¯ä»¥ä½¿syslogç¨‹åºé‡æ–°è¯»å–é…ç½®æ–‡ä»¶ï¼Œè¿™æ ·åšçš„ä½œç”¨æ˜¯è®©syslogç¨‹åºé‡Šæ”¾å¯¹userlogæ–‡ä»¶æŒæœ‰çš„æ–‡ä»¶æè¿°ç¬¦ï¼Œå¦åˆ™å³ä½¿æ—¥å¿—æ–‡ä»¶</SPAN><SPAN 
+style="LINE-HEIGHT: 1.5">å›æ»šï¼Œsyslogä¹Ÿä¸ä¼šå‘æ–°äº§ç”Ÿçš„æ—¥å¿—æ–‡ä»¶å†™æ•°æ®ã€‚ä¸¾ä¸ªä¾‹å­ï¼Œå¦‚æœä¸åŠ è¿™æ®µè„šæœ¬ï¼Œå³ä½¿logrotateç¨‹åºå°†userlogæ–‡ä»¶æˆªæ–­å¹¶é‡å‘½åä¸ºuserlog.1ï¼Œä½†æ˜¯syslogç¨‹åºä»ç„¶ä¼šå‘åŸuserlogæ–‡ä»¶å³userlog.1ä¸­å†™å…¥æ•°æ®ã€‚</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">$&nbsp;vi 
 /etc/syslog.conf</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN 
-style="FONT-SIZE: 16px">*****Ê¡ÂÔ*****</SPAN></SPAN></P>
+style="FONT-SIZE: 16px">*****çœç•¥*****</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN 
 style="FONT-SIZE: 16px">*.info;mail.none;authpriv.none;cron.none;local1.none;local3.none 
 /var/log/messages</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">#user 
 log</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">local3.* 
 /var/log/userlog</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN 
-style="FONT-SIZE: 16px">ÖØĞÂ¼ÓÔØÅäÖÃÎÄ¼ş</SPAN></SPAN></P>
+style="FONT-SIZE: 16px">é‡æ–°åŠ è½½é…ç½®æ–‡ä»¶</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">$&nbsp;service syslog 
 reload</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN 
-style="FONT-SIZE: 16px">ÖØÆôcrond·şÎñ</SPAN></SPAN></P>
+style="FONT-SIZE: 16px">é‡å¯crondæœåŠ¡</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN style="FONT-SIZE: 16px">$&nbsp;service crond 
 restart</SPAN></SPAN></P>
 <P 
-style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 ËÎÌå, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="LINE-HEIGHT: 1.5"><SPAN 
-style="FONT-SIZE: 16px">ĞèÒª×¢ÒâµÄÊÇ£¬µ±´ïµ½ÏŞÖÆÌõ¼şÊ±£¬logrotate³ÌĞò»á½«Ä¿±êÈÕÖ¾ÎÄ¼şuserlog½Ø¶Ï£¬²¢ÃüÃûÎªuserlog.1£¬½«Ô­userlog.1¸ÄÃûÎªuserlog.2£¬ÒÔ´ËÀàÍÆ£¬syslog³ÌĞòÊ¼ÖÕÏòuserlogÎÄ¼şÖĞĞ´Êı¾İ¡£</SPAN></SPAN></P></body>
+style="FONT-SIZE: 16px">éœ€è¦æ³¨æ„çš„æ˜¯ï¼Œå½“è¾¾åˆ°é™åˆ¶æ¡ä»¶æ—¶ï¼Œlogrotateç¨‹åºä¼šå°†ç›®æ ‡æ—¥å¿—æ–‡ä»¶userlogæˆªæ–­ï¼Œå¹¶å‘½åä¸ºuserlog.1ï¼Œå°†åŸuserlog.1æ”¹åä¸ºuserlog.2ï¼Œä»¥æ­¤ç±»æ¨ï¼Œsyslogç¨‹åºå§‹ç»ˆå‘userlogæ–‡ä»¶ä¸­å†™æ•°æ®ã€‚</SPAN></SPAN></P>
+<P 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 14px/1.5 å®‹ä½“, Arial; MARGIN-TOP: 0px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,252,243); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="LINE-HEIGHT: 1.5"><SPAN 
+style="FONT-SIZE: 16px"></SPAN></SPAN>&nbsp;</P></body>
 </html>
