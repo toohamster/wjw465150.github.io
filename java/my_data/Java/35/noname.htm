@@ -1,0 +1,802 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML xmlns:fo = "http://www.w3.org/1999/XSL/Format">
+<HEAD>
+<TITLE>Merlin 的魔力： 动态事件监听器代理</TITLE>
+<!-- Java technology--><!--- common meta part for all zones -->
+<SCRIPT language=JavaScript src="style.js" 
+type=text/javascript></SCRIPT>
+<LINK href="/developerWorks/cn/css/ie1.css" type=text/css rel=stylesheet>
+<SCRIPT language=JavaScript src="spinbox.js" 
+type=text/javascript></SCRIPT>
+<SCRIPT language=JavaScript type=text/javascript>var forumURL = "http://www-106.ibm.com/developerworks/forums/dw_forum.jsp?forum=182&amp;cat=10"; </SCRIPT>
+<SCRIPT language=JavaScript src="forumwindow.js" 
+type=text/javascript></SCRIPT>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+</HEAD>
+
+<BODY bgColor=#ffffff leftMargin=2 topMargin=2 marginheight="2" 
+marginwidth="2">
+<!--StartFragment--><!-- MASTHEAD-->
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+    <TBODY>
+  
+  <TR>
+    <TD class=tbgc width=160><A 
+href="http://www-900.ibm.com/developerWorks/cn/cgi-bin/click.cgi?url=www.ibm.com/cn/&amp;origin=dwheader"><IMG 
+height=47 alt=IBM src="ibm-logo.gif" width=160 
+border=0></A></TD>
+    <TD class=tbg width=70><FONT color=#99ccff size=2><B>China</B></FONT><A 
+href="http://www-900.ibm.com/developerWorks/cn/java/j-mer10213/index.shtml#main"><IMG 
+height=1 alt="Skip to main content" 
+src="c.gif" width=70 
+border=0></A></TD>
+    <TD class=tbgc vAlign=top align=right width="100%"><TABLE cellSpacing=0 cellPadding=0 border=0>
+        <FORM id=form1 name=form1 action=http://www-106.ibm.com/search/searchResults.jsp 
+method=get>
+          <TBODY>
+            <TR>
+              <TD colSpan=7><IMG height=4 alt="" 
+src="c.gif" width=390 
+border=0></TD>
+            </TR>
+            <TR vAlign=center>
+              <TD class=dwsearch><NOBR><FONT color=#ffffff><B>搜索:</B></FONT></NOBR>&nbsp;&nbsp;</TD>
+              <TD><INPUT class=dwsearch maxLength=100 size=23 name=query></TD>
+              <TD class=dwsearch vAlign=center>&nbsp;<FONT color=#ffffff><B>在</B></FONT>&nbsp;</TD>
+              <TD class=dwsearch><SELECT class=dwsearch2 name=searchScope>
+                  &nbsp;&nbsp;
+                  <OPTION value=dW 
+selected>dW 全部内容</OPTION>
+                  <OPTION value=javaZ>&nbsp;Java 技术</OPTION>
+                  <OPTION 
+value=linuxZ>&nbsp;Linux</OPTION>
+                  <OPTION value=opensrcZ>&nbsp;开放源码</OPTION>
+                  <OPTION 
+value=securityZ>&nbsp;安全</OPTION>
+                  <OPTION value=webservZ>&nbsp;Web 服务</OPTION>
+                  <OPTION 
+value=xmlZ>&nbsp;XML</OPTION>
+                  <OPTION value=dW>.................</OPTION>
+                  <OPTION 
+value=dmdd>&nbsp;DB2</OPTION>
+                  <OPTION value=wsdd>&nbsp;WebSphere</OPTION>
+                  <OPTION 
+value=lotusdd>&nbsp;Lotus 专题</OPTION>
+                  <OPTION value=tivolidd>&nbsp;Tivoli 专题</OPTION>
+                  <OPTION value=dW>.................</OPTION>
+                  <OPTION value=all>IBM 
+                  全部内容</OPTION>
+              </SELECT></TD>
+              <TD><IMG height=1 alt="" 
+src="c.gif" width=5 
+border=0></TD>
+              <TD><INPUT type=image height=23 alt="Search button" width=64 
+src="search.gif" value=Search border=0 
+name=Search></TD>
+              <TD vAlign=top><IMG height=1 alt="" 
+src="c.gif" width=30 
+border=0></TD>
+            </TR>
+            <TR vAlign=top>
+              <TD>&nbsp;</TD>
+              <TD class=dwsearch>&nbsp;<FONT color=#ffffff>只用 + - "&nbsp;" (&nbsp;)</FONT>
+              <TD>&nbsp;</TD>
+              <TD>&nbsp;</TD>
+              <TD>&nbsp;</TD>
+              <TD>&nbsp;</TD>
+              <TD>&nbsp;</TD>
+            </TR>
+          <INPUT type=hidden value=1 name=searchType>
+          <INPUT type=hidden 
+value=dWChina name=searchSite>
+          <INPUT type=hidden value=zh name=pageLang>
+          <INPUT 
+type=hidden value=gb2312 name=langEncoding>
+        </FORM>
+          </TBODY>
+    </TABLE></TD>
+  </TR>
+    <A 
+id=main name=main>
+  
+  <TR>
+    <TD class=hbg width=160 height=21>&nbsp;</TD>
+    <TD class=bbg vAlign=top colSpan=2 height=21>&nbsp;&nbsp;&nbsp; <A class=mainlink 
+href="&amp;origin=dwhead">IBM 
+      主页</A> <SPAN class=divider>&nbsp;&nbsp;|&nbsp;&nbsp;</SPAN> <A class=mainlink 
+href="index.shtml&amp;origin=dwhead">产品与服务</A> <SPAN class=divider>&nbsp;&nbsp;|&nbsp;&nbsp;</SPAN> <A class=mainlink 
+href="index.shtml&amp;origin=dwhead">支持与下载</A> <SPAN class=divider>&nbsp;&nbsp;|&nbsp;&nbsp;</SPAN> <A class=mainlink 
+href="index.shtml&amp;origin=dwhead">个性化服务</A></TD>
+  </TR>
+    </TBODY>
+</TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+    <TR class=hil>
+      <TD width="100%" height=1><IMG height=1 alt="" 
+src="c.gif" 
+width=592></TD>
+    </TR>
+    <TR class=dwr1>
+      <TD width="100%" height=2><IMG height=2 alt="" 
+src="c.gif" 
+width=592></TD>
+    </TR>
+    <TR class=dwg3>
+      <TD width="100%" height=1><IMG height=1 alt="" 
+src="c.gif" 
+width=592></TD>
+    </TR>
+    <TR class=bbg>
+      <TD width="100%" height=1><IMG height=1 alt="" 
+src="c.gif" 
+width=592></TD>
+    </TR>
+    <TR class=hil>
+      <TD width="100%" height=1><IMG height=1 alt="" 
+src="c.gif" 
+width=592></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+    <TR vAlign=top>
+      <TD width=5><IMG height=1 alt="" 
+src="c.gif" width=5 
+border=0></TD>
+      <TD width="100%"><TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+          <TBODY>
+            <TR vAlign=top>
+              <TD width="100%"><IMG height=4 alt="" 
+src="c.gif" width=2 
+border=0><BR>
+                <B><A href="http://www.ibm.com/">IBM</A> : <A 
+href="http://www-900.ibm.com/developerWorks/cn/index.shtml">developerWorks 
+                中国网站</A> : <A 
+href="http://www-900.ibm.com/developerWorks/cn/java/index.shtml">Java</A> : <A 
+href="http://www-900.ibm.com/developerWorks/cn/cnpapers.nsf/java-papers-bynewest?OpenView&amp;count=10">所有的文章 </A></B></TD>
+              <TD align=right width=136><A 
+href="http://www-900.ibm.com/developerWorks/cn/index.shtml"><IMG height=24 
+alt="developerWorks 中国网站" src="dwlogo-small.gif" 
+width=136 border=0></A></TD>
+              <TD width=5><IMG height=1 alt="" 
+src="c.gif" width=5 
+border=0></TD>
+            </TR>
+          </TBODY>
+      </TABLE></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<!-- Title Area-->
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+    <TR vAlign=top>
+      <TD colSpan=5><IMG height=15 alt="" 
+src="c.gif" width=5 
+border=0></TD>
+    </TR>
+    <TR vAlign=top>
+      <TD width=2><IMG height=1 alt="" 
+src="c.gif" width=2 
+border=0></TD>
+      <TD><SPAN class=astitle>Merlin 的魔力：</SPAN> <SPAN class=title>动态事件监听器代理</SPAN></TD>
+      <TD width=8><IMG height=1 alt="" 
+src="c.gif" width=8 
+border=0></TD>
+      <TD vAlign=bottom align=right width=180><NOBR><A 
+href="http://www-900.ibm.com/developerWorks/cn/java/j-mer10213/index_eng.shtml" 
+target=_blank><B>英文原文</B></A></NOBR></TD>
+      <TD width=6><IMG height=1 alt="" 
+src="c.gif" width=6 
+border=0></TD>
+    </TR>
+    <!-- Black line separator-->
+    <TR vAlign=top>
+      <TD bgColor=#000000 colSpan=5><IMG height=1 alt="" 
+src="c.gif" width=100 
+border=0></TD>
+    </TR>
+    <TR vAlign=top>
+      <TD bgColor=#ffffff colSpan=5><IMG height=8 alt="" 
+src="c.gif" width=100 
+border=0></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<!-- END HEADER AREA--><!-- START BODY AREA-->
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+    <TR vAlign=top>
+      <TD width=10><IMG height=1 alt="" 
+src="c.gif" width=10 
+border=0></TD>
+      <TD width="100%"><TABLE cellSpacing=0 cellPadding=0 width=168 align=right border=0>
+          <TBODY>
+            <TR><!-- Sidebar Gutter-->
+              <TD width=8><IMG height=21 alt="" 
+src="c.gif" width=5></TD>
+              <TD width=160><!-- Start TOC-->
+                
+                <TABLE cellSpacing=0 cellPadding=0 width=160 border=0>
+                  <TBODY>
+                    <TR>
+                      <TD width=160 bgColor=#000000 height=1><IMG height=1 alt="" 
+src="c.gif" 
+width=160></TD>
+                    </TR>
+                    <TR>
+                      <TD align=middle background=用EventHandler进行事件监听.files/bg-gold.gif 
+height=5><B>内容:</B></TD>
+                    </TR>
+                    <TR>
+                      <TD width=160 bgColor=#666666 height=1><IMG height=1 alt="" 
+src="c.gif" 
+width=160></TD>
+                    </TR>
+                    <TR>
+                      <TD align=right><TABLE cellSpacing=0 cellPadding=3 width="98%" border=0>
+                          <TBODY>
+                            <TR>
+                              <TD><A 
+href="http://www-900.ibm.com/developerWorks/cn/java/j-mer10213/index.shtml#1.0">以前的方法</A></TD>
+                            </TR>
+                            <TR>
+                              <TD><A 
+href="http://www-900.ibm.com/developerWorks/cn/java/j-mer10213/index.shtml#2.0">用 
+                                EventHandler 注册监听器</A></TD>
+                            </TR>
+                            <TR>
+                              <TD><A 
+href="http://www-900.ibm.com/developerWorks/cn/java/j-mer10213/index.shtml#3.0">结束语</A></TD>
+                            </TR>
+                            <TR>
+                              <TD><A 
+href="http://www-900.ibm.com/developerWorks/cn/java/j-mer10213/index.shtml#resources">参考资料</A></TD>
+                            </TR>
+                            <TR>
+                              <TD><A 
+href="http://www-900.ibm.com/developerWorks/cn/java/j-mer10213/index.shtml#author1">关于作者</A></TD>
+                            </TR>
+                            <TR>
+                              <TD><A 
+href="http://www-900.ibm.com/developerWorks/cn/java/j-mer10213/index.shtml#rating">对本文的评价</A></TD>
+                            </TR>
+                          </TBODY>
+                      </TABLE></TD>
+                    </TR>
+                  </TBODY>
+                </TABLE>
+                <!-- End TOC--><!-- Start Related Content Area-->
+                
+                <TABLE cellSpacing=0 cellPadding=0 width=160 border=0>
+                  <TBODY>
+                    <TR>
+                      <TD width=160 bgColor=#000000 height=1><IMG height=1 alt="" 
+src="c.gif" 
+width=160></TD>
+                    </TR>
+                    <TR>
+                      <TD align=middle background=用EventHandler进行事件监听.files/bg-gold.gif 
+height=5><B>相关内容：</B></TD>
+                    </TR>
+                    <TR>
+                      <TD width=160 bgColor=#666666 height=1><IMG height=1 alt="" 
+src="c.gif" 
+width=160></TD>
+                    </TR>
+                    <TR>
+                      <TD align=right><TABLE cellSpacing=0 cellPadding=3 width="98%" border=0>
+                          <TBODY>
+                            <TR>
+                              <TD><A 
+href="http://www-900.ibm.com/developerWorks/cn/java/j-merlin/index3.shtml">长期持久性</A></TD>
+                            </TR>
+                            <TR>
+                              <TD><A 
+href="http://www-106.ibm.com/developerworks/java/library/j-introspect/">Reflecting, 
+                                introspecting, and customizing JavaBeans</A></TD>
+                            </TR>
+                            <TR>
+                              <TD><A href="http://www-106.ibm.com/developerworks/java/jdk/index.html">IBM 
+                                developer kits for Java (downloads)</A></TD>
+                            </TR>
+                            <TR>
+                              <TD><A href="http://www-900.ibm.com/developerWorks/cn/toolbox/">developerWorks 
+                                Toolbox 订阅</A></TD>
+                            </TR>
+                          </TBODY>
+                      </TABLE></TD>
+                    </TR>
+                  </TBODY>
+                </TABLE>
+                <!-- End TOC--><!-- Start Related Content Area-->
+                
+                <TABLE cellSpacing=0 cellPadding=0 width=160 border=0>
+                  <TBODY>
+                    <TR>
+                      <TD width=160 bgColor=#000000 height=1><IMG height=1 alt="" 
+src="c.gif" 
+width=160></TD>
+                    </TR>
+                    <TR>
+                      <TD align=middle background=用EventHandler进行事件监听.files/bg-gold.gif height=5><A 
+class=nav 
+href="http://www-900.ibm.com/developerWorks/cn/java/index.shtml"><B>Java 
+                        专区中还有:</B></A></TD>
+                    </TR>
+                    <TR>
+                      <TD width=160 bgColor=#666666 height=1><IMG height=1 alt="" 
+src="c.gif" 
+width=160></TD>
+                    </TR>
+                    <TR>
+                      <TD align=right><TABLE cellSpacing=0 cellPadding=3 width="98%" border=0>
+                          <TBODY>
+                            <TR>
+                              <TD><A 
+href="http://www-900.ibm.com/developerWorks/cn/cnedu.nsf/java-onlinecourse-bytitle?OpenView&amp;Count=500">教学</A></TD>
+                            </TR>
+                            <TR>
+                              <TD><A 
+href="http://www-900.ibm.com/developerWorks/cn/cntools.nsf/dw/java-all-byname?OpenDocument&amp;count=500">工具与产品</A></TD>
+                            </TR>
+                            <TR>
+                              <TD><A 
+href="http://www-900.ibm.com/developerWorks/cn/cntools.nsf/dw/java-beans-bytitle?OpenDocument&amp;count=500">代码与组件</A></TD>
+                            </TR>
+                            <TR>
+                              <TD><A 
+href="http://www-900.ibm.com/developerWorks/cn/cnpapers.nsf/java-papers-bynewest?OpenView&amp;Count=500">所有文章</A></TD>
+                            </TR>
+                            <TR>
+                              <TD><A 
+href="http://www-900.ibm.com/developerWorks/cn/cntips.nsf/java-tips-bydate?OpenView&amp;Count=500">实用技巧</A></TD>
+                            </TR>
+                          </TBODY>
+                      </TABLE></TD>
+                    </TR>
+                  </TBODY>
+                </TABLE>
+                <!-- End Related dW Content Area-->
+                
+                <TABLE cellSpacing=0 cellPadding=0 width=160 border=0>
+                  <TBODY>
+                    <TR>
+                      <TD width=150 bgColor=#000000 colSpan=2 height=2><IMG height=2 alt="" 
+src="c.gif" 
+width=160></TD>
+                    </TR>
+                    <TR>
+                      <TD width=150 bgColor=#ffffff colSpan=2 height=2><IMG height=2 alt="" 
+src="c.gif" 
+width=160></TD>
+                    </TR>
+                  </TBODY>
+                </TABLE>
+              <!-- END STANDARD SIDEBAR AREA--></TD>
+            </TR>
+          </TBODY>
+        </TABLE>
+        <SPAN 
+class=atitle2>用 EventHandler 进行事件监听</SPAN><BR>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+            <TR vAlign=top align=left>
+              <TD><P>级别：入门</P></TD>
+            </TR>
+          </TBODY>
+        </TABLE>
+        <P><A 
+href="http://www-900.ibm.com/developerWorks/cn/java/j-mer10213/index.shtml#author1">John 
+          Zukowski</A> (<A href="mailto:jaz@zukowski.net">jaz@zukowski.net</A>)<BR>
+          总裁，JZ 
+          Ventures, Inc.<BR>
+          2003 年 11 月</P>
+        <BLOCKQUOTE><IMG height=38 alt="Column icon" 
+src="c-j-merlin.jpg" width=38 align=left 
+border=0>许多开发人员为事件处理创建匿名内部类。对于简单的事件处理，内部类可能成为真正的争论话题.幸运的是，Java 1.4 引入了<CODE> EventHandler</CODE> 类，它依赖于监听器的动态生成以方便地处理手头的任务。尽管这个新功能通常是让 IDE 厂商使用的，但是在本文中，专栏作者 
+          John Zukowski 还是为您展示了如何用它进行手工编码。请参与本文的<A 
+href="javascript:void%20forumWindow()">讨论论坛</A>，与本文作者和其他读者分享您对本文的看法(也可以单击文章顶部或底部的<STRONG>讨论</STRONG>访问这个论坛)。</BLOCKQUOTE>
+        <P>所有 Swing 组件都是 JavaBeans 组件。它们有一系列的 setter 和 getter 方法，这些方法的类似于<CODE> void 
+          setXXX(类型名)</CODE> 和<CODE> Type getXXX()</CODE>。关于这些方法没有什么特别之处，并且正如所预期的，它们遵循 
+          JavaBeans 的属性命名规范。我们今天要讨论的是JavaBeans 组件的一个方面，即一对监听器方法<CODE> addXXXListener 
+          (XXXListener name)</CODE> 和<CODE> removeXXXListener (XXXListener 
+          name)</CODE>。<CODE>XXListener</CODE> 在这里指的是一个监听器对象，它扩展了<CODE> EventListener</CODE> 接口，等候与监听器关联的组件中的各种事件发生。当事件发生时，所有注册的监听器都会得到事件的通知(没有特定的顺序)。通过魔术般的一个小反射(reflection)和一个新的 <CODE>java.beans.EventHandler</CODE> 类，您可以将一个监听器附加到一个 bean 
+          上，而无需直接实现这个监听器接口或者创建那些烦人的小匿名内部类。</P>
+        <P><A name=1.0><SPAN class=atitle2>以前的方法</SPAN></A><BR>
+          在深入到使用新的<CODE> EventHandler</CODE> 类的细节之前，让我们回顾一下不使用这个类时是如何进行工作的。我们举一个对 Swing 
+          框架中的按钮选择做出响应的简单例子。选择一个按钮生成一个<CODE> ActionEvent</CODE>。要对这个事件做出响应，需要将 <CODE>ActionListener</CODE> 附加到这个按钮上，如清单 1 所示：</P>
+        <A name=IDAJOZCC><B>清单 1. 
+        监听标准按钮选择</B></A><BR>
+        <TABLE cellSpacing=0 cellPadding=5 width=600 bgColor=#cccccc border=1>
+          <TBODY>
+            <TR>
+              <TD><PRE><CODE>
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class ButtonSelection extends JFrame {
+  public ButtonSelection() {
+    super("Selection");
+    setDefaultCloseOperation(EXIT_ON_CLOSE);
+    JButton button = new JButton("Pick Me");
+    Container contentPane = getContentPane();
+    contentPane.add(button, BorderLayout.CENTER);
+    button.addActionListener(
+      new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+          System.out.println("Hello, World!");
+        }
+      }
+    );
+  }
+  public static void main(String args[]) {
+    JFrame frame = new ButtonSelection();
+    frame.setSize(200, 100);
+    frame.show();
+  }
+}</CODE></PRE></TD>
+            </TR>
+          </TBODY>
+        </TABLE>
+        <P>这里没有任何神奇之处，您可能已经熟悉这种代码了。这里，<CODE>ActionListener</CODE> 实现是适时定义的，它定义为一个匿名内部类，并直接附加到按钮上。在选择这个按钮时，字符串<CODE> Hello, World!</CODE> 就打印到控制台中。与程序关联的屏幕如图 1 所示：</P>
+        <P><A name=fig1><B>图 1. 带 ActionListener 的按钮选择</B></A><BR>
+        <IMG height=100 
+alt="带 ActionListener 的按钮选择" src="oldway.jpg" 
+width=200></P>
+        <P>在 JavaBeans 规范中，没有要求您创建匿名内部类进行事件监听。 IDE 工具常常采用这种行为：您说要一个监听器，它就生成一个 
+          stub，然后您填入细节。完成同样工作的其他方式包括在调用类中提供指定的实现或者实现您自己的接口。</P>
+        <P>定义了每一个实现类后，就会创建一个单独的.class 文件。所以，在前面的 <CODE>ButtonSelection</CODE> 程序中，您会看到编译器生成两个 .class 文件：ButtonSelection.class 和 
+          ButtonSelection$1.class。<I>$1</I> 是 Sun 
+          编译器命名匿名内部类的方式，计数随着每一个类增加。其他编译器可能有不同的命名方式。</P>
+        <P><A name=2.0><SPAN class=atitle2>用 EventHandler 
+          注册监听器</SPAN></A><BR>
+          <CODE>EventHandler</CODE> 类提供了另一种将监听器注册到 JavaBeans 
+          组件上的方法。它不是创建一个实现了接口的类、并将这个实现注册到需要监听的事件所在的组件上，而是创建一个<CODE> EventHandler</CODE> 实例并注册它。虽然这个类有一个公共构造函数，但一般不使用它而是使用三个静态<CODE> create()</CODE> 方法，如清单 2 所示：</P>
+        <A 
+name=IDAOIZCC><B>清单 2. EventHandler 的 create() 方法</B></A><BR>
+        <TABLE cellSpacing=0 cellPadding=5 width=600 bgColor=#cccccc border=1>
+          <TBODY>
+            <TR>
+              <TD><PRE><CODE>
+public static Object create(Class listenerInterface,
+                            Object target,
+                            String action)
+public static Object create(Class listenerInterface,
+                            Object target,
+                            String action,
+                            String eventPropertyName)
+public static Object create(Class listenerInterface,
+                            Object target,
+                            String action,
+                            String eventPropertyName,
+                            String listenerMethodName)
+</CODE></PRE></TD>
+            </TR>
+          </TBODY>
+        </TABLE>
+        <P>让我们更详细地看一下这三种方法。</P>
+        <P><A name=2.1><SPAN class=atitle3>使用 create(Class, Object, 
+          String)</SPAN></A><BR>
+          因为第一种方法的参数最少，所以它最简单。第一个参数是<CODE> EventListener</CODE> 类型，您要实现的就是它的接口，例如，要响应按钮选择，这个参数应该是 <CODE>ActionListener.class</CODE>，以表示这个接口的<CODE> Class</CODE> 对象。虽然 <CODE>ActionListener</CODE> 只有接口中的一个方法，但是以这种方式创建接口的一个实现意味着这个接口实现的所有方法都将执行同样的代码。</P>
+        <P>第二和第三个参数是相互关联的。它们结合在一起说明调用 <CODE>Object</CODE> 目标的 <CODE>String</CODE> 操作方法。然后使用反射，您有一个 <CODE>ActionListener</CODE> 实现，但是没有在文件系统中增加一个 .class 文件。清单 3 
+          重复了前面 <A 
+href="http://www-900.ibm.com/developerWorks/cn/java/j-mer10213/index.shtml#fig1">图 
+          1</A> 中的按钮选择例子，使用了一个<CODE> EventHandler</CODE>。注意<CODE> println()</CODE> 调用需要转移到一个方法中，这样就可以从处理程序中调用它。</P>
+        <A name=IDAHAZCC><B>清单 3. 展示 create(Class, 
+        Object, String)</B></A><BR>
+        <TABLE cellSpacing=0 cellPadding=5 width=600 bgColor=#cccccc border=1>
+          <TBODY>
+            <TR>
+              <TD><PRE><CODE>
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.beans.*;
+
+public class ButtonEventHandler extends JFrame {
+  public ButtonEventHandler() {
+    super("Selection");
+    setDefaultCloseOperation(EXIT_ON_CLOSE);
+    JButton button = new JButton("Pick Me");
+    Container contentPane = getContentPane();
+    contentPane.add(button, BorderLayout.CENTER);
+    button.addActionListener(
+      (ActionListener)EventHandler.create(
+        ActionListener.class,
+	this,
+	"print")
+    );
+  }
+  public void print() {
+    System.out.println("Hello, World!");
+  }
+  public static void main(String args[]) {
+    JFrame frame = new ButtonEventHandler();
+    frame.setSize(200, 100);
+    frame.show();
+  }
+}
+</CODE></PRE></TD>
+            </TR>
+          </TBODY>
+        </TABLE>
+        <P><CODE>create()</CODE> 中调用 <CODE>EventHandler</CODE> 的代码只是表示“在需要通知按钮所附的 <CODE>ActionListener</CODE> 时，调用我们的 <CODE>print()</CODE> 方法(<CODE>this</CODE>)”。不过有一些副作用。第一个是调用需要强制类型转换，以返回正确的监听器类型，从而满足编译器要求。另一个副作用是由于对 <CODE>print()</CODE> 的调用是通过反射间接进行的，所以这个方法必须是公共的(并且不接受参数)。使用 <CODE>EventHandler</CODE> 的另一个特点是对于其他版本的 <CODE>create()</CODE> 来说，很少出现问题。</P>
+        <P><A name=2.2><SPAN class=atitle3>使用 create(Class, Object, String, 
+          String)</SPAN></A><BR>
+          下一版本的<CODE> create()</CODE> 添加了第四个参数，并增加了第三个参数的用途。第一个 <CODE>String</CODE> 参数现在也可以表示 <CODE>Object</CODE> 参数的可写 JavaBeans 属性的名字。所以，对于 <CODE>JButton</CODE>，如果第三个参数是<CODE> text</CODE>，那么这相当于一个<CODE> setText()</CODE> 调用，该方法所需要的参数是由传递给第四个参数的<CODE> String</CODE> 来表示的。</P>
+        <P>第四个参数使您可以访问事件的可读属性，用第三个参数传递的值设置可写属性。为了示范这一点，清单 4 提供了一个用于输入的 <CODE>JTextField</CODE> 组件和一个用于文本显示的<CODE> JLabel</CODE> 组件。在<CODE> JTextField</CODE> 中的按 Return 键时，生成一个<CODE> ActionEvent</CODE>，并且标签的文字变为 <CODE>JTextField</CODE> 中的内容。</P>
+        <A name=IDAMDZCC><B>清单 4. 展示 create(Class, 
+        Object, String, String)</B></A><BR>
+        <TABLE cellSpacing=0 cellPadding=5 width=600 bgColor=#cccccc border=1>
+          <TBODY>
+            <TR>
+              <TD><PRE><CODE>
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.beans.*;
+
+public class TextFieldHandler extends JFrame {
+  public TextFieldHandler() {
+    super("Selection");
+    setDefaultCloseOperation(EXIT_ON_CLOSE);
+    JTextField text = new JTextField();
+    JLabel label = new JLabel();
+    Container contentPane = getContentPane();
+    contentPane.add(text, BorderLayout.NORTH);
+    contentPane.add(label, BorderLayout.CENTER);
+    text.addActionListener(
+      (ActionListener)EventHandler.create(
+        ActionListener.class,
+	label,
+	"text",
+	"source.text")
+    );
+  }
+  public static void main(String args[]) {
+    JFrame frame = new TextFieldHandler();
+    frame.setSize(200, 150);
+    frame.show();
+  }
+}
+</CODE></PRE></TD>
+            </TR>
+          </TBODY>
+        </TABLE>
+        <P>图 2 显示了这个程序的外观。在文本字段中输入文字并按 Return 键。这会使<CODE> ActionListener</CODE> 产生<CODE> EventHandler.create(ActionListener.class, label, "text", "source.text")</CODE> 调用，其中<CODE> source.text</CODE> 表明要得到事件源的 <CODE>text</CODE> 属性，直接映射到 <CODE>label.setText((JTextField(event.getSource())).getText())</CODE> 代码。</P>
+        <P><A name=IDANEZCC><B>图 2. 处理文本字段输入</B></A><BR>
+        <IMG height=150 alt=处理文本字段输入 
+src="newway.jpg" width=200></P>
+        <P><A name=2.3><SPAN class=atitle3>使用 create(Class, Object, String, String, 
+          String)</SPAN></A><BR>
+          最后一种版本的<CODE> create()</CODE> 是将另外两种方法结合在一起使用，对于在其他调用中没有的参数，则传递<CODE> null</CODE>。其他版本的<CODE> create()</CODE> 要求您对所有监听器接口方法做同样的事情，这最后一种方法让您可以指定对每一种监听器方法调用不同的操作。所以，对于一个<CODE> MouseListener</CODE>，您可以为 <CODE>mousePressed()</CODE> 调用一种操作，为<CODE> mouseReleased()</CODE> 调用另一种操作、还可以为 <CODE>mouseClicked()</CODE> 调用其他的操作。清单 5 
+          展示了最后一种版本的<CODE> create()</CODE>，它只有用于鼠标按下/释放事件的两种简单的打印方法：</P>
+        <A 
+name=IDABGZCC><B>清单 5. 展示 create(Class, Object, String, String, 
+        String)</B></A><BR>
+        <TABLE cellSpacing=0 cellPadding=5 width=600 bgColor=#cccccc border=1>
+          <TBODY>
+            <TR>
+              <TD><PRE><CODE>
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.beans.*;
+
+public class MouseHandler extends JFrame {
+  public MouseHandler() {
+    super("Press and Release Mouse");
+    setDefaultCloseOperation(EXIT_ON_CLOSE);
+    Container contentPane = getContentPane();
+    contentPane.addMouseListener(
+      (MouseListener)EventHandler.create(
+        MouseListener.class,
+        this,
+        "pressed",
+        "point",
+        "mousePressed")
+    );
+    contentPane.addMouseListener(
+      (MouseListener)EventHandler.create(
+        MouseListener.class,
+        this,
+        "released",
+        "point",
+        "mouseReleased")
+    );
+  }
+  public void pressed(Point p) {
+    System.out.println("Pressed at: " + p);
+  }
+  public void released(Point p) {
+    System.out.println("Released at: " + p);
+  }
+  public static void main(String args[]) {
+    JFrame frame = new MouseHandler();
+    frame.setSize(400, 400);
+    frame.show();
+  }
+}
+</CODE></PRE></TD>
+            </TR>
+          </TBODY>
+        </TABLE>
+        <P>这个程序没有什么不寻常的地方，只有一个大的空屏幕，可以在其中按下和释放鼠标。不过要注意屏幕附加了两个鼠标监听器，而不是一个。对每个监听器，其他的方法实质上都是沉寂的(stubbed 
+          out)。还要注意<CODE> pressed()</CODE> 和<CODE> released()</CODE> 方法有一个参数是事件的 <CODE>Point</CODE>。对于不接受参数的方法，在指定 <CODE>point</CODE> 的地方需要一个 <CODE>null</CODE>。</P>
+        <P><A name=3.0></A>结束语<BR>
+          这就是有关使用<CODE> EventHandler</CODE> 全部内容。是否要使用它呢？我个人认为这是一种风格问题。在内部它用到了反射，所以可能会稍微慢一些。它还要求调用方法为公共的。如果 IDE 
+          替我生成了代码，那么我可能就让它保持原样，而不会将编码监听器重新编码为匿名内部类。</P>
+        <P><A name=resources></A>参考资料
+        
+        <UL>
+          <LI>参加本文的<A 
+href="javascript:void%20forumWindow()">讨论论坛</A>(也可以单击本文顶部或者底部的<B>讨论</B>以访问这个论坛)。<BR>
+            <BR>
+          <LI>请阅读 John Zukowski 的 <A 
+href="http://www-900.ibm.com/developerWorks/cn/java/j-merlin/"><I>Merlin 
+            的魔力</I>技巧的全部集合</A>。与本月关系最密切的部分是“<A 
+href="http://www-900.ibm.com/developerWorks/cn/java/j-merlin/index3.shtml">长期持久性</A>” 
+            (<I>developerWorks</I>，2001 年 7 月)<BR>
+            <BR>
+          <LI>Java 开发人员和<I> developerWorks</I> 管理人员 Laura Bennett 在“<A 
+href="http://www-106.ibm.com/developerworks/java/library/j-introspect/">Reflecting, 
+            introspecting, and customizing JavaBeans</A>” 
+            中提供了自己的观点(<I>developerWorks</I>，2000 年 2 月)。<BR>
+            <BR>
+          <LI>请阅读<A 
+href="http://java.sun.com/j2se/1.4/docs/api/java/beans/EventHandler.html"><CODE> EventHandler</CODE> class javadoc</A>.<BR>
+            <BR>
+          <LI>从 <A 
+href="http://www-106.ibm.com/developerworks/java/library/j-what-are-ejbs/part1/">What 
+            are Enterprise JavaBeans components?</A>(<I>developerWorks</I>，2000 年 6 月)中学习为什么 
+            Enterprise JavaBeans 组件不是 JavaBean 组件。<BR>
+            <BR>
+          <LI>Mark Davidson 在“<A 
+href="http://java.sun.com/products/jfc/tsc/articles/generic-listener2/index.html">Using 
+            Dynamic Proxies to Generate Event Listeners Dynamically</A>”中进行了讨论。<BR>
+            <BR>
+          <LI>在 <A 
+href="http://www-900.ibm.com/developerWorks/cn/java/"><I>developerWorks</I> Java 
+            技术专区</A>上可以找到数百篇关于 Java 各个方面的文章。<BR>
+            .<BR>
+            <BR>
+          </LI>
+        </UL>
+        <P></P>
+        <!-- AUTHOR BIOS--><!-- Make author heading singular or plural as needed-->
+        
+        <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+          <TBODY>
+            <TR>
+              <TD><P><A name=author1><SPAN class=atitle2>关于作者</SPAN></A> <BR>
+                  <IMG height=80 
+src="p-zukowski.jpg" width=64 align=left border=0>John 
+                  Zukowski 为 <A href="http://www.jzventures.com/">JZ Ventures, Inc.</A> 做战略性 Java 
+                  咨询。通过 <A href="http://www.answersquad.com/">AnswerSquad.com</A> 提供技术支持，为 <A 
+href="http://www.savaje.com/">SavaJe Technologies</A> 工作开发下一代移动电话平台。他最近的著作有 <A 
+href="http://www.amazon.com/exec/obidos/ASIN/078214022X/ref=nosim/johnzukowshomefo/"><I>Mastering 
+                  Java 2, J2SE 1.4</I></A> (Sybex，2002 年 4 月)和<I> </I><A 
+href="http://www.amazon.com/exec/obidos/ASIN/1893115984/ref=nosim/johnzukowshomefo/"><I>Learn 
+                  Java with JBuilder 6</I></A> (Apress，2002 年 3 月)。可以通过 <A 
+href="mailto:jaz@zukowski.net%3FSubject=Magic%20with%20Merlin">mailto:jaz@zukowski.net?Subject=Magic 
+                  with Merlin</A> 与他联系。</P>
+                <P>&nbsp;</P></TD>
+            </TR>
+          </TBODY>
+      </TABLE></TD>
+      <TD width=10><IMG height=1 alt="" 
+src="c.gif" width=10 
+border=0></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<!-- END PAPER BODY--><BR clear=all>
+<IMG 
+height=10 alt="" src="c.gif" 
+width=100 border=0><BR>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+    <TR>
+      <TD align=right width="100%"><A 
+href="http://www-900.ibm.com/developerWorks/cn/java/j-mer10213/index.shtml#top">到页首</A></TD>
+      <TD width=5><IMG height=1 alt="" 
+src="c.gif" width=5 
+border=0></TD>
+    </TR>
+    <TR vAlign=top>
+      <TD bgColor=#000000 colSpan=2><IMG height=1 alt="" 
+src="c.gif" width=100 
+border=0></TD>
+    </TR>
+    <TR vAlign=top>
+      <TD bgColor=#ffffff colSpan=2><IMG height=8 alt="" 
+src="c.gif" width=100 
+border=0></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<TABLE cellSpacing=0 cellPadding=10 width="100%" border=0>
+  <TBODY>
+    <TR vAlign=top>
+      <TD><FORM name=getURL 
+action=/developerWorks/cn/cnratings.nsf/RateArticle?CreateDocument 
+method=post>
+          <INPUT type=hidden value="Merlin 的魔力：动态事件监听器代理" name=ArticleTitle>
+          <INPUT type=hidden value=file:///J:/技巧_CHM/java/用EventHandler进行事件监听.htm 
+name=url>
+          <SCRIPT language=javascript>getURL();</SCRIPT>
+          <INPUT type=hidden value=Java name=Zone>
+          <INPUT type=hidden 
+value=/developerWorks/cn/thankyou/feedback-java.html name=RedirectURL>
+          <A 
+name=rating><B>您对这篇文章的看法如何？</B></A>
+          <TABLE cellSpacing=0 cellPadding=0 width=600 border=0>
+            <TBODY>
+              <TR>
+                <TD colSpan=5><IMG height=8 alt="" 
+src="c.gif" width=100 
+border=0></TD>
+              </TR>
+              <TR vAlign=top>
+                <TD width="16%"><INPUT type=radio value=5 name=Rating>
+                  真棒！(5)</TD>
+                <TD width="20%"><INPUT type=radio value=4 name=Rating>
+                  好材料 (4)</TD>
+                <TD width="24%"><INPUT type=radio value=3 name=Rating>
+                  一般；尚可 (3)</TD>
+                <TD width="22%"><INPUT type=radio value=2 name=Rating>
+                  需提高 (2)</TD>
+                <TD width="18%"><INPUT type=radio value=1 name=Rating>
+                  太差！ 
+                  (1)</TD>
+              </TR>
+            </TBODY>
+          </TABLE>
+          <BR>
+          <B>建议？</B><BR>
+          <TEXTAREA name=Comments rows=5 wrap=virtual cols=60></TEXTAREA>
+          <BR>
+          <BR>
+          <INPUT type=submit value=提交反馈意见>
+      </FORM></TD>
+    </TR>
+    <TR vAlign=top>
+      <TD bgColor=#ffffff><IMG height=8 alt="" 
+src="c.gif" width=100 
+border=0></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+    <TR>
+      <TD align=right>(c) Copyright IBM Corp. 2001, (c) Copyright IBM China 2001, All 
+        Right Reserved</TD>
+    </TR>
+    <TR vAlign=top>
+      <TD class=bbg height=21>&nbsp;&nbsp;<A class=mainlink 
+href="index.shtml&amp;origin=dwhead">关于 
+        IBM</A><SPAN class=divider>&nbsp;&nbsp;|&nbsp;&nbsp;</SPAN><A class=mainlink 
+href="index.shtml&amp;origin=dwhead">隐私条约</A><SPAN 
+class=divider>&nbsp;&nbsp;|&nbsp;&nbsp;</SPAN><A class=mainlink 
+href="index.shtml&amp;origin=dwhead">法律条款</A><SPAN 
+class=divider>&nbsp;&nbsp;|&nbsp;&nbsp;</SPAN><A class=mainlink 
+href="index.shtml&amp;origin=dwhead">联系 
+        IBM</A></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<SCRIPT language=JavaScript1.2 src="stats.js" 
+type=text/javascript></SCRIPT>
+<NOSCRIPT>
+<IMG height=1 alt="" 
+src="c(1).gif" width=1 border=0>
+</NOSCRIPT>
+</A><!--EndFragment-->
+</BODY>
+</HTML>

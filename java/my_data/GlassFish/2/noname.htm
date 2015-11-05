@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML><head>
+<meta http-equiv="Content-Type" content="text/html;charset=gb2312"><title>Windows 下将 Glassfish 注册为系统服务</title><LINK 
+id=css href="space.css" type=text/css rel=stylesheet><LINK 
+href="blog.css" type=text/css rel=stylesheet><LINK 
+href="style.css" type=text/css rel=stylesheet>
+<STYLE>
+		.modbox {margin:5px 5px;}
+		.col {vertical-align:top;height:100px;}
+		#category{
+				line-height:240%;
+		}
+		#category li{
+				border-bottom:1px solid #eee;
+				text-align:center;
+		}
+		#list h3{
+				font-weight:bold;
+		}
+		.AddModule{
+				line-height:30px;
+		}
+		.AddModule span{
+						padding:2px;
+						border:1px solid #333;
+		}
+		.PageList strong{
+						color:#333;
+		}
+		</STYLE>
+</HEAD>
+
+<BODY scroll=yes>
+
+<DIV id=doc>
+
+<DIV id=modules>
+
+<TABLE id=t_1 cellSpacing=0 cellPadding=0 width="100%" align=center>
+
+<TBODY>
+
+<TR>
+
+<TD class=viewcol id=col_2 style="WIDTH: 100%" vAlign=top>
+
+<DIV id=bodyrightcontent>
+
+<DIV class=modbox>
+
+<DIV id=viewuserpost>
+
+<DIV class=dnt-userpost>
+
+<DIV class=modboxin><!--StartFragment-->
+<DIV class=SpaceArticle>
+<DIV class=SpaceArticleTitle><DIV class=SpaceTitle>[晶天原创] Windows 下将 Glassfish 注册为系统服务<BR><SPAN><A 
+href="http://nt.discuz.net/favorites.aspx?postid=630&amp;spaceid=78">收藏</A> | 
+分类: | 查看: <STRONG>347</STRONG> | <A 
+href="http://nt.discuz.net/space/viewspacepost.aspx?postid=630#comments">评论(<STRONG>0</STRONG>)</A> 
+</SPAN></DIV></DIV></DIV>
+<DIV class=SpaceArticleContent>
+<P>原贴地址：<A 
+href="http://purebit.net/showtopic-265.aspx">http://purebit.net/showtopic-265.aspx</A><BR><BR>配置好Glassfish后，只有在“命令提示符下”运行类似下面的命令：<BR><BR>
+<DIV class=msgheader>
+<DIV class=right><A class=smalltxt 
+href="http://purebit.net/showtopic-266.aspx###" 
+nclick="copycode($('code6829906_-1'));">[复制到剪贴板]</A></DIV>CODE:</DIV>
+<DIV class=msgborder id=code6829906_-1>D:\glassfish_v2\glassfish\bin\asadmin 
+start-domain domain1</DIV><BR><BR>当Windows 
+因故重启时，只能登录系统才能够启动Glassfish服务，而且注销用户时，Glassfish服务也连带着注销了，显然对于需要24小时在线的站点来说，就非常不方便，有没有办法将Glassfish注册成为一个系统服务呢？使之开机之后即自动运行，就是说不用登录系统就自动运行，注销用户后仍然运行？<BR><BR>由于对Glassfish接触不多，不知道有什么高级方法能做到这一点，这里仅提供我自己实现的一种笨方法，可能在各位大虾看来比较幼稚，仅供参考吧。<BR><BR>下面是我的实现过程：<BR><BR>用到的软件：请下载本论坛<A 
+href="http://purebit.net/showtopic-264.aspx" 
+target=_blank>http://purebit.net/showtopic-264.aspx</A><BR>中的附件。即Run As 
+Server，地址：<BR><BR>一、将刚才运行的命令写在一个批处理文件中<BR><BR>
+<DIV class=msgheader>
+<DIV class=right><A class=smalltxt 
+href="http://purebit.net/showtopic-266.aspx###" 
+nclick="copycode($('code6829906_0'));">[复制到剪贴板]</A></DIV>CODE:</DIV>
+<DIV class=msgborder id=code6829906_0>如写在 GlassFish_Srv.bat 
+文件中，内容为：<BR>D:\glassfish_v2\glassfish\bin\asadmin start-domain 
+domain1</DIV><BR><BR>记下批处理文件所在位置，如存储在“C:\”下。<BR><BR>二、解压缩刚才下载的文件，在命令提示行下切换到该目录，运行下面命令：<BR><BR>
+<DIV class=msgheader>
+<DIV class=right><A class=smalltxt 
+href="http://purebit.net/showtopic-266.aspx###" 
+nclick="copycode($('code6829906_1'));">[复制到剪贴板]</A></DIV>CODE:</DIV>
+<DIV class=msgborder id=code6829906_1>runassrv add 
+/cmdline:"c:\GlassFish_Srv.bat 
+/name:"GlassFish_Srv"</DIV><BR><BR>此时已经将Glassfish的启动操作注册为系统服务了，当系统启动后Glassfish就自动启动了，也不用再登录Windows了。<BR><BR>注意：这个服务可以在“服务”里面找到，当运行完成后，这个服务将自动关闭，此为正常。<BR><BR>笨人有笨法，不过这个方法我认为还是比较简单的，需要的朋友可以试一下。另外有关Run 
+As Server的用处可多了，大家可以参考以下这个帖子：<BR><A href="http://purebit.net/showtopic-264.aspx" 
+target=_blank>http://purebit.net/showtopic-264.aspx</A><BR><BR></DIV><!--EndFragment--></DIV>
+</DIV>
+</DIV>
+</DIV>
+</DIV>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+</DIV>
+</BODY>
+</script>

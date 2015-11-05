@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML><HEAD><TITLE>安装玻璃鱼(Glassfish)</TITLE>
+<STYLE type=text/css>@import url( /templates/default/styles/style.css?1204768852000 );</STYLE>
+
+<STYLE type=text/css>@import url( /templates/default/styles/zh_CN.css?1204768852000 );</STYLE>
+<LINK href="favicon.ico" rel="shortcut icon"></HEAD>
+
+<BODY class=zh_CN scroll=yes>
+
+<TABLE width="100%" border=0>
+
+<TBODY>
+
+<TR>
+
+<TD>
+
+<TABLE cellSpacing=0 cellPadding=10 width="100%" align=center border=0>
+
+<TBODY>
+
+<TR>
+
+<TD class=bodyline>
+
+<TABLE class=forumline cellSpacing=1 cellPadding=3 width="100%" border=0>
+
+<TBODY>
+
+<TR>
+
+<TD class=row1 id=post_text_595 vAlign=top><!--StartFragment--><SPAN class=postbody>安装<SPAN 
+style="FONT-SIZE: 18px; LINE-HEIGHT: normal"><B>玻璃鱼(Glassfish)</B></SPAN>需要JDK5以上版本的JDK。配置Glassfish需要ant1.6.5。ant已经被打包到Glassfish安装包里以适合开发JAVA 
+EE 5应用服务器。 <BR><FONT color=red><SPAN 
+style="FONT-SIZE: 18px; LINE-HEIGHT: normal"><B>安装玻璃鱼Glassfish</B></SPAN></FONT> 
+<BR>1. 下载<A class=snap_shots href="https://glassfish.dev.java.net/" target=_new 
+rel=nofollow>Glassfish安装包</A>, 并为<B>JDK 5</B>设置<B>JAVA_HOME</B>环境变量. <BR>2. 
+安装包是一个<B>jar</B>文件，你需要执行如下命令才能解压： <BR><B>% java -Xmx256m -jar filename.jar</B> 
+<BR>3.解压完毕生成了一个glassfish的目录，进入这个目录。 <BR><B>% cd glassfish</B> <BR>4. 
+如果你使用一个UNIX(Linux)系统，你必须授予ant二进制文件执行权限。 <BR><B>% chmod -R +x lib/ant/bin</B> 
+　／／添加执行权限 <BR><B>% lib/ant/bin/ant -f setup.xml </B>　／／开始安装 <BR>OR for Windows: 
+<BR><B>% lib\ant\bin\ant -f setup.xml </B>　　／／开始安装 <BR>如果你需要GlassFish 
+V2的集群功能，你应该用下面的命令，替换第四部的安装。 <BR><B>% lib/ant/bin/ant -f setup-cluster.xml 
+</B><BR>OR for Windows: <BR><B>% lib\ant\bin\ant -f setup-cluster.xml 
+</B><BR><BR><FONT color=orange><SPAN 
+style="FONT-SIZE: 18px; LINE-HEIGHT: normal"><B>启动玻璃鱼Glassfish</B></SPAN></FONT> 
+<BR>执行文件在glassfish\bin下，下面我安装后运行的显示： 
+<BR><BR>C:\Downloads\glassfish\bin&gt;asadmin start-domain domain1 <BR>正在启动域 
+domain1, 请稍候。 <BR>将日志重定向至 
+C:\Downloads\glassfish\domains\domain1\logs\server.log。 <BR>正在将输出重定向至 
+C:/Downloads/glassfish/domains/domain1/logs/server.log <BR>域 domain1 
+已就绪，可以接收客户机请求。将在后台启动其他服务。 <BR>正在运行 [Sun Java System Application Server 9.1 
+(build b58g-fcs)] 的域 [domain1 <BR>] 的配置和日志位于 [C:\Downloads\glassfish\domains]。 
+<BR>可从 [http://localhost:4848] 访问管理控制台。 <BR>请使用 "asadmin" 命令所使用的同一端口 [4848]。 
+<BR>可以在以下 URL 中获得用户 Web 应用程序: <BR>[http://localhost:8080 <A class=snap_shots 
+href="https://localhost:8181/" target=_blank 
+rel=nofollow>https://localhost:8181</A> ]。 <BR>可以获得以下 Web 上下文: <BR>[/web1 
+/__wstx-services ]。 <BR>标准 JMX 客户机（如 JConsole）可以连接至 JMXServiceURL 
+<BR>[service:jmx:rmi:///jndi/rmi://xiaojf-163jsp:8686/jmxrmi]，以用于域管理目的。 
+<BR>域至少会侦听以下用于连接的端口: <BR>[8080 8181 4848 3712 3820 3920 8686 ]。 
+<BR>域不支持应用程序服务器群集和其他独立实例。 
+<BR><BR>启动完毕后，通过http://localhost:8080，看看是否成功，http://localhost:4848/可以进入管理后台，用户是admin，密码是adminadmin，祝你一路顺风！ 
+<BR><IMG 
+src="cac0efa0f44d21e7684719322b1a21b4.gif" 
+border=0> <IMG 
+src="a92becb78334d88eabda68e962665e57.gif" 
+border=0> <IMG 
+src="cac0efa0f44d21e7684719322b1a21b4.gif" 
+border=0> <BR>补充： <BR>* domain.name=domain1 <BR>* instance.name=server <BR>* 
+admin.user=admin <BR>* admin.password=adminadmin <BR>* admin.port=4848 <BR>* 
+instance.port=8080 <BR>* orb.port=3700 <BR>* imq.port=7676 <BR>* https.port=8181 
+<BR>* master.password=changeit (only in setup-cluster.xml) 
+<BR>上面的参数是默认的，可以在安装前修改setup.xml或者setup-cluster.xml进行自己的定制。 <BR>运行　asadmin 
+start-database　可以启动玻璃鱼附带的 Derby 数据库。 </SPAN><!-- Attachments --><!--EndFragment--></TD>
+</TR>
+</TBODY>
+</TABLE>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+</BODY>
+</HTML>

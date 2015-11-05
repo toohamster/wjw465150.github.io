@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>把任何可执行文件(包括批处理)当作系统服务运行</TITLE><LINK 
+href="favicon.ico" type=image/x-icon rel=icon><LINK href="favicon.ico" 
+type=image/x-icon rel="shortcut icon"><!-- 调用样式表 --><LINK media=all 
+href="dnt.css" type=text/css rel=stylesheet>
+</HEAD>
+
+<BODY>
+
+<DIV id=container>
+
+<DIV class=NtForumTopic>
+
+<FORM id=delpost name=delpost 
+action=topicadmin.aspx?action=moderate&amp;forumid=40 method=post>
+
+<DIV id=postsContainer>
+
+<DIV class=NtViewThread>
+
+<DIV class=ViewThreadRight>
+
+<DIV class=NavArticle>
+
+<DIV class=defaultcontent>
+
+<DIV class=ForumArticle><!--StartFragment-->
+<H3>把任何可执行文件(包括批处理)当作系统服务运行</H3>
+<DIV class=t_msgfont id=message393 style="WIDTH: 99%">下载Run As Server:
+<P><IMG alt="" src="attachment.gif" border=0><SPAN 
+class=bold>附件</SPAN>: <A href="http://purebit.net/attachment.aspx?attachmentid=27" 
+target=_blank>runassrv.rar</A> (2007-11-6 20:53:05, 115.34 K)<BR>该附件被下载次数 
+7</P><BR><BR>≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡<BR>1.1.0.628 
+版新增内容：<BR><BR>&nbsp; ■ 所有 Action （例如：add / remove 等）无需再加前缀。<BR>&nbsp; ■ 新增 pause / 
+continue 操作。<BR>&nbsp; ■ 现在开始，一个 runassrv 服务可以并发运行多个 /cmdline 指定的应用。<BR>&nbsp; ■ 
+runassrv.exe 本身不需要放入系统搜索路径中了。<BR>&nbsp; ■ 新增 control 操作，向指定的服务发送控制码。<BR>&nbsp; ■ 新增 
+listsrv 操作，列出所有服务和驱动，支持很多过滤条件。<BR>&nbsp; ■ 新增 -logfile 和 -loglevel 选项，日志记录功能。<BR>&nbsp; ■ 
+新增 -unstoppable 系统服务管理器将拒绝停止一个以该选项安装的服务。<BR>&nbsp; ■ 内存收缩策略，典型情况下内存开销少于 300KB。<BR>&nbsp; ■ 
+解决了在某些系统上 start / stop 
+命令无效的问题。<BR><BR>≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡<BR>前两年写的小东西，发给大家乐呵乐呵～<BR><BR>Run 
+As 
+Service<BR><BR>把任何可执行文件（包括批处理和角本）当作系统服务运行的工具<BR><BR>≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡<BR>介绍：<BR><BR>&nbsp; 
+■ 将任何可执行文件作为系统服务运行。<BR>&nbsp; ■ 开始主要是为了移植一些linux 的 daemon；也可以用于在启动任何应用程序和维护性角本。<BR>&nbsp; 
+■ 安静地运行，除非指定了 Interactive 模式，否则不会弹出任何窗口。<BR>&nbsp; ■ 无需登陆，系统启动后自动运行，无需等待用户登陆完毕。<BR>&nbsp; 
+■ 作为附带的功能，支持启动、停止和删除任何系统服务。<BR>&nbsp; ■ 
+完整接管系统服务管理器的指令（启动、停止等等）。运行的程序终止后，自动向服务管理器提交状态同时自身退出，不会驻留内存。<BR><BR>≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡<BR>帮助屏幕：<BR><BR>
+<DIV class=msgheader>
+<DIV class=right><A class=smalltxt onclick="copycode($('code205779765_-1'));" 
+href="http://purebit.net/showtopic-264.aspx###">[复制到剪贴板]</A></DIV>CODE:</DIV>
+<DIV class=msgborder id=code205779765_-1>C:\Documents and 
+Settings\Administrator&gt;<BR>&nbsp; &nbsp; #runassrv<BR><BR>&nbsp; &nbsp; 
+===========================================================================<BR>&nbsp; 
+&nbsp; &nbsp; Run As Service Ver 1.1.0.625 by BaiYang / 2004 - 2006, Freeware<BR>&nbsp; &nbsp; 
+===========================================================================<BR>&nbsp; 
+&nbsp; Run any program as a Service<BR><BR>&nbsp; &nbsp; USAGE: runassrv &lt;Action&gt; 
+&lt;Options&gt;<BR>&nbsp; &nbsp; 
+===========================================================================<BR>&nbsp; 
+&nbsp; Actions:<BR>&nbsp; &nbsp; &nbsp; add&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Add a Service.<BR>&nbsp; &nbsp; &nbsp; remove&nbsp; &nbsp; &nbsp; - Remove 
+a Service.<BR>&nbsp; &nbsp; &nbsp; start&nbsp; &nbsp; &nbsp; &nbsp; - Start a Service.<BR>&nbsp; &nbsp; &nbsp; stop&nbsp; &nbsp; &nbsp; &nbsp; - Stop 
+a Service.<BR>&nbsp; &nbsp; &nbsp; pause&nbsp; &nbsp; &nbsp; &nbsp; - Pause a Service.<BR>&nbsp; &nbsp; &nbsp; continue&nbsp; &nbsp; - 
+Continue a paused Service.<BR>&nbsp; &nbsp; &nbsp; control&nbsp; &nbsp; &nbsp; - Control a service by send it 
+a op-code<BR>&nbsp; &nbsp; &nbsp; listsrv&nbsp; &nbsp; &nbsp; - List all installed services on local 
+system<BR>&nbsp; &nbsp; &nbsp; listgrp&nbsp; &nbsp; &nbsp; - List all service load order groups on local 
+system (by start<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; order).<BR>&nbsp; &nbsp; &nbsp; -h&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - this 
+screen<BR>&nbsp; &nbsp; 
+===========================================================================<BR>&nbsp; 
+&nbsp; Options:<BR>&nbsp; &nbsp; &nbsp; -cmdline&nbsp; &nbsp; - when the service start, witch program you want 
+to run.<BR>&nbsp; &nbsp; &nbsp; -name&nbsp; &nbsp; &nbsp; &nbsp; - the service name.<BR>&nbsp; &nbsp; &nbsp; -dispname&nbsp; &nbsp; - 
+service's display name in service manager<BR>&nbsp; &nbsp; &nbsp; -desc&nbsp; &nbsp; &nbsp; &nbsp; - service's 
+description in service manager<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DEFAULT: none<BR>&nbsp; &nbsp; &nbsp; 
+-type&nbsp; &nbsp; &nbsp; &nbsp; - service type, can be:<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+FileSystemDriver<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; KernelDriver<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+OwnProcess (DEFAULT)<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ShareProcess<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; InteractiveProcess<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; NOTE: set this option incorrectly 
+may endanger your system!<BR>&nbsp; &nbsp; &nbsp; -starttype&nbsp; - service start type, can 
+be:<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; SystemStart<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; BootStart<BR>&nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AutoStart (DEFAULT)<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+DemandStart<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Disabled<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; NOTE: set 
+this option incorrectly may endanger your system!<BR>&nbsp; &nbsp; &nbsp; -errctl&nbsp; &nbsp; &nbsp; - 
+service error control policy, can be:<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ErrorIgnore<BR>&nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ErrorNormal (DEFAULT)<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+ErrorSevere<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ErrorCritical<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; NOTE: 
+set this option incorrectly may endanger your system!<BR>&nbsp; &nbsp; &nbsp; -group&nbsp; &nbsp; &nbsp; - 
+specify service load order group<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DEFAULT: none<BR>&nbsp; &nbsp; &nbsp; 
+-depen&nbsp; &nbsp; &nbsp; - names of services or load ordering groups that the system<BR>&nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; must start before this service, delimited by '/'<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; DEFAULT: none<BR>&nbsp; &nbsp; &nbsp; -user&nbsp; &nbsp; &nbsp; &nbsp; - specifies the name of the account 
+under which the service<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; should run.<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; DEFAULT: LocalSystem<BR>&nbsp; &nbsp; &nbsp; -pass&nbsp; &nbsp; &nbsp; &nbsp; - contains the password to the 
+account name<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DEFAULT: none<BR>&nbsp; &nbsp; &nbsp; -priority&nbsp; &nbsp; - 
+priority of the program you want to run, can be:<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+Idle<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; BelowNormal<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Normal 
+(DEFAULT)<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AboveNormal<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+High<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RealTime<BR>&nbsp; &nbsp; &nbsp; -unstoppable - make service 
+unstoppable by system service control manager.<BR>&nbsp; &nbsp; &nbsp; -opcode&nbsp; &nbsp; &nbsp; - for 
+"control", specify the operation code.<BR>&nbsp; &nbsp; &nbsp; -logfile&nbsp; &nbsp; - specify the 
+logging target.<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DEFAULT: don't log to file.<BR>&nbsp; &nbsp; &nbsp; 
+-loglevel&nbsp; &nbsp; - specify the lowest logging level, can be:<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; DebugOnly (Most Detail)<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Info<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+Warning<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Error (DEFAULT)<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+FatalError<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Disabled (Close Logging Output)<BR>&nbsp; &nbsp; 
+===========================================================================<BR>&nbsp; 
+&nbsp; Special Options With "listsrv":<BR>&nbsp; &nbsp; &nbsp; -name&nbsp; &nbsp; &nbsp; &nbsp; - list service name that 
+match the wildcard pattern<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DEFAULT: *<BR>&nbsp; &nbsp; &nbsp; 
+-dispname&nbsp; &nbsp; - service display name's wildcard pattern.<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+DEFAULT: *<BR>&nbsp; &nbsp; &nbsp; -pid&nbsp; &nbsp; &nbsp; &nbsp; - service belong to specified process.<BR>&nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DEFAULT: any<BR>&nbsp; &nbsp; &nbsp; -type&nbsp; &nbsp; &nbsp; &nbsp; - specify service types to be 
+match, delimite by "/".<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DEFAULT: any<BR>&nbsp; &nbsp; &nbsp; 
+-starttype&nbsp; - specify service starttypes to be match, delimite by "/".<BR>&nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DEFAULT: any<BR>&nbsp; &nbsp; &nbsp; -group&nbsp; &nbsp; &nbsp; - service belong to the load 
+order group<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DEFAULT: any<BR>&nbsp; &nbsp; &nbsp; -state&nbsp; &nbsp; &nbsp; - 
+service's current state, can be:<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; active<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; inactive<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DEFAULT: any<BR>&nbsp; &nbsp; 
+===========================================================================<BR>&nbsp; 
+&nbsp; Examples:<BR>&nbsp; &nbsp; &nbsp; runassrv add /cmdline:"c:\tools\myapp.exe -arg1 -arg2" 
+/name:"mysrv"<BR>&nbsp; &nbsp; &nbsp; runassrv add /cmdline:myapp.exe /cmdline:yourapp.exe 
+/name:mysrv<BR>&nbsp; &nbsp; &nbsp; runassrv add /cmdline:notepad /cmdline:vi.bat 
+/type:interactiveprocess /priority:AboveNormal /name:testsrv 
+/logfile:C:\test.log /loglevel:debugonly /dispname:"My Test Service" /desc:"This 
+is a Test Service"<BR><BR>&nbsp; &nbsp; &nbsp; runassrv start /name:wuauserv<BR>&nbsp; &nbsp; &nbsp; runassrv 
+stop /name:wuauserv<BR>&nbsp; &nbsp; &nbsp; runassrv pause /name:iisadmin<BR>&nbsp; &nbsp; &nbsp; runassrv 
+control /name:wuauserv /opcode:1<BR><BR>&nbsp; &nbsp; &nbsp; runassrv listsrv /name:w*<BR>&nbsp; &nbsp; &nbsp; 
+runassrv listsrv /type:KernelDriver/FileSystemDriver<BR>&nbsp; &nbsp; &nbsp; runassrv listsrv 
+/starttype:SystemStart/BootStart<BR>&nbsp; &nbsp; &nbsp; runassrv listsrv /group:pnp_tdi<BR>&nbsp; &nbsp; 
+&nbsp; runassrv listsrv /pid:1234<BR>&nbsp; &nbsp; &nbsp; runassrv 
+listgrp</DIV><BR><BR>≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡<BR>简单中文帮助：<BR><BR>
+<DIV class=msgheader>
+<DIV class=right><A class=smalltxt onclick="copycode($('code205779765_0'));" 
+href="http://purebit.net/showtopic-264.aspx###">[复制到剪贴板]</A></DIV>CODE:</DIV>
+<DIV class=msgborder id=code205779765_0>C:\Documents and 
+Settings\Administrator&gt;<BR>&nbsp; &nbsp; #runassrv<BR><BR>&nbsp; &nbsp; 
+===========================================================================<BR>&nbsp; 
+&nbsp; &nbsp; Run As Service Ver 1.1.0.628 by BaiYang / 2004 - 2006, Freeware<BR>&nbsp; &nbsp; 
+===========================================================================<BR>&nbsp; 
+&nbsp; 将任何可执行程序作为系统服务运行<BR><BR>&nbsp; &nbsp; 用法: runassrv &lt;动作&gt; &lt;选项&gt;<BR>&nbsp; &nbsp; 
+===========================================================================<BR>&nbsp; 
+&nbsp; 动作:<BR>&nbsp; &nbsp; &nbsp; add&nbsp; &nbsp; &nbsp; - 新增一个服务.<BR>&nbsp; &nbsp; &nbsp; remove&nbsp; &nbsp; - 删除一个服务.<BR>&nbsp; &nbsp; &nbsp; start&nbsp; &nbsp; 
+- 启动一个服务.<BR>&nbsp; &nbsp; &nbsp; stop&nbsp; &nbsp; &nbsp; - 停止一个服务.<BR>&nbsp; &nbsp; &nbsp; pause&nbsp; &nbsp; - 暂停一个服务<BR>&nbsp; &nbsp; &nbsp; 
+continue&nbsp; - 继续一个被暂停的服务.<BR>&nbsp; &nbsp; &nbsp; control&nbsp; - 向指定服务发送一个控制码.<BR>&nbsp; &nbsp; &nbsp; listsrv&nbsp; - 
+列出当前系统中符合条件的所有服务及驱动.<BR>&nbsp; &nbsp; &nbsp; listgrp&nbsp; - 列出当前系统中所有服务启动组的优先级顺序.<BR>&nbsp; &nbsp; &nbsp; -h&nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; - 本帮助屏幕.<BR>&nbsp; &nbsp; 
+===========================================================================<BR>&nbsp; 
+&nbsp; 选项:<BR>&nbsp; &nbsp; &nbsp; -cmdline&nbsp; &nbsp; - 当服务启动时，指定你真正想要运行那个程序. 这个选项可以被多次使<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; 用，每个都指定一个要运行的应用。当服务启动时，这些应用将被并发<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 地执行。<BR>&nbsp; &nbsp; &nbsp; -name&nbsp; 
+&nbsp; &nbsp; &nbsp; - 指定系统服务名（net start 等系统操作用）.<BR>&nbsp; &nbsp; &nbsp; -dispname&nbsp; &nbsp; - 
+指定用户将要看到的服务显示名称（在服务管理器中看到的名称）.<BR>&nbsp; &nbsp; &nbsp; -desc&nbsp; &nbsp; &nbsp; &nbsp; - 
+指定服务描述（在服务管理器中看到的服务描述信息）<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 默认: 无<BR>&nbsp; &nbsp; &nbsp; -type&nbsp; &nbsp; &nbsp; &nbsp; - 
+指定服务类型，可以是以下几种:<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FileSystemDriver&nbsp; : 
+文件系统及驱动，将在内核载入之前被装入，注<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+意这个级别的服务几乎不可以使用任何系统API。<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; KernelDriver&nbsp; &nbsp; &nbsp; : 
+内核级驱动，内核装入后，立即被装入，这个<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+级别的服务只能使用受限的API。<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; OwnProcess&nbsp; &nbsp; &nbsp; &nbsp; : 
+单独进程服务，标准服务，在Win32子系统ready<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+后启动，默认。<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ShareProcess&nbsp; &nbsp; &nbsp; : 共享进程服务，即数个服务共享同一进程，很多<BR>&nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 依赖svchost的服务都使用这种类型。<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; InteractiveProcess: 交互式服务，服务可以与用户交互，除了这个类<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 型以外，其它所有类型的服务都不可能有用户可<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+见的界面。<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 注意: 错误的设置这个选项可能使系统变得不稳定，甚至无法启动！如果<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 不知道自己正在做什么，请不要尝试前两项。<BR>&nbsp; &nbsp; &nbsp; -starttype&nbsp; - 服务启动类型，包括:<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; SystemStart : 系统级启动，在kernel初始化后启动。<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+BootStart&nbsp; : 由系统装载器启动（kernel初始化前）。<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AutoStart&nbsp; : 
+自动启动，Win32子系统初始化完毕后启动，默认。<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DemandStart : 手动。<BR>&nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Disabled&nbsp; &nbsp; : 禁用。<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 注意: 
+错误的设置这个选项可能使系统变得不稳定，甚至无法启动！如果<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+不知道自己正在做什么，请不要尝试前两项。<BR>&nbsp; &nbsp; &nbsp; -errctl&nbsp; &nbsp; &nbsp; - 指定服务出错时的错误处理策略，可以是：<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ErrorIgnore&nbsp; : 忽略错误，不挽救服务，系统继续运行<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ErrorNormal&nbsp; 
+: 记录到系统日志，并且弹出一个对话框提示用户，默<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 认。（默认）<BR>&nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ErrorSevere&nbsp; : 记录日志并弹出提示框，如果当前系统已经运行于了<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 最后一次正确启动的配置，则忽略该错误，否则自动<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; 重启到最后一次正确配置。<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ErrorCritical : 
+同上，但是如果重启到最后一次正确配置还是启动本<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 服务失败就蓝屏。<BR>&nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 注意: 错误的设置这个选项可能使系统变得不稳定，甚至无法启动！如果<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+不知道自己正在做什么，请不要尝试后两项。<BR>&nbsp; &nbsp; &nbsp; -group&nbsp; &nbsp; &nbsp; - 指定服务属于的启动优先级组，优先级组可以通过 listgrp 
+按顺序列出。<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 默认: 无<BR>&nbsp; &nbsp; &nbsp; -depen&nbsp; &nbsp; &nbsp; - 
+指定本服务所依赖的服务，在这里指定的服务必须在本服务启动之前正确<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 启动。多个服务之间用 
+“/”分割。这里要指定系统服务名，而不是用户<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 看到的那个名称。<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+默认: 无<BR>&nbsp; &nbsp; &nbsp; -user&nbsp; &nbsp; &nbsp; &nbsp; - 指定用户身份，即本服务使用那个用户帐号运行<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 默认: 
+LocalSystem（本地系统，最高权限），交互式服务必须使用这个<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 帐号。<BR>&nbsp; &nbsp; &nbsp; 
+-pass&nbsp; &nbsp; &nbsp; &nbsp; - 指定用户密码<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 默认: 无（LocalSystem）<BR>&nbsp; &nbsp; &nbsp; 
+-priority&nbsp; &nbsp; - cmdline 参数指定程序的运行优先级，可以是（这个不用解释了吧）:<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+Idle<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; BelowNormal<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Normal 
+（默认）<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AboveNormal<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; High<BR>&nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RealTime<BR>&nbsp; &nbsp; &nbsp; -unstoppable - 系统服务管理器将拒绝停止以此选项安装的服务。<BR>&nbsp; &nbsp; &nbsp; 
+-opcode&nbsp; &nbsp; &nbsp; - 为 control 命令指定要发送的控制码。控制码 “1”其实相当于命令<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+stop，用于停止服务。除了几个标准的控制码外，大部分控制码所对应的<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 行为由服务自己定义。<BR>&nbsp; &nbsp; &nbsp; 
+-logfile&nbsp; &nbsp; - 指定日志文件<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 默认: 不记录日志文件<BR>&nbsp; &nbsp; &nbsp; -loglevel&nbsp; &nbsp; 
+- 指定日志记录的详细程度，可以是：<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DebugOnly （记录所有运行细节）<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Info<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Warning<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Error 
+（默认）<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FatalError<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Disabled 
+（关闭对控制台和文件的日志输出）<BR>&nbsp; &nbsp; 
+===========================================================================<BR>&nbsp; 
+&nbsp; 使用 listsrv 命令时的特殊选项:<BR>&nbsp; &nbsp; &nbsp; -name&nbsp; &nbsp; &nbsp; &nbsp; - 指定要列出的服务名通配符<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; 默认: *<BR>&nbsp; &nbsp; &nbsp; -dispname&nbsp; &nbsp; - 指定要列出的服务显示名称通配符<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 默认: 
+*<BR>&nbsp; &nbsp; &nbsp; -pid&nbsp; &nbsp; &nbsp; &nbsp; - 仅列出运行于指定进程的服务<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 默认: 所有进程<BR>&nbsp; &nbsp; 
+&nbsp; -type&nbsp; &nbsp; &nbsp; &nbsp; - 仅列出指定类型的服务, 多个服务类型间使用 "/" 分割<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 默认: 
+所有类型<BR>&nbsp; &nbsp; &nbsp; -starttype&nbsp; - 仅列出指定启动类型的服务, 多个类型间使用 "/" 分割<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; 默认: 所有类型<BR>&nbsp; &nbsp; &nbsp; -group&nbsp; &nbsp; &nbsp; - 进列出位于指定启动组的服务<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 默认: 
+任意组<BR>&nbsp; &nbsp; &nbsp; -state&nbsp; &nbsp; &nbsp; - 仅列出当前状态满足指定值的服务, 可以是：<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+active&nbsp; : 服务当前处于活动状态（正在启动、运行等）<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; inactive : 
+服务当前处于非活动状态（已停止）<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 默认&nbsp; &nbsp; : 任意<BR>&nbsp; &nbsp; 
+===========================================================================<BR>&nbsp; 
+&nbsp; 例子:<BR>&nbsp; &nbsp; &nbsp; runassrv add /cmdline:"c:\tools\myapp.exe -arg1 -arg2" 
+/name:"mysrv"<BR>&nbsp; &nbsp; &nbsp; runassrv add /cmdline:myapp.exe /cmdline:yourapp.exe 
+/name:mysrv<BR>&nbsp; &nbsp; &nbsp; runassrv add /cmdline:notepad /cmdline:vi.bat 
+/type:interactiveprocess /priority:AboveNormal /name:testsrv 
+/logfile:C:\test.log /loglevel:debugonly /dispname:"My Test Service" /desc:"This 
+is a Test Service"<BR><BR>&nbsp; &nbsp; &nbsp; runassrv start /name:wuauserv<BR>&nbsp; &nbsp; &nbsp; runassrv 
+stop /name:wuauserv<BR>&nbsp; &nbsp; &nbsp; runassrv pause /name:iisadmin<BR>&nbsp; &nbsp; &nbsp; runassrv 
+control /name:wuauserv /opcode:1<BR><BR>&nbsp; &nbsp; &nbsp; runassrv listsrv /name:w*<BR>&nbsp; &nbsp; &nbsp; 
+runassrv listsrv /type:KernelDriver/FileSystemDriver<BR>&nbsp; &nbsp; &nbsp; runassrv listsrv 
+/starttype:SystemStart/BootStart<BR>&nbsp; &nbsp; &nbsp; runassrv listsrv /group:pnp_tdi<BR>&nbsp; &nbsp; 
+&nbsp; runassrv listsrv /pid:1234<BR>&nbsp; &nbsp; &nbsp; runassrv listgrp<BR><BR>&nbsp; &nbsp; 
+===========================================================================<BR>&nbsp; 
+&nbsp; 关于命令和参数的分隔符:<BR>&nbsp; &nbsp; &nbsp; 所有参数以 “-” 或 “/” 为前缀；需要赋值得参数以 “:” 或 “=”作为<BR>&nbsp; &nbsp; &nbsp; 
+赋值运算符，例如：-name="mysrv"; /name:"mysrv"; -name:"mysrv" 等组合都<BR>&nbsp; &nbsp; &nbsp; 
+是合法的。</DIV><BR><BR>≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡<BR>版权：免费软件；作者不承担任何责任。您可以将它用于任何用途，只要不做坏事 
+:)<BR><BR>≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡<BR>联系作者：<A 
+href="http://www.cn-dos.net/forum" target=_blank>http://www.cn-dos.net/forum</A> 
+或 <A href="mailto:asbai@msn.com" target=_blank>asbai@msn.com</A><BR><BR>有事尽量论坛或 
+email 联系。不过要是你喜欢玩星际并且是手速跟我一样低（不超过100）的菜鸟，欢迎加我的 MSN ^_^<BR></DIV><!--EndFragment--></DIV>
+</DIV>
+</DIV>
+</DIV>
+</DIV>
+</DIV>
+</FORM>
+</DIV>
+</DIV>
+</BODY>
+</HTML>

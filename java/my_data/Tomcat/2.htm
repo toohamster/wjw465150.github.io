@@ -1,0 +1,21 @@
+<HTML><HEAD>
+<META HTTP-EQUIV=Content-Type CONTENT=text/html; charset=gb2312>
+<title>  怎么让Tomcat自动从ROOT下的index文件里跳转到指定的web-app  </title>
+<style type="text/css">
+<!--
+.9t {font-size: 9pt; color: #000000; font-family: "宋体";}
+-->
+</style></HEAD>
+<body bgcolor="#FFFFFF">
+<table width="90%" border="0" align="center" ><tr><td>
+<PRE class="9t">
+在index文件的第一行添加:
+&lt;script type="text/javascript"&gt;window.location.href="/apppath/index.jsp";&lt;/script&gt;
+或者在index文件的第一行添加:
+&lt;meta HTTP-EQUIV="Refresh" CONTENT="0; URL=/apppath/index.html"&gt;
+ 
+</PRE>
+</td></tr></table>
+
+</Body>
+</HTML>
