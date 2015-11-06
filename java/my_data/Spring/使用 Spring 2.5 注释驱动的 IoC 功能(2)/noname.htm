@@ -1,12 +1,13 @@
-<!-- saved from url=http://coolyongzi.javaeye.com/blog/192957 -->
+ï»¿<!-- saved from url=http://coolyongzi.javaeye.com/blog/192957 -->
 <script>
 window.onerror = new Function("return(false);")
 </script><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 
 <HTML dir=ltr xml:lang="zh-CN" 
-xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>Ê¹ÓÃ Spring 2.5 ×¢ÊÍÇı¶¯µÄ IoC ¹¦ÄÜ(2)</TITLE><LINK 
+xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>ä½¿ç”¨ Spring 2.5 æ³¨é‡Šé©±åŠ¨çš„ IoC åŠŸèƒ½(2)</title><LINK 
 href="favicon.ico" type=image/x-icon rel="shortcut icon"><LINK 
-title=³ÌĞòÈËÉú¡ªÂ·ÂşÂş href="rss" type=application/rss+xml rel=alternate><LINK 
+title=ç¨‹åºäººç”Ÿâ€”è·¯æ¼«æ¼« href="rss" type=application/rss+xml rel=alternate><LINK 
 media=screen href="blog.css_1217128319" 
 type=text/css rel=stylesheet><LINK media=screen 
 href="purple.css_1200451876" 
@@ -255,197 +256,197 @@ type=text/javascript></SCRIPT>
 <DIV class=date><SPAN class=year>2008</SPAN><SPAN class=sep_year>-</SPAN><SPAN 
 class=month>05</SPAN><SPAN class=sep_month>-</SPAN><SPAN 
 class=day>14</SPAN></DIV>
-<H3 class="" title=""><A 
-href="http://coolyongzi.javaeye.com/blog/192957">Ê¹ÓÃspring2.5×¢ÊÍÇı¶¯µÄIOC¹¦ÄÜ</A></H3></DIV>
-<DIV class=blog_content>¸ÅÊö <BR><BR>×¢ÊÍÅäÖÃÏà¶ÔÓÚ XML ÅäÖÃ¾ßÓĞºÜ¶àµÄÓÅÊÆ£º <BR>Ëü¿ÉÒÔ³ä·ÖÀûÓÃ Java 
-µÄ·´Éä»úÖÆ»ñÈ¡Àà½á¹¹ĞÅÏ¢£¬ÕâĞ©ĞÅÏ¢¿ÉÒÔÓĞĞ§¼õÉÙÅäÖÃµÄ¹¤×÷¡£ÈçÊ¹ÓÃ JPA ×¢ÊÍÅäÖÃ ORM Ó³ÉäÊ±£¬ÎÒÃÇ¾Í²»ĞèÒªÖ¸¶¨ PO 
-µÄÊôĞÔÃû¡¢ÀàĞÍµÈĞÅÏ¢£¬Èç¹û¹ØÏµ±í×Ö¶ÎºÍ PO ÊôĞÔÃû¡¢ÀàĞÍ¶¼Ò»ÖÂ£¬ÄúÉõÖÁÎŞĞè±àĞ´ÈÎÎñÊôĞÔÓ³ÉäĞÅÏ¢¡ª¡ªÒòÎªÕâĞ©ĞÅÏ¢¶¼¿ÉÒÔÍ¨¹ı Java ·´Éä»úÖÆ»ñÈ¡¡£ 
-<BR>×¢ÊÍºÍ Java ´úÂëÎ»ÓÚÒ»¸öÎÄ¼şÖĞ£¬¶ø XML ÅäÖÃ²ÉÓÃ¶ÀÁ¢µÄÅäÖÃÎÄ¼ş£¬´ó¶àÊıÅäÖÃĞÅÏ¢ÔÚ³ÌĞò¿ª·¢Íê³Éºó¶¼²»»áµ÷Õû£¬Èç¹ûÅäÖÃĞÅÏ¢ºÍ Java 
-´úÂë·ÅÔÚÒ»Æğ£¬ÓĞÖúÓÚÔöÇ¿³ÌĞòµÄÄÚ¾ÛĞÔ¡£¶ø²ÉÓÃ¶ÀÁ¢µÄ XML 
-ÅäÖÃÎÄ¼ş£¬³ÌĞòÔ±ÔÚ±àĞ´Ò»¸ö¹¦ÄÜÊ±£¬ÍùÍùĞèÒªÔÚ³ÌĞòÎÄ¼şºÍÅäÖÃÎÄ¼şÖĞ²»Í£ÇĞ»»£¬ÕâÖÖË¼Î¬ÉÏµÄ²»Á¬¹á»á½µµÍ¿ª·¢Ğ§ÂÊ¡£ <BR>Òò´ËÔÚºÜ¶àÇé¿öÏÂ£¬×¢ÊÍÅäÖÃ±È XML 
-ÅäÖÃ¸üÊÜ»¶Ó­£¬×¢ÊÍÅäÖÃÓĞ½øÒ»²½Á÷ĞĞµÄÇ÷ÊÆ¡£Spring 2.5 µÄÒ»´óÔöÇ¿¾ÍÊÇÒıÈëÁËºÜ¶à×¢ÊÍÀà£¬ÏÖÔÚÄúÒÑ¾­¿ÉÒÔÊ¹ÓÃ×¢ÊÍÅäÖÃÍê³É´ó²¿·Ö XML 
-ÅäÖÃµÄ¹¦ÄÜ¡£ÔÚÕâÆªÎÄÕÂÀï£¬ÎÒÃÇ½«ÏòÄú½²ÊöÊ¹ÓÃ×¢ÊÍ½øĞĞ Bean ¶¨ÒåºÍÒÀÀµ×¢ÈëµÄÄÚÈİ¡£ <BR><BR>Ô­À´ÎÒÃÇÊÇÔõÃ´×öµÄ 
-<BR>ÔÚÊ¹ÓÃ×¢ÊÍÅäÖÃÖ®Ç°£¬ÏÈÀ´»Ø¹ËÒ»ÏÂ´«Í³ÉÏÊÇÈçºÎÅäÖÃ Bean ²¢Íê³É Bean Ö®¼äÒÀÀµ¹ØÏµµÄ½¨Á¢¡£ÏÂÃæÊÇ 3 ¸öÀà£¬ËüÃÇ·Ö±ğÊÇ Office¡¢Car ºÍ 
-Boss£¬Õâ 3 ¸öÀàĞèÒªÔÚ Spring ÈİÆ÷ÖĞÅäÖÃÎª Bean£º <BR><BR>Office ½öÓĞÒ»¸öÊôĞÔ£º <BR>Çåµ¥ 1. Office.java 
+<H3 title="" ><A 
+href="http://coolyongzi.javaeye.com/blog/192957">ä½¿ç”¨spring2.5æ³¨é‡Šé©±åŠ¨çš„IOCåŠŸèƒ½</A></H3></DIV>
+<DIV class=blog_content>æ¦‚è¿° <BR><BR>æ³¨é‡Šé…ç½®ç›¸å¯¹äº XML é…ç½®å…·æœ‰å¾ˆå¤šçš„ä¼˜åŠ¿ï¼š <BR>å®ƒå¯ä»¥å……åˆ†åˆ©ç”¨ Java 
+çš„åå°„æœºåˆ¶è·å–ç±»ç»“æ„ä¿¡æ¯ï¼Œè¿™äº›ä¿¡æ¯å¯ä»¥æœ‰æ•ˆå‡å°‘é…ç½®çš„å·¥ä½œã€‚å¦‚ä½¿ç”¨ JPA æ³¨é‡Šé…ç½® ORM æ˜ å°„æ—¶ï¼Œæˆ‘ä»¬å°±ä¸éœ€è¦æŒ‡å®š PO 
+çš„å±æ€§åã€ç±»å‹ç­‰ä¿¡æ¯ï¼Œå¦‚æœå…³ç³»è¡¨å­—æ®µå’Œ PO å±æ€§åã€ç±»å‹éƒ½ä¸€è‡´ï¼Œæ‚¨ç”šè‡³æ— éœ€ç¼–å†™ä»»åŠ¡å±æ€§æ˜ å°„ä¿¡æ¯â€”â€”å› ä¸ºè¿™äº›ä¿¡æ¯éƒ½å¯ä»¥é€šè¿‡ Java åå°„æœºåˆ¶è·å–ã€‚ 
+<BR>æ³¨é‡Šå’Œ Java ä»£ç ä½äºä¸€ä¸ªæ–‡ä»¶ä¸­ï¼Œè€Œ XML é…ç½®é‡‡ç”¨ç‹¬ç«‹çš„é…ç½®æ–‡ä»¶ï¼Œå¤§å¤šæ•°é…ç½®ä¿¡æ¯åœ¨ç¨‹åºå¼€å‘å®Œæˆåéƒ½ä¸ä¼šè°ƒæ•´ï¼Œå¦‚æœé…ç½®ä¿¡æ¯å’Œ Java 
+ä»£ç æ”¾åœ¨ä¸€èµ·ï¼Œæœ‰åŠ©äºå¢å¼ºç¨‹åºçš„å†…èšæ€§ã€‚è€Œé‡‡ç”¨ç‹¬ç«‹çš„ XML 
+é…ç½®æ–‡ä»¶ï¼Œç¨‹åºå‘˜åœ¨ç¼–å†™ä¸€ä¸ªåŠŸèƒ½æ—¶ï¼Œå¾€å¾€éœ€è¦åœ¨ç¨‹åºæ–‡ä»¶å’Œé…ç½®æ–‡ä»¶ä¸­ä¸åœåˆ‡æ¢ï¼Œè¿™ç§æ€ç»´ä¸Šçš„ä¸è¿è´¯ä¼šé™ä½å¼€å‘æ•ˆç‡ã€‚ <BR>å› æ­¤åœ¨å¾ˆå¤šæƒ…å†µä¸‹ï¼Œæ³¨é‡Šé…ç½®æ¯” XML 
+é…ç½®æ›´å—æ¬¢è¿ï¼Œæ³¨é‡Šé…ç½®æœ‰è¿›ä¸€æ­¥æµè¡Œçš„è¶‹åŠ¿ã€‚Spring 2.5 çš„ä¸€å¤§å¢å¼ºå°±æ˜¯å¼•å…¥äº†å¾ˆå¤šæ³¨é‡Šç±»ï¼Œç°åœ¨æ‚¨å·²ç»å¯ä»¥ä½¿ç”¨æ³¨é‡Šé…ç½®å®Œæˆå¤§éƒ¨åˆ† XML 
+é…ç½®çš„åŠŸèƒ½ã€‚åœ¨è¿™ç¯‡æ–‡ç« é‡Œï¼Œæˆ‘ä»¬å°†å‘æ‚¨è®²è¿°ä½¿ç”¨æ³¨é‡Šè¿›è¡Œ Bean å®šä¹‰å’Œä¾èµ–æ³¨å…¥çš„å†…å®¹ã€‚ <BR><BR>åŸæ¥æˆ‘ä»¬æ˜¯æ€ä¹ˆåšçš„ 
+<BR>åœ¨ä½¿ç”¨æ³¨é‡Šé…ç½®ä¹‹å‰ï¼Œå…ˆæ¥å›é¡¾ä¸€ä¸‹ä¼ ç»Ÿä¸Šæ˜¯å¦‚ä½•é…ç½® Bean å¹¶å®Œæˆ Bean ä¹‹é—´ä¾èµ–å…³ç³»çš„å»ºç«‹ã€‚ä¸‹é¢æ˜¯ 3 ä¸ªç±»ï¼Œå®ƒä»¬åˆ†åˆ«æ˜¯ Officeã€Car å’Œ 
+Bossï¼Œè¿™ 3 ä¸ªç±»éœ€è¦åœ¨ Spring å®¹å™¨ä¸­é…ç½®ä¸º Beanï¼š <BR><BR>Office ä»…æœ‰ä¸€ä¸ªå±æ€§ï¼š <BR>æ¸…å• 1. Office.java 
 <BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN class=keyword>package</SPAN><SPAN>&nbsp;com.baobaotao;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;Office&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>class</SPAN><SPAN>&nbsp;Office&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>private</SPAN><SPAN>&nbsp;String&nbsp;officeNo&nbsp;=¡±</SPAN><SPAN 
-class=number>001</SPAN><SPAN>¡±;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//Ê¡ÂÔ&nbsp;get/setter&nbsp;&nbsp;&nbsp; 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=keyword>private</SPAN><SPAN>&nbsp;String&nbsp;officeNo&nbsp;=â€</SPAN><SPAN 
+class=number>001</SPAN><SPAN>â€;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//çœç•¥&nbsp;get/setter&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=annotation>@Override</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>public</SPAN><SPAN>&nbsp;String&nbsp;toString()&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>public</SPAN><SPAN>&nbsp;String&nbsp;toString()&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=string>"officeNo:"</SPAN><SPAN>&nbsp;+&nbsp;officeNo;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=string>"officeNo:"</SPAN><SPAN>&nbsp;+&nbsp;officeNo;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>}&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">package com.baobaotao;   
 public class Office {   
-    private String officeNo =¡±001¡±;   
+    private String officeNo =â€001â€;   
   
-    //Ê¡ÂÔ get/setter   
+    //çœç•¥ get/setter   
   
     @Override  
     public String toString() {   
         return "officeNo:" + officeNo;   
     }   
-}  </PRE><BR>Car ÓµÓĞÁ½¸öÊôĞÔ£º <BR>Çåµ¥ 2. Car.java <BR>
+}  </PRE><BR>Car æ‹¥æœ‰ä¸¤ä¸ªå±æ€§ï¼š <BR>æ¸…å• 2. Car.java <BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN class=keyword>package</SPAN><SPAN>&nbsp;com.baobaotao;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;Car&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>class</SPAN><SPAN>&nbsp;Car&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;String&nbsp;brand;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>double</SPAN><SPAN>&nbsp;price;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//&nbsp;Ê¡ÂÔ&nbsp;get/setter&nbsp;&nbsp;&nbsp; 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=keyword>double</SPAN><SPAN>&nbsp;price;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//&nbsp;çœç•¥&nbsp;get/setter&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=annotation>@Override</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>public</SPAN><SPAN>&nbsp;String&nbsp;toString()&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>public</SPAN><SPAN>&nbsp;String&nbsp;toString()&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=string>"brand:"</SPAN><SPAN>&nbsp;+&nbsp;brand&nbsp;+&nbsp;</SPAN><SPAN 
 class=string>","</SPAN><SPAN>&nbsp;+&nbsp;</SPAN><SPAN 
-class=string>"price:"</SPAN><SPAN>&nbsp;+&nbsp;price;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=string>"price:"</SPAN><SPAN>&nbsp;+&nbsp;price;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>}&nbsp;&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">package com.baobaotao;   
   
 public class Car {   
     private String brand;   
     private double price;   
   
-    // Ê¡ÂÔ get/setter   
+    // çœç•¥ get/setter   
   
     @Override  
     public String toString() {   
         return "brand:" + brand + "," + "price:" + price;   
     }   
-} </PRE><BR>Boss ÓµÓĞ Office ºÍ Car ÀàĞÍµÄÁ½¸öÊôĞÔ£º <BR>Çåµ¥ 3. Boss.java <BR>
+} </PRE><BR>Boss æ‹¥æœ‰ Office å’Œ Car ç±»å‹çš„ä¸¤ä¸ªå±æ€§ï¼š <BR>æ¸…å• 3. Boss.java <BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN class=keyword>package</SPAN><SPAN>&nbsp;com.baobaotao;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;Boss&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>class</SPAN><SPAN>&nbsp;Boss&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;Car&nbsp;car;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;Office&nbsp;office;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//&nbsp;Ê¡ÂÔ&nbsp;get/setter&nbsp;&nbsp;&nbsp; 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//&nbsp;çœç•¥&nbsp;get/setter&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=annotation>@Override</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>public</SPAN><SPAN>&nbsp;String&nbsp;toString()&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>public</SPAN><SPAN>&nbsp;String&nbsp;toString()&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=string>"car:"</SPAN><SPAN>&nbsp;+&nbsp;car&nbsp;+&nbsp;</SPAN><SPAN 
 class=string>"\n"</SPAN><SPAN>&nbsp;+&nbsp;</SPAN><SPAN 
-class=string>"office:"</SPAN><SPAN>&nbsp;+&nbsp;office;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=string>"office:"</SPAN><SPAN>&nbsp;+&nbsp;office;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>}&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">package com.baobaotao;   
   
 public class Boss {   
     private Car car;   
     private Office office;   
   
-    // Ê¡ÂÔ get/setter   
+    // çœç•¥ get/setter   
   
     @Override  
     public String toString() {   
         return "car:" + car + "\n" + "office:" + office;   
     }   
-}  </PRE><BR>ÎÒÃÇÔÚ Spring ÈİÆ÷ÖĞ½« Office ºÍ Car ÉùÃ÷Îª Bean£¬²¢×¢Èëµ½ Boss Bean ÖĞ£ºÏÂÃæÊÇÊ¹ÓÃ´«Í³ XML 
-Íê³ÉÕâ¸ö¹¤×÷µÄÅäÖÃÎÄ¼ş beans.xml£º <BR>Çåµ¥ 4. beans.xml ½«ÒÔÉÏÈı¸öÀàÅäÖÃ³É Bean <BR>
+}  </PRE><BR>æˆ‘ä»¬åœ¨ Spring å®¹å™¨ä¸­å°† Office å’Œ Car å£°æ˜ä¸º Beanï¼Œå¹¶æ³¨å…¥åˆ° Boss Bean ä¸­ï¼šä¸‹é¢æ˜¯ä½¿ç”¨ä¼ ç»Ÿ XML 
+å®Œæˆè¿™ä¸ªå·¥ä½œçš„é…ç½®æ–‡ä»¶ beans.xmlï¼š <BR>æ¸…å• 4. beans.xml å°†ä»¥ä¸Šä¸‰ä¸ªç±»é…ç½®æˆ Bean <BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN>&lt;?xml&nbsp;version=</SPAN><SPAN 
 class=string>"1.0"</SPAN><SPAN>&nbsp;encoding=</SPAN><SPAN 
-class=string>"UTF-8"</SPAN><SPAN>&nbsp;?&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"UTF-8"</SPAN><SPAN>&nbsp;?&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&lt;beans&nbsp;xmlns=</SPAN><SPAN 
 class=string>"http://www.springframework.org/schema/beans"</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;xmlns:xsi=</SPAN><SPAN 
 class=string>"http://www.w3.org/2001/XMLSchema-instance"</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;xsi:schemaLocation="http:</SPAN><SPAN 
 class=comment>//www.springframework.org/schema/beans&nbsp;&nbsp;&nbsp;&nbsp; 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;http:</SPAN><SPAN 
 class=comment>//www.springframework.org/schema/beans/spring-beans-2.5.xsd"&gt;&nbsp;&nbsp; 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;id=</SPAN><SPAN 
 class=string>"boss"</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>class</SPAN><SPAN>=</SPAN><SPAN 
-class=string>"com.baobaotao.Boss"</SPAN><SPAN>&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"com.baobaotao.Boss"</SPAN><SPAN>&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</SPAN><SPAN 
 class=string>"car"</SPAN><SPAN>&nbsp;ref=</SPAN><SPAN 
-class=string>"car"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"car"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</SPAN><SPAN 
 class=string>"office"</SPAN><SPAN>&nbsp;ref=</SPAN><SPAN 
-class=string>"office"</SPAN><SPAN>&nbsp;/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=string>"office"</SPAN><SPAN>&nbsp;/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;id=</SPAN><SPAN 
 class=string>"office"</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>class</SPAN><SPAN>=</SPAN><SPAN 
-class=string>"com.baobaotao.Office"</SPAN><SPAN>&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"com.baobaotao.Office"</SPAN><SPAN>&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</SPAN><SPAN 
 class=string>"officeNo"</SPAN><SPAN>&nbsp;value=</SPAN><SPAN 
-class=string>"002"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=string>"002"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;id=</SPAN><SPAN 
 class=string>"car"</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>class</SPAN><SPAN>=</SPAN><SPAN 
 class=string>"com.baobaotao.Car"</SPAN><SPAN>&nbsp;scope=</SPAN><SPAN 
-class=string>"singleton"</SPAN><SPAN>&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"singleton"</SPAN><SPAN>&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</SPAN><SPAN 
 class=string>"brand"</SPAN><SPAN>&nbsp;value=</SPAN><SPAN 
-class=string>"&nbsp;ºìÆì&nbsp;CA72"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"&nbsp;çº¢æ——&nbsp;CA72"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</SPAN><SPAN 
 class=string>"price"</SPAN><SPAN>&nbsp;value=</SPAN><SPAN 
-class=string>"2000"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=string>"2000"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&lt;/beans&gt;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;  
 &lt;beans xmlns="http://www.springframework.org/schema/beans"  
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
@@ -459,41 +460,41 @@ class=string>"2000"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI
         &lt;property name="officeNo" value="002"/&gt;  
     &lt;/bean&gt;  
     &lt;bean id="car" class="com.baobaotao.Car" scope="singleton"&gt;  
-        &lt;property name="brand" value=" ºìÆì CA72"/&gt;  
+        &lt;property name="brand" value=" çº¢æ—— CA72"/&gt;  
         &lt;property name="price" value="2000"/&gt;  
     &lt;/bean&gt;  
-&lt;/beans&gt;  </PRE><BR>µ±ÎÒÃÇÔËĞĞÒÔÏÂ´úÂëÊ±£¬¿ØÖÆÌ¨½«ÕıÈ·´ò³ö boss µÄĞÅÏ¢£º <BR>Çåµ¥ 5. 
-²âÊÔÀà£ºAnnoIoCTest.java <BR>
+&lt;/beans&gt;  </PRE><BR>å½“æˆ‘ä»¬è¿è¡Œä»¥ä¸‹ä»£ç æ—¶ï¼Œæ§åˆ¶å°å°†æ­£ç¡®æ‰“å‡º boss çš„ä¿¡æ¯ï¼š <BR>æ¸…å• 5. 
+æµ‹è¯•ç±»ï¼šAnnoIoCTest.java <BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;org.springframework.context.ApplicationContext;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;org.springframework.context.support.ClassPathXmlApplicationContext;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;AnnoIoCTest&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=keyword>class</SPAN><SPAN>&nbsp;AnnoIoCTest&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>static</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>void</SPAN><SPAN>&nbsp;main(String[]&nbsp;args)&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>void</SPAN><SPAN>&nbsp;main(String[]&nbsp;args)&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String[]&nbsp;locations&nbsp;=&nbsp;{</SPAN><SPAN 
-class=string>"beans.xml"</SPAN><SPAN>};&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ApplicationContext&nbsp;ctx&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=string>"beans.xml"</SPAN><SPAN>};&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ApplicationContext&nbsp;ctx&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;ClassPathXmlApplicationContext(locations);&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Boss&nbsp;boss&nbsp;=&nbsp;(Boss)&nbsp;ctx.getBean(</SPAN><SPAN 
-class=string>"boss"</SPAN><SPAN>);&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(boss);&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=string>"boss"</SPAN><SPAN>);&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(boss);&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>}&nbsp;&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">import org.springframework.context.ApplicationContext;   
 import org.springframework.context.support.ClassPathXmlApplicationContext;   
 public class AnnoIoCTest {   
@@ -505,37 +506,37 @@ public class AnnoIoCTest {
         Boss boss = (Boss) ctx.getBean("boss");   
         System.out.println(boss);   
     }   
-} </PRE><BR>ÕâËµÃ÷ Spring ÈİÆ÷ÒÑ¾­ÕıÈ·Íê³ÉÁË Bean ´´½¨ºÍ×°ÅäµÄ¹¤×÷¡£ <BR><BR><BR>Ê¹ÓÃ @Autowired ×¢ÊÍ 
-<BR>Spring 2.5 ÒıÈëÁË @Autowired ×¢ÊÍ£¬Ëü¿ÉÒÔ¶ÔÀà³ÉÔ±±äÁ¿¡¢·½·¨¼°¹¹Ôìº¯Êı½øĞĞ±ê×¢£¬Íê³É×Ô¶¯×°ÅäµÄ¹¤×÷¡£À´¿´Ò»ÏÂÊ¹ÓÃ 
-@Autowired ½øĞĞ³ÉÔ±±äÁ¿×Ô¶¯×¢ÈëµÄ´úÂë£º <BR>Çåµ¥ 6. Ê¹ÓÃ @Autowired ×¢ÊÍµÄ Boss.java <BR>
+} </PRE><BR>è¿™è¯´æ˜ Spring å®¹å™¨å·²ç»æ­£ç¡®å®Œæˆäº† Bean åˆ›å»ºå’Œè£…é…çš„å·¥ä½œã€‚ <BR><BR><BR>ä½¿ç”¨ @Autowired æ³¨é‡Š 
+<BR>Spring 2.5 å¼•å…¥äº† @Autowired æ³¨é‡Šï¼Œå®ƒå¯ä»¥å¯¹ç±»æˆå‘˜å˜é‡ã€æ–¹æ³•åŠæ„é€ å‡½æ•°è¿›è¡Œæ ‡æ³¨ï¼Œå®Œæˆè‡ªåŠ¨è£…é…çš„å·¥ä½œã€‚æ¥çœ‹ä¸€ä¸‹ä½¿ç”¨ 
+@Autowired è¿›è¡Œæˆå‘˜å˜é‡è‡ªåŠ¨æ³¨å…¥çš„ä»£ç ï¼š <BR>æ¸…å• 6. ä½¿ç”¨ @Autowired æ³¨é‡Šçš„ Boss.java <BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN class=keyword>package</SPAN><SPAN>&nbsp;com.baobaotao;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;org.springframework.beans.factory.annotation.Autowired;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;Boss&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=keyword>class</SPAN><SPAN>&nbsp;Boss&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=annotation>@Autowired</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;Car&nbsp;car;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=annotation>@Autowired</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;Office&nbsp;office;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;¡­&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;â€¦&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>}&nbsp;&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">package com.baobaotao;   
 import org.springframework.beans.factory.annotation.Autowired;   
   
@@ -547,129 +548,129 @@ public class Boss {
     @Autowired  
     private Office office;   
   
-    ¡­   
-} </PRE><BR>Spring Í¨¹ıÒ»¸ö BeanPostProcessor ¶Ô @Autowired ½øĞĞ½âÎö£¬ËùÒÔÒªÈÃ @Autowired 
-Æğ×÷ÓÃ±ØĞëÊÂÏÈÔÚ Spring ÈİÆ÷ÖĞÉùÃ÷ AutowiredAnnotationBeanPostProcessor Bean¡£ <BR>Çåµ¥ 7. ÈÃ 
-@Autowired ×¢ÊÍ¹¤×÷ÆğÀ´ <BR>
+    â€¦   
+} </PRE><BR>Spring é€šè¿‡ä¸€ä¸ª BeanPostProcessor å¯¹ @Autowired è¿›è¡Œè§£æï¼Œæ‰€ä»¥è¦è®© @Autowired 
+èµ·ä½œç”¨å¿…é¡»äº‹å…ˆåœ¨ Spring å®¹å™¨ä¸­å£°æ˜ AutowiredAnnotationBeanPostProcessor Beanã€‚ <BR>æ¸…å• 7. è®© 
+@Autowired æ³¨é‡Šå·¥ä½œèµ·æ¥ <BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN>&lt;?xml&nbsp;version=</SPAN><SPAN 
 class=string>"1.0"</SPAN><SPAN>&nbsp;encoding=</SPAN><SPAN 
-class=string>"UTF-8"</SPAN><SPAN>&nbsp;?&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"UTF-8"</SPAN><SPAN>&nbsp;?&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&lt;beans&nbsp;xmlns=</SPAN><SPAN 
 class=string>"http://www.springframework.org/schema/beans"</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;xmlns:xsi=</SPAN><SPAN 
 class=string>"http://www.w3.org/2001/XMLSchema-instance"</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;xsi:schemaLocation="http:</SPAN><SPAN 
 class=comment>//www.springframework.org/schema/beans&nbsp;&nbsp;&nbsp;&nbsp; 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;http:</SPAN><SPAN 
 class=comment>//www.springframework.org/schema/beans/spring-beans-2.5.xsd"&gt;&nbsp;&nbsp; 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;¸Ã&nbsp;BeanPostProcessor&nbsp;½«×Ô¶¯Æğ×÷ÓÃ£¬¶Ô±ê×¢&nbsp;</SPAN><SPAN 
-class=annotation>@Autowired</SPAN><SPAN>&nbsp;µÄ&nbsp;Bean&nbsp;½øĞĞ×Ô¶¯×¢Èë&nbsp;--&gt;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;è¯¥&nbsp;BeanPostProcessor&nbsp;å°†è‡ªåŠ¨èµ·ä½œç”¨ï¼Œå¯¹æ ‡æ³¨&nbsp;</SPAN><SPAN 
+class=annotation>@Autowired</SPAN><SPAN>&nbsp;çš„&nbsp;Bean&nbsp;è¿›è¡Œè‡ªåŠ¨æ³¨å…¥&nbsp;--&gt;&nbsp;&nbsp; 
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;</SPAN><SPAN 
 class=keyword>class</SPAN><SPAN>="org.springframework.beans.factory.annotation.&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AutowiredAnnotationBeanPostProcessor"/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;ÒÆ³ı&nbsp;boss&nbsp;Bean&nbsp;µÄÊôĞÔ×¢ÈëÅäÖÃµÄĞÅÏ¢&nbsp;--&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AutowiredAnnotationBeanPostProcessor"/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;ç§»é™¤&nbsp;boss&nbsp;Bean&nbsp;çš„å±æ€§æ³¨å…¥é…ç½®çš„ä¿¡æ¯&nbsp;--&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;id=</SPAN><SPAN 
 class=string>"boss"</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>class</SPAN><SPAN>=</SPAN><SPAN 
-class=string>"com.baobaotao.Boss"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=string>"com.baobaotao.Boss"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;id=</SPAN><SPAN 
 class=string>"office"</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>class</SPAN><SPAN>=</SPAN><SPAN 
-class=string>"com.baobaotao.Office"</SPAN><SPAN>&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"com.baobaotao.Office"</SPAN><SPAN>&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</SPAN><SPAN 
 class=string>"officeNo"</SPAN><SPAN>&nbsp;value=</SPAN><SPAN 
-class=string>"001"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=string>"001"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;id=</SPAN><SPAN 
 class=string>"car"</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>class</SPAN><SPAN>=</SPAN><SPAN 
 class=string>"com.baobaotao.Car"</SPAN><SPAN>&nbsp;scope=</SPAN><SPAN 
-class=string>"singleton"</SPAN><SPAN>&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"singleton"</SPAN><SPAN>&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</SPAN><SPAN 
 class=string>"brand"</SPAN><SPAN>&nbsp;value=</SPAN><SPAN 
-class=string>"&nbsp;ºìÆì&nbsp;CA72"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"&nbsp;çº¢æ——&nbsp;CA72"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</SPAN><SPAN 
 class=string>"price"</SPAN><SPAN>&nbsp;value=</SPAN><SPAN 
-class=string>"2000"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=string>"2000"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&lt;/beans&gt;&nbsp;&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;  
 &lt;beans xmlns="http://www.springframework.org/schema/beans"  
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
     xsi:schemaLocation="http://www.springframework.org/schema/beans    
  http://www.springframework.org/schema/beans/spring-beans-2.5.xsd"&gt;  
   
-    &lt;!-- ¸Ã BeanPostProcessor ½«×Ô¶¯Æğ×÷ÓÃ£¬¶Ô±ê×¢ @Autowired µÄ Bean ½øĞĞ×Ô¶¯×¢Èë --&gt;  
+    &lt;!-- è¯¥ BeanPostProcessor å°†è‡ªåŠ¨èµ·ä½œç”¨ï¼Œå¯¹æ ‡æ³¨ @Autowired çš„ Bean è¿›è¡Œè‡ªåŠ¨æ³¨å…¥ --&gt;  
     &lt;bean class="org.springframework.beans.factory.annotation.   
         AutowiredAnnotationBeanPostProcessor"/&gt;  
   
-    &lt;!-- ÒÆ³ı boss Bean µÄÊôĞÔ×¢ÈëÅäÖÃµÄĞÅÏ¢ --&gt;  
+    &lt;!-- ç§»é™¤ boss Bean çš„å±æ€§æ³¨å…¥é…ç½®çš„ä¿¡æ¯ --&gt;  
     &lt;bean id="boss" class="com.baobaotao.Boss"/&gt;  
     
     &lt;bean id="office" class="com.baobaotao.Office"&gt;  
         &lt;property name="officeNo" value="001"/&gt;  
     &lt;/bean&gt;  
     &lt;bean id="car" class="com.baobaotao.Car" scope="singleton"&gt;  
-        &lt;property name="brand" value=" ºìÆì CA72"/&gt;  
+        &lt;property name="brand" value=" çº¢æ—— CA72"/&gt;  
         &lt;property name="price" value="2000"/&gt;  
     &lt;/bean&gt;  
-&lt;/beans&gt; </PRE><BR>ÕâÑù£¬µ± Spring ÈİÆ÷Æô¶¯Ê±£¬AutowiredAnnotationBeanPostProcessor 
-½«É¨Ãè Spring ÈİÆ÷ÖĞËùÓĞ Bean£¬µ±·¢ÏÖ Bean ÖĞÓµÓĞ @Autowired ×¢ÊÍÊ±¾ÍÕÒµ½ºÍÆäÆ¥Åä£¨Ä¬ÈÏ°´ÀàĞÍÆ¥Åä£©µÄ 
-Bean£¬²¢×¢Èëµ½¶ÔÓ¦µÄµØ·½ÖĞÈ¥¡£ <BR><BR>°´ÕÕÉÏÃæµÄÅäÖÃ£¬Spring ½«Ö±½Ó²ÉÓÃ Java ·´Éä»úÖÆ¶Ô Boss ÖĞµÄ car ºÍ office 
-ÕâÁ½¸öË½ÓĞ³ÉÔ±±äÁ¿½øĞĞ×Ô¶¯×¢Èë¡£ËùÒÔ¶Ô³ÉÔ±±äÁ¿Ê¹ÓÃ @Autowired ºó£¬Äú´ó¿É½«ËüÃÇµÄ setter ·½·¨£¨setCar() ºÍ 
-setOffice()£©´Ó Boss ÖĞÉ¾³ı¡£ <BR><BR>µ±È»£¬ÄúÒ²¿ÉÒÔÍ¨¹ı @Autowired ¶Ô·½·¨»ò¹¹Ôìº¯Êı½øĞĞ±ê×¢£¬À´¿´ÏÂÃæµÄ´úÂë <BR>Çåµ¥ 
-8. ½« @Autowired ×¢ÊÍ±ê×¢ÔÚ Setter ·½·¨ÉÏ <BR><BR>
+&lt;/beans&gt; </PRE><BR>è¿™æ ·ï¼Œå½“ Spring å®¹å™¨å¯åŠ¨æ—¶ï¼ŒAutowiredAnnotationBeanPostProcessor 
+å°†æ‰«æ Spring å®¹å™¨ä¸­æ‰€æœ‰ Beanï¼Œå½“å‘ç° Bean ä¸­æ‹¥æœ‰ @Autowired æ³¨é‡Šæ—¶å°±æ‰¾åˆ°å’Œå…¶åŒ¹é…ï¼ˆé»˜è®¤æŒ‰ç±»å‹åŒ¹é…ï¼‰çš„ 
+Beanï¼Œå¹¶æ³¨å…¥åˆ°å¯¹åº”çš„åœ°æ–¹ä¸­å»ã€‚ <BR><BR>æŒ‰ç…§ä¸Šé¢çš„é…ç½®ï¼ŒSpring å°†ç›´æ¥é‡‡ç”¨ Java åå°„æœºåˆ¶å¯¹ Boss ä¸­çš„ car å’Œ office 
+è¿™ä¸¤ä¸ªç§æœ‰æˆå‘˜å˜é‡è¿›è¡Œè‡ªåŠ¨æ³¨å…¥ã€‚æ‰€ä»¥å¯¹æˆå‘˜å˜é‡ä½¿ç”¨ @Autowired åï¼Œæ‚¨å¤§å¯å°†å®ƒä»¬çš„ setter æ–¹æ³•ï¼ˆsetCar() å’Œ 
+setOffice()ï¼‰ä» Boss ä¸­åˆ é™¤ã€‚ <BR><BR>å½“ç„¶ï¼Œæ‚¨ä¹Ÿå¯ä»¥é€šè¿‡ @Autowired å¯¹æ–¹æ³•æˆ–æ„é€ å‡½æ•°è¿›è¡Œæ ‡æ³¨ï¼Œæ¥çœ‹ä¸‹é¢çš„ä»£ç  <BR>æ¸…å• 
+8. å°† @Autowired æ³¨é‡Šæ ‡æ³¨åœ¨ Setter æ–¹æ³•ä¸Š <BR><BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN class=keyword>package</SPAN><SPAN>&nbsp;com.baobaotao;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;Boss&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>class</SPAN><SPAN>&nbsp;Boss&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;Car&nbsp;car;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;Office&nbsp;office;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=annotation>@Autowired</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>void</SPAN><SPAN>&nbsp;setCar(Car&nbsp;car)&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>void</SPAN><SPAN>&nbsp;setCar(Car&nbsp;car)&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>this</SPAN><SPAN>.car&nbsp;=&nbsp;car;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=annotation>@Autowired</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>void</SPAN><SPAN>&nbsp;setOffice(Office&nbsp;office)&nbsp;{&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>this</SPAN><SPAN>.office&nbsp;=&nbsp;office;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;¡­&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=keyword>this</SPAN><SPAN>.office&nbsp;=&nbsp;office;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;â€¦&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>}&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">package com.baobaotao;   
   
 public class Boss {   
@@ -685,39 +686,39 @@ public class Boss {
     public void setOffice(Office office) {   
         this.office = office;   
     }   
-    ¡­   
-}  </PRE><BR>ÕâÊ±£¬@Autowired ½«²éÕÒ±»±ê×¢µÄ·½·¨µÄÈë²ÎÀàĞÍµÄ Bean£¬²¢µ÷ÓÃ·½·¨×Ô¶¯×¢ÈëÕâĞ© 
-Bean¡£¶øÏÂÃæµÄÊ¹ÓÃ·½·¨Ôò¶Ô¹¹Ôìº¯Êı½øĞĞ±ê×¢£º <BR>Çåµ¥ 9. ½« @Autowired ×¢ÊÍ±ê×¢ÔÚ¹¹Ôìº¯ÊıÉÏ <BR>
+    â€¦   
+}  </PRE><BR>è¿™æ—¶ï¼Œ@Autowired å°†æŸ¥æ‰¾è¢«æ ‡æ³¨çš„æ–¹æ³•çš„å…¥å‚ç±»å‹çš„ Beanï¼Œå¹¶è°ƒç”¨æ–¹æ³•è‡ªåŠ¨æ³¨å…¥è¿™äº› 
+Beanã€‚è€Œä¸‹é¢çš„ä½¿ç”¨æ–¹æ³•åˆ™å¯¹æ„é€ å‡½æ•°è¿›è¡Œæ ‡æ³¨ï¼š <BR>æ¸…å• 9. å°† @Autowired æ³¨é‡Šæ ‡æ³¨åœ¨æ„é€ å‡½æ•°ä¸Š <BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN class=keyword>package</SPAN><SPAN>&nbsp;com.baobaotao;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;Boss&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>class</SPAN><SPAN>&nbsp;Boss&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;Car&nbsp;car;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;Office&nbsp;office;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=annotation>@Autowired</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
 class=keyword>public</SPAN><SPAN>&nbsp;Boss(Car&nbsp;car&nbsp;,Office&nbsp;office){&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>this</SPAN><SPAN>.car&nbsp;=&nbsp;car;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>this</SPAN><SPAN>.office&nbsp;=&nbsp;office&nbsp;;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;¡­&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=keyword>this</SPAN><SPAN>.office&nbsp;=&nbsp;office&nbsp;;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;â€¦&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>}&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">package com.baobaotao;   
   
 public class Boss {   
@@ -730,68 +731,68 @@ public class Boss {
         this.office = office ;   
     }   
     
-    ¡­   
-}  </PRE><BR>ÓÉÓÚ Boss() ¹¹Ôìº¯ÊıÓĞÁ½¸öÈë²Î£¬·Ö±ğÊÇ car ºÍ office£¬@Autowired ½«·Ö±ğÑ°ÕÒºÍËüÃÇÀàĞÍÆ¥ÅäµÄ 
-Bean£¬½«ËüÃÇ×÷Îª Boss(Car car ,Office office) µÄÈë²ÎÀ´´´½¨ Boss Bean¡£ <BR>µ±ºòÑ¡ Bean ÊıÄ¿²»Îª 1 
-Ê±µÄÓ¦¶Ô·½·¨ <BR><BR>ÔÚÄ¬ÈÏÇé¿öÏÂÊ¹ÓÃ @Autowired ×¢ÊÍ½øĞĞ×Ô¶¯×¢ÈëÊ±£¬Spring ÈİÆ÷ÖĞÆ¥ÅäµÄºòÑ¡ Bean 
-ÊıÄ¿±ØĞëÓĞÇÒ½öÓĞÒ»¸ö¡£µ±ÕÒ²»µ½Ò»¸öÆ¥ÅäµÄ Bean Ê±£¬Spring ÈİÆ÷½«Å×³ö BeanCreationException Òì³££¬²¢Ö¸³ö±ØĞëÖÁÉÙÓµÓĞÒ»¸öÆ¥ÅäµÄ 
-Bean¡£ÎÒÃÇ¿ÉÒÔÀ´×öÒ»¸öÊµÑé£º <BR>Çåµ¥ 10. ºòÑ¡ Bean ÊıÄ¿Îª 0 Ê± <BR>
+    â€¦   
+}  </PRE><BR>ç”±äº Boss() æ„é€ å‡½æ•°æœ‰ä¸¤ä¸ªå…¥å‚ï¼Œåˆ†åˆ«æ˜¯ car å’Œ officeï¼Œ@Autowired å°†åˆ†åˆ«å¯»æ‰¾å’Œå®ƒä»¬ç±»å‹åŒ¹é…çš„ 
+Beanï¼Œå°†å®ƒä»¬ä½œä¸º Boss(Car car ,Office office) çš„å…¥å‚æ¥åˆ›å»º Boss Beanã€‚ <BR>å½“å€™é€‰ Bean æ•°ç›®ä¸ä¸º 1 
+æ—¶çš„åº”å¯¹æ–¹æ³• <BR><BR>åœ¨é»˜è®¤æƒ…å†µä¸‹ä½¿ç”¨ @Autowired æ³¨é‡Šè¿›è¡Œè‡ªåŠ¨æ³¨å…¥æ—¶ï¼ŒSpring å®¹å™¨ä¸­åŒ¹é…çš„å€™é€‰ Bean 
+æ•°ç›®å¿…é¡»æœ‰ä¸”ä»…æœ‰ä¸€ä¸ªã€‚å½“æ‰¾ä¸åˆ°ä¸€ä¸ªåŒ¹é…çš„ Bean æ—¶ï¼ŒSpring å®¹å™¨å°†æŠ›å‡º BeanCreationException å¼‚å¸¸ï¼Œå¹¶æŒ‡å‡ºå¿…é¡»è‡³å°‘æ‹¥æœ‰ä¸€ä¸ªåŒ¹é…çš„ 
+Beanã€‚æˆ‘ä»¬å¯ä»¥æ¥åšä¸€ä¸ªå®éªŒï¼š <BR>æ¸…å• 10. å€™é€‰ Bean æ•°ç›®ä¸º 0 æ—¶ <BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN>&lt;?xml&nbsp;version=</SPAN><SPAN 
 class=string>"1.0"</SPAN><SPAN>&nbsp;encoding=</SPAN><SPAN 
-class=string>"UTF-8"</SPAN><SPAN>&nbsp;?&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"UTF-8"</SPAN><SPAN>&nbsp;?&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&lt;beans&nbsp;xmlns=</SPAN><SPAN 
 class=string>"http://www.springframework.org/schema/beans"</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;xmlns:xsi=</SPAN><SPAN 
 class=string>"http://www.w3.org/2001/XMLSchema-instance"</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xsi:schemaLocation="http:</SPAN><SPAN 
 class=comment>//www.springframework.org/schema/beans&nbsp;&nbsp;&nbsp;&nbsp; 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;http:</SPAN><SPAN 
 class=comment>//www.springframework.org/schema/beans/spring-beans-2.5.xsd&nbsp;"&gt;&nbsp;&nbsp; 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;</SPAN><SPAN 
 class=keyword>class</SPAN><SPAN>="org.springframework.beans.factory.annotation.&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AutowiredAnnotationBeanPostProcessor"/&gt;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AutowiredAnnotationBeanPostProcessor"/&gt;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;id=</SPAN><SPAN 
 class=string>"boss"</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>class</SPAN><SPAN>=</SPAN><SPAN 
-class=string>"com.baobaotao.Boss"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;½«&nbsp;office&nbsp;Bean&nbsp;×¢ÊÍµô&nbsp;--&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=string>"com.baobaotao.Boss"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;å°†&nbsp;office&nbsp;Bean&nbsp;æ³¨é‡Šæ‰&nbsp;--&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;&lt;bean&nbsp;id=</SPAN><SPAN 
 class=string>"office"</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>class</SPAN><SPAN>=</SPAN><SPAN 
-class=string>"com.baobaotao.Office"</SPAN><SPAN>&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"com.baobaotao.Office"</SPAN><SPAN>&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</SPAN><SPAN 
 class=string>"officeNo"</SPAN><SPAN>&nbsp;value=</SPAN><SPAN 
-class=string>"001"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt;--&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=string>"001"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt;--&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;id=</SPAN><SPAN 
 class=string>"car"</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>class</SPAN><SPAN>=</SPAN><SPAN 
 class=string>"com.baobaotao.Car"</SPAN><SPAN>&nbsp;scope=</SPAN><SPAN 
-class=string>"singleton"</SPAN><SPAN>&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"singleton"</SPAN><SPAN>&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</SPAN><SPAN 
 class=string>"brand"</SPAN><SPAN>&nbsp;value=</SPAN><SPAN 
-class=string>"&nbsp;ºìÆì&nbsp;CA72"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"&nbsp;çº¢æ——&nbsp;CA72"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</SPAN><SPAN 
 class=string>"price"</SPAN><SPAN>&nbsp;value=</SPAN><SPAN 
-class=string>"2000"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=string>"2000"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&lt;/beans&gt;&nbsp;&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;  
 &lt;beans xmlns="http://www.springframework.org/schema/beans"  
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
@@ -803,63 +804,63 @@ class=string>"2000"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI
   
     &lt;bean id="boss" class="com.baobaotao.Boss"/&gt;  
   
-    &lt;!-- ½« office Bean ×¢ÊÍµô --&gt;  
+    &lt;!-- å°† office Bean æ³¨é‡Šæ‰ --&gt;  
     &lt;!-- &lt;bean id="office" class="com.baobaotao.Office"&gt;  
     &lt;property name="officeNo" value="001"/&gt;  
     &lt;/bean&gt;--&gt;  
   
     &lt;bean id="car" class="com.baobaotao.Car" scope="singleton"&gt;  
-        &lt;property name="brand" value=" ºìÆì CA72"/&gt;  
+        &lt;property name="brand" value=" çº¢æ—— CA72"/&gt;  
         &lt;property name="price" value="2000"/&gt;  
     &lt;/bean&gt;  
-&lt;/beans&gt; </PRE><BR>ÓÉÓÚ office Bean ±»×¢ÊÍµôÁË£¬ËùÒÔ Spring ÈİÆ÷ÖĞ½«Ã»ÓĞÀàĞÍÎª Office µÄ Bean 
-ÁË£¬¶ø Boss µÄ office ÊôĞÔ±ê×¢ÁË @Autowired£¬µ±Æô¶¯ Spring ÈİÆ÷Ê±£¬Òì³£¾Í²úÉúÁË¡£ <BR><BR>µ±²»ÄÜÈ·¶¨ Spring 
-ÈİÆ÷ÖĞÒ»¶¨ÓµÓĞÄ³¸öÀàµÄ Bean Ê±£¬¿ÉÒÔÔÚĞèÒª×Ô¶¯×¢Èë¸ÃÀà Bean µÄµØ·½¿ÉÒÔÊ¹ÓÃ @Autowired(required = false)£¬ÕâµÈÓÚ¸æËß 
-Spring£ºÔÚÕÒ²»µ½Æ¥Åä Bean Ê±Ò²²»±¨´í¡£À´¿´Ò»ÏÂ¾ßÌåµÄÀı×Ó£º <BR>Çåµ¥ 11. Ê¹ÓÃ @Autowired(required = false) 
+&lt;/beans&gt; </PRE><BR>ç”±äº office Bean è¢«æ³¨é‡Šæ‰äº†ï¼Œæ‰€ä»¥ Spring å®¹å™¨ä¸­å°†æ²¡æœ‰ç±»å‹ä¸º Office çš„ Bean 
+äº†ï¼Œè€Œ Boss çš„ office å±æ€§æ ‡æ³¨äº† @Autowiredï¼Œå½“å¯åŠ¨ Spring å®¹å™¨æ—¶ï¼Œå¼‚å¸¸å°±äº§ç”Ÿäº†ã€‚ <BR><BR>å½“ä¸èƒ½ç¡®å®š Spring 
+å®¹å™¨ä¸­ä¸€å®šæ‹¥æœ‰æŸä¸ªç±»çš„ Bean æ—¶ï¼Œå¯ä»¥åœ¨éœ€è¦è‡ªåŠ¨æ³¨å…¥è¯¥ç±» Bean çš„åœ°æ–¹å¯ä»¥ä½¿ç”¨ @Autowired(required = false)ï¼Œè¿™ç­‰äºå‘Šè¯‰ 
+Springï¼šåœ¨æ‰¾ä¸åˆ°åŒ¹é… Bean æ—¶ä¹Ÿä¸æŠ¥é”™ã€‚æ¥çœ‹ä¸€ä¸‹å…·ä½“çš„ä¾‹å­ï¼š <BR>æ¸…å• 11. ä½¿ç”¨ @Autowired(required = false) 
 <BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN class=keyword>package</SPAN><SPAN>&nbsp;com.baobaotao;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;org.springframework.beans.factory.annotation.Autowired;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;org.springframework.beans.factory.annotation.Required;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;Boss&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=keyword>class</SPAN><SPAN>&nbsp;Boss&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;Car&nbsp;car;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;Office&nbsp;office;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=annotation>@Autowired</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>void</SPAN><SPAN>&nbsp;setCar(Car&nbsp;car)&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>void</SPAN><SPAN>&nbsp;setCar(Car&nbsp;car)&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>this</SPAN><SPAN>.car&nbsp;=&nbsp;car;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
 class=annotation>@Autowired</SPAN><SPAN>(required&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>false</SPAN><SPAN>)&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>false</SPAN><SPAN>)&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>void</SPAN><SPAN>&nbsp;setOffice(Office&nbsp;office)&nbsp;{&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>this</SPAN><SPAN>.office&nbsp;=&nbsp;office;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;¡­&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=keyword>this</SPAN><SPAN>.office&nbsp;=&nbsp;office;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;â€¦&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>}&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">package com.baobaotao;   
   
 import org.springframework.beans.factory.annotation.Autowired;   
@@ -878,89 +879,89 @@ public class Boss {
     public void setOffice(Office office) {   
         this.office = office;   
     }   
-    ¡­   
-}</PRE><BR>µ±È»£¬Ò»°ãÇé¿öÏÂ£¬Ê¹ÓÃ @Autowired µÄµØ·½¶¼ÊÇĞèÒª×¢Èë Bean 
-µÄ£¬Ê¹ÓÃÁË×Ô¶¯×¢Èë¶øÓÖÔÊĞí²»×¢ÈëµÄÇé¿öÒ»°ã½ö»áÔÚ¿ª·¢ÆÚ»ò²âÊÔÆÚÅöµ½£¨ÈçÎªÁË¿ìËÙÆô¶¯ Spring ÈİÆ÷£¬½öÒıÈëÒ»Ğ©Ä£¿éµÄ Spring ÅäÖÃÎÄ¼ş£©£¬ËùÒÔ 
-@Autowired(required = false) »áºÜÉÙÓÃµ½¡£ <BR><BR>ºÍÕÒ²»µ½Ò»¸öÀàĞÍÆ¥Åä Bean Ïà·´µÄÒ»¸ö´íÎóÊÇ£ºÈç¹û Spring 
-ÈİÆ÷ÖĞÓµÓĞ¶à¸öºòÑ¡ Bean£¬Spring ÈİÆ÷ÔÚÆô¶¯Ê±Ò²»áÅ×³ö BeanCreationException Òì³£¡£À´¿´ÏÂÃæµÄÀı×Ó£º <BR>Çåµ¥ 12. ÔÚ 
-beans.xml ÖĞÅäÖÃÁ½¸ö Office ÀàĞÍµÄ Bean <BR>
+    â€¦   
+}</PRE><BR>å½“ç„¶ï¼Œä¸€èˆ¬æƒ…å†µä¸‹ï¼Œä½¿ç”¨ @Autowired çš„åœ°æ–¹éƒ½æ˜¯éœ€è¦æ³¨å…¥ Bean 
+çš„ï¼Œä½¿ç”¨äº†è‡ªåŠ¨æ³¨å…¥è€Œåˆå…è®¸ä¸æ³¨å…¥çš„æƒ…å†µä¸€èˆ¬ä»…ä¼šåœ¨å¼€å‘æœŸæˆ–æµ‹è¯•æœŸç¢°åˆ°ï¼ˆå¦‚ä¸ºäº†å¿«é€Ÿå¯åŠ¨ Spring å®¹å™¨ï¼Œä»…å¼•å…¥ä¸€äº›æ¨¡å—çš„ Spring é…ç½®æ–‡ä»¶ï¼‰ï¼Œæ‰€ä»¥ 
+@Autowired(required = false) ä¼šå¾ˆå°‘ç”¨åˆ°ã€‚ <BR><BR>å’Œæ‰¾ä¸åˆ°ä¸€ä¸ªç±»å‹åŒ¹é… Bean ç›¸åçš„ä¸€ä¸ªé”™è¯¯æ˜¯ï¼šå¦‚æœ Spring 
+å®¹å™¨ä¸­æ‹¥æœ‰å¤šä¸ªå€™é€‰ Beanï¼ŒSpring å®¹å™¨åœ¨å¯åŠ¨æ—¶ä¹Ÿä¼šæŠ›å‡º BeanCreationException å¼‚å¸¸ã€‚æ¥çœ‹ä¸‹é¢çš„ä¾‹å­ï¼š <BR>æ¸…å• 12. åœ¨ 
+beans.xml ä¸­é…ç½®ä¸¤ä¸ª Office ç±»å‹çš„ Bean <BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN>&lt;bean&nbsp;id=</SPAN><SPAN 
 class=string>"office"</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>class</SPAN><SPAN>=</SPAN><SPAN 
-class=string>"com.baobaotao.Office"</SPAN><SPAN>&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"com.baobaotao.Office"</SPAN><SPAN>&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</SPAN><SPAN 
 class=string>"officeNo"</SPAN><SPAN>&nbsp;value=</SPAN><SPAN 
-class=string>"001"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&lt;/bean&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=string>"001"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&lt;/bean&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&lt;bean&nbsp;id=</SPAN><SPAN 
 class=string>"office2"</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>class</SPAN><SPAN>=</SPAN><SPAN 
-class=string>"com.baobaotao.Office"</SPAN><SPAN>&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"com.baobaotao.Office"</SPAN><SPAN>&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</SPAN><SPAN 
 class=string>"officeNo"</SPAN><SPAN>&nbsp;value=</SPAN><SPAN 
-class=string>"001"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"001"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&lt;/bean&gt;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">&lt;bean id="office" class="com.baobaotao.Office"&gt;  
     &lt;property name="officeNo" value="001"/&gt;  
 &lt;/bean&gt;  
 &lt;bean id="office2" class="com.baobaotao.Office"&gt;  
     &lt;property name="officeNo" value="001"/&gt;  
-&lt;/bean&gt;  </PRE><BR>ÎÒÃÇÔÚ Spring ÈİÆ÷ÖĞÅäÖÃÁËÁ½¸öÀàĞÍÎª Office ÀàĞÍµÄ Bean£¬µ±¶Ô Boss µÄ office 
-³ÉÔ±±äÁ¿½øĞĞ×Ô¶¯×¢ÈëÊ±£¬Spring ÈİÆ÷½«ÎŞ·¨È·¶¨µ½µ×ÒªÓÃÄÄÒ»¸ö Bean£¬Òò´ËÒì³£·¢ÉúÁË¡£ <BR><BR>Spring ÔÊĞíÎÒÃÇÍ¨¹ı @Qualifier 
-×¢ÊÍÖ¸¶¨×¢Èë Bean µÄÃû³Æ£¬ÕâÑùÆçÒå¾ÍÏû³ıÁË£¬¿ÉÒÔÍ¨¹ıÏÂÃæµÄ·½·¨½â¾öÒì³££º <BR>Çåµ¥ 13. Ê¹ÓÃ @Qualifier ×¢ÊÍÖ¸¶¨×¢Èë Bean µÄÃû³Æ 
+&lt;/bean&gt;  </PRE><BR>æˆ‘ä»¬åœ¨ Spring å®¹å™¨ä¸­é…ç½®äº†ä¸¤ä¸ªç±»å‹ä¸º Office ç±»å‹çš„ Beanï¼Œå½“å¯¹ Boss çš„ office 
+æˆå‘˜å˜é‡è¿›è¡Œè‡ªåŠ¨æ³¨å…¥æ—¶ï¼ŒSpring å®¹å™¨å°†æ— æ³•ç¡®å®šåˆ°åº•è¦ç”¨å“ªä¸€ä¸ª Beanï¼Œå› æ­¤å¼‚å¸¸å‘ç”Ÿäº†ã€‚ <BR><BR>Spring å…è®¸æˆ‘ä»¬é€šè¿‡ @Qualifier 
+æ³¨é‡ŠæŒ‡å®šæ³¨å…¥ Bean çš„åç§°ï¼Œè¿™æ ·æ­§ä¹‰å°±æ¶ˆé™¤äº†ï¼Œå¯ä»¥é€šè¿‡ä¸‹é¢çš„æ–¹æ³•è§£å†³å¼‚å¸¸ï¼š <BR>æ¸…å• 13. ä½¿ç”¨ @Qualifier æ³¨é‡ŠæŒ‡å®šæ³¨å…¥ Bean çš„åç§° 
 <BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
-<LI><SPAN><SPAN class=annotation>@Autowired</SPAN><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+<LI><SPAN><SPAN class=annotation>@Autowired</SPAN><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>void</SPAN><SPAN>&nbsp;setOffice(</SPAN><SPAN 
 class=annotation>@Qualifier</SPAN><SPAN>(</SPAN><SPAN 
-class=string>"office"</SPAN><SPAN>)Office&nbsp;office)&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"office"</SPAN><SPAN>)Office&nbsp;office)&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>this</SPAN><SPAN>.office&nbsp;=&nbsp;office;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>}&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">@Autowired  
 public void setOffice(@Qualifier("office")Office office) {   
     this.office = office;   
-}  </PRE><BR>@Qualifier("office") ÖĞµÄ office ÊÇ Bean µÄÃû³Æ£¬ËùÒÔ @Autowired ºÍ 
-@Qualifier ½áºÏÊ¹ÓÃÊ±£¬×Ô¶¯×¢ÈëµÄ²ßÂÔ¾Í´Ó byType ×ª±ä³É byName ÁË¡£@Autowired ¿ÉÒÔ¶Ô³ÉÔ±±äÁ¿¡¢·½·¨ÒÔ¼°¹¹Ôìº¯Êı½øĞĞ×¢ÊÍ£¬¶ø 
-@Qualifier µÄ±ê×¢¶ÔÏóÊÇ³ÉÔ±±äÁ¿¡¢·½·¨Èë²Î¡¢¹¹Ôìº¯ÊıÈë²Î¡£ÕıÊÇÓÉÓÚ×¢ÊÍ¶ÔÏóµÄ²»Í¬£¬ËùÒÔ Spring ²»½« @Autowired ºÍ 
-@Qualifier Í³Ò»³ÉÒ»¸ö×¢ÊÍÀà¡£ÏÂÃæÊÇ¶Ô³ÉÔ±±äÁ¿ºÍ¹¹Ôìº¯ÊıÈë²Î½øĞĞ×¢ÊÍµÄ´úÂë£º <BR><BR>¶Ô³ÉÔ±±äÁ¿½øĞĞ×¢ÊÍ£º <BR>Çåµ¥ 14. 
-¶Ô³ÉÔ±±äÁ¿Ê¹ÓÃ @Qualifier ×¢ÊÍ <BR>
+}  </PRE><BR>@Qualifier("office") ä¸­çš„ office æ˜¯ Bean çš„åç§°ï¼Œæ‰€ä»¥ @Autowired å’Œ 
+@Qualifier ç»“åˆä½¿ç”¨æ—¶ï¼Œè‡ªåŠ¨æ³¨å…¥çš„ç­–ç•¥å°±ä» byType è½¬å˜æˆ byName äº†ã€‚@Autowired å¯ä»¥å¯¹æˆå‘˜å˜é‡ã€æ–¹æ³•ä»¥åŠæ„é€ å‡½æ•°è¿›è¡Œæ³¨é‡Šï¼Œè€Œ 
+@Qualifier çš„æ ‡æ³¨å¯¹è±¡æ˜¯æˆå‘˜å˜é‡ã€æ–¹æ³•å…¥å‚ã€æ„é€ å‡½æ•°å…¥å‚ã€‚æ­£æ˜¯ç”±äºæ³¨é‡Šå¯¹è±¡çš„ä¸åŒï¼Œæ‰€ä»¥ Spring ä¸å°† @Autowired å’Œ 
+@Qualifier ç»Ÿä¸€æˆä¸€ä¸ªæ³¨é‡Šç±»ã€‚ä¸‹é¢æ˜¯å¯¹æˆå‘˜å˜é‡å’Œæ„é€ å‡½æ•°å…¥å‚è¿›è¡Œæ³¨é‡Šçš„ä»£ç ï¼š <BR><BR>å¯¹æˆå‘˜å˜é‡è¿›è¡Œæ³¨é‡Šï¼š <BR>æ¸…å• 14. 
+å¯¹æˆå‘˜å˜é‡ä½¿ç”¨ @Qualifier æ³¨é‡Š <BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;Boss&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>class</SPAN><SPAN>&nbsp;Boss&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=annotation>@Autowired</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;Car&nbsp;car;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=annotation>@Autowired</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=annotation>@Qualifier</SPAN><SPAN>(</SPAN><SPAN 
-class=string>"office"</SPAN><SPAN>)&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"office"</SPAN><SPAN>)&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;Office&nbsp;office;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;¡­&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;â€¦&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>}&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">public class Boss {   
     @Autowired  
     private Car car;   
@@ -968,34 +969,34 @@ class=string>"office"</SPAN><SPAN>)&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
     @Autowired  
     @Qualifier("office")   
     private Office office;   
-    ¡­   
-}  </PRE><BR>¶Ô¹¹Ôìº¯ÊıÈë²Î½øĞĞ×¢ÊÍ£º <BR>Çåµ¥ 15. ¶Ô¹¹Ôìº¯Êı±äÁ¿Ê¹ÓÃ @Qualifier ×¢ÊÍ <BR>
+    â€¦   
+}  </PRE><BR>å¯¹æ„é€ å‡½æ•°å…¥å‚è¿›è¡Œæ³¨é‡Šï¼š <BR>æ¸…å• 15. å¯¹æ„é€ å‡½æ•°å˜é‡ä½¿ç”¨ @Qualifier æ³¨é‡Š <BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;Boss&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>class</SPAN><SPAN>&nbsp;Boss&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;Car&nbsp;car;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;Office&nbsp;office;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=annotation>@Autowired</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
 class=keyword>public</SPAN><SPAN>&nbsp;Boss(Car&nbsp;car&nbsp;,&nbsp;</SPAN><SPAN 
 class=annotation>@Qualifier</SPAN><SPAN>(</SPAN><SPAN 
-class=string>"office"</SPAN><SPAN>)Office&nbsp;office){&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"office"</SPAN><SPAN>)Office&nbsp;office){&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>this</SPAN><SPAN>.car&nbsp;=&nbsp;car;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>this</SPAN><SPAN>.office&nbsp;=&nbsp;office&nbsp;;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=keyword>this</SPAN><SPAN>.office&nbsp;=&nbsp;office&nbsp;;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>}&nbsp;&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">public class Boss {   
     private Car car;   
     private Office office;   
@@ -1005,133 +1006,133 @@ class=keyword>this</SPAN><SPAN>.office&nbsp;=&nbsp;office&nbsp;;&nbsp;&nbsp;&nbs
         this.car = car;   
         this.office = office ;   
     }   
-} </PRE><BR>@Qualifier Ö»ÄÜºÍ @Autowired ½áºÏÊ¹ÓÃ£¬ÊÇ¶Ô @Autowired ÓĞÒæµÄ²¹³ä¡£Ò»°ãÀ´½²£¬@Qualifier 
-¶Ô·½·¨Ç©ÃûÖĞÈë²Î½øĞĞ×¢ÊÍ»á½µµÍ´úÂëµÄ¿É¶ÁĞÔ£¬¶ø¶Ô³ÉÔ±±äÁ¿×¢ÊÍÔòÏà¶ÔºÃÒ»Ğ©¡£ <BR>Ê¹ÓÃ JSR-250 µÄ×¢ÊÍ <BR>Spring ²»µ«Ö§³Ö×Ô¼º¶¨ÒåµÄ 
-@Autowired µÄ×¢ÊÍ£¬»¹Ö§³Ö¼¸¸öÓÉ JSR-250 ¹æ·¶¶¨ÒåµÄ×¢ÊÍ£¬ËüÃÇ·Ö±ğÊÇ @Resource¡¢@PostConstruct ÒÔ¼° 
-@PreDestroy¡£ <BR><BR>@Resource <BR><BR>@Resource µÄ×÷ÓÃÏàµ±ÓÚ @Autowired£¬Ö»²»¹ı 
-@Autowired °´ byType ×Ô¶¯×¢Èë£¬Ãæ @Resource Ä¬ÈÏ°´ byName ×Ô¶¯×¢Èë°ÕÁË¡£@Resource ÓĞÁ½¸öÊôĞÔÊÇ±È½ÏÖØÒªµÄ£¬·Ö±ğÊÇ 
-name ºÍ type£¬Spring ½« @Resource ×¢ÊÍµÄ name ÊôĞÔ½âÎöÎª Bean µÄÃû×Ö£¬¶ø type ÊôĞÔÔò½âÎöÎª Bean 
-µÄÀàĞÍ¡£ËùÒÔÈç¹ûÊ¹ÓÃ name ÊôĞÔ£¬ÔòÊ¹ÓÃ byName µÄ×Ô¶¯×¢Èë²ßÂÔ£¬¶øÊ¹ÓÃ type ÊôĞÔÊ±ÔòÊ¹ÓÃ byType ×Ô¶¯×¢Èë²ßÂÔ¡£Èç¹û¼È²»Ö¸¶¨ name 
-Ò²²»Ö¸¶¨ type ÊôĞÔ£¬ÕâÊ±½«Í¨¹ı·´Éä»úÖÆÊ¹ÓÃ byName ×Ô¶¯×¢Èë²ßÂÔ¡£ <BR><BR>Resource ×¢ÊÍÀàÎ»ÓÚ Spring ·¢²¼°üµÄ 
-lib/j2ee/common-annotations.jar Àà°üÖĞ£¬Òò´ËÔÚÊ¹ÓÃÖ®Ç°±ØĞë½«Æä¼ÓÈëµ½ÏîÄ¿µÄÀà¿âÖĞ¡£À´¿´Ò»¸öÊ¹ÓÃ @Resource µÄÀı×Ó£º 
-<BR><BR><BR>Çåµ¥ 16. Ê¹ÓÃ @Resource ×¢ÊÍµÄ Boss.java <BR>
+} </PRE><BR>@Qualifier åªèƒ½å’Œ @Autowired ç»“åˆä½¿ç”¨ï¼Œæ˜¯å¯¹ @Autowired æœ‰ç›Šçš„è¡¥å……ã€‚ä¸€èˆ¬æ¥è®²ï¼Œ@Qualifier 
+å¯¹æ–¹æ³•ç­¾åä¸­å…¥å‚è¿›è¡Œæ³¨é‡Šä¼šé™ä½ä»£ç çš„å¯è¯»æ€§ï¼Œè€Œå¯¹æˆå‘˜å˜é‡æ³¨é‡Šåˆ™ç›¸å¯¹å¥½ä¸€äº›ã€‚ <BR>ä½¿ç”¨ JSR-250 çš„æ³¨é‡Š <BR>Spring ä¸ä½†æ”¯æŒè‡ªå·±å®šä¹‰çš„ 
+@Autowired çš„æ³¨é‡Šï¼Œè¿˜æ”¯æŒå‡ ä¸ªç”± JSR-250 è§„èŒƒå®šä¹‰çš„æ³¨é‡Šï¼Œå®ƒä»¬åˆ†åˆ«æ˜¯ @Resourceã€@PostConstruct ä»¥åŠ 
+@PreDestroyã€‚ <BR><BR>@Resource <BR><BR>@Resource çš„ä½œç”¨ç›¸å½“äº @Autowiredï¼Œåªä¸è¿‡ 
+@Autowired æŒ‰ byType è‡ªåŠ¨æ³¨å…¥ï¼Œé¢ @Resource é»˜è®¤æŒ‰ byName è‡ªåŠ¨æ³¨å…¥ç½¢äº†ã€‚@Resource æœ‰ä¸¤ä¸ªå±æ€§æ˜¯æ¯”è¾ƒé‡è¦çš„ï¼Œåˆ†åˆ«æ˜¯ 
+name å’Œ typeï¼ŒSpring å°† @Resource æ³¨é‡Šçš„ name å±æ€§è§£æä¸º Bean çš„åå­—ï¼Œè€Œ type å±æ€§åˆ™è§£æä¸º Bean 
+çš„ç±»å‹ã€‚æ‰€ä»¥å¦‚æœä½¿ç”¨ name å±æ€§ï¼Œåˆ™ä½¿ç”¨ byName çš„è‡ªåŠ¨æ³¨å…¥ç­–ç•¥ï¼Œè€Œä½¿ç”¨ type å±æ€§æ—¶åˆ™ä½¿ç”¨ byType è‡ªåŠ¨æ³¨å…¥ç­–ç•¥ã€‚å¦‚æœæ—¢ä¸æŒ‡å®š name 
+ä¹Ÿä¸æŒ‡å®š type å±æ€§ï¼Œè¿™æ—¶å°†é€šè¿‡åå°„æœºåˆ¶ä½¿ç”¨ byName è‡ªåŠ¨æ³¨å…¥ç­–ç•¥ã€‚ <BR><BR>Resource æ³¨é‡Šç±»ä½äº Spring å‘å¸ƒåŒ…çš„ 
+lib/j2ee/common-annotations.jar ç±»åŒ…ä¸­ï¼Œå› æ­¤åœ¨ä½¿ç”¨ä¹‹å‰å¿…é¡»å°†å…¶åŠ å…¥åˆ°é¡¹ç›®çš„ç±»åº“ä¸­ã€‚æ¥çœ‹ä¸€ä¸ªä½¿ç”¨ @Resource çš„ä¾‹å­ï¼š 
+<BR><BR><BR>æ¸…å• 16. ä½¿ç”¨ @Resource æ³¨é‡Šçš„ Boss.java <BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN class=keyword>package</SPAN><SPAN>&nbsp;com.baobaotao;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;javax.annotation.Resource;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;Boss&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//&nbsp;×Ô¶¯×¢ÈëÀàĞÍÎª&nbsp;Car&nbsp;µÄ&nbsp;Bean&nbsp;&nbsp;&nbsp; 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>class</SPAN><SPAN>&nbsp;Boss&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//&nbsp;è‡ªåŠ¨æ³¨å…¥ç±»å‹ä¸º&nbsp;Car&nbsp;çš„&nbsp;Bean&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=annotation>@Resource</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;Car&nbsp;car;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//&nbsp;×Ô¶¯×¢Èë&nbsp;bean&nbsp;Ãû³ÆÎª&nbsp;office&nbsp;µÄ&nbsp;Bean&nbsp;&nbsp;&nbsp; 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//&nbsp;è‡ªåŠ¨æ³¨å…¥&nbsp;bean&nbsp;åç§°ä¸º&nbsp;office&nbsp;çš„&nbsp;Bean&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
 class=annotation>@Resource</SPAN><SPAN>(name&nbsp;=&nbsp;</SPAN><SPAN 
-class=string>"office"</SPAN><SPAN>)&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"office"</SPAN><SPAN>)&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;Office&nbsp;office;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">package com.baobaotao;   
   
 import javax.annotation.Resource;   
   
 public class Boss {   
-    // ×Ô¶¯×¢ÈëÀàĞÍÎª Car µÄ Bean   
+    // è‡ªåŠ¨æ³¨å…¥ç±»å‹ä¸º Car çš„ Bean   
     @Resource  
     private Car car;   
   
-    // ×Ô¶¯×¢Èë bean Ãû³ÆÎª office µÄ Bean   
+    // è‡ªåŠ¨æ³¨å…¥ bean åç§°ä¸º office çš„ Bean   
     @Resource(name = "office")   
     private Office office;   
-}   </PRE><BR>Ò»°ãÇé¿öÏÂ£¬ÎÒÃÇÎŞĞèÊ¹ÓÃÀàËÆÓÚ @Resource(type=Car.class) µÄ×¢ÊÍ·½Ê½£¬ÒòÎª Bean µÄÀàĞÍĞÅÏ¢¿ÉÒÔÍ¨¹ı 
-Java ·´Éä´Ó´úÂëÖĞ»ñÈ¡¡£ <BR><BR>ÒªÈÃ JSR-250 µÄ×¢ÊÍÉúĞ§£¬³ıÁËÔÚ Bean ÀàÖĞ±ê×¢ÕâĞ©×¢ÊÍÍâ£¬»¹ĞèÒªÔÚ Spring 
-ÈİÆ÷ÖĞ×¢²áÒ»¸ö¸ºÔğ´¦ÀíÕâĞ©×¢ÊÍµÄ BeanPostProcessor£º <BR>
+}   </PRE><BR>ä¸€èˆ¬æƒ…å†µä¸‹ï¼Œæˆ‘ä»¬æ— éœ€ä½¿ç”¨ç±»ä¼¼äº @Resource(type=Car.class) çš„æ³¨é‡Šæ–¹å¼ï¼Œå› ä¸º Bean çš„ç±»å‹ä¿¡æ¯å¯ä»¥é€šè¿‡ 
+Java åå°„ä»ä»£ç ä¸­è·å–ã€‚ <BR><BR>è¦è®© JSR-250 çš„æ³¨é‡Šç”Ÿæ•ˆï¼Œé™¤äº†åœ¨ Bean ç±»ä¸­æ ‡æ³¨è¿™äº›æ³¨é‡Šå¤–ï¼Œè¿˜éœ€è¦åœ¨ Spring 
+å®¹å™¨ä¸­æ³¨å†Œä¸€ä¸ªè´Ÿè´£å¤„ç†è¿™äº›æ³¨é‡Šçš„ BeanPostProcessorï¼š <BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
-<LI><SPAN><SPAN>&lt;bean&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+<LI><SPAN><SPAN>&lt;bean&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=keyword>class</SPAN><SPAN>=</SPAN><SPAN 
 class=string>"org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"</SPAN><SPAN>/&gt;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">&lt;bean    
   class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/&gt;  </PRE><BR>CommonAnnotationBeanPostProcessor 
-ÊµÏÖÁË BeanPostProcessor ½Ó¿Ú£¬Ëü¸ºÔğÉ¨ÃèÊ¹ÓÃÁË JSR-250 ×¢ÊÍµÄ Bean£¬²¢¶ÔËüÃÇ½øĞĞÏàÓ¦µÄ²Ù×÷¡£ 
-<BR><BR>@PostConstruct ºÍ @PreDestroy <BR><BR>Spring ÈİÆ÷ÖĞµÄ Bean ÊÇÓĞÉúÃüÖÜÆÚµÄ£¬Spring ÔÊĞíÔÚ 
-Bean ÔÚ³õÊ¼»¯Íê³ÉºóÒÔ¼° Bean Ïú»ÙÇ°Ö´ĞĞÌØ¶¨µÄ²Ù×÷£¬Äú¼È¿ÉÒÔÍ¨¹ıÊµÏÖ InitializingBean/DisposableBean 
-½Ó¿ÚÀ´¶¨ÖÆ³õÊ¼»¯Ö®ºó / Ïú»ÙÖ®Ç°µÄ²Ù×÷·½·¨£¬Ò²¿ÉÒÔÍ¨¹ı &lt;bean&gt; ÔªËØµÄ init-method/destroy-method 
-ÊôĞÔÖ¸¶¨³õÊ¼»¯Ö®ºó / Ïú»ÙÖ®Ç°µ÷ÓÃµÄ²Ù×÷·½·¨¡£¹ØÓÚ Spring µÄÉúÃüÖÜÆÚ£¬±ÊÕßÔÚ¡¶¾«Í¨ Spring 2.x¡ªÆóÒµÓ¦ÓÃ¿ª·¢¾«½â¡·µÚ 3 
-ÕÂ½øĞĞÁËÏêÏ¸µÄÃèÊö£¬ÓĞĞËÈ¤µÄ¶ÁÕß¿ÉÒÔ²éÔÄ¡£ <BR><BR>JSR-250 Îª³õÊ¼»¯Ö®ºó/Ïú»ÙÖ®Ç°·½·¨µÄÖ¸¶¨¶¨ÒåÁËÁ½¸ö×¢ÊÍÀà£¬·Ö±ğÊÇ 
-@PostConstruct ºÍ @PreDestroy£¬ÕâÁ½¸ö×¢ÊÍÖ»ÄÜÓ¦ÓÃÓÚ·½·¨ÉÏ¡£±ê×¢ÁË @PostConstruct 
-×¢ÊÍµÄ·½·¨½«ÔÚÀàÊµÀı»¯ºóµ÷ÓÃ£¬¶ø±ê×¢ÁË @PreDestroy µÄ·½·¨½«ÔÚÀàÏú»ÙÖ®Ç°µ÷ÓÃ¡£ <BR><BR><BR>Çåµ¥ 17. Ê¹ÓÃ 
-@PostConstruct ºÍ @PreDestroy ×¢ÊÍµÄ Boss.java <BR>
+å®ç°äº† BeanPostProcessor æ¥å£ï¼Œå®ƒè´Ÿè´£æ‰«æä½¿ç”¨äº† JSR-250 æ³¨é‡Šçš„ Beanï¼Œå¹¶å¯¹å®ƒä»¬è¿›è¡Œç›¸åº”çš„æ“ä½œã€‚ 
+<BR><BR>@PostConstruct å’Œ @PreDestroy <BR><BR>Spring å®¹å™¨ä¸­çš„ Bean æ˜¯æœ‰ç”Ÿå‘½å‘¨æœŸçš„ï¼ŒSpring å…è®¸åœ¨ 
+Bean åœ¨åˆå§‹åŒ–å®Œæˆåä»¥åŠ Bean é”€æ¯å‰æ‰§è¡Œç‰¹å®šçš„æ“ä½œï¼Œæ‚¨æ—¢å¯ä»¥é€šè¿‡å®ç° InitializingBean/DisposableBean 
+æ¥å£æ¥å®šåˆ¶åˆå§‹åŒ–ä¹‹å / é”€æ¯ä¹‹å‰çš„æ“ä½œæ–¹æ³•ï¼Œä¹Ÿå¯ä»¥é€šè¿‡ &lt;bean&gt; å…ƒç´ çš„ init-method/destroy-method 
+å±æ€§æŒ‡å®šåˆå§‹åŒ–ä¹‹å / é”€æ¯ä¹‹å‰è°ƒç”¨çš„æ“ä½œæ–¹æ³•ã€‚å…³äº Spring çš„ç”Ÿå‘½å‘¨æœŸï¼Œç¬”è€…åœ¨ã€Šç²¾é€š Spring 2.xâ€”ä¼ä¸šåº”ç”¨å¼€å‘ç²¾è§£ã€‹ç¬¬ 3 
+ç« è¿›è¡Œäº†è¯¦ç»†çš„æè¿°ï¼Œæœ‰å…´è¶£çš„è¯»è€…å¯ä»¥æŸ¥é˜…ã€‚ <BR><BR>JSR-250 ä¸ºåˆå§‹åŒ–ä¹‹å/é”€æ¯ä¹‹å‰æ–¹æ³•çš„æŒ‡å®šå®šä¹‰äº†ä¸¤ä¸ªæ³¨é‡Šç±»ï¼Œåˆ†åˆ«æ˜¯ 
+@PostConstruct å’Œ @PreDestroyï¼Œè¿™ä¸¤ä¸ªæ³¨é‡Šåªèƒ½åº”ç”¨äºæ–¹æ³•ä¸Šã€‚æ ‡æ³¨äº† @PostConstruct 
+æ³¨é‡Šçš„æ–¹æ³•å°†åœ¨ç±»å®ä¾‹åŒ–åè°ƒç”¨ï¼Œè€Œæ ‡æ³¨äº† @PreDestroy çš„æ–¹æ³•å°†åœ¨ç±»é”€æ¯ä¹‹å‰è°ƒç”¨ã€‚ <BR><BR><BR>æ¸…å• 17. ä½¿ç”¨ 
+@PostConstruct å’Œ @PreDestroy æ³¨é‡Šçš„ Boss.java <BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN class=keyword>package</SPAN><SPAN>&nbsp;com.baobaotao;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;javax.annotation.Resource;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;javax.annotation.PostConstruct;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;javax.annotation.PreDestroy;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;Boss&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>class</SPAN><SPAN>&nbsp;Boss&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=annotation>@Resource</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;Car&nbsp;car;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
 class=annotation>@Resource</SPAN><SPAN>(name&nbsp;=&nbsp;</SPAN><SPAN 
-class=string>"office"</SPAN><SPAN>)&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"office"</SPAN><SPAN>)&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;Office&nbsp;office;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=annotation>@PostConstruct</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>void</SPAN><SPAN>&nbsp;postConstruct1(){&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>void</SPAN><SPAN>&nbsp;postConstruct1(){&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(</SPAN><SPAN 
-class=string>"postConstruct1"</SPAN><SPAN>);&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=string>"postConstruct1"</SPAN><SPAN>);&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=annotation>@PreDestroy</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>void</SPAN><SPAN>&nbsp;preDestroy1(){&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>void</SPAN><SPAN>&nbsp;preDestroy1(){&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(</SPAN><SPAN 
-class=string>"preDestroy1"</SPAN><SPAN>);&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;¡­&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=string>"preDestroy1"</SPAN><SPAN>);&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;â€¦&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>}&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">package com.baobaotao;   
   
 import javax.annotation.Resource;   
@@ -1154,47 +1155,47 @@ public class Boss {
     public void preDestroy1(){   
         System.out.println("preDestroy1");    
     }   
-    ¡­   
-}  </PRE><BR>ÄúÖ»ĞèÒªÔÚ·½·¨Ç°±ê×¢ @PostConstruct »ò @PreDestroy£¬ÕâĞ©·½·¨¾Í»áÔÚ Bean ³õÊ¼»¯ºó»òÏú»ÙÖ®Ç°±» 
-Spring ÈİÆ÷Ö´ĞĞÁË¡£ <BR><BR>ÎÒÃÇÖªµÀ£¬²»¹ÜÊÇÍ¨¹ıÊµÏÖ InitializingBean/DisposableBean ½Ó¿Ú£¬»¹ÊÇÍ¨¹ı 
-&lt;bean&gt; ÔªËØµÄ init-method/destroy-method ÊôĞÔ½øĞĞÅäÖÃ£¬¶¼Ö»ÄÜÎª Bean Ö¸¶¨Ò»¸ö³õÊ¼»¯ / 
-Ïú»ÙµÄ·½·¨¡£µ«ÊÇÊ¹ÓÃ @PostConstruct ºÍ @PreDestroy ×¢ÊÍÈ´¿ÉÒÔÖ¸¶¨¶à¸ö³õÊ¼»¯ / Ïú»Ù·½·¨£¬ÄÇĞ©±»±ê×¢ @PostConstruct 
-»ò @PreDestroy ×¢ÊÍµÄ·½·¨¶¼»áÔÚ³õÊ¼»¯ / Ïú»ÙÊ±±»Ö´ĞĞ¡£ <BR><BR>Í¨¹ıÒÔÏÂµÄ²âÊÔ´úÂë£¬Äú½«¿ÉÒÔ¿´µ½ Bean µÄ³õÊ¼»¯ / 
-Ïú»Ù·½·¨ÊÇÈçºÎ±»Ö´ĞĞµÄ£º <BR><BR><BR>Çåµ¥ 18. ²âÊÔÀà´úÂë <BR>
+    â€¦   
+}  </PRE><BR>æ‚¨åªéœ€è¦åœ¨æ–¹æ³•å‰æ ‡æ³¨ @PostConstruct æˆ– @PreDestroyï¼Œè¿™äº›æ–¹æ³•å°±ä¼šåœ¨ Bean åˆå§‹åŒ–åæˆ–é”€æ¯ä¹‹å‰è¢« 
+Spring å®¹å™¨æ‰§è¡Œäº†ã€‚ <BR><BR>æˆ‘ä»¬çŸ¥é“ï¼Œä¸ç®¡æ˜¯é€šè¿‡å®ç° InitializingBean/DisposableBean æ¥å£ï¼Œè¿˜æ˜¯é€šè¿‡ 
+&lt;bean&gt; å…ƒç´ çš„ init-method/destroy-method å±æ€§è¿›è¡Œé…ç½®ï¼Œéƒ½åªèƒ½ä¸º Bean æŒ‡å®šä¸€ä¸ªåˆå§‹åŒ– / 
+é”€æ¯çš„æ–¹æ³•ã€‚ä½†æ˜¯ä½¿ç”¨ @PostConstruct å’Œ @PreDestroy æ³¨é‡Šå´å¯ä»¥æŒ‡å®šå¤šä¸ªåˆå§‹åŒ– / é”€æ¯æ–¹æ³•ï¼Œé‚£äº›è¢«æ ‡æ³¨ @PostConstruct 
+æˆ– @PreDestroy æ³¨é‡Šçš„æ–¹æ³•éƒ½ä¼šåœ¨åˆå§‹åŒ– / é”€æ¯æ—¶è¢«æ‰§è¡Œã€‚ <BR><BR>é€šè¿‡ä»¥ä¸‹çš„æµ‹è¯•ä»£ç ï¼Œæ‚¨å°†å¯ä»¥çœ‹åˆ° Bean çš„åˆå§‹åŒ– / 
+é”€æ¯æ–¹æ³•æ˜¯å¦‚ä½•è¢«æ‰§è¡Œçš„ï¼š <BR><BR><BR>æ¸…å• 18. æµ‹è¯•ç±»ä»£ç  <BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN class=keyword>package</SPAN><SPAN>&nbsp;com.baobaotao;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;org.springframework.context.support.ClassPathXmlApplicationContext;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;AnnoIoCTest&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=keyword>class</SPAN><SPAN>&nbsp;AnnoIoCTest&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>static</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>void</SPAN><SPAN>&nbsp;main(String[]&nbsp;args)&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>void</SPAN><SPAN>&nbsp;main(String[]&nbsp;args)&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String[]&nbsp;locations&nbsp;=&nbsp;{</SPAN><SPAN 
-class=string>"beans.xml"</SPAN><SPAN>};&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ClassPathXmlApplicationContext&nbsp;ctx&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=string>"beans.xml"</SPAN><SPAN>};&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ClassPathXmlApplicationContext&nbsp;ctx&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;ClassPathXmlApplicationContext(locations);&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Boss&nbsp;boss&nbsp;=&nbsp;(Boss)&nbsp;ctx.getBean(</SPAN><SPAN 
-class=string>"boss"</SPAN><SPAN>);&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(boss);&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=string>"boss"</SPAN><SPAN>);&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(boss);&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctx.destroy();</SPAN><SPAN 
-class=comment>//&nbsp;¹Ø±Õ&nbsp;Spring&nbsp;ÈİÆ÷£¬ÒÔ´¥·¢&nbsp;Bean&nbsp;Ïú»Ù·½·¨µÄÖ´ĞĞ&nbsp;&nbsp;&nbsp; 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=comment>//&nbsp;å…³é—­&nbsp;Spring&nbsp;å®¹å™¨ï¼Œä»¥è§¦å‘&nbsp;Bean&nbsp;é”€æ¯æ–¹æ³•çš„æ‰§è¡Œ&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>}&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">package com.baobaotao;   
   
 import org.springframework.context.support.ClassPathXmlApplicationContext;   
@@ -1207,78 +1208,78 @@ public class AnnoIoCTest {
             new ClassPathXmlApplicationContext(locations);   
         Boss boss = (Boss) ctx.getBean("boss");   
         System.out.println(boss);   
-        ctx.destroy();// ¹Ø±Õ Spring ÈİÆ÷£¬ÒÔ´¥·¢ Bean Ïú»Ù·½·¨µÄÖ´ĞĞ   
+        ctx.destroy();// å…³é—­ Spring å®¹å™¨ï¼Œä»¥è§¦å‘ Bean é”€æ¯æ–¹æ³•çš„æ‰§è¡Œ   
     }   
 }  
-</PRE><BR>ÕâÊ±£¬Äú½«¿´µ½±ê×¢ÁË @PostConstruct µÄ postConstruct1() ·½·¨½«ÔÚ Spring ÈİÆ÷Æô¶¯Ê±£¬´´½¨ Boss 
-Bean µÄÊ±ºò±»´¥·¢Ö´ĞĞ£¬¶ø±ê×¢ÁË @PreDestroy ×¢ÊÍµÄ preDestroy1() ·½·¨½«ÔÚ Spring ÈİÆ÷¹Ø±ÕÇ°Ïú»Ù Boss Bean 
-µÄÊ±ºò±»´¥·¢Ö´ĞĞ¡£ <BR><BR><BR><BR><BR><BR>Ê¹ÓÃ &lt;context:annotation-config/&gt; ¼ò»¯ÅäÖÃ 
-<BR><BR>Spring 2.1 Ìí¼ÓÁËÒ»¸öĞÂµÄ context µÄ Schema 
-ÃüÃû¿Õ¼ä£¬¸ÃÃüÃû¿Õ¼ä¶Ô×¢ÊÍÇı¶¯¡¢ÊôĞÔÎÄ¼şÒıÈë¡¢¼ÓÔØÆÚÖ¯ÈëµÈ¹¦ÄÜÌá¹©ÁË±ã½İµÄÅäÖÃ¡£ÎÒÃÇÖªµÀ×¢ÊÍ±¾ÉíÊÇ²»»á×öÈÎºÎÊÂÇéµÄ£¬Ëü½öÌá¹©ÔªÊı¾İĞÅÏ¢¡£ÒªÊ¹ÔªÊı¾İĞÅÏ¢ÕæÕıÆğ×÷ÓÃ£¬±ØĞëÈÃ¸ºÔğ´¦ÀíÕâĞ©ÔªÊı¾İµÄ´¦ÀíÆ÷¹¤×÷ÆğÀ´¡£ 
-<BR><BR>¶øÎÒÃÇÇ°ÃæËù½éÉÜµÄ AutowiredAnnotationBeanPostProcessor ºÍ 
-CommonAnnotationBeanPostProcessor ¾ÍÊÇ´¦ÀíÕâĞ©×¢ÊÍÔªÊı¾İµÄ´¦ÀíÆ÷¡£µ«ÊÇÖ±½ÓÔÚ Spring ÅäÖÃÎÄ¼şÖĞ¶¨ÒåÕâĞ© Bean 
-ÏÔµÃ±È½Ï±¿×¾¡£Spring ÎªÎÒÃÇÌá¹©ÁËÒ»ÖÖ·½±ãµÄ×¢²áÕâĞ© BeanPostProcessor µÄ·½Ê½£¬Õâ¾ÍÊÇ 
-&lt;context:annotation-config/&gt;¡£Çë¿´ÏÂÃæµÄÅäÖÃ£º <BR><BR><BR>Çåµ¥ 19. µ÷Õû beans.xml ÅäÖÃÎÄ¼ş 
+</PRE><BR>è¿™æ—¶ï¼Œæ‚¨å°†çœ‹åˆ°æ ‡æ³¨äº† @PostConstruct çš„ postConstruct1() æ–¹æ³•å°†åœ¨ Spring å®¹å™¨å¯åŠ¨æ—¶ï¼Œåˆ›å»º Boss 
+Bean çš„æ—¶å€™è¢«è§¦å‘æ‰§è¡Œï¼Œè€Œæ ‡æ³¨äº† @PreDestroy æ³¨é‡Šçš„ preDestroy1() æ–¹æ³•å°†åœ¨ Spring å®¹å™¨å…³é—­å‰é”€æ¯ Boss Bean 
+çš„æ—¶å€™è¢«è§¦å‘æ‰§è¡Œã€‚ <BR><BR><BR><BR><BR><BR>ä½¿ç”¨ &lt;context:annotation-config/&gt; ç®€åŒ–é…ç½® 
+<BR><BR>Spring 2.1 æ·»åŠ äº†ä¸€ä¸ªæ–°çš„ context çš„ Schema 
+å‘½åç©ºé—´ï¼Œè¯¥å‘½åç©ºé—´å¯¹æ³¨é‡Šé©±åŠ¨ã€å±æ€§æ–‡ä»¶å¼•å…¥ã€åŠ è½½æœŸç»‡å…¥ç­‰åŠŸèƒ½æä¾›äº†ä¾¿æ·çš„é…ç½®ã€‚æˆ‘ä»¬çŸ¥é“æ³¨é‡Šæœ¬èº«æ˜¯ä¸ä¼šåšä»»ä½•äº‹æƒ…çš„ï¼Œå®ƒä»…æä¾›å…ƒæ•°æ®ä¿¡æ¯ã€‚è¦ä½¿å…ƒæ•°æ®ä¿¡æ¯çœŸæ­£èµ·ä½œç”¨ï¼Œå¿…é¡»è®©è´Ÿè´£å¤„ç†è¿™äº›å…ƒæ•°æ®çš„å¤„ç†å™¨å·¥ä½œèµ·æ¥ã€‚ 
+<BR><BR>è€Œæˆ‘ä»¬å‰é¢æ‰€ä»‹ç»çš„ AutowiredAnnotationBeanPostProcessor å’Œ 
+CommonAnnotationBeanPostProcessor å°±æ˜¯å¤„ç†è¿™äº›æ³¨é‡Šå…ƒæ•°æ®çš„å¤„ç†å™¨ã€‚ä½†æ˜¯ç›´æ¥åœ¨ Spring é…ç½®æ–‡ä»¶ä¸­å®šä¹‰è¿™äº› Bean 
+æ˜¾å¾—æ¯”è¾ƒç¬¨æ‹™ã€‚Spring ä¸ºæˆ‘ä»¬æä¾›äº†ä¸€ç§æ–¹ä¾¿çš„æ³¨å†Œè¿™äº› BeanPostProcessor çš„æ–¹å¼ï¼Œè¿™å°±æ˜¯ 
+&lt;context:annotation-config/&gt;ã€‚è¯·çœ‹ä¸‹é¢çš„é…ç½®ï¼š <BR><BR><BR>æ¸…å• 19. è°ƒæ•´ beans.xml é…ç½®æ–‡ä»¶ 
 <BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN>&lt;?xml&nbsp;version=</SPAN><SPAN 
 class=string>"1.0"</SPAN><SPAN>&nbsp;encoding=</SPAN><SPAN 
-class=string>"UTF-8"</SPAN><SPAN>&nbsp;?&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"UTF-8"</SPAN><SPAN>&nbsp;?&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&lt;beans&nbsp;xmlns=</SPAN><SPAN 
 class=string>"http://www.springframework.org/schema/beans"</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;xmlns:xsi=</SPAN><SPAN 
 class=string>"http://www.w3.org/2001/XMLSchema-instance"</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xmlns:context=</SPAN><SPAN 
 class=string>"http://www.springframework.org/schema/context"</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xsi:schemaLocation="http:</SPAN><SPAN 
 class=comment>//www.springframework.org/schema/beans&nbsp;&nbsp;&nbsp;&nbsp; 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;http:</SPAN><SPAN 
 class=comment>//www.springframework.org/schema/beans/spring-beans-2.5.xsd&nbsp;&nbsp;&nbsp; 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;http:</SPAN><SPAN 
 class=comment>//www.springframework.org/schema/context&nbsp;&nbsp;&nbsp;&nbsp; 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;http:</SPAN><SPAN 
 class=comment>//www.springframework.org/schema/context/spring-context-2.5.xsd"&gt;&nbsp;&nbsp; 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;context:annotation-config/&gt;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;context:annotation-config/&gt;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;id=</SPAN><SPAN 
 class=string>"boss"</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>class</SPAN><SPAN>=</SPAN><SPAN 
-class=string>"com.baobaotao.Boss"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"com.baobaotao.Boss"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;id=</SPAN><SPAN 
 class=string>"office"</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>class</SPAN><SPAN>=</SPAN><SPAN 
-class=string>"com.baobaotao.Office"</SPAN><SPAN>&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"com.baobaotao.Office"</SPAN><SPAN>&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</SPAN><SPAN 
 class=string>"officeNo"</SPAN><SPAN>&nbsp;value=</SPAN><SPAN 
-class=string>"001"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=string>"001"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;id=</SPAN><SPAN 
 class=string>"car"</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>class</SPAN><SPAN>=</SPAN><SPAN 
 class=string>"com.baobaotao.Car"</SPAN><SPAN>&nbsp;scope=</SPAN><SPAN 
-class=string>"singleton"</SPAN><SPAN>&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"singleton"</SPAN><SPAN>&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</SPAN><SPAN 
 class=string>"brand"</SPAN><SPAN>&nbsp;value=</SPAN><SPAN 
-class=string>"&nbsp;ºìÆì&nbsp;CA72"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"&nbsp;çº¢æ——&nbsp;CA72"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</SPAN><SPAN 
 class=string>"price"</SPAN><SPAN>&nbsp;value=</SPAN><SPAN 
-class=string>"2000"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=string>"2000"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&lt;/beans&gt;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;  
 &lt;beans xmlns="http://www.springframework.org/schema/beans"  
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
@@ -1295,71 +1296,71 @@ class=string>"2000"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI
         &lt;property name="officeNo" value="001"/&gt;  
     &lt;/bean&gt;  
     &lt;bean id="car" class="com.baobaotao.Car" scope="singleton"&gt;  
-        &lt;property name="brand" value=" ºìÆì CA72"/&gt;  
+        &lt;property name="brand" value=" çº¢æ—— CA72"/&gt;  
         &lt;property name="price" value="2000"/&gt;  
     &lt;/bean&gt;  
 &lt;/beans&gt;  
-</PRE><BR>&lt;context:annotationconfig/&gt; ½«ÒşÊ½µØÏò Spring ÈİÆ÷×¢²á 
-AutowiredAnnotationBeanPostProcessor¡¢CommonAnnotationBeanPostProcessor¡¢PersistenceAnnotationBeanPostProcessor 
-ÒÔ¼° equiredAnnotationBeanPostProcessor Õâ 4 ¸ö BeanPostProcessor¡£ <BR><BR>ÔÚÅäÖÃÎÄ¼şÖĞÊ¹ÓÃ 
-context ÃüÃû¿Õ¼äÖ®Ç°£¬±ØĞëÔÚ &lt;beans&gt; ÔªËØÖĞÉùÃ÷ context ÃüÃû¿Õ¼ä¡£ <BR><BR><BR><BR><BR><BR>Ê¹ÓÃ 
-@Component <BR><BR>ËäÈ»ÎÒÃÇ¿ÉÒÔÍ¨¹ı @Autowired »ò @Resource ÔÚ Bean ÀàÖĞÊ¹ÓÃ×Ô¶¯×¢Èë¹¦ÄÜ£¬µ«ÊÇ Bean »¹ÊÇÔÚ 
-XML ÎÄ¼şÖĞÍ¨¹ı &lt;bean&gt; ½øĞĞ¶¨Òå ¡ª¡ª Ò²¾ÍÊÇËµ£¬ÔÚ XML ÅäÖÃÎÄ¼şÖĞ¶¨Òå Bean£¬Í¨¹ı @Autowired »ò @Resource 
-Îª Bean µÄ³ÉÔ±±äÁ¿¡¢·½·¨Èë²Î»ò¹¹Ôìº¯ÊıÈë²ÎÌá¹©×Ô¶¯×¢ÈëµÄ¹¦ÄÜ¡£ÄÜ·ñÒ²Í¨¹ı×¢ÊÍ¶¨Òå Bean£¬´Ó XML ÅäÖÃÎÄ¼şÖĞÍêÈ«ÒÆ³ı Bean 
-¶¨ÒåµÄÅäÖÃÄØ£¿´ğ°¸ÊÇ¿Ï¶¨µÄ£¬ÎÒÃÇÍ¨¹ı Spring 2.5 Ìá¹©µÄ @Component ×¢ÊÍ¾Í¿ÉÒÔ´ïµ½Õâ¸öÄ¿±êÁË¡£ <BR><BR>ÏÂÃæ£¬ÎÒÃÇÍêÈ«Ê¹ÓÃ×¢ÊÍ¶¨Òå 
-Bean ²¢Íê³É Bean Ö®¼ä×°Åä£º <BR><BR><BR>Çåµ¥ 20. Ê¹ÓÃ @Component ×¢ÊÍµÄ Car.java <BR>
+</PRE><BR>&lt;context:annotationconfig/&gt; å°†éšå¼åœ°å‘ Spring å®¹å™¨æ³¨å†Œ 
+AutowiredAnnotationBeanPostProcessorã€CommonAnnotationBeanPostProcessorã€PersistenceAnnotationBeanPostProcessor 
+ä»¥åŠ equiredAnnotationBeanPostProcessor è¿™ 4 ä¸ª BeanPostProcessorã€‚ <BR><BR>åœ¨é…ç½®æ–‡ä»¶ä¸­ä½¿ç”¨ 
+context å‘½åç©ºé—´ä¹‹å‰ï¼Œå¿…é¡»åœ¨ &lt;beans&gt; å…ƒç´ ä¸­å£°æ˜ context å‘½åç©ºé—´ã€‚ <BR><BR><BR><BR><BR><BR>ä½¿ç”¨ 
+@Component <BR><BR>è™½ç„¶æˆ‘ä»¬å¯ä»¥é€šè¿‡ @Autowired æˆ– @Resource åœ¨ Bean ç±»ä¸­ä½¿ç”¨è‡ªåŠ¨æ³¨å…¥åŠŸèƒ½ï¼Œä½†æ˜¯ Bean è¿˜æ˜¯åœ¨ 
+XML æ–‡ä»¶ä¸­é€šè¿‡ &lt;bean&gt; è¿›è¡Œå®šä¹‰ â€”â€” ä¹Ÿå°±æ˜¯è¯´ï¼Œåœ¨ XML é…ç½®æ–‡ä»¶ä¸­å®šä¹‰ Beanï¼Œé€šè¿‡ @Autowired æˆ– @Resource 
+ä¸º Bean çš„æˆå‘˜å˜é‡ã€æ–¹æ³•å…¥å‚æˆ–æ„é€ å‡½æ•°å…¥å‚æä¾›è‡ªåŠ¨æ³¨å…¥çš„åŠŸèƒ½ã€‚èƒ½å¦ä¹Ÿé€šè¿‡æ³¨é‡Šå®šä¹‰ Beanï¼Œä» XML é…ç½®æ–‡ä»¶ä¸­å®Œå…¨ç§»é™¤ Bean 
+å®šä¹‰çš„é…ç½®å‘¢ï¼Ÿç­”æ¡ˆæ˜¯è‚¯å®šçš„ï¼Œæˆ‘ä»¬é€šè¿‡ Spring 2.5 æä¾›çš„ @Component æ³¨é‡Šå°±å¯ä»¥è¾¾åˆ°è¿™ä¸ªç›®æ ‡äº†ã€‚ <BR><BR>ä¸‹é¢ï¼Œæˆ‘ä»¬å®Œå…¨ä½¿ç”¨æ³¨é‡Šå®šä¹‰ 
+Bean å¹¶å®Œæˆ Bean ä¹‹é—´è£…é…ï¼š <BR><BR><BR>æ¸…å• 20. ä½¿ç”¨ @Component æ³¨é‡Šçš„ Car.java <BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN class=keyword>package</SPAN><SPAN>&nbsp;com.baobaotao;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;org.springframework.stereotype.Component;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=annotation>@Component</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;Car&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;¡­&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=keyword>class</SPAN><SPAN>&nbsp;Car&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;â€¦&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>}&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">package com.baobaotao;   
   
 import org.springframework.stereotype.Component;   
   
 @Component  
 public class Car {   
-    ¡­   
-}  </PRE><BR>½öĞèÒªÔÚÀà¶¨Òå´¦£¬Ê¹ÓÃ @Component ×¢ÊÍ¾Í¿ÉÒÔ½«Ò»¸öÀà¶¨ÒåÁË Spring ÈİÆ÷ÖĞµÄ Bean¡£ÏÂÃæµÄ´úÂë½« Office 
-¶¨ÒåÎªÒ»¸ö Bean£º <BR><BR><BR>Çåµ¥ 21. Ê¹ÓÃ @Component ×¢ÊÍµÄ Office.java <BR>
+    â€¦   
+}  </PRE><BR>ä»…éœ€è¦åœ¨ç±»å®šä¹‰å¤„ï¼Œä½¿ç”¨ @Component æ³¨é‡Šå°±å¯ä»¥å°†ä¸€ä¸ªç±»å®šä¹‰äº† Spring å®¹å™¨ä¸­çš„ Beanã€‚ä¸‹é¢çš„ä»£ç å°† Office 
+å®šä¹‰ä¸ºä¸€ä¸ª Beanï¼š <BR><BR><BR>æ¸…å• 21. ä½¿ç”¨ @Component æ³¨é‡Šçš„ Office.java <BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN class=keyword>package</SPAN><SPAN>&nbsp;com.baobaotao;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;org.springframework.stereotype.Component;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=annotation>@Component</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;Office&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>class</SPAN><SPAN>&nbsp;Office&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
 class=keyword>private</SPAN><SPAN>&nbsp;String&nbsp;officeNo&nbsp;=&nbsp;</SPAN><SPAN 
-class=string>"001"</SPAN><SPAN>;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;¡­&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=string>"001"</SPAN><SPAN>;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;â€¦&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">package com.baobaotao;   
   
 import org.springframework.stereotype.Component;   
@@ -1367,47 +1368,47 @@ import org.springframework.stereotype.Component;
 @Component  
 public class Office {   
     private String officeNo = "001";   
-    ¡­   
-}   </PRE><BR>ÕâÑù£¬ÎÒÃÇ¾Í¿ÉÒÔÔÚ Boss ÀàÖĞÍ¨¹ı @Autowired ×¢ÈëÇ°Ãæ¶¨ÒåµÄ Car ºÍ Office Bean ÁË¡£ 
-<BR><BR><BR>Çåµ¥ 22. Ê¹ÓÃ @Component ×¢ÊÍµÄ Boss.java <BR>
+    â€¦   
+}   </PRE><BR>è¿™æ ·ï¼Œæˆ‘ä»¬å°±å¯ä»¥åœ¨ Boss ç±»ä¸­é€šè¿‡ @Autowired æ³¨å…¥å‰é¢å®šä¹‰çš„ Car å’Œ Office Bean äº†ã€‚ 
+<BR><BR><BR>æ¸…å• 22. ä½¿ç”¨ @Component æ³¨é‡Šçš„ Boss.java <BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN class=keyword>package</SPAN><SPAN>&nbsp;com.baobaotao;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;org.springframework.beans.factory.annotation.Autowired;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;org.springframework.beans.factory.annotation.Required;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;org.springframework.beans.factory.annotation.Qualifier;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;org.springframework.stereotype.Component;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=annotation>@Component</SPAN><SPAN>(</SPAN><SPAN 
-class=string>"boss"</SPAN><SPAN>)&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"boss"</SPAN><SPAN>)&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;Boss&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>class</SPAN><SPAN>&nbsp;Boss&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=annotation>@Autowired</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;Car&nbsp;car;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=annotation>@Autowired</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;Office&nbsp;office;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;¡­&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;â€¦&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>}&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">package com.baobaotao;   
   
 import org.springframework.beans.factory.annotation.Autowired;   
@@ -1422,47 +1423,47 @@ public class Boss {
   
     @Autowired  
     private Office office;   
-    ¡­   
-}  </PRE><BR>@Component ÓĞÒ»¸ö¿ÉÑ¡µÄÈë²Î£¬ÓÃÓÚÖ¸¶¨ Bean µÄÃû³Æ£¬ÔÚ Boss ÖĞ£¬ÎÒÃÇ¾Í½« Bean 
-Ãû³Æ¶¨ÒåÎª¡°boss¡±¡£Ò»°ãÇé¿öÏÂ£¬Bean ¶¼ÊÇ singleton µÄ£¬ĞèÒª×¢Èë Bean µÄµØ·½½öĞèÒªÍ¨¹ı byType 
-²ßÂÔ¾Í¿ÉÒÔ×Ô¶¯×¢ÈëÁË£¬ËùÒÔ´ó¿É²»±ØÖ¸¶¨ Bean µÄÃû³Æ¡£ <BR><BR>ÔÚÊ¹ÓÃ @Component ×¢ÊÍºó£¬Spring 
-ÈİÆ÷±ØĞëÆôÓÃÀàÉ¨Ãè»úÖÆÒÔÆôÓÃ×¢ÊÍÇı¶¯ Bean ¶¨ÒåºÍ×¢ÊÍÇı¶¯ Bean ×Ô¶¯×¢ÈëµÄ²ßÂÔ¡£Spring 2.5 ¶Ô context 
-ÃüÃû¿Õ¼ä½øĞĞÁËÀ©Õ¹£¬Ìá¹©ÁËÕâÒ»¹¦ÄÜ£¬Çë¿´ÏÂÃæµÄÅäÖÃ£º <BR><BR><BR>Çåµ¥ 23. ¼ò»¯°æµÄ beans.xml <BR>
+    â€¦   
+}  </PRE><BR>@Component æœ‰ä¸€ä¸ªå¯é€‰çš„å…¥å‚ï¼Œç”¨äºæŒ‡å®š Bean çš„åç§°ï¼Œåœ¨ Boss ä¸­ï¼Œæˆ‘ä»¬å°±å°† Bean 
+åç§°å®šä¹‰ä¸ºâ€œbossâ€ã€‚ä¸€èˆ¬æƒ…å†µä¸‹ï¼ŒBean éƒ½æ˜¯ singleton çš„ï¼Œéœ€è¦æ³¨å…¥ Bean çš„åœ°æ–¹ä»…éœ€è¦é€šè¿‡ byType 
+ç­–ç•¥å°±å¯ä»¥è‡ªåŠ¨æ³¨å…¥äº†ï¼Œæ‰€ä»¥å¤§å¯ä¸å¿…æŒ‡å®š Bean çš„åç§°ã€‚ <BR><BR>åœ¨ä½¿ç”¨ @Component æ³¨é‡Šåï¼ŒSpring 
+å®¹å™¨å¿…é¡»å¯ç”¨ç±»æ‰«ææœºåˆ¶ä»¥å¯ç”¨æ³¨é‡Šé©±åŠ¨ Bean å®šä¹‰å’Œæ³¨é‡Šé©±åŠ¨ Bean è‡ªåŠ¨æ³¨å…¥çš„ç­–ç•¥ã€‚Spring 2.5 å¯¹ context 
+å‘½åç©ºé—´è¿›è¡Œäº†æ‰©å±•ï¼Œæä¾›äº†è¿™ä¸€åŠŸèƒ½ï¼Œè¯·çœ‹ä¸‹é¢çš„é…ç½®ï¼š <BR><BR><BR>æ¸…å• 23. ç®€åŒ–ç‰ˆçš„ beans.xml <BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN>&lt;?xml&nbsp;version=</SPAN><SPAN 
 class=string>"1.0"</SPAN><SPAN>&nbsp;encoding=</SPAN><SPAN 
-class=string>"UTF-8"</SPAN><SPAN>&nbsp;?&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"UTF-8"</SPAN><SPAN>&nbsp;?&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&lt;beans&nbsp;xmlns=</SPAN><SPAN 
 class=string>"http://www.springframework.org/schema/beans"</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;xmlns:xsi=</SPAN><SPAN 
 class=string>"http://www.w3.org/2001/XMLSchema-instance"</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;xmlns:context=</SPAN><SPAN 
 class=string>"http://www.springframework.org/schema/context"</SPAN><SPAN>&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;xsi:schemaLocation="http:</SPAN><SPAN 
 class=comment>//www.springframework.org/schema/beans&nbsp;&nbsp;&nbsp;&nbsp; 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;http:</SPAN><SPAN 
 class=comment>//www.springframework.org/schema/beans/spring-beans-2.5.xsd&nbsp;&nbsp;&nbsp; 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;http:</SPAN><SPAN 
 class=comment>//www.springframework.org/schema/context&nbsp;&nbsp;&nbsp;&nbsp; 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;http:</SPAN><SPAN 
 class=comment>//www.springframework.org/schema/context/spring-context-2.5.xsd"&gt;&nbsp;&nbsp; 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;context:component-scan&nbsp;base-</SPAN><SPAN 
 class=keyword>package</SPAN><SPAN>=</SPAN><SPAN 
-class=string>"com.baobaotao"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"com.baobaotao"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&lt;/beans&gt;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;  
 &lt;beans xmlns="http://www.springframework.org/schema/beans"  
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
@@ -1472,98 +1473,101 @@ class=string>"com.baobaotao"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></
  http://www.springframework.org/schema/context    
  http://www.springframework.org/schema/context/spring-context-2.5.xsd"&gt;  
     &lt;context:component-scan base-package="com.baobaotao"/&gt;  
-&lt;/beans&gt;  </PRE><BR>ÕâÀï£¬ËùÓĞÍ¨¹ı &lt;bean&gt; ÔªËØ¶¨Òå Bean µÄÅäÖÃÄÚÈİÒÑ¾­±»ÒÆ³ı£¬½öĞèÒªÌí¼ÓÒ»ĞĞ 
-&lt;context:component-scan/&gt; ÅäÖÃ¾Í½â¾öËùÓĞÎÊÌâÁË¡ª¡ªSpring XML 
-ÅäÖÃÎÄ¼şµÃµ½ÁË¼«ÖÂµÄ¼ò»¯£¨µ±È»ÅäÖÃÔªÊı¾İ»¹ÊÇĞèÒªµÄ£¬Ö»²»¹ıÒÔ×¢ÊÍĞÎÊ½´æÔÚ°ÕÁË£©¡£&lt;context:component-scan/&gt; µÄ 
-base-package ÊôĞÔÖ¸¶¨ÁËĞèÒªÉ¨ÃèµÄÀà°ü£¬Àà°ü¼°Æäµİ¹é×Ó°üÖĞËùÓĞµÄÀà¶¼»á±»´¦Àí¡£ 
-<BR><BR>&lt;context:component-scan/&gt; »¹ÔÊĞí¶¨Òå¹ıÂËÆ÷½«»ù°üÏÂµÄÄ³Ğ©ÀàÄÉÈë»òÅÅ³ı¡£Spring Ö§³ÖÒÔÏÂ 4 
-ÖÖÀàĞÍµÄ¹ıÂË·½Ê½£¬Í¨¹ıÏÂ±íËµÃ÷£º <BR><BR><BR>±í 1. É¨Ãè¹ıÂË·½Ê½ <BR>¹ıÂËÆ÷ÀàĞÍ ËµÃ÷ <BR>×¢ÊÍ ¼ÙÈç 
-com.baobaotao.SomeAnnotation ÊÇÒ»¸ö×¢ÊÍÀà£¬ÎÒÃÇ¿ÉÒÔ½«Ê¹ÓÃ¸Ã×¢ÊÍµÄÀà¹ıÂË³öÀ´¡£ <BR>ÀàÃûÖ¸¶¨ 
-Í¨¹ıÈ«ÏŞ¶¨ÀàÃû½øĞĞ¹ıÂË£¬ÈçÄú¿ÉÒÔÖ¸¶¨½« com.baobaotao.Boss ÄÉÈëÉ¨Ãè£¬¶ø½« com.baobaotao.Car ÅÅ³ıÔÚÍâ¡£ <BR>ÕıÔò±í´ïÊ½ 
-Í¨¹ıÕıÔò±í´ïÊ½¶¨Òå¹ıÂËµÄÀà£¬ÈçÏÂËùÊ¾£º com\.baobaotao\.Default.* <BR>AspectJ ±í´ïÊ½ Í¨¹ı AspectJ 
-±í´ïÊ½¶¨Òå¹ıÂËµÄÀà£¬ÈçÏÂËùÊ¾£º com. baobaotao..*Service+ <BR><BR>ÏÂÃæÊÇÒ»¸ö¼òµ¥µÄÀı×Ó£º <BR><BR>
+&lt;/beans&gt;  </PRE><BR>è¿™é‡Œï¼Œæ‰€æœ‰é€šè¿‡ &lt;bean&gt; å…ƒç´ å®šä¹‰ Bean çš„é…ç½®å†…å®¹å·²ç»è¢«ç§»é™¤ï¼Œä»…éœ€è¦æ·»åŠ ä¸€è¡Œ 
+&lt;context:component-scan/&gt; é…ç½®å°±è§£å†³æ‰€æœ‰é—®é¢˜äº†â€”â€”Spring XML 
+é…ç½®æ–‡ä»¶å¾—åˆ°äº†æè‡´çš„ç®€åŒ–ï¼ˆå½“ç„¶é…ç½®å…ƒæ•°æ®è¿˜æ˜¯éœ€è¦çš„ï¼Œåªä¸è¿‡ä»¥æ³¨é‡Šå½¢å¼å­˜åœ¨ç½¢äº†ï¼‰ã€‚&lt;context:component-scan/&gt; çš„ 
+base-package å±æ€§æŒ‡å®šäº†éœ€è¦æ‰«æçš„ç±»åŒ…ï¼Œç±»åŒ…åŠå…¶é€’å½’å­åŒ…ä¸­æ‰€æœ‰çš„ç±»éƒ½ä¼šè¢«å¤„ç†ã€‚ 
+<BR><BR>&lt;context:component-scan/&gt; è¿˜å…è®¸å®šä¹‰è¿‡æ»¤å™¨å°†åŸºåŒ…ä¸‹çš„æŸäº›ç±»çº³å…¥æˆ–æ’é™¤ã€‚Spring æ”¯æŒä»¥ä¸‹ 4 
+ç§ç±»å‹çš„è¿‡æ»¤æ–¹å¼ï¼Œé€šè¿‡ä¸‹è¡¨è¯´æ˜ï¼š <BR><BR><BR>è¡¨ 1. æ‰«æè¿‡æ»¤æ–¹å¼ <BR>è¿‡æ»¤å™¨ç±»å‹ è¯´æ˜ <BR>æ³¨é‡Š å‡å¦‚ 
+com.baobaotao.SomeAnnotation æ˜¯ä¸€ä¸ªæ³¨é‡Šç±»ï¼Œæˆ‘ä»¬å¯ä»¥å°†ä½¿ç”¨è¯¥æ³¨é‡Šçš„ç±»è¿‡æ»¤å‡ºæ¥ã€‚ <BR>ç±»åæŒ‡å®š 
+é€šè¿‡å…¨é™å®šç±»åè¿›è¡Œè¿‡æ»¤ï¼Œå¦‚æ‚¨å¯ä»¥æŒ‡å®šå°† com.baobaotao.Boss çº³å…¥æ‰«æï¼Œè€Œå°† com.baobaotao.Car æ’é™¤åœ¨å¤–ã€‚ <BR>æ­£åˆ™è¡¨è¾¾å¼ 
+é€šè¿‡æ­£åˆ™è¡¨è¾¾å¼å®šä¹‰è¿‡æ»¤çš„ç±»ï¼Œå¦‚ä¸‹æ‰€ç¤ºï¼š com\.baobaotao\.Default.* <BR>AspectJ è¡¨è¾¾å¼ é€šè¿‡ AspectJ 
+è¡¨è¾¾å¼å®šä¹‰è¿‡æ»¤çš„ç±»ï¼Œå¦‚ä¸‹æ‰€ç¤ºï¼š com. baobaotao..*Service+ <BR><BR>ä¸‹é¢æ˜¯ä¸€ä¸ªç®€å•çš„ä¾‹å­ï¼š <BR><BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN>&lt;context:component-scan&nbsp;base-</SPAN><SPAN 
 class=keyword>package</SPAN><SPAN>=</SPAN><SPAN 
-class=string>"com.baobaotao"</SPAN><SPAN>&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"com.baobaotao"</SPAN><SPAN>&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;context:include-filter&nbsp;type=</SPAN><SPAN 
-class=string>"regex"</SPAN><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"regex"</SPAN><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expression=</SPAN><SPAN 
 class=string>"com\.baobaotao\.service\..*"</SPAN><SPAN>/&gt;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&lt;context:exclude-filter&nbsp;type=</SPAN><SPAN 
-class=string>"aspectj"</SPAN><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"aspectj"</SPAN><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expression=</SPAN><SPAN 
-class=string>"com.baobaotao.util..*"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"com.baobaotao.util..*"</SPAN><SPAN>/&gt;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&lt;/context:component-scan&gt;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">&lt;context:component-scan base-package="com.baobaotao"&gt;  
     &lt;context:include-filter type="regex"    
         expression="com\.baobaotao\.service\..*"/&gt;  
     &lt;context:exclude-filter type="aspectj"    
         expression="com.baobaotao.util..*"/&gt;  
-&lt;/context:component-scan&gt;  </PRE><BR>ÖµµÃ×¢ÒâµÄÊÇ 
-&lt;context:component-scan/&gt; ÅäÖÃÏî²»µ«ÆôÓÃÁË¶ÔÀà°ü½øĞĞÉ¨ÃèÒÔÊµÊ©×¢ÊÍÇı¶¯ Bean 
-¶¨ÒåµÄ¹¦ÄÜ£¬Í¬Ê±»¹ÆôÓÃÁË×¢ÊÍÇı¶¯×Ô¶¯×¢ÈëµÄ¹¦ÄÜ£¨¼´»¹ÒşÊ½µØÔÚÄÚ²¿×¢²áÁË AutowiredAnnotationBeanPostProcessor ºÍ 
-CommonAnnotationBeanPostProcessor£©£¬Òò´Ëµ±Ê¹ÓÃ &lt;context:component-scan/&gt; ºó£¬¾Í¿ÉÒÔ½« 
-&lt;context:annotation-config/&gt; ÒÆ³ıÁË¡£ <BR><BR>Ä¬ÈÏÇé¿öÏÂÍ¨¹ı @Component ¶¨ÒåµÄ Bean ¶¼ÊÇ 
-singleton µÄ£¬Èç¹ûĞèÒªÊ¹ÓÃÆäËü×÷ÓÃ·¶Î§µÄ Bean£¬¿ÉÒÔÍ¨¹ı @Scope ×¢ÊÍÀ´´ïµ½Ä¿±ê£¬ÈçÒÔÏÂ´úÂëËùÊ¾£º <BR><BR><BR>Çåµ¥ 24. 
-Í¨¹ı @Scope Ö¸¶¨ Bean µÄ×÷ÓÃ·¶Î§ <BR><BR>
+&lt;/context:component-scan&gt;  </PRE><BR>å€¼å¾—æ³¨æ„çš„æ˜¯ 
+&lt;context:component-scan/&gt; é…ç½®é¡¹ä¸ä½†å¯ç”¨äº†å¯¹ç±»åŒ…è¿›è¡Œæ‰«æä»¥å®æ–½æ³¨é‡Šé©±åŠ¨ Bean 
+å®šä¹‰çš„åŠŸèƒ½ï¼ŒåŒæ—¶è¿˜å¯ç”¨äº†æ³¨é‡Šé©±åŠ¨è‡ªåŠ¨æ³¨å…¥çš„åŠŸèƒ½ï¼ˆå³è¿˜éšå¼åœ°åœ¨å†…éƒ¨æ³¨å†Œäº† AutowiredAnnotationBeanPostProcessor å’Œ 
+CommonAnnotationBeanPostProcessorï¼‰ï¼Œå› æ­¤å½“ä½¿ç”¨ &lt;context:component-scan/&gt; åï¼Œå°±å¯ä»¥å°† 
+&lt;context:annotation-config/&gt; ç§»é™¤äº†ã€‚ <BR><BR>é»˜è®¤æƒ…å†µä¸‹é€šè¿‡ @Component å®šä¹‰çš„ Bean éƒ½æ˜¯ 
+singleton çš„ï¼Œå¦‚æœéœ€è¦ä½¿ç”¨å…¶å®ƒä½œç”¨èŒƒå›´çš„ Beanï¼Œå¯ä»¥é€šè¿‡ @Scope æ³¨é‡Šæ¥è¾¾åˆ°ç›®æ ‡ï¼Œå¦‚ä»¥ä¸‹ä»£ç æ‰€ç¤ºï¼š <BR><BR><BR>æ¸…å• 24. 
+é€šè¿‡ @Scope æŒ‡å®š Bean çš„ä½œç”¨èŒƒå›´ <BR><BR>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" 
-href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif" 
+href="http://coolyongzi.javaeye.com/blog/192957#"><IMG alt=å¤åˆ¶ä»£ç  
+src="icon_copy.gif"  
 _counted="undefined"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN class=keyword>package</SPAN><SPAN>&nbsp;com.baobaotao;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;org.springframework.context.annotation.Scope;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>¡­&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>â€¦&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=annotation>@Scope</SPAN><SPAN>(</SPAN><SPAN 
-class=string>"prototype"</SPAN><SPAN>)&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"prototype"</SPAN><SPAN>)&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN class=annotation>@Component</SPAN><SPAN>(</SPAN><SPAN 
-class=string>"boss"</SPAN><SPAN>)&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"boss"</SPAN><SPAN>)&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;Boss&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;¡­&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=keyword>class</SPAN><SPAN>&nbsp;Boss&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;â€¦&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">package com.baobaotao;   
 import org.springframework.context.annotation.Scope;   
-¡­   
+â€¦   
 @Scope("prototype")   
 @Component("boss")   
 public class Boss {   
-    ¡­   
+    â€¦   
 }   
-</PRE><BR>ÕâÑù£¬µ±´Ó Spring ÈİÆ÷ÖĞ»ñÈ¡ boss Bean Ê±£¬Ã¿´Î·µ»ØµÄ¶¼ÊÇĞÂµÄÊµÀıÁË¡£ <BR>²ÉÓÃ¾ßÓĞÌØÊâÓïÒåµÄ×¢ÊÍ 
-<BR><BR>Spring 2.5 ÖĞ³ıÁËÌá¹© @Component 
-×¢ÊÍÍâ£¬»¹¶¨ÒåÁË¼¸¸öÓµÓĞÌØÊâÓïÒåµÄ×¢ÊÍ£¬ËüÃÇ·Ö±ğÊÇ£º@Repository¡¢@Service ºÍ @Controller¡£ÔÚÄ¿Ç°µÄ Spring °æ±¾ÖĞ£¬Õâ 3 
-¸ö×¢ÊÍºÍ @Component ÊÇµÈĞ§µÄ£¬µ«ÊÇ´Ó×¢ÊÍÀàµÄÃüÃûÉÏ£¬ºÜÈİÒ×¿´³öÕâ 3 ¸ö×¢ÊÍ·Ö±ğºÍ³Ö¾Ã²ã¡¢ÒµÎñ²ãºÍ¿ØÖÆ²ã£¨Web ²ã£©Ïà¶ÔÓ¦¡£ËäÈ»Ä¿Ç°Õâ 3 
-¸ö×¢ÊÍºÍ @Component Ïà±ÈÃ»ÓĞÊ²Ã´ĞÂÒâ£¬µ« Spring ½«ÔÚÒÔºóµÄ°æ±¾ÖĞÎªËüÃÇÌí¼ÓÌØÊâµÄ¹¦ÄÜ¡£ËùÒÔ£¬Èç¹û Web 
-Ó¦ÓÃ³ÌĞò²ÉÓÃÁË¾­µäµÄÈı²ã·Ö²ã½á¹¹µÄ»°£¬×îºÃÔÚ³Ö¾Ã²ã¡¢ÒµÎñ²ãºÍ¿ØÖÆ²ã·Ö±ğ²ÉÓÃ @Repository¡¢@Service ºÍ @Controller 
-¶Ô·Ö²ãÖĞµÄÀà½øĞĞ×¢ÊÍ£¬¶øÓÃ @Component ¶ÔÄÇĞ©±È½ÏÖĞÁ¢µÄÀà½øĞĞ×¢ÊÍ¡£ <BR><BR><BR>×¢ÊÍÅäÖÃºÍ XML ÅäÖÃµÄÊÊÓÃ³¡ºÏ 
-<BR><BR>ÊÇ·ñÓĞÁËÕâĞ© IOC ×¢ÊÍ£¬ÎÒÃÇ¾Í¿ÉÒÔÍêÈ«Şğ³ıÔ­À´ XML ÅäÖÃµÄ·½Ê½ÄØ£¿´ğ°¸ÊÇ·ñ¶¨µÄ¡£ÓĞÒÔÏÂ¼¸µãÔ­Òò£º 
-<BR><BR>×¢ÊÍÅäÖÃ²»Ò»¶¨ÔÚÏÈÌìÉÏÓÅÓÚ XML ÅäÖÃ¡£Èç¹û Bean µÄÒÀÀµ¹ØÏµÊÇ¹Ì¶¨µÄ£¬£¨Èç Service Ê¹ÓÃÁËÄÄ¼¸¸ö DAO 
-Àà£©£¬ÕâÖÖÅäÖÃĞÅÏ¢²»»áÔÚ²¿ÊğÊ±·¢Éúµ÷Õû£¬ÄÇÃ´×¢ÊÍÅäÖÃÓÅÓÚ XML ÅäÖÃ£»·´Ö®Èç¹ûÕâÖÖÒÀÀµ¹ØÏµ»áÔÚ²¿ÊğÊ±·¢Éúµ÷Õû£¬XML ÅäÖÃÏÔÈ»ÓÖÓÅÓÚ×¢ÊÍÅäÖÃ£¬ÒòÎª×¢ÊÍÊÇ¶Ô 
-Java Ô´´úÂëµÄµ÷Õû£¬ÄúĞèÒªÖØĞÂ¸ÄĞ´Ô´´úÂë²¢ÖØĞÂ±àÒë²Å¿ÉÒÔÊµÊ©µ÷Õû¡£ <BR>Èç¹û Bean ²»ÊÇ×Ô¼º±àĞ´µÄÀà£¨Èç 
-JdbcTemplate¡¢SessionFactoryBean µÈ£©£¬×¢ÊÍÅäÖÃ½«ÎŞ·¨ÊµÊ©£¬´ËÊ± XML ÅäÖÃÊÇÎ¨Ò»¿ÉÓÃµÄ·½Ê½¡£ 
-<BR>×¢ÊÍÅäÖÃÍùÍùÊÇÀà¼¶±ğµÄ£¬¶ø XML ÅäÖÃÔò¿ÉÒÔ±íÏÖµÃ¸ü¼ÓÁé»î¡£±ÈÈçÏà±ÈÓÚ @Transaction ÊÂÎñ×¢ÊÍ£¬Ê¹ÓÃ aop/tx 
-ÃüÃû¿Õ¼äµÄÊÂÎñÅäÖÃ¸ü¼ÓÁé»îºÍ¼òµ¥¡£ <BR>ËùÒÔÔÚÊµÏÖÓ¦ÓÃÖĞ£¬ÎÒÃÇÍùÍùĞèÒªÍ¬Ê±Ê¹ÓÃ×¢ÊÍÅäÖÃºÍ XML 
-ÅäÖÃ£¬¶ÔÓÚÀà¼¶±ğÇÒ²»»á·¢Éú±ä¶¯µÄÅäÖÃ¿ÉÒÔÓÅÏÈ¿¼ÂÇ×¢ÊÍÅäÖÃ£»¶ø¶ÔÓÚÄÇĞ©µÚÈı·½ÀàÒÔ¼°ÈİÒ×·¢Éúµ÷ÕûµÄÅäÖÃÔòÓ¦ÓÅÏÈ¿¼ÂÇÊ¹ÓÃ XML ÅäÖÃ¡£Spring »áÔÚ¾ßÌåÊµÊ© 
-Bean ´´½¨ºÍ Bean ×¢ÈëÖ®Ç°½«ÕâÁ½ÖÖÅäÖÃ·½Ê½µÄÔªĞÅÏ¢ÈÚºÏÔÚÒ»Æğ¡£ <BR><BR>Ğ¡½á <BR><BR>Spring ÔÚ 2.1 
-ÒÔºó¶Ô×¢ÊÍÅäÖÃÌá¹©ÁËÇ¿Á¦µÄÖ§³Ö£¬×¢ÊÍÅäÖÃ¹¦ÄÜ³ÉÎª Spring 2.5 µÄ×î´óµÄÁÁµãÖ®Ò»¡£ºÏÀíµØÊ¹ÓÃ Spring 2.5 
-µÄ×¢ÊÍÅäÖÃ£¬¿ÉÒÔÓĞĞ§¼õÉÙÅäÖÃµÄ¹¤×÷Á¿£¬Ìá¸ß³ÌĞòµÄÄÚ¾ÛĞÔ¡£µ«ÊÇÕâ²¢²»ÒâÎ¶×Å´«Í³ XML ÅäÖÃ½«×ßÏòÏûÍö£¬ÔÚµÚÈı·½Àà Bean 
-µÄÅäÖÃ£¬ÒÔ¼°ÄÇĞ©ÖîÈçÊı¾İÔ´¡¢»º´æ³Ø¡¢³Ö¾Ã²ã²Ù×÷Ä£°åÀà¡¢ÊÂÎñ¹ÜÀíµÈÄÚÈİµÄÅäÖÃÉÏ£¬XML ÅäÖÃÒÀÈ»ÓµÓĞ²»¿ÉÌæ´úµÄµØÎ»¡£ </DIV><!--EndFragment--></DIV>
+</PRE><BR>è¿™æ ·ï¼Œå½“ä» Spring å®¹å™¨ä¸­è·å– boss Bean æ—¶ï¼Œæ¯æ¬¡è¿”å›çš„éƒ½æ˜¯æ–°çš„å®ä¾‹äº†ã€‚ <BR>é‡‡ç”¨å…·æœ‰ç‰¹æ®Šè¯­ä¹‰çš„æ³¨é‡Š 
+<BR><BR>Spring 2.5 ä¸­é™¤äº†æä¾› @Component 
+æ³¨é‡Šå¤–ï¼Œè¿˜å®šä¹‰äº†å‡ ä¸ªæ‹¥æœ‰ç‰¹æ®Šè¯­ä¹‰çš„æ³¨é‡Šï¼Œå®ƒä»¬åˆ†åˆ«æ˜¯ï¼š@Repositoryã€@Service å’Œ @Controllerã€‚åœ¨ç›®å‰çš„ Spring ç‰ˆæœ¬ä¸­ï¼Œè¿™ 3 
+ä¸ªæ³¨é‡Šå’Œ @Component æ˜¯ç­‰æ•ˆçš„ï¼Œä½†æ˜¯ä»æ³¨é‡Šç±»çš„å‘½åä¸Šï¼Œå¾ˆå®¹æ˜“çœ‹å‡ºè¿™ 3 ä¸ªæ³¨é‡Šåˆ†åˆ«å’ŒæŒä¹…å±‚ã€ä¸šåŠ¡å±‚å’Œæ§åˆ¶å±‚ï¼ˆWeb å±‚ï¼‰ç›¸å¯¹åº”ã€‚è™½ç„¶ç›®å‰è¿™ 3 
+ä¸ªæ³¨é‡Šå’Œ @Component ç›¸æ¯”æ²¡æœ‰ä»€ä¹ˆæ–°æ„ï¼Œä½† Spring å°†åœ¨ä»¥åçš„ç‰ˆæœ¬ä¸­ä¸ºå®ƒä»¬æ·»åŠ ç‰¹æ®Šçš„åŠŸèƒ½ã€‚æ‰€ä»¥ï¼Œå¦‚æœ Web 
+åº”ç”¨ç¨‹åºé‡‡ç”¨äº†ç»å…¸çš„ä¸‰å±‚åˆ†å±‚ç»“æ„çš„è¯ï¼Œæœ€å¥½åœ¨æŒä¹…å±‚ã€ä¸šåŠ¡å±‚å’Œæ§åˆ¶å±‚åˆ†åˆ«é‡‡ç”¨ @Repositoryã€@Service å’Œ @Controller 
+å¯¹åˆ†å±‚ä¸­çš„ç±»è¿›è¡Œæ³¨é‡Šï¼Œè€Œç”¨ @Component å¯¹é‚£äº›æ¯”è¾ƒä¸­ç«‹çš„ç±»è¿›è¡Œæ³¨é‡Šã€‚ <BR><BR><BR>æ³¨é‡Šé…ç½®å’Œ XML é…ç½®çš„é€‚ç”¨åœºåˆ 
+<BR><BR>æ˜¯å¦æœ‰äº†è¿™äº› IOC æ³¨é‡Šï¼Œæˆ‘ä»¬å°±å¯ä»¥å®Œå…¨æ‘’é™¤åŸæ¥ XML é…ç½®çš„æ–¹å¼å‘¢ï¼Ÿç­”æ¡ˆæ˜¯å¦å®šçš„ã€‚æœ‰ä»¥ä¸‹å‡ ç‚¹åŸå› ï¼š 
+<BR><BR>æ³¨é‡Šé…ç½®ä¸ä¸€å®šåœ¨å…ˆå¤©ä¸Šä¼˜äº XML é…ç½®ã€‚å¦‚æœ Bean çš„ä¾èµ–å…³ç³»æ˜¯å›ºå®šçš„ï¼Œï¼ˆå¦‚ Service ä½¿ç”¨äº†å“ªå‡ ä¸ª DAO 
+ç±»ï¼‰ï¼Œè¿™ç§é…ç½®ä¿¡æ¯ä¸ä¼šåœ¨éƒ¨ç½²æ—¶å‘ç”Ÿè°ƒæ•´ï¼Œé‚£ä¹ˆæ³¨é‡Šé…ç½®ä¼˜äº XML é…ç½®ï¼›åä¹‹å¦‚æœè¿™ç§ä¾èµ–å…³ç³»ä¼šåœ¨éƒ¨ç½²æ—¶å‘ç”Ÿè°ƒæ•´ï¼ŒXML é…ç½®æ˜¾ç„¶åˆä¼˜äºæ³¨é‡Šé…ç½®ï¼Œå› ä¸ºæ³¨é‡Šæ˜¯å¯¹ 
+Java æºä»£ç çš„è°ƒæ•´ï¼Œæ‚¨éœ€è¦é‡æ–°æ”¹å†™æºä»£ç å¹¶é‡æ–°ç¼–è¯‘æ‰å¯ä»¥å®æ–½è°ƒæ•´ã€‚ <BR>å¦‚æœ Bean ä¸æ˜¯è‡ªå·±ç¼–å†™çš„ç±»ï¼ˆå¦‚ 
+JdbcTemplateã€SessionFactoryBean ç­‰ï¼‰ï¼Œæ³¨é‡Šé…ç½®å°†æ— æ³•å®æ–½ï¼Œæ­¤æ—¶ XML é…ç½®æ˜¯å”¯ä¸€å¯ç”¨çš„æ–¹å¼ã€‚ 
+<BR>æ³¨é‡Šé…ç½®å¾€å¾€æ˜¯ç±»çº§åˆ«çš„ï¼Œè€Œ XML é…ç½®åˆ™å¯ä»¥è¡¨ç°å¾—æ›´åŠ çµæ´»ã€‚æ¯”å¦‚ç›¸æ¯”äº @Transaction äº‹åŠ¡æ³¨é‡Šï¼Œä½¿ç”¨ aop/tx 
+å‘½åç©ºé—´çš„äº‹åŠ¡é…ç½®æ›´åŠ çµæ´»å’Œç®€å•ã€‚ <BR>æ‰€ä»¥åœ¨å®ç°åº”ç”¨ä¸­ï¼Œæˆ‘ä»¬å¾€å¾€éœ€è¦åŒæ—¶ä½¿ç”¨æ³¨é‡Šé…ç½®å’Œ XML 
+é…ç½®ï¼Œå¯¹äºç±»çº§åˆ«ä¸”ä¸ä¼šå‘ç”Ÿå˜åŠ¨çš„é…ç½®å¯ä»¥ä¼˜å…ˆè€ƒè™‘æ³¨é‡Šé…ç½®ï¼›è€Œå¯¹äºé‚£äº›ç¬¬ä¸‰æ–¹ç±»ä»¥åŠå®¹æ˜“å‘ç”Ÿè°ƒæ•´çš„é…ç½®åˆ™åº”ä¼˜å…ˆè€ƒè™‘ä½¿ç”¨ XML é…ç½®ã€‚Spring ä¼šåœ¨å…·ä½“å®æ–½ 
+Bean åˆ›å»ºå’Œ Bean æ³¨å…¥ä¹‹å‰å°†è¿™ä¸¤ç§é…ç½®æ–¹å¼çš„å…ƒä¿¡æ¯èåˆåœ¨ä¸€èµ·ã€‚ <BR><BR>å°ç»“ <BR><BR>Spring åœ¨ 2.1 
+ä»¥åå¯¹æ³¨é‡Šé…ç½®æä¾›äº†å¼ºåŠ›çš„æ”¯æŒï¼Œæ³¨é‡Šé…ç½®åŠŸèƒ½æˆä¸º Spring 2.5 çš„æœ€å¤§çš„äº®ç‚¹ä¹‹ä¸€ã€‚åˆç†åœ°ä½¿ç”¨ Spring 2.5 
+çš„æ³¨é‡Šé…ç½®ï¼Œå¯ä»¥æœ‰æ•ˆå‡å°‘é…ç½®çš„å·¥ä½œé‡ï¼Œæé«˜ç¨‹åºçš„å†…èšæ€§ã€‚ä½†æ˜¯è¿™å¹¶ä¸æ„å‘³ç€ä¼ ç»Ÿ XML é…ç½®å°†èµ°å‘æ¶ˆäº¡ï¼Œåœ¨ç¬¬ä¸‰æ–¹ç±» Bean 
+çš„é…ç½®ï¼Œä»¥åŠé‚£äº›è¯¸å¦‚æ•°æ®æºã€ç¼“å­˜æ± ã€æŒä¹…å±‚æ“ä½œæ¨¡æ¿ç±»ã€äº‹åŠ¡ç®¡ç†ç­‰å†…å®¹çš„é…ç½®ä¸Šï¼ŒXML é…ç½®ä¾ç„¶æ‹¥æœ‰ä¸å¯æ›¿ä»£çš„åœ°ä½ã€‚ </DIV><!--EndFragment--></DIV>
 </DIV>
 </DIV>
 </DIV>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
 </BODY>
 </HTML>

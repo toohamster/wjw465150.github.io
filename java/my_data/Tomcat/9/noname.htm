@@ -1,9 +1,9 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 
 <html dir=ltr xml:lang="zh-CN" 
-xmlns="http://www.w3.org/1999/xhtml"><head><title>Í¨¹ıiptables¼òµ¥µÄÊµÏÖ¸ºÔØ¾ùºâ</title><link 
+xmlns="http://www.w3.org/1999/xhtml"><head><title>é€šè¿‡iptablesç®€å•çš„å®ç°è´Ÿè½½å‡è¡¡</title><link 
 href="favicon.ico" type=image/x-icon rel="shortcut icon"><link 
-title=ÎÒ²ÎÓëµÄÌÖÂÛ¡¢ÎÊ´ğRSS href="my" type=application/rss+xml rel=alternate><link 
+title=æˆ‘å‚ä¸çš„è®¨è®ºã€é—®ç­”RSS href="my" type=application/rss+xml rel=alternate><link 
 media=screen href="blog_admin.css_1247066018" 
 type=text/css rel=stylesheet><link media=screen 
 href="blue.css_1235723792" 
@@ -14,7 +14,7 @@ type=text/css rel=stylesheet>
 <style>
     div#main {background-color: transparent; border: 0; padding: 0px; width: 740px;}
   </style>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 
 <body>
@@ -26,22 +26,24 @@ type=text/css rel=stylesheet>
 <div id=main>
 
 <div class=blog_main><!--StartFragment-->
-<div class=blog_title><h3>Í¨¹ıiptables¼òµ¥µÄÊµÏÖ¸ºÔØ¾ùºâ</h3><strong>¹Ø¼ü×Ö: Í¨¹ıiptables¼òµ¥µÄÊµÏÖ¸ºÔØ¾ùºâ</strong> </div>
+<div class=blog_title><h3>é€šè¿‡iptablesç®€å•çš„å®ç°è´Ÿè½½å‡è¡¡</h3><strong>å…³é”®å­—: é€šè¿‡iptablesç®€å•çš„å®ç°è´Ÿè½½å‡è¡¡</strong> </div>
 <div class=blog_content>
-<p>ÊäÈëÒÔÏÂÃüÁî:</p>
+<p>è¾“å…¥ä»¥ä¸‹å‘½ä»¤:</p>
 <p>iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 
 8001-8002</p>
 <p>&nbsp;</p>
-<p>½âÊÍ:Í¨¹ıNATµÄ·½Ê½°É´Ó¶Ë¿Ú80½ÓÊÕµ½µÄÊı¾İËæ»ú×ª·¢µ½8001,8002¶Ë¿Ú</p>
+<p>è§£é‡Š:é€šè¿‡NATçš„æ–¹å¼å§ä»ç«¯å£80æ¥æ”¶åˆ°çš„æ•°æ®éšæœºè½¬å‘åˆ°8001,8002ç«¯å£</p>
 <p>&nbsp;</p>
-<p>×¢Òâ:ÒªÊ¹ÓÃ iptables-save &gt; /etc/sysconfig/iptables,·ñÔòÔÚ·şÎñÖØÆôºó»á¶ªÊ§µÄ.</p>
+<p>æ³¨æ„:è¦ä½¿ç”¨ iptables-save &gt; /etc/sysconfig/iptables,å¦åˆ™åœ¨æœåŠ¡é‡å¯åä¼šä¸¢å¤±çš„.</p>
 <p>&nbsp;</p>
-<p>ÁíÒ»ÖÖ·½·¨ÊÇÖ±½Ó±à¼­:/etc/sysconfig/iptablesÎÄ¼ş,ÔÚÎÄ¼ş¿ªÍ·Ìí¼ÓÉÏ:</p>
+<p>å¦ä¸€ç§æ–¹æ³•æ˜¯ç›´æ¥ç¼–è¾‘:/etc/sysconfig/iptablesæ–‡ä»¶,åœ¨æ–‡ä»¶å¼€å¤´æ·»åŠ ä¸Š:</p>
 <p>*nat<br>:PREROUTING ACCEPT [766:86527]<br>:POSTROUTING ACCEPT 
 [22:2300]<br>:OUTPUT ACCEPT [22:2300]<br>-A PREROUTING -p tcp -m tcp --dport 80 
 -j REDIRECT --to-ports 8001-8002 <br>COMMIT</p></div><!--EndFragment--></div>
 </div>
 </div>
 </div>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
 </body>
 </html>

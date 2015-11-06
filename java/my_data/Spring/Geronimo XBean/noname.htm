@@ -1,7 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 
 <HTML dir=ltr xml:lang="zh-CN" 
-xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>Geronimo XBean</TITLE><LINK 
+xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Geronimo XBean</title><LINK 
 href="favicon.ico" type=image/x-icon rel="shortcut icon"><LINK 
 title=whitesock href="rss" type=application/rss+xml rel=alternate><LINK 
 media=screen href="blog.css_1253614056" 
@@ -175,76 +176,76 @@ type=text/css rel=stylesheet>
 <DIV class=date><SPAN class=year>2009</SPAN><SPAN class=sep_year>-</SPAN><SPAN 
 class=month>08</SPAN><SPAN class=sep_month>-</SPAN><SPAN 
 class=day>26</SPAN></DIV>
-<H3 class=type_original title=Ô­´´><A href="http://whitesock.javaeye.com/blog/457601">Geronimo 
-XBean</A></H3><STRONG>¹Ø¼ü×Ö: spring xbean</STRONG> </DIV>
+<H3 class=type_original title=åŸåˆ›><A href="http://whitesock.javaeye.com/blog/457601">Geronimo 
+XBean</A></H3><STRONG>å…³é”®å­—: spring xbean</STRONG> </DIV>
 <DIV class=blog_content>
-<P><STRONG>1 Overview</STRONG> <BR>&nbsp;&nbsp;&nbsp; XBeanÊÇApache GeronimoµÄ×ÓÏîÄ¿£¬Ä¿±êÊÇÏñEclipse 
-IDEÄÇÑù£¬ÓÃÓÚ´´½¨»ùÓÚ²å¼şµÄ·şÎñÆ÷£¨¸úGeronimo GBeanµÄÄ¿±êÓĞĞ©ÖØºÏ£©¡£´ÓÏÖ×´À´¿´£¬XBean¸ü¶àµØ±»ÓÃÓÚ¼ò»¯Spring 
-ÅäÖÃ¡£ÀıÈç£¬Apache ActiveMQµÄÅäÖÃ»ùÓÚXBean¡£<BR><BR><STRONG>2 Custom namespace</STRONG> 
-<BR>&nbsp;&nbsp;&nbsp; ×î¼òµ¥µÄcustom namespaceÊÇjava://¼ÓÉÏÈ«Â·¾¶°üÃûµÄĞÎÊ½£¬ÒÔÏÂÊÇ¸ö¼òµ¥µÄÀı×Ó£º</P>
+<P><STRONG>1 Overview</STRONG> <BR>&nbsp;&nbsp;&nbsp; XBeanæ˜¯Apache Geronimoçš„å­é¡¹ç›®ï¼Œç›®æ ‡æ˜¯åƒEclipse 
+IDEé‚£æ ·ï¼Œç”¨äºåˆ›å»ºåŸºäºæ’ä»¶çš„æœåŠ¡å™¨ï¼ˆè·ŸGeronimo GBeançš„ç›®æ ‡æœ‰äº›é‡åˆï¼‰ã€‚ä»ç°çŠ¶æ¥çœ‹ï¼ŒXBeanæ›´å¤šåœ°è¢«ç”¨äºç®€åŒ–Spring 
+é…ç½®ã€‚ä¾‹å¦‚ï¼ŒApache ActiveMQçš„é…ç½®åŸºäºXBeanã€‚<BR><BR><STRONG>2 Custom namespace</STRONG> 
+<BR>&nbsp;&nbsp;&nbsp; æœ€ç®€å•çš„custom namespaceæ˜¯java://åŠ ä¸Šå…¨è·¯å¾„åŒ…åçš„å½¢å¼ï¼Œä»¥ä¸‹æ˜¯ä¸ªç®€å•çš„ä¾‹å­ï¼š</P>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.CopyToClipboard(this);return false;" 
-href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=¸´ÖÆ´úÂë 
+href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=å¤åˆ¶ä»£ç  
 src="icon_copy.gif"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN class=keyword>package</SPAN><SPAN>&nbsp;com.versus.misc.xbean; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>import</SPAN><SPAN>&nbsp;java.math.BigDecimal; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;org.apache.commons.lang.builder.ToStringBuilder; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;org.apache.commons.lang.builder.ToStringStyle; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;Product&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>class</SPAN><SPAN>&nbsp;Product&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;String&nbsp;name; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;BigDecimal&nbsp;price; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;String&nbsp;toString()&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;ToStringBuilder(</SPAN><SPAN 
 class=keyword>this</SPAN><SPAN>,&nbsp;ToStringStyle.SHORT_PREFIX_STYLE) 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.append(</SPAN><SPAN class=string>"name"</SPAN><SPAN>,&nbsp;name) 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.append(</SPAN><SPAN 
-class=string>"price"</SPAN><SPAN>,&nbsp;price).toString(); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=string>"price"</SPAN><SPAN>,&nbsp;price).toString(); &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;String&nbsp;getName()&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;name; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>void</SPAN><SPAN>&nbsp;setName(String&nbsp;name)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>void</SPAN><SPAN>&nbsp;setName(String&nbsp;name)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>this</SPAN><SPAN>.name&nbsp;=&nbsp;name; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>public</SPAN><SPAN>&nbsp;BigDecimal&nbsp;getPrice()&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>public</SPAN><SPAN>&nbsp;BigDecimal&nbsp;getPrice()&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;price; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>void</SPAN><SPAN>&nbsp;setPrice(BigDecimal&nbsp;price)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>this</SPAN><SPAN>.price&nbsp;=&nbsp;price; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
 <LI><SPAN>}&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">package com.versus.misc.xbean;
 
 import java.math.BigDecimal;
@@ -278,19 +279,19 @@ public class Product {
 		this.price = price;
 	}
 }</PRE>
-<P>&nbsp;&nbsp;&nbsp; ÒÔÏÂÊÇÅäÖÃÎÄ¼şxbean.xmlµÄÄÚÈİ£º</P>
+<P>&nbsp;&nbsp;&nbsp; ä»¥ä¸‹æ˜¯é…ç½®æ–‡ä»¶xbean.xmlçš„å†…å®¹ï¼š</P>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Xml´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Xmlä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.CopyToClipboard(this);return false;" 
-href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=¸´ÖÆ´úÂë 
+href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=å¤åˆ¶ä»£ç  
 src="icon_copy.gif"></A></DIV></DIV>
 <OL class=dp-xml>
 <LI><SPAN><SPAN class=tag>&lt;</SPAN><SPAN 
 class=tag-name>beans</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=attribute>xmlns:p</SPAN><SPAN>=</SPAN><SPAN 
 class=attribute-value>"java://com.versus.misc.xbean"</SPAN><SPAN 
-class=tag>&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=tag>&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=tag>&lt;</SPAN><SPAN 
 class=tag-name>p:Product</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=attribute>id</SPAN><SPAN>=</SPAN><SPAN 
@@ -299,59 +300,59 @@ class=attribute>name</SPAN><SPAN>=</SPAN><SPAN
 class=attribute-value>"USD/JPY"</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=attribute>price</SPAN><SPAN>=</SPAN><SPAN 
 class=attribute-value>"100.00"</SPAN><SPAN 
-class=tag>/&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=tag>/&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
 class=tag-name>beans</SPAN><SPAN 
 class=tag>&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV><PRE class=xml style="DISPLAY: none" name="code">&lt;beans xmlns:p="java://com.versus.misc.xbean"&gt;
   &lt;p:Product id="product" name="USD/JPY" price="100.00"/&gt;
 &lt;/beans&gt;</PRE>
-<P>&nbsp;&nbsp;&nbsp; ÒÔÏÂÊÇ²âÊÔÓÃµÄtest case£º</P>
+<P>&nbsp;&nbsp;&nbsp; ä»¥ä¸‹æ˜¯æµ‹è¯•ç”¨çš„test caseï¼š</P>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.CopyToClipboard(this);return false;" 
-href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=¸´ÖÆ´úÂë 
+href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=å¤åˆ¶ä»£ç  
 src="icon_copy.gif"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN class=keyword>package</SPAN><SPAN>&nbsp;com.versus.misc.xbean; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>import</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>static</SPAN><SPAN>&nbsp;org.junit.Assert.assertEquals; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>import</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>static</SPAN><SPAN>&nbsp;org.junit.Assert.assertNotNull; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>import</SPAN><SPAN>&nbsp;java.math.BigDecimal; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;org.apache.xbean.spring.context.ClassPathXmlApplicationContext; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>import</SPAN><SPAN>&nbsp;org.junit.Test; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;XBeanTest&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+class=keyword>class</SPAN><SPAN>&nbsp;XBeanTest&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=annotation>@Test</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=annotation>@Test</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>void</SPAN><SPAN>&nbsp;test()&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>void</SPAN><SPAN>&nbsp;test()&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ClassPathXmlApplicationContext&nbsp;context&nbsp;=&nbsp;</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;ClassPathXmlApplicationContext(</SPAN><SPAN 
 class=string>"classpath:com/versus/misc/xbean/xbean.xml"</SPAN><SPAN>); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Product&nbsp;product&nbsp;=&nbsp;(Product)context.getBean(</SPAN><SPAN 
-class=string>"product"</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertNotNull(product); &nbsp;&nbsp;</SPAN></LI>
+class=string>"product"</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertNotNull(product); &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertEquals(</SPAN><SPAN 
-class=string>"USD/JPY"</SPAN><SPAN>,&nbsp;product.getName()); &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"USD/JPY"</SPAN><SPAN>,&nbsp;product.getName()); &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertEquals(</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;BigDecimal(</SPAN><SPAN 
-class=string>"100.00"</SPAN><SPAN>),&nbsp;product.getPrice()); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
+class=string>"100.00"</SPAN><SPAN>),&nbsp;product.getPrice()); &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
 <LI><SPAN>}&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">package com.versus.misc.xbean;
 
 import static org.junit.Assert.assertEquals;
@@ -373,37 +374,37 @@ public class XBeanTest {
 		assertEquals(new BigDecimal("100.00"), product.getPrice());
 	}
 }</PRE>
-<P>&nbsp;&nbsp;&nbsp; ÒÔÉÏµÄÀı×ÓÖĞ£¬custom 
-namespaceÊÇjava://com.versus.misc.xbean£»ProductÊÇ¶¨ÒåÔÚcom.versus.misc.xbean°üÖĞµÄÒ»¸öÀà£»ProductÀàµÄ³ÉÔ±±äÁ¿¶¼±»Ó³Éä³ÉXMLµÄÊôĞÔ¡£ĞèÒª×¢ÒâµÄÊÇ£¬±ØĞëÊ¹ÓÃorg.xbean.spring.context.ClassPathXmlApplicationContext£¬¶ø²»ÊÇSpring×Ô´øµÄApplicationContext¡£</P>
+<P>&nbsp;&nbsp;&nbsp; ä»¥ä¸Šçš„ä¾‹å­ä¸­ï¼Œcustom 
+namespaceæ˜¯java://com.versus.misc.xbeanï¼›Productæ˜¯å®šä¹‰åœ¨com.versus.misc.xbeanåŒ…ä¸­çš„ä¸€ä¸ªç±»ï¼›Productç±»çš„æˆå‘˜å˜é‡éƒ½è¢«æ˜ å°„æˆXMLçš„å±æ€§ã€‚éœ€è¦æ³¨æ„çš„æ˜¯ï¼Œå¿…é¡»ä½¿ç”¨org.xbean.spring.context.ClassPathXmlApplicationContextï¼Œè€Œä¸æ˜¯Springè‡ªå¸¦çš„ApplicationContextã€‚</P>
 <P>&nbsp;</P>
 <P><STRONG>3 Custom mapping</STRONG> <BR>&nbsp;&nbsp;&nbsp; 
-ÔÚÖ®Ç°µÄÀı×ÓÖĞ£¬Èç¹û¸øProductÀàÔö¼ÓÒ»¸öÃûÎªidµÄintĞÍ³ÉÔ±±äÁ¿£¬ÄÇÃ´ÎªÁË±ÜÃâºÍ±ê×¼SpringÊôĞÔµÄ³åÍ»£¬Ó¦¸ÃÊ¹ÓÃcustom 
-mapping¡£Ê×ÏÈÒªÔÚMETA-INF/services/org/apache/xbean/spring/Ä¿Â¼ÏÂ½¨Á¢Ò»¸öÃûÎª$namespaceµÄÊôĞÔÎÄ¼ş¡£ÀıÈç£¬Èç¹ûnamespaceÊÇhttp://xbean.versus.com/product£¬ÄÇÃ´ĞèÒª½¨Á¢META-INF/services/org/apache/xbean/spring/http/xbean.versus.com/productÎÄ¼ş£¬ÆäÄÚÈİÈçÏÂ£º</P>
+åœ¨ä¹‹å‰çš„ä¾‹å­ä¸­ï¼Œå¦‚æœç»™Productç±»å¢åŠ ä¸€ä¸ªåä¸ºidçš„intå‹æˆå‘˜å˜é‡ï¼Œé‚£ä¹ˆä¸ºäº†é¿å…å’Œæ ‡å‡†Springå±æ€§çš„å†²çªï¼Œåº”è¯¥ä½¿ç”¨custom 
+mappingã€‚é¦–å…ˆè¦åœ¨META-INF/services/org/apache/xbean/spring/ç›®å½•ä¸‹å»ºç«‹ä¸€ä¸ªåä¸º$namespaceçš„å±æ€§æ–‡ä»¶ã€‚ä¾‹å¦‚ï¼Œå¦‚æœnamespaceæ˜¯http://xbean.versus.com/productï¼Œé‚£ä¹ˆéœ€è¦å»ºç«‹META-INF/services/org/apache/xbean/spring/http/xbean.versus.com/productæ–‡ä»¶ï¼Œå…¶å†…å®¹å¦‚ä¸‹ï¼š</P>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Properties´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Propertiesä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.CopyToClipboard(this);return false;" 
-href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=¸´ÖÆ´úÂë 
+href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=å¤åˆ¶ä»£ç  
 src="icon_copy.gif"></A></DIV></DIV>
 <OL class=dp-default>
-<LI><SPAN><SPAN>package&nbsp;=&nbsp;com.versus.misc.xbean &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>product&nbsp;=&nbsp;com.versus.misc.xbean.Product &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>product.alias.productId&nbsp;=&nbsp;id&nbsp;#½«id³ÉÔ±±äÁ¿Ó³ÉäÎªproductIdÊôĞÔ&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=properties style="DISPLAY: none" name="code">package = com.versus.misc.xbean
+<LI><SPAN><SPAN>package&nbsp;=&nbsp;com.versus.misc.xbean &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>product&nbsp;=&nbsp;com.versus.misc.xbean.Product &nbsp;&nbsp;</SPAN>
+<LI><SPAN>product.alias.productId&nbsp;=&nbsp;id&nbsp;#å°†idæˆå‘˜å˜é‡æ˜ å°„ä¸ºproductIdå±æ€§&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=properties style="DISPLAY: none" name="code">package = com.versus.misc.xbean
 product = com.versus.misc.xbean.Product
-product.alias.productId = id #½«id³ÉÔ±±äÁ¿Ó³ÉäÎªproductIdÊôĞÔ</PRE>
-<P>&nbsp;&nbsp;&nbsp; ÒÔÏÂÊÇÅäÖÃÎÄ¼şxbean.xmlµÄÄÚÈİ£º</P>
+product.alias.productId = id #å°†idæˆå‘˜å˜é‡æ˜ å°„ä¸ºproductIdå±æ€§</PRE>
+<P>&nbsp;&nbsp;&nbsp; ä»¥ä¸‹æ˜¯é…ç½®æ–‡ä»¶xbean.xmlçš„å†…å®¹ï¼š</P>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Xml´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Xmlä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.CopyToClipboard(this);return false;" 
-href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=¸´ÖÆ´úÂë 
+href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=å¤åˆ¶ä»£ç  
 src="icon_copy.gif"></A></DIV></DIV>
 <OL class=dp-xml>
 <LI><SPAN><SPAN class=tag>&lt;</SPAN><SPAN 
 class=tag-name>beans</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=attribute>xmlns:p</SPAN><SPAN>=</SPAN><SPAN 
 class=attribute-value>"http://xbean.versus.com/product"</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=tag>&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=tag>&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=tag>&lt;</SPAN><SPAN 
 class=tag-name>p:product</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=attribute>id</SPAN><SPAN>=</SPAN><SPAN 
@@ -414,61 +415,61 @@ class=attribute>name</SPAN><SPAN>=</SPAN><SPAN
 class=attribute-value>"USD/JPY"</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=attribute>price</SPAN><SPAN>=</SPAN><SPAN 
 class=attribute-value>"100.00"</SPAN><SPAN 
-class=tag>/&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=tag>/&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
 class=tag-name>beans</SPAN><SPAN 
 class=tag>&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV><PRE class=xml style="DISPLAY: none" name="code">&lt;beans xmlns:p="http://xbean.versus.com/product" &gt;
   &lt;p:product id="product" productId="1" name="USD/JPY" price="100.00"/&gt;
 &lt;/beans&gt;</PRE>
-<P>&nbsp;&nbsp;&nbsp; ÒÔÏÂÊÇ²âÊÔÓÃµÄtest case£º</P>
+<P>&nbsp;&nbsp;&nbsp; ä»¥ä¸‹æ˜¯æµ‹è¯•ç”¨çš„test caseï¼š</P>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.CopyToClipboard(this);return false;" 
-href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=¸´ÖÆ´úÂë 
+href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=å¤åˆ¶ä»£ç  
 src="icon_copy.gif"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN class=keyword>package</SPAN><SPAN>&nbsp;com.versus.misc.xbean; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>import</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>static</SPAN><SPAN>&nbsp;org.junit.Assert.assertEquals; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>import</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>static</SPAN><SPAN>&nbsp;org.junit.Assert.assertNotNull; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>import</SPAN><SPAN>&nbsp;java.math.BigDecimal; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;org.apache.xbean.spring.context.ClassPathXmlApplicationContext; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>import</SPAN><SPAN>&nbsp;org.junit.Test; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;XBeanTest&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+class=keyword>class</SPAN><SPAN>&nbsp;XBeanTest&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=annotation>@Test</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=annotation>@Test</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>void</SPAN><SPAN>&nbsp;test()&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>void</SPAN><SPAN>&nbsp;test()&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ClassPathXmlApplicationContext&nbsp;context&nbsp;=&nbsp;</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;ClassPathXmlApplicationContext(</SPAN><SPAN 
 class=string>"classpath:com/versus/misc/xbean/xbean.xml"</SPAN><SPAN>); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Product&nbsp;product&nbsp;=&nbsp;(Product)context.getBean(</SPAN><SPAN 
-class=string>"product"</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertNotNull(product); &nbsp;&nbsp;</SPAN></LI>
+class=string>"product"</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertNotNull(product); &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertEquals(</SPAN><SPAN 
-class=number>1</SPAN><SPAN>,&nbsp;product.getId()); &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=number>1</SPAN><SPAN>,&nbsp;product.getId()); &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertEquals(</SPAN><SPAN 
-class=string>"USD/JPY"</SPAN><SPAN>,&nbsp;product.getName()); &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"USD/JPY"</SPAN><SPAN>,&nbsp;product.getName()); &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertEquals(</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;BigDecimal(</SPAN><SPAN 
-class=string>"100.00"</SPAN><SPAN>),&nbsp;product.getPrice()); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
+class=string>"100.00"</SPAN><SPAN>),&nbsp;product.getPrice()); &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
 <LI><SPAN>}&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">package com.versus.misc.xbean;
 
 import static org.junit.Assert.assertEquals;
@@ -493,105 +494,105 @@ public class XBeanTest {
 }</PRE>
 <P>&nbsp;</P>
 <P><STRONG>4 Constructor injection</STRONG> <BR>&nbsp;&nbsp;&nbsp; 
-³ıÁËsetter×¢ÈëÖ®Íâ£¬XBeanÒ²Ö§³Öconstructor×¢Èë£¬ÒÔÏÂÊÇ¸ö¼òµ¥µÄÀı×Ó£º</P>
+é™¤äº†setteræ³¨å…¥ä¹‹å¤–ï¼ŒXBeanä¹Ÿæ”¯æŒconstructoræ³¨å…¥ï¼Œä»¥ä¸‹æ˜¯ä¸ªç®€å•çš„ä¾‹å­ï¼š</P>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.CopyToClipboard(this);return false;" 
-href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=¸´ÖÆ´úÂë 
+href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=å¤åˆ¶ä»£ç  
 src="icon_copy.gif"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN class=keyword>package</SPAN><SPAN>&nbsp;com.versus.misc.xbean; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>import</SPAN><SPAN>&nbsp;java.math.BigDecimal; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;org.apache.commons.lang.builder.ToStringBuilder; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;org.apache.commons.lang.builder.ToStringStyle; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;Product&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>class</SPAN><SPAN>&nbsp;Product&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;id; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>int</SPAN><SPAN>&nbsp;id; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;String&nbsp;name; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;BigDecimal&nbsp;price; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;Leverage&nbsp;leverage; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;String&nbsp;toString()&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;ToStringBuilder(</SPAN><SPAN 
 class=keyword>this</SPAN><SPAN>,&nbsp;ToStringStyle.SHORT_PREFIX_STYLE) 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.append(</SPAN><SPAN class=string>"id"</SPAN><SPAN>,&nbsp;id) 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.append(</SPAN><SPAN class=string>"name"</SPAN><SPAN>,&nbsp;name) 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.append(</SPAN><SPAN class=string>"price"</SPAN><SPAN>,&nbsp;price) 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.append(</SPAN><SPAN 
 class=string>"leverage"</SPAN><SPAN>,&nbsp;leverage).toString(); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;getId()&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>int</SPAN><SPAN>&nbsp;getId()&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;id; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>void</SPAN><SPAN>&nbsp;setId(</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;id)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>int</SPAN><SPAN>&nbsp;id)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>this</SPAN><SPAN>.id&nbsp;=&nbsp;id; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;String&nbsp;getName()&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;name; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>void</SPAN><SPAN>&nbsp;setName(String&nbsp;name)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>void</SPAN><SPAN>&nbsp;setName(String&nbsp;name)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>this</SPAN><SPAN>.name&nbsp;=&nbsp;name; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>public</SPAN><SPAN>&nbsp;BigDecimal&nbsp;getPrice()&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>public</SPAN><SPAN>&nbsp;BigDecimal&nbsp;getPrice()&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;price; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>void</SPAN><SPAN>&nbsp;setPrice(BigDecimal&nbsp;price)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>this</SPAN><SPAN>.price&nbsp;=&nbsp;price; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>public</SPAN><SPAN>&nbsp;Leverage&nbsp;getLeverage()&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>public</SPAN><SPAN>&nbsp;Leverage&nbsp;getLeverage()&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;leverage; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>void</SPAN><SPAN>&nbsp;setLeverage(Leverage&nbsp;leverage)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>this</SPAN><SPAN>.leverage&nbsp;=&nbsp;leverage; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
+class=keyword>this</SPAN><SPAN>.leverage&nbsp;=&nbsp;leverage; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
 <LI><SPAN>}&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">package com.versus.misc.xbean;
 
 import java.math.BigDecimal;
@@ -647,44 +648,44 @@ public class Product {
 }</PRE>&nbsp; 
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.CopyToClipboard(this);return false;" 
-href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=¸´ÖÆ´úÂë 
+href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=å¤åˆ¶ä»£ç  
 src="icon_copy.gif"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN class=keyword>package</SPAN><SPAN>&nbsp;com.versus.misc.xbean; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>import</SPAN><SPAN>&nbsp;java.math.BigDecimal; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;Leverage&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>class</SPAN><SPAN>&nbsp;Leverage&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;value; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>int</SPAN><SPAN>&nbsp;value; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;BigDecimal&nbsp;margin; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
 class=keyword>public</SPAN><SPAN>&nbsp;Leverage(</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;value,&nbsp;BigDecimal&nbsp;margin)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>int</SPAN><SPAN>&nbsp;value,&nbsp;BigDecimal&nbsp;margin)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>this</SPAN><SPAN>.value&nbsp;=&nbsp;value; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>this</SPAN><SPAN>.margin&nbsp;=&nbsp;margin; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;getValue()&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>int</SPAN><SPAN>&nbsp;getValue()&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;value; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>public</SPAN><SPAN>&nbsp;BigDecimal&nbsp;getMargin()&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>public</SPAN><SPAN>&nbsp;BigDecimal&nbsp;getMargin()&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;margin; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
 <LI><SPAN>}&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">package com.versus.misc.xbean;
 
 import java.math.BigDecimal;
@@ -707,36 +708,36 @@ public class Leverage {
 	}
 }</PRE>
 <P>&nbsp;&nbsp;&nbsp; 
-META-INF/services/org/apache/xbean/spring/http/xbean.versus.com/productÎÄ¼şµÄÄÚÈİÈçÏÂ:</P>
+META-INF/services/org/apache/xbean/spring/http/xbean.versus.com/productæ–‡ä»¶çš„å†…å®¹å¦‚ä¸‹:</P>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Properties´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Propertiesä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.CopyToClipboard(this);return false;" 
-href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=¸´ÖÆ´úÂë 
+href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=å¤åˆ¶ä»£ç  
 src="icon_copy.gif"></A></DIV></DIV>
 <OL class=dp-default>
-<LI><SPAN><SPAN>package&nbsp;=&nbsp;com.versus.misc.xbean &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>product&nbsp;=&nbsp;com.versus.misc.xbean.Product &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>leverage&nbsp;=&nbsp;com.versus.misc.xbean.Leverage &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>product.alias.productId&nbsp;=&nbsp;id &nbsp;&nbsp;</SPAN></LI>
+<LI><SPAN><SPAN>package&nbsp;=&nbsp;com.versus.misc.xbean &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>product&nbsp;=&nbsp;com.versus.misc.xbean.Product &nbsp;&nbsp;</SPAN>
+<LI><SPAN>leverage&nbsp;=&nbsp;com.versus.misc.xbean.Leverage &nbsp;&nbsp;</SPAN>
+<LI><SPAN>product.alias.productId&nbsp;=&nbsp;id &nbsp;&nbsp;</SPAN>
 <LI><SPAN>com.versus.misc.xbean.Leverage(int,java.math.BigDecimal).parameterNames=value&nbsp;margin&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=properties style="DISPLAY: none" name="code">package = com.versus.misc.xbean
 product = com.versus.misc.xbean.Product
 leverage = com.versus.misc.xbean.Leverage
 product.alias.productId = id
 com.versus.misc.xbean.Leverage(int,java.math.BigDecimal).parameterNames=value margin</PRE>
-<P>&nbsp;&nbsp;&nbsp; ÒÔÏÂÊÇÅäÖÃÎÄ¼şxbean.xmlµÄÄÚÈİ£º</P>
+<P>&nbsp;&nbsp;&nbsp; ä»¥ä¸‹æ˜¯é…ç½®æ–‡ä»¶xbean.xmlçš„å†…å®¹ï¼š</P>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Xml´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Xmlä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.CopyToClipboard(this);return false;" 
-href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=¸´ÖÆ´úÂë 
+href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=å¤åˆ¶ä»£ç  
 src="icon_copy.gif"></A></DIV></DIV>
 <OL class=dp-xml>
 <LI><SPAN><SPAN class=tag>&lt;</SPAN><SPAN 
 class=tag-name>beans</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=attribute>xmlns:p</SPAN><SPAN>=</SPAN><SPAN 
 class=attribute-value>"http://xbean.versus.com/product"</SPAN><SPAN 
-class=tag>&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=tag>&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=tag>&lt;</SPAN><SPAN 
 class=tag-name>p:product</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=attribute>id</SPAN><SPAN>=</SPAN><SPAN 
@@ -749,7 +750,7 @@ class=attribute>price</SPAN><SPAN>=</SPAN><SPAN
 class=attribute-value>"100.00"</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=attribute>leverage</SPAN><SPAN>=</SPAN><SPAN 
 class=attribute-value>"#leverage"</SPAN><SPAN 
-class=tag>/&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=tag>/&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=tag>&lt;</SPAN><SPAN 
 class=tag-name>p:leverage</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=attribute>id</SPAN><SPAN>=</SPAN><SPAN 
@@ -758,74 +759,74 @@ class=attribute>value</SPAN><SPAN>=</SPAN><SPAN
 class=attribute-value>"50"</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=attribute>margin</SPAN><SPAN>=</SPAN><SPAN 
 class=attribute-value>"12345"</SPAN><SPAN 
-class=tag>/&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=tag>/&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
 class=tag-name>beans</SPAN><SPAN 
 class=tag>&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV><PRE class=xml style="DISPLAY: none" name="code">&lt;beans xmlns:p="http://xbean.versus.com/product"&gt;
   &lt;p:product id="product" productId="1" name="##USD/JPY" price="100.00" leverage="#leverage"/&gt;
   &lt;p:leverage id="leverage" value="50" margin="12345"/&gt;
 &lt;/beans&gt;</PRE>
-<P>&nbsp;&nbsp;&nbsp; ÒÔÏÂÊÇ²âÊÔÓÃµÄtest case£º</P>
+<P>&nbsp;&nbsp;&nbsp; ä»¥ä¸‹æ˜¯æµ‹è¯•ç”¨çš„test caseï¼š</P>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.CopyToClipboard(this);return false;" 
-href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=¸´ÖÆ´úÂë 
+href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=å¤åˆ¶ä»£ç  
 src="icon_copy.gif"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN class=keyword>package</SPAN><SPAN>&nbsp;com.versus.misc.xbean; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>import</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>static</SPAN><SPAN>&nbsp;org.junit.Assert.assertEquals; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>import</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>static</SPAN><SPAN>&nbsp;org.junit.Assert.assertNotNull; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>import</SPAN><SPAN>&nbsp;java.math.BigDecimal; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;org.apache.xbean.spring.context.ClassPathXmlApplicationContext; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>import</SPAN><SPAN>&nbsp;org.junit.Test; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;XBeanTest&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+class=keyword>class</SPAN><SPAN>&nbsp;XBeanTest&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=annotation>@Test</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=annotation>@Test</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>void</SPAN><SPAN>&nbsp;test()&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>void</SPAN><SPAN>&nbsp;test()&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ClassPathXmlApplicationContext&nbsp;context&nbsp;=&nbsp;</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;ClassPathXmlApplicationContext(</SPAN><SPAN 
 class=string>"classpath:com/versus/misc/xbean/xbean.xml"</SPAN><SPAN>); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Product&nbsp;product&nbsp;=&nbsp;(Product)context.getBean(</SPAN><SPAN 
-class=string>"product"</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertNotNull(product); &nbsp;&nbsp;</SPAN></LI>
+class=string>"product"</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertNotNull(product); &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertEquals(</SPAN><SPAN 
-class=number>1</SPAN><SPAN>,&nbsp;product.getId()); &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=number>1</SPAN><SPAN>,&nbsp;product.getId()); &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertEquals(</SPAN><SPAN 
-class=string>"#USD/JPY"</SPAN><SPAN>,&nbsp;product.getName()); &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"#USD/JPY"</SPAN><SPAN>,&nbsp;product.getName()); &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertEquals(</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;BigDecimal(</SPAN><SPAN 
-class=string>"100.00"</SPAN><SPAN>),&nbsp;product.getPrice()); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=string>"100.00"</SPAN><SPAN>),&nbsp;product.getPrice()); &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Leverage&nbsp;leverage&nbsp;=&nbsp;(Leverage)context.getBean(</SPAN><SPAN 
-class=string>"leverage"</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertNotNull(leverage); &nbsp;&nbsp;</SPAN></LI>
+class=string>"leverage"</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertNotNull(leverage); &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertEquals(</SPAN><SPAN 
-class=number>50</SPAN><SPAN>,&nbsp;leverage.getValue()); &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=number>50</SPAN><SPAN>,&nbsp;leverage.getValue()); &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertEquals(</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;BigDecimal(</SPAN><SPAN 
-class=string>"12345"</SPAN><SPAN>),&nbsp;leverage.getMargin()); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertEquals(leverage,&nbsp;product.getLeverage()); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
+class=string>"12345"</SPAN><SPAN>),&nbsp;leverage.getMargin()); &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertEquals(leverage,&nbsp;product.getLeverage()); &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
 <LI><SPAN>}&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">package com.versus.misc.xbean;
 
 import static org.junit.Assert.assertEquals;
@@ -857,112 +858,112 @@ public class XBeanTest {
 	}
 }</PRE>
 <P>&nbsp;&nbsp;&nbsp; 
-ĞèÒª×¢ÒâµÄÊÇ£¬ÒÔÉÏÀı×ÓÖĞp:productµÄleverageÊôĞÔÍ¨¹ı#ÒıÓÃÁËleverage¡£Èç¹ûÄãÆÚÍûÅäÖÃÒ»¸öÒÔ#¿ªÍ·µÄ×Ö·û´®£¬ÄÇÃ´×Ö·û´®µÄĞèÒªÒÔ##¿ªÍ·£¨ÀıÈçÒÔÉÏÀı×ÓÖĞ£¬productÖĞname³ÉÔ±±äÁ¿µÄÖµÊÇ#USD/JPY£©¡£</P>
+éœ€è¦æ³¨æ„çš„æ˜¯ï¼Œä»¥ä¸Šä¾‹å­ä¸­p:productçš„leverageå±æ€§é€šè¿‡#å¼•ç”¨äº†leverageã€‚å¦‚æœä½ æœŸæœ›é…ç½®ä¸€ä¸ªä»¥#å¼€å¤´çš„å­—ç¬¦ä¸²ï¼Œé‚£ä¹ˆå­—ç¬¦ä¸²çš„éœ€è¦ä»¥##å¼€å¤´ï¼ˆä¾‹å¦‚ä»¥ä¸Šä¾‹å­ä¸­ï¼Œproductä¸­nameæˆå‘˜å˜é‡çš„å€¼æ˜¯#USD/JPYï¼‰ã€‚</P>
 <P>&nbsp;</P>
 <P><STRONG>5 Assembling collections</STRONG> <BR>&nbsp;&nbsp;&nbsp; 
-¸úSpringÒ»Ñù£¬XBeanÒ²Ö§³Ö×°Åä¼¯ºÏÀàĞÍ¡£ÒÔÉÏµÄÀı×ÓÖĞ£¬¼ÙÉèÃ¿ÖÖFX½»Ò×µÄÉÌÆ·¿ÉÒÔÓĞ¶à¸ö¸Ü¸Ë£¬ÄÇÃ´ĞèÒª½øĞĞÒÔÏÂµÄĞŞ¸Ä£º</P>
+è·ŸSpringä¸€æ ·ï¼ŒXBeanä¹Ÿæ”¯æŒè£…é…é›†åˆç±»å‹ã€‚ä»¥ä¸Šçš„ä¾‹å­ä¸­ï¼Œå‡è®¾æ¯ç§FXäº¤æ˜“çš„å•†å“å¯ä»¥æœ‰å¤šä¸ªæ æ†ï¼Œé‚£ä¹ˆéœ€è¦è¿›è¡Œä»¥ä¸‹çš„ä¿®æ”¹ï¼š</P>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.CopyToClipboard(this);return false;" 
-href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=¸´ÖÆ´úÂë 
+href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=å¤åˆ¶ä»£ç  
 src="icon_copy.gif"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN class=keyword>package</SPAN><SPAN>&nbsp;com.versus.misc.xbean; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>import</SPAN><SPAN>&nbsp;java.math.BigDecimal; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>import</SPAN><SPAN>&nbsp;java.util.List; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;org.apache.commons.lang.builder.ToStringBuilder; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;org.apache.commons.lang.builder.ToStringStyle; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;Product&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>class</SPAN><SPAN>&nbsp;Product&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;id; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>int</SPAN><SPAN>&nbsp;id; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;String&nbsp;name; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;BigDecimal&nbsp;price; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
 class=keyword>private</SPAN><SPAN>&nbsp;List&lt;Leverage&gt;&nbsp;leverages; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;String&nbsp;toString()&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;ToStringBuilder(</SPAN><SPAN 
 class=keyword>this</SPAN><SPAN>,&nbsp;ToStringStyle.SHORT_PREFIX_STYLE) 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.append(</SPAN><SPAN class=string>"id"</SPAN><SPAN>,&nbsp;id) 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.append(</SPAN><SPAN class=string>"name"</SPAN><SPAN>,&nbsp;name) 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.append(</SPAN><SPAN class=string>"price"</SPAN><SPAN>,&nbsp;price) 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.append(</SPAN><SPAN 
 class=string>"leverages"</SPAN><SPAN>,&nbsp;leverages).toString(); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;getId()&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>int</SPAN><SPAN>&nbsp;getId()&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;id; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>void</SPAN><SPAN>&nbsp;setId(</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;id)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>int</SPAN><SPAN>&nbsp;id)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>this</SPAN><SPAN>.id&nbsp;=&nbsp;id; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;String&nbsp;getName()&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;name; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>void</SPAN><SPAN>&nbsp;setName(String&nbsp;name)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>void</SPAN><SPAN>&nbsp;setName(String&nbsp;name)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>this</SPAN><SPAN>.name&nbsp;=&nbsp;name; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>public</SPAN><SPAN>&nbsp;BigDecimal&nbsp;getPrice()&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>public</SPAN><SPAN>&nbsp;BigDecimal&nbsp;getPrice()&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;price; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>void</SPAN><SPAN>&nbsp;setPrice(BigDecimal&nbsp;price)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>this</SPAN><SPAN>.price&nbsp;=&nbsp;price; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
 class=keyword>public</SPAN><SPAN>&nbsp;List&lt;Leverage&gt;&nbsp;getLeverages()&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;leverages; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>void</SPAN><SPAN>&nbsp;setLeverages(List&lt;Leverage&gt;&nbsp;leverages)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>this</SPAN><SPAN>.leverages&nbsp;=&nbsp;leverages; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
+class=keyword>this</SPAN><SPAN>.leverages&nbsp;=&nbsp;leverages; &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
 <LI><SPAN>}&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">package com.versus.misc.xbean;
 
 import java.math.BigDecimal;
@@ -1018,19 +1019,19 @@ public class Product {
 	}
 }</PRE>
 <P>&nbsp;&nbsp;&nbsp; 
-META-INF/services/org/apache/xbean/spring/http/xbean.versus.com/productÎÄ¼şµÄÄÚÈİÈçÏÂ:</P>
+META-INF/services/org/apache/xbean/spring/http/xbean.versus.com/productæ–‡ä»¶çš„å†…å®¹å¦‚ä¸‹:</P>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Properties´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Propertiesä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.CopyToClipboard(this);return false;" 
-href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=¸´ÖÆ´úÂë 
+href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=å¤åˆ¶ä»£ç  
 src="icon_copy.gif"></A></DIV></DIV>
 <OL class=dp-default>
-<LI><SPAN><SPAN>package&nbsp;=&nbsp;com.versus.misc.xbean &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>product&nbsp;=&nbsp;com.versus.misc.xbean.Product &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>leverage&nbsp;=&nbsp;com.versus.misc.xbean.Leverage &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>product.alias.productId&nbsp;=&nbsp;id &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>product.alias.leverages.list&nbsp;=&nbsp;leverages &nbsp;&nbsp;</SPAN></LI>
+<LI><SPAN><SPAN>package&nbsp;=&nbsp;com.versus.misc.xbean &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>product&nbsp;=&nbsp;com.versus.misc.xbean.Product &nbsp;&nbsp;</SPAN>
+<LI><SPAN>leverage&nbsp;=&nbsp;com.versus.misc.xbean.Leverage &nbsp;&nbsp;</SPAN>
+<LI><SPAN>product.alias.productId&nbsp;=&nbsp;id &nbsp;&nbsp;</SPAN>
+<LI><SPAN>product.alias.leverages.list&nbsp;=&nbsp;leverages &nbsp;&nbsp;</SPAN>
 <LI><SPAN>com.versus.misc.xbean.Leverage(int,java.math.BigDecimal).parameterNames=value&nbsp;margin&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=properties style="DISPLAY: none" name="code">package = com.versus.misc.xbean
 product = com.versus.misc.xbean.Product
 leverage = com.versus.misc.xbean.Leverage
@@ -1038,19 +1039,19 @@ product.alias.productId = id
 product.alias.leverages.list = leverages
 com.versus.misc.xbean.Leverage(int,java.math.BigDecimal).parameterNames=value margin
 </PRE>
-<P>&nbsp;&nbsp;&nbsp; ÒÔÏÂÊÇÅäÖÃÎÄ¼şxbean.xmlµÄÄÚÈİ£º</P>
+<P>&nbsp;&nbsp;&nbsp; ä»¥ä¸‹æ˜¯é…ç½®æ–‡ä»¶xbean.xmlçš„å†…å®¹ï¼š</P>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Xml´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Xmlä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.CopyToClipboard(this);return false;" 
-href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=¸´ÖÆ´úÂë 
+href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=å¤åˆ¶ä»£ç  
 src="icon_copy.gif"></A></DIV></DIV>
 <OL class=dp-xml>
 <LI><SPAN><SPAN class=tag>&lt;</SPAN><SPAN 
 class=tag-name>beans</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=attribute>xmlns:p</SPAN><SPAN>=</SPAN><SPAN 
 class=attribute-value>"http://xbean.versus.com/product"</SPAN><SPAN 
-class=tag>&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=tag>&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=tag>&lt;</SPAN><SPAN 
 class=tag-name>p:product</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=attribute>id</SPAN><SPAN>=</SPAN><SPAN 
@@ -1061,10 +1062,10 @@ class=attribute>name</SPAN><SPAN>=</SPAN><SPAN
 class=attribute-value>"USD/JPY"</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=attribute>price</SPAN><SPAN>=</SPAN><SPAN 
 class=attribute-value>"100.00"</SPAN><SPAN 
-class=tag>&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=tag>&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=tag>&lt;</SPAN><SPAN 
 class=tag-name>leverages</SPAN><SPAN 
-class=tag>&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=tag>&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=tag>&lt;</SPAN><SPAN 
 class=tag-name>p:leverage</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=attribute>id</SPAN><SPAN>=</SPAN><SPAN 
@@ -1073,7 +1074,7 @@ class=attribute>value</SPAN><SPAN>=</SPAN><SPAN
 class=attribute-value>"50"</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=attribute>margin</SPAN><SPAN>=</SPAN><SPAN 
 class=attribute-value>"12345"</SPAN><SPAN 
-class=tag>/&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=tag>/&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=tag>&lt;</SPAN><SPAN 
 class=tag-name>p:leverage</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=attribute>id</SPAN><SPAN>=</SPAN><SPAN 
@@ -1082,13 +1083,13 @@ class=attribute>value</SPAN><SPAN>=</SPAN><SPAN
 class=attribute-value>"100"</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=attribute>margin</SPAN><SPAN>=</SPAN><SPAN 
 class=attribute-value>"24690"</SPAN><SPAN 
-class=tag>/&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=tag>/&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
 class=tag-name>leverages</SPAN><SPAN 
-class=tag>&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=tag>&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
 class=tag-name>p:product</SPAN><SPAN 
-class=tag>&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=tag>&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
 class=tag-name>beans</SPAN><SPAN 
 class=tag>&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV><PRE class=xml style="DISPLAY: none" name="code">&lt;beans xmlns:p="http://xbean.versus.com/product"&gt;
@@ -1099,79 +1100,79 @@ class=tag>&gt;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV><PRE class=
       &lt;/leverages&gt;
   &lt;/p:product&gt;
 &lt;/beans&gt;</PRE>
-<P>&nbsp;&nbsp;&nbsp; ÒÔÏÂÊÇ²âÊÔÓÃµÄtest case£º</P>
+<P>&nbsp;&nbsp;&nbsp; ä»¥ä¸‹æ˜¯æµ‹è¯•ç”¨çš„test caseï¼š</P>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.CopyToClipboard(this);return false;" 
-href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=¸´ÖÆ´úÂë 
+href="http://whitesock.javaeye.com/blog/457601#"><IMG alt=å¤åˆ¶ä»£ç  
 src="icon_copy.gif"></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN class=keyword>package</SPAN><SPAN>&nbsp;com.versus.misc.xbean; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>import</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>static</SPAN><SPAN>&nbsp;org.junit.Assert.assertEquals; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>import</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>static</SPAN><SPAN>&nbsp;org.junit.Assert.assertNotNull; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>import</SPAN><SPAN>&nbsp;java.math.BigDecimal; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN 
 class=keyword>import</SPAN><SPAN>&nbsp;org.apache.xbean.spring.context.ClassPathXmlApplicationContext; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>import</SPAN><SPAN>&nbsp;org.junit.Test; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;XBeanTest&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
+class=keyword>class</SPAN><SPAN>&nbsp;XBeanTest&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=annotation>@Test</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=annotation>@Test</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>void</SPAN><SPAN>&nbsp;test()&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>void</SPAN><SPAN>&nbsp;test()&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ClassPathXmlApplicationContext&nbsp;context&nbsp;=&nbsp;</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;ClassPathXmlApplicationContext(</SPAN><SPAN 
 class=string>"classpath:com/versus/misc/xbean/xbean.xml"</SPAN><SPAN>); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Product&nbsp;product&nbsp;=&nbsp;(Product)context.getBean(</SPAN><SPAN 
-class=string>"product"</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertNotNull(product); &nbsp;&nbsp;</SPAN></LI>
+class=string>"product"</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertNotNull(product); &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertEquals(</SPAN><SPAN 
-class=number>1</SPAN><SPAN>,&nbsp;product.getId()); &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=number>1</SPAN><SPAN>,&nbsp;product.getId()); &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertEquals(</SPAN><SPAN 
-class=string>"USD/JPY"</SPAN><SPAN>,&nbsp;product.getName()); &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"USD/JPY"</SPAN><SPAN>,&nbsp;product.getName()); &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertEquals(</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;BigDecimal(</SPAN><SPAN 
-class=string>"100.00"</SPAN><SPAN>),&nbsp;product.getPrice()); &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"100.00"</SPAN><SPAN>),&nbsp;product.getPrice()); &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertEquals(</SPAN><SPAN 
 class=number>2</SPAN><SPAN>,&nbsp;product.getLeverages().size()); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Leverage&nbsp;leverage1&nbsp;=&nbsp;product.getLeverages().get(</SPAN><SPAN 
-class=number>0</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertNotNull(leverage1); &nbsp;&nbsp;</SPAN></LI>
+class=number>0</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertNotNull(leverage1); &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertEquals(</SPAN><SPAN 
-class=number>50</SPAN><SPAN>,&nbsp;leverage1.getValue()); &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=number>50</SPAN><SPAN>,&nbsp;leverage1.getValue()); &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertEquals(</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;BigDecimal(</SPAN><SPAN 
 class=string>"12345"</SPAN><SPAN>),&nbsp;leverage1.getMargin()); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Leverage&nbsp;leverage2&nbsp;=&nbsp;product.getLeverages().get(</SPAN><SPAN 
-class=number>1</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertNotNull(leverage2); &nbsp;&nbsp;</SPAN></LI>
+class=number>1</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertNotNull(leverage2); &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertEquals(</SPAN><SPAN 
-class=number>100</SPAN><SPAN>,&nbsp;leverage2.getValue()); &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=number>100</SPAN><SPAN>,&nbsp;leverage2.getValue()); &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertEquals(</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;BigDecimal(</SPAN><SPAN 
 class=string>"24690"</SPAN><SPAN>),&nbsp;leverage2.getMargin()); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
 <LI><SPAN>}&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE class=java style="DISPLAY: none" name="code">package com.versus.misc.xbean;
 
 import static org.junit.Assert.assertEquals;
@@ -1209,5 +1210,7 @@ public class XBeanTest {
 </DIV>
 </DIV>
 </DIV>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
 </BODY>
 </HTML>

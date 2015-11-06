@@ -5,7 +5,7 @@
  saved date: Fri Mar 01 2013 15:16:30 GMT+0800 (中国标准时间) 
 --><head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>openOffice 把word转换成html -  - ITeye技术网站</title>
+    <title>openOffice 把word转换成html</title>
     <meta name="description" content="&nbsp; 最近项目中需要把word转换成html格式，直接通过Java代码转化，出来的格式对不上号，网上找到有一些方法，可以接触一下插件或者第三方jar可以进行转换，这里先说说，使用openOffices 转换的过程以及使用. 1、下载安装OpenOffice.org 3.4.1，安装过程略过。 &nbsp;&nbsp; 官网地址：http://download.openoffice.org/index.html  2、下载 ..." />
     <meta name="keywords" content=" openOffice 把word转换成html" />
     <link rel="shortcut icon" href="data:text/plain; charset=x-user-defined;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAB7Th7/e04e/3tOHv97Th7/e04e/3tOHv97Th7/e04e/3tOHv97Th7/e04e/3tOHv97Th7/e04e/3tOHv97Th7/e04e/3tOHv97Th7/e04e/3tOHv+celb/xbKd/97Tx//e08f/1si5/62Qcv+DWSz/e04e/3tOHv97Th7/e04e/3tOHv97Th7/e04e/4NZLP/WyLn/////////////////////////////////zr2r/3tOHv97Th7/e04e/3tOHv97Th7/e04e/4NZLP/m3tX/////////////////////////////////9/Tx/4xkOv97Th7/e04e/3tOHv97Th7/e04e/3tOHv/Fsp3//////////////////////////////////////72nj/97Th7/e04e/3tOHv97Th7/e04e/3tOHv+DWSz//////////////////////72nj/+DWSz/e04e/5RvSP97Th7/e04e/3tOHv97Th7/e04e/3tOHv97Th7/rZBy/////////////////869q/97Th7/lG9I/72nj/+1m4D/e04e/3tOHv97Th7/e04e/3tOHv97Th7/e04e/72nj/////////////////+celb/e04e/+/p4////////////7WbgP+Ub0j/nHpW/5x6Vv+celb/e04e/3tOHv+9p4//////////////////pIVk/3tOHv////////////////+9p4//5t7V/////////////////3tOHv97Th7/pIVk/////////////////97Tx/97Th7/vaeP///////v6eP/tZuA/////////////////97Tx/97Th7/e04e/4NZLP/39PH/////////////////1si5/5x6Vv+Ub0j/vaeP//f08f////////////////+1m4D/e04e/3tOHv97Th7/vaeP///////////////////////////////////////////////////////v6eP/g1ks/3tOHv97Th7/e04e/3tOHv/Ovav////////////////////////////////////////////39PH/lG9I/3tOHv97Th7/e04e/3tOHv97Th7/e04e/72nj//39PH////////////////////////////e08f/jGQ6/3tOHv97Th7/e04e/3tOHv97Th7/e04e/3tOHv97Th7/g1ks/6SFZP+9p4//vaeP/7WbgP+Ub0j/e04e/3tOHv97Th7/e04e/3tOHv97Th7/e04e/3tOHv97Th7/e04e/3tOHv97Th7/e04e/3tOHv97Th7/e04e/3tOHv97Th7/e04e/3tOHv97Th7/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==" type="image/x-icon" />
@@ -2218,41 +2218,496 @@ background-color: #108AC6;
 
   <style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style></head>
   <body>
-    <div id="page">
-      <div id="content" class="clearfix">
-        <div id="main">
-          
-
-
-
-          
-
-
-<div class="blog_main">
-  <div class="blog_title">
-    <h3>
-      <a href="http://jadethao.iteye.com/blog/1817738">openOffice 把word转换成html</a>
-      <em class="actions">      </em>
-    </h3>
-    <ul class="blog_categories"><strong>博客分类：</strong> <li><a href="http://jadethao.iteye.com/category/188455">Java</a></li> </ul>
-        <div class="news_tag">&nbsp;</div>
-  </div>
-
-  <div id="blog_content" class="blog_content">
-    &nbsp; <span style="font-size: medium;">最近项目中需要把word转换成html格式，直接通过Java代码转化，出来的格式对不上号，网上找到有一些方法，可以接触一下插件或者第三方jar可以进行转换，这里先说说，使用openOffices 转换的过程以及使用.
-<br />
-<br />1、下载安装OpenOffice.org 3.4.1，安装过程略过。
-<br />&nbsp;&nbsp; 官网地址：<a href="http://download.openoffice.org/index.html" target="_blank">http://download.openoffice.org/index.html</a> 
-<br />2、下载第三方包Jodconverter.jar，开启OpenOffice进行格式转化
-<br />&nbsp; 官网地址：[url] http://www.artofsolving.com/opensource/jodconverter[/url] 
-<br />
-<br />3、一切准备工作就绪开始动手时间，
-<br />
-<br /> 首先，启动端口：
-<br /> 进入dos, cd&nbsp; C:\Program Files (x86)\OpenOffice.org 3\program
-<br /> 启动命令：soffice -headless -accept="socket,port=8100;urp;</span>
-<br />
-<br /><div class="dp-highlighter" id=""><div class="bar"><div class="tools">Java代码 <div style="display: block; cursor: pointer; text-align: center; width: 14px; height: 15px; top: auto; left: auto; position: static;"><div style="-webkit-transition: opacity 150ms ease-out; background-image: url(data:text/plain;base64,PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMDEgVHJhbnNpdGlvbmFsLy9FTiI8IURPQ1RZUEUgaHRtbCBQVUJMSUMgIi0vL1czQy8vRFREIFhIVE1MIDEuMCBUcmFuc2l0aW9uYWwvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvVFIveGh0bWwxL0RURC94aHRtbDEtdHJhbnNpdGlvbmFsLmR0ZCI+CjxodG1sIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sIiB4bWw6bGFuZz0iemgtQ04iIGRpcj0ibHRyIj4KICA8aGVhZD4KICAgIDxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PVVURi04IiAvPgogICAgPG1ldGEgbmFtZT0ia2V5d29yZCIgY29udGVudD0iSVRleWUsSVQs5byA5Y+RLOS6pOa1gSznpL7ljLosamF2YSwgcnVieSwgYWpheCwgYWdpbGUiIC8+CiAgICA8dGl0bGU+5oKo6K6/6Zeu55qE5Zyw5Z2A5LiN5a2Y5ZyoIDQwNCBOb3QgRm91bmQgLSBJVGV5ZeaKgOacr+e9keermTwvdGl0bGU+CiAgICA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgogICAgICBwICB7Zm9udC1zaXplOiAxNnB4O2NvbG9yOiAjNjI5M0JCO30KICAgICAgLmNsZWFyZml4OmFmdGVyIHsKICAgICAgICBjb250ZW50OiAiLiI7CiAgICAgICAgZGlzcGxheTogYmxvY2s7CiAgICAgICAgaGVpZ2h0OiAwOwogICAgICAgIGNsZWFyOiBib3RoOwogICAgICAgIHZpc2liaWxpdHk6IGhpZGRlbjsKICAgICAgfQogICAgICAuY2xlYXJmaXggewogICAgICAgIGRpc3BsYXk6YmxvY2s7CiAgICAgIH0KICAgICAgLmxlZnQgewogICAgICAgIGZsb2F0OiBsZWZ0OwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvaGVhZD4KICA8Ym9keT4KICAgIDxkaXYgY2xhc3M9ImNsZWFyZml4Ij4KICAgICAgPGRpdiBjbGFzcz0ibGVmdCIgc3R5bGU9InBhZGRpbmc6MTAwcHggMCAwIDEyMHB4Ij4KICAgICAgICA8aW1nIHNyYz0iL2ltYWdlcy9maWxlbm90Zm91bmQuanBnIiB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgLz4KICAgICAgPC9kaXY+CiAgICAgIDxkaXYgY2xhc3M9ImxlZnQiIHN0eWxlPSJwYWRkaW5nOjE0MHB4IDAgMCAzMHB4Ij4KICAgICAgICA8cD7mgqjorr/pl67nmoTlnLDlnYDkuI3lrZjlnKjvvIzor7fnoa7orqTmgqjovpPlhaXnmoRVUkzlnLDlnYA8L3A+CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgICA8ZGl2IHN0eWxlPSJwYWRkaW5nOjIwcHggMCAwIDQwMHB4Ij4KICAgICAgPGEgaHJlZj0iaHR0cDovL3d3dy5pdGV5ZS5jb20iPjxpbWcgc3JjPScvaW1hZ2VzL2xvZ29fc21hbGwuZ2lmJyBib3JkZXI9JzAnPjwvYT4KICAgIDwvZGl2PgogIDwvYm9keT4KPC9odG1sPg==); text-align: left; opacity: 0.25; border: 1px solid rgb(0, 0, 0); width: 100%; height: 100%; background-color: rgba(193, 217, 244, 0.498039); background-repeat: no-repeat no-repeat;"></div></div>&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;"><img class="star" src="data:text/plain; charset=x-user-defined;base64,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" alt="收藏代码" /><img class="spinner" src="data:text/plain; charset=x-user-defined;base64,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" style="display:none" /></a></div></div><ol start="1" class="dp-j"><li><span><span class="keyword">package</span><span>&nbsp;com.artofsolving.jodconverter.test;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span><span class="keyword">import</span><span>&nbsp;java.io.BufferedReader;&nbsp;&nbsp;</span></span></li><li><span><span class="keyword">import</span><span>&nbsp;java.io.File;&nbsp;&nbsp;</span></span></li><li><span><span class="keyword">import</span><span>&nbsp;java.io.FileInputStream;&nbsp;&nbsp;</span></span></li><li><span><span class="keyword">import</span><span>&nbsp;java.io.FileNotFoundException;&nbsp;&nbsp;</span></span></li><li><span><span class="keyword">import</span><span>&nbsp;java.io.IOException;&nbsp;&nbsp;</span></span></li><li><span><span class="keyword">import</span><span>&nbsp;java.io.InputStreamReader;&nbsp;&nbsp;</span></span></li><li><span><span class="keyword">import</span><span>&nbsp;java.net.ConnectException;&nbsp;&nbsp;</span></span></li><li><span><span class="keyword">import</span><span>&nbsp;java.nio.charset.Charset;&nbsp;&nbsp;</span></span></li><li><span><span class="keyword">import</span><span>&nbsp;java.util.Date;&nbsp;&nbsp;</span></span></li><li><span><span class="keyword">import</span><span>&nbsp;java.util.HashMap;&nbsp;&nbsp;</span></span></li><li><span><span class="keyword">import</span><span>&nbsp;java.util.Map;&nbsp;&nbsp;</span></span></li><li><span><span class="keyword">import</span><span>&nbsp;java.util.Set;&nbsp;&nbsp;</span></span></li><li><span><span class="keyword">import</span><span>&nbsp;java.util.regex.Matcher;&nbsp;&nbsp;</span></span></li><li><span><span class="keyword">import</span><span>&nbsp;java.util.regex.Pattern;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span><span class="keyword">import</span><span>&nbsp;com.artofsolving.jodconverter.DocumentConverter;&nbsp;&nbsp;</span></span></li><li><span><span class="keyword">import</span><span>&nbsp;com.artofsolving.jodconverter.openoffice.connection.OpenOfficeConnection;&nbsp;&nbsp;</span></span></li><li><span><span class="keyword">import</span><span>&nbsp;com.artofsolving.jodconverter.openoffice.connection.SocketOpenOfficeConnection;&nbsp;&nbsp;</span></span></li><li><span><span class="keyword">import</span><span>&nbsp;com.artofsolving.jodconverter.openoffice.converter.OpenOfficeDocumentConverter;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span><span class="comment">/**</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;端口启动命令：</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;soffice&nbsp;-headless&nbsp;-accept="socket,port=8100;urp;</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;C:\Program&nbsp;Files&nbsp;(x86)\OpenOffice.org&nbsp;3\program</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;将Word文档转换成html字符串的工具类</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;Test&nbsp;{&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">void</span><span>&nbsp;main(String[]&nbsp;args)&nbsp;{&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toHtmlString(<span class="keyword">new</span><span>&nbsp;File(</span><span class="string">"C:\\Users\\Administrator\\Desktop\\a111.doc"</span><span>),&nbsp;</span><span class="string">"E:/test"</span><span>);&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/**</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;将word文档转换成html文档</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;docFile&nbsp;&nbsp;&nbsp;需要转换的word文档</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;filepath&nbsp;&nbsp;转换之后html的存放路径</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;转换之后的html文件</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;File&nbsp;convert(File&nbsp;docFile,&nbsp;String&nbsp;filepath)&nbsp;{&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;创建保存html的文件</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;File&nbsp;htmlFile&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;File(filepath&nbsp;+&nbsp;</span><span class="string">"/"</span><span>&nbsp;+&nbsp;</span><span class="keyword">new</span><span>&nbsp;Date().getTime()&nbsp;+&nbsp;</span><span class="string">".html"</span><span>);&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;创建Openoffice连接</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OpenOfficeConnection&nbsp;con&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;SocketOpenOfficeConnection(</span><span class="number">8100</span><span>);&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">try</span><span>&nbsp;{&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;连接</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;con.connect();&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="keyword">catch</span><span>&nbsp;(ConnectException&nbsp;e)&nbsp;{&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class="string">"获取OpenOffice连接失败..."</span><span>);&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace();&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;创建转换器</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DocumentConverter&nbsp;converter&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;OpenOfficeDocumentConverter(con);&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;转换文档问html</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;converter.convert(docFile,&nbsp;htmlFile);&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;关闭openoffice连接</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;con.disconnect();&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;htmlFile;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/**</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;将word转换成html文件，并且获取html文件代码。</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;docFile&nbsp;&nbsp;需要转换的文档</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;filepath&nbsp;&nbsp;文档中图片的保存位置</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;转换成功的html代码</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;String&nbsp;toHtmlString(File&nbsp;docFile,&nbsp;String&nbsp;filepath)&nbsp;{&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;转换word文档</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;File&nbsp;htmlFile&nbsp;=&nbsp;convert(docFile,&nbsp;filepath);&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/*try&nbsp;{</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FileUtils.copyFile(docFile,new&nbsp;File("e://ee.doc"));</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FileInputStream&nbsp;input&nbsp;=&nbsp;FileUtils.openInputStream(docFile);</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FileOutputStream&nbsp;output&nbsp;=&nbsp;new&nbsp;FileOutputStream(new&nbsp;File("e://ff.doc"));</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IOUtils.copyLarge(input,&nbsp;output);</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;catch&nbsp;(IOException&nbsp;e1)&nbsp;{</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e1.printStackTrace();</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}*/</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;获取html文件流</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StringBuffer&nbsp;htmlSb&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;StringBuffer();&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">try</span><span>&nbsp;{&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BufferedReader&nbsp;br&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;BufferedReader(</span><span class="keyword">new</span><span>&nbsp;InputStreamReader(</span><span class="keyword">new</span><span>&nbsp;FileInputStream(htmlFile),Charset.forName(</span><span class="string">"gb2312"</span><span>)));&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">while</span><span>&nbsp;(br.ready())&nbsp;{&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;htmlSb.append(br.readLine());&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;br.close();&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;删除临时文件</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;htmlFile.delete();&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="keyword">catch</span><span>&nbsp;(FileNotFoundException&nbsp;e)&nbsp;{&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace();&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="keyword">catch</span><span>&nbsp;(IOException&nbsp;e)&nbsp;{&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace();&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;HTML文件字符串</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;htmlStr&nbsp;=&nbsp;htmlSb.toString();&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class="string">"htmlStr="</span><span>&nbsp;+&nbsp;htmlStr);&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;返回经过清洁的html文本</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;clearFormat(htmlStr,&nbsp;filepath);&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/**</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;清除一些不需要的html标记</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;htmlStr</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;带有复杂html标记的html语句</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;去除了不需要html标记的语句</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">protected</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;String&nbsp;clearFormat(String&nbsp;htmlStr,&nbsp;String&nbsp;docImgPath)&nbsp;{&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;获取body内容的正则</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;bodyReg&nbsp;=&nbsp;<span class="string">"&lt;BODY&nbsp;.*&lt;/BODY&gt;"</span><span>;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pattern&nbsp;bodyPattern&nbsp;=&nbsp;Pattern.compile(bodyReg);&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Matcher&nbsp;bodyMatcher&nbsp;=&nbsp;bodyPattern.matcher(htmlStr);&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>&nbsp;(bodyMatcher.find())&nbsp;{&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;获取BODY内容，并转化BODY标签为DIV</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;htmlStr&nbsp;=&nbsp;bodyMatcher.group().replaceFirst(<span class="string">"&lt;BODY"</span><span>,&nbsp;</span><span class="string">"&lt;DIV"</span><span>).replaceAll(</span><span class="string">"&lt;/BODY&gt;"</span><span>,&nbsp;</span><span class="string">"&lt;/DIV&gt;"</span><span>);&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;调整图片地址</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;htmlStr&nbsp;=&nbsp;htmlStr.replaceAll(<span class="string">"&lt;IMG&nbsp;SRC=\""</span><span>,&nbsp;</span><span class="string">"&lt;IMG&nbsp;SRC=\""</span><span>&nbsp;+&nbsp;docImgPath&nbsp;+&nbsp;</span><span class="string">"/"</span><span>);&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;把&lt;P&gt;&lt;/P&gt;转换成&lt;/div&gt;&lt;/div&gt;保留样式</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;content&nbsp;=&nbsp;content.replaceAll("(&lt;P)([^&gt;]*&gt;.*?)(&lt;\\/P&gt;)",</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;"&lt;div$2&lt;/div&gt;");</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;把&lt;P&gt;&lt;/P&gt;转换成&lt;/div&gt;&lt;/div&gt;并删除样式</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;htmlStr&nbsp;=&nbsp;htmlStr.replaceAll(<span class="string">"(&lt;P)([^&gt;]*)(&gt;.*?)(&lt;\\/P&gt;)"</span><span>,&nbsp;</span><span class="string">"&lt;p$3&lt;/p&gt;"</span><span>);&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;删除不需要的标签</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;htmlStr&nbsp;=&nbsp;htmlStr.replaceAll(<span class="string">"&lt;[/]?(font|FONT|span|SPAN|xml|XML|del|DEL|ins|INS|meta|META|[ovwxpOVWXP]:\\w+)[^&gt;]*?&gt;"</span><span>,</span><span class="string">""</span><span>);&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;删除不需要的属性</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;htmlStr&nbsp;=&nbsp;htmlStr.replaceAll(<span class="string">"&lt;([^&gt;]*)(?:lang|LANG|class|CLASS|style|STYLE|size|SIZE|face|FACE|[ovwxpOVWXP]:\\w+)=(?:'[^']*'|\"\"[^\"\"]*\"\"|[^&gt;]+)([^&gt;]*)&gt;"</span><span>,</span><span class="string">"&lt;$1$2&gt;"</span><span>);&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;htmlStr;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>}&nbsp;&nbsp;</span></li></ol></div><pre class="java" name="code" style="display: none;" codeable_id="1817738" codeable_type="Blog" source_url="http://jadethao.iteye.com/blog/1817738" pre_index="0" title="openOffice 把word转换成html">package com.artofsolving.jodconverter.test;
+<div id=page>
+<div id=content class=clearfix>
+<div id=main>
+<div class=blog_main>
+<div class=blog_title>
+<h3><a href="http://jadethao.iteye.com/blog/1817738">openOffice 把word转换成html</A> <em class=actions></EM></H3>
+<ul class=blog_categories><strong 
+  >博客分类：</STRONG> 
+  <li><a href="http://jadethao.iteye.com/category/188455" 
+  >Java</A> </LI></UL>
+<div class=news_tag></DIV></DIV>
+<div id=blog_content class=blog_content>&nbsp; <span 
+style="FONT-SIZE: medium">最近项目中需要把word转换成html格式，直接通过Java代码转化，出来的格式对不上号，网上找到有一些方法，可以接触一下插件或者第三方jar可以进行转换，这里先说说，使用openOffices 
+转换的过程以及使用. <br><br>1、下载安装OpenOffice.org 3.4.1，安装过程略过。 <br>&nbsp;&nbsp; 官网地址：<a 
+href="http://download.openoffice.org/index.html" target=_blank>http://download.openoffice.org/index.html</A> <br>2、下载第三方包Jodconverter.jar，开启OpenOffice进行格式转化 <br>&nbsp; 官网地址：[url] 
+http://www.artofsolving.com/opensource/jodconverter[/url] <br><br>3、一切准备工作就绪开始动手时间， <br><br>首先，启动端口： <br>进入dos, cd&nbsp; C:\Program Files (x86)\OpenOffice.org 
+3\program <br>启动命令：soffice -headless 
+-accept="socket,port=8100;urp;</SPAN> <br><br>
+<div class=dp-highlighter>
+<div class=bar>
+<div class=tools>Java代码 
+<div 
+style="CURSOR: pointer; HEIGHT: 15px; WIDTH: 14px; POSITION: static; TEXT-ALIGN: center; LEFT: auto; DISPLAY: block; TOP: auto">
+<div 
+style="BORDER-TOP: rgb(0,0,0) 1px solid; HEIGHT: 100%; BORDER-RIGHT: rgb(0,0,0) 1px solid; WIDTH: 100%; BACKGROUND-IMAGE: url(data:text/plain;base64,PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMDEgVHJhbnNpdGlvbmFsLy9FTiI8IURPQ1RZUEUgaHRtbCBQVUJMSUMgIi0vL1czQy8vRFREIFhIVE1MIDEuMCBUcmFuc2l0aW9uYWwvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvVFIveGh0bWwxL0RURC94aHRtbDEtdHJhbnNpdGlvbmFsLmR0ZCI+CjxodG1sIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sIiB4bWw6bGFuZz0iemgtQ04iIGRpcj0ibHRyIj4KICA8aGVhZD4KICAgIDxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PVVURi04IiAvPgogICAgPG1ldGEgbmFtZT0ia2V5d29yZCIgY29udGVudD0iSVRleWUsSVQs5byA5Y+RLOS6pOa1gSznpL7ljLosamF2YSwgcnVieSwgYWpheCwgYWdpbGUiIC8+CiAgICA8dGl0bGU+5oKo6K6/6Zeu55qE5Zyw5Z2A5LiN5a2Y5ZyoIDQwNCBOb3QgRm91bmQgLSBJVGV5ZeaKgOacr+e9keermTwvdGl0bGU+CiAgICA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgogICAgICBwICB7Zm9udC1zaXplOiAxNnB4O2NvbG9yOiAjNjI5M0JCO30KICAgICAgLmNsZWFyZml4OmFmdGVyIHsKICAgICAgICBjb250ZW50OiAiLiI7CiAgICAgICAgZGlzcGxheTogYmxvY2s7CiAgICAgICAgaGVpZ2h0OiAwOwogICAgICAgIGNsZWFyOiBib3RoOwogICAgICAgIHZpc2liaWxpdHk6IGhpZGRlbjsKICAgICAgfQogICAgICAuY2xlYXJmaXggewogICAgICAgIGRpc3BsYXk6YmxvY2s7CiAgICAgIH0KICAgICAgLmxlZnQgewogICAgICAgIGZsb2F0OiBsZWZ0OwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvaGVhZD4KICA8Ym9keT4KICAgIDxkaXYgY2xhc3M9ImNsZWFyZml4Ij4KICAgICAgPGRpdiBjbGFzcz0ibGVmdCIgc3R5bGU9InBhZGRpbmc6MTAwcHggMCAwIDEyMHB4Ij4KICAgICAgICA8aW1nIHNyYz0iL2ltYWdlcy9maWxlbm90Zm91bmQuanBnIiB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgLz4KICAgICAgPC9kaXY+CiAgICAgIDxkaXYgY2xhc3M9ImxlZnQiIHN0eWxlPSJwYWRkaW5nOjE0MHB4IDAgMCAzMHB4Ij4KICAgICAgICA8cD7mgqjorr/pl67nmoTlnLDlnYDkuI3lrZjlnKjvvIzor7fnoa7orqTmgqjovpPlhaXnmoRVUkzlnLDlnYA8L3A+CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgICA8ZGl2IHN0eWxlPSJwYWRkaW5nOjIwcHggMCAwIDQwMHB4Ij4KICAgICAgPGEgaHJlZj0iaHR0cDovL3d3dy5pdGV5ZS5jb20iPjxpbWcgc3JjPScvaW1hZ2VzL2xvZ29fc21hbGwuZ2lmJyBib3JkZXI9JzAnPjwvYT4KICAgIDwvZGl2PgogIDwvYm9keT4KPC9odG1sPg==); BORDER-BOTTOM: rgb(0,0,0) 1px solid; TEXT-ALIGN: left; BORDER-LEFT: rgb(0,0,0) 1px solid; opacity: 0.25; -webkit-transition: opacity 150ms ease-out"></DIV></DIV>&nbsp;<A onclick="code_favorites_do_favorite(this);return false;" title=收藏这段代码 href="javascript:void()" ><IMG class=star alt=收藏代码 src="data:text/plain; charset=x-user-defined;base64,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" ><IMG class=spinner style="DISPLAY: none" src="data:text/plain; charset=x-user-defined;base64,R0lGODlhEAAQAPYAAP///x5Hm9jf7aCx1HKMwFZ1s1l3tX+Wxay72uDl8K692j1gqUFjqkhprU1tsFRzs3uTxMLN4zZbpYKZx+7x9u/y98nS5peq0GSAunCKv8XP5dXc7FFwsTFWo5mr0bPB3W+Jvougy+Xp85SnzypRoHmRw6e313eQwr7K4Vt5tiZOnrnF36Kz1TNYpCNLneru9fX2+oedyZKmzvb4+pCkzbLA3Pr7/Pz8/cfR5dDY6fj5+9rh7rfE3vHz+Nfe7Ofr8+Hm8dPb68zV6MPO5OPo8tzi7/P1+d7k74meyrzI4brH4GF9uGaCum2HvnSNwVh2tFJyssrU54acyEprruzv9kNlq5ut0muGvURmrDhcpqu62WJ/uS1TopWo0HaPwUtsr87X6NHZ6ujs9MDL4o2hzJ6w06m42GmEvJyu0198t116tztfqLC+2yxSoShPn7XC3iFJnKW11z9iqS9Vok9vsISayEZorCVMnoCXxjpep2iDu32UxY6jzAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/h1CdWlsdCB3aXRoIEdJRiBNb3ZpZSBHZWFyIDQuMAAh/hVNYWRlIGJ5IEFqYXhMb2FkLmluZm8AIfkECQoAAAAsAAAAABAAEAAAB42AAIKDhIWFGyMpLYaFCBwkKi6CNjo3hQoLHSUrL4I3MD02gwIGEh6GNhQUlgADCxOMAD0/PYIEDBGxM0A/ggUNFLEAO0WCBg4VsTdBPoIHDxaxFEI7gggGF7E+Q0SCCRAYH4Y7KxZGgxEZICYbMDMJOAg83YQaIScHMTQeLDwJjCJQsJDhoUaOYMISBgIAIfkECQoAAAAsAAAAABAAEAAAB4yAAIKDhIWFOwNXWAxbXRuGADwYVQtZLVwkXyaFSk9TSBEUVEpeKlyERwRQm4UyhQoGI5CCN4NIS1GzADo2ggRMPbpGRoInTcSzFBWCF05BszpiywBJEAizVEDBAD8XUhqGLwJEvYI5MjRJCTo6L0VgG9ODQSZWLFofSkNhVJBUOUlqrBCSAIaugwACAQAh+QQJCgAAACwAAAAAEAAQAAAHiYAAgoOEhYUJChNpBl4sAoYAQwdLBg8ODQxqbIU4XmdoURUVQ1JrDAiDImROPIZoLVAbgmMQZpAAEG1dgiwTPrdKbmqCMkgwt1QuLYIeNDO3hTUXR9CEYGVDtzY6gxQfZr+FOj3Pg0c1H0FUNzcwFC8VNoVAQyhDQkE7QC/chkYJG3L4IBKvWrVAACH5BAkKAAAALAAAAAAQABAAAAePgACCg4SFhT8oHhBOIWxHhgA5FwcnGWdbak5KhUEjSGwbRj1CXQ9PPINUJjI4hmZfTDuCOVYokABIDAOCSiwJtxFrV4JsZjq3FBJVgm9sx5BUHXKCFjxit0ptS4JHKD63TiojgkZgOCKQcA1Bgy9gOSIwgjf0AHGFFEUCCSJUPTM2bumgIEYMBRgBbykcFAgAIfkECQoAAAAsAAAAABAAEAAAB4yAAIKDhIWFFGFvZR4mET+GAAkrcWUXNEgTMhaFRDwKFkAzMwIKJRAag0Y4PDuGSiATQIJAYxuQAGVbbII+OFS3Qmp1gmFCN7cVD0u8QceQFQ4GswIwt0N2XoIVCb+QdXIDgjZiP9WFHlkpAoMzVBQzgysncwsKhTZGMDqCLm50CLduODMwwtatg4ICAQAh+QQJCgAAACwAAAAAEAAQAAAHiYAAgoOEhYUwQDkoKxFBFIYAVEE4Y0ofCHEKPoUVG2BHVDY6IhpWVkGDNkA+L4ZCNGVigj0JrZBvUhGCVEQzkAA+B2i7sr9GXgeCFY/GTSeCMEY3v0JMZII2M9OQXWpsgzfbhSYPTkeGBCtUVGMxU09KhnZ3blwtWXIYPJBBI2kLDM6U2fGr4KBAACH5BAkKAAAALAAAAAAQABAAAAeIgACCg4SFhTc9Pzs+OyIwhgA6VEQJAkFCOFEihTYVLxUzADcVOyhJQIQwPTqGRx9KFYI3M6yQUWZBsjaQgkQsPLyFMx5lwYQzNB6CBi7AkAIxJoIyKl68WgcRghsOXBeGPE58m4Jaay14YxQVFlZ6XjiFCE95cnYOD2p7Q89lGQ8GDiBIYMxYIAAh+QQJCgAAACwAAAAAEAAQAAAHi4AAgoOEhYY3OkYVFUY2hoM2M0YUYkREPYUmhjoURTsUg0ENLo9UQT4zgiMqTo8ACRZEgkskK64UQzmCC1xUrjZKY4IMLb6POh+2AGdZKK5EWhGCZQt1rhEsQYICS1hxhhYXCMYAb1B0MlE9RkFsIRcbhSsgT2pMTV4HHmGPRwgxGU5cQPHDlcFBgQAAOwAAAAAAAAAAAA==" ></A></DIV></DIV>
+<ol class=dp-j>
+  <li><span><span class=keyword 
+  >package</SPAN><span 
+  >&nbsp;com.artofsolving.jodconverter.test;&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span>&nbsp;&nbsp;</SPAN>
+  <li><span><span class=keyword 
+  >import</SPAN><span 
+  >&nbsp;java.io.BufferedReader;&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span><span class=keyword 
+  >import</SPAN><span 
+  >&nbsp;java.io.File;&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span><span class=keyword 
+  >import</SPAN><span 
+  >&nbsp;java.io.FileInputStream;&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span><span class=keyword 
+  >import</SPAN><span 
+  >&nbsp;java.io.FileNotFoundException;&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span><span class=keyword 
+  >import</SPAN><span 
+  >&nbsp;java.io.IOException;&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span><span class=keyword 
+  >import</SPAN><span 
+  >&nbsp;java.io.InputStreamReader;&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span><span class=keyword 
+  >import</SPAN><span 
+  >&nbsp;java.net.ConnectException;&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span><span class=keyword 
+  >import</SPAN><span 
+  >&nbsp;java.nio.charset.Charset;&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span><span class=keyword 
+  >import</SPAN><span 
+  >&nbsp;java.util.Date;&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span><span class=keyword 
+  >import</SPAN><span 
+  >&nbsp;java.util.HashMap;&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span><span class=keyword 
+  >import</SPAN><span 
+  >&nbsp;java.util.Map;&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span><span class=keyword 
+  >import</SPAN><span 
+  >&nbsp;java.util.Set;&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span><span class=keyword 
+  >import</SPAN><span 
+  >&nbsp;java.util.regex.Matcher;&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span><span class=keyword 
+  >import</SPAN><span 
+  >&nbsp;java.util.regex.Pattern;&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span>&nbsp;&nbsp;</SPAN>
+  <li><span><span class=keyword 
+  >import</SPAN><span 
+  >&nbsp;com.artofsolving.jodconverter.DocumentConverter;&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span><span class=keyword 
+  >import</SPAN><span 
+  >&nbsp;com.artofsolving.jodconverter.openoffice.connection.OpenOfficeConnection;&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span><span class=keyword 
+  >import</SPAN><span 
+  >&nbsp;com.artofsolving.jodconverter.openoffice.connection.SocketOpenOfficeConnection;&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span><span class=keyword 
+  >import</SPAN><span 
+  >&nbsp;com.artofsolving.jodconverter.openoffice.converter.OpenOfficeDocumentConverter;&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span>&nbsp;&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >/**</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;*&nbsp;</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;*&nbsp;端口启动命令：</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;*&nbsp;soffice&nbsp;-headless&nbsp;-accept="socket,port=8100;urp;</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;*&nbsp;C:\Program&nbsp;Files&nbsp;(x86)\OpenOffice.org&nbsp;3\program</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;*&nbsp;</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;*&nbsp;将Word文档转换成html字符串的工具类</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;*&nbsp;</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;*&nbsp;</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;*/</SPAN><span 
+  >&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span>&nbsp;&nbsp;</SPAN>
+  <li><span><span class=keyword 
+  >public</SPAN><span 
+  >&nbsp;</SPAN><span class=keyword 
+  >class</SPAN><span 
+  >&nbsp;Test&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span>&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;<span class=keyword 
+  >public</SPAN><span 
+  >&nbsp;</SPAN><span class=keyword 
+  >static</SPAN><span 
+  >&nbsp;</SPAN><span class=keyword 
+  >void</SPAN><span 
+  >&nbsp;main(String[]&nbsp;args)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toHtmlString(<span 
+  class=keyword>new</SPAN><span 
+  >&nbsp;File(</SPAN><span class=string 
+  >"C:\\Users\\Administrator\\Desktop\\a111.doc"</SPAN><span 
+  >),&nbsp;</SPAN><span class=string 
+  >"E:/test"</SPAN><span 
+  >);&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</SPAN>
+  <li><span>&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;<span class=comment 
+  >/**</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;将word文档转换成html文档</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;docFile&nbsp;&nbsp;&nbsp;需要转换的word文档</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;filepath&nbsp;&nbsp;转换之后html的存放路径</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;转换之后的html文件</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</SPAN><span 
+  >&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;<span class=keyword 
+  >public</SPAN><span 
+  >&nbsp;</SPAN><span class=keyword 
+  >static</SPAN><span 
+  >&nbsp;File&nbsp;convert(File&nbsp;docFile,&nbsp;String&nbsp;filepath)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span>&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=comment>//&nbsp;创建保存html的文件</SPAN><span 
+  >&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;File&nbsp;htmlFile&nbsp;=&nbsp;<span 
+  class=keyword>new</SPAN><span 
+  >&nbsp;File(filepath&nbsp;+&nbsp;</SPAN><span class=string 
+  >"/"</SPAN><span 
+  >&nbsp;+&nbsp;</SPAN><span class=keyword 
+  >new</SPAN><span 
+  >&nbsp;Date().getTime()&nbsp;+&nbsp;</SPAN><span 
+  class=string>".html"</SPAN><span 
+  >);&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=comment>//&nbsp;创建Openoffice连接</SPAN><span 
+  >&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OpenOfficeConnection&nbsp;con&nbsp;=&nbsp;<span 
+  class=keyword>new</SPAN><span 
+  >&nbsp;SocketOpenOfficeConnection(</SPAN><span 
+  class=number>8100</SPAN><span 
+  >);&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=keyword>try</SPAN><span 
+  >&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=comment>//&nbsp;连接</SPAN><span 
+  >&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;con.connect();&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span 
+  class=keyword>catch</SPAN><span 
+  >&nbsp;(ConnectException&nbsp;e)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span 
+  class=string>"获取OpenOffice连接失败..."</SPAN><span 
+  >);&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace();&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=comment>//&nbsp;创建转换器</SPAN><span 
+  >&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DocumentConverter&nbsp;converter&nbsp;=&nbsp;<span 
+  class=keyword>new</SPAN><span 
+  >&nbsp;OpenOfficeDocumentConverter(con);&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=comment>//&nbsp;转换文档问html</SPAN><span 
+  >&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;converter.convert(docFile,&nbsp;htmlFile);&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=comment>//&nbsp;关闭openoffice连接</SPAN><span 
+  >&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;con.disconnect();&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=keyword>return</SPAN><span 
+  >&nbsp;htmlFile;&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</SPAN>
+  <li><span>&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;<span class=comment 
+  >/**</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;将word转换成html文件，并且获取html文件代码。</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;docFile&nbsp;&nbsp;需要转换的文档</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;filepath&nbsp;&nbsp;文档中图片的保存位置</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;转换成功的html代码</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</SPAN><span 
+  >&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;<span class=keyword 
+  >public</SPAN><span 
+  >&nbsp;</SPAN><span class=keyword 
+  >static</SPAN><span 
+  >&nbsp;String&nbsp;toHtmlString(File&nbsp;docFile,&nbsp;String&nbsp;filepath)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=comment>//&nbsp;转换word文档</SPAN><span 
+  >&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;File&nbsp;htmlFile&nbsp;=&nbsp;convert(docFile,&nbsp;filepath);&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=comment>/*try&nbsp;{</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FileUtils.copyFile(docFile,new&nbsp;File("e://ee.doc"));</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FileInputStream&nbsp;input&nbsp;=&nbsp;FileUtils.openInputStream(docFile);</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FileOutputStream&nbsp;output&nbsp;=&nbsp;new&nbsp;FileOutputStream(new&nbsp;File("e://ff.doc"));</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IOUtils.copyLarge(input,&nbsp;output);</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;catch&nbsp;(IOException&nbsp;e1)&nbsp;{</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e1.printStackTrace();</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}*/</SPAN><span 
+  >&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=comment>//&nbsp;获取html文件流</SPAN><span 
+  >&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StringBuffer&nbsp;htmlSb&nbsp;=&nbsp;<span 
+  class=keyword>new</SPAN><span 
+  >&nbsp;StringBuffer();&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=keyword>try</SPAN><span 
+  >&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BufferedReader&nbsp;br&nbsp;=&nbsp;<span 
+  class=keyword>new</SPAN><span 
+  >&nbsp;BufferedReader(</SPAN><span class=keyword 
+  >new</SPAN><span 
+  >&nbsp;InputStreamReader(</SPAN><span class=keyword 
+  >new</SPAN><span 
+  >&nbsp;FileInputStream(htmlFile),Charset.forName(</SPAN><span 
+  class=string>"gb2312"</SPAN><span 
+  >)));&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=keyword>while</SPAN><span 
+  >&nbsp;(br.ready())&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;htmlSb.append(br.readLine());&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;br.close();&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=comment>//&nbsp;删除临时文件</SPAN><span 
+  >&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;htmlFile.delete();&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span 
+  class=keyword>catch</SPAN><span 
+  >&nbsp;(FileNotFoundException&nbsp;e)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace();&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span 
+  class=keyword>catch</SPAN><span 
+  >&nbsp;(IOException&nbsp;e)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace();&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=comment>//&nbsp;HTML文件字符串</SPAN><span 
+  >&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;htmlStr&nbsp;=&nbsp;htmlSb.toString();&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span 
+  class=string>"htmlStr="</SPAN><span 
+  >&nbsp;+&nbsp;htmlStr);&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=comment>//&nbsp;返回经过清洁的html文本</SPAN><span 
+  >&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=keyword>return</SPAN><span 
+  >&nbsp;clearFormat(htmlStr,&nbsp;filepath);&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</SPAN>
+  <li><span>&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;<span class=comment 
+  >/**</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;清除一些不需要的html标记</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;htmlStr</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;带有复杂html标记的html语句</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;去除了不需要html标记的语句</SPAN>&nbsp;</SPAN>
+  <li><span><span class=comment 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</SPAN><span 
+  >&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span>&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;<span class=keyword 
+  >protected</SPAN><span 
+  >&nbsp;</SPAN><span class=keyword 
+  >static</SPAN><span 
+  >&nbsp;String&nbsp;clearFormat(String&nbsp;htmlStr,&nbsp;String&nbsp;docImgPath)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span>&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=comment>//&nbsp;获取body内容的正则</SPAN><span 
+  >&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;bodyReg&nbsp;=&nbsp;<span 
+  class=string>"&lt;BODY&nbsp;.*&lt;/BODY&gt;"</SPAN><span 
+  >;&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pattern&nbsp;bodyPattern&nbsp;=&nbsp;Pattern.compile(bodyReg);&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Matcher&nbsp;bodyMatcher&nbsp;=&nbsp;bodyPattern.matcher(htmlStr);&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=keyword>if</SPAN><span 
+  >&nbsp;(bodyMatcher.find())&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=comment>//&nbsp;获取BODY内容，并转化BODY标签为DIV</SPAN><span 
+  >&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;htmlStr&nbsp;=&nbsp;bodyMatcher.group().replaceFirst(<span 
+  class=string>"&lt;BODY"</SPAN><span 
+  >,&nbsp;</SPAN><span class=string 
+  >"&lt;DIV"</SPAN><span 
+  >).replaceAll(</SPAN><span class=string 
+  >"&lt;/BODY&gt;"</SPAN><span 
+  >,&nbsp;</SPAN><span class=string 
+  >"&lt;/DIV&gt;"</SPAN><span 
+  >);&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</SPAN>
+  <li><span>&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=comment>//&nbsp;调整图片地址</SPAN><span 
+  >&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;htmlStr&nbsp;=&nbsp;htmlStr.replaceAll(<span 
+  class=string>"&lt;IMG&nbsp;SRC=\""</SPAN><span 
+  >,&nbsp;</SPAN><span class=string 
+  >"&lt;IMG&nbsp;SRC=\""</SPAN><span 
+  >&nbsp;+&nbsp;docImgPath&nbsp;+&nbsp;</SPAN><span 
+  class=string>"/"</SPAN><span 
+  >);&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=comment 
+  >//&nbsp;把&lt;P&gt;&lt;/P&gt;转换成&lt;/div&gt;&lt;/div&gt;保留样式</SPAN><span 
+  >&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=comment 
+  >//&nbsp;content&nbsp;=&nbsp;content.replaceAll("(&lt;P)([^&gt;]*&gt;.*?)(&lt;\\/P&gt;)",</SPAN><span 
+  >&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=comment 
+  >//&nbsp;"&lt;div$2&lt;/div&gt;");</SPAN><span 
+  >&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=comment 
+  >//&nbsp;把&lt;P&gt;&lt;/P&gt;转换成&lt;/div&gt;&lt;/div&gt;并删除样式</SPAN><span 
+  >&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;htmlStr&nbsp;=&nbsp;htmlStr.replaceAll(<span 
+  class=string 
+  >"(&lt;P)([^&gt;]*)(&gt;.*?)(&lt;\\/P&gt;)"</SPAN><span 
+  >,&nbsp;</SPAN><span class=string 
+  >"&lt;p$3&lt;/p&gt;"</SPAN><span 
+  >);&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=comment>//&nbsp;删除不需要的标签</SPAN><span 
+  >&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;htmlStr&nbsp;=&nbsp;htmlStr.replaceAll(<span 
+  class=string 
+  >"&lt;[/]?(font|FONT|span|SPAN|xml|XML|del|DEL|ins|INS|meta|META|[ovwxpOVWXP]:\\w+)[^&gt;]*?&gt;"</SPAN><span 
+  >,</SPAN><span class=string 
+  >""</SPAN><span 
+  >);&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=comment>//&nbsp;删除不需要的属性</SPAN><span 
+  >&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;htmlStr&nbsp;=&nbsp;htmlStr.replaceAll(<span 
+  class=string 
+  >"&lt;([^&gt;]*)(?:lang|LANG|class|CLASS|style|STYLE|size|SIZE|face|FACE|[ovwxpOVWXP]:\\w+)=(?:'[^']*'|\"\"[^\"\"]*\"\"|[^&gt;]+)([^&gt;]*)&gt;"</SPAN><span 
+  >,</SPAN><span class=string 
+  >"&lt;$1$2&gt;"</SPAN><span 
+  >);&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span>&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+  class=keyword>return</SPAN><span 
+  >&nbsp;htmlStr;&nbsp;&nbsp;</SPAN></SPAN>
+  <li><span>&nbsp;&nbsp;</SPAN>
+  <li><span 
+  >&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</SPAN>
+  <li><span>&nbsp;&nbsp;</SPAN>
+  <li><span>}&nbsp;&nbsp;</SPAN></LI></OL></DIV><pre title="openOffice 把word转换成html" class=java style="DISPLAY: none" pre_index="0" source_url="http://jadethao.iteye.com/blog/1817738" codeable_id="1817738" codeable_type="Blog" name="code">package com.artofsolving.jodconverter.test;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -2402,23 +2857,10 @@ public class Test {
 
 	}
 
-}</pre>
-  </div>
-</div>
-
-
-
-
-
-
-
-        </div>
-      </div>
-    </div>
-    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="0" height="0" />
-
-    
-    
-  
-
-<style type="text/css">embed[type*="application/x-shockwave-flash"],embed[src*=".swf"],object[type*="application/x-shockwave-flash"],object[codetype*="application/x-shockwave-flash"],object[src*=".swf"],object[codebase*="swflash.cab"],object[classid*="D27CDB6E-AE6D-11cf-96B8-444553540000"],object[classid*="d27cdb6e-ae6d-11cf-96b8-444553540000"],object[classid*="D27CDB6E-AE6D-11cf-96B8-444553540000"]{	display: none !important;}</style></body></html>
+}</PRE></DIV></DIV></DIV></DIV></DIV>
+<P><IMG src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width=0 height=0 > 
+</P>
+<P>&nbsp;</P>
+<P>
+<STYLE type=text/css>embed[type*="application/x-shockwave-flash"],embed[src*=".swf"],object[type*="application/x-shockwave-flash"],object[codetype*="application/x-shockwave-flash"],object[src*=".swf"],object[codebase*="swflash.cab"],object[classid*="D27CDB6E-AE6D-11cf-96B8-444553540000"],object[classid*="d27cdb6e-ae6d-11cf-96b8-444553540000"],object[classid*="D27CDB6E-AE6D-11cf-96B8-444553540000"]{	display: none !important;}</STYLE>
+</P></body></html>

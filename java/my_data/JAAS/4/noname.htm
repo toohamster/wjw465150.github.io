@@ -1,405 +1,338 @@
-<html>
+ï»¿<html>
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=gbk">
+  <title>JAASç®€ä»‹</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
-<ul style="direction:ltr;unicode-bidi:embed;">
-  <p style="font-weight:bold;font-family:Verdana;font-size:10 pt;color:navy">48_3 &nbsp;Ê¹ÓÃJAASÓÃ»§ÈÏÖ¤</p>
-  <p style="font-weight:bold;font-family:Verdana;font-size:10 pt;
- color:navy">48_3_1 &nbsp;JAAS¼ò½é</p>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">Java°²È«¿ò¼Ü×î³õ¼¯ÖĞÔÚ±£»¤ÓÃ»§ÔËĞĞÇ±ÔÚµÄ²»¿ÉĞÅÈÎ´úÂë£¬ÊÇ»ùÓÚ´úÂëµÄÀ´Ô´£¨URL£©ºÍË­´´½¨µÄ´úÂë£¨certificate£©À´¸øÒÆ¶¯´úÂë½øĞĞÊÚÈ¨¡£Java
-    2 SDK 1.3ÒıÈëÁËJAAS£¨ Java Authentication and Authorization
-    Service£©,Ôö¼ÓÁË»ùÓÚÓÃ»§µÄ·ÃÎÊ¿ØÖÆÄÜÁ¦£¬¼´¸ù¾İË­ÔÚÔËĞĞ´úÂëÀ´½øĞĞÊÚÈ¨¡£JAASÒÑ¾­ÕûºÏ½øÁËJava 2 SDK
-    1.4£¬×÷Îª±ê×¼µÄÓÃ»§ÈÏÖ¤ÓëÊÚÈ¨Ä£ĞÍ¡£</p>
-  <p style="font-style:italic;font-family:Verdana;font-size:10 pt;
- color:black">JAASÓÃ»§ÈÏÖ¤¿ò¼Ü</p>
-  <p><img src="clip_image001.jpg"
- width=518 height=226></p>
-  <p style="font-family:Verdana;font-size:10 pt"><span
- style="color:black">JAASÈÏÖ¤±»ÊµÏÖÎª¿É²åÈëµÄ·½Ê½£¬ÔÊĞíÓ¦ÓÃ³ÌĞòÍ¬µ×²ãµÄ¾ßÌåÈÏÖ¤¼¼Êõ±£³Ö¶ÀÁ¢£¬ĞÂÔö»òÕß¸üĞÂÈÏÖ¤·½·¨²¢²»ĞèÒª¸ü¸ÄÓ¦ÓÃ³ÌĞò±¾Éí¡£Ó¦ÓÃ³ÌĞòÍ¨¹ıÊµÀı»¯</span><a
- href="http://java.sun.com/j2se/1.4.2/docs/api/javax/security/auth/login/LoginContext.html">LoginContext</a><span
- style="color:black">¶ÔÏó¿ªÊ¼ÈÏÖ¤¹ı³Ì£¬ÒıÓÃÅäÖÃÎÄ¼şÖĞµÄ¾ßÌåÈÏÖ¤·½·¨£¬¼´</span><a
- href="http://java.sun.com/j2se/1.4.2/docs/api/javax/security/auth/spi/LoginModule.html">LoginModule</a><span
- style="color:black">¶ÔÏó£¬À´Ö´ĞĞÈÏÖ¤¡£</span></p>
-  <p style="font-style:italic;font-family:Verdana;font-size:10 pt;
- color:black">JAAS£º¿É²åÈëÊ½ÈÏÖ¤</p>
-  <p><img src="clip_image002.jpg"
- width=550 height=376></p>
-  <p style="font-family:Verdana;font-size:10 pt"><span
- style="color:black">Ò»µ©Ö´ĞĞ´úÂëµÄÓÃ»§Í¨¹ıÁËÈÏÖ¤£¬JAASÊÚÈ¨×é¼ş½«ºÍºËĞÄJava·ÃÎÊ¿ØÖÆÄ£ĞÍÒ»Æğ¹¤×÷£¬À´±£»¤¶ÔÃô¸Ğ×ÊÔ´µÄ·ÃÎÊ¡£´ÓJ2SDK
-    1.4¿ªÊ¼£¬·ÃÎÊ¿ØÖÆ²»½ö»ùÓÚ´úÂëµÄÀ´Ô´ºÍÇ©ÃûÕß£¨</span><a
- href="http://java.sun.com/j2se/1.4.2/docs/api/java/security/CodeSource.html">CodeSource</a><span
- style="color:black">£©£¬¶øÇÒ»¹Òª¼ì²éË­ÔÚÔËĞĞ´úÂë¡£Ö´ĞĞ´úÂëµÄÓÃ»§±»±íÏÖÎª</span><a
- href="http://java.sun.com/j2se/1.4.2/docs/api/javax/security/auth/Subject.html">Subject</a><span
- style="color:black">¶ÔÏó£¬Èç¹ûLoginModuleÈÏÖ¤³É¹¦£¬Subject¶ÔÏó±»¸üĞÂÎªÏàÓ¦µÄ</span><a
- href="http://java.sun.com/j2se/1.4.2/docs/api/java/security/Principal.html">Principals</a><span
- style="color:black">ºÍcredentials¡£</span></p>
-  <p style="font-weight:bold;font-family:Verdana;font-size:10 pt;
- color:navy">48_3_1_1 &nbsp;Ò»¸ö¼òµ¥µÄÀı×Ó</p>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">±¾½ÚÍ¨¹ıÒ»¸ö¼òµ¥µÄÀı×Ó½éÉÜJAAS¿ª·¢µÄ»ù±¾²½Öè¡£±¾½ÚÖĞµÄ·¶ÀıÎ»ÓÚApusicÓ¦ÓÃ·şÎñÆ÷°²×°Ä¿Â¼ÖĞµÄdocs/samples/jaas/simpleÄ¿Â¼¡£ÓĞ¹Ø·¶ÀıµÄÄÚÈİ¡¢±àÒë¡¢²¿ÊğÓëÔËĞĞ£¬¿É²Î¿¼docs/samples/jaas/simpleÄ¿Â¼ÏÂµÄreadme.txtÎÄ¼ş¡£</p>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">·¶Àı³ÌĞòµÄ´úÂë·ÖÎªÁ½²¿·Ö£¬Ò»²¿·ÖÎªÖ÷³ÌĞò£¬Ö´ĞĞÓÃ»§ÈÏÖ¤¹ı³Ì£¬Ô´³ÌĞòÈçÏÂ£º</p>
-  <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">package
-    samples;<br>
-    <br>
-    import javax.security.auth.Subject;<br>
-    import javax.security.auth.login.LoginContext;<br>
-    import javax.security.auth.login.LoginException;<br>
-    import com.sun.security.auth.callback.TextCallbackHandler;<br>
-    <br>
-    public class CountFiles {<br>
-    <br>
-    &nbsp;&nbsp;&nbsp; static LoginContext lc =
-    null;<br>
-    &nbsp;&nbsp;&nbsp; public static void main(String[]
-    args) {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //Ê¹ÓÃÅäÖÃÎÄ¼şÖĞÃû×ÖÎª¡°CountFiles¡±µÄÌõÄ¿<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lc = new
-    LoginContext(&quot;CountFiles&quot;,<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; new
-    TextCallbackHandler());<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } catch (LoginException le)
-    {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; le.printStackTrace();<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.exit(-1);<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br>
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lc.login();<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //Èç¹ûÃ»ÓĞÒì³£Å×³ö£¬Ôò±íÊ¾ÈÏÖ¤³É¹¦<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } catch (Exception e) {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Login failed: &quot; + e);<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.exit(-1);<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //ÒÔÈÏÖ¤ÓÃ»§µÄÉí·İÖ´ĞĞ´úÂë<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Object o =
-    Subject.doAs(lc.getSubject(), new CountFilesAction());<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;User
-    &quot; + lc.getSubject( ) + &quot; found &quot; + o + &quot;
-    files.&quot;);<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.exit(0);<br>
-    &nbsp;&nbsp;&nbsp; }<br>
-    }<br>
-  </p>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">¿ÉÒÔ¿´³ö£¬Ö÷³ÌĞò°üº¬ÁËÈı¸öÖØÒªµÄ²½Öè£ºÊ×ÏÈ¹¹ÔìÒ»¸öLoginContext¶ÔÏó£¬È»ºóÊ¹ÓÃÕâ¸ö¶ÔÏó½øĞĞµÇÂ¼£¬×îºó£¬°ÑÓÃ»§×÷ÎªdoAs·½·¨Ò»¸ö²ÎÊı¡£</p>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">ÁíÒ»²¿·Ö±íÊ¾ÓÃ»§ÏëÒªÖ´ĞĞµÄ¾ßÌå²Ù×÷£¬Ô´³ÌĞòÈçÏÂ£º</p>
-  <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">package
-    samples;<br>
-    <br>
-    import java.io.File;<br>
-    import java.security.PrivilegedAction;<br>
-    <br>
-    class CountFilesAction implements PrivilegedAction {<br>
-    &nbsp;&nbsp;&nbsp; public Object run() {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; File f = new
-    File(&quot;.&quot;);<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; File[] files =
-    f.listFiles();<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return new
-    Integer(files.length);<br>
-    &nbsp;&nbsp;&nbsp; }<br>
-    }</p>
-  <p style="font-weight:bold;font-family:Verdana;font-size:10 pt;
- color:navy">48_3_1_2 &nbsp;JAASºËĞÄÀàºÍ½Ó¿Ú</p>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">JAASÏà¹ØµÄºËĞÄÀàºÍ½Ó¿Ú·ÖÎªÈıÀà£¬¹«¹²¡¢ÈÏÖ¤ºÍÊÚÈ¨¡£</p>
-  <ul type=disc style="direction:ltr;unicode-bidi:embed;
+  <ul style="direction:ltr;unicode-bidi:embed;">
+    <p style="font-weight:bold;font-family:Verdana;font-size:10 pt;color:navy">48_3 &nbsp;ä½¿ç”¨JAASç”¨æˆ·è®¤è¯</p>
+    <p style="font-weight:bold;font-family:Verdana;font-size:10 pt;
+ color:navy">48_3_1 &nbsp;JAASç®€ä»‹</p>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">Javaå®‰å…¨æ¡†æ¶æœ€åˆé›†ä¸­åœ¨ä¿æŠ¤ç”¨æˆ·è¿è¡Œæ½œåœ¨çš„ä¸å¯ä¿¡ä»»ä»£ç ï¼Œæ˜¯åŸºäºä»£ç çš„æ¥æºï¼ˆURLï¼‰å’Œè°åˆ›å»ºçš„ä»£ç ï¼ˆcertificateï¼‰æ¥ç»™ç§»åŠ¨ä»£ç è¿›è¡Œæˆæƒã€‚Java 2 SDK 1.3å¼•å…¥äº†JAASï¼ˆ Java Authentication and Authorization Serviceï¼‰,å¢åŠ äº†åŸºäºç”¨æˆ·çš„è®¿é—®æ§åˆ¶èƒ½åŠ›ï¼Œå³æ ¹æ®è°åœ¨è¿è¡Œä»£ç æ¥è¿›è¡Œæˆæƒã€‚JAASå·²ç»æ•´åˆè¿›äº†Java 2 SDK 1.4ï¼Œä½œä¸ºæ ‡å‡†çš„ç”¨æˆ·è®¤è¯ä¸æˆæƒæ¨¡å‹ã€‚
+    </p>
+    <p style="font-style:italic;font-family:Verdana;font-size:10 pt;
+ color:black">JAASç”¨æˆ·è®¤è¯æ¡†æ¶</p>
+    <p><img src="clip_image001.jpg" width=518 height=226></p>
+    <p style="font-family:Verdana;font-size:10 pt"><span style="color:black">JAASè®¤è¯è¢«å®ç°ä¸ºå¯æ’å…¥çš„æ–¹å¼ï¼Œå…è®¸åº”ç”¨ç¨‹åºåŒåº•å±‚çš„å…·ä½“è®¤è¯æŠ€æœ¯ä¿æŒç‹¬ç«‹ï¼Œæ–°å¢æˆ–è€…æ›´æ–°è®¤è¯æ–¹æ³•å¹¶ä¸éœ€è¦æ›´æ”¹åº”ç”¨ç¨‹åºæœ¬èº«ã€‚åº”ç”¨ç¨‹åºé€šè¿‡å®ä¾‹åŒ–</span><a href="http://java.sun.com/j2se/1.4.2/docs/api/javax/security/auth/login/LoginContext.html">LoginContext</a>
+      <span
+      style="color:black">å¯¹è±¡å¼€å§‹è®¤è¯è¿‡ç¨‹ï¼Œå¼•ç”¨é…ç½®æ–‡ä»¶ä¸­çš„å…·ä½“è®¤è¯æ–¹æ³•ï¼Œå³</span><a href="http://java.sun.com/j2se/1.4.2/docs/api/javax/security/auth/spi/LoginModule.html">LoginModule</a><span style="color:black">å¯¹è±¡ï¼Œæ¥æ‰§è¡Œè®¤è¯ã€‚</span></p>
+    <p style="font-style:italic;font-family:Verdana;font-size:10 pt;
+ color:black">JAASï¼šå¯æ’å…¥å¼è®¤è¯</p>
+    <p><img src="clip_image002.jpg" width=550 height=376></p>
+    <p style="font-family:Verdana;font-size:10 pt"><span style="color:black">ä¸€æ—¦æ‰§è¡Œä»£ç çš„ç”¨æˆ·é€šè¿‡äº†è®¤è¯ï¼ŒJAASæˆæƒç»„ä»¶å°†å’Œæ ¸å¿ƒJavaè®¿é—®æ§åˆ¶æ¨¡å‹ä¸€èµ·å·¥ä½œï¼Œæ¥ä¿æŠ¤å¯¹æ•æ„Ÿèµ„æºçš„è®¿é—®ã€‚ä»J2SDK
+    1.4å¼€å§‹ï¼Œè®¿é—®æ§åˆ¶ä¸ä»…åŸºäºä»£ç çš„æ¥æºå’Œç­¾åè€…ï¼ˆ</span><a href="http://java.sun.com/j2se/1.4.2/docs/api/java/security/CodeSource.html">CodeSource</a><span style="color:black">ï¼‰ï¼Œè€Œä¸”è¿˜è¦æ£€æŸ¥è°åœ¨è¿è¡Œä»£ç ã€‚æ‰§è¡Œä»£ç çš„ç”¨æˆ·è¢«è¡¨ç°ä¸º</span><a href="http://java.sun.com/j2se/1.4.2/docs/api/javax/security/auth/Subject.html">Subject</a>
+      <span
+      style="color:black">å¯¹è±¡ï¼Œå¦‚æœLoginModuleè®¤è¯æˆåŠŸï¼ŒSubjectå¯¹è±¡è¢«æ›´æ–°ä¸ºç›¸åº”çš„</span><a href="http://java.sun.com/j2se/1.4.2/docs/api/java/security/Principal.html">Principals</a><span style="color:black">å’Œcredentialsã€‚</span></p>
+    <p style="font-weight:bold;font-family:Verdana;font-size:10 pt;
+ color:navy">48_3_1_1 &nbsp;ä¸€ä¸ªç®€å•çš„ä¾‹å­</p>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">æœ¬èŠ‚é€šè¿‡ä¸€ä¸ªç®€å•çš„ä¾‹å­ä»‹ç»JAASå¼€å‘çš„åŸºæœ¬æ­¥éª¤ã€‚æœ¬èŠ‚ä¸­çš„èŒƒä¾‹ä½äºApusicåº”ç”¨æœåŠ¡å™¨å®‰è£…ç›®å½•ä¸­çš„docs/samples/jaas/simpleç›®å½•ã€‚æœ‰å…³èŒƒä¾‹çš„å†…å®¹ã€ç¼–è¯‘ã€éƒ¨ç½²ä¸è¿è¡Œï¼Œå¯å‚è€ƒdocs/samples/jaas/simpleç›®å½•ä¸‹çš„readme.txtæ–‡ä»¶ã€‚</p>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">èŒƒä¾‹ç¨‹åºçš„ä»£ç åˆ†ä¸ºä¸¤éƒ¨åˆ†ï¼Œä¸€éƒ¨åˆ†ä¸ºä¸»ç¨‹åºï¼Œæ‰§è¡Œç”¨æˆ·è®¤è¯è¿‡ç¨‹ï¼Œæºç¨‹åºå¦‚ä¸‹ï¼š</p>
+    <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">package samples;
+      <br>
+      <br> import javax.security.auth.Subject;
+      <br> import javax.security.auth.login.LoginContext;
+      <br> import javax.security.auth.login.LoginException;
+      <br> import com.sun.security.auth.callback.TextCallbackHandler;
+      <br>
+      <br> public class CountFiles {
+      <br>
+      <br> &nbsp;&nbsp;&nbsp; static LoginContext lc = null;
+      <br> &nbsp;&nbsp;&nbsp; public static void main(String[] args) {
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //ä½¿ç”¨é…ç½®æ–‡ä»¶ä¸­åå­—ä¸ºâ€œCountFilesâ€çš„æ¡ç›®
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try {
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lc = new LoginContext(&quot;CountFiles&quot;,
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; new
+      TextCallbackHandler());
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } catch (LoginException le) {
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; le.printStackTrace();
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.exit(-1);
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+      <br>
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try {
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lc.login();
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //å¦‚æœæ²¡æœ‰å¼‚å¸¸æŠ›å‡ºï¼Œåˆ™è¡¨ç¤ºè®¤è¯æˆåŠŸ
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } catch (Exception e) {
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Login failed: &quot; + e);
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.exit(-1);
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+      <br>
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //ä»¥è®¤è¯ç”¨æˆ·çš„èº«ä»½æ‰§è¡Œä»£ç 
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Object o = Subject.doAs(lc.getSubject(), new CountFilesAction());
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;User &quot; + lc.getSubject( ) + &quot; found &quot; + o + &quot; files.&quot;);
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.exit(0);
+      <br> &nbsp;&nbsp;&nbsp; }
+      <br> }
+      <br>
+    </p>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">å¯ä»¥çœ‹å‡ºï¼Œä¸»ç¨‹åºåŒ…å«äº†ä¸‰ä¸ªé‡è¦çš„æ­¥éª¤ï¼šé¦–å…ˆæ„é€ ä¸€ä¸ªLoginContextå¯¹è±¡ï¼Œç„¶åä½¿ç”¨è¿™ä¸ªå¯¹è±¡è¿›è¡Œç™»å½•ï¼Œæœ€åï¼ŒæŠŠç”¨æˆ·ä½œä¸ºdoAsæ–¹æ³•ä¸€ä¸ªå‚æ•°ã€‚</p>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">å¦ä¸€éƒ¨åˆ†è¡¨ç¤ºç”¨æˆ·æƒ³è¦æ‰§è¡Œçš„å…·ä½“æ“ä½œï¼Œæºç¨‹åºå¦‚ä¸‹ï¼š</p>
+    <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">package samples;
+      <br>
+      <br> import java.io.File;
+      <br> import java.security.PrivilegedAction;
+      <br>
+      <br> class CountFilesAction implements PrivilegedAction {
+      <br> &nbsp;&nbsp;&nbsp; public Object run() {
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; File f = new File(&quot;.&quot;);
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; File[] files = f.listFiles();
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return new Integer(files.length);
+      <br> &nbsp;&nbsp;&nbsp; }
+      <br> }
+    </p>
+    <p style="font-weight:bold;font-family:Verdana;font-size:10 pt;
+ color:navy">48_3_1_2 &nbsp;JAASæ ¸å¿ƒç±»å’Œæ¥å£</p>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">JAASç›¸å…³çš„æ ¸å¿ƒç±»å’Œæ¥å£åˆ†ä¸ºä¸‰ç±»ï¼Œå…¬å…±ã€è®¤è¯å’Œæˆæƒã€‚</p>
+    <ul type=disc style="direction:ltr;unicode-bidi:embed;
   ">
-    <li style="vertical-align:middle;color:black"><span
-      style="font-family:Verdana;font-size:10 pt">¹«¹²Àà£ºSubject,£¬Principal£¬Credential </span></li>
-    <li style="vertical-align:middle;color:black"><span
-      style="font-family:Verdana;font-size:10 pt">ÈÏÖ¤ÀàºÍ½Ó¿Ú£ºLoginContext£¬LoginModule£¬CallbackHandler£¬Callback </span></li>
-    <li style="vertical-align:middle;color:black"><span
-      style="font-family:Verdana;font-size:10 pt">ÊÚÈ¨Àà £ºPolicy£¬AuthPermission£¬PrivateCredentialPermission </span></li>
-  </ul>
-  <p style="font-family:Verdana;font-size:10 pt"><span
- style="color:black">ÏêÏ¸µÄÃèÊöÇë²Î¿¼¡¶</span><a
- href="http://java.sun.com/j2se/1.4.2/docs/guide/security/jaas/JAASRefGuide.html">JAAS
-    Reference Guide</a><span style="color:black">¡·¡£</span></p>
-  <p style="font-weight:bold;font-family:Verdana;font-size:10 pt;
- color:navy">48_3_1_3 &nbsp;ÅäÖÃLoginModules</p>
-  <p style="font-family:Verdana;font-size:10 pt"><span
- style="color:black">JAASÈÏÖ¤±»ÊµÏÖÎªÒ»ÖÖ¿É²åÈëµÄ·½Ê½£¬ÏµÍ³¹ÜÀíÔ±¿ÉÒÔÍ¨¹ıÅäÖÃÎÄ¼şÎªÃ¿Ò»¸öÓ¦ÓÃ³ÌĞòÅäÖÃLoginModulsÀ´¾ö¶¨Ó¦ÓÃ³ÌĞòÊ¹ÓÃµÄÈÏÖ¤¼¼Êõ¡£ÅäÖÃĞÅÏ¢¿ÉÒÔ±£´æÔÚÎÄ¼ş»òÊı¾İ¿âÖĞ£¬Í¨¹ı</span><a
- href="http://java.sun.com/j2se/1.4.2/docs/api/javax/security/auth/login/Configuration.html">javax.security.auth.login.Configuration</a><span
- style="color:black">¶ÔÏó½øĞĞ¶ÁÈ¡¡£javax.security.auth.login.ConfigurationÎª³éÏóÀà£¬JDKÌá¹©ÁË¿ÉÊµÀı»¯µÄ×ÓÀà</span><a
- href="http://java.sun.com/j2se/1.4.2/docs/guide/security/jaas/spec/com/sun/security/auth/login/ConfigFile.html">com.sun.security.auth.login.ConfigFile</a><span
- style="color:black">£¬´ÓÎÄ¼şÖĞ¶ÁÈ¡ÅäÖÃĞÅÏ¢¡£ÅäÖÃÎÄ¼şÖĞ°üº¬Ò»¸ö»ò¶à¸öÌõÄ¿£¬Ã¿Ò»¸öÌõÄ¿Ö¸Ã÷ÁËÌØ¶¨Ó¦ÓÃ³ÌĞòÊ¹ÓÃµÄÈÏÖ¤·½·¨¡£ÌõÄ¿µÄ½á¹¹ÈçÏÂ£º</span></p>
-  <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">&lt;name used
-    by application to refer to this entry&gt; { <br>
-    &nbsp;&nbsp;&nbsp; &lt;LoginModule&gt; &lt;flag&gt;
-    &lt;LoginModule options&gt;;<br>
-    &nbsp;&nbsp;&nbsp; &lt;optional additional
-    LoginModules, flags and options&gt;;<br>
-    &nbsp;&nbsp;&nbsp; };</p>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">¿ÉÒÔ¿´³ö£¬Ã¿Ò»¸öÌõÄ¿ÓÉÃû×ÖºÍÒ»¸ö»ò¶à¸öLoginModule×é³É¡£·¶Àı³ÌĞòÊ¹ÓÃµÄÅäÖÃÎÄ¼şlogin.confÄÚÈİÈçÏÂ£º</p>
-  <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">CountFiles
-    {<br>
-    &nbsp;&nbsp;&nbsp; com.apusic.security.auth.login.ClientPasswordLoginModule
-    required;<br>
-    };</p>
-  <p style="font-family:Verdana;font-size:10 pt"><span
- style="color:black">ÏêÏ¸µÄÃèÊöĞÅÏ¢¿ÉÒÔ²Î¿¼</span><a
- href="http://java.sun.com/j2se/1.4.2/docs/api/javax/security/auth/login/Configuration.html">Configuration</a><span
- style="color:black">¡£</span></p>
-  <p style="font-weight:bold;font-family:Verdana;font-size:10 pt;
- color:navy">48_3_1_4 &nbsp;±àĞ´PolicyÎÄ¼ş</p>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">JAASÊÚÈ¨À©Õ¹ÁËÏÖÓĞµÄJava°²È«ÌåÏµ½á¹¹£¬ÔÚ¸ø´úÂëÊÚÈ¨Ê±¿ÉÒÔ°üÀ¨Ò»¸ö¶à¸öPrincipalÓò£¬Ö¸³öPrincipal´ú±íµÄÓÃ»§Ö´ĞĞÌØ¶¨µÄ´úÂëÊ±£¬¾ßÓĞ·ÖÅäµÄÈ¨ÏŞ¡£Òò´Ë£¬ÊÚÈ¨ÉùÃ÷µÄ»ù±¾ĞÎÊ½Îª£º</p>
-  <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">grant
-    &lt;signer(s) field&gt;, &lt;codeBase URL&gt; <br>
-    &nbsp; &lt;Principal field(s)&gt; {<br>
-    &nbsp;&nbsp;&nbsp; permission perm_class_name
-    &quot;target_name&quot;, &quot;action&quot;;<br>
-    &nbsp;&nbsp;&nbsp; ....<br>
-    &nbsp;&nbsp;&nbsp; permission perm_class_name
-    &quot;target_name&quot;, &quot;action&quot;;<br>
-    &nbsp; };</p>
-  <p style="font-family:Verdana;font-size:10 pt"><span
- style="color:black">È±Ê¡µÄ²ßÂÔÎÄ¼şÊµÏÖºÍ²ßÂÔÎÄ¼şÓï·¨Çë²Î¿¼¡¶</span><a
- href="http://java.sun.com/j2se/1.4.2/docs/guide/security/PolicyFiles.html">Default
-    Policy Implementation and Policy File Syntax</a><span style="color:black">¡·¡£·¶Àı³ÌĞòÊ¹ÓÃµÄ²ßÂÔÎÄ¼şpolicy.jaasÄÚÈİÈçÏÂ£º</span></p>
-  <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">grant codeBase
-    &quot;<a href="file://./build">file:./build</a>&quot; {<br>
-    &nbsp; permission
-    java.security.AllPermission;<br>
-    };<br>
-    <br>
-    grant codeBase &quot;<a href="file://$%7bapusic.home%7d/lib/apusic.jar">file:/${apusic.home}/lib/apusic.jar</a>&quot;
-    {<br>
-    &nbsp; permission
-    java.security.AllPermission;<br>
-    };<br>
-    <br>
-    grant codeBase &quot;<a href="file://./build/actions">file:./build/actions</a>&quot;
-    Principal com.apusic.security.PrincipalImpl &quot;admin&quot; {<br>
-    &nbsp; permission java.io.FilePermission
-    &quot;&lt;&lt;ALL FILES&gt;&gt;&quot;, &quot;read&quot;;<br>
-    };</p>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">¿ÉÒÔ¿´³ö£¬¸øÖ÷³ÌĞòºÍapusic.jarÊÚÓèÁËËùÓĞÈ¨ÏŞ£»µ±Ö´ĞĞ¾ßÌå²Ù×÷µÄÓÃ»§Îª¡°admin¡±Ê±£¬ÊÚÓèÁË¶ÁÈ¡ËùÓĞÎÄ¼şµÄÈ¨ÏŞ¡£</p>
-  <p style="font-weight:bold;font-family:Verdana;font-size:10 pt;
- color:navy">48_3_1_5 &nbsp;ÔËĞĞ·¶Àı³ÌĞò</p>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">·¶Àı³ÌĞòÌá¹©ÁËantµÄbuild.xml½Å±¾£¬ÇëÓÃ»§×Ô¼ºÏÂÔØ²¢°²×°ant¡£ÔËĞĞ·¶Àı³ÌĞòµÄ²½ÖèÎª£º</p>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">1.
-    Ê×ÏÈÆô¶¯ApusicÓ¦ÓÃ·şÎñÆ÷£¬ ·¶Àı³ÌĞò½«µÇÂ¼·şÎñÆ÷¡£ </p>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">2.
-    ±àÒë¡¢ÔËĞĞ³ÌĞò¡£ÔÚsimpleÄ¿Â¼ÏÂÖ´ĞĞantÃüÁî£¬»á±àÒëÔ´³ÌĞòCountFiles.javaµ½buildÄ¿Â¼ÏÂ£¬±àÒëÔ´³ÌĞòCountFilesAction.javaµ½build/actionsÄ¿Â¼ÏÂ¡£È»ºó»á×Ô¶¯ÔËĞĞ³ÌĞò£¬Ïàµ±ÓÚÔÚÃüÁîĞĞÇÃÈëÏÂÃæµÄjavaÃüÁî£º </p>
-  <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">java
-    -classpath %APUSIC_HOME%/lib/apusic.jar;./build;./build/actions<br>
-    &nbsp;&nbsp;&nbsp;&nbsp; -Djava.security.manager <br>
-    &nbsp;&nbsp;&nbsp;&nbsp; -Djava.security.policy==policy.jaas <br>
-    &nbsp;&nbsp;&nbsp;&nbsp; -Djava.security.auth.login.config==login.conf <br>
-    &nbsp;&nbsp;&nbsp;&nbsp; -Dapusic.home=%APUSIC_HOME%
-    samples.CountFiles</p>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">¸ù¾İÌáÊ¾ÊäÈë·şÎñÆ÷£¬ÓÃ»§ÃûºÍ¿ÚÁî¡£
-    Èç¹ûÓÃ¡°admin¡±µÇÂ¼£¬³ÌĞò½«Õı³£ÔËĞĞ½áÊø£¬ÈôÊ¹ÓÃÆäËûÓÃ»§ÃûµÇÂ¼£¬½«Å×³ö·ÃÎÊ¿ØÖÆÒì³£¡£ </p>
-  <p style="font-weight:bold;font-family:Verdana;font-size:10 pt;
- color:navy">48_3_2 &nbsp;JAASºÍApusic</p>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">ApusicÓ¦ÓÃ·şÎñÆ÷Ìá¹©ÁËÊ¹ÓÃJAAS½Ó¿Ú½øĞĞÓÃ»§ÈÏÖ¤µÄ·½·¨£¬¶ø·ÃÎÊ¿ØÖÆÊÚÈ¨ÔòÓÉApusic×Ô¼ºµÄ°²È«¹ÜÀíÆ÷½øĞĞ¹ÜÀí¡£ÕâÑùApusicÌá¹©ÁËÁ½ÖÖÓÃ»§ÈÏÖ¤·½Ê½£¬¼´´«Í³µÄJNDIÈÏÖ¤ºÍĞÂĞÍµÄJAASÈÏÖ¤£¬¶ÔÓÚWebÓ¦ÓÃÔòÌá¹©±ê×¼µÄHTTPÈÏÖ¤¡£</p>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">ApusicÌá¹©µÄLoginModuleÓĞ£º</p>
-  <ul type=disc style="direction:ltr;unicode-bidi:embed;
+      <li style="vertical-align:middle;color:black"><span style="font-family:Verdana;font-size:10 pt">å…¬å…±ç±»ï¼šSubject,ï¼ŒPrincipalï¼ŒCredential </span></li>
+      <li style="vertical-align:middle;color:black"><span style="font-family:Verdana;font-size:10 pt">è®¤è¯ç±»å’Œæ¥å£ï¼šLoginContextï¼ŒLoginModuleï¼ŒCallbackHandlerï¼ŒCallback </span></li>
+      <li style="vertical-align:middle;color:black"><span style="font-family:Verdana;font-size:10 pt">æˆæƒç±» ï¼šPolicyï¼ŒAuthPermissionï¼ŒPrivateCredentialPermission </span></li>
+    </ul>
+    <p style="font-family:Verdana;font-size:10 pt"><span style="color:black">è¯¦ç»†çš„æè¿°è¯·å‚è€ƒã€Š</span><a href="http://java.sun.com/j2se/1.4.2/docs/guide/security/jaas/JAASRefGuide.html">JAAS
+    Reference Guide</a><span style="color:black">ã€‹ã€‚</span></p>
+    <p style="font-weight:bold;font-family:Verdana;font-size:10 pt;
+ color:navy">48_3_1_3 &nbsp;é…ç½®LoginModules</p>
+    <p style="font-family:Verdana;font-size:10 pt"><span style="color:black">JAASè®¤è¯è¢«å®ç°ä¸ºä¸€ç§å¯æ’å…¥çš„æ–¹å¼ï¼Œç³»ç»Ÿç®¡ç†å‘˜å¯ä»¥é€šè¿‡é…ç½®æ–‡ä»¶ä¸ºæ¯ä¸€ä¸ªåº”ç”¨ç¨‹åºé…ç½®LoginModulsæ¥å†³å®šåº”ç”¨ç¨‹åºä½¿ç”¨çš„è®¤è¯æŠ€æœ¯ã€‚é…ç½®ä¿¡æ¯å¯ä»¥ä¿å­˜åœ¨æ–‡ä»¶æˆ–æ•°æ®åº“ä¸­ï¼Œé€šè¿‡</span><a href="http://java.sun.com/j2se/1.4.2/docs/api/javax/security/auth/login/Configuration.html">javax.security.auth.login.Configuration</a>
+      <span
+      style="color:black">å¯¹è±¡è¿›è¡Œè¯»å–ã€‚javax.security.auth.login.Configurationä¸ºæŠ½è±¡ç±»ï¼ŒJDKæä¾›äº†å¯å®ä¾‹åŒ–çš„å­ç±»</span><a href="http://java.sun.com/j2se/1.4.2/docs/guide/security/jaas/spec/com/sun/security/auth/login/ConfigFile.html">com.sun.security.auth.login.ConfigFile</a>
+        <span
+        style="color:black">ï¼Œä»æ–‡ä»¶ä¸­è¯»å–é…ç½®ä¿¡æ¯ã€‚é…ç½®æ–‡ä»¶ä¸­åŒ…å«ä¸€ä¸ªæˆ–å¤šä¸ªæ¡ç›®ï¼Œæ¯ä¸€ä¸ªæ¡ç›®æŒ‡æ˜äº†ç‰¹å®šåº”ç”¨ç¨‹åºä½¿ç”¨çš„è®¤è¯æ–¹æ³•ã€‚æ¡ç›®çš„ç»“æ„å¦‚ä¸‹ï¼š</span>
+    </p>
+    <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">&lt;name used by application to refer to this entry&gt; {
+      <br> &nbsp;&nbsp;&nbsp; &lt;LoginModule&gt; &lt;flag&gt; &lt;LoginModule options&gt;;
+      <br> &nbsp;&nbsp;&nbsp; &lt;optional additional LoginModules, flags and options&gt;;
+      <br> &nbsp;&nbsp;&nbsp; };</p>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">å¯ä»¥çœ‹å‡ºï¼Œæ¯ä¸€ä¸ªæ¡ç›®ç”±åå­—å’Œä¸€ä¸ªæˆ–å¤šä¸ªLoginModuleç»„æˆã€‚èŒƒä¾‹ç¨‹åºä½¿ç”¨çš„é…ç½®æ–‡ä»¶login.confå†…å®¹å¦‚ä¸‹ï¼š</p>
+    <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">CountFiles {
+      <br> &nbsp;&nbsp;&nbsp; com.apusic.security.auth.login.ClientPasswordLoginModule required;
+      <br> };
+    </p>
+    <p style="font-family:Verdana;font-size:10 pt"><span style="color:black">è¯¦ç»†çš„æè¿°ä¿¡æ¯å¯ä»¥å‚è€ƒ</span><a href="http://java.sun.com/j2se/1.4.2/docs/api/javax/security/auth/login/Configuration.html">Configuration</a><span style="color:black">ã€‚</span></p>
+    <p style="font-weight:bold;font-family:Verdana;font-size:10 pt;
+ color:navy">48_3_1_4 &nbsp;ç¼–å†™Policyæ–‡ä»¶</p>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">JAASæˆæƒæ‰©å±•äº†ç°æœ‰çš„Javaå®‰å…¨ä½“ç³»ç»“æ„ï¼Œåœ¨ç»™ä»£ç æˆæƒæ—¶å¯ä»¥åŒ…æ‹¬ä¸€ä¸ªå¤šä¸ªPrincipalåŸŸï¼ŒæŒ‡å‡ºPrincipalä»£è¡¨çš„ç”¨æˆ·æ‰§è¡Œç‰¹å®šçš„ä»£ç æ—¶ï¼Œå…·æœ‰åˆ†é…çš„æƒé™ã€‚å› æ­¤ï¼Œæˆæƒå£°æ˜çš„åŸºæœ¬å½¢å¼ä¸ºï¼š</p>
+    <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">grant &lt;signer(s) field&gt;, &lt;codeBase URL&gt;
+      <br> &nbsp; &lt;Principal field(s)&gt; {
+      <br> &nbsp;&nbsp;&nbsp; permission perm_class_name &quot;target_name&quot;, &quot;action&quot;;
+      <br> &nbsp;&nbsp;&nbsp; ....
+      <br> &nbsp;&nbsp;&nbsp; permission perm_class_name &quot;target_name&quot;, &quot;action&quot;;
+      <br> &nbsp; };</p>
+    <p style="font-family:Verdana;font-size:10 pt"><span style="color:black">ç¼ºçœçš„ç­–ç•¥æ–‡ä»¶å®ç°å’Œç­–ç•¥æ–‡ä»¶è¯­æ³•è¯·å‚è€ƒã€Š</span><a href="http://java.sun.com/j2se/1.4.2/docs/guide/security/PolicyFiles.html">Default
+    Policy Implementation and Policy File Syntax</a><span style="color:black">ã€‹ã€‚èŒƒä¾‹ç¨‹åºä½¿ç”¨çš„ç­–ç•¥æ–‡ä»¶policy.jaaså†…å®¹å¦‚ä¸‹ï¼š</span></p>
+    <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">grant codeBase &quot;
+      <a href="file://./build">file:./build</a>&quot; {
+      <br> &nbsp; permission java.security.AllPermission;
+      <br> };
+      <br>
+      <br> grant codeBase &quot;<a href="file://$%7bapusic.home%7d/lib/apusic.jar">file:/${apusic.home}/lib/apusic.jar</a>&quot; {
+      <br> &nbsp; permission java.security.AllPermission;
+      <br> };
+      <br>
+      <br> grant codeBase &quot;<a href="file://./build/actions">file:./build/actions</a>&quot; Principal com.apusic.security.PrincipalImpl &quot;admin&quot; {
+      <br> &nbsp; permission java.io.FilePermission &quot;&lt;&lt;ALL FILES&gt;&gt;&quot;, &quot;read&quot;;
+      <br> };
+    </p>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">å¯ä»¥çœ‹å‡ºï¼Œç»™ä¸»ç¨‹åºå’Œapusic.jaræˆäºˆäº†æ‰€æœ‰æƒé™ï¼›å½“æ‰§è¡Œå…·ä½“æ“ä½œçš„ç”¨æˆ·ä¸ºâ€œadminâ€æ—¶ï¼Œæˆäºˆäº†è¯»å–æ‰€æœ‰æ–‡ä»¶çš„æƒé™ã€‚</p>
+    <p style="font-weight:bold;font-family:Verdana;font-size:10 pt;
+ color:navy">48_3_1_5 &nbsp;è¿è¡ŒèŒƒä¾‹ç¨‹åº</p>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">èŒƒä¾‹ç¨‹åºæä¾›äº†antçš„build.xmlè„šæœ¬ï¼Œè¯·ç”¨æˆ·è‡ªå·±ä¸‹è½½å¹¶å®‰è£…antã€‚è¿è¡ŒèŒƒä¾‹ç¨‹åºçš„æ­¥éª¤ä¸ºï¼š</p>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">1. é¦–å…ˆå¯åŠ¨Apusicåº”ç”¨æœåŠ¡å™¨ï¼Œ èŒƒä¾‹ç¨‹åºå°†ç™»å½•æœåŠ¡å™¨ã€‚ </p>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">2. ç¼–è¯‘ã€è¿è¡Œç¨‹åºã€‚åœ¨simpleç›®å½•ä¸‹æ‰§è¡Œantå‘½ä»¤ï¼Œä¼šç¼–è¯‘æºç¨‹åºCountFiles.javaåˆ°buildç›®å½•ä¸‹ï¼Œç¼–è¯‘æºç¨‹åºCountFilesAction.javaåˆ°build/actionsç›®å½•ä¸‹ã€‚ç„¶åä¼šè‡ªåŠ¨è¿è¡Œç¨‹åºï¼Œç›¸å½“äºåœ¨å‘½ä»¤è¡Œæ•²å…¥ä¸‹é¢çš„javaå‘½ä»¤ï¼š </p>
+    <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">java -classpath %APUSIC_HOME%/lib/apusic.jar;./build;./build/actions
+      <br> &nbsp;&nbsp;&nbsp;&nbsp; -Djava.security.manager
+      <br> &nbsp;&nbsp;&nbsp;&nbsp; -Djava.security.policy==policy.jaas
+      <br> &nbsp;&nbsp;&nbsp;&nbsp; -Djava.security.auth.login.config==login.conf
+      <br> &nbsp;&nbsp;&nbsp;&nbsp; -Dapusic.home=%APUSIC_HOME% samples.CountFiles
+    </p>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">æ ¹æ®æç¤ºè¾“å…¥æœåŠ¡å™¨ï¼Œç”¨æˆ·åå’Œå£ä»¤ã€‚ å¦‚æœç”¨â€œadminâ€ç™»å½•ï¼Œç¨‹åºå°†æ­£å¸¸è¿è¡Œç»“æŸï¼Œè‹¥ä½¿ç”¨å…¶ä»–ç”¨æˆ·åç™»å½•ï¼Œå°†æŠ›å‡ºè®¿é—®æ§åˆ¶å¼‚å¸¸ã€‚ </p>
+    <p style="font-weight:bold;font-family:Verdana;font-size:10 pt;
+ color:navy">48_3_2 &nbsp;JAASå’ŒApusic</p>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">Apusicåº”ç”¨æœåŠ¡å™¨æä¾›äº†ä½¿ç”¨JAASæ¥å£è¿›è¡Œç”¨æˆ·è®¤è¯çš„æ–¹æ³•ï¼Œè€Œè®¿é—®æ§åˆ¶æˆæƒåˆ™ç”±Apusicè‡ªå·±çš„å®‰å…¨ç®¡ç†å™¨è¿›è¡Œç®¡ç†ã€‚è¿™æ ·Apusicæä¾›äº†ä¸¤ç§ç”¨æˆ·è®¤è¯æ–¹å¼ï¼Œå³ä¼ ç»Ÿçš„JNDIè®¤è¯å’Œæ–°å‹çš„JAASè®¤è¯ï¼Œå¯¹äºWebåº”ç”¨åˆ™æä¾›æ ‡å‡†çš„HTTPè®¤è¯ã€‚</p>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">Apusicæä¾›çš„LoginModuleæœ‰ï¼š</p>
+    <ul type=disc style="direction:ltr;unicode-bidi:embed;
   ">
-    <li style="vertical-align:middle;color:black"><span
-      style="font-family:Verdana;font-size:10 pt">com.apusic.security.auth.login.ClientPasswordLoginModule£º±ê×¼µÄÓÃ»§¿ÚÁîÈÏÖ¤¡£ </span></li>
-    <li style="vertical-align:middle;color:black"><span
-      style="font-family:Verdana;font-size:10 pt">com.apusic.security.auth.login.ClientKrb5LoginModule£ºKerberosÖ§³ÖµÄÓÃ»§ÈÏÖ¤¡£ </span></li>
-    <li style="vertical-align:middle;color:black"><span
-      style="font-family:Verdana;font-size:10 pt">com.apusic.security.auth.login.ServerLoginModule£º·şÎñÆ÷¶ËLoginModule£¬°Ñµ±Ç°Ïß³Ì¹ØÁªµÄ°²È«ÉÏÏÂÎÄÖĞµÄprincipalºÍcredentialsÖ±½Ó´æ·ÅÔÚSubjectÖĞ¡£ </span></li>
-  </ul>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">Ò»°ãµÄ£¬¿ª·¢ÕßÊ¹ÓÃClientPasswordLoginModuleºÍClientKrb5LoginModule´Ó¿Í»§¶ËµÇÂ¼·şÎñÆ÷¡£Ê¹ÓÃJAAS¿ÉÒÔÍ¬Ê±Ê¹ÓÃ¶à¸öÉí·İµÇÂ¼·şÎñÆ÷£¬Ò²¿ÉÒÔÍ¬Ê±µÇÂ¼µ½¶à¸ö·şÎñÆ÷£¬È»ºóÍ¨¹ıSubject.doAs·½·¨ÒÔ²»Í¬µÄÉí·İµ÷ÓÃĞèÒªÊÚÈ¨µÄ·şÎñÆ÷²Ù×÷¡£µ±Ê¹ÓÃJNDIÈÏÖ¤Ê±Ò²¿ÉÒÔÍ¬Ê±µÈÂ¼µ½¶à¸ö·şÎñÆ÷£¬µ«Ã¿¸ö·şÎñÆ÷ÉÏÖ»ÄÜÓĞÒ»¸ö»î¶¯ÓÃ»§Éí·İ¡£</p>
-  <div style="direction:ltr">
-    <table border=0 cellpadding=0 cellspacing=0 bordercolor="#A3A3A3" valign=top>
-      <tr>
-        <td>&nbsp;</td>
-        <td><p style="font-weight:bold;font-family:SimSun;font-size:10 pt;
-   color:black">×¢Òâ</p></td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td><p style="font-family:Verdana;font-size:10 pt;color:black">JAASÈÏÖ¤ÓëJNDIÈÏÖ¤²»ÄÜÍ¬Ê±Ê¹ÓÃ£¬µ±Ê¹ÓÃJAASÈÏÖ¤Ö®ºó£¬ÔÚSubject.doAs¿éÖĞ´´½¨InitialContextÊ±²»ÄÜÖ¸¶¨Context.PROVIDER_URL,
-            Context.SECURITY_PRINCIPAL,
-            Context.SECURITY_CREDENTIALSÊôĞÔ£¬¼´Ê¹Ê¹ÓÃÕâĞ©ÊôĞÔ´´½¨ÁËInitialContextÒ²ÈÔÈ»Ê¹ÓÃJAASÈÏÖ¤µÄÓÃ»§Éí·İ½øĞĞµ÷ÓÃ¡£ </p></td>
-      </tr>
-    </table>
-  </div>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">Apusic»¹Ìá¹©ÁËCallbackHandler£¬¿ª·¢Õß¿ÉÒÔ¸ù¾İĞèÒª½øĞĞÑ¡Ôñ£º</p>
-  <ul type=disc style="direction:ltr;unicode-bidi:embed;
+      <li style="vertical-align:middle;color:black"><span style="font-family:Verdana;font-size:10 pt">com.apusic.security.auth.login.ClientPasswordLoginModuleï¼šæ ‡å‡†çš„ç”¨æˆ·å£ä»¤è®¤è¯ã€‚ </span></li>
+      <li style="vertical-align:middle;color:black"><span style="font-family:Verdana;font-size:10 pt">com.apusic.security.auth.login.ClientKrb5LoginModuleï¼šKerberosæ”¯æŒçš„ç”¨æˆ·è®¤è¯ã€‚ </span></li>
+      <li style="vertical-align:middle;color:black"><span style="font-family:Verdana;font-size:10 pt">com.apusic.security.auth.login.ServerLoginModuleï¼šæœåŠ¡å™¨ç«¯LoginModuleï¼ŒæŠŠå½“å‰çº¿ç¨‹å…³è”çš„å®‰å…¨ä¸Šä¸‹æ–‡ä¸­çš„principalå’Œcredentialsç›´æ¥å­˜æ”¾åœ¨Subjectä¸­ã€‚ </span></li>
+    </ul>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">ä¸€èˆ¬çš„ï¼Œå¼€å‘è€…ä½¿ç”¨ClientPasswordLoginModuleå’ŒClientKrb5LoginModuleä»å®¢æˆ·ç«¯ç™»å½•æœåŠ¡å™¨ã€‚ä½¿ç”¨JAASå¯ä»¥åŒæ—¶ä½¿ç”¨å¤šä¸ªèº«ä»½ç™»å½•æœåŠ¡å™¨ï¼Œä¹Ÿå¯ä»¥åŒæ—¶ç™»å½•åˆ°å¤šä¸ªæœåŠ¡å™¨ï¼Œç„¶åé€šè¿‡Subject.doAsæ–¹æ³•ä»¥ä¸åŒçš„èº«ä»½è°ƒç”¨éœ€è¦æˆæƒçš„æœåŠ¡å™¨æ“ä½œã€‚å½“ä½¿ç”¨JNDIè®¤è¯æ—¶ä¹Ÿå¯ä»¥åŒæ—¶ç­‰å½•åˆ°å¤šä¸ªæœåŠ¡å™¨ï¼Œä½†æ¯ä¸ªæœåŠ¡å™¨ä¸Šåªèƒ½æœ‰ä¸€ä¸ªæ´»åŠ¨ç”¨æˆ·èº«ä»½ã€‚</p>
+    <div style="direction:ltr">
+      <table border=0 cellpadding=0 cellspacing=0 bordercolor="#A3A3A3" valign=top>
+        <tr>
+          <td>&nbsp;</td>
+          <td>
+            <p style="font-weight:bold;font-family:SimSun;font-size:10 pt;
+   color:black">æ³¨æ„</p>
+          </td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>
+            <p style="font-family:Verdana;font-size:10 pt;color:black">JAASè®¤è¯ä¸JNDIè®¤è¯ä¸èƒ½åŒæ—¶ä½¿ç”¨ï¼Œå½“ä½¿ç”¨JAASè®¤è¯ä¹‹åï¼Œåœ¨Subject.doAså—ä¸­åˆ›å»ºInitialContextæ—¶ä¸èƒ½æŒ‡å®šContext.PROVIDER_URL, Context.SECURITY_PRINCIPAL, Context.SECURITY_CREDENTIALSå±æ€§ï¼Œå³ä½¿ä½¿ç”¨è¿™äº›å±æ€§åˆ›å»ºäº†InitialContextä¹Ÿä»ç„¶ä½¿ç”¨JAASè®¤è¯çš„ç”¨æˆ·èº«ä»½è¿›è¡Œè°ƒç”¨ã€‚
+              </p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">Apusicè¿˜æä¾›äº†CallbackHandlerï¼Œå¼€å‘è€…å¯ä»¥æ ¹æ®éœ€è¦è¿›è¡Œé€‰æ‹©ï¼š</p>
+    <ul type=disc style="direction:ltr;unicode-bidi:embed;
   ">
-    <li style="vertical-align:middle;color:black"><span
-      style="font-family:Verdana;font-size:10 pt">com.apusic.security.auth.callback.TextCallbackHandler£ºÃüÁîĞĞ·½Ê½µÄµÇÂ¼ÌáÊ¾ </span></li>
-    <li style="vertical-align:middle;color:black"><span
-      style="font-family:Verdana;font-size:10 pt">com.apusic.security.auth.callback.DialogCallbackHandler£ºSwing¶Ô»°¿ò´°¿Ú·½Ê½µÄµÇÂ¼ÌáÊ¾ </span></li>
-    <li style="vertical-align:middle;color:black"><span
-      style="font-family:Verdana;font-size:10 pt">com.apusic.security.auth.callback.DefaultCallbackHandler£ºÔÚ³ÌĞòÖĞÍ¨¹ı¹¹Ôìº¯Êı´«ÈëµÇÂ¼ĞÅÏ¢ </span></li>
+      <li style="vertical-align:middle;color:black"><span style="font-family:Verdana;font-size:10 pt">com.apusic.security.auth.callback.TextCallbackHandlerï¼šå‘½ä»¤è¡Œæ–¹å¼çš„ç™»å½•æç¤º </span></li>
+      <li style="vertical-align:middle;color:black"><span style="font-family:Verdana;font-size:10 pt">com.apusic.security.auth.callback.DialogCallbackHandlerï¼šSwingå¯¹è¯æ¡†çª—å£æ–¹å¼çš„ç™»å½•æç¤º </span></li>
+      <li style="vertical-align:middle;color:black"><span style="font-family:Verdana;font-size:10 pt">com.apusic.security.auth.callback.DefaultCallbackHandlerï¼šåœ¨ç¨‹åºä¸­é€šè¿‡æ„é€ å‡½æ•°ä¼ å…¥ç™»å½•ä¿¡æ¯ </span></li>
+    </ul>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">å½“åº”ç”¨è¿è¡Œåœ¨å®¢æˆ·ç«¯å®¹å™¨ä¸­æ—¶ï¼ŒJAASè®¤è¯ç”±å®¢æˆ·ç«¯å®¹å™¨è‡ªåŠ¨å®Œæˆï¼Œå¼€å‘è€…å¯ä»¥åœ¨application-client.xmlä¸­æŒ‡å®šcallback-handlerã€‚å¦‚æœæœªæŒ‡å®šcallback-handlerï¼Œå®¹å™¨ä¼šæ ¹æ®å®¢æˆ·ç«¯çš„ç¯å¢ƒé€‰æ‹©TextCallbackHandleræˆ–DialogCallbackHandlerã€‚</p>
+    <p style="font-weight:bold;font-family:Verdana;font-size:10 pt;
+ color:navy">48_3_3 &nbsp;Apusic JAASå¼€å‘</p>
+    <p style="font-family:Verdana;font-size:10 pt"><span style="color:black">ä¸€èˆ¬ï¼Œå¼€å‘è€…ä½¿ç”¨JAASè®¤è¯ä»å®¢æˆ·ç«¯ç™»å½•åˆ°æœåŠ¡å™¨ã€‚åœ¨åº”ç”¨å®¢æˆ·ç«¯ä¸­ä½¿ç”¨JAASè®¤è¯ï¼Œéœ€è¦æŠŠæ‰§è¡Œçš„æ“ä½œ(ä¾‹å¦‚è°ƒç”¨æœåŠ¡å™¨ä¸Šéƒ¨ç½²çš„EJBï¼‰åŒ…è£…åœ¨PrivilegedActionä¸­ã€‚ç”±äºApusicåªæŠŠJAASä½œä¸ºè®¤è¯ç”¨æˆ·ä½¿ç”¨ï¼Œæ‰€ä»¥åªéœ€è¦é…ç½®LoginModulesã€‚ç­–ç•¥æ–‡ä»¶ï¼ˆ</span><a href="http://java.sun.com/j2se/1.4.2/docs/guide/security/PolicyFiles.html">Policy</a>
+      <span
+      style="color:black">ï¼‰ä½œä¸ºè®¿é—®æ§åˆ¶æˆæƒè¯­ä¹‰ï¼Œåœ¨è¿™é‡Œä¸éœ€è¦ä½¿ç”¨ã€‚æœ¬èŠ‚é€šè¿‡ä¸€ä¸ªèŒƒä¾‹ç¨‹åºçš„å¼€å‘ï¼Œä»‹ç»ä½¿ç”¨Apusic JAASçš„åŸºæœ¬æ­¥éª¤ã€‚</span>
+    </p>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">æœ¬èŠ‚ä¸­çš„èŒƒä¾‹ä½äºApusicåº”ç”¨æœåŠ¡å™¨å®‰è£…ç›®å½•ä¸­çš„docs/samples/jaas/clientç›®å½•ã€‚æœ‰å…³èŒƒä¾‹çš„å†…å®¹ã€ç¼–è¯‘ã€éƒ¨ç½²ä¸è¿è¡Œï¼Œå¯å‚è€ƒdocs/samples/jaas/clientç›®å½•ä¸‹çš„readme.txtæ–‡ä»¶ã€‚</p>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">1. å¼€å‘å®¢æˆ·ç«¯ä¸»ç¨‹åºï¼ŒåŒ…å«JAASè®¤è¯è¿‡ç¨‹ï¼š </p>
+    <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">package samples;
+      <br>
+      <br> import javax.security.auth.Subject;
+      <br> import javax.security.auth.login.LoginContext;
+      <br> import javax.security.auth.login.LoginException;
+      <br> import com.apusic.security.auth.callback.DialogCallbackHandler;
+      <br>
+      <br> public class Client {
+      <br>
+      <br> &nbsp;&nbsp;&nbsp; static LoginContext lc = null;
+      <br> &nbsp;&nbsp;&nbsp; public static void main(String[] args) {
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //ä½¿ç”¨é…ç½®æ–‡ä»¶ä¸­åå­—ä¸ºâ€œclientâ€çš„æ¡ç›®
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try {
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lc = new LoginContext(&quot;client&quot;,new DialogCallbackHandler());
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } catch (LoginException le) {
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; le.printStackTrace();
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.exit(-1);
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try {
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lc.login();
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //å¦‚æœæ²¡æœ‰å¼‚å¸¸æŠ›å‡ºï¼Œåˆ™è¡¨ç¤ºè®¤è¯æˆåŠŸ
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } catch (Exception e) {
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Login failed: &quot; + e);
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.exit(-1);
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; String name;
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ( args != null &amp;&amp; args.length &gt;0 )
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; name = args[0];
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }else{
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; name = &quot;apusic&quot;;
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //ä»¥è®¤è¯ç”¨æˆ·çš„èº«ä»½æ‰§è¡Œä»£ç 
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Object o = Subject.doAs(lc.getSubject(), new SampleAction(name) );
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(o);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <br> &nbsp;&nbsp;&nbsp; }
+      <br> }
+    </p>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">2. å®¢æˆ·æ‰§è¡Œçš„æ“ä½œåŒ…è£…åœ¨PrivilegedActionå­ç±»çš„runæ–¹æ³•ä¸­ã€‚åœ¨è¿™ä¸ªä¾‹å­ä¸­å®¢æˆ·ç«¯å°†è°ƒç”¨EJBã€‚ </p>
+    <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">package samples;
+      <br>
+      <br> import java.security.PrivilegedAction;
+      <br> import javax.naming.Context;
+      <br> import javax.naming.InitialContext;
+      <br> import javax.rmi.PortableRemoteObject;
+      <br>
+      <br> import samples.ejb.Hello;
+      <br> import samples.ejb.HelloHome;
+      <br>
+      <br> public class SampleAction implements PrivilegedAction {
+      <br> &nbsp;&nbsp;&nbsp; private String name;
+      <br> &nbsp;&nbsp;&nbsp; public SampleAction(String name){
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.name = name;
+      <br> &nbsp;&nbsp;&nbsp; }
+      <br> &nbsp;&nbsp;&nbsp; public Object run() {
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Object obj = null;
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try{
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Context ic = new InitialContext();
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Object objref = ic.lookup(&quot;ejb/HelloJAAS&quot;);
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HelloHome home = (HelloHome) PortableRemoteObject.narrow(objref, HelloHome.class);
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hello hello = home.create();
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; obj = hello.sayHello(name) ;
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }catch(Exception e){
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e.printStackTrace();
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return obj;
+      <br> &nbsp;&nbsp;&nbsp; }
+      <br> }
+    </p>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">3. å¼€å‘EJBæ¨¡å—ã€‚æœ¬ä¾‹ä¸­çš„EJBåªå®ç°äº†ä¸€ä¸ªå•†ä¸šæ–¹æ³•sayHelloï¼Œ </p>
+    <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">public java.lang.String sayHello(java.lang.String name) {
+      <br> &nbsp;&nbsp;&nbsp; return &quot;hello, &quot; + name;
+      <br> }
+    </p>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">åœ¨éƒ¨ç½²æ–‡ä»¶ejb-jar.xmlä¸­å®šä¹‰äº†ä¸¤ä¸ªè§’è‰²ï¼šemployeeå’Œmanagerï¼Œå¹¶ä¸”å®šä¹‰äº†æ–¹æ³•è®¿é—®è®¸å¯ï¼Œå³åªå…è®¸è§’è‰²managerè®¿é—®å•†ä¸šæ–¹æ³•sayHelloï¼š </p>
+    <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">...
+      <br> &lt;security-role&gt;
+      <br> &nbsp;&nbsp;&nbsp; &lt;role-name&gt;employee&lt;/role-name&gt;
+      <br> &lt;/security-role&gt;
+      <br> &lt;security-role&gt;
+      <br> &nbsp;&nbsp;&nbsp; &lt;role-name&gt;manager&lt;/role-name&gt;
+      <br> &lt;/security-role&gt;
+      <br> &lt;method-permission&gt;
+      <br> &nbsp;&nbsp;&nbsp; &lt;role-name&gt;manager&lt;/role-name&gt;
+      <br> &nbsp;&nbsp;&nbsp; &lt;method&gt;
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ejb-name&gt;Hello&lt;/ejb-name&gt;
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;method-intf&gt;Remote&lt;/method-intf&gt;
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;method-name&gt;sayHello&lt;/method-name&gt;
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;method-params&gt;
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;method-param&gt;java.lang.String&lt;/method-param&gt;
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/method-params&gt;
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/method&gt;
+      <br> &lt;/method-permission&gt;
+      <br> ...
+    </p>
+    <p style="font-family:Verdana;font-size:10 pt"><span style="color:black">4. ç¼–è¯‘ã€æ‰“åŒ…å’Œéƒ¨ç½²EJBæ¨¡å—ã€‚å…·ä½“è¿‡ç¨‹å¯ä»¥å‚è€ƒ </span><a href="http://infocenter.apusic.com/help/topic/aas/v6/package_deploy_ejb.html">ç¬¬&nbsp;49.3&nbsp;èŠ‚
+    â€œæ‰“åŒ…å’Œéƒ¨ç½²EJBæ¨¡å—â€</a><span style="color:black">ã€‚åœ¨apusicçš„éƒ¨ç½²æè¿°æ–‡ä»¶apusic-application.xmlä¸­å°†ejb-jar.xmlä¸­å®šä¹‰çš„è§’è‰²æ˜ å°„ä¸ºæœåŠ¡å™¨ç”¨æˆ·ï¼š</span></p>
+    <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">&lt;security-role&gt;
+      <br> &nbsp;&nbsp;&nbsp; &lt;role-name&gt;manager&lt;/role-name&gt;
+      <br> &nbsp;&nbsp;&nbsp; &lt;principal&gt;admin&lt;/principal&gt;
+      <br> &lt;/security-role&gt;
+      <br> &lt;security-role&gt;
+      <br> &nbsp;&nbsp;&nbsp; &lt;role-name&gt;employee&lt;/role-name&gt;
+      <br> &nbsp;&nbsp;&nbsp; &lt;principal&gt;j2ee&lt;/principal&gt;
+      <br> &lt;/security-role&gt;
+    </p>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">æœ€åä½¿ç”¨ejbgenå·¥å…·ç”Ÿæˆå®¢æˆ·ç«¯è¿è¡Œéœ€è¦çš„ç±»åº“appclient.jarã€‚ </p>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">5. é…ç½®LoginModulesã€‚å®¢æˆ·ç«¯ä½¿ç”¨JAASè®¤è¯éœ€è¦è¯»å–é…ç½®æ–‡ä»¶æ¥é…ç½®LoginModulesï¼Œæœ¬èŒƒä¾‹çš„é…ç½®æ–‡ä»¶login.confå†…å®¹ä¸ºï¼š </p>
+    <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">client {
+      <br> &nbsp;&nbsp;&nbsp; com.apusic.security.auth.login.ClientPasswordLoginModule required;
+      <br> };
+    </p>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">åœ¨è¿è¡Œå®¢æˆ·ç«¯æ—¶é€šè¿‡-Djava.security.auth.login.config==login.confå°†é…ç½®æ–‡ä»¶ä¼ å…¥å®¢æˆ·ç«¯ä¸»ç¨‹åºã€‚å¦‚æœApusicé…ç½®äº†Kerberosæ”¯æŒï¼Œå¯ä»¥ä½¿ç”¨ClientKrb5LoginModule</p>
+    <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">client {
+      <br> &nbsp;&nbsp;&nbsp; com.apusic.security.auth.login.ClientKrb5LoginModule&nbsp; required url=&quot;<a href="http://localhost:6888/">http://localhost:6888</a>&quot;;
+      <br> };
+    </p>
+    <div style="direction:ltr">
+      <table border=0 cellpadding=0 cellspacing=0 bordercolor="#A3A3A3" valign=top>
+        <tr>
+          <td>&nbsp;</td>
+          <td>
+            <p style="font-weight:bold;font-family:SimSun;font-size:10 pt;
+   color:black">æ³¨æ„</p>
+          </td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>
+            <p style="font-family:Verdana;font-size:10 pt;color:black">å¦‚æœç¨‹åºè¿è¡Œåœ¨å®¢æˆ·ç«¯å®¹å™¨ä¸­ï¼Œé…ç½®æ–‡ä»¶ä¸­LoginModuleçš„åå­—å¿…é¡»ä¸ºâ€œclientâ€ã€‚å®¢æˆ·ç«¯å®¹å™¨ä¼šè‡ªåŠ¨ä½¿ç”¨åå­—ä¸ºâ€œclientâ€çš„LoginModuleè¿›è¡ŒJAASè®¤è¯ã€‚</p>
+            <p style="font-family:Verdana;font-size:10 pt"><span style="color:black">å¦‚æœä½¿ç”¨</span><a href="http://infocenter.apusic.com/help/topic/aas/v6/apclient.html">apclient</a><span style="color:black">å¯åŠ¨å®¢æˆ·ç«¯å®¹å™¨ï¼Œå¯ä»¥æŒ‡å®šurlå‚æ•°ï¼Œæ ¼å¼ä¸ºï¼šiiop://user:password@host:portï¼Œåˆ™ä¸ä¼šå¼¹å‡ºç™»å½•çª—å£ã€‚apclientä½¿ç”¨$APUSIC_HOME/config/</span>
+              <a
+              href="http://infocenter.apusic.com/help/topic/aas/v6/clientauth_cfg.html">clientauth.cfg</a><span style="color:black">ä½œä¸ºç™»å½•é…ç½®æ–‡ä»¶ã€‚</span></p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">6. è¿è¡Œå®¢æˆ·ç«¯ã€‚èŒƒä¾‹ç¨‹åºæä¾›äº†antè„šæœ¬build.xmlï¼Œå¯ä»¥è‡ªåŠ¨ç¼–è¯‘ã€æ‰“åŒ…ã€éƒ¨ç½²EJBæ¨¡å—å’Œè¿è¡Œå®¢æˆ·ç«¯ç¨‹åºã€‚è¿è¡Œå®¢æˆ·ç«¯ç­‰ä»·çš„å‘½ä»¤è¡Œå‘½ä»¤ä¸ºï¼š </p>
+    <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">java -classpath %apusic_home%/lib/apusic.jar;./build/client;appclient.jar
+      <br> &nbsp;&nbsp;&nbsp;&nbsp; -Djava.security.auth.login.config==login.conf
+      <br> &nbsp;&nbsp;&nbsp;&nbsp; samples.Client apusic</p>
+    <p style="font-family:Verdana;font-size:10 pt;color:black">å½“å®¢æˆ·ç«¯è¿è¡Œæ—¶ï¼Œä¼šå¼¹å‡ºwindowså¯¹è¯æ¡†ï¼Œæç¤ºè¾“å…¥æœåŠ¡å™¨ã€ç”¨æˆ·åå’Œå£ä»¤ã€‚å¦‚æœä½¿ç”¨â€œadminâ€ç™»å½•ï¼Œå®¢æˆ·ç«¯å°†æ­£å¸¸è°ƒç”¨EJBçš„sayHelloæ–¹æ³•ã€‚å¦‚æœä½¿ç”¨å…¶ä»–ç”¨æˆ·ç™»å½•ï¼Œå®¢æˆ·ç«¯å°†æŠ›å‡ºè®¿é—®æ§åˆ¶å¼‚å¸¸ï¼šjava.rmi.AccessException: ç”¨æˆ· "xxx" æ²¡æœ‰æƒé™è®¿é—®EJBçš„ä¸šåŠ¡æ–¹æ³•ã€‚ </p>
   </ul>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">µ±Ó¦ÓÃÔËĞĞÔÚ¿Í»§¶ËÈİÆ÷ÖĞÊ±£¬JAASÈÏÖ¤ÓÉ¿Í»§¶ËÈİÆ÷×Ô¶¯Íê³É£¬¿ª·¢Õß¿ÉÒÔÔÚapplication-client.xmlÖĞÖ¸¶¨callback-handler¡£Èç¹ûÎ´Ö¸¶¨callback-handler£¬ÈİÆ÷»á¸ù¾İ¿Í»§¶ËµÄ»·¾³Ñ¡ÔñTextCallbackHandler»òDialogCallbackHandler¡£</p>
-  <p style="font-weight:bold;font-family:Verdana;font-size:10 pt;
- color:navy">48_3_3 &nbsp;Apusic JAAS¿ª·¢</p>
-  <p style="font-family:Verdana;font-size:10 pt"><span
- style="color:black">Ò»°ã£¬¿ª·¢ÕßÊ¹ÓÃJAASÈÏÖ¤´Ó¿Í»§¶ËµÇÂ¼µ½·şÎñÆ÷¡£ÔÚÓ¦ÓÃ¿Í»§¶ËÖĞÊ¹ÓÃJAASÈÏÖ¤£¬ĞèÒª°ÑÖ´ĞĞµÄ²Ù×÷(ÀıÈçµ÷ÓÃ·şÎñÆ÷ÉÏ²¿ÊğµÄEJB£©°ü×°ÔÚPrivilegedActionÖĞ¡£ÓÉÓÚApusicÖ»°ÑJAAS×÷ÎªÈÏÖ¤ÓÃ»§Ê¹ÓÃ£¬ËùÒÔÖ»ĞèÒªÅäÖÃLoginModules¡£²ßÂÔÎÄ¼ş£¨</span><a
- href="http://java.sun.com/j2se/1.4.2/docs/guide/security/PolicyFiles.html">Policy</a><span
- style="color:black">£©×÷Îª·ÃÎÊ¿ØÖÆÊÚÈ¨ÓïÒå£¬ÔÚÕâÀï²»ĞèÒªÊ¹ÓÃ¡£±¾½ÚÍ¨¹ıÒ»¸ö·¶Àı³ÌĞòµÄ¿ª·¢£¬½éÉÜÊ¹ÓÃApusic JAASµÄ»ù±¾²½Öè¡£</span></p>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">±¾½ÚÖĞµÄ·¶ÀıÎ»ÓÚApusicÓ¦ÓÃ·şÎñÆ÷°²×°Ä¿Â¼ÖĞµÄdocs/samples/jaas/clientÄ¿Â¼¡£ÓĞ¹Ø·¶ÀıµÄÄÚÈİ¡¢±àÒë¡¢²¿ÊğÓëÔËĞĞ£¬¿É²Î¿¼docs/samples/jaas/clientÄ¿Â¼ÏÂµÄreadme.txtÎÄ¼ş¡£</p>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">1.
-    ¿ª·¢¿Í»§¶ËÖ÷³ÌĞò£¬°üº¬JAASÈÏÖ¤¹ı³Ì£º </p>
-  <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">package
-    samples;<br>
-    <br>
-    import javax.security.auth.Subject;<br>
-    import javax.security.auth.login.LoginContext;<br>
-    import javax.security.auth.login.LoginException;<br>
-    import com.apusic.security.auth.callback.DialogCallbackHandler;<br>
-    <br>
-    public class Client {<br>
-    <br>
-    &nbsp;&nbsp;&nbsp; static LoginContext lc =
-    null;<br>
-    &nbsp;&nbsp;&nbsp; public static void main(String[]
-    args) {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //Ê¹ÓÃÅäÖÃÎÄ¼şÖĞÃû×ÖÎª¡°client¡±µÄÌõÄ¿<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lc = new
-    LoginContext(&quot;client&quot;,new DialogCallbackHandler());<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } catch (LoginException le)
-    {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; le.printStackTrace();<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.exit(-1);<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lc.login();<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //Èç¹ûÃ»ÓĞÒì³£Å×³ö£¬Ôò±íÊ¾ÈÏÖ¤³É¹¦<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } catch (Exception e) {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Login failed: &quot; + e);<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.exit(-1);<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; String name;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ( args != null &amp;&amp;
-    args.length &gt;0 )<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; name = args[0];<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }else{<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; name = &quot;apusic&quot;;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //ÒÔÈÏÖ¤ÓÃ»§µÄÉí·İÖ´ĞĞ´úÂë<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Object o =
-    Subject.doAs(lc.getSubject(), new SampleAction(name) );<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(o);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
-    &nbsp;&nbsp;&nbsp; }<br>
-    }</p>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">2.
-    ¿Í»§Ö´ĞĞµÄ²Ù×÷°ü×°ÔÚPrivilegedAction×ÓÀàµÄrun·½·¨ÖĞ¡£ÔÚÕâ¸öÀı×ÓÖĞ¿Í»§¶Ë½«µ÷ÓÃEJB¡£ </p>
-  <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">package
-    samples;<br>
-    <br>
-    import java.security.PrivilegedAction;<br>
-    import javax.naming.Context;<br>
-    import javax.naming.InitialContext;<br>
-    import javax.rmi.PortableRemoteObject;<br>
-    <br>
-    import samples.ejb.Hello;<br>
-    import samples.ejb.HelloHome;<br>
-    <br>
-    public class SampleAction implements PrivilegedAction {<br>
-    &nbsp;&nbsp;&nbsp; private String name;<br>
-    &nbsp;&nbsp;&nbsp; public SampleAction(String
-    name){<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.name = name;<br>
-    &nbsp;&nbsp;&nbsp; }<br>
-    &nbsp;&nbsp;&nbsp; public Object run() {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Object obj = null;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try{<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Context ic = new
-    InitialContext();<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Object objref =
-    ic.lookup(&quot;ejb/HelloJAAS&quot;);<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HelloHome home =
-    (HelloHome) PortableRemoteObject.narrow(objref, HelloHome.class);<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hello hello =
-    home.create();<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; obj = hello.sayHello(name)
-    ;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }catch(Exception e){<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e.printStackTrace();<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return obj;<br>
-    &nbsp;&nbsp;&nbsp; }<br>
-    }</p>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">3.
-    ¿ª·¢EJBÄ£¿é¡£±¾ÀıÖĞµÄEJBÖ»ÊµÏÖÁËÒ»¸öÉÌÒµ·½·¨sayHello£¬ </p>
-  <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">public
-    java.lang.String sayHello(java.lang.String name) {<br>
-    &nbsp;&nbsp;&nbsp; return &quot;hello, &quot; +
-    name;<br>
-    }</p>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">ÔÚ²¿ÊğÎÄ¼şejb-jar.xmlÖĞ¶¨ÒåÁËÁ½¸ö½ÇÉ«£ºemployeeºÍmanager£¬²¢ÇÒ¶¨ÒåÁË·½·¨·ÃÎÊĞí¿É£¬¼´Ö»ÔÊĞí½ÇÉ«manager·ÃÎÊÉÌÒµ·½·¨sayHello£º </p>
-  <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">... <br>
-    &lt;security-role&gt;<br>
-    &nbsp;&nbsp;&nbsp; &lt;role-name&gt;employee&lt;/role-name&gt;<br>
-    &lt;/security-role&gt;<br>
-    &lt;security-role&gt;<br>
-    &nbsp;&nbsp;&nbsp; &lt;role-name&gt;manager&lt;/role-name&gt;<br>
-    &lt;/security-role&gt;<br>
-    &lt;method-permission&gt;<br>
-    &nbsp;&nbsp;&nbsp; &lt;role-name&gt;manager&lt;/role-name&gt;<br>
-    &nbsp;&nbsp;&nbsp; &lt;method&gt;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ejb-name&gt;Hello&lt;/ejb-name&gt;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;method-intf&gt;Remote&lt;/method-intf&gt;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;method-name&gt;sayHello&lt;/method-name&gt;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;method-params&gt;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;method-param&gt;java.lang.String&lt;/method-param&gt;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/method-params&gt;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/method&gt;<br>
-    &lt;/method-permission&gt;<br>
-    ...</p>
-  <p style="font-family:Verdana;font-size:10 pt"><span
- style="color:black">4. ±àÒë¡¢´ò°üºÍ²¿ÊğEJBÄ£¿é¡£¾ßÌå¹ı³Ì¿ÉÒÔ²Î¿¼ </span><a
- href="http://infocenter.apusic.com/help/topic/aas/v6/package_deploy_ejb.html">µÚ&nbsp;49.3&nbsp;½Ú
-    ¡°´ò°üºÍ²¿ÊğEJBÄ£¿é¡±</a><span style="color:black">¡£ÔÚapusicµÄ²¿ÊğÃèÊöÎÄ¼şapusic-application.xmlÖĞ½«ejb-jar.xmlÖĞ¶¨ÒåµÄ½ÇÉ«Ó³ÉäÎª·şÎñÆ÷ÓÃ»§£º</span></p>
-  <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">&lt;security-role&gt;<br>
-    &nbsp;&nbsp;&nbsp; &lt;role-name&gt;manager&lt;/role-name&gt;<br>
-    &nbsp;&nbsp;&nbsp; &lt;principal&gt;admin&lt;/principal&gt;<br>
-    &lt;/security-role&gt;<br>
-    &lt;security-role&gt;<br>
-    &nbsp;&nbsp;&nbsp; &lt;role-name&gt;employee&lt;/role-name&gt;<br>
-    &nbsp;&nbsp;&nbsp; &lt;principal&gt;j2ee&lt;/principal&gt;<br>
-    &lt;/security-role&gt;</p>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">×îºóÊ¹ÓÃejbgen¹¤¾ßÉú³É¿Í»§¶ËÔËĞĞĞèÒªµÄÀà¿âappclient.jar¡£ </p>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">5.
-    ÅäÖÃLoginModules¡£¿Í»§¶ËÊ¹ÓÃJAASÈÏÖ¤ĞèÒª¶ÁÈ¡ÅäÖÃÎÄ¼şÀ´ÅäÖÃLoginModules£¬±¾·¶ÀıµÄÅäÖÃÎÄ¼şlogin.confÄÚÈİÎª£º </p>
-  <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">client {<br>
-    &nbsp;&nbsp;&nbsp; com.apusic.security.auth.login.ClientPasswordLoginModule
-    required;<br>
-    };</p>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">ÔÚÔËĞĞ¿Í»§¶ËÊ±Í¨¹ı-Djava.security.auth.login.config==login.conf½«ÅäÖÃÎÄ¼ş´«Èë¿Í»§¶ËÖ÷³ÌĞò¡£Èç¹ûApusicÅäÖÃÁËKerberosÖ§³Ö£¬¿ÉÒÔÊ¹ÓÃClientKrb5LoginModule</p>
-  <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">client {<br>
-    &nbsp;&nbsp;&nbsp; com.apusic.security.auth.login.ClientKrb5LoginModule&nbsp; required url=&quot;<a
- href="http://localhost:6888/">http://localhost:6888</a>&quot;;<br>
-    };</p>
-  <div style="direction:ltr">
-    <table border=0 cellpadding=0 cellspacing=0 bordercolor="#A3A3A3" valign=top>
-      <tr>
-        <td>&nbsp;</td>
-        <td><p style="font-weight:bold;font-family:SimSun;font-size:10 pt;
-   color:black">×¢Òâ</p></td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td><p style="font-family:Verdana;font-size:10 pt;color:black">Èç¹û³ÌĞòÔËĞĞÔÚ¿Í»§¶ËÈİÆ÷ÖĞ£¬ÅäÖÃÎÄ¼şÖĞLoginModuleµÄÃû×Ö±ØĞëÎª¡°client¡±¡£¿Í»§¶ËÈİÆ÷»á×Ô¶¯Ê¹ÓÃÃû×ÖÎª¡°client¡±µÄLoginModule½øĞĞJAASÈÏÖ¤¡£</p>
-          <p style="font-family:Verdana;font-size:10 pt"><span
-   style="color:black">Èç¹ûÊ¹ÓÃ</span><a
-   href="http://infocenter.apusic.com/help/topic/aas/v6/apclient.html">apclient</a><span
-   style="color:black">Æô¶¯¿Í»§¶ËÈİÆ÷£¬¿ÉÒÔÖ¸¶¨url²ÎÊı£¬¸ñÊ½Îª£ºiiop://user:password@host:port£¬Ôò²»»áµ¯³öµÇÂ¼´°¿Ú¡£apclientÊ¹ÓÃ$APUSIC_HOME/config/</span><a
-   href="http://infocenter.apusic.com/help/topic/aas/v6/clientauth_cfg.html">clientauth.cfg</a><span
-   style="color:black">×÷ÎªµÇÂ¼ÅäÖÃÎÄ¼ş¡£</span></p></td>
-      </tr>
-    </table>
-  </div>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">6.
-    ÔËĞĞ¿Í»§¶Ë¡£·¶Àı³ÌĞòÌá¹©ÁËant½Å±¾build.xml£¬¿ÉÒÔ×Ô¶¯±àÒë¡¢´ò°ü¡¢²¿ÊğEJBÄ£¿éºÍÔËĞĞ¿Í»§¶Ë³ÌĞò¡£ÔËĞĞ¿Í»§¶ËµÈ¼ÛµÄÃüÁîĞĞÃüÁîÎª£º </p>
-  <p style="font-family:&quot;Courier New&quot;;font-size:9 pt">java
-    -classpath %apusic_home%/lib/apusic.jar;./build/client;appclient.jar<br>
-    &nbsp;&nbsp;&nbsp;&nbsp; -Djava.security.auth.login.config==login.conf<br>
-    &nbsp;&nbsp;&nbsp;&nbsp; samples.Client apusic</p>
-  <p style="font-family:Verdana;font-size:10 pt;color:black">µ±¿Í»§¶ËÔËĞĞÊ±£¬»áµ¯³öwindows¶Ô»°¿ò£¬ÌáÊ¾ÊäÈë·şÎñÆ÷¡¢ÓÃ»§ÃûºÍ¿ÚÁî¡£Èç¹ûÊ¹ÓÃ¡°admin¡±µÇÂ¼£¬¿Í»§¶Ë½«Õı³£µ÷ÓÃEJBµÄsayHello·½·¨¡£Èç¹ûÊ¹ÓÃÆäËûÓÃ»§µÇÂ¼£¬¿Í»§¶Ë½«Å×³ö·ÃÎÊ¿ØÖÆÒì³££ºjava.rmi.AccessException:
-    ÓÃ»§ "xxx" Ã»ÓĞÈ¨ÏŞ·ÃÎÊEJBµÄÒµÎñ·½·¨¡£ </p>
-</ul>
 </body>
+
 </html>

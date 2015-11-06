@@ -1,30 +1,31 @@
-<!-- saved from url=http://www.w3school.com.cn/xpath/xpath_nodes.asp -->
+ï»¿<!-- saved from url=http://www.w3school.com.cn/xpath/xpath_nodes.asp -->
 <script>
 window.onerror = new Function("return(false);")
 </script><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 
-<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META content="IE=7.0000" 
+<HTML xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><META content="IE=7.0000" 
 http-equiv="X-UA-Compatible">
-<TITLE>XPath ½Úµã</TITLE><LINK rel=stylesheet type=text/css href="c3.css"></HEAD>
+<title>XPath èŠ‚ç‚¹</title><LINK rel=stylesheet type=text/css href="c3.css"></HEAD>
 
 <BODY class=xml>
 
 <DIV id=wrapper>
 
-<DIV id=maincontent><!--StartFragment--><H1>XPath ½Úµã</H1>
+<DIV id=maincontent><!--StartFragment--><H1>XPath èŠ‚ç‚¹</H1>
 <DIV id=tpn>
 <UL class=prenext>
 <LI class=pre><A href="http://www.w3school.com.cn/xpath/xpath_intro.asp">Previous Page</A> </LI>
 <LI class=next><A href="http://www.w3school.com.cn/xpath/xpath_syntax.asp">Next Page</A> </LI></UL></DIV>
 <DIV id=intro>
-<P><STRONG>ÔÚ XPath 
-ÖĞ£¬ÓĞÆßÖÖÀàĞÍµÄ½Úµã£ºÔªËØ¡¢ÊôĞÔ¡¢ÎÄ±¾¡¢ÃüÃû¿Õ¼ä¡¢´¦ÀíÖ¸Áî¡¢×¢ÊÍÒÔ¼°ÎÄµµ½Úµã£¨»ò³ÉÎª¸ù½Úµã£©¡£</STRONG></P></DIV>
+<P><STRONG>åœ¨ XPath 
+ä¸­ï¼Œæœ‰ä¸ƒç§ç±»å‹çš„èŠ‚ç‚¹ï¼šå…ƒç´ ã€å±æ€§ã€æ–‡æœ¬ã€å‘½åç©ºé—´ã€å¤„ç†æŒ‡ä»¤ã€æ³¨é‡Šä»¥åŠæ–‡æ¡£èŠ‚ç‚¹ï¼ˆæˆ–æˆä¸ºæ ¹èŠ‚ç‚¹ï¼‰ã€‚</STRONG></P></DIV>
 <DIV>
-<H2>XPath ÊõÓï</H2>
-<H3>½Úµã£¨Node£©</H3>
-<P>ÔÚ XPath ÖĞ£¬ÓĞÆßÖÖÀàĞÍµÄ½Úµã£ºÔªËØ¡¢ÊôĞÔ¡¢ÎÄ±¾¡¢ÃüÃû¿Õ¼ä¡¢´¦ÀíÖ¸Áî¡¢×¢ÊÍÒÔ¼°ÎÄµµ£¨¸ù£©½Úµã¡£XML 
-ÎÄµµÊÇ±»×÷Îª½ÚµãÊ÷À´¶Ô´ıµÄ¡£Ê÷µÄ¸ù±»³ÆÎªÎÄµµ½Úµã»òÕß¸ù½Úµã¡£</P>
-<P>Çë¿´ÏÂÃæÕâ¸ö XML ÎÄµµ£º</P><PRE>&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;
+<H2>XPath æœ¯è¯­</H2>
+<H3>èŠ‚ç‚¹ï¼ˆNodeï¼‰</H3>
+<P>åœ¨ XPath ä¸­ï¼Œæœ‰ä¸ƒç§ç±»å‹çš„èŠ‚ç‚¹ï¼šå…ƒç´ ã€å±æ€§ã€æ–‡æœ¬ã€å‘½åç©ºé—´ã€å¤„ç†æŒ‡ä»¤ã€æ³¨é‡Šä»¥åŠæ–‡æ¡£ï¼ˆæ ¹ï¼‰èŠ‚ç‚¹ã€‚XML 
+æ–‡æ¡£æ˜¯è¢«ä½œä¸ºèŠ‚ç‚¹æ ‘æ¥å¯¹å¾…çš„ã€‚æ ‘çš„æ ¹è¢«ç§°ä¸ºæ–‡æ¡£èŠ‚ç‚¹æˆ–è€…æ ¹èŠ‚ç‚¹ã€‚</P>
+<P>è¯·çœ‹ä¸‹é¢è¿™ä¸ª XML æ–‡æ¡£ï¼š</P><PRE>&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;
 
 &lt;bookstore&gt;
 
@@ -36,45 +37,45 @@ http-equiv="X-UA-Compatible">
 &lt;/book&gt;
 
 &lt;/bookstore&gt;</PRE>
-<P>ÉÏÃæµÄXMLÎÄµµÖĞµÄ½ÚµãÀı×Ó£º</P><PRE>&lt;bookstore&gt; £¨ÎÄµµ½Úµã£©
-&lt;author&gt;J K. Rowling&lt;/author&gt; £¨ÔªËØ½Úµã£©
-lang="en" £¨ÊôĞÔ½Úµã£© 
+<P>ä¸Šé¢çš„XMLæ–‡æ¡£ä¸­çš„èŠ‚ç‚¹ä¾‹å­ï¼š</P><PRE>&lt;bookstore&gt; ï¼ˆæ–‡æ¡£èŠ‚ç‚¹ï¼‰
+&lt;author&gt;J K. Rowling&lt;/author&gt; ï¼ˆå…ƒç´ èŠ‚ç‚¹ï¼‰
+lang="en" ï¼ˆå±æ€§èŠ‚ç‚¹ï¼‰ 
 </PRE>
-<H3>»ù±¾Öµ£¨»ò³ÆÔ­×ÓÖµ£¬Atomic value£©</H3>
-<P>»ù±¾ÖµÊÇÎŞ¸¸»òÎŞ×ÓµÄ½Úµã¡£</P>
-<P>»ù±¾ÖµµÄÀı×Ó£º</P><PRE>J K. Rowling
+<H3>åŸºæœ¬å€¼ï¼ˆæˆ–ç§°åŸå­å€¼ï¼ŒAtomic valueï¼‰</H3>
+<P>åŸºæœ¬å€¼æ˜¯æ— çˆ¶æˆ–æ— å­çš„èŠ‚ç‚¹ã€‚</P>
+<P>åŸºæœ¬å€¼çš„ä¾‹å­ï¼š</P><PRE>J K. Rowling
 "en"</PRE>
-<H3>ÏîÄ¿£¨Item£©</H3>
-<P>ÏîÄ¿ÊÇ»ù±¾Öµ»òÕß½Úµã¡£</P></DIV>
+<H3>é¡¹ç›®ï¼ˆItemï¼‰</H3>
+<P>é¡¹ç›®æ˜¯åŸºæœ¬å€¼æˆ–è€…èŠ‚ç‚¹ã€‚</P></DIV>
 <DIV>
-<H2>½Úµã¹ØÏµ</H2>
-<H3>¸¸£¨Parent£©</H3>
-<P>Ã¿¸öÔªËØÒÔ¼°ÊôĞÔ¶¼ÓĞÒ»¸ö¸¸¡£</P>
-<P>ÔÚÏÂÃæµÄÀı×ÓÖĞ£¬book ÔªËØÊÇ title¡¢author¡¢year ÒÔ¼° price ÔªËØµÄ¸¸£º</P><PRE>&lt;book&gt;
+<H2>èŠ‚ç‚¹å…³ç³»</H2>
+<H3>çˆ¶ï¼ˆParentï¼‰</H3>
+<P>æ¯ä¸ªå…ƒç´ ä»¥åŠå±æ€§éƒ½æœ‰ä¸€ä¸ªçˆ¶ã€‚</P>
+<P>åœ¨ä¸‹é¢çš„ä¾‹å­ä¸­ï¼Œbook å…ƒç´ æ˜¯ titleã€authorã€year ä»¥åŠ price å…ƒç´ çš„çˆ¶ï¼š</P><PRE>&lt;book&gt;
   &lt;title&gt;Harry Potter&lt;/title&gt;
   &lt;author&gt;J K. Rowling&lt;/author&gt;
   &lt;year&gt;2005&lt;/year&gt;
   &lt;price&gt;29.99&lt;/price&gt;
 &lt;/book&gt;</PRE>
-<H3>×Ó£¨Children£©</H3>
-<P>ÔªËØ½Úµã¿ÉÓĞÁã¸ö¡¢Ò»¸ö»ò¶à¸ö×Ó¡£</P>
-<P>ÔÚÏÂÃæµÄÀı×ÓÖĞ£¬title¡¢author¡¢year ÒÔ¼° price ÔªËØ¶¼ÊÇ book ÔªËØµÄ×Ó£º</P><PRE>&lt;book&gt;
+<H3>å­ï¼ˆChildrenï¼‰</H3>
+<P>å…ƒç´ èŠ‚ç‚¹å¯æœ‰é›¶ä¸ªã€ä¸€ä¸ªæˆ–å¤šä¸ªå­ã€‚</P>
+<P>åœ¨ä¸‹é¢çš„ä¾‹å­ä¸­ï¼Œtitleã€authorã€year ä»¥åŠ price å…ƒç´ éƒ½æ˜¯ book å…ƒç´ çš„å­ï¼š</P><PRE>&lt;book&gt;
   &lt;title&gt;Harry Potter&lt;/title&gt;
   &lt;author&gt;J K. Rowling&lt;/author&gt;
   &lt;year&gt;2005&lt;/year&gt;
   &lt;price&gt;29.99&lt;/price&gt;
 &lt;/book&gt;</PRE>
-<H3>Í¬°û£¨Sibling£©</H3>
-<P>ÓµÓĞÏàÍ¬µÄ¸¸µÄ½Úµã</P>
-<P>ÔÚÏÂÃæµÄÀı×ÓÖĞ£¬title¡¢author¡¢year ÒÔ¼° price ÔªËØ¶¼ÊÇÍ¬°û£º</P><PRE>&lt;book&gt;
+<H3>åŒèƒï¼ˆSiblingï¼‰</H3>
+<P>æ‹¥æœ‰ç›¸åŒçš„çˆ¶çš„èŠ‚ç‚¹</P>
+<P>åœ¨ä¸‹é¢çš„ä¾‹å­ä¸­ï¼Œtitleã€authorã€year ä»¥åŠ price å…ƒç´ éƒ½æ˜¯åŒèƒï¼š</P><PRE>&lt;book&gt;
   &lt;title&gt;Harry Potter&lt;/title&gt;
   &lt;author&gt;J K. Rowling&lt;/author&gt;
   &lt;year&gt;2005&lt;/year&gt;
   &lt;price&gt;29.99&lt;/price&gt;
 &lt;/book&gt;</PRE>
-<H3>ÏÈ±²£¨Ancestor£©</H3>
-<P>Ä³½ÚµãµÄ¸¸¡¢¸¸µÄ¸¸£¬µÈµÈ¡£</P>
-<P>ÔÚÏÂÃæµÄÀı×ÓÖĞ£¬title ÔªËØµÄÏÈ±²ÊÇ book ÔªËØºÍ bookstore ÔªËØ£º</P><PRE>&lt;bookstore&gt;
+<H3>å…ˆè¾ˆï¼ˆAncestorï¼‰</H3>
+<P>æŸèŠ‚ç‚¹çš„çˆ¶ã€çˆ¶çš„çˆ¶ï¼Œç­‰ç­‰ã€‚</P>
+<P>åœ¨ä¸‹é¢çš„ä¾‹å­ä¸­ï¼Œtitle å…ƒç´ çš„å…ˆè¾ˆæ˜¯ book å…ƒç´ å’Œ bookstore å…ƒç´ ï¼š</P><PRE>&lt;bookstore&gt;
 
 &lt;book&gt;
   &lt;title&gt;Harry Potter&lt;/title&gt;
@@ -84,9 +85,9 @@ lang="en" £¨ÊôĞÔ½Úµã£©
 &lt;/book&gt;
 
 &lt;/bookstore&gt;</PRE>
-<H3>ºó´ú£¨Descendant£©</H3>
-<P>Ä³¸ö½ÚµãµÄ×Ó£¬×ÓµÄ×Ó£¬µÈµÈ¡£</P>
-<P>ÔÚÏÂÃæµÄÀı×ÓÖĞ£¬bookstoreµÄºó´úÊÇ book¡¢title¡¢author¡¢year ÒÔ¼° price ÔªËØ£º</P><PRE>&lt;bookstore&gt;
+<H3>åä»£ï¼ˆDescendantï¼‰</H3>
+<P>æŸä¸ªèŠ‚ç‚¹çš„å­ï¼Œå­çš„å­ï¼Œç­‰ç­‰ã€‚</P>
+<P>åœ¨ä¸‹é¢çš„ä¾‹å­ä¸­ï¼Œbookstoreçš„åä»£æ˜¯ bookã€titleã€authorã€year ä»¥åŠ price å…ƒç´ ï¼š</P><PRE>&lt;bookstore&gt;
 
 &lt;book&gt;
   &lt;title&gt;Harry Potter&lt;/title&gt;
@@ -101,5 +102,7 @@ lang="en" £¨ÊôĞÔ½Úµã£©
 <LI class=pre><A href="http://www.w3school.com.cn/xpath/xpath_intro.asp">Previous Page</A> </LI>
 <LI class=next><A href="http://www.w3school.com.cn/xpath/xpath_syntax.asp">Next Page</A> </LI></UL></DIV><!--EndFragment--></DIV>
 </DIV>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
 </BODY>
 </HTML>

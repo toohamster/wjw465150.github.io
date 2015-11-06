@@ -1,35 +1,36 @@
-<!-- saved from url=http://www.w3school.com.cn/xsl/xsl_if.asp -->
+ï»¿<!-- saved from url=http://www.w3school.com.cn/xsl/xsl_if.asp -->
 <script>
 window.onerror = new Function("return(false);")
 </script><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 
-<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META content="IE=7.0000" 
+<HTML xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><META content="IE=7.0000" 
 http-equiv="X-UA-Compatible">
-<TITLE>XSLT <xsl:if> ÔªËØ</TITLE><LINK rel=stylesheet type=text/css 
+<title>XSLT <xsl:if> å…ƒç´ </title><LINK rel=stylesheet type=text/css 
 href="c3.css"></HEAD>
 
 <BODY class=xml>
 
 <DIV id=wrapper>
 
-<DIV id=maincontent><!--StartFragment--><H1>XSLT &lt;xsl:if&gt; ÔªËØ</H1>
+<DIV id=maincontent><!--StartFragment--><H1>XSLT &lt;xsl:if&gt; å…ƒç´ </H1>
 <DIV id=tpn>
 <UL class=prenext>
 <LI class=pre><A href="http://www.w3school.com.cn/xsl/xsl_sort.asp">Previous Page</A> </LI>
 <LI class=next><A href="http://www.w3school.com.cn/xsl/xsl_choose.asp">Next Page</A> </LI></UL></DIV>
 <DIV id=intro>
-<P><STRONG>&lt;xsl:if&gt; ÔªËØÓÃÓÚ·ÅÖÃÕë¶Ô XML ÎÄ¼şÄÚÈİµÄÌõ¼ş²âÊÔ¡£</STRONG></P></DIV>
+<P><STRONG>&lt;xsl:if&gt; å…ƒç´ ç”¨äºæ”¾ç½®é’ˆå¯¹ XML æ–‡ä»¶å†…å®¹çš„æ¡ä»¶æµ‹è¯•ã€‚</STRONG></P></DIV>
 <DIV>
-<H2>&lt;xsl:if&gt; ÔªËØ</H2>
-<P>ÈçĞè·ÅÖÃÕë¶Ô XML ÎÄ¼şÄÚÈİµÄÌõ¼ş²âÊÔ£¬ÇëÏò XSL ÎÄµµÌí¼Ó &lt;xsl:if&gt; ÔªËØ¡£</P>
-<H3>Óï·¨</H3><PRE>&lt;xsl:if test="<I>expression</I>"&gt;
+<H2>&lt;xsl:if&gt; å…ƒç´ </H2>
+<P>å¦‚éœ€æ”¾ç½®é’ˆå¯¹ XML æ–‡ä»¶å†…å®¹çš„æ¡ä»¶æµ‹è¯•ï¼Œè¯·å‘ XSL æ–‡æ¡£æ·»åŠ  &lt;xsl:if&gt; å…ƒç´ ã€‚</P>
+<H3>è¯­æ³•</H3><PRE>&lt;xsl:if test="<I>expression</I>"&gt;
   ...
-  ...Èç¹ûÌõ¼ş³ÉÁ¢ÔòÊä³ö...
+  ...å¦‚æœæ¡ä»¶æˆç«‹åˆ™è¾“å‡º...
   ...
 &lt;/xsl:if&gt;</PRE></DIV>
 <DIV>
-<H2>ÔÚºÎ´¦·ÅÖÃ &lt;xsl:if&gt; ÔªËØ</H2>
-<P>ÈçĞèÌí¼ÓÓĞÌõ¼şµÄ²âÊÔ£¬ÇëÔÚ XSL ÎÄ¼şÖĞµÄ &lt;xsl:for-each&gt; ÔªËØÄÚ²¿Ìí¼Ó &lt;xsl:if&gt; ÔªËØ£º</P><PRE>&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;
+<H2>åœ¨ä½•å¤„æ”¾ç½® &lt;xsl:if&gt; å…ƒç´ </H2>
+<P>å¦‚éœ€æ·»åŠ æœ‰æ¡ä»¶çš„æµ‹è¯•ï¼Œè¯·åœ¨ XSL æ–‡ä»¶ä¸­çš„ &lt;xsl:for-each&gt; å…ƒç´ å†…éƒ¨æ·»åŠ  &lt;xsl:if&gt; å…ƒç´ ï¼š</P><PRE>&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;
 &lt;xsl:stylesheet version="1.0"
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
 &lt;xsl:template match="/"&gt;
@@ -54,16 +55,18 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
   &lt;/html&gt;
 &lt;/xsl:template&gt;
 &lt;/xsl:stylesheet&gt;</PRE>
-<P class=note><SPAN>×¢ÊÍ£º</SPAN>±ØÑ¡µÄ <EM>test</EM> ÊôĞÔµÄÖµ°üº¬ÁËĞèÒªÇóÖµµÄ±í´ïÊ½¡£</P>
-<P>ÉÏÃæµÄ´úÂë½ö½ö»áÊä³ö¼Û¸ñ¸ßÓÚ 10 µÄ CD µÄ title ºÍ artist ÔªËØ¡£</P>
-<H3>ÉÏÃæµÄ×ª»»½á¹ûÀàËÆÕâÑù£º</H3><IMG class=illustration src="xsl_if_01.gif"> 
-<P><A href="http://www.w3school.com.cn/xsl/cdcatalog.xml">²é¿´´Ë XML ÎÄ¼ş</A>£¬<A 
-href="http://www.w3school.com.cn/xsl/cdcatalog_if.xsl">²é¿´´Ë XSL ÎÄ¼ş</A>£¬<A 
-href="http://www.w3school.com.cn/xsl/cdcatalog_if.xml">²é¿´½á¹û</A>¡£</P></DIV>
+<P class=note><SPAN>æ³¨é‡Šï¼š</SPAN>å¿…é€‰çš„ <EM>test</EM> å±æ€§çš„å€¼åŒ…å«äº†éœ€è¦æ±‚å€¼çš„è¡¨è¾¾å¼ã€‚</P>
+<P>ä¸Šé¢çš„ä»£ç ä»…ä»…ä¼šè¾“å‡ºä»·æ ¼é«˜äº 10 çš„ CD çš„ title å’Œ artist å…ƒç´ ã€‚</P>
+<H3>ä¸Šé¢çš„è½¬æ¢ç»“æœç±»ä¼¼è¿™æ ·ï¼š</H3><IMG class=illustration src="xsl_if_01.gif"> 
+<P><A href="http://www.w3school.com.cn/xsl/cdcatalog.xml">æŸ¥çœ‹æ­¤ XML æ–‡ä»¶</A>ï¼Œ<A 
+href="http://www.w3school.com.cn/xsl/cdcatalog_if.xsl">æŸ¥çœ‹æ­¤ XSL æ–‡ä»¶</A>ï¼Œ<A 
+href="http://www.w3school.com.cn/xsl/cdcatalog_if.xml">æŸ¥çœ‹ç»“æœ</A>ã€‚</P></DIV>
 <DIV id=bpn>
 <UL class=prenext>
 <LI class=pre><A href="http://www.w3school.com.cn/xsl/xsl_sort.asp">Previous Page</A> </LI>
 <LI class=next><A href="http://www.w3school.com.cn/xsl/xsl_choose.asp">Next Page</A> </LI></UL></DIV><!--EndFragment--></DIV>
 </DIV>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
 </BODY>
 </HTML>

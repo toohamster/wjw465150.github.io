@@ -1,24 +1,24 @@
-<HTML><HEAD>
-<META HTTP-EQUIV=Content-Type CONTENT=text/html; charset=gb2312>
-<title>Àí½âStAX  </title>
+ï»¿<HTML><HEAD>
+<META HTTP-EQUIV=Content-Type CONTENT=text/html; charset=UTF-8>
+<title>ç†è§£StAX</title>
 <style type="text/css">
 <!--
-.9t {font-size: 9pt; color: #000000; font-family: "ËÎÌå";}
+.9t {font-size: 9pt; color: #000000; font-family: "å®‹ä½“";}
 -->
 </style></HEAD>
-<body bgcolor="#FFFFFF">
+<body bgcolor="#ffffff">
 <table width="90%" border="0" align="center" ><tr><td>
 <PRE class="9t">
-Àí½âStAX
+ç†è§£StAX
 
-StAX´úÂëÑİÊ¾
+StAXä»£ç æ¼”ç¤º
 
-ÏÂÃæ´úÂëÑİÊ¾ÁËÈçºÎÍ¨¹ıStAX¶ÁÈ¡xmlÎÄµµºÍÉú³ÉxmlÎÄµµ
+ä¸‹é¢ä»£ç æ¼”ç¤ºäº†å¦‚ä½•é€šè¿‡StAXè¯»å–xmlæ–‡æ¡£å’Œç”Ÿæˆxmlæ–‡æ¡£
 
 public class StaxTester {
     public static void main(String[] args) throws XMLStreamException, FileNotFoundException {
-        readXMLByStAX();//ÓÃXMLEventReader½âÎöxmlÎÄµµ
-        writeXMLByStAX();//ÓÃXMLStreamWriterĞ´xmlÎÄµµ
+        readXMLByStAX();//ç”¨XMLEventReaderè§£æxmlæ–‡æ¡£
+        writeXMLByStAX();//ç”¨XMLStreamWriterå†™xmlæ–‡æ¡£
     }
 
     private static void readXMLByStAX() throws XMLStreamException, FileNotFoundException {
@@ -28,7 +28,7 @@ public class StaxTester {
         StringBuffer parsingResult = new StringBuffer();
         while (xmler.hasNext()) {
             event = xmler.nextEvent();
-            if (event.isStartElement()) { //Èç¹û½âÎöµÄÊÇÆğÊ¼±ê¼Ç
+            if (event.isStartElement()) { //å¦‚æœè§£æçš„æ˜¯èµ·å§‹æ ‡è®°
                 StartElement se = event.asStartElement();
                 parsingResult.append("&lt;");
                 parsingResult.append(se.getName());
@@ -38,9 +38,9 @@ public class StaxTester {
                     parsingResult.append("\"");
                 }
                 parsingResult.append("&gt;");
-            } else if (event.isCharacters()) { //Èç¹û½âÎöµÄÊÇÎÄ±¾ÄÚÈİ
+            } else if (event.isCharacters()) { //å¦‚æœè§£æçš„æ˜¯æ–‡æœ¬å†…å®¹
                 parsingResult.append(event.asCharacters().getData());
-            } else if(event.isEndElement()){ //Èç¹û½âÎöµÄÊÇ½áÊø±ê¼Ç
+            } else if(event.isEndElement()){ //å¦‚æœè§£æçš„æ˜¯ç»“æŸæ ‡è®°
                 parsingResult.append("&lt;/");
                 parsingResult.append(event.asEndElement().getName());
                 parsingResult.append("&gt;");
@@ -53,32 +53,32 @@ public class StaxTester {
         XMLOutputFactory xmlof = XMLOutputFactory.newInstance();
         XMLStreamWriter xmlw = xmlof.createXMLStreamWriter(new FileOutputStream("output.xml"));
 
-        // Ğ´ÈëÄ¬ÈÏµÄ XML ÉùÃ÷µ½xmlÎÄµµ
+        // å†™å…¥é»˜è®¤çš„ XML å£°æ˜åˆ°xmlæ–‡æ¡£
         xmlw.writeStartDocument();
         xmlw.writeCharacters("\n");
-        // Ğ´Èë×¢ÊÍµ½xmlÎÄµµ
+        // å†™å…¥æ³¨é‡Šåˆ°xmlæ–‡æ¡£
         xmlw.writeComment("testing comment");
         xmlw.writeCharacters("\n");
-        // Ğ´ÈëÒ»¸öcatalogs¸ùÔªËØ
+        // å†™å…¥ä¸€ä¸ªcatalogsæ ¹å…ƒç´ 
         xmlw.writeStartElement("catalogs");
         xmlw.writeNamespace("myNS", "http://blog.csdn.net/Chinajash");
         xmlw.writeAttribute("owner","Chinajash");
         xmlw.writeCharacters("\n");
-        // Ğ´Èë×ÓÔªËØcatalog
+        // å†™å…¥å­å…ƒç´ catalog
         xmlw.writeStartElement("http://blog.csdn.net/Chinajash", "catalog");
         xmlw.writeAttribute("id","007");
         xmlw.writeCharacters("Apparel");
-        // Ğ´ÈëcatalogÔªËØµÄ½áÊø±êÇ©
+        // å†™å…¥catalogå…ƒç´ çš„ç»“æŸæ ‡ç­¾
         xmlw.writeEndElement();
-        // Ğ´ÈëcatalogsÔªËØµÄ½áÊø±êÇ©
+        // å†™å…¥catalogså…ƒç´ çš„ç»“æŸæ ‡ç­¾
         xmlw.writeEndElement();
-        // ½áÊø XML ÎÄµµ
+        // ç»“æŸ XML æ–‡æ¡£
         xmlw.writeEndDocument();
         xmlw.close();
     }
 }
 
-test.xmlÎÄ¼şÄÚÈİÈçÏÂ:
+test.xmlæ–‡ä»¶å†…å®¹å¦‚ä¸‹:
 
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;catalogs&gt;
@@ -86,14 +86,14 @@ test.xmlÎÄ¼şÄÚÈİÈçÏÂ:
     &lt;catalog id="002"&gt;Video&lt;/catalog&gt;
 &lt;/catalogs&gt;
 
-ÔËĞĞÉÏÃæ³ÌĞòºó£¬¿ØÖÆÌ¨Êä³öÈçÏÂ:
+è¿è¡Œä¸Šé¢ç¨‹åºåï¼Œæ§åˆ¶å°è¾“å‡ºå¦‚ä¸‹:
 
 &lt;catalogs&gt;
     &lt;catalog id="001"&gt;Book&lt;/catalog&gt;
     &lt;catalog id="002"&gt;Video&lt;/catalog&gt;
 &lt;/catalogs&gt;
 
-ÔËĞĞÉÏÃæ³ÌĞòºó£¬²úÉúµÄoutput.xmlÎÄ¼şÈçÏÂ:
+è¿è¡Œä¸Šé¢ç¨‹åºåï¼Œäº§ç”Ÿçš„output.xmlæ–‡ä»¶å¦‚ä¸‹:
 
 &lt;?xml version="1.0" ?&gt;
 &lt;!-- testing comment--&gt;
@@ -103,6 +103,8 @@ test.xmlÎÄ¼şÄÚÈİÈçÏÂ:
  
 </PRE>
 </td></tr></table>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
 
-</Body>
+</body>
 </HTML>

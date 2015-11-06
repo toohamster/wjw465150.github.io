@@ -1,6 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <HTML dir=ltr xml:lang="zh-CN" 
-xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>[Spring3.1]¶¯Ì¬´´½¨Spring bean</TITLE><LINK 
+xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>[Spring3.1]åŠ¨æ€åˆ›å»ºSpring bean</title><LINK 
 rel="shortcut icon" type=image/x-icon href="favicon.ico"><LINK 
 title=ITeye rel=search type=application/opensearchdescription+xml 
 href="open_search.xml"><LINK title="Blue Sky" rel=alternate 
@@ -39,110 +40,110 @@ media=screen>
 <DIV id=main>
 
 <DIV class=blog_main><!--StartFragment--><DIV class=blog_title>
-<H3><A href="http://dinguangx.iteye.com/blog/1677683">[Spring3.1]¶¯Ì¬´´½¨Spring bean</A> <EM 
+<H3><A href="http://dinguangx.iteye.com/blog/1677683">[Spring3.1]åŠ¨æ€åˆ›å»ºSpring bean</A> <EM 
 class=actions></EM></H3>
-<UL class=blog_categories><STRONG>²©¿Í·ÖÀà£º</STRONG> 
+<UL class=blog_categories><STRONG>åšå®¢åˆ†ç±»ï¼š</STRONG> 
 <LI><A href="http://dinguangx.iteye.com/category/247752">Spring</A></LI></UL>
 <DIV class=news_tag><A href="http://www.iteye.com/blogs/tag/spring">spring</A><A 
 href="http://www.iteye.com/blogs/tag/beanfactory">beanfactory</A>&nbsp;</DIV></DIV>
 <DIV id=blog_content class=blog_content>
 <P>&nbsp;</P>
 <P style="TEXT-INDENT: 21pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">Ä¿Ç°ÕıÔÚÊ¹ÓÃµÄÈí¼ş¿ª·¢°üÖĞÓĞÒ»¸öÒµÎñ·şÎñ»ùÀà</SPAN><SPAN 
+style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">ç›®å‰æ­£åœ¨ä½¿ç”¨çš„è½¯ä»¶å¼€å‘åŒ…ä¸­æœ‰ä¸€ä¸ªä¸šåŠ¡æœåŠ¡åŸºç±»</SPAN><SPAN 
 style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">BaseService</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">£¬ËùÓĞµÄ×Ô¶¨Òå·şÎñÀà¶¼»á¼ÌĞøÓÚÕâ¸ö</SPAN><SPAN 
+style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">ï¼Œæ‰€æœ‰çš„è‡ªå®šä¹‰æœåŠ¡ç±»éƒ½ä¼šç»§ç»­äºè¿™ä¸ª</SPAN><SPAN 
 style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">BaseService</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">£¬µ«ÊÇÒµÎñ·şÎñÊµÀıÊÇÓÉÈí¼ş°üÖĞ·â×°ºÃµÄ</SPAN><SPAN 
+style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">ï¼Œä½†æ˜¯ä¸šåŠ¡æœåŠ¡å®ä¾‹æ˜¯ç”±è½¯ä»¶åŒ…ä¸­å°è£…å¥½çš„</SPAN><SPAN 
 style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">BaseServiceFactory</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">´´½¨µÄ£¬ÔÚĞèÒªÊ¹ÓÃ¾ßÌåµÄÒµÎñÊµÀıÊ±£¬</SPAN><SPAN 
+style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">åˆ›å»ºçš„ï¼Œåœ¨éœ€è¦ä½¿ç”¨å…·ä½“çš„ä¸šåŠ¡å®ä¾‹æ—¶ï¼Œ</SPAN><SPAN 
 style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">BaseServiceFactory</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">½ÓÊÕ¾ßÌåµÄ</SPAN><SPAN 
+style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">æ¥æ”¶å…·ä½“çš„</SPAN><SPAN 
 style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">BaseService</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">ÀàÃûÀ´´´½¨·şÎñÊµÀı£¬ÈçÏÂ£º</SPAN></P>
+style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">ç±»åæ¥åˆ›å»ºæœåŠ¡å®ä¾‹ï¼Œå¦‚ä¸‹ï¼š</SPAN></P>
 <P style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt" class=MsoNormal>&nbsp;</P>
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.CopyToClipboard(this);return false;" href="http://dinguangx.iteye.com/blog/1677683#"><IMG 
-alt=¸´ÖÆ´úÂë src="icon_copy.gif"></A>&nbsp;<A title=ÊÕ²ØÕâ¶Î´úÂë 
-onclick="code_favorites_do_favorite(this);return false;" 
-href="javascript:void()"><IMG class=star alt=ÊÕ²Ø´úÂë 
-src="icon_star.png"><IMG style="DISPLAY: none" class=spinner 
-src="spinner.gif"></A></DIV></DIV>
+alt=å¤åˆ¶ä»£ç  src="icon_copy.gif"></A>&nbsp;<A onclick="code_favorites_do_favorite(this);return 
+false;" title 
+=æ”¶è—è¿™æ®µä»£ç  href="javascript:void()" ><IMG class=star alt=æ”¶è—ä»£ç  
+src="icon_star.png"><IMG class=spinner style ="DISPLAY: 
+none" src="spinner.gif" ></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN 
-class=keyword>public</SPAN><SPAN>&nbsp;BaseService&nbsp;getService(String&nbsp;className);&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV><PRE style="DISPLAY: none" class=java title="[Spring3.1]¶¯Ì¬´´½¨Spring bean" name="code" codeable_id="1677683" codeable_type="Blog" source_url="http://dinguangx.iteye.com/blog/1677683" pre_index="0">public BaseService getService(String className);</PRE>&nbsp; 
+class=keyword>public</SPAN><SPAN>&nbsp;BaseService&nbsp;getService(String&nbsp;className);&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV><PRE style="DISPLAY: none" class=java title="[Spring3.1]åŠ¨æ€åˆ›å»ºSpring bean" name="code" id="1677683" codeable_type="Blog" url="http://dinguangx.iteye.com/blog/1677683" codeable_index="0" source_pre_>public BaseService getService(String className);</PRE>&nbsp; 
 
 <P style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">ÏÖÔÚÏëÒª½«¸ÃÈí¼ş¿ª·¢°üÓë</SPAN><SPAN 
+style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">ç°åœ¨æƒ³è¦å°†è¯¥è½¯ä»¶å¼€å‘åŒ…ä¸</SPAN><SPAN 
 style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">spring</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">½øĞĞÕûºÏ£¬½«ËùÓĞµÄÒµÎñ·şÎñÀà¼ÓÈëµ½</SPAN><SPAN 
+style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">è¿›è¡Œæ•´åˆï¼Œå°†æ‰€æœ‰çš„ä¸šåŠ¡æœåŠ¡ç±»åŠ å…¥åˆ°</SPAN><SPAN 
 style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">spring</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">ÈİÆ÷ÖĞ£¬×÷Îª</SPAN><SPAN 
+style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">å®¹å™¨ä¸­ï¼Œä½œä¸º</SPAN><SPAN 
 style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">spring bean</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">Ê¹ÓÃ£¬ËùÒÔ¾ÍÏë²ÉÓÃ¶¯Ì¬´´½¨</SPAN><SPAN 
+style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">ä½¿ç”¨ï¼Œæ‰€ä»¥å°±æƒ³é‡‡ç”¨åŠ¨æ€åˆ›å»º</SPAN><SPAN 
 style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">spring bean</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">µÄ·½Ê½À´ÊµÏÖ£ºÊ×ÏÈÓÉ</SPAN><SPAN 
+style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">çš„æ–¹å¼æ¥å®ç°ï¼šé¦–å…ˆç”±</SPAN><SPAN 
 style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">className</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">Éú³É</SPAN><SPAN 
+style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">ç”Ÿæˆ</SPAN><SPAN 
 style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">Bean</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">¶¨Òå£¬ÔÙÓÉ</SPAN><SPAN 
+style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">å®šä¹‰ï¼Œå†ç”±</SPAN><SPAN 
 style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">Bean</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">¶¨ÒåÀ´²úÉú´úÂëÒµÎñÀà¡£</SPAN></P>
+style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt">å®šä¹‰æ¥äº§ç”Ÿä»£ç ä¸šåŠ¡ç±»ã€‚</SPAN></P>
 <P style="LINE-HEIGHT: 150%; TEXT-INDENT: 10pt" 
-class=MsoNormal><SPAN>Ä¿Ç°</SPAN><SPAN>spring</SPAN><SPAN>Ìá¹©»ùÓÚ</SPAN><SPAN>XML</SPAN><SPAN>ºÍ</SPAN><SPAN>annotation</SPAN><SPAN>µÈ¶àÖÖ·½Ê½µÄ</SPAN><SPAN>bean</SPAN><SPAN>ÅäÖÃ£¬µ«ÊÇÕâĞ©ÅäÖÃ¶¼ÊÇÔÚÈİÆ÷Æô¶¯µÄÊ±ºòÒÑ¾­È·¶¨ÁË</SPAN><SPAN>bean</SPAN><SPAN>µÄÀàĞÍÒÔ¼°²ÎÊıÀàĞÍ£¬ÒªÊµÏÖÎÒÃÇÏÖÔÚµÄÕâÖÖÒµÎñ³¡¾°£¬Ö»ÓĞÍ¨¹ı</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; BACKGROUND-COLOR: white">BeanDefinitionBuilder</SPAN><SPAN>À´´´½¨</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; BACKGROUND-COLOR: white">Bean</SPAN><SPAN>¶¨Òå²¢¼ÓÈë</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; BACKGROUND-COLOR: white">BeanFactory</SPAN><SPAN>¡£</SPAN></P>
+class=MsoNormal><SPAN>ç›®å‰</SPAN><SPAN>spring</SPAN><SPAN>æä¾›åŸºäº</SPAN><SPAN>XML</SPAN><SPAN>å’Œ</SPAN><SPAN>annotation</SPAN><SPAN>ç­‰å¤šç§æ–¹å¼çš„</SPAN><SPAN>bean</SPAN><SPAN>é…ç½®ï¼Œä½†æ˜¯è¿™äº›é…ç½®éƒ½æ˜¯åœ¨å®¹å™¨å¯åŠ¨çš„æ—¶å€™å·²ç»ç¡®å®šäº†</SPAN><SPAN>bean</SPAN><SPAN>çš„ç±»å‹ä»¥åŠå‚æ•°ç±»å‹ï¼Œè¦å®ç°æˆ‘ä»¬ç°åœ¨çš„è¿™ç§ä¸šåŠ¡åœºæ™¯ï¼Œåªæœ‰é€šè¿‡</SPAN><SPAN 
+style="LINE-HEIGHT: 150%; BACKGROUND-COLOR: white">BeanDefinitionBuilder</SPAN><SPAN>æ¥åˆ›å»º</SPAN><SPAN 
+style="LINE-HEIGHT: 150%; BACKGROUND-COLOR: white">Bean</SPAN><SPAN>å®šä¹‰å¹¶åŠ å…¥</SPAN><SPAN 
+style="LINE-HEIGHT: 150%; BACKGROUND-COLOR: white">BeanFactory</SPAN><SPAN>ã€‚</SPAN></P>
 <P style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt" 
-class=MsoNormal><SPAN>spring</SPAN><SPAN>µÄ</SPAN><SPAN>BeanFactory</SPAN><SPAN>×ÓÀàÖÚ¶à£¬ÆäÖĞ</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; BACKGROUND-COLOR: silver; FONT-SIZE: 10pt">DefaultListableBeanFactory</SPAN><SPAN>¿ÉÒÔÖ§³Ö¶¯Ì¬Ôö¼Ó</SPAN><SPAN>Bean</SPAN><SPAN>¶¨Òå£¬´úÂëÊµÏÖÈçÏÂ</SPAN><SPAN>£º</SPAN></P>
+class=MsoNormal><SPAN>spring</SPAN><SPAN>çš„</SPAN><SPAN>BeanFactory</SPAN><SPAN>å­ç±»ä¼—å¤šï¼Œå…¶ä¸­</SPAN><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 150%; BACKGROUND-COLOR: silver">DefaultListableBeanFactory</SPAN><SPAN>å¯ä»¥æ”¯æŒåŠ¨æ€å¢åŠ </SPAN><SPAN>Bean</SPAN><SPAN>å®šä¹‰ï¼Œä»£ç å®ç°å¦‚ä¸‹</SPAN><SPAN>ï¼š</SPAN></P>
 <DIV style="TEXT-ALIGN: left; TEXT-INDENT: 13px">
 <DIV class=dp-highlighter>
 <DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
+<DIV class=tools>Javaä»£ç  <A title=å¤åˆ¶ä»£ç  
 onclick="dp.sh.Toolbar.CopyToClipboard(this);return false;" href="http://dinguangx.iteye.com/blog/1677683#"><IMG 
-alt=¸´ÖÆ´úÂë src="icon_copy.gif"></A>&nbsp;<A title=ÊÕ²ØÕâ¶Î´úÂë 
-onclick="code_favorites_do_favorite(this);return false;" 
-href="javascript:void()"><IMG class=star alt=ÊÕ²Ø´úÂë 
-src="icon_star.png"><IMG style="DISPLAY: none" class=spinner 
-src="spinner.gif"></A></DIV></DIV>
+alt=å¤åˆ¶ä»£ç  src="icon_copy.gif"></A>&nbsp;<A onclick="code_favorites_do_favorite(this);return 
+false;" title 
+=æ”¶è—è¿™æ®µä»£ç  href="javascript:void()" ><IMG class=star alt=æ”¶è—ä»£ç  
+src="icon_star.png"><IMG class=spinner style ="DISPLAY: 
+none" src="spinner.gif" ></A></DIV></DIV>
 <OL class=dp-j>
 <LI><SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>class</SPAN><SPAN>&nbsp;CustomBaseServiceFactory&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>static</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>final</SPAN><SPAN>&nbsp;String&nbsp;BEAN_POSTFIX&nbsp;=&nbsp;</SPAN><SPAN 
-class=string>".service"</SPAN><SPAN>; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>".service"</SPAN><SPAN>; &nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN 
 class=keyword>public</SPAN><SPAN>&nbsp;BaseService&nbsp;getService(String&nbsp;className)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;beanName&nbsp;=&nbsp;className&nbsp;+&nbsp;BEAN_POSTFIX; &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;beanName&nbsp;=&nbsp;className&nbsp;+&nbsp;BEAN_POSTFIX; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ConfigurableApplicationContext&nbsp;applicationContext&nbsp;=&nbsp;(ConfigurableApplicationContext)&nbsp;SpringContextHolder 
-&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.getApplicationContext(); &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.getApplicationContext(); &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DefaultListableBeanFactory&nbsp;beanFactory&nbsp;=&nbsp;(DefaultListableBeanFactory)&nbsp;applicationContext 
-&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.getBeanFactory(); &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.getBeanFactory(); &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
 class=keyword>if</SPAN><SPAN>&nbsp;(!beanFactory.containsBean(beanName))&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
+&nbsp;&nbsp;</SPAN></SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BeanDefinitionBuilder&nbsp;bdb&nbsp;=&nbsp;BeanDefinitionBuilder 
-&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.rootBeanDefinition(className); &nbsp;&nbsp;</SPAN></LI>
+&nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.rootBeanDefinition(className); &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bdb.setScope(</SPAN><SPAN 
-class=string>"prototype"</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;beanFactory.registerBeanDefinition(beanName, &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bdb.getBeanDefinition()); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=string>"prototype"</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;beanFactory.registerBeanDefinition(beanName, &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bdb.getBeanDefinition()); &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+<LI><SPAN>&nbsp; &nbsp;&nbsp;</SPAN>
 <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
 class=keyword>return</SPAN><SPAN>&nbsp;(BaseService)&nbsp;beanFactory.getBean(beanName); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>}&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE style="DISPLAY: none" class=java title="[Spring3.1]¶¯Ì¬´´½¨Spring bean" name="code" codeable_id="1677683" codeable_type="Blog" source_url="http://dinguangx.iteye.com/blog/1677683" pre_index="1">public class CustomBaseServiceFactory {
+&nbsp;&nbsp;</SPAN></SPAN>
+<LI><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+<LI><SPAN>}&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE style="DISPLAY: none" class=java title="[Spring3.1]åŠ¨æ€åˆ›å»ºSpring bean" name="code" id="1677683" codeable_type="Blog" url="http://dinguangx.iteye.com/blog/1677683" codeable_index="1" source_pre_>public class CustomBaseServiceFactory {
  
   private static final String BEAN_POSTFIX = ".service";
   public BaseService getService(String className) {
@@ -163,9 +164,12 @@ class=keyword>return</SPAN><SPAN>&nbsp;(BaseService)&nbsp;beanFactory.getBean(be
   }
 }</PRE>&nbsp;</DIV>
 <P style="LINE-HEIGHT: 150%; TEXT-INDENT: 21pt" 
-class=MsoNormal><SPAN>ÕâÑù£¬¼´Íê³ÉÁË¶Ô</SPAN><SPAN>BaseService</SPAN><SPAN>µÄ¸ÄÔì£¬ÎŞÂÛÊÇ¶ÔÒµÎñÀàÔö¼Ó</SPAN><SPAN>AOP</SPAN><SPAN>»òÕß×¢ÈëÊôĞÔ¶¼¿ÉÒÔ·½±ãµØÊµÏÖ¡£¸üÎª·½±ãµÄÊÇ£¬Èç¹ûÊ¹ÓÃµÄÊÇ¸ÃÀàµÄ×ÓÀà£¬²»ÔÙĞèÒªÔÚ×ÓÀàÉÏÔö¼Ó</SPAN><SPAN>@Service,@Component</SPAN><SPAN>Ö®ÀàµÄ±ê¼ÇÁË£»Èç¹ûĞèÒªÔÚ×ÓÀàÖĞ×¢ÈëÆäËûµÄ</SPAN><SPAN>bean</SPAN><SPAN>£¬Ö»ĞèÒªÔÚ¸ÃÊôĞÔÉÏÔö¼Ó</SPAN><SPAN>@autowired</SPAN><SPAN>»ò</SPAN><SPAN>@resource</SPAN><SPAN>¼´¿ÉÊµÏÖÊôĞÔµÄ×¢Èë¡£</SPAN></P></DIV><!--EndFragment--></DIV>
+class=MsoNormal><SPAN>è¿™æ ·ï¼Œå³å®Œæˆäº†å¯¹</SPAN><SPAN>BaseService</SPAN><SPAN>çš„æ”¹é€ ï¼Œæ— è®ºæ˜¯å¯¹ä¸šåŠ¡ç±»å¢åŠ </SPAN><SPAN>AOP</SPAN><SPAN>æˆ–è€…æ³¨å…¥å±æ€§éƒ½å¯ä»¥æ–¹ä¾¿åœ°å®ç°ã€‚æ›´ä¸ºæ–¹ä¾¿çš„æ˜¯ï¼Œå¦‚æœä½¿ç”¨çš„æ˜¯è¯¥ç±»çš„å­ç±»ï¼Œä¸å†éœ€è¦åœ¨å­ç±»ä¸Šå¢åŠ </SPAN><SPAN>@Service,@Component</SPAN><SPAN>ä¹‹ç±»çš„æ ‡è®°äº†ï¼›å¦‚æœéœ€è¦åœ¨å­ç±»ä¸­æ³¨å…¥å…¶ä»–çš„</SPAN><SPAN>bean</SPAN><SPAN>ï¼Œåªéœ€è¦åœ¨è¯¥å±æ€§ä¸Šå¢åŠ </SPAN><SPAN>@autowired</SPAN><SPAN>æˆ–</SPAN><SPAN>@resource</SPAN><SPAN>å³å¯å®ç°å±æ€§çš„æ³¨å…¥ã€‚</SPAN></P></DIV><!--EndFragment--></DIV>
 </DIV>
 </DIV>
 </DIV>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
 </BODY>
 </HTML>

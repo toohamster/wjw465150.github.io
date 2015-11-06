@@ -1,8 +1,9 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <HTML dir=ltr xmlns="http://www.w3.org/1999/xhtml" 
 xml:lang="zh-CN">
 <HEAD>
-  <TITLE>¿ª·¢¿ò¼ÜÖ®Spring¶Ôlog4jµÄÔöÇ¿</TITLE>
+
+  <title>å¼€å‘æ¡†æ¶ä¹‹Springå¯¹log4jçš„å¢å¼º</title>
   <LINK 
 href="favicon.ico" type=image/x-icon rel="shortcut icon">
   <LINK 
@@ -27,7 +28,7 @@ div#main {
   <LINK media=screen 
 href="ui.css_1222156967" 
 type=text/css rel=stylesheet>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   </HEAD>
 
   <BODY>
@@ -39,23 +40,23 @@ type=text/css rel=stylesheet>
             <DIV class=date><SPAN class=year>2008</SPAN><SPAN class=sep_year>-</SPAN><SPAN 
 class=month>03</SPAN><SPAN class=sep_month>-</SPAN><SPAN 
 class=day>27</SPAN></DIV>
-            <H3 class="" title=""><A href="http://tgyd2006.javaeye.com/blog/176736">¿ª·¢¿ò¼ÜÖ®Spring¶Ôlog4jµÄÔöÇ¿</A></H3>
+            <H3 title="" ><A href="http://tgyd2006.javaeye.com/blog/176736">å¼€å‘æ¡†æ¶ä¹‹Springå¯¹log4jçš„å¢å¼º</A></H3>
           </DIV>
           <DIV class=blog_content><BR>
             <BR>
-            Spring×îÉÃ³¤µÄ£¬¾ÍÊÇÔÚ±ğ¼ÒµÄµ°¸âÉÏÔÙ¼ÓĞ©cream£¬ÈÃÄãJ2EE without 
-            SpringµÄÊ±ºòĞÄÑ÷Ñ÷¡£ <BR>
+            Springæœ€æ“…é•¿çš„ï¼Œå°±æ˜¯åœ¨åˆ«å®¶çš„è›‹ç³•ä¸Šå†åŠ äº›creamï¼Œè®©ä½ J2EE without 
+            Springçš„æ—¶å€™å¿ƒç—’ç—’ã€‚ <BR>
             <BR>
-            &nbsp;&nbsp; log4j£¬¿ÉÒÔÓĞÈçÏÂµÄcream£º <BR>
+            &nbsp;&nbsp; log4jï¼Œå¯ä»¥æœ‰å¦‚ä¸‹çš„creamï¼š <BR>
             &nbsp;&nbsp; 1. 
-            ¶¯Ì¬µÄ¸Ä±ä¼ÇÂ¼¼¶±ğºÍ²ßÂÔ£¬²»ĞèÒªÖØÆôWebÓ¦ÓÃ£¬Èç¡¶Effective Enterprise Java¡·ËùËµ¡£ <BR>
-            &nbsp;&nbsp; 2. °ÑlogÎÄ¼ş¶¨ÔÚ 
-            /WEB-INF/logs/ ¶ø²»ĞèÒªĞ´¾ø¶ÔÂ·¾¶¡£ <BR>
+            åŠ¨æ€çš„æ”¹å˜è®°å½•çº§åˆ«å’Œç­–ç•¥ï¼Œä¸éœ€è¦é‡å¯Webåº”ç”¨ï¼Œå¦‚ã€ŠEffective Enterprise Javaã€‹æ‰€è¯´ã€‚ <BR>
+            &nbsp;&nbsp; 2. æŠŠlogæ–‡ä»¶å®šåœ¨ 
+            /WEB-INF/logs/ è€Œä¸éœ€è¦å†™ç»å¯¹è·¯å¾„ã€‚ <BR>
             &nbsp;&nbsp; 3. 
-            ¿ÉÒÔ°Ñlog4j.propertiesºÍÆäËûpropertiesÒ»Æğ·ÅÔÚ/WEB-INF/ £¬¶ø²»ÊÇClass-Path¡£ <BR>
+            å¯ä»¥æŠŠlog4j.propertieså’Œå…¶ä»–propertiesä¸€èµ·æ”¾åœ¨/WEB-INF/ ï¼Œè€Œä¸æ˜¯Class-Pathã€‚ <BR>
             <BR>
             &nbsp;&nbsp; 
-            ÔÚweb.xml Ìí¼Ó <BR>
+            åœ¨web.xml æ·»åŠ  <BR>
             <BR>
             &nbsp;&nbsp;&nbsp; &lt; context-param&gt; <BR>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt; 
@@ -78,21 +79,23 @@ class=day>27</SPAN></DIV>
             /listener-class&gt; <BR>
             &nbsp;&nbsp;&nbsp; &lt; /listener&gt; <BR>
             <BR>
-            &nbsp;&nbsp;&nbsp;&nbsp; ÔÚÉÏÎÄµÄÅäÖÃÀï, <BR>
+            &nbsp;&nbsp;&nbsp;&nbsp; åœ¨ä¸Šæ–‡çš„é…ç½®é‡Œ, <BR>
             &nbsp;&nbsp;&nbsp;&nbsp; 
-            Log4jConfigListener»áÈ¥WEB-INF/log4j.propeties ¶ÁÈ¡ÅäÖÃÎÄ¼ş; <BR>
+            Log4jConfigListenerä¼šå»WEB-INF/log4j.propeties è¯»å–é…ç½®æ–‡ä»¶; <BR>
             &nbsp;&nbsp;&nbsp;&nbsp; 
-            ¿ªÒ»ÌõwatchdogÏß³ÌÃ¿60ÃëÉ¨ÃèÒ»ÏÂÅäÖÃÎÄ¼şµÄ±ä»¯; <BR>
-            &nbsp;&nbsp;&nbsp;&nbsp; ²¢°ÑwebÄ¿Â¼µÄÂ·¾¶Ñ¹ÈëÒ»¸ö½Ğwebapp.rootµÄÏµÍ³±äÁ¿¡£ <BR>
+            å¼€ä¸€æ¡watchdogçº¿ç¨‹æ¯60ç§’æ‰«æä¸€ä¸‹é…ç½®æ–‡ä»¶çš„å˜åŒ–; <BR>
+            &nbsp;&nbsp;&nbsp;&nbsp; å¹¶æŠŠwebç›®å½•çš„è·¯å¾„å‹å…¥ä¸€ä¸ªå«webapp.rootçš„ç³»ç»Ÿå˜é‡ã€‚ <BR>
             <BR>
-            &nbsp;&nbsp;&nbsp;&nbsp; È»ºó£¬ÔÚlog4j.properties Àï¾Í¿ÉÒÔÕâÑù¶¨ÒålogfileÎ»ÖÃ <BR>
+            &nbsp;&nbsp;&nbsp;&nbsp; ç„¶åï¼Œåœ¨log4j.properties é‡Œå°±å¯ä»¥è¿™æ ·å®šä¹‰logfileä½ç½® <BR>
             <BR>
             <BR>
             log4j.appender.logfile.File=${webapp.root}/WEB-INF/logs/myfuse.log <BR>
-            <BR>
-            &nbsp;&nbsp;&nbsp;&nbsp; Èç¹ûÓĞ¶à¸öwebÓ¦ÓÃ£¬ÅÂwebapp.root±äÁ¿ÖØ¸´£¬¿ÉÒÔÔÚcontext-paramÀï¶¨ÒåwebAppRootKey¡£ <BR>
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp; 
+å¦‚æœæœ‰å¤šä¸ªwebåº”ç”¨ï¼Œæ€•webapp.rootå˜é‡é‡å¤ï¼Œå¯ä»¥åœ¨context-paramé‡Œå®šä¹‰webAppRootKeyã€‚
           </DIV>
-        <!--EndFragment--></DIV>
+          <DIV class=blog_content>
+              <BR>&nbsp;
+          </DIV><!--EndFragment--></DIV>
       </DIV>
     </DIV>
   </DIV>

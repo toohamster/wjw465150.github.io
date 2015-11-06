@@ -1,9 +1,7 @@
-<!-- saved from url=http://hi.baidu.com/jabber/blog/item/7e879852a23efd0f0cf3e3ea.html -->
-<script>
-window.onerror = new Function("return(false);")
-</script><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><head>
 
-<HTML><HEAD><TITLE>JGroups ¼ò½é¡¢ÊÊÓÃ³¡ºÏ¡¢ÅäÖÃ¡¢³ÌĞòÀı×ÓDemoµÈÍêÈ«Ê¹ÓÃÖ¸ÄÏ_XMPP Jabber practice ¼´Ê±Í¨Ñ¶¿ª·¢Êµ¼ù</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>JGroups ç®€ä»‹ã€é€‚ç”¨åœºåˆã€é…ç½®ã€ç¨‹åºä¾‹å­Demoç­‰å®Œå…¨ä½¿ç”¨æŒ‡å—_XMPP Jabber practice å³æ—¶é€šè®¯å¼€å‘å®è·µ</title>
 <STYLE>.error{color:#FF0000;font-size:12px}</STYLE>
 
 <SCRIPT language=javascript src="popup.js"></SCRIPT>
@@ -42,7 +40,7 @@ function checkeandu(eanduid)
 	var len=bytes(eanduvalue);
 	if(len>128)
 	{
-		showErr(2,"ÄúÊäÈëµÄÍøÖ·»òÓÊÏäÌ«³¤£¬Çë±£³ÖÔÚ128×Ö½ÚÒÔÄÚ¡£");
+		showErr(2,"æ‚¨è¾“å…¥çš„ç½‘å€æˆ–é‚®ç®±å¤ªé•¿ï¼Œè¯·ä¿æŒåœ¨128å­—èŠ‚ä»¥å†…ã€‚");
 		return false;
 	}
 	else
@@ -55,8 +53,8 @@ function checkeandu(eanduid)
 function cmtdel(str)
 {
 	var pop=new Popup({ contentType:3,isReloadOnClose:false,width:340,height:80});
-	pop.setContent("title","É¾³ıÆÀÂÛ");
-	pop.setContent("confirmCon","ÄúÈ·¶¨Òª³¹µ×É¾³ıÕâÌõÆÀÂÛÂğ£¿");
+	pop.setContent("title","åˆ é™¤è¯„è®º");
+	pop.setContent("confirmCon","æ‚¨ç¡®å®šè¦å½»åº•åˆ é™¤è¿™æ¡è¯„è®ºå—ï¼Ÿ");
 	pop.setContent("callBack",delCallback2);
 	pop.setContent("parameter",{fid:str,popup:pop});
 	pop.build();
@@ -81,14 +79,14 @@ function checkname(strid)
 	var len=bytes(ele.value);
 	if(len>49)
 	{
-		showErr(1,"ÄúÊäÈëµÄĞÕÃûÌ«³¤£¬Çë±£³ÖÔÚ49×Ö½ÚÒÔÄÚ¡£");
+		showErr(1,"æ‚¨è¾“å…¥çš„å§“åå¤ªé•¿ï¼Œè¯·ä¿æŒåœ¨49å­—èŠ‚ä»¥å†…ã€‚");
 		return false;
 	}
 	else 
 	{		
 		if(len==0)
 		{
-			document.getElementById(strid).value="ÄäÃûÍøÓÑ";
+			document.getElementById(strid).value="åŒ¿åç½‘å‹";
 		}
 		 return true;
 	}	
@@ -100,16 +98,16 @@ function checktext(textid)
 		document.getElementById(textid).value=trimlr(textid);
 		var str=trimrn(textid);
 		len=str.length;
-		if(len==0 || ((/^[\s,¡¡]+$/gi).test(str)) )
+		if(len==0 || ((/^[\s,ã€€]+$/gi).test(str)) )
 		{
-			showErr(3,"Äú±ØĞëÊäÈëÆÀÂÛÄÚÈİ£¬Çë¼ì²é¡£");
+			showErr(3,"æ‚¨å¿…é¡»è¾“å…¥è¯„è®ºå†…å®¹ï¼Œè¯·æ£€æŸ¥ã€‚");
 			return false;
 		}
 		else 
 		{
 				if(len>1000)
 				{
-					showErr(3,"ÄúÊäÈëµÄÆÀÂÛÄÚÈİÌ«³¤£¬Çë±£³ÖÔÚ500×ÖÒÔÄÚ¡£");
+					showErr(3,"æ‚¨è¾“å…¥çš„è¯„è®ºå†…å®¹å¤ªé•¿ï¼Œè¯·ä¿æŒåœ¨500å­—ä»¥å†…ã€‚");
 					return false;
 				}
 			return true;
@@ -141,7 +139,7 @@ function cmtfull()
 	var cnum=0;
 	if(cnum>=50000)
 	{
-		alertPop("·¢±íÆÀÂÛ","µ¥ÆªÈÕÖ¾ÆÀÂÛÊı×î¶àÎª50000Ìõ.");
+		alertPop("å‘è¡¨è¯„è®º","å•ç¯‡æ—¥å¿—è¯„è®ºæ•°æœ€å¤šä¸º50000æ¡.");
 		return false;
 	}
 	else
@@ -167,7 +165,7 @@ var g_pop=null;
 function submitForm()
 {
 	g_pop=new Popup({ contentType:1,isReloadOnClose:false,width:340,height:80});
-	g_pop.setContent("title","Ìí¼ÓÆÀÂÛ");
+	g_pop.setContent("title","æ·»åŠ è¯„è®º");
 	g_pop.setContent("contentUrl","");
 	g_pop.build();
 	G("popFormSubmit").target=g_pop.iframeIdName;
@@ -214,29 +212,28 @@ var picnum=picobj.length;
 
 <DIV style="WIDTH: 100%">
 
-<DIV class=modbox id=m_blog><!--StartFragment--><DIV class=tit>JGroups ¼ò½é¡¢ÊÊÓÃ³¡ºÏ¡¢ÅäÖÃ¡¢³ÌĞòÀı×ÓDemoµÈÍêÈ«Ê¹ÓÃÖ¸ÄÏ</DIV>
+<DIV class=modbox id=m_blog><!--StartFragment--><DIV class=tit>JGroups ç®€ä»‹ã€é€‚ç”¨åœºåˆã€é…ç½®ã€ç¨‹åºä¾‹å­Demoç­‰å®Œå…¨ä½¿ç”¨æŒ‡å—</DIV>
 <DIV class=date>2007-05-08 14:38</DIV>
 <TABLE style="TABLE-LAYOUT: fixed">
 <TBODY>
 <TR>
 <TD>
 <DIV 
-class=cnt>Ä¿Ç°ÏîÄ¿ÖĞÔÚ¿Ë·şJGroups³õÆÚÊ¹ÓÃµÄÀ§ÄÑÖ®ºó£¬ÒÑ¾­Ê¹ÓÃ±È½ÏÎÈ¶¨ÁË¡£¸Ğ¾õ±È½Ï·³ËöºÍÈİÒ×³ö´íµÄ»¹ÊÇJGroupsÅäÖÃ¡£¸Ğ¾õÖĞÎÄµÄ×ÊÔ´½ÏÉÙ£¬ÏÖ½«×Ô¼º×Ü½áµÄ¾­Ñé×Ü½áÈçÏÂ<BR>Tim 
+class=cnt>ç›®å‰é¡¹ç›®ä¸­åœ¨å…‹æœJGroupsåˆæœŸä½¿ç”¨çš„å›°éš¾ä¹‹åï¼Œå·²ç»ä½¿ç”¨æ¯”è¾ƒç¨³å®šäº†ã€‚æ„Ÿè§‰æ¯”è¾ƒçƒ¦çå’Œå®¹æ˜“å‡ºé”™çš„è¿˜æ˜¯JGroupsé…ç½®ã€‚æ„Ÿè§‰ä¸­æ–‡çš„èµ„æºè¾ƒå°‘ï¼Œç°å°†è‡ªå·±æ€»ç»“çš„ç»éªŒæ€»ç»“å¦‚ä¸‹<BR>Tim 
 <A href="http://hi.baidu.com/jabber/blog/item/7e879852a23efd0f0cf3e3ea.html" 
 target=_blank>http://hi.baidu.com/jabber/blog/item/7e879852a23efd0f0cf3e3ea.html</A><BR><BR><STRONG>JGroups 
-ÊÊºÏÊ¹ÓÃ³¡ºÏ</STRONG><BR>·şÎñÆ÷¼¯Èºcluster¡¢¶à·şÎñÆ÷Í¨Ñ¶¡¢·şÎñÆ÷replication(¸´ÖÆ)µÈ£¬·Ö²¼Ê½cache»º´æ<BR><BR><STRONG>JGroups 
-¼ò½é</STRONG><BR>JGroupsÊÇÒ»¸ö»ùÓÚJavaÓïÑÔµÄÌá¹©¿É¿¿¶à²¥(×é²¥)µÄ¿ª·¢¹¤¾ß°ü¡£ÔÚIP 
-Multicast»ù´¡ÉÏÌá¹©¿É¿¿·şÎñ£¬Ò²¿ÉÒÔ¹¹½¨ÔÚTCP»òÕßWANÉÏ¡£Ö÷ÒªÊÇÓÉBela 
-Ban¿ª·¢£¬ÊôÓÚJBoss.org£¬ÔÚJBossµÄÍøÕ¾Ò²ÓĞÒ»Ğ©Ïà¹ØÎÄµµ¡£Ä¿Ç°ÔÚ 
-SourceForgeÉÏ»¹ÊÇ±È½Ï»îÔ¾£¬¾­³£±£³Ö¸üĞÂ¡£<BR><BR><STRONG>JGroups ÅäÖÃ</STRONG><BR><BR>PING: 
-·¢ÏÖ³õÊ¼³ÉÔ±<BR>MERGE2: ½«ÍøÂç²ãÇĞ·ÖµÄ°üÖØĞÂºÏ²¢¡£<BR>FD_SOCK: Failure Dectection 
-´íÎó¼ì²â£¬»ùÓÚTCP<BR>FD£ºFailure Dectection ´íÎó¼ì²â£¬»ùÓÚĞÄÌø<BR>VERIFY_SUSPECT: 
-¼ì²éÃ²ËÆÊ§°ÜµÄ½Úµã<BR>pbcast.NAKACK: Ó¦´ğ£¬Ìá¹©¿É¿¿´«Êä<BR>UNICAST: ¿É¿¿µÄUNICAST<BR>pbcast.STABLE: 
-¼ÆËã¹ã²¥ĞÅÏ¢ÊÇ·ñÎÈ¶¨<BR>VIEW_SYNC: ¶¨ÆÚ¹ã²¥view(³ÉÔ±Ãûµ¥)<BR>pbcast.GMS: Group membership, 
-´¦Àíjoins/leaves/crashesµÈ<BR>FC: Á÷Á¿¿ØÖÆ<BR>FRAG2:Fragmentation 
-layer£¬·Ö°ü£¬½«´óµÄÊı¾İ°ü·Ö²ğ³ÉÊÊºÏÍøÂç²ã´«Êä<BR><BR>ÒÔÉÏÒ»Ğ©ÊÇ±È½ÏÖØÒªµÄÅäÖÃ£¬»ù±¾ÉÏ²»ÄÜÉÙ¡£Èç¹ûÒªÉîÈëÑĞ¾¿¿ÉÒÔÔÚ¡¡org.jgroups.protocols¡¡ÀïÃæ²é¿´Ô´´úÂë<BR><BR><STRONG>JGroupsÊ¹ÓÃÀı×Ó, 
-JGroups demo, TimµÄhello worldÀı×Ó</STRONG><BR><FONT 
-style="BACKGROUND-COLOR: rgb(192,192,192)" face=ËÎÌå color=#000000 size=1>// 
+é€‚åˆä½¿ç”¨åœºåˆ</STRONG><BR>æœåŠ¡å™¨é›†ç¾¤clusterã€å¤šæœåŠ¡å™¨é€šè®¯ã€æœåŠ¡å™¨replication(å¤åˆ¶)ç­‰ï¼Œåˆ†å¸ƒå¼cacheç¼“å­˜<BR><BR><STRONG>JGroups 
+ç®€ä»‹</STRONG><BR>JGroupsæ˜¯ä¸€ä¸ªåŸºäºJavaè¯­è¨€çš„æä¾›å¯é å¤šæ’­(ç»„æ’­)çš„å¼€å‘å·¥å…·åŒ…ã€‚åœ¨IP 
+MulticaståŸºç¡€ä¸Šæä¾›å¯é æœåŠ¡ï¼Œä¹Ÿå¯ä»¥æ„å»ºåœ¨TCPæˆ–è€…WANä¸Šã€‚ä¸»è¦æ˜¯ç”±Bela 
+Banå¼€å‘ï¼Œå±äºJBoss.orgï¼Œåœ¨JBossçš„ç½‘ç«™ä¹Ÿæœ‰ä¸€äº›ç›¸å…³æ–‡æ¡£ã€‚ç›®å‰åœ¨ 
+SourceForgeä¸Šè¿˜æ˜¯æ¯”è¾ƒæ´»è·ƒï¼Œç»å¸¸ä¿æŒæ›´æ–°ã€‚<BR><BR><STRONG>JGroups é…ç½®</STRONG><BR><BR>PING: 
+å‘ç°åˆå§‹æˆå‘˜<BR>MERGE2: å°†ç½‘ç»œå±‚åˆ‡åˆ†çš„åŒ…é‡æ–°åˆå¹¶ã€‚<BR>FD_SOCK: Failure Dectection 
+é”™è¯¯æ£€æµ‹ï¼ŒåŸºäºTCP<BR>FDï¼šFailure Dectection é”™è¯¯æ£€æµ‹ï¼ŒåŸºäºå¿ƒè·³<BR>VERIFY_SUSPECT: 
+æ£€æŸ¥è²Œä¼¼å¤±è´¥çš„èŠ‚ç‚¹<BR>pbcast.NAKACK: åº”ç­”ï¼Œæä¾›å¯é ä¼ è¾“<BR>UNICAST: å¯é çš„UNICAST<BR>pbcast.STABLE: 
+è®¡ç®—å¹¿æ’­ä¿¡æ¯æ˜¯å¦ç¨³å®š<BR>VIEW_SYNC: å®šæœŸå¹¿æ’­view(æˆå‘˜åå•)<BR>pbcast.GMS: Group membership, 
+å¤„ç†joins/leaves/crashesç­‰<BR>FC: æµé‡æ§åˆ¶<BR>FRAG2:Fragmentation 
+layerï¼Œåˆ†åŒ…ï¼Œå°†å¤§çš„æ•°æ®åŒ…åˆ†æ‹†æˆé€‚åˆç½‘ç»œå±‚ä¼ è¾“<BR><BR>ä»¥ä¸Šä¸€äº›æ˜¯æ¯”è¾ƒé‡è¦çš„é…ç½®ï¼ŒåŸºæœ¬ä¸Šä¸èƒ½å°‘ã€‚å¦‚æœè¦æ·±å…¥ç ”ç©¶å¯ä»¥åœ¨ã€€org.jgroups.protocolsã€€é‡Œé¢æŸ¥çœ‹æºä»£ç <BR><BR><STRONG>JGroupsä½¿ç”¨ä¾‹å­, 
+JGroups demo, Timçš„hello worldä¾‹å­</STRONG><BR><FONT style="BACKGROUND-COLOR: rgb(192,192,192)" face=å®‹ä½“ color=#000000 size=1>// 
 Timreceiver.java<BR><BR>import org.jgroups.tests.perf.Receiver;<BR>import 
 org.jgroups.tests.perf.Transport;<BR>import org.jgroups.util.Util;<BR><BR>public 
 class TimReceiver implements Receiver {<BR>&nbsp;&nbsp;&nbsp; private Transport transport = 
@@ -248,14 +245,14 @@ t.start();<BR><BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; t.sen
 Thread.currentThread().join();<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; } catch (Exception e) {<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
 e.printStackTrace();<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; } finally {<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if (t != null) 
 {<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; t.stop();<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<BR>&nbsp;&nbsp;&nbsp; }<BR>&nbsp;&nbsp;&nbsp; 
-<BR>&nbsp;&nbsp;&nbsp; public void start()<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; throws Exception {<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
-transport = (Transport) new TimTransport();<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
+<BR>&nbsp;&nbsp;&nbsp; public void start()<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; throws Exception {<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; transport =     
+  (Transport) new TimTransport();<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
 transport.create(null);<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; transport.setReceiver(this);<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
-transport.start();<BR>&nbsp;&nbsp;&nbsp; }<BR><BR>&nbsp;&nbsp;&nbsp; public void stop() {<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if 
-(transport != null) {<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; transport.stop();<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
+transport.start();<BR>&nbsp;&nbsp;&nbsp; }<BR><BR>&nbsp;&nbsp;&nbsp; public void stop() {<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if (transport !=       
+  null) {<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; transport.stop();<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
 transport.destroy();<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<BR>&nbsp;&nbsp;&nbsp; }<BR><BR>&nbsp;&nbsp;&nbsp; private int count = 
 0;<BR>&nbsp;&nbsp;&nbsp; public void receive(Object sender, byte[] data) {<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
-System.out.print(".");<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if (++count == 5000) {<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
+System.out.print(".");<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if (++count ==         5000) {<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
 System.out.println("\r\nRECV DONE.");<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; System.exit(0);<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
 }<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp; }<BR><BR>&nbsp;&nbsp;&nbsp; private void sendMessages(int count, int 
 msgSize)<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; throws Exception {<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; byte[] buf = new 
@@ -271,33 +268,37 @@ org.jgroups.Message;<BR>import org.jgroups.ReceiverAdapter;<BR>import
 org.jgroups.tests.perf.Receiver;<BR>import 
 org.jgroups.tests.perf.Transport;<BR><BR>public class TimTransport extends 
 ReceiverAdapter implements Transport{<BR>&nbsp;&nbsp;&nbsp; private JChannel channel = 
-null;<BR>&nbsp;&nbsp;&nbsp; private String groupName = "TimDemo";<BR>&nbsp;&nbsp;&nbsp; private Receiver 
-receiver = null;<BR>&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp; String PROTOCOL_STACK_UDP1 = 
+null;<BR>&nbsp;&nbsp;&nbsp; private String groupName =         "TimDemo";<BR>&nbsp;&nbsp;&nbsp; private Receiver 
+receiver = null;<BR>&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp; String PROTOCOL_STACK_UDP1 =       
 "UDP(bind_addr=192.168.100.59"; <BR>&nbsp;&nbsp;&nbsp; String PROTOCOL_STACK_UDP2 = 
-";mcast_port=8888";<BR>&nbsp;&nbsp;&nbsp; String PROTOCOL_STACK_UDP3 = 
-";mcast_addr=225.1.1.1";<BR>&nbsp;&nbsp;&nbsp; String PROTOCOL_STACK_UDP4 = 
-";tos=8;loopback=false;max_bundle_size=64000;" +<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
-"use_incoming_packet_handler=true;use_outgoing_packet_handler=false;ip_ttl=2;enable_bundling=true):"<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-+ "PING:MERGE2:FD_SOCK:FD:VERIFY_SUSPECT:"<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
-+"pbcast.NAKACK(gc_lag=50;max_xmit_size=50000;use_mcast_xmit=false;" +<BR>&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
-"retransmit_timeout=300,600,1200,2400,4800;discard_delivered_msgs=true):"<BR>&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;&nbsp; +"UNICAST:pbcast.STABLE:VIEW_SYNC:"<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
-+"pbcast.GMS(print_local_addr=false;join_timeout=3000;" +<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
-"join_retry_timeout=2000;" +<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
-"shun=true;view_bundling=true):"<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
-+"FC(max_credits=2000000;min_threshold=0.10):FRAG2(frag_size=50000)";<BR><BR>&nbsp;&nbsp;&nbsp; 
+";mcast_port=8888";<BR>&nbsp;&nbsp;&nbsp; String PROTOCOL_STACK_UDP3 =       
+";mcast_addr=225.1.1.1";<    
+BR>&nbsp;&nbsp;&nbsp;StringPROTOCOL_STACK_UDP4=";tos=8;loopback=false;max_bundle_size=64000;"+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"use_incoming_packet_handler=true;use_outgoing_packet_handler=false;ip_ttl=2;enable_bundling=true):"<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
++ "PING:MERGE2:FD_SOCK:FD:VERIFY_SUSPECT:"<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+"pbcast.NAKACK(gc_lag=50;max_xmit_size=50000;use_mcast_xmit=false;" +<BR> 
+ &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"retransmit_timeout=300,600,1200,2400,4800;discard_delivered_msgs=true):"<BR>&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; +"UNICAST:pbcast.STABLE:VIEW_SYNC:"<BR>  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+"pbcast.GMS(print_local_addr=false;join_timeout=3000;" +<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
+"join_retry_timeout=2000;" +<BR>  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"shun=true;view_bundling=true):"<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+"FC(max_credits=2000000;min_threshold=0.10):FRAG2(frag_size=50000)";<BR><BR>&nbsp;&nbsp;&nbsp; 
 &nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp; public Object getLocalAddress() {<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; return channel != null 
 ? channel.getLocalAddress() : null;<BR>&nbsp;&nbsp;&nbsp; }<BR><BR>&nbsp;&nbsp;&nbsp; public void start() 
 throws Exception {<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; channel.connect(groupName);&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp; 
 }<BR><BR>&nbsp;&nbsp;&nbsp; public void stop() {<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if (channel != null) {<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
 &nbsp;&nbsp;&nbsp; channel.shutdown();<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<BR>&nbsp;&nbsp;&nbsp; }<BR><BR>&nbsp;&nbsp;&nbsp; public void destroy() 
-{<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if (channel != null) {<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; channel.close();<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
+{<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if (channel !=         null) {<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; channel.close();<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
 &nbsp;&nbsp;&nbsp; channel = null;<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<BR>&nbsp;&nbsp;&nbsp; }<BR><BR>&nbsp;&nbsp;&nbsp; public void 
 setReceiver(Receiver r) {<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; this.receiver = r;<BR>&nbsp;&nbsp;&nbsp; }<BR><BR>&nbsp;&nbsp;&nbsp; 
 public Map dumpStats() {<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; return channel != null ? channel.dumpStats() 
 : null;<BR>&nbsp;&nbsp;&nbsp; }<BR><BR>&nbsp;&nbsp;&nbsp; public void send(Object destination, byte[] payload) 
 throws Exception {<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; byte[] tmp = new byte[payload.length];<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
 System.arraycopy(payload, 0, tmp, 0, payload.length);<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Message msg = 
-null;<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; msg = new Message((Address) destination, null, tmp);<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
-if (channel != null) {<BR>&nbsp;&nbsp;&
+null;<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; msg = new Message((Address) destination, null, tmp);<BR>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if (channel !=      
+   null) {<BR>&nbsp;&nbsp;&amp;</FONT></DIV></TD></TR></TBODY>
+  <DIV></DIV>
+  <DIV></DIV>
+  <DIV></DIV>
+  <DIV></DIV>
+  <DIV></DIV></CENTER>
+<P>&nbsp;</P>
+<P>&nbsp;</P></DIV></DIV></DIV></DIV></DIV></BODY></HTML>

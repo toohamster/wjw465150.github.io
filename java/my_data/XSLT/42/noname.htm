@@ -1,67 +1,68 @@
-<!-- saved from url=http://www.w3school.com.cn/xpath/xpath_functions.asp -->
+ï»¿<!-- saved from url=http://www.w3school.com.cn/xpath/xpath_functions.asp -->
 <script>
 window.onerror = new Function("return(false);")
 </script><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 
-<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META content="IE=7.0000" 
+<HTML xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><META content="IE=7.0000" 
 http-equiv="X-UA-Compatible">
-<TITLE>XPath¡¢XQuery ÒÔ¼° XSLT º¯Êı</TITLE><LINK rel=stylesheet type=text/css 
+<title>XPathã€XQuery ä»¥åŠ XSLT å‡½æ•°</title><LINK rel=stylesheet type=text/css 
 href="c3.css"></HEAD>
 
 <BODY class=xml>
 
 <DIV id=wrapper>
 
-<DIV id=maincontent><!--StartFragment--><H1>XPath¡¢XQuery ÒÔ¼° XSLT º¯Êı</H1>
+<DIV id=maincontent><!--StartFragment--><H1>XPathã€XQuery ä»¥åŠ XSLT å‡½æ•°</H1>
 <DIV id=tpn>
 <UL class=prenext>
 <LI class=pre><A href="http://www.w3school.com.cn/xpath/xpath_summary.asp">Previous Page</A> </LI>
 <LI class=next><A href="http://www.w3school.com.cn/xpath/index.asp">Next Page</A> </LI></UL></DIV>
 <DIV>
 <UL>
-<LI><A href="http://www.w3school.com.cn/xpath/xpath_functions.asp#accessor">´æÈ¡</A> 
-<LI><A href="http://www.w3school.com.cn/xpath/xpath_functions.asp#error">´íÎóºÍ¸ú×Ù</A> 
-<LI><A href="http://www.w3school.com.cn/xpath/xpath_functions.asp#numeric">ÊıÖµ</A> 
-<LI><A href="http://www.w3school.com.cn/xpath/xpath_functions.asp#string">×Ö·û´®</A> 
+<LI><A href="http://www.w3school.com.cn/xpath/xpath_functions.asp#accessor">å­˜å–</A> 
+<LI><A href="http://www.w3school.com.cn/xpath/xpath_functions.asp#error">é”™è¯¯å’Œè·Ÿè¸ª</A> 
+<LI><A href="http://www.w3school.com.cn/xpath/xpath_functions.asp#numeric">æ•°å€¼</A> 
+<LI><A href="http://www.w3school.com.cn/xpath/xpath_functions.asp#string">å­—ç¬¦ä¸²</A> 
 <LI><A href="http://www.w3school.com.cn/xpath/xpath_functions.asp#anyuri">AnyURI</A> 
-<LI><A href="http://www.w3school.com.cn/xpath/xpath_functions.asp#boolean">Âß¼­</A> 
-<LI><A href="http://www.w3school.com.cn/xpath/xpath_functions.asp#datetime">³ÖĞøÊ±¼ä/ÈÕÆÚ/Ê±¼ä</A> 
+<LI><A href="http://www.w3school.com.cn/xpath/xpath_functions.asp#boolean">é€»è¾‘</A> 
+<LI><A href="http://www.w3school.com.cn/xpath/xpath_functions.asp#datetime">æŒç»­æ—¶é—´/æ—¥æœŸ/æ—¶é—´</A> 
 <LI><A href="http://www.w3school.com.cn/xpath/xpath_functions.asp#qname">QName</A> 
-<LI><A href="http://www.w3school.com.cn/xpath/xpath_functions.asp#node">½Úµã</A> 
-<LI><A href="http://www.w3school.com.cn/xpath/xpath_functions.asp#sequence">ĞòÁĞ</A> 
+<LI><A href="http://www.w3school.com.cn/xpath/xpath_functions.asp#node">èŠ‚ç‚¹</A> 
+<LI><A href="http://www.w3school.com.cn/xpath/xpath_functions.asp#sequence">åºåˆ—</A> 
 <LI><A href="http://www.w3school.com.cn/xpath/xpath_functions.asp#context">Context</A> </LI></UL></DIV>
 <DIV>
-<H2><A id=accessor>´æÈ¡º¯Êı</A></H2>
+<H2><A id=accessor>å­˜å–å‡½æ•°</A></H2>
 <TABLE class=dataintable>
 <TBODY>
 <TR>
-<TH style="WIDTH: 40%">Ãû³Æ</TH>
-<TH style="WIDTH: 60%">ËµÃ÷</TH></TR>
+<TH style="WIDTH: 40%">åç§°</TH>
+<TH style="WIDTH: 60%">è¯´æ˜</TH></TR>
 <TR>
 <TD>fn:node-name(node)</TD>
-<TD>·µ»Ø²ÎÊı½ÚµãµÄ½ÚµãÃû³Æ¡£</TD></TR>
+<TD>è¿”å›å‚æ•°èŠ‚ç‚¹çš„èŠ‚ç‚¹åç§°ã€‚</TD></TR>
 <TR>
 <TD>fn:nilled(node)</TD>
-<TD>·µ»ØÊÇ·ñ¾Ü¾ø²ÎÊı½ÚµãµÄ²¼¶ûÖµ¡£</TD></TR>
+<TD>è¿”å›æ˜¯å¦æ‹’ç»å‚æ•°èŠ‚ç‚¹çš„å¸ƒå°”å€¼ã€‚</TD></TR>
 <TR>
 <TD>fn:data(item.item,...)</TD>
-<TD>½ÓÊÜÏîÄ¿ĞòÁĞ£¬²¢·µ»ØÔ­×ÓÖµĞòÁĞ¡£</TD></TR>
+<TD>æ¥å—é¡¹ç›®åºåˆ—ï¼Œå¹¶è¿”å›åŸå­å€¼åºåˆ—ã€‚</TD></TR>
 <TR>
 <TD>
 <UL>
 <LI>fn:base-uri() 
 <LI>fn:base-uri(node)</LI></UL></TD>
-<TD>·µ»Øµ±Ç°½Úµã»òÖ¸¶¨½ÚµãµÄ base-uri ÊôĞÔµÄÖµ¡£</TD></TR>
+<TD>è¿”å›å½“å‰èŠ‚ç‚¹æˆ–æŒ‡å®šèŠ‚ç‚¹çš„ base-uri å±æ€§çš„å€¼ã€‚</TD></TR>
 <TR>
 <TD>fn:document-uri(node)</TD>
-<TD>·µ»ØÖ¸¶¨½ÚµãµÄ document-uri ÊôĞÔµÄÖµ¡£</TD></TR></TBODY></TABLE></DIV>
+<TD>è¿”å›æŒ‡å®šèŠ‚ç‚¹çš„ document-uri å±æ€§çš„å€¼ã€‚</TD></TR></TBODY></TABLE></DIV>
 <DIV>
-<H2><A id=error>´íÎóºÍ¸ú×Ùº¯Êı</A></H2>
+<H2><A id=error>é”™è¯¯å’Œè·Ÿè¸ªå‡½æ•°</A></H2>
 <TABLE class=dataintable>
 <TBODY>
 <TR>
-<TH style="WIDTH: 40%">Ãû³Æ</TH>
-<TH style="WIDTH: 60%">ËµÃ÷</TH></TR>
+<TH style="WIDTH: 40%">åç§°</TH>
+<TH style="WIDTH: 60%">è¯´æ˜</TH></TR>
 <TR>
 <TD>
 <UL>
@@ -70,395 +71,395 @@ href="c3.css"></HEAD>
 <LI>fn:error(error,description) 
 <LI>fn:error(error,description,error-object) </LI></UL></TD>
 <TD>
-<P>Àı×Ó£ºerror(fn:QName('http://example.com/test', 'err:toohigh'), 'Error: Price is 
+<P>ä¾‹å­ï¼šerror(fn:QName('http://example.com/test', 'err:toohigh'), 'Error: Price is 
 too high')</P>
-<P>½á¹û£ºÏòÍâ²¿´¦Àí»·¾³·µ»Ø http://example.com/test#toohigh ÒÔ¼°×Ö·û´® "Error: Price is too 
-high"¡£</P></TD></TR>
+<P>ç»“æœï¼šå‘å¤–éƒ¨å¤„ç†ç¯å¢ƒè¿”å› http://example.com/test#toohigh ä»¥åŠå­—ç¬¦ä¸² "Error: Price is too 
+high"ã€‚</P></TD></TR>
 <TR>
 <TD>fn:trace(value,label)</TD>
-<TD>ÓÃÓÚ¶Ô²éÑ¯½øĞĞ debug¡£</TD></TR></TBODY></TABLE></DIV>
+<TD>ç”¨äºå¯¹æŸ¥è¯¢è¿›è¡Œ debugã€‚</TD></TR></TBODY></TABLE></DIV>
 <DIV>
-<H2><A id=numeric>ÓĞ¹ØÊıÖµµÄº¯Êı</A></H2>
+<H2><A id=numeric>æœ‰å…³æ•°å€¼çš„å‡½æ•°</A></H2>
 <TABLE class=dataintable>
 <TBODY>
 <TR>
-<TH style="WIDTH: 40%">Ãû³Æ</TH>
-<TH style="WIDTH: 60%">ËµÃ÷</TH></TR>
+<TH style="WIDTH: 40%">åç§°</TH>
+<TH style="WIDTH: 60%">è¯´æ˜</TH></TR>
 <TR>
 <TD>fn:number(arg)</TD>
 <TD>
-<P>·µ»Ø²ÎÊıµÄÊıÖµ¡£²ÎÊı¿ÉÒÔÊÇ²¼¶ûÖµ¡¢×Ö·û´®»ò½Úµã¼¯¡£</P>
-<P>Àı×Ó£ºnumber('100')</P>
-<P>½á¹û£º100</P></TD></TR>
+<P>è¿”å›å‚æ•°çš„æ•°å€¼ã€‚å‚æ•°å¯ä»¥æ˜¯å¸ƒå°”å€¼ã€å­—ç¬¦ä¸²æˆ–èŠ‚ç‚¹é›†ã€‚</P>
+<P>ä¾‹å­ï¼šnumber('100')</P>
+<P>ç»“æœï¼š100</P></TD></TR>
 <TR>
 <TD>fn:abs(num)</TD>
 <TD>
-<P>·µ»Ø²ÎÊıµÄ¾ø¶ÔÖµ¡£</P>
-<P>Àı×Ó£ºabs(3.14)</P>
-<P>½á¹û£º3.14</P>
-<P>Àı×Ó£ºabs(-3.14)</P>
-<P>½á¹û£º3.14</P></TD></TR>
+<P>è¿”å›å‚æ•°çš„ç»å¯¹å€¼ã€‚</P>
+<P>ä¾‹å­ï¼šabs(3.14)</P>
+<P>ç»“æœï¼š3.14</P>
+<P>ä¾‹å­ï¼šabs(-3.14)</P>
+<P>ç»“æœï¼š3.14</P></TD></TR>
 <TR>
 <TD>fn:ceiling(num)</TD>
 <TD>
-<P>·µ»Ø´óÓÚ num ²ÎÊıµÄ×îĞ¡ÕûÊı¡£</P>
-<P>Àı×Ó£ºceiling(3.14)</P>
-<P>½á¹û£º4</P></TD></TR>
+<P>è¿”å›å¤§äº num å‚æ•°çš„æœ€å°æ•´æ•°ã€‚</P>
+<P>ä¾‹å­ï¼šceiling(3.14)</P>
+<P>ç»“æœï¼š4</P></TD></TR>
 <TR>
 <TD>fn:floor(num)</TD>
 <TD>
-<P>·µ»Ø²»´óÓÚ num ²ÎÊıµÄ×î´óÕûÊı¡£</P>
-<P>Àı×Ó£ºfloor(3.14)</P>
-<P>½á¹û£º3</P></TD></TR>
+<P>è¿”å›ä¸å¤§äº num å‚æ•°çš„æœ€å¤§æ•´æ•°ã€‚</P>
+<P>ä¾‹å­ï¼šfloor(3.14)</P>
+<P>ç»“æœï¼š3</P></TD></TR>
 <TR>
 <TD>fn:round(num)</TD>
 <TD>
-<P>°Ñ num ²ÎÊıÉáÈëÎª×î½Ó½üµÄÕûÊı¡£</P>
-<P>Àı×Ó£ºround(3.14)</P>
-<P>½á¹û£º3</P></TD></TR>
+<P>æŠŠ num å‚æ•°èˆå…¥ä¸ºæœ€æ¥è¿‘çš„æ•´æ•°ã€‚</P>
+<P>ä¾‹å­ï¼šround(3.14)</P>
+<P>ç»“æœï¼š3</P></TD></TR>
 <TR>
 <TD>fn:round-half-to-even()</TD>
 <TD>
-<P>Àı×Ó£ºround-half-to-even(0.5)</P>
-<P>½á¹û£º0 </P>
-<P>Àı×Ó£ºround-half-to-even(1.5)</P>
-<P>½á¹û£º2</P>
-<P>Àı×Ó£ºround-half-to-even(2.5)</P>
-<P>½á¹û£º2</P></TD></TR></TBODY></TABLE></DIV>
+<P>ä¾‹å­ï¼šround-half-to-even(0.5)</P>
+<P>ç»“æœï¼š0 </P>
+<P>ä¾‹å­ï¼šround-half-to-even(1.5)</P>
+<P>ç»“æœï¼š2</P>
+<P>ä¾‹å­ï¼šround-half-to-even(2.5)</P>
+<P>ç»“æœï¼š2</P></TD></TR></TBODY></TABLE></DIV>
 <DIV>
-<H2><A id=string>ÓĞ¹Ø×Ö·û´®µÄº¯Êı</A></H2>
+<H2><A id=string>æœ‰å…³å­—ç¬¦ä¸²çš„å‡½æ•°</A></H2>
 <TABLE class=dataintable>
 <TBODY>
 <TR>
-<TH style="WIDTH: 40%">Ãû³Æ</TH>
-<TH style="WIDTH: 60%">ËµÃ÷</TH></TR>
+<TH style="WIDTH: 40%">åç§°</TH>
+<TH style="WIDTH: 60%">è¯´æ˜</TH></TR>
 <TR>
 <TD>fn:string(arg)</TD>
 <TD>
-<P>·µ»Ø²ÎÊıµÄ×Ö·û´®Öµ¡£²ÎÊı¿ÉÒÔÊÇÊı×Ö¡¢Âß¼­Öµ»ò½Úµã¼¯¡£</P>
-<P>Àı×Ó£ºstring(314)</P>
-<P>½á¹û£º"314"</P></TD></TR>
+<P>è¿”å›å‚æ•°çš„å­—ç¬¦ä¸²å€¼ã€‚å‚æ•°å¯ä»¥æ˜¯æ•°å­—ã€é€»è¾‘å€¼æˆ–èŠ‚ç‚¹é›†ã€‚</P>
+<P>ä¾‹å­ï¼šstring(314)</P>
+<P>ç»“æœï¼š"314"</P></TD></TR>
 <TR>
 <TD>fn:codepoints-to-string(int,int,...)</TD>
 <TD>
-<P>¸ù¾İ´úÂëµãĞòÁĞ·µ»Ø×Ö·û´®¡£</P>
-<P>Àı×Ó£ºcodepoints-to-string(84, 104, 233, 114, 232, 115, 101)</P>
-<P>½á¹û£º'Th¨¦r¨¨se'</P></TD></TR>
+<P>æ ¹æ®ä»£ç ç‚¹åºåˆ—è¿”å›å­—ç¬¦ä¸²ã€‚</P>
+<P>ä¾‹å­ï¼šcodepoints-to-string(84, 104, 233, 114, 232, 115, 101)</P>
+<P>ç»“æœï¼š'ThÃ©rÃ¨se'</P></TD></TR>
 <TR>
 <TD>fn:string-to-codepoints(string)</TD>
 <TD>
-<P>¸ù¾İ×Ö·û´®·µ»Ø´úÂëµãĞòÁĞ¡£</P>
-<P>Àı×Ó£ºstring-to-codepoints("Th¨¦r¨¨se")</P>
-<P>½á¹û£º84, 104, 233, 114, 232, 115, 101</P></TD></TR>
+<P>æ ¹æ®å­—ç¬¦ä¸²è¿”å›ä»£ç ç‚¹åºåˆ—ã€‚</P>
+<P>ä¾‹å­ï¼šstring-to-codepoints("ThÃ©rÃ¨se")</P>
+<P>ç»“æœï¼š84, 104, 233, 114, 232, 115, 101</P></TD></TR>
 <TR>
 <TD>fn:codepoint-equal(comp1,comp2)</TD>
-<TD>¸ù¾İ Unicode ´úÂëµã¶ÔÕÕ£¬Èç¹û comp1 µÄÖµµÈÓÚ comp2 µÄÖµ£¬Ôò·µ»Ø 
-true¡£(http://www.w3.org/2005/02/xpath-functions/collation/codepoint)£¬·ñÔò·µ»Ø 
-false¡£</TD></TR>
+<TD>æ ¹æ® Unicode ä»£ç ç‚¹å¯¹ç…§ï¼Œå¦‚æœ comp1 çš„å€¼ç­‰äº comp2 çš„å€¼ï¼Œåˆ™è¿”å› 
+trueã€‚(http://www.w3.org/2005/02/xpath-functions/collation/codepoint)ï¼Œå¦åˆ™è¿”å› 
+falseã€‚</TD></TR>
 <TR>
 <TD>
 <UL>
 <LI>fn:compare(comp1,comp2) 
 <LI>fn:compare(comp1,comp2,collation) </LI></UL></TD>
 <TD>
-<P>Èç¹û comp1 Ğ¡ÓÚ comp2£¬Ôò·µ»Ø -1¡£Èç¹û comp1 µÈÓÚ comp2£¬Ôò·µ»Ø 0¡£Èç¹û comp1 ´óÓÚ comp2£¬Ôò·µ»Ø 
-1¡££¨¸ù¾İËùÓÃµÄ¶ÔÕÕ¹æÔò£©¡£</P>
-<P>Àı×Ó£ºcompare('ghi', 'ghi')</P>
-<P>½á¹û£º0</P></TD></TR>
+<P>å¦‚æœ comp1 å°äº comp2ï¼Œåˆ™è¿”å› -1ã€‚å¦‚æœ comp1 ç­‰äº comp2ï¼Œåˆ™è¿”å› 0ã€‚å¦‚æœ comp1 å¤§äº comp2ï¼Œåˆ™è¿”å› 
+1ã€‚ï¼ˆæ ¹æ®æ‰€ç”¨çš„å¯¹ç…§è§„åˆ™ï¼‰ã€‚</P>
+<P>ä¾‹å­ï¼šcompare('ghi', 'ghi')</P>
+<P>ç»“æœï¼š0</P></TD></TR>
 <TR>
 <TD>fn:concat(string,string,...)</TD>
 <TD>
-<P>·µ»Ø×Ö·û´®µÄÆ´½Ó¡£</P>
-<P>Àı×Ó£ºconcat('XPath ','is ','FUN!')</P>
-<P>½á¹û£º'XPath is FUN!'</P></TD></TR>
+<P>è¿”å›å­—ç¬¦ä¸²çš„æ‹¼æ¥ã€‚</P>
+<P>ä¾‹å­ï¼šconcat('XPath ','is ','FUN!')</P>
+<P>ç»“æœï¼š'XPath is FUN!'</P></TD></TR>
 <TR>
 <TD>fn:string-join((string,string,...),sep)</TD>
 <TD>
-<P>Ê¹ÓÃ sep ²ÎÊı×÷Îª·Ö¸ô·û£¬À´·µ»Ø string ²ÎÊıÆ´½ÓºóµÄ×Ö·û´®¡£</P>
-<P>Àı×Ó£ºstring-join(('We', 'are', 'having', 'fun!'), ' ')</P>
-<P>½á¹û£º' We are having fun! '</P>
-<P>Àı×Ó£ºstring-join(('We', 'are', 'having', 'fun!'))</P>
-<P>½á¹û£º'Wearehavingfun!'</P>
-<P>Àı×Ó£ºstring-join((), 'sep')</P>
-<P>½á¹û£º''</P></TD></TR>
+<P>ä½¿ç”¨ sep å‚æ•°ä½œä¸ºåˆ†éš”ç¬¦ï¼Œæ¥è¿”å› string å‚æ•°æ‹¼æ¥åçš„å­—ç¬¦ä¸²ã€‚</P>
+<P>ä¾‹å­ï¼šstring-join(('We', 'are', 'having', 'fun!'), ' ')</P>
+<P>ç»“æœï¼š' We are having fun! '</P>
+<P>ä¾‹å­ï¼šstring-join(('We', 'are', 'having', 'fun!'))</P>
+<P>ç»“æœï¼š'Wearehavingfun!'</P>
+<P>ä¾‹å­ï¼šstring-join((), 'sep')</P>
+<P>ç»“æœï¼š''</P></TD></TR>
 <TR>
 <TD>
 <UL>
 <LI>fn:substring(string,start,len) 
 <LI>fn:substring(string,start) </LI></UL></TD>
 <TD>
-<P>·µ»Ø´Ó start Î»ÖÃ¿ªÊ¼µÄÖ¸¶¨³¤¶ÈµÄ×Ó×Ö·û´®¡£µÚÒ»¸ö×Ö·ûµÄÏÂ±êÊÇ 1¡£Èç¹ûÊ¡ÂÔ len ²ÎÊı£¬Ôò·µ»Ø´ÓÎ»ÖÃ start 
-µ½×Ö·û´®Ä©Î²µÄ×Ó×Ö·û´®¡£</P>
-<P>Àı×Ó£ºsubstring('Beatles',1,4)</P>
-<P>½á¹û£º'Beat'</P>
-<P>Àı×Ó£ºsubstring('Beatles',2)</P>
-<P>½á¹û£º'eatles'</P></TD></TR>
+<P>è¿”å›ä» start ä½ç½®å¼€å§‹çš„æŒ‡å®šé•¿åº¦çš„å­å­—ç¬¦ä¸²ã€‚ç¬¬ä¸€ä¸ªå­—ç¬¦çš„ä¸‹æ ‡æ˜¯ 1ã€‚å¦‚æœçœç•¥ len å‚æ•°ï¼Œåˆ™è¿”å›ä»ä½ç½® start 
+åˆ°å­—ç¬¦ä¸²æœ«å°¾çš„å­å­—ç¬¦ä¸²ã€‚</P>
+<P>ä¾‹å­ï¼šsubstring('Beatles',1,4)</P>
+<P>ç»“æœï¼š'Beat'</P>
+<P>ä¾‹å­ï¼šsubstring('Beatles',2)</P>
+<P>ç»“æœï¼š'eatles'</P></TD></TR>
 <TR>
 <TD>
 <UL>
 <LI>fn:string-length(string) 
 <LI>fn:string-length() </LI></UL></TD>
 <TD>
-<P>·µ»ØÖ¸¶¨×Ö·û´®µÄ³¤¶È¡£Èç¹ûÃ»ÓĞ string ²ÎÊı£¬Ôò·µ»Øµ±Ç°½ÚµãµÄ×Ö·û´®ÖµµÄ³¤¶È¡£</P>
-<P>Àı×Ó£ºstring-length('Beatles')</P>
-<P>½á¹û£º7</P></TD></TR>
+<P>è¿”å›æŒ‡å®šå­—ç¬¦ä¸²çš„é•¿åº¦ã€‚å¦‚æœæ²¡æœ‰ string å‚æ•°ï¼Œåˆ™è¿”å›å½“å‰èŠ‚ç‚¹çš„å­—ç¬¦ä¸²å€¼çš„é•¿åº¦ã€‚</P>
+<P>ä¾‹å­ï¼šstring-length('Beatles')</P>
+<P>ç»“æœï¼š7</P></TD></TR>
 <TR>
 <TD>
 <UL>
 <LI>fn:normalize-space(string) 
 <LI>fn:normalize-space() </LI></UL></TD>
 <TD>
-<P>É¾³ıÖ¸¶¨×Ö·û´®µÄ¿ªÍ·ºÍ½áÎ²µÄ¿Õ°×£¬²¢°ÑÄÚ²¿µÄËùÓĞ¿Õ°×ĞòÁĞÌæ»»ÎªÒ»¸ö£¬È»ºó·µ»Ø½á¹û¡£Èç¹ûÃ»ÓĞ string ²ÎÊı£¬Ôò´¦Àíµ±Ç°½Úµã¡£</P>
-<P>Àı×Ó£ºnormalize-space(' The&nbsp;&nbsp;&nbsp;XML ')</P>
-<P>½á¹û£º'The XML'</P></TD></TR>
+<P>åˆ é™¤æŒ‡å®šå­—ç¬¦ä¸²çš„å¼€å¤´å’Œç»“å°¾çš„ç©ºç™½ï¼Œå¹¶æŠŠå†…éƒ¨çš„æ‰€æœ‰ç©ºç™½åºåˆ—æ›¿æ¢ä¸ºä¸€ä¸ªï¼Œç„¶åè¿”å›ç»“æœã€‚å¦‚æœæ²¡æœ‰ string å‚æ•°ï¼Œåˆ™å¤„ç†å½“å‰èŠ‚ç‚¹ã€‚</P>
+<P>ä¾‹å­ï¼šnormalize-space(' The&nbsp;&nbsp;&nbsp;XML ')</P>
+<P>ç»“æœï¼š'The XML'</P></TD></TR>
 <TR>
 <TD>fn:normalize-unicode()</TD>
-<TD>Ö´ĞĞ Unicode ¹æ¸ñ»¯¡£</TD></TR>
+<TD>æ‰§è¡Œ Unicode è§„æ ¼åŒ–ã€‚</TD></TR>
 <TR>
 <TD>fn:upper-case(string)</TD>
 <TD>
-<P>°Ñ string ²ÎÊı×ª»»Îª´óĞ´¡£</P>
-<P>Àı×Ó£ºupper-case('The XML')</P>
-<P>½á¹û£º'THE XML'</P></TD></TR>
+<P>æŠŠ string å‚æ•°è½¬æ¢ä¸ºå¤§å†™ã€‚</P>
+<P>ä¾‹å­ï¼šupper-case('The XML')</P>
+<P>ç»“æœï¼š'THE XML'</P></TD></TR>
 <TR>
 <TD>fn:lower-case(string)</TD>
 <TD>
-<P>°Ñ string ²ÎÊı×ª»»ÎªĞ¡Ğ´¡£</P>
-<P>Àı×Ó£ºlower-case('The XML')</P>
-<P>½á¹û£º'the xml'</P></TD></TR>
+<P>æŠŠ string å‚æ•°è½¬æ¢ä¸ºå°å†™ã€‚</P>
+<P>ä¾‹å­ï¼šlower-case('The XML')</P>
+<P>ç»“æœï¼š'the xml'</P></TD></TR>
 <TR>
 <TD>fn:translate(string1,string2,string3)</TD>
 <TD>
-<P>°Ñ string1 ÖĞµÄ string2 Ìæ»»Îª string3¡£</P>
-<P>Àı×Ó£ºtranslate('12:30','30','45')</P>
-<P>½á¹û£º'12:45'</P>
-<P>Àı×Ó£ºtranslate('12:30','03','54')</P>
-<P>½á¹û£º'12:45'</P>
-<P>Àı×Ó£ºtranslate('12:30','0123','abcd')</P>
-<P>½á¹û£º'bc:da'</P></TD></TR>
+<P>æŠŠ string1 ä¸­çš„ string2 æ›¿æ¢ä¸º string3ã€‚</P>
+<P>ä¾‹å­ï¼štranslate('12:30','30','45')</P>
+<P>ç»“æœï¼š'12:45'</P>
+<P>ä¾‹å­ï¼štranslate('12:30','03','54')</P>
+<P>ç»“æœï¼š'12:45'</P>
+<P>ä¾‹å­ï¼štranslate('12:30','0123','abcd')</P>
+<P>ç»“æœï¼š'bc:da'</P></TD></TR>
 <TR>
 <TD>fn:escape-uri(stringURI,esc-res)</TD>
 <TD>
-<P>Àı×Ó£ºescape-uri("http://example.com/test#car", true())</P>
-<P>½á¹û£º"http%3A%2F%2Fexample.com%2Ftest#car"</P>
-<P>Àı×Ó£ºescape-uri("http://example.com/test#car", false())</P>
-<P>½á¹û£º"http://example.com/test#car"</P>
-<P>Àı×Ó£ºescape-uri ("http://example.com/~b¨¦b¨¦", false())</P>
-<P>½á¹û£º"http://example.com/~b%C3%A9b%C3%A9"</P></TD></TR>
+<P>ä¾‹å­ï¼šescape-uri("http://example.com/test#car", true())</P>
+<P>ç»“æœï¼š"http%3A%2F%2Fexample.com%2Ftest#car"</P>
+<P>ä¾‹å­ï¼šescape-uri("http://example.com/test#car", false())</P>
+<P>ç»“æœï¼š"http://example.com/test#car"</P>
+<P>ä¾‹å­ï¼šescape-uri ("http://example.com/~bÃ©bÃ©", false())</P>
+<P>ç»“æœï¼š"http://example.com/~b%C3%A9b%C3%A9"</P></TD></TR>
 <TR>
 <TD>fn:contains(string1,string2)</TD>
 <TD>
-<P>Èç¹û string1 °üº¬ string2£¬Ôò·µ»Ø true£¬·ñÔò·µ»Ø false¡£</P>
-<P>Àı×Ó£ºcontains('XML','XM')</P>
-<P>½á¹û£ºtrue</P></TD></TR>
+<P>å¦‚æœ string1 åŒ…å« string2ï¼Œåˆ™è¿”å› trueï¼Œå¦åˆ™è¿”å› falseã€‚</P>
+<P>ä¾‹å­ï¼šcontains('XML','XM')</P>
+<P>ç»“æœï¼štrue</P></TD></TR>
 <TR>
 <TD>fn:starts-with(string1,string2)</TD>
 <TD>
-<P>Èç¹û string1 ÒÔ string2 ¿ªÊ¼£¬Ôò·µ»Ø true£¬·ñÔò·µ»Ø false¡£</P>
-<P>Àı×Ó£ºstarts-with('XML','X')</P>
-<P>½á¹û£ºtrue</P></TD></TR>
+<P>å¦‚æœ string1 ä»¥ string2 å¼€å§‹ï¼Œåˆ™è¿”å› trueï¼Œå¦åˆ™è¿”å› falseã€‚</P>
+<P>ä¾‹å­ï¼šstarts-with('XML','X')</P>
+<P>ç»“æœï¼štrue</P></TD></TR>
 <TR>
 <TD>fn:ends-with(string1,string2)</TD>
 <TD>
-<P>Èç¹û string1 ÒÔ string2 ½áÎ²£¬Ôò·µ»Ø true£¬·ñÔò·µ»Ø false¡£</P>
-<P>Àı×Ó£ºends-with('XML','X')</P>
-<P>½á¹û£ºfalse</P></TD></TR>
+<P>å¦‚æœ string1 ä»¥ string2 ç»“å°¾ï¼Œåˆ™è¿”å› trueï¼Œå¦åˆ™è¿”å› falseã€‚</P>
+<P>ä¾‹å­ï¼šends-with('XML','X')</P>
+<P>ç»“æœï¼šfalse</P></TD></TR>
 <TR>
 <TD>fn:substring-before(string1,string2)</TD>
 <TD>
-<P>·µ»Ø string2 ÔÚ string1 ÖĞ³öÏÖÖ®Ç°µÄ×Ó×Ö·û´®¡£</P>
-<P>Àı×Ó£ºsubstring-before('12/10','/')</P>
-<P>½á¹û£º'12'</P></TD></TR>
+<P>è¿”å› string2 åœ¨ string1 ä¸­å‡ºç°ä¹‹å‰çš„å­å­—ç¬¦ä¸²ã€‚</P>
+<P>ä¾‹å­ï¼šsubstring-before('12/10','/')</P>
+<P>ç»“æœï¼š'12'</P></TD></TR>
 <TR>
 <TD>fn:substring-after(string1,string2)</TD>
 <TD>
-<P>·µ»Ø string2 ÔÚ string1 ÖĞ³öÏÖÖ®ºóµÄ×Ó×Ö·û´®¡£</P>
-<P>Àı×Ó£ºsubstring-after('12/10','/')</P>
-<P>½á¹û£º'10'</P></TD></TR>
+<P>è¿”å› string2 åœ¨ string1 ä¸­å‡ºç°ä¹‹åçš„å­å­—ç¬¦ä¸²ã€‚</P>
+<P>ä¾‹å­ï¼šsubstring-after('12/10','/')</P>
+<P>ç»“æœï¼š'10'</P></TD></TR>
 <TR>
 <TD>fn:matches(string,pattern)</TD>
 <TD>
-<P>Èç¹û string ²ÎÊıÆ¥ÅäÖ¸¶¨µÄÄ£Ê½£¬Ôò·µ»Ø true£¬·ñÔò·µ»Ø false¡£</P>
-<P>Àı×Ó£ºmatches("Merano", "ran")</P>
-<P>½á¹û£ºtrue</P></TD></TR>
+<P>å¦‚æœ string å‚æ•°åŒ¹é…æŒ‡å®šçš„æ¨¡å¼ï¼Œåˆ™è¿”å› trueï¼Œå¦åˆ™è¿”å› falseã€‚</P>
+<P>ä¾‹å­ï¼šmatches("Merano", "ran")</P>
+<P>ç»“æœï¼štrue</P></TD></TR>
 <TR>
 <TD>fn:replace(string,pattern,replace)</TD>
 <TD>
-<P>°ÑÖ¸¶¨µÄÄ£Ê½Ìæ»»Îª replace ²ÎÊı£¬²¢·µ»Ø½á¹û¡£</P>
-<P>Àı×Ó£ºreplace("Bella Italia", "l", "*")</P>
-<P>½á¹û£º'Be**a Ita*ia'</P>
-<P>Àı×Ó£ºreplace("Bella Italia", "l", "")</P>
-<P>½á¹û£º'Bea Itaia'</P></TD></TR>
+<P>æŠŠæŒ‡å®šçš„æ¨¡å¼æ›¿æ¢ä¸º replace å‚æ•°ï¼Œå¹¶è¿”å›ç»“æœã€‚</P>
+<P>ä¾‹å­ï¼šreplace("Bella Italia", "l", "*")</P>
+<P>ç»“æœï¼š'Be**a Ita*ia'</P>
+<P>ä¾‹å­ï¼šreplace("Bella Italia", "l", "")</P>
+<P>ç»“æœï¼š'Bea Itaia'</P></TD></TR>
 <TR>
 <TD>fn:tokenize(string,pattern)</TD>
 <TD>
-<P>Àı×Ó£ºtokenize("XPath is fun", "\s+")</P>
-<P>½á¹û£º("XPath", "is", "fun")</P></TD></TR></TBODY></TABLE></DIV>
+<P>ä¾‹å­ï¼štokenize("XPath is fun", "\s+")</P>
+<P>ç»“æœï¼š("XPath", "is", "fun")</P></TD></TR></TBODY></TABLE></DIV>
 <DIV>
-<H2><A id=anyuri>Õë¶Ô anyURI µÄº¯Êı</A></H2>
+<H2><A id=anyuri>é’ˆå¯¹ anyURI çš„å‡½æ•°</A></H2>
 <TABLE class=dataintable>
 <TBODY>
 <TR>
-<TH style="WIDTH: 40%">Ãû³Æ</TH>
-<TH style="WIDTH: 60%">ËµÃ÷</TH></TR>
+<TH style="WIDTH: 40%">åç§°</TH>
+<TH style="WIDTH: 60%">è¯´æ˜</TH></TR>
 <TR>
 <TD>fn:resolve-uri(relative,base)</TD>
 <TD>&nbsp;</TD></TR></TBODY></TABLE></DIV>
 <DIV>
-<H2><A id=boolean>¹ØÓÚ²¼¶ûÖµµÄº¯Êı</A></H2>
+<H2><A id=boolean>å…³äºå¸ƒå°”å€¼çš„å‡½æ•°</A></H2>
 <TABLE class=dataintable>
 <TBODY>
 <TR>
-<TH style="WIDTH: 40%">Ãû³Æ</TH>
-<TH style="WIDTH: 60%">ËµÃ÷</TH></TR>
+<TH style="WIDTH: 40%">åç§°</TH>
+<TH style="WIDTH: 60%">è¯´æ˜</TH></TR>
 <TR>
 <TD>fn:boolean(arg)</TD>
-<TD>·µ»ØÊı×Ö¡¢×Ö·û´®»ò½Úµã¼¯µÄ²¼¶ûÖµ¡£</TD></TR>
+<TD>è¿”å›æ•°å­—ã€å­—ç¬¦ä¸²æˆ–èŠ‚ç‚¹é›†çš„å¸ƒå°”å€¼ã€‚</TD></TR>
 <TR>
 <TD>fn:not(arg)</TD>
 <TD>
-<P>Ê×ÏÈÍ¨¹ı boolean() º¯Êı°Ñ²ÎÊı»¹Ô­ÎªÒ»¸ö²¼¶ûÖµ¡£Èç¹û¸Ã²¼¶ûÖµÎª false£¬Ôò·µ»Ø true£¬·ñÔò·µ»Ø true¡£</P>
-<P>Àı×Ó£ºnot(true())</P>
-<P>½á¹û£ºfalse</P></TD></TR>
+<P>é¦–å…ˆé€šè¿‡ boolean() å‡½æ•°æŠŠå‚æ•°è¿˜åŸä¸ºä¸€ä¸ªå¸ƒå°”å€¼ã€‚å¦‚æœè¯¥å¸ƒå°”å€¼ä¸º falseï¼Œåˆ™è¿”å› trueï¼Œå¦åˆ™è¿”å› trueã€‚</P>
+<P>ä¾‹å­ï¼šnot(true())</P>
+<P>ç»“æœï¼šfalse</P></TD></TR>
 <TR>
 <TD>fn:true()</TD>
 <TD>
-<P>·µ»Ø²¼¶ûÖµ true¡£</P>
-<P>Àı×Ó£ºtrue()</P>
-<P>½á¹û£ºtrue</P></TD></TR>
+<P>è¿”å›å¸ƒå°”å€¼ trueã€‚</P>
+<P>ä¾‹å­ï¼štrue()</P>
+<P>ç»“æœï¼štrue</P></TD></TR>
 <TR>
 <TD>fn:false()</TD>
 <TD>
-<P>·µ»Ø²¼¶ûÖµ false¡£</P>
-<P>Àı×Ó£ºfalse()</P>
-<P>½á¹û£ºfalse</P></TD></TR></TBODY></TABLE></DIV>
+<P>è¿”å›å¸ƒå°”å€¼ falseã€‚</P>
+<P>ä¾‹å­ï¼šfalse()</P>
+<P>ç»“æœï¼šfalse</P></TD></TR></TBODY></TABLE></DIV>
 <DIV>
-<H2><A id=datetime>ÓĞ¹Ø³ÖĞøÊ±¼ä¡¢ÈÕÆÚºÍÊ±¼äµÄº¯Êı</A></H2>
-<P>ÈÕÆÚ¡¢Ê±¼ä¡¢³ÖĞøÊ±¼äµÄ×é¼şÌáÈ¡º¯Êı</P>
+<H2><A id=datetime>æœ‰å…³æŒç»­æ—¶é—´ã€æ—¥æœŸå’Œæ—¶é—´çš„å‡½æ•°</A></H2>
+<P>æ—¥æœŸã€æ—¶é—´ã€æŒç»­æ—¶é—´çš„ç»„ä»¶æå–å‡½æ•°</P>
 <TABLE class=dataintable>
 <TBODY>
 <TR>
-<TH style="WIDTH: 40%">Ãû³Æ</TH>
-<TH style="WIDTH: 60%">ËµÃ÷</TH></TR>
+<TH style="WIDTH: 40%">åç§°</TH>
+<TH style="WIDTH: 60%">è¯´æ˜</TH></TR>
 <TR>
 <TD>fn:dateTime(date,time)</TD>
-<TD>°Ñ²ÎÊı×ª»»ÎªÈÕÆÚºÍÊ±¼ä¡£</TD></TR>
+<TD>æŠŠå‚æ•°è½¬æ¢ä¸ºæ—¥æœŸå’Œæ—¶é—´ã€‚</TD></TR>
 <TR>
 <TD>fn:years-from-duration(datetimedur)</TD>
-<TD>·µ»Ø²ÎÊıÖµµÄÄê·İ²¿·ÖµÄÕûÊı£¬ÒÔ±ê×¼´Ê»ã±íÊ¾·¨À´±íÊ¾¡£</TD></TR>
+<TD>è¿”å›å‚æ•°å€¼çš„å¹´ä»½éƒ¨åˆ†çš„æ•´æ•°ï¼Œä»¥æ ‡å‡†è¯æ±‡è¡¨ç¤ºæ³•æ¥è¡¨ç¤ºã€‚</TD></TR>
 <TR>
 <TD>fn:months-from-duration(datetimedur)</TD>
-<TD>·µ»Ø²ÎÊıÖµµÄÔÂ·İ²¿·ÖµÄÕûÊı£¬ÒÔ±ê×¼´Ê»ã±íÊ¾·¨À´±íÊ¾¡£</TD></TR>
+<TD>è¿”å›å‚æ•°å€¼çš„æœˆä»½éƒ¨åˆ†çš„æ•´æ•°ï¼Œä»¥æ ‡å‡†è¯æ±‡è¡¨ç¤ºæ³•æ¥è¡¨ç¤ºã€‚</TD></TR>
 <TR>
 <TD>fn:days-from-duration(datetimedur)</TD>
-<TD>·µ»Ø²ÎÊıÖµµÄÌì²¿·ÖµÄÕûÊı£¬ÒÔ±ê×¼´Ê»ã±íÊ¾·¨À´±íÊ¾¡£</TD></TR>
+<TD>è¿”å›å‚æ•°å€¼çš„å¤©éƒ¨åˆ†çš„æ•´æ•°ï¼Œä»¥æ ‡å‡†è¯æ±‡è¡¨ç¤ºæ³•æ¥è¡¨ç¤ºã€‚</TD></TR>
 <TR>
 <TD>fn:hours-from-duration(datetimedur)</TD>
-<TD>·µ»Ø²ÎÊıÖµµÄĞ¡Ê±²¿·ÖµÄÕûÊı£¬ÒÔ±ê×¼´Ê»ã±íÊ¾·¨À´±íÊ¾¡£</TD></TR>
+<TD>è¿”å›å‚æ•°å€¼çš„å°æ—¶éƒ¨åˆ†çš„æ•´æ•°ï¼Œä»¥æ ‡å‡†è¯æ±‡è¡¨ç¤ºæ³•æ¥è¡¨ç¤ºã€‚</TD></TR>
 <TR>
 <TD>fn:minutes-from-duration(datetimedur)</TD>
-<TD>·µ»Ø²ÎÊıÖµµÄ·ÖÖÓ²¿·ÖµÄÕûÊı£¬ÒÔ±ê×¼´Ê»ã±íÊ¾·¨À´±íÊ¾¡£</TD></TR>
+<TD>è¿”å›å‚æ•°å€¼çš„åˆ†é’Ÿéƒ¨åˆ†çš„æ•´æ•°ï¼Œä»¥æ ‡å‡†è¯æ±‡è¡¨ç¤ºæ³•æ¥è¡¨ç¤ºã€‚</TD></TR>
 <TR>
 <TD>fn:seconds-from-duration(datetimedur)</TD>
-<TD>·µ»Ø²ÎÊıÖµµÄ·ÖÖÓ²¿·ÖµÄÊ®½øÖÆÊı£¬ÒÔ±ê×¼´Ê»ã±íÊ¾·¨À´±íÊ¾¡£</TD></TR>
+<TD>è¿”å›å‚æ•°å€¼çš„åˆ†é’Ÿéƒ¨åˆ†çš„åè¿›åˆ¶æ•°ï¼Œä»¥æ ‡å‡†è¯æ±‡è¡¨ç¤ºæ³•æ¥è¡¨ç¤ºã€‚</TD></TR>
 <TR>
 <TD>fn:year-from-dateTime(datetime)</TD>
 <TD>
-<P>·µ»Ø²ÎÊı±¾µØÖµµÄÄê²¿·ÖµÄÕûÊı¡£</P>
-<P>Àı×Ó£ºyear-from-dateTime(xs:dateTime("2005-01-10T12:30-04:10"))</P>
-<P>½á¹û£º2005</P></TD></TR>
+<P>è¿”å›å‚æ•°æœ¬åœ°å€¼çš„å¹´éƒ¨åˆ†çš„æ•´æ•°ã€‚</P>
+<P>ä¾‹å­ï¼šyear-from-dateTime(xs:dateTime("2005-01-10T12:30-04:10"))</P>
+<P>ç»“æœï¼š2005</P></TD></TR>
 <TR>
 <TD>fn:month-from-dateTime(datetime)</TD>
 <TD>
-<P>·µ»Ø²ÎÊı±¾µØÖµµÄÔÂ²¿·ÖµÄÕûÊı¡£</P>
-<P>Àı×Ó£ºmonth-from-dateTime(xs:dateTime("2005-01-10T12:30-04:10"))</P>
-<P>½á¹û£º01</P></TD></TR>
+<P>è¿”å›å‚æ•°æœ¬åœ°å€¼çš„æœˆéƒ¨åˆ†çš„æ•´æ•°ã€‚</P>
+<P>ä¾‹å­ï¼šmonth-from-dateTime(xs:dateTime("2005-01-10T12:30-04:10"))</P>
+<P>ç»“æœï¼š01</P></TD></TR>
 <TR>
 <TD>fn:day-from-dateTime(datetime)</TD>
 <TD>
-<P>·µ»Ø²ÎÊı±¾µØÖµµÄÌì²¿·ÖµÄÕûÊı¡£</P>
-<P>Àı×Ó£ºday-from-dateTime(xs:dateTime("2005-01-10T12:30-04:10"))</P>
-<P>½á¹û£º10</P></TD></TR>
+<P>è¿”å›å‚æ•°æœ¬åœ°å€¼çš„å¤©éƒ¨åˆ†çš„æ•´æ•°ã€‚</P>
+<P>ä¾‹å­ï¼šday-from-dateTime(xs:dateTime("2005-01-10T12:30-04:10"))</P>
+<P>ç»“æœï¼š10</P></TD></TR>
 <TR>
 <TD>fn:hours-from-dateTime(datetime)</TD>
 <TD>
-<P>·µ»Ø²ÎÊı±¾µØÖµµÄĞ¡Ê±²¿·ÖµÄÕûÊı¡£</P>
-<P>Àı×Ó£ºhours-from-dateTime(xs:dateTime("2005-01-10T12:30-04:10"))</P>
-<P>½á¹û£º12</P></TD></TR>
+<P>è¿”å›å‚æ•°æœ¬åœ°å€¼çš„å°æ—¶éƒ¨åˆ†çš„æ•´æ•°ã€‚</P>
+<P>ä¾‹å­ï¼šhours-from-dateTime(xs:dateTime("2005-01-10T12:30-04:10"))</P>
+<P>ç»“æœï¼š12</P></TD></TR>
 <TR>
 <TD>fn:minutes-from-dateTime(datetime)</TD>
 <TD>
-<P>·µ»Ø²ÎÊı±¾µØÖµµÄ·ÖÖÓ²¿·ÖµÄÕûÊı¡£</P>
-<P>Àı×Ó£ºminutes-from-dateTime(xs:dateTime("2005-01-10T12:30-04:10"))</P>
-<P>½á¹û£º30</P></TD></TR>
+<P>è¿”å›å‚æ•°æœ¬åœ°å€¼çš„åˆ†é’Ÿéƒ¨åˆ†çš„æ•´æ•°ã€‚</P>
+<P>ä¾‹å­ï¼šminutes-from-dateTime(xs:dateTime("2005-01-10T12:30-04:10"))</P>
+<P>ç»“æœï¼š30</P></TD></TR>
 <TR>
 <TD>fn:seconds-from-dateTime(datetime)</TD>
 <TD>
-<P>·µ»Ø²ÎÊı±¾µØÖµµÄÃë²¿·ÖµÄÊ®½øÖÆÊı¡£</P>
-<P>Àı×Ó£ºseconds-from-dateTime(xs:dateTime("2005-01-10T12:30:00-04:10"))</P>
-<P>½á¹û£º0</P></TD></TR>
+<P>è¿”å›å‚æ•°æœ¬åœ°å€¼çš„ç§’éƒ¨åˆ†çš„åè¿›åˆ¶æ•°ã€‚</P>
+<P>ä¾‹å­ï¼šseconds-from-dateTime(xs:dateTime("2005-01-10T12:30:00-04:10"))</P>
+<P>ç»“æœï¼š0</P></TD></TR>
 <TR>
 <TD>fn:timezone-from-dateTime(datetime)</TD>
-<TD>·µ»Ø²ÎÊıµÄÊ±Çø²¿·Ö£¬Èç¹û´æÔÚ¡£</TD></TR>
+<TD>è¿”å›å‚æ•°çš„æ—¶åŒºéƒ¨åˆ†ï¼Œå¦‚æœå­˜åœ¨ã€‚</TD></TR>
 <TR>
 <TD>fn:year-from-date(date)</TD>
 <TD>
-<P>·µ»Ø²ÎÊı±¾µØÖµÖĞ±íÊ¾ÄêµÄÕûÊı¡£</P>
-<P>Àı×Ó£ºyear-from-date(xs:date("2005-04-23"))</P>
-<P>½á¹û£º2005</P></TD></TR>
+<P>è¿”å›å‚æ•°æœ¬åœ°å€¼ä¸­è¡¨ç¤ºå¹´çš„æ•´æ•°ã€‚</P>
+<P>ä¾‹å­ï¼šyear-from-date(xs:date("2005-04-23"))</P>
+<P>ç»“æœï¼š2005</P></TD></TR>
 <TR>
 <TD>fn:month-from-date(date)</TD>
 <TD>
-<P>·µ»Ø²ÎÊı±¾µØÖµÖĞ±íÊ¾ÔÂµÄÕûÊı¡£</P>
-<P>Àı×Ó£ºmonth-from-date(xs:date("2005-04-23"))</P>
-<P>½á¹û£º4</P></TD></TR>
+<P>è¿”å›å‚æ•°æœ¬åœ°å€¼ä¸­è¡¨ç¤ºæœˆçš„æ•´æ•°ã€‚</P>
+<P>ä¾‹å­ï¼šmonth-from-date(xs:date("2005-04-23"))</P>
+<P>ç»“æœï¼š4</P></TD></TR>
 <TR>
 <TD>fn:day-from-date(date)</TD>
 <TD>
-<P>·µ»Ø²ÎÊı±¾µØÖµÖĞ±íÊ¾ÌìµÄÕûÊı¡£</P>
-<P>Àı×Ó£ºday-from-date(xs:date("2005-04-23"))</P>
-<P>½á¹û£º23</P></TD></TR>
+<P>è¿”å›å‚æ•°æœ¬åœ°å€¼ä¸­è¡¨ç¤ºå¤©çš„æ•´æ•°ã€‚</P>
+<P>ä¾‹å­ï¼šday-from-date(xs:date("2005-04-23"))</P>
+<P>ç»“æœï¼š23</P></TD></TR>
 <TR>
 <TD>fn:timezone-from-date(date)</TD>
-<TD>·µ»Ø²ÎÊıµÄÊ±Çø²¿·Ö£¬Èç¹û´æÔÚ¡£</TD></TR>
+<TD>è¿”å›å‚æ•°çš„æ—¶åŒºéƒ¨åˆ†ï¼Œå¦‚æœå­˜åœ¨ã€‚</TD></TR>
 <TR>
 <TD>fn:hours-from-time(time)</TD>
 <TD>
-<P>·µ»Ø²ÎÊı±¾µØÖµÖĞ±íÊ¾Ğ¡Ê±²¿·ÖµÄÕûÊı¡£</P>
-<P>Àı×Ó£ºhours-from-time(xs:time("10:22:00"))</P>
-<P>½á¹û£º10</P></TD></TR>
+<P>è¿”å›å‚æ•°æœ¬åœ°å€¼ä¸­è¡¨ç¤ºå°æ—¶éƒ¨åˆ†çš„æ•´æ•°ã€‚</P>
+<P>ä¾‹å­ï¼šhours-from-time(xs:time("10:22:00"))</P>
+<P>ç»“æœï¼š10</P></TD></TR>
 <TR>
 <TD>fn:minutes-from-time(time)</TD>
 <TD>
-<P>·µ»Ø²ÎÊı±¾µØÖµÖĞ±íÊ¾·ÖÖÓ²¿·ÖµÄÕûÊı¡£</P>
-<P>Àı×Ó£ºminutes-from-time(xs:time("10:22:00"))</P>
-<P>½á¹û£º22</P></TD></TR>
+<P>è¿”å›å‚æ•°æœ¬åœ°å€¼ä¸­è¡¨ç¤ºåˆ†é’Ÿéƒ¨åˆ†çš„æ•´æ•°ã€‚</P>
+<P>ä¾‹å­ï¼šminutes-from-time(xs:time("10:22:00"))</P>
+<P>ç»“æœï¼š22</P></TD></TR>
 <TR>
 <TD>fn:seconds-from-time(time)</TD>
 <TD>
-<P>·µ»Ø²ÎÊı±¾µØÖµÖĞ±íÊ¾Ãë²¿·ÖµÄÕûÊı¡£</P>
-<P>Àı×Ó£ºseconds-from-time(xs:time("10:22:00"))</P>
-<P>½á¹û£º0</P></TD></TR>
+<P>è¿”å›å‚æ•°æœ¬åœ°å€¼ä¸­è¡¨ç¤ºç§’éƒ¨åˆ†çš„æ•´æ•°ã€‚</P>
+<P>ä¾‹å­ï¼šseconds-from-time(xs:time("10:22:00"))</P>
+<P>ç»“æœï¼š0</P></TD></TR>
 <TR>
 <TD>fn:timezone-from-time(time)</TD>
-<TD>·µ»Ø²ÎÊıµÄÊ±Çø²¿·Ö£¬Èç¹û´æÔÚ¡£</TD></TR>
+<TD>è¿”å›å‚æ•°çš„æ—¶åŒºéƒ¨åˆ†ï¼Œå¦‚æœå­˜åœ¨ã€‚</TD></TR>
 <TR>
 <TD>fn:adjust-dateTime-to-timezone(datetime,timezone)</TD>
-<TD>Èç¹û timezone ²ÎÊıÎª¿Õ£¬Ôò·µ»ØÃ»ÓĞÊ±ÇøµÄ dateTime¡£·ñÔò·µ»Ø´øÓĞÊ±ÇøµÄ dateTime¡£</TD></TR>
+<TD>å¦‚æœ timezone å‚æ•°ä¸ºç©ºï¼Œåˆ™è¿”å›æ²¡æœ‰æ—¶åŒºçš„ dateTimeã€‚å¦åˆ™è¿”å›å¸¦æœ‰æ—¶åŒºçš„ dateTimeã€‚</TD></TR>
 <TR>
 <TD>fn:adjust-date-to-timezone(date,timezone)</TD>
-<TD>Èç¹û timezone ²ÎÊıÎª¿Õ£¬Ôò·µ»ØÃ»ÓĞÊ±ÇøµÄ date¡£·ñÔò·µ»Ø´øÓĞÊ±ÇøµÄ date¡£</TD></TR>
+<TD>å¦‚æœ timezone å‚æ•°ä¸ºç©ºï¼Œåˆ™è¿”å›æ²¡æœ‰æ—¶åŒºçš„ dateã€‚å¦åˆ™è¿”å›å¸¦æœ‰æ—¶åŒºçš„ dateã€‚</TD></TR>
 <TR>
 <TD>fn:adjust-time-to-timezone(time,timezone)</TD>
-<TD>Èç¹û timezone ²ÎÊıÎª¿Õ£¬Ôò·µ»ØÃ»ÓĞÊ±ÇøµÄ time¡£·ñÔò·µ»Ø´øÓĞÊ±ÇøµÄ 
-time¡£</TD></TR></TBODY></TABLE></DIV>
+<TD>å¦‚æœ timezone å‚æ•°ä¸ºç©ºï¼Œåˆ™è¿”å›æ²¡æœ‰æ—¶åŒºçš„ timeã€‚å¦åˆ™è¿”å›å¸¦æœ‰æ—¶åŒºçš„ 
+timeã€‚</TD></TR></TBODY></TABLE></DIV>
 <DIV>
-<H2><A id=qname>Óë QNames Ïà¹ØµÄº¯Êı</A></H2>
+<H2><A id=qname>ä¸ QNames ç›¸å…³çš„å‡½æ•°</A></H2>
 <TABLE class=dataintable>
 <TBODY>
 <TR>
-<TH style="WIDTH: 40%">Ãû³Æ</TH>
-<TH style="WIDTH: 60%">ËµÃ÷</TH></TR>
+<TH style="WIDTH: 40%">åç§°</TH>
+<TH style="WIDTH: 60%">è¯´æ˜</TH></TR>
 <TR>
 <TD>fn:QName()</TD>
 <TD>&nbsp;</TD></TR>
@@ -478,171 +479,171 @@ time¡£</TD></TR></TBODY></TABLE></DIV>
 <TD>fn:resolve-QName()</TD>
 <TD>&nbsp;</TD></TR></TBODY></TABLE></DIV>
 <DIV>
-<H2><A id=node>¹ØÓÚ½ÚµãµÄº¯Êı</A></H2>
+<H2><A id=node>å…³äºèŠ‚ç‚¹çš„å‡½æ•°</A></H2>
 <TABLE class=dataintable>
 <TBODY>
 <TR>
-<TH style="WIDTH: 40%">Ãû³Æ</TH>
-<TH style="WIDTH: 60%">ËµÃ÷</TH></TR>
+<TH style="WIDTH: 40%">åç§°</TH>
+<TH style="WIDTH: 60%">è¯´æ˜</TH></TR>
 <TR>
 <TD>
 <UL>
 <LI>fn:name() 
 <LI>fn:name(nodeset) </LI></UL></TD>
-<TD>·µ»Øµ±Ç°½ÚµãµÄÃû³Æ»òÖ¸¶¨½Úµã¼¯ÖĞµÄµÚÒ»¸ö½Úµã¡£</TD></TR>
+<TD>è¿”å›å½“å‰èŠ‚ç‚¹çš„åç§°æˆ–æŒ‡å®šèŠ‚ç‚¹é›†ä¸­çš„ç¬¬ä¸€ä¸ªèŠ‚ç‚¹ã€‚</TD></TR>
 <TR>
 <TD>
 <UL>
 <LI>fn:local-name() 
 <LI>fn:local-name(nodeset) </LI></UL></TD>
-<TD>·µ»Øµ±Ç°½ÚµãµÄÃû³Æ»òÖ¸¶¨½Úµã¼¯ÖĞµÄµÚÒ»¸ö½Úµã - ²»´øÓĞÃüÃû¿Õ¼äÇ°×º¡£</TD></TR>
+<TD>è¿”å›å½“å‰èŠ‚ç‚¹çš„åç§°æˆ–æŒ‡å®šèŠ‚ç‚¹é›†ä¸­çš„ç¬¬ä¸€ä¸ªèŠ‚ç‚¹ - ä¸å¸¦æœ‰å‘½åç©ºé—´å‰ç¼€ã€‚</TD></TR>
 <TR>
 <TD>
 <UL>
 <LI>fn:namespace-uri() 
 <LI>fn:namespace-uri(nodeset) </LI></UL></TD>
-<TD>·µ»Øµ±Ç°½Úµã»òÖ¸¶¨½Úµã¼¯ÖĞµÚÒ»¸ö½ÚµãµÄÃüÃû¿Õ¼ä URI¡£</TD></TR>
+<TD>è¿”å›å½“å‰èŠ‚ç‚¹æˆ–æŒ‡å®šèŠ‚ç‚¹é›†ä¸­ç¬¬ä¸€ä¸ªèŠ‚ç‚¹çš„å‘½åç©ºé—´ URIã€‚</TD></TR>
 <TR>
 <TD>fn:lang(lang)</TD>
 <TD>
-<P>Èç¹ûµ±Ç°½ÚµãµÄÓïÑÔÆ¥ÅäÖ¸¶¨µÄÓïÑÔ£¬Ôò·µ»Ø true¡£</P>
-<P>Àı×Ó£ºLang("en") is true for &lt;p xml:lang="en"&gt;...&lt;/p&gt;</P>
-<P>Àı×Ó£ºLang("de") is false for &lt;p xml:lang="en"&gt;...&lt;/p&gt;</P></TD></TR>
+<P>å¦‚æœå½“å‰èŠ‚ç‚¹çš„è¯­è¨€åŒ¹é…æŒ‡å®šçš„è¯­è¨€ï¼Œåˆ™è¿”å› trueã€‚</P>
+<P>ä¾‹å­ï¼šLang("en") is true for &lt;p xml:lang="en"&gt;...&lt;/p&gt;</P>
+<P>ä¾‹å­ï¼šLang("de") is false for &lt;p xml:lang="en"&gt;...&lt;/p&gt;</P></TD></TR>
 <TR>
 <TD>
 <UL>
 <LI>fn:root() 
 <LI>fn:root(node) </LI></UL></TD>
-<TD>·µ»Øµ±Ç°½Úµã»òÖ¸¶¨µÄ½ÚµãËùÊôµÄ½ÚµãÊ÷µÄ¸ù½Úµã¡£Í¨³£ÊÇÎÄµµ½Úµã¡£</TD></TR></TBODY></TABLE></DIV>
+<TD>è¿”å›å½“å‰èŠ‚ç‚¹æˆ–æŒ‡å®šçš„èŠ‚ç‚¹æ‰€å±çš„èŠ‚ç‚¹æ ‘çš„æ ¹èŠ‚ç‚¹ã€‚é€šå¸¸æ˜¯æ–‡æ¡£èŠ‚ç‚¹ã€‚</TD></TR></TBODY></TABLE></DIV>
 <DIV>
-<H2><A id=sequence>ÓĞ¹ØĞòÁĞµÄº¯Êı</A></H2>
-<H3>Ò»°ãĞÔµÄº¯Êı</H3>
+<H2><A id=sequence>æœ‰å…³åºåˆ—çš„å‡½æ•°</A></H2>
+<H3>ä¸€èˆ¬æ€§çš„å‡½æ•°</H3>
 <TABLE class=dataintable>
 <TBODY>
 <TR>
-<TH style="WIDTH: 40%">Ãû³Æ</TH>
-<TH style="WIDTH: 60%">ËµÃ÷</TH></TR>
+<TH style="WIDTH: 40%">åç§°</TH>
+<TH style="WIDTH: 60%">è¯´æ˜</TH></TR>
 <TR>
 <TD>fn:index-of((item,item,...),searchitem)</TD>
 <TD>
-<P>·µ»ØÔÚÏîÄ¿ĞòÁĞÖĞµÈÓÚ searchitem ²ÎÊıµÄÎ»ÖÃ¡£</P>
-<P>Àı×Ó£ºindex-of ((15, 40, 25, 40, 10), 40)</P>
-<P>½á¹û£º(2, 4)</P>
-<P>Àı×Ó£ºindex-of (("a", "dog", "and", "a", "duck"), "a")</P>
+<P>è¿”å›åœ¨é¡¹ç›®åºåˆ—ä¸­ç­‰äº searchitem å‚æ•°çš„ä½ç½®ã€‚</P>
+<P>ä¾‹å­ï¼šindex-of ((15, 40, 25, 40, 10), 40)</P>
+<P>ç»“æœï¼š(2, 4)</P>
+<P>ä¾‹å­ï¼šindex-of (("a", "dog", "and", "a", "duck"), "a")</P>
 <P>Result (1, 4)</P>
-<P>Àı×Ó£ºindex-of ((15, 40, 25, 40, 10), 18)</P>
-<P>½á¹û£º()</P></TD></TR>
+<P>ä¾‹å­ï¼šindex-of ((15, 40, 25, 40, 10), 18)</P>
+<P>ç»“æœï¼š()</P></TD></TR>
 <TR>
 <TD>fn:remove((item,item,...),position)</TD>
 <TD>
-<P>·µ»ØÓÉ item ²ÎÊı¹¹ÔìµÄĞÂĞòÁĞ - Í¬Ê±É¾³ı position ²ÎÊıÖ¸¶¨µÄÏîÄ¿¡£</P>
-<P>Àı×Ó£ºremove(("ab", "cd", "ef"), 0)</P>
-<P>½á¹û£º("ab", "cd", "ef")</P>
-<P>Àı×Ó£ºremove(("ab", "cd", "ef"), 1)</P>
-<P>½á¹û£º("cd", "ef")</P>
-<P>Àı×Ó£ºremove(("ab", "cd", "ef"), 4)</P>
-<P>½á¹û£º("ab", "cd", "ef")</P></TD></TR>
+<P>è¿”å›ç”± item å‚æ•°æ„é€ çš„æ–°åºåˆ— - åŒæ—¶åˆ é™¤ position å‚æ•°æŒ‡å®šçš„é¡¹ç›®ã€‚</P>
+<P>ä¾‹å­ï¼šremove(("ab", "cd", "ef"), 0)</P>
+<P>ç»“æœï¼š("ab", "cd", "ef")</P>
+<P>ä¾‹å­ï¼šremove(("ab", "cd", "ef"), 1)</P>
+<P>ç»“æœï¼š("cd", "ef")</P>
+<P>ä¾‹å­ï¼šremove(("ab", "cd", "ef"), 4)</P>
+<P>ç»“æœï¼š("ab", "cd", "ef")</P></TD></TR>
 <TR>
 <TD>fn:empty(item,item,...)</TD>
 <TD>
-<P>Èç¹û²ÎÊıÖµÊÇ¿ÕĞòÁĞ£¬Ôò·µ»Ø true£¬·ñÔò·µ»Ø false¡£</P>
-<P>Àı×Ó£ºempty(remove(("ab", "cd"), 1))</P>
-<P>½á¹û£ºfalse</P></TD></TR>
+<P>å¦‚æœå‚æ•°å€¼æ˜¯ç©ºåºåˆ—ï¼Œåˆ™è¿”å› trueï¼Œå¦åˆ™è¿”å› falseã€‚</P>
+<P>ä¾‹å­ï¼šempty(remove(("ab", "cd"), 1))</P>
+<P>ç»“æœï¼šfalse</P></TD></TR>
 <TR>
 <TD>fn:exists(item,item,...)</TD>
 <TD>
-<P>Èç¹û²ÎÊıÖµ²»ÊÇ¿ÕĞòÁĞ£¬Ôò·µ»Ø true£¬·ñÔò·µ»Ø false¡£</P>
-<P>Àı×Ó£ºexists(remove(("ab"), 1))</P>
-<P>½á¹û£ºfalse</P></TD></TR>
+<P>å¦‚æœå‚æ•°å€¼ä¸æ˜¯ç©ºåºåˆ—ï¼Œåˆ™è¿”å› trueï¼Œå¦åˆ™è¿”å› falseã€‚</P>
+<P>ä¾‹å­ï¼šexists(remove(("ab"), 1))</P>
+<P>ç»“æœï¼šfalse</P></TD></TR>
 <TR>
 <TD>fn:distinct-values((item,item,...),collation)</TD>
 <TD>
-<P>·µ»ØÎ¨Ò»²»Í¬µÄÖµ¡£</P>
-<P>Àı×Ó£ºdistinct-values((1, 2, 3, 1, 2))</P>
-<P>½á¹û£º(1, 2, 3)</P></TD></TR>
+<P>è¿”å›å”¯ä¸€ä¸åŒçš„å€¼ã€‚</P>
+<P>ä¾‹å­ï¼šdistinct-values((1, 2, 3, 1, 2))</P>
+<P>ç»“æœï¼š(1, 2, 3)</P></TD></TR>
 <TR>
 <TD>fn:insert-before((item,item,...),pos,inserts)</TD>
 <TD>
-<P>·µ»ØÓÉ item ²ÎÊı¹¹ÔìµÄĞÂĞòÁĞ - Í¬Ê±ÔÚ pos ²ÎÊıÖ¸¶¨Î»ÖÃ²åÈë inserts ²ÎÊıµÄÖµ¡£</P>
-<P>Àı×Ó£ºinsert-before(("ab", "cd"), 0, "gh")</P>
-<P>½á¹û£º("gh", "ab", "cd")</P>
-<P>Àı×Ó£ºinsert-before(("ab", "cd"), 1, "gh")</P>
-<P>½á¹û£º("gh", "ab", "cd")</P>
-<P>Àı×Ó£ºinsert-before(("ab", "cd"), 2, "gh")</P>
-<P>½á¹û£º("ab", "gh", "cd")</P>
-<P>Àı×Ó£ºinsert-before(("ab", "cd"), 5, "gh")</P>
-<P>½á¹û£º("ab", "cd", "gh")</P></TD></TR>
+<P>è¿”å›ç”± item å‚æ•°æ„é€ çš„æ–°åºåˆ— - åŒæ—¶åœ¨ pos å‚æ•°æŒ‡å®šä½ç½®æ’å…¥ inserts å‚æ•°çš„å€¼ã€‚</P>
+<P>ä¾‹å­ï¼šinsert-before(("ab", "cd"), 0, "gh")</P>
+<P>ç»“æœï¼š("gh", "ab", "cd")</P>
+<P>ä¾‹å­ï¼šinsert-before(("ab", "cd"), 1, "gh")</P>
+<P>ç»“æœï¼š("gh", "ab", "cd")</P>
+<P>ä¾‹å­ï¼šinsert-before(("ab", "cd"), 2, "gh")</P>
+<P>ç»“æœï¼š("ab", "gh", "cd")</P>
+<P>ä¾‹å­ï¼šinsert-before(("ab", "cd"), 5, "gh")</P>
+<P>ç»“æœï¼š("ab", "cd", "gh")</P></TD></TR>
 <TR>
 <TD>fn:reverse((item,item,...))</TD>
 <TD>
-<P>·µ»ØÖ¸¶¨µÄÏîÄ¿µÄµßµ¹Ë³Ğò¡£</P>
-<P>Àı×Ó£ºreverse(("ab", "cd", "ef"))</P>
-<P>½á¹û£º("ef", "cd", "ab")</P>
-<P>Àı×Ó£ºreverse(("ab"))</P>
-<P>½á¹û£º("ab")</P></TD></TR>
+<P>è¿”å›æŒ‡å®šçš„é¡¹ç›®çš„é¢ å€’é¡ºåºã€‚</P>
+<P>ä¾‹å­ï¼šreverse(("ab", "cd", "ef"))</P>
+<P>ç»“æœï¼š("ef", "cd", "ab")</P>
+<P>ä¾‹å­ï¼šreverse(("ab"))</P>
+<P>ç»“æœï¼š("ab")</P></TD></TR>
 <TR>
 <TD>fn:subsequence((item,item,...),start,len)</TD>
 <TD>
-<P>·µ»Ø start ²ÎÊıÖ¸¶¨µÄÎ»ÖÃ·µ»ØÏîÄ¿ĞòÁĞ£¬ĞòÁĞµÄ³¤¶ÈÓÉ len ²ÎÊıÖ¸¶¨¡£µÚÒ»¸öÏîÄ¿µÄÎ»ÖÃÊÇ 1¡£</P>
-<P>Àı×Ó£ºsubsequence(($item1, $item2, $item3,...), 3)</P>
-<P>½á¹û£º($item3, ...)</P>
-<P>Àı×Ó£ºsubsequence(($item1, $item2, $item3, ...), 2, 2)</P>
-<P>½á¹û£º($item2, $item3)</P></TD></TR>
+<P>è¿”å› start å‚æ•°æŒ‡å®šçš„ä½ç½®è¿”å›é¡¹ç›®åºåˆ—ï¼Œåºåˆ—çš„é•¿åº¦ç”± len å‚æ•°æŒ‡å®šã€‚ç¬¬ä¸€ä¸ªé¡¹ç›®çš„ä½ç½®æ˜¯ 1ã€‚</P>
+<P>ä¾‹å­ï¼šsubsequence(($item1, $item2, $item3,...), 3)</P>
+<P>ç»“æœï¼š($item3, ...)</P>
+<P>ä¾‹å­ï¼šsubsequence(($item1, $item2, $item3, ...), 2, 2)</P>
+<P>ç»“æœï¼š($item2, $item3)</P></TD></TR>
 <TR>
 <TD>fn:unordered((item,item,...))</TD>
-<TD>ÒÀ¾İÊµÏÖ¾ö¶¨µÄË³ĞòÀ´·µ»ØÏîÄ¿¡£</TD></TR></TBODY></TABLE>
-<H3>²âÊÔĞòÁĞÈİÁ¿µÄº¯Êı</H3>
+<TD>ä¾æ®å®ç°å†³å®šçš„é¡ºåºæ¥è¿”å›é¡¹ç›®ã€‚</TD></TR></TBODY></TABLE>
+<H3>æµ‹è¯•åºåˆ—å®¹é‡çš„å‡½æ•°</H3>
 <TABLE class=dataintable>
 <TBODY>
 <TR>
-<TH style="WIDTH: 40%">Ãû³Æ</TH>
-<TH style="WIDTH: 60%">ËµÃ÷</TH></TR>
+<TH style="WIDTH: 40%">åç§°</TH>
+<TH style="WIDTH: 60%">è¯´æ˜</TH></TR>
 <TR>
 <TD>fn:zero-or-one(item,item,...)</TD>
-<TD>Èç¹û²ÎÊı°üº¬Áã¸ö»òÒ»¸öÏîÄ¿£¬Ôò·µ»Ø²ÎÊı£¬·ñÔòÉú³É´íÎó¡£</TD></TR>
+<TD>å¦‚æœå‚æ•°åŒ…å«é›¶ä¸ªæˆ–ä¸€ä¸ªé¡¹ç›®ï¼Œåˆ™è¿”å›å‚æ•°ï¼Œå¦åˆ™ç”Ÿæˆé”™è¯¯ã€‚</TD></TR>
 <TR>
 <TD>fn:one-or-more(item,item,...)</TD>
-<TD>Èç¹û²ÎÊı°üº¬Ò»¸ö»ò¶à¸öÏîÄ¿£¬Ôò·µ»Ø²ÎÊı£¬·ñÔòÉú³É´íÎó¡£</TD></TR>
+<TD>å¦‚æœå‚æ•°åŒ…å«ä¸€ä¸ªæˆ–å¤šä¸ªé¡¹ç›®ï¼Œåˆ™è¿”å›å‚æ•°ï¼Œå¦åˆ™ç”Ÿæˆé”™è¯¯ã€‚</TD></TR>
 <TR>
 <TD>fn:exactly-one(item,item,...)</TD>
-<TD>Èç¹û²ÎÊı°üº¬Ò»¸öÏîÄ¿£¬Ôò·µ»Ø²ÎÊı£¬·ñÔòÉú³É´íÎó¡£</TD></TR></TBODY></TABLE>
+<TD>å¦‚æœå‚æ•°åŒ…å«ä¸€ä¸ªé¡¹ç›®ï¼Œåˆ™è¿”å›å‚æ•°ï¼Œå¦åˆ™ç”Ÿæˆé”™è¯¯ã€‚</TD></TR></TBODY></TABLE>
 <H3>Equals, Union, Intersection and Except </H3>
 <TABLE class=dataintable>
 <TBODY>
 <TR>
-<TH style="WIDTH: 40%">Ãû³Æ</TH>
-<TH style="WIDTH: 60%">ËµÃ÷</TH></TR>
+<TH style="WIDTH: 40%">åç§°</TH>
+<TH style="WIDTH: 60%">è¯´æ˜</TH></TR>
 <TR>
 <TD>fn:deep-equal(param1,param2,collation)</TD>
-<TD>Èç¹û param1 ºÍ param2 Óë±Ë´ËÏàµÈ£¨deep-equal£©£¬Ôò·µ»Ø true£¬·ñÔò·µ»Ø 
-false¡£</TD></TR></TBODY></TABLE>
-<H3>ºÏ¼Æº¯Êı</H3>
+<TD>å¦‚æœ param1 å’Œ param2 ä¸å½¼æ­¤ç›¸ç­‰ï¼ˆdeep-equalï¼‰ï¼Œåˆ™è¿”å› trueï¼Œå¦åˆ™è¿”å› 
+falseã€‚</TD></TR></TBODY></TABLE>
+<H3>åˆè®¡å‡½æ•°</H3>
 <TABLE class=dataintable>
 <TBODY>
 <TR>
-<TH style="WIDTH: 40%">Ãû³Æ</TH>
-<TH style="WIDTH: 60%">ËµÃ÷</TH></TR>
+<TH style="WIDTH: 40%">åç§°</TH>
+<TH style="WIDTH: 60%">è¯´æ˜</TH></TR>
 <TR>
 <TD>fn:count((item,item,...))</TD>
-<TD>·µ»Ø½ÚµãµÄÊıÁ¿¡£</TD></TR>
+<TD>è¿”å›èŠ‚ç‚¹çš„æ•°é‡ã€‚</TD></TR>
 <TR>
 <TD>fn:avg((arg,arg,...))</TD>
-<TD>·µ»Ø²ÎÊıÖµµÄÆ½¾ùÊı¡£Àı×Ó£ºavg((1,2,3)) ½á¹û£º2 </TD></TR>
+<TD>è¿”å›å‚æ•°å€¼çš„å¹³å‡æ•°ã€‚ä¾‹å­ï¼šavg((1,2,3)) ç»“æœï¼š2 </TD></TR>
 <TR>
 <TD>fn:max((arg,arg,...))</TD>
-<TD>·µ»Ø´óÓÚÆäËü²ÎÊıµÄ²ÎÊı¡£Àı×Ó£ºmax((1,2,3)) ½á¹û£º3 Àı×Ó£ºmax(('a', 'k')) ½á¹û£º'k' </TD></TR>
+<TD>è¿”å›å¤§äºå…¶å®ƒå‚æ•°çš„å‚æ•°ã€‚ä¾‹å­ï¼šmax((1,2,3)) ç»“æœï¼š3 ä¾‹å­ï¼šmax(('a', 'k')) ç»“æœï¼š'k' </TD></TR>
 <TR>
 <TD>fn:min((arg,arg,...))</TD>
-<TD>·µ»ØĞ¡ÓÚÆäËü²ÎÊıµÄ²ÎÊı¡£Àı×Ó£ºmin((1,2,3)) ½á¹û£º1 Àı×Ó£ºmin(('a', 'k')) ½á¹û£º'a' </TD></TR>
+<TD>è¿”å›å°äºå…¶å®ƒå‚æ•°çš„å‚æ•°ã€‚ä¾‹å­ï¼šmin((1,2,3)) ç»“æœï¼š1 ä¾‹å­ï¼šmin(('a', 'k')) ç»“æœï¼š'a' </TD></TR>
 <TR>
 <TD>fn:sum(arg,arg,...)</TD>
-<TD>·µ»ØÖ¸¶¨½Úµã¼¯ÖĞÃ¿¸ö½ÚµãµÄÊıÖµµÄ×ÜºÍ¡£</TD></TR></TBODY></TABLE>
-<H3>Éú³ÉĞòÁĞµÄº¯Êı</H3>
+<TD>è¿”å›æŒ‡å®šèŠ‚ç‚¹é›†ä¸­æ¯ä¸ªèŠ‚ç‚¹çš„æ•°å€¼çš„æ€»å’Œã€‚</TD></TR></TBODY></TABLE>
+<H3>ç”Ÿæˆåºåˆ—çš„å‡½æ•°</H3>
 <TABLE class=dataintable>
 <TBODY>
 <TR>
-<TH style="WIDTH: 40%">Ãû³Æ</TH>
-<TH style="WIDTH: 60%">ËµÃ÷</TH></TR>
+<TH style="WIDTH: 40%">åç§°</TH>
+<TH style="WIDTH: 60%">è¯´æ˜</TH></TR>
 <TR>
 <TD>fn:id((string,string,...),node)</TD>
 <TD>Returns a sequence of element nodes that have an ID value equal to the value 
@@ -657,7 +658,7 @@ argument</TD></TR>
 <TD>&nbsp;</TD></TR>
 <TR>
 <TD>fn:doc-available(URI)</TD>
-<TD>Èç¹û doc() º¯Êı·µ»ØÎÄµµ½Úµã£¬Ôò·µ»Ø true£¬·ñÔò·µ»Ø false¡£</TD></TR>
+<TD>å¦‚æœ doc() å‡½æ•°è¿”å›æ–‡æ¡£èŠ‚ç‚¹ï¼Œåˆ™è¿”å› trueï¼Œå¦åˆ™è¿”å› falseã€‚</TD></TR>
 <TR>
 <TD>
 <UL>
@@ -665,46 +666,48 @@ argument</TD></TR>
 <LI>fn:collection(string) </LI></UL></TD>
 <TD>&nbsp;</TD></TR></TBODY></TABLE></DIV>
 <DIV>
-<H2><A id=context>ÉÏÏÂÎÄº¯Êı</A></H2>
+<H2><A id=context>ä¸Šä¸‹æ–‡å‡½æ•°</A></H2>
 <TABLE class=dataintable>
 <TBODY>
 <TR>
-<TH style="WIDTH: 40%">Ãû³Æ</TH>
-<TH style="WIDTH: 60%">ËµÃ÷</TH></TR>
+<TH style="WIDTH: 40%">åç§°</TH>
+<TH style="WIDTH: 60%">è¯´æ˜</TH></TR>
 <TR>
 <TD>fn:position()</TD>
 <TD>
-<P>·µ»Øµ±Ç°ÕıÔÚ±»´¦ÀíµÄ½ÚµãµÄ index Î»ÖÃ¡£</P>
-<P>Àı×Ó£º//book[position()&lt;=3]</P>
-<P>½á¹û£ºÑ¡ÔñÇ°Èı¸ö book ÔªËØ </P></TD></TR>
+<P>è¿”å›å½“å‰æ­£åœ¨è¢«å¤„ç†çš„èŠ‚ç‚¹çš„ index ä½ç½®ã€‚</P>
+<P>ä¾‹å­ï¼š//book[position()&lt;=3]</P>
+<P>ç»“æœï¼šé€‰æ‹©å‰ä¸‰ä¸ª book å…ƒç´  </P></TD></TR>
 <TR>
 <TD>fn:last()</TD>
 <TD>
-<P>·µ»ØÔÚ±»´¦ÀíµÄ½ÚµãÁĞ±íÖĞµÄÏîÄ¿ÊıÄ¿¡£</P>
-<P>Àı×Ó£º//book[last()]</P>
-<P>½á¹û£ºÑ¡Ôñ×îºóÒ»¸ö book ÔªËØ</P></TD></TR>
+<P>è¿”å›åœ¨è¢«å¤„ç†çš„èŠ‚ç‚¹åˆ—è¡¨ä¸­çš„é¡¹ç›®æ•°ç›®ã€‚</P>
+<P>ä¾‹å­ï¼š//book[last()]</P>
+<P>ç»“æœï¼šé€‰æ‹©æœ€åä¸€ä¸ª book å…ƒç´ </P></TD></TR>
 <TR>
 <TD>fn:current-dateTime()</TD>
-<TD>·µ»Øµ±Ç°µÄ dateTime£¨´øÓĞÊ±Çø£©¡£</TD></TR>
+<TD>è¿”å›å½“å‰çš„ dateTimeï¼ˆå¸¦æœ‰æ—¶åŒºï¼‰ã€‚</TD></TR>
 <TR>
 <TD>fn:current-date()</TD>
-<TD>·µ»Øµ±Ç°µÄÈÕÆÚ£¨´øÓĞÊ±Çø£©¡£</TD></TR>
+<TD>è¿”å›å½“å‰çš„æ—¥æœŸï¼ˆå¸¦æœ‰æ—¶åŒºï¼‰ã€‚</TD></TR>
 <TR>
 <TD>fn:current-time()</TD>
-<TD>·µ»Øµ±Ç°µÄÊ±¼ä£¨´øÓĞÊ±Çø£©¡£</TD></TR>
+<TD>è¿”å›å½“å‰çš„æ—¶é—´ï¼ˆå¸¦æœ‰æ—¶åŒºï¼‰ã€‚</TD></TR>
 <TR>
 <TD>fn:implicit-timezone()</TD>
-<TD>·µ»ØÒşÊ½Ê±ÇøµÄÖµ¡£</TD></TR>
+<TD>è¿”å›éšå¼æ—¶åŒºçš„å€¼ã€‚</TD></TR>
 <TR>
 <TD>fn:default-collation()</TD>
-<TD>·µ»ØÄ¬ÈÏ¶ÔÕÕµÄÖµ¡£</TD></TR>
+<TD>è¿”å›é»˜è®¤å¯¹ç…§çš„å€¼ã€‚</TD></TR>
 <TR>
 <TD>fn:static-base-uri()</TD>
-<TD>·µ»Ø base-uri µÄÖµ¡£</TD></TR></TBODY></TABLE></DIV>
+<TD>è¿”å› base-uri çš„å€¼ã€‚</TD></TR></TBODY></TABLE></DIV>
 <DIV id=bpn>
 <UL class=prenext>
 <LI class=pre><A href="http://www.w3school.com.cn/xpath/xpath_summary.asp">Previous Page</A> </LI>
 <LI class=next><A href="http://www.w3school.com.cn/xpath/index.asp">Next Page</A> </LI></UL></DIV><!--EndFragment--></DIV>
 </DIV>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
 </BODY>
 </HTML>

@@ -1,505 +1,948 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+ï»¿<HTML dir=ltr xml:lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>è§£å†³å¤§æ‰¹é‡æ•°æ®å¯¼å‡ºExceläº§ç”Ÿå†…å­˜æº¢å‡ºçš„æ–¹æ¡ˆ</title>
+  <LINK rel="shortcut icon" type=image/x-icon href="favicon.ico">
+  <LINK title=JavaEyeè®ºå› rel=alternate type=application/rss+xml href="Java">
+  <LINK rel=stylesheet type=text/css href="forum.css_1268111743" media=screen>
+  <LINK rel=stylesheet type=text/css href="SyntaxHighlighter.css_1268040798" media=screen>
+  <STYLE type=text/css>
+    .dp-j .annotation {
+      COLOR: #646464
+    }
+    
+    .dp-j .number {
+      COLOR: #c00000
+    }
+  </STYLE>
 
-<HTML dir=ltr xml:lang="zh-CN" 
-xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>½â¾ö´óÅúÁ¿Êı¾İµ¼³öExcel²úÉúÄÚ´æÒç³öµÄ·½°¸ - ÆóÒµÓ¦ÓÃ - Java - JavaEyeÂÛÌ³</TITLE><LINK 
-rel="shortcut icon" type=image/x-icon href="favicon.ico"><LINK 
-title=JavaEyeÂÛÌ³ rel=alternate type=application/rss+xml 
-href="Java"><LINK rel=stylesheet type=text/css 
-href="forum.css_1268111743" media=screen>
-<LINK rel=stylesheet type=text/css 
-href="SyntaxHighlighter.css_1268040798" 
-media=screen>
-<STYLE type=text/css>.dp-j .annotation {
-	COLOR: #646464
-}
-.dp-j .number {
-	COLOR: #c00000
-}
-</STYLE>
-
-<STYLE type=text/css>.dp-j .annotation {
-	COLOR: #646464
-}
-.dp-j .number {
-	COLOR: #c00000
-}
-</STYLE>
+  <STYLE type=text/css>
+    .dp-j .annotation {
+      COLOR: #646464
+    }
+    
+    .dp-j .number {
+      COLOR: #c00000
+    }
+  </STYLE>
 </HEAD>
 
 <BODY>
 
-<DIV id=page>
+  <DIV id=page>
 
-<DIV id=content class=clearfix>
+    <DIV id=content class=clearfix>
 
-<DIV id=main>
+      <DIV id=main>
 
-<TABLE id=forum_main cellSpacing=1>
+        <TABLE id=forum_main cellSpacing=1>
 
-<TBODY id=posts><!--StartFragment-->
-<TR id=661487>
-<TD class=postcontent>
-<DIV class="postbody clearfix">POI»òÕßJXLÔÚµ¼³ö´óÁ¿Êı¾İµÄÊ±ºò£¬ÓÉÓÚËüÃÇ½«Ã¿Ò»¸öµ¥Ôª¸ñÉú¶¼³ÉÒ»¸öCell¶ÔÏó£¬ËùÒÔºÜÈİÒ×µ¼ÖÂÄÚ´æÒç³ö¡£½â¾öÕâ¸öÎÊÌâ£¬Î¨Ò»µÄ°ì·¨ÊÇÅªÇå³şExcelµÄ¶ş½øÖÆ¸ñÊ½£¨º¹£©£¬²¢ÇÒÓÃÁ÷µÄ·½Ê½¶ÁĞ´Excel¡£POIºÍJXLÆäÊµÌá¹©ÁË¶ş½øÖÆ·½Ê½¶ÁĞ´ExcelµÄAPI£¬Ö»ÊÇÒòÎªÈ±ÉÙÎÄµµºÍÊµÀı£¬ËùÒÔÊ¹ÓÃµÄÈË²»¶à¡£ÎÒ±àĞ´ÁËÕâ¸ö¼òµ¥µÄºÏ²¢ExcelµÄÀà£¬ËüÖ»ÊÊºÏºÏ²¢½á¹¹ÏàÍ¬µÄ¶à¸öExcelÎÄ¼ş¡£ºÃÔÚÕâ¸ö¹¦ÄÜÒÑ¾­¿ÉÒÔ½â¾öÊı¾İµ¼³ö²úÉúOOMµÄÎÊÌâ£º½«Êı¾İ·ÖÅúµ¼³öÈ»ºóºÏ²¢¡£ 
-<BR>ÏÂÃæµÄ´úÂëÊ¹ÓÃPOI3.1£¬ºÏ²¢11¸ö3000¶àĞĞµÄÎÄµµÓÃÊ±Ô¼6Ãë£¬ÎÒÊµÔÚÕÒ²»µ½¸ü¶àµÄ²âÊÔÓÃµÄÎÄµµÁË¡£ <BR>
-<DIV class=dp-highlighter>
-<DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
-onclick="dp.sh.Toolbar.CopyToClipboard(this);return false;" 
-href="http://www.javaeye.com/topic/240053#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif"></A></DIV></DIV>
-<OL class=dp-j>
-<LI><SPAN><SPAN class=annotation>@SuppressWarnings</SPAN><SPAN>(</SPAN><SPAN 
-class=string>"unchecked"</SPAN><SPAN>) &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;XlsMergeUtil&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>static</SPAN><SPAN>&nbsp;Logger&nbsp;logger&nbsp;=&nbsp;LoggerFactory.getLogger(XlsMergeUtil.</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=comment>/** </SPAN>&nbsp;</SPAN></LI>
-<LI><SPAN><SPAN class=comment>&nbsp;&nbsp;&nbsp;*&nbsp;½«¶à¸öXlsÎÄ¼şºÏ²¢ÎªÒ»¸ö£¬ÊÊÓÃÓÚÖ»ÓĞÒ»¸ösheet£¬²¢ÇÒ¸ñÊ½ÏàÍ¬µÄÎÄµµ 
-</SPAN>&nbsp;</SPAN></LI>
-<LI><SPAN><SPAN class=comment>&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;inputs&nbsp;ÊäÈëµÄXlsÎÄ¼ş </SPAN>&nbsp;</SPAN></LI>
-<LI><SPAN><SPAN class=comment>&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;out&nbsp;Êä³öÎÄ¼ş </SPAN>&nbsp;</SPAN></LI>
-<LI><SPAN><SPAN class=comment>&nbsp;&nbsp;&nbsp;*/</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>static</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>void</SPAN><SPAN>&nbsp;merge(InputStream[]&nbsp;inputs,&nbsp;OutputStream&nbsp;out)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>if</SPAN><SPAN>&nbsp;(inputs&nbsp;==&nbsp;</SPAN><SPAN 
-class=keyword>null</SPAN><SPAN>&nbsp;||&nbsp;inputs.length&nbsp;&lt;=&nbsp;</SPAN><SPAN 
-class=number>1</SPAN><SPAN>)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>throw</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;IllegalArgumentException(</SPAN><SPAN 
-class=string>"Ã»ÓĞ´«ÈëÊäÈëÁ÷Êı×é,»òÖ»ÓĞÒ»¸öÊäÈëÁ÷."</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;List&lt;Record&gt;&nbsp;rootRecords&nbsp;=&nbsp;getRecords(inputs[</SPAN><SPAN 
-class=number>0</SPAN><SPAN>]); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;Workbook&nbsp;workbook&nbsp;=&nbsp;Workbook.createWorkbook(rootRecords); 
-&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;List&lt;Sheet&gt;&nbsp;sheets&nbsp;=&nbsp;getSheets(workbook,&nbsp;rootRecords); 
-&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>if</SPAN><SPAN>(sheets&nbsp;==&nbsp;</SPAN><SPAN 
-class=keyword>null</SPAN><SPAN>&nbsp;||&nbsp;sheets.size()&nbsp;==&nbsp;</SPAN><SPAN 
-class=number>0</SPAN><SPAN>)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>throw</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;IllegalArgumentException(</SPAN><SPAN 
-class=string>"µÚÒ»ÆªÎÄµµµÄ¸ñÊ½´íÎó£¬±ØĞëÓĞÖÁÉÙÒ»¸ösheet"</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//ÒÔµÚÒ»ÆªÎÄµµµÄ×îºóÒ»¸ösheetÎª¸ù£¬ÒÔºóµÄÊı¾İ¶¼×·¼ÓÔÚÕâ¸ösheetºóÃæ 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;Sheet&nbsp;rootSheet&nbsp;=&nbsp;sheets.get(sheets.size()&nbsp;-&nbsp;</SPAN><SPAN 
-class=number>1</SPAN><SPAN>);&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;rootRows&nbsp;=&nbsp;getRowsOfSheet(rootSheet);&nbsp;</SPAN><SPAN 
-class=comment>//¼ÇÂ¼µÚÒ»ÆªÎÄµµµÄĞĞÊı£¬ÒÔºóµÄĞĞÊıÔÚ´Ë»ù´¡ÉÏÔö¼Ó </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;rootSheet.setLoc(rootSheet.getDimsLoc()); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;Map&lt;Integer,&nbsp;Integer&gt;&nbsp;map&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;HashMap(</SPAN><SPAN 
-class=number>10000</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>for</SPAN><SPAN>&nbsp;(</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;i&nbsp;=&nbsp;</SPAN><SPAN 
-class=number>1</SPAN><SPAN>;&nbsp;i&nbsp;&lt;&nbsp;inputs.length;&nbsp;i++)&nbsp;{&nbsp;</SPAN><SPAN 
-class=comment>//´ÓµÚ¶şÆª¿ªÊ¼±éÀú </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List&lt;Record&gt;&nbsp;records&nbsp;=&nbsp;getRecords(inputs[i]); 
-&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;rowsOfCurXls&nbsp;=&nbsp;</SPAN><SPAN 
-class=number>0</SPAN><SPAN>; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//±éÀúµ±Ç°ÎÄµµµÄÃ¿Ò»¸örecord 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>for</SPAN><SPAN>&nbsp;(Iterator&nbsp;itr&nbsp;=&nbsp;records.iterator();&nbsp;itr.hasNext();)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Record&nbsp;record&nbsp;=&nbsp;(Record)&nbsp;itr.next(); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>if</SPAN><SPAN>&nbsp;(record.getSid()&nbsp;==&nbsp;RowRecord.sid)&nbsp;{&nbsp;</SPAN><SPAN 
-class=comment>//Èç¹ûÊÇRowRecord </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RowRecord&nbsp;rowRecord&nbsp;=&nbsp;(RowRecord)&nbsp;record; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//µ÷ÕûĞĞºÅ 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rowRecord.setRowNumber(rootRows&nbsp;+&nbsp;rowRecord.getRowNumber()); 
-&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rootSheet.addRow(rowRecord);&nbsp;</SPAN><SPAN 
-class=comment>//×·¼ÓRow </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rowsOfCurXls++;&nbsp;</SPAN><SPAN class=comment>//¼ÇÂ¼µ±Ç°ÎÄµµµÄĞĞÊı 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=comment>//SST¼ÇÂ¼£¬SST±£´æxlsÎÄ¼şÖĞÎ¨Ò»µÄString£¬¸÷¸öString¶¼ÊÇ¶ÔÓ¦×ÅSST¼ÇÂ¼µÄË÷Òı 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>else</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>if</SPAN><SPAN>&nbsp;(record.getSid()&nbsp;==&nbsp;SSTRecord.sid)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SSTRecord&nbsp;sstRecord&nbsp;=&nbsp;(SSTRecord)&nbsp;record; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>for</SPAN><SPAN>&nbsp;(</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;j&nbsp;=&nbsp;</SPAN><SPAN 
-class=number>0</SPAN><SPAN>;&nbsp;j&nbsp;&lt;&nbsp;sstRecord.getNumUniqueStrings();&nbsp;j++)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;index&nbsp;=&nbsp;workbook.addSSTString(sstRecord.getString(j)); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//¼ÇÂ¼Ô­À´µÄË÷ÒıºÍÏÖÔÚµÄË÷ÒıµÄ¶ÔÓ¦¹ØÏµ 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map.put(Integer.valueOf(j),&nbsp;Integer.valueOf(index)); 
-&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN><SPAN class=keyword>else</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>if</SPAN><SPAN>&nbsp;(record.getSid()&nbsp;==&nbsp;LabelSSTRecord.sid)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LabelSSTRecord&nbsp;label&nbsp;=&nbsp;(LabelSSTRecord)&nbsp;record; 
-&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//µ÷ÕûSSTË÷ÒıµÄ¶ÔÓ¦¹ØÏµ 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label.setSSTIndex(map.get(Integer.valueOf(label.getSSTIndex()))); 
-&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//×·¼ÓValueCell 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>if</SPAN><SPAN>&nbsp;(record&nbsp;</SPAN><SPAN 
-class=keyword>instanceof</SPAN><SPAN>&nbsp;CellValueRecordInterface)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CellValueRecordInterface&nbsp;cell&nbsp;=&nbsp;(CellValueRecordInterface)&nbsp;record; 
-&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;cellRow&nbsp;=&nbsp;cell.getRow()&nbsp;+&nbsp;rootRows; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cell.setRow(cellRow); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rootSheet.addValueRecord(cellRow,&nbsp;cell); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rootRows&nbsp;+=&nbsp;rowsOfCurXls; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>byte</SPAN><SPAN>[]&nbsp;data&nbsp;=&nbsp;getBytes(workbook,&nbsp;sheets.toArray(</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;Sheet[</SPAN><SPAN 
-class=number>0</SPAN><SPAN>])); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;write(out,&nbsp;data); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=keyword>static</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>void</SPAN><SPAN>&nbsp;write(OutputStream&nbsp;out,&nbsp;</SPAN><SPAN 
-class=keyword>byte</SPAN><SPAN>[]&nbsp;data)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;POIFSFileSystem&nbsp;fs&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;POIFSFileSystem(); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//&nbsp;Write&nbsp;out&nbsp;the&nbsp;Workbook&nbsp;stream 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>try</SPAN><SPAN>&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fs.createDocument(</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;ByteArrayInputStream(data),&nbsp;</SPAN><SPAN 
-class=string>"Workbook"</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fs.writeFilesystem(out); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out.flush(); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN><SPAN class=keyword>catch</SPAN><SPAN>&nbsp;(IOException&nbsp;e)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace(); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN><SPAN class=keyword>finally</SPAN><SPAN>&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>try</SPAN><SPAN>&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out.close(); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN><SPAN 
-class=keyword>catch</SPAN><SPAN>&nbsp;(IOException&nbsp;e)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace(); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>static</SPAN><SPAN>&nbsp;List&lt;Sheet&gt;&nbsp;getSheets(Workbook&nbsp;workbook,&nbsp;List&nbsp;records)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;recOffset&nbsp;=&nbsp;workbook.getNumRecords(); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;sheetNum&nbsp;=&nbsp;</SPAN><SPAN 
-class=number>0</SPAN><SPAN>; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=comment>//&nbsp;convert&nbsp;all&nbsp;LabelRecord&nbsp;records&nbsp;to&nbsp;LabelSSTRecord 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;convertLabelRecords(records,&nbsp;recOffset,&nbsp;workbook); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;List&lt;Sheet&gt;&nbsp;sheets&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;ArrayList(); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>while</SPAN><SPAN>&nbsp;(recOffset&nbsp;&lt;&nbsp;records.size())&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sheet&nbsp;sh&nbsp;=&nbsp;Sheet.createSheet(records,&nbsp;sheetNum++,&nbsp;recOffset); 
-&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;recOffset&nbsp;=&nbsp;sh.getEofLoc()&nbsp;+&nbsp;</SPAN><SPAN 
-class=number>1</SPAN><SPAN>; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>if</SPAN><SPAN>&nbsp;(recOffset&nbsp;==&nbsp;</SPAN><SPAN 
-class=number>1</SPAN><SPAN>)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>break</SPAN><SPAN>; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sheets.add(sh); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;sheets; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=keyword>static</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;getRows(List&lt;Record&gt;&nbsp;records)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>int</SPAN><SPAN>&nbsp;row&nbsp;=&nbsp;</SPAN><SPAN 
-class=number>0</SPAN><SPAN>; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>for</SPAN><SPAN>&nbsp;(Iterator&nbsp;itr&nbsp;=&nbsp;records.iterator();&nbsp;itr.hasNext();)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Record&nbsp;record&nbsp;=&nbsp;(Record)&nbsp;itr.next(); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>if</SPAN><SPAN>&nbsp;(record.getSid()&nbsp;==&nbsp;RowRecord.sid)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;row++; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;row; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=keyword>static</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;getRowsOfSheet(Sheet&nbsp;sheet)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>int</SPAN><SPAN>&nbsp;rows&nbsp;=&nbsp;</SPAN><SPAN 
-class=number>0</SPAN><SPAN>; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;sheet.setLoc(</SPAN><SPAN class=number>0</SPAN><SPAN>); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>while</SPAN><SPAN>(sheet.getNextRow()&nbsp;!=&nbsp;</SPAN><SPAN 
-class=keyword>null</SPAN><SPAN>)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows++; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;rows; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN 
-class=annotation>@SuppressWarnings</SPAN><SPAN>(</SPAN><SPAN 
-class=string>"deprecation"</SPAN><SPAN>) &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>static</SPAN><SPAN>&nbsp;List&lt;Record&gt;&nbsp;getRecords(InputStream&nbsp;input)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>try</SPAN><SPAN>&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POIFSFileSystem&nbsp;poifs&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;POIFSFileSystem(input); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InputStream&nbsp;stream&nbsp;=&nbsp;poifs.getRoot().createDocumentInputStream(</SPAN><SPAN 
-class=string>"Workbook"</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>return</SPAN><SPAN>&nbsp;org.apache.poi.hssf.record.RecordFactory.createRecords(stream); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN><SPAN class=keyword>catch</SPAN><SPAN>&nbsp;(IOException&nbsp;e)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logger.error(</SPAN><SPAN 
-class=string>"IOÒì³££º{}"</SPAN><SPAN>,&nbsp;e.getMessage()); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace(); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>return</SPAN><SPAN>&nbsp;Collections.EMPTY_LIST; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=keyword>static</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>void</SPAN><SPAN>&nbsp;convertLabelRecords(List&nbsp;records,&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;offset,&nbsp;Workbook&nbsp;workbook)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>for</SPAN><SPAN>&nbsp;(</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;k&nbsp;=&nbsp;offset;&nbsp;k&nbsp;&lt;&nbsp;records.size();&nbsp;k++)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Record&nbsp;rec&nbsp;=&nbsp;(Record)&nbsp;records.get(k); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>if</SPAN><SPAN>&nbsp;(rec.getSid()&nbsp;==&nbsp;LabelRecord.sid)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LabelRecord&nbsp;oldrec&nbsp;=&nbsp;(LabelRecord)&nbsp;rec; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;records.remove(k); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LabelSSTRecord&nbsp;newrec&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;LabelSSTRecord(); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;stringid&nbsp;=&nbsp;workbook.addSSTString(</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;UnicodeString(oldrec.getValue())); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;newrec.setRow(oldrec.getRow()); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;newrec.setColumn(oldrec.getColumn()); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;newrec.setXFIndex(oldrec.getXFIndex()); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;newrec.setSSTIndex(stringid); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;records.add(k,&nbsp;newrec); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>static</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>byte</SPAN><SPAN>[]&nbsp;getBytes(Workbook&nbsp;workbook,&nbsp;Sheet[]&nbsp;sheets)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//&nbsp;HSSFSheet[]&nbsp;sheets&nbsp;=&nbsp;getSheets(); 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;nSheets&nbsp;=&nbsp;sheets.length; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=comment>//&nbsp;before&nbsp;getting&nbsp;the&nbsp;workbook&nbsp;size&nbsp;we&nbsp;must&nbsp;tell&nbsp;the&nbsp;sheets&nbsp;that 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//&nbsp;serialization&nbsp;is&nbsp;about&nbsp;to&nbsp;occur. 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>for</SPAN><SPAN>&nbsp;(</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;i&nbsp;=&nbsp;</SPAN><SPAN 
-class=number>0</SPAN><SPAN>;&nbsp;i&nbsp;&lt;&nbsp;nSheets;&nbsp;i++)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sheets[i].preSerialize(); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;totalsize&nbsp;=&nbsp;workbook.getSize(); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=comment>//&nbsp;pre-calculate&nbsp;all&nbsp;the&nbsp;sheet&nbsp;sizes&nbsp;and&nbsp;set&nbsp;BOF&nbsp;indexes 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>[]&nbsp;estimatedSheetSizes&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>[nSheets]; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>for</SPAN><SPAN>&nbsp;(</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;k&nbsp;=&nbsp;</SPAN><SPAN 
-class=number>0</SPAN><SPAN>;&nbsp;k&nbsp;&lt;&nbsp;nSheets;&nbsp;k++)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;workbook.setSheetBof(k,&nbsp;totalsize); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;sheetSize&nbsp;=&nbsp;sheets[k].getSize(); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;estimatedSheetSizes[k]&nbsp;=&nbsp;sheetSize; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totalsize&nbsp;+=&nbsp;sheetSize; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>byte</SPAN><SPAN>[]&nbsp;retval&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>byte</SPAN><SPAN>[totalsize]; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;pos&nbsp;=&nbsp;workbook.serialize(</SPAN><SPAN 
-class=number>0</SPAN><SPAN>,&nbsp;retval); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>for</SPAN><SPAN>&nbsp;(</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;k&nbsp;=&nbsp;</SPAN><SPAN 
-class=number>0</SPAN><SPAN>;&nbsp;k&nbsp;&lt;&nbsp;nSheets;&nbsp;k++)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;serializedSize&nbsp;=&nbsp;sheets[k].serialize(pos,&nbsp;retval); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>if</SPAN><SPAN>&nbsp;(serializedSize&nbsp;!=&nbsp;estimatedSheetSizes[k])&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>throw</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;IllegalStateException(</SPAN><SPAN 
-class=string>"Actual&nbsp;serialized&nbsp;sheet&nbsp;size&nbsp;("</SPAN><SPAN>&nbsp;+&nbsp;serializedSize 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;</SPAN><SPAN 
-class=string>")&nbsp;differs&nbsp;from&nbsp;pre-calculated&nbsp;size&nbsp;("</SPAN><SPAN>&nbsp;+&nbsp;estimatedSheetSizes[k]&nbsp;+&nbsp;</SPAN><SPAN 
-class=string>")&nbsp;for&nbsp;sheet&nbsp;("</SPAN><SPAN>&nbsp;+&nbsp;k &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;</SPAN><SPAN class=string>")"</SPAN><SPAN>); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sheet.serializeIndexRecord()&nbsp;does&nbsp;not &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos&nbsp;+=&nbsp;serializedSize; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;retval; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>static</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>void</SPAN><SPAN>&nbsp;main(String[]&nbsp;args)&nbsp;</SPAN><SPAN 
-class=keyword>throws</SPAN><SPAN>&nbsp;Exception&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>final</SPAN><SPAN>&nbsp;String&nbsp;PATH&nbsp;=&nbsp;</SPAN><SPAN 
-class=string>"E:\\projects\\java\\ws_0\\export\\data\\"</SPAN><SPAN>; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;InputStream[]&nbsp;inputs&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;InputStream[</SPAN><SPAN 
-class=number>10</SPAN><SPAN>]; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;inputs[</SPAN><SPAN class=number>0</SPAN><SPAN>]&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;java.io.FileInputStream(PATH&nbsp;+&nbsp;</SPAN><SPAN 
-class=string>"07_10.xls"</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>for</SPAN><SPAN>(</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;i&nbsp;=&nbsp;</SPAN><SPAN 
-class=number>1</SPAN><SPAN>;&nbsp;i&nbsp;&lt;=&nbsp;</SPAN><SPAN 
-class=number>9</SPAN><SPAN>;&nbsp;i++)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inputs[i]&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;java.io.FileInputStream(PATH&nbsp;+&nbsp;</SPAN><SPAN 
-class=string>"07_0"</SPAN><SPAN>&nbsp;+&nbsp;i&nbsp;+&nbsp;</SPAN><SPAN 
-class=string>".xls"</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;OutputStream&nbsp;out&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;FileOutputStream(PATH&nbsp;+&nbsp;</SPAN><SPAN 
-class=string>"xx.xls"</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>long</SPAN><SPAN>&nbsp;t1&nbsp;=&nbsp;System.currentTimeMillis(); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;merge(inputs,&nbsp;out); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(System.currentTimeMillis()&nbsp;-&nbsp;t1);</SPAN><SPAN 
-class=comment>//¼òÂªµÄ²âÊÔÒ»ÏÂÊ±¼ä </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>}&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE style="DISPLAY: none" class=java name="code">@SuppressWarnings("unchecked")
+          <TBODY id=posts><!--StartFragment-->
+            <TR id=661487>
+              <TD class=postcontent>
+                <DIV class="postbody clearfix">POIæˆ–è€…JXLåœ¨å¯¼å‡ºå¤§é‡æ•°æ®çš„æ—¶å€™ï¼Œç”±äºå®ƒä»¬å°†æ¯ä¸€ä¸ªå•å…ƒæ ¼ç”Ÿéƒ½æˆä¸€ä¸ªCellå¯¹è±¡ï¼Œæ‰€ä»¥å¾ˆå®¹æ˜“å¯¼è‡´å†…å­˜æº¢å‡ºã€‚è§£å†³è¿™ä¸ªé—®é¢˜ï¼Œå”¯ä¸€çš„åŠæ³•æ˜¯å¼„æ¸…æ¥šExcelçš„äºŒè¿›åˆ¶æ ¼å¼ï¼ˆæ±—ï¼‰ï¼Œå¹¶ä¸”ç”¨æµçš„æ–¹å¼è¯»å†™Excelã€‚POIå’ŒJXLå…¶å®æä¾›äº†äºŒè¿›åˆ¶æ–¹å¼è¯»å†™Excelçš„APIï¼Œåªæ˜¯å› ä¸ºç¼ºå°‘æ–‡æ¡£å’Œå®ä¾‹ï¼Œæ‰€ä»¥ä½¿ç”¨çš„äººä¸å¤šã€‚æˆ‘ç¼–å†™äº†è¿™ä¸ªç®€å•çš„åˆå¹¶Excelçš„ç±»ï¼Œå®ƒåªé€‚åˆåˆå¹¶ç»“æ„ç›¸åŒçš„å¤šä¸ªExcelæ–‡ä»¶ã€‚å¥½åœ¨è¿™ä¸ªåŠŸèƒ½å·²ç»å¯ä»¥è§£å†³æ•°æ®å¯¼å‡ºäº§ç”ŸOOMçš„é—®é¢˜ï¼šå°†æ•°æ®åˆ†æ‰¹å¯¼å‡ºç„¶ååˆå¹¶ã€‚
+                  <BR>ä¸‹é¢çš„ä»£ç ä½¿ç”¨POI3.1ï¼Œåˆå¹¶11ä¸ª3000å¤šè¡Œçš„æ–‡æ¡£ç”¨æ—¶çº¦6ç§’ï¼Œæˆ‘å®åœ¨æ‰¾ä¸åˆ°æ›´å¤šçš„æµ‹è¯•ç”¨çš„æ–‡æ¡£äº†ã€‚
+                  <BR>
+                  <DIV class=dp-highlighter>
+                    <DIV class=bar>
+                      <DIV class=tools>Javaä»£ç 
+                        <A title=å¤åˆ¶ä»£ç  onclick="dp.sh.Toolbar.CopyToClipboard(this);return false;" href="http://www.javaeye.com/topic/240053#">
+                          <IMG alt=å¤åˆ¶ä»£ç  src="icon_copy.gif">
+                        </A>
+                      </DIV>
+                    </DIV>
+                    <OL class=dp-j>
+                      <LI>
+                        <SPAN><SPAN class=annotation>@SuppressWarnings</SPAN>
+                        <SPAN>(</SPAN>
+                        <SPAN class=string>"unchecked"</SPAN>
+                        <SPAN>) &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN></SPAN>
+                        <SPAN class=keyword>public</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>class</SPAN>
+                        <SPAN>&nbsp;XlsMergeUtil&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>private</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>static</SPAN>
+                        <SPAN>&nbsp;Logger&nbsp;logger&nbsp;=&nbsp;LoggerFactory.getLogger(XlsMergeUtil.</SPAN>
+                        <SPAN class=keyword>class</SPAN>
+                        <SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>/** </SPAN>&nbsp;</SPAN>
+                      <LI>
+                        <SPAN><SPAN class=comment>&nbsp;&nbsp;&nbsp;*&nbsp;å°†å¤šä¸ªXlsæ–‡ä»¶åˆå¹¶ä¸ºä¸€ä¸ªï¼Œé€‚ç”¨äºåªæœ‰ä¸€ä¸ªsheetï¼Œå¹¶ä¸”æ ¼å¼ç›¸åŒçš„æ–‡æ¡£ 
+</SPAN>&nbsp;</SPAN>
+                      <LI>
+                        <SPAN><SPAN class=comment>&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;inputs&nbsp;è¾“å…¥çš„Xlsæ–‡ä»¶ </SPAN>&nbsp;</SPAN>
+                      <LI>
+                        <SPAN><SPAN class=comment>&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;out&nbsp;è¾“å‡ºæ–‡ä»¶ </SPAN>&nbsp;</SPAN>
+                      <LI>
+                        <SPAN><SPAN class=comment>&nbsp;&nbsp;&nbsp;*/</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>public</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>static</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>void</SPAN>
+                        <SPAN>&nbsp;merge(InputStream[]&nbsp;inputs,&nbsp;OutputStream&nbsp;out)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>if</SPAN>
+                        <SPAN>&nbsp;(inputs&nbsp;==&nbsp;</SPAN>
+                        <SPAN class=keyword>null</SPAN>
+                        <SPAN>&nbsp;||&nbsp;inputs.length&nbsp;&lt;=&nbsp;</SPAN>
+                        <SPAN class=number>1</SPAN>
+                        <SPAN>)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>throw</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;IllegalArgumentException(</SPAN>
+                        <SPAN class=string>"æ²¡æœ‰ä¼ å…¥è¾“å…¥æµæ•°ç»„,æˆ–åªæœ‰ä¸€ä¸ªè¾“å…¥æµ."</SPAN>
+                        <SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;List&lt;Record&gt;&nbsp;rootRecords&nbsp;=&nbsp;getRecords(inputs[</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>]); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;Workbook&nbsp;workbook&nbsp;=&nbsp;Workbook.createWorkbook(rootRecords); 
+&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;List&lt;Sheet&gt;&nbsp;sheets&nbsp;=&nbsp;getSheets(workbook,&nbsp;rootRecords); 
+&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>if</SPAN>
+                        <SPAN>(sheets&nbsp;==&nbsp;</SPAN>
+                        <SPAN class=keyword>null</SPAN>
+                        <SPAN>&nbsp;||&nbsp;sheets.size()&nbsp;==&nbsp;</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>throw</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;IllegalArgumentException(</SPAN>
+                        <SPAN class=string>"ç¬¬ä¸€ç¯‡æ–‡æ¡£çš„æ ¼å¼é”™è¯¯ï¼Œå¿…é¡»æœ‰è‡³å°‘ä¸€ä¸ªsheet"</SPAN>
+                        <SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//ä»¥ç¬¬ä¸€ç¯‡æ–‡æ¡£çš„æœ€åä¸€ä¸ªsheetä¸ºæ ¹ï¼Œä»¥åçš„æ•°æ®éƒ½è¿½åŠ åœ¨è¿™ä¸ªsheetåé¢ 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;Sheet&nbsp;rootSheet&nbsp;=&nbsp;sheets.get(sheets.size()&nbsp;-&nbsp;</SPAN>
+                        <SPAN class=number>1</SPAN>
+                        <SPAN>);&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;rootRows&nbsp;=&nbsp;getRowsOfSheet(rootSheet);&nbsp;</SPAN>
+                        <SPAN class=comment>//è®°å½•ç¬¬ä¸€ç¯‡æ–‡æ¡£çš„è¡Œæ•°ï¼Œä»¥åçš„è¡Œæ•°åœ¨æ­¤åŸºç¡€ä¸Šå¢åŠ  </SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;rootSheet.setLoc(rootSheet.getDimsLoc()); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;Map&lt;Integer,&nbsp;Integer&gt;&nbsp;map&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;HashMap(</SPAN>
+                        <SPAN class=number>10000</SPAN>
+                        <SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>for</SPAN>
+                        <SPAN>&nbsp;(</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;i&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=number>1</SPAN>
+                        <SPAN>;&nbsp;i&nbsp;&lt;&nbsp;inputs.length;&nbsp;i++)&nbsp;{&nbsp;</SPAN>
+                        <SPAN class=comment>//ä»ç¬¬äºŒç¯‡å¼€å§‹éå† </SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List&lt;Record&gt;&nbsp;records&nbsp;=&nbsp;getRecords(inputs[i]); 
+&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;rowsOfCurXls&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>; &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//éå†å½“å‰æ–‡æ¡£çš„æ¯ä¸€ä¸ªrecord 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>for</SPAN>
+                        <SPAN>&nbsp;(Iterator&nbsp;itr&nbsp;=&nbsp;records.iterator();&nbsp;itr.hasNext();)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Record&nbsp;record&nbsp;=&nbsp;(Record)&nbsp;itr.next(); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>if</SPAN>
+                        <SPAN>&nbsp;(record.getSid()&nbsp;==&nbsp;RowRecord.sid)&nbsp;{&nbsp;</SPAN>
+                        <SPAN class=comment>//å¦‚æœæ˜¯RowRecord </SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RowRecord&nbsp;rowRecord&nbsp;=&nbsp;(RowRecord)&nbsp;record; &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//è°ƒæ•´è¡Œå· 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rowRecord.setRowNumber(rootRows&nbsp;+&nbsp;rowRecord.getRowNumber()); 
+&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rootSheet.addRow(rowRecord);&nbsp;</SPAN>
+                        <SPAN class=comment>//è¿½åŠ Row </SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rowsOfCurXls++;&nbsp;</SPAN>
+                        <SPAN class=comment>//è®°å½•å½“å‰æ–‡æ¡£çš„è¡Œæ•° 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//SSTè®°å½•ï¼ŒSSTä¿å­˜xlsæ–‡ä»¶ä¸­å”¯ä¸€çš„Stringï¼Œå„ä¸ªStringéƒ½æ˜¯å¯¹åº”ç€SSTè®°å½•çš„ç´¢å¼• 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>else</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>if</SPAN>
+                        <SPAN>&nbsp;(record.getSid()&nbsp;==&nbsp;SSTRecord.sid)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SSTRecord&nbsp;sstRecord&nbsp;=&nbsp;(SSTRecord)&nbsp;record; &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>for</SPAN>
+                        <SPAN>&nbsp;(</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;j&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>;&nbsp;j&nbsp;&lt;&nbsp;sstRecord.getNumUniqueStrings();&nbsp;j++)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;index&nbsp;=&nbsp;workbook.addSSTString(sstRecord.getString(j)); 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//è®°å½•åŸæ¥çš„ç´¢å¼•å’Œç°åœ¨çš„ç´¢å¼•çš„å¯¹åº”å…³ç³» 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map.put(Integer.valueOf(j),&nbsp;Integer.valueOf(index)); 
+&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN>
+                        <SPAN class=keyword>else</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>if</SPAN>
+                        <SPAN>&nbsp;(record.getSid()&nbsp;==&nbsp;LabelSSTRecord.sid)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LabelSSTRecord&nbsp;label&nbsp;=&nbsp;(LabelSSTRecord)&nbsp;record; 
+&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//è°ƒæ•´SSTç´¢å¼•çš„å¯¹åº”å…³ç³» 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label.setSSTIndex(map.get(Integer.valueOf(label.getSSTIndex()))); 
+&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//è¿½åŠ ValueCell 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>if</SPAN>
+                        <SPAN>&nbsp;(record&nbsp;</SPAN>
+                        <SPAN class=keyword>instanceof</SPAN>
+                        <SPAN>&nbsp;CellValueRecordInterface)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CellValueRecordInterface&nbsp;cell&nbsp;=&nbsp;(CellValueRecordInterface)&nbsp;record; 
+&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;cellRow&nbsp;=&nbsp;cell.getRow()&nbsp;+&nbsp;rootRows; 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cell.setRow(cellRow); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rootSheet.addValueRecord(cellRow,&nbsp;cell); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rootRows&nbsp;+=&nbsp;rowsOfCurXls; &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>byte</SPAN>
+                        <SPAN>[]&nbsp;data&nbsp;=&nbsp;getBytes(workbook,&nbsp;sheets.toArray(</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;Sheet[</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>])); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;write(out,&nbsp;data); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>static</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>void</SPAN>
+                        <SPAN>&nbsp;write(OutputStream&nbsp;out,&nbsp;</SPAN>
+                        <SPAN class=keyword>byte</SPAN>
+                        <SPAN>[]&nbsp;data)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;POIFSFileSystem&nbsp;fs&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;POIFSFileSystem(); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//&nbsp;Write&nbsp;out&nbsp;the&nbsp;Workbook&nbsp;stream 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>try</SPAN>
+                        <SPAN>&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fs.createDocument(</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;ByteArrayInputStream(data),&nbsp;</SPAN>
+                        <SPAN class=string>"Workbook"</SPAN>
+                        <SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fs.writeFilesystem(out); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out.flush(); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN>
+                        <SPAN class=keyword>catch</SPAN>
+                        <SPAN>&nbsp;(IOException&nbsp;e)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace(); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN>
+                        <SPAN class=keyword>finally</SPAN>
+                        <SPAN>&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>try</SPAN>
+                        <SPAN>&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out.close(); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN>
+                        <SPAN class=keyword>catch</SPAN>
+                        <SPAN>&nbsp;(IOException&nbsp;e)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace(); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>static</SPAN>
+                        <SPAN>&nbsp;List&lt;Sheet&gt;&nbsp;getSheets(Workbook&nbsp;workbook,&nbsp;List&nbsp;records)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;recOffset&nbsp;=&nbsp;workbook.getNumRecords(); 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;sheetNum&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>; &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//&nbsp;convert&nbsp;all&nbsp;LabelRecord&nbsp;records&nbsp;to&nbsp;LabelSSTRecord 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;convertLabelRecords(records,&nbsp;recOffset,&nbsp;workbook); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;List&lt;Sheet&gt;&nbsp;sheets&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;ArrayList(); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>while</SPAN>
+                        <SPAN>&nbsp;(recOffset&nbsp;&lt;&nbsp;records.size())&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sheet&nbsp;sh&nbsp;=&nbsp;Sheet.createSheet(records,&nbsp;sheetNum++,&nbsp;recOffset); 
+&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;recOffset&nbsp;=&nbsp;sh.getEofLoc()&nbsp;+&nbsp;</SPAN>
+                        <SPAN class=number>1</SPAN>
+                        <SPAN>; &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>if</SPAN>
+                        <SPAN>&nbsp;(recOffset&nbsp;==&nbsp;</SPAN>
+                        <SPAN class=number>1</SPAN>
+                        <SPAN>)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>break</SPAN>
+                        <SPAN>; 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sheets.add(sh); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>return</SPAN>
+                        <SPAN>&nbsp;sheets; 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>static</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;getRows(List&lt;Record&gt;&nbsp;records)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;row&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>; &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>for</SPAN>
+                        <SPAN>&nbsp;(Iterator&nbsp;itr&nbsp;=&nbsp;records.iterator();&nbsp;itr.hasNext();)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Record&nbsp;record&nbsp;=&nbsp;(Record)&nbsp;itr.next(); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>if</SPAN>
+                        <SPAN>&nbsp;(record.getSid()&nbsp;==&nbsp;RowRecord.sid)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;row++; &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>return</SPAN>
+                        <SPAN>&nbsp;row; 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>static</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;getRowsOfSheet(Sheet&nbsp;sheet)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;rows&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>; &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;sheet.setLoc(</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>); 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>while</SPAN>
+                        <SPAN>(sheet.getNextRow()&nbsp;!=&nbsp;</SPAN>
+                        <SPAN class=keyword>null</SPAN>
+                        <SPAN>)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows++; &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>return</SPAN>
+                        <SPAN>&nbsp;rows; 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                        <SPAN class=annotation>@SuppressWarnings</SPAN>
+                        <SPAN>(</SPAN>
+                        <SPAN class=string>"deprecation"</SPAN>
+                        <SPAN>) &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>static</SPAN>
+                        <SPAN>&nbsp;List&lt;Record&gt;&nbsp;getRecords(InputStream&nbsp;input)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>try</SPAN>
+                        <SPAN>&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POIFSFileSystem&nbsp;poifs&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;POIFSFileSystem(input); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InputStream&nbsp;stream&nbsp;=&nbsp;poifs.getRoot().createDocumentInputStream(</SPAN>
+                        <SPAN class=string>"Workbook"</SPAN>
+                        <SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>return</SPAN>
+                        <SPAN>&nbsp;org.apache.poi.hssf.record.RecordFactory.createRecords(stream); 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN>
+                        <SPAN class=keyword>catch</SPAN>
+                        <SPAN>&nbsp;(IOException&nbsp;e)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logger.error(</SPAN>
+                        <SPAN class=string>"IOå¼‚å¸¸ï¼š{}"</SPAN>
+                        <SPAN>,&nbsp;e.getMessage()); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace(); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>return</SPAN>
+                        <SPAN>&nbsp;Collections.EMPTY_LIST; &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>static</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>void</SPAN>
+                        <SPAN>&nbsp;convertLabelRecords(List&nbsp;records,&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;offset,&nbsp;Workbook&nbsp;workbook)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>for</SPAN>
+                        <SPAN>&nbsp;(</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;k&nbsp;=&nbsp;offset;&nbsp;k&nbsp;&lt;&nbsp;records.size();&nbsp;k++)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Record&nbsp;rec&nbsp;=&nbsp;(Record)&nbsp;records.get(k); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>if</SPAN>
+                        <SPAN>&nbsp;(rec.getSid()&nbsp;==&nbsp;LabelRecord.sid)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LabelRecord&nbsp;oldrec&nbsp;=&nbsp;(LabelRecord)&nbsp;rec; &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;records.remove(k); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LabelSSTRecord&nbsp;newrec&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;LabelSSTRecord(); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;stringid&nbsp;=&nbsp;workbook.addSSTString(</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;UnicodeString(oldrec.getValue())); 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;newrec.setRow(oldrec.getRow()); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;newrec.setColumn(oldrec.getColumn()); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;newrec.setXFIndex(oldrec.getXFIndex()); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;newrec.setSSTIndex(stringid); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;records.add(k,&nbsp;newrec); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>public</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>static</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>byte</SPAN>
+                        <SPAN>[]&nbsp;getBytes(Workbook&nbsp;workbook,&nbsp;Sheet[]&nbsp;sheets)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//&nbsp;HSSFSheet[]&nbsp;sheets&nbsp;=&nbsp;getSheets(); 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;nSheets&nbsp;=&nbsp;sheets.length; &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//&nbsp;before&nbsp;getting&nbsp;the&nbsp;workbook&nbsp;size&nbsp;we&nbsp;must&nbsp;tell&nbsp;the&nbsp;sheets&nbsp;that 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//&nbsp;serialization&nbsp;is&nbsp;about&nbsp;to&nbsp;occur. 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>for</SPAN>
+                        <SPAN>&nbsp;(</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;i&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>;&nbsp;i&nbsp;&lt;&nbsp;nSheets;&nbsp;i++)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sheets[i].preSerialize(); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;totalsize&nbsp;=&nbsp;workbook.getSize(); 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//&nbsp;pre-calculate&nbsp;all&nbsp;the&nbsp;sheet&nbsp;sizes&nbsp;and&nbsp;set&nbsp;BOF&nbsp;indexes 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>[]&nbsp;estimatedSheetSizes&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>[nSheets]; &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>for</SPAN>
+                        <SPAN>&nbsp;(</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;k&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>;&nbsp;k&nbsp;&lt;&nbsp;nSheets;&nbsp;k++)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;workbook.setSheetBof(k,&nbsp;totalsize); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;sheetSize&nbsp;=&nbsp;sheets[k].getSize(); 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;estimatedSheetSizes[k]&nbsp;=&nbsp;sheetSize; &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totalsize&nbsp;+=&nbsp;sheetSize; &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>byte</SPAN>
+                        <SPAN>[]&nbsp;retval&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>byte</SPAN>
+                        <SPAN>[totalsize]; &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;pos&nbsp;=&nbsp;workbook.serialize(</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>,&nbsp;retval); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>for</SPAN>
+                        <SPAN>&nbsp;(</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;k&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>;&nbsp;k&nbsp;&lt;&nbsp;nSheets;&nbsp;k++)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;serializedSize&nbsp;=&nbsp;sheets[k].serialize(pos,&nbsp;retval); 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>if</SPAN>
+                        <SPAN>&nbsp;(serializedSize&nbsp;!=&nbsp;estimatedSheetSizes[k])&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>throw</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;IllegalStateException(</SPAN>
+                        <SPAN class=string>"Actual&nbsp;serialized&nbsp;sheet&nbsp;size&nbsp;("</SPAN>
+                        <SPAN>&nbsp;+&nbsp;serializedSize 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;</SPAN>
+                        <SPAN class=string>")&nbsp;differs&nbsp;from&nbsp;pre-calculated&nbsp;size&nbsp;("</SPAN>
+                        <SPAN>&nbsp;+&nbsp;estimatedSheetSizes[k]&nbsp;+&nbsp;</SPAN>
+                        <SPAN class=string>")&nbsp;for&nbsp;sheet&nbsp;("</SPAN>
+                        <SPAN>&nbsp;+&nbsp;k &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;</SPAN>
+                        <SPAN class=string>")"</SPAN>
+                        <SPAN>); 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sheet.serializeIndexRecord()&nbsp;does&nbsp;not &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos&nbsp;+=&nbsp;serializedSize; &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>return</SPAN>
+                        <SPAN>&nbsp;retval; 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>public</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>static</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>void</SPAN>
+                        <SPAN>&nbsp;main(String[]&nbsp;args)&nbsp;</SPAN>
+                        <SPAN class=keyword>throws</SPAN>
+                        <SPAN>&nbsp;Exception&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>final</SPAN>
+                        <SPAN>&nbsp;String&nbsp;PATH&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=string>"E:\\projects\\java\\ws_0\\export\\data\\"</SPAN>
+                        <SPAN>; 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;InputStream[]&nbsp;inputs&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;InputStream[</SPAN>
+                        <SPAN class=number>10</SPAN>
+                        <SPAN>]; &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;inputs[</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>]&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;java.io.FileInputStream(PATH&nbsp;+&nbsp;</SPAN>
+                        <SPAN class=string>"07_10.xls"</SPAN>
+                        <SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>for</SPAN>
+                        <SPAN>(</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;i&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=number>1</SPAN>
+                        <SPAN>;&nbsp;i&nbsp;&lt;=&nbsp;</SPAN>
+                        <SPAN class=number>9</SPAN>
+                        <SPAN>;&nbsp;i++)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inputs[i]&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;java.io.FileInputStream(PATH&nbsp;+&nbsp;</SPAN>
+                        <SPAN class=string>"07_0"</SPAN>
+                        <SPAN>&nbsp;+&nbsp;i&nbsp;+&nbsp;</SPAN>
+                        <SPAN class=string>".xls"</SPAN>
+                        <SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;OutputStream&nbsp;out&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;FileOutputStream(PATH&nbsp;+&nbsp;</SPAN>
+                        <SPAN class=string>"xx.xls"</SPAN>
+                        <SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>long</SPAN>
+                        <SPAN>&nbsp;t1&nbsp;=&nbsp;System.currentTimeMillis(); 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;merge(inputs,&nbsp;out); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(System.currentTimeMillis()&nbsp;-&nbsp;t1);</SPAN>
+                        <SPAN class=comment>//ç®€é™‹çš„æµ‹è¯•ä¸€ä¸‹æ—¶é—´ </SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>}&nbsp;&nbsp;</SPAN>
+                      </LI>
+                    </OL>
+                  </DIV>
+                  <PRE style="DISPLAY: none" class=java name="code">@SuppressWarnings("unchecked")
 public class XlsMergeUtil {
   private static Logger logger = LoggerFactory.getLogger(XlsMergeUtil.class);
 
   /**
-   * ½«¶à¸öXlsÎÄ¼şºÏ²¢ÎªÒ»¸ö£¬ÊÊÓÃÓÚÖ»ÓĞÒ»¸ösheet£¬²¢ÇÒ¸ñÊ½ÏàÍ¬µÄÎÄµµ
-   * @param inputs ÊäÈëµÄXlsÎÄ¼ş
-   * @param out Êä³öÎÄ¼ş
+   * å°†å¤šä¸ªXlsæ–‡ä»¶åˆå¹¶ä¸ºä¸€ä¸ªï¼Œé€‚ç”¨äºåªæœ‰ä¸€ä¸ªsheetï¼Œå¹¶ä¸”æ ¼å¼ç›¸åŒçš„æ–‡æ¡£
+   * @param inputs è¾“å…¥çš„Xlsæ–‡ä»¶
+   * @param out è¾“å‡ºæ–‡ä»¶
    */
   public static void merge(InputStream[] inputs, OutputStream out) {
     if (inputs == null || inputs.length &lt;= 1) {
-      throw new IllegalArgumentException("Ã»ÓĞ´«ÈëÊäÈëÁ÷Êı×é,»òÖ»ÓĞÒ»¸öÊäÈëÁ÷.");
+      throw new IllegalArgumentException("æ²¡æœ‰ä¼ å…¥è¾“å…¥æµæ•°ç»„,æˆ–åªæœ‰ä¸€ä¸ªè¾“å…¥æµ.");
     }
 
     List&lt;Record&gt; rootRecords = getRecords(inputs[0]);
     Workbook workbook = Workbook.createWorkbook(rootRecords);
     List&lt;Sheet&gt; sheets = getSheets(workbook, rootRecords);
     if(sheets == null || sheets.size() == 0) {
-      throw new IllegalArgumentException("µÚÒ»ÆªÎÄµµµÄ¸ñÊ½´íÎó£¬±ØĞëÓĞÖÁÉÙÒ»¸ösheet");
+      throw new IllegalArgumentException("ç¬¬ä¸€ç¯‡æ–‡æ¡£çš„æ ¼å¼é”™è¯¯ï¼Œå¿…é¡»æœ‰è‡³å°‘ä¸€ä¸ªsheet");
     }
-    //ÒÔµÚÒ»ÆªÎÄµµµÄ×îºóÒ»¸ösheetÎª¸ù£¬ÒÔºóµÄÊı¾İ¶¼×·¼ÓÔÚÕâ¸ösheetºóÃæ
+    //ä»¥ç¬¬ä¸€ç¯‡æ–‡æ¡£çš„æœ€åä¸€ä¸ªsheetä¸ºæ ¹ï¼Œä»¥åçš„æ•°æ®éƒ½è¿½åŠ åœ¨è¿™ä¸ªsheetåé¢
     Sheet rootSheet = sheets.get(sheets.size() - 1); 
-    int rootRows = getRowsOfSheet(rootSheet); //¼ÇÂ¼µÚÒ»ÆªÎÄµµµÄĞĞÊı£¬ÒÔºóµÄĞĞÊıÔÚ´Ë»ù´¡ÉÏÔö¼Ó
+    int rootRows = getRowsOfSheet(rootSheet); //è®°å½•ç¬¬ä¸€ç¯‡æ–‡æ¡£çš„è¡Œæ•°ï¼Œä»¥åçš„è¡Œæ•°åœ¨æ­¤åŸºç¡€ä¸Šå¢åŠ 
     rootSheet.setLoc(rootSheet.getDimsLoc());
     Map&lt;Integer, Integer&gt; map = new HashMap(10000);
 
-    for (int i = 1; i &lt; inputs.length; i++) { //´ÓµÚ¶şÆª¿ªÊ¼±éÀú
+    for (int i = 1; i &lt; inputs.length; i++) { //ä»ç¬¬äºŒç¯‡å¼€å§‹éå†
       List&lt;Record&gt; records = getRecords(inputs[i]);
       int rowsOfCurXls = 0;
-      //±éÀúµ±Ç°ÎÄµµµÄÃ¿Ò»¸örecord
+      //éå†å½“å‰æ–‡æ¡£çš„æ¯ä¸€ä¸ªrecord
       for (Iterator itr = records.iterator(); itr.hasNext();) {
         Record record = (Record) itr.next();
-        if (record.getSid() == RowRecord.sid) { //Èç¹ûÊÇRowRecord
+        if (record.getSid() == RowRecord.sid) { //å¦‚æœæ˜¯RowRecord
           RowRecord rowRecord = (RowRecord) record;
-          //µ÷ÕûĞĞºÅ
+          //è°ƒæ•´è¡Œå·
           rowRecord.setRowNumber(rootRows + rowRecord.getRowNumber());
-          rootSheet.addRow(rowRecord); //×·¼ÓRow
-          rowsOfCurXls++; //¼ÇÂ¼µ±Ç°ÎÄµµµÄĞĞÊı
+          rootSheet.addRow(rowRecord); //è¿½åŠ Row
+          rowsOfCurXls++; //è®°å½•å½“å‰æ–‡æ¡£çš„è¡Œæ•°
         }
-        //SST¼ÇÂ¼£¬SST±£´æxlsÎÄ¼şÖĞÎ¨Ò»µÄString£¬¸÷¸öString¶¼ÊÇ¶ÔÓ¦×ÅSST¼ÇÂ¼µÄË÷Òı
+        //SSTè®°å½•ï¼ŒSSTä¿å­˜xlsæ–‡ä»¶ä¸­å”¯ä¸€çš„Stringï¼Œå„ä¸ªStringéƒ½æ˜¯å¯¹åº”ç€SSTè®°å½•çš„ç´¢å¼•
         else if (record.getSid() == SSTRecord.sid) {
           SSTRecord sstRecord = (SSTRecord) record;
           for (int j = 0; j &lt; sstRecord.getNumUniqueStrings(); j++) {
             int index = workbook.addSSTString(sstRecord.getString(j));
-            //¼ÇÂ¼Ô­À´µÄË÷ÒıºÍÏÖÔÚµÄË÷ÒıµÄ¶ÔÓ¦¹ØÏµ
+            //è®°å½•åŸæ¥çš„ç´¢å¼•å’Œç°åœ¨çš„ç´¢å¼•çš„å¯¹åº”å…³ç³»
             map.put(Integer.valueOf(j), Integer.valueOf(index));
           }
         } else if (record.getSid() == LabelSSTRecord.sid) {
           LabelSSTRecord label = (LabelSSTRecord) record;
-          //µ÷ÕûSSTË÷ÒıµÄ¶ÔÓ¦¹ØÏµ
+          //è°ƒæ•´SSTç´¢å¼•çš„å¯¹åº”å…³ç³»
           label.setSSTIndex(map.get(Integer.valueOf(label.getSSTIndex())));
         }
-        //×·¼ÓValueCell
+        //è¿½åŠ ValueCell
         if (record instanceof CellValueRecordInterface) {
           CellValueRecordInterface cell = (CellValueRecordInterface) record;
           int cellRow = cell.getRow() + rootRows;
@@ -577,7 +1020,7 @@ public class XlsMergeUtil {
       InputStream stream = poifs.getRoot().createDocumentInputStream("Workbook");
       return org.apache.poi.hssf.record.RecordFactory.createRecords(stream);
     } catch (IOException e) {
-      logger.error("IOÒì³££º{}", e.getMessage());
+      logger.error("IOå¼‚å¸¸ï¼š{}", e.getMessage());
       e.printStackTrace();
     }
     return Collections.EMPTY_LIST;
@@ -651,613 +1094,1118 @@ public class XlsMergeUtil {
     OutputStream out = new FileOutputStream(PATH + "xx.xls");
     long t1 = System.currentTimeMillis();
     merge(inputs, out);
-    System.out.println(System.currentTimeMillis() - t1);//¼òÂªµÄ²âÊÔÒ»ÏÂÊ±¼ä
+    System.out.println(System.currentTimeMillis() - t1);//ç®€é™‹çš„æµ‹è¯•ä¸€ä¸‹æ—¶é—´
   }
 
 }
 
-</PRE></DIV>
-<DIV id=topic_copyright>ÉùÃ÷£ºJavaEyeÎÄÕÂ°æÈ¨ÊôÓÚ×÷Õß£¬ÊÜ·¨ÂÉ±£»¤¡£Ã»ÓĞ×÷ÕßÊéÃæĞí¿É²»µÃ×ªÔØ¡£ </DIV>
-<DIV id=forum_recommended_f5><SPAN>ÍÆ¼öÁ´½Ó</SPAN>
-<UL></UL></DIV></TD></TR>
-<TR>
-<TD class=postauthor><A href="http://www.javaeye.com/topic/240053#">·µ»Ø¶¥Â¥</A></TD>
-<TD class=postcontent>
-<DIV class=icons><A class=icon_www title=ä¯ÀÀ×÷ÕßµÄ²©¿Í 
-href="http://cats-tiger.javaeye.com/">&nbsp;</A> <A class=icon_profile title=ä¯ÀÀ×÷Õß×ÊÁÏ 
-href="http://cats-tiger.javaeye.com/blog/profile">&nbsp;</A> <A class=icon_pm 
-title=·¢ËÍÕ¾ÄÚ¶ÌĞÅ 
-href="http://app.javaeye.com/messages/new?message%5Breceiver_name%5D=cats_tiger">&nbsp;</A> 
-<A class=icon_guestbook title=¸ø×÷ÕßÁôÑÔ 
-href="http://cats-tiger.javaeye.com/blog/guest_book">&nbsp;</A> <A class=icon_rss 
-title=¹Ø×¢×÷Õß 
-onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;f.submit();return false;" 
-href="feed_subscription[subscribed_user_name]=cats_tiger">&nbsp;</A> 
-</DIV></TD></TR>
-<TR class=sep2>
-<TD colSpan=2></TD></TR>
-<TR id=661671>
-<TD class=postauthor>
-<UL>
-<LI class=name>leasass 
-<LI>µÈ¼¶: ³õ¼¶»áÔ± 
-<LI><A href="http://leasass.javaeye.com/" target=_blank><IMG class=logo 
-title="leasassµÄ²©¿Í: leasass" alt=leasassµÄ²©¿Í 
-src="user-logo.gif_1194185304"></A> 
-<LI>ÎÄÕÂ: 15 
-<LI>»ı·Ö: 30 
-<LI>À´×Ô: ÉÏº£ 
-<LI><IMG src="offline.gif"> </LI></UL></TD>
-<TD class=postcontent>
-<DIV class=postactions>
-<DIV class=description>&nbsp;&nbsp; ·¢±íÊ±¼ä£º2008-09-10&nbsp;&nbsp; </DIV>
-<DIV class=links><A class=favorite 
-href="http://app.javaeye.com/links?user_favorite%5Btitle%5D=leasass%E5%9B%9E%E8%B4%B4%3A%E8%A7%A3%E5%86%B3%E5%A4%A7%E6%89%B9%E9%87%8F%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BAExcel%E4%BA%A7%E7%94%9F%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA%E7%9A%84%E6%96%B9%E6%A1%88&amp;user_favorite%5Burl%5D=http%3A%2F%2Fwww.javaeye.com%2Ftopic%2F240053%23661671" 
-target=_blank>ÊÕ²Ø</A> </DIV></DIV>
-<DIV 
-class="postbody clearfix">½²½²ÎÒµÄ½â¾ö·½·¨,<BR>Ò»°ãµ¼³öµÄExcelÓÃÀ´×ö±¨±í»òÕßÍ³¼ÆÓÃµÄ,Ò²²»ÒªÇóÍ¼Æ¬»òÆäËü¶ÔÏó,¾ÍÊÇÊı¾İ,<BR>ÎÒµÄ×ö·¨ÊÇĞ´ÎÄ±¾¸ñÊ½µÄExcelÎÄ¼ş,¶ø²»ÊÇÓÃPOIµÈÉú³É¶ş½øÖÆµÄÎÄ¼ş,<BR>µÚÒ»ÖÖ¸ñÊ½,CSV,×î¼òµ¥µÄ,¸ñÊ½×î²î,×î»ù±¾µÄĞĞÁĞ,²»ÄÜºÏ²¢,²»ÄÜÉèÖÃ×ÅÉ«,<BR>µÚ¶şÖÖ,HTML¸ñÊ½µÄ,Èç:"&lt;TABLE&gt;....&lt;/TABLE&gt;"ÕâÑùµÄÎÄ±¾,ºóê¡Ãû¸ÄÎªXLS¾Í¿ÉÒÔÁË,¿ÉÒÔÉèÖÃ¿çĞĞÁĞµÄºÏ²¢,¿ÉÒÔ×ÅÉ«,Í¼Æ¬Ã»ÊÔ¹ı,¹À¼ÆÊÇ¿ÉÒÔµÄ,»¹¿ÉÒÔÉèÖÃµ¥Ôª¸ñ¶ÔÆë,µ¥Ôª¸ñµÄ¸ñÊ½µÈ,<BR><BR>Ğ´ÎÄ±¾µÄÊ±ºò,¸ù±¾²»ÓÃµ£ĞÄ 
-OOMµÄÎÊÌâ,ÎÒ×î´óĞ´¹ı 
-500¶àMµÄÒ»¸öexcelÎÄ¼ş,²»¹ıÕâÒÑ¾­Ã»ÓĞÒâÒåÁË,excelÒ»¸öSheet×î´ó6Íò¶àĞĞ,¶àÁËÒ²ÏÔÊ¾²»³öÀ´.<BR></DIV></TD></TR>
-<TR>
-<TD class=postauthor><A href="http://www.javaeye.com/topic/240053#">·µ»Ø¶¥Â¥</A></TD>
-<TD class=postcontent>
-<DIV class=icons><A class=icon_www title=ä¯ÀÀ×÷ÕßµÄ²©¿Í 
-href="http://leasass.javaeye.com/">&nbsp;</A> <A class=icon_profile title=ä¯ÀÀ×÷Õß×ÊÁÏ 
-href="http://leasass.javaeye.com/blog/profile">&nbsp;</A> <A class=icon_pm 
-title=·¢ËÍÕ¾ÄÚ¶ÌĞÅ 
-href="http://app.javaeye.com/messages/new?message%5Breceiver_name%5D=leasass">&nbsp;</A> 
-<A class=icon_guestbook title=¸ø×÷ÕßÁôÑÔ 
-href="http://leasass.javaeye.com/blog/guest_book">&nbsp;</A> <A class=icon_rss 
-title=¹Ø×¢×÷Õß 
-onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;f.submit();return false;" 
-href="feed_subscription[subscribed_user_name]=leasass">&nbsp;</A> 
-<A title=leasass»ØÌû:½â¾ö´óÅúÁ¿Êı¾İµ¼³öExcel²úÉúÄÚ´æÒç³öµÄ·½°¸ href="http://www.javaeye.com/topic/240053#661671">»ØÌûµØÖ·</A> </DIV>
-<DIV id=post_rate_box_661671 class=post_rate_box><A class=good title=ºÃ 
-onclick='rate_post(661671, "good"); return false;' href="http://www.javaeye.com/topic/240053#">0</A> <A 
-class=hidden title=²î onclick='rate_post(661671, "hidden"); return false;' 
-href="http://www.javaeye.com/topic/240053#">0</A> </DIV></TD></TR>
-<TR class=sep2>
-<TD colSpan=2></TD></TR>
-<TR id=661785>
-<TD class=postauthor>
-<UL>
-<LI class=name>cats_tiger 
-<LI>µÈ¼¶: <IMG title=ÈıĞÇ»áÔ± alt=ÈıĞÇ»áÔ± src="star3.gif"> 
-<LI><A href="http://cats-tiger.javaeye.com/" target=_blank><IMG class=logo 
-title="cats_tigerµÄ²©¿Í: cats_tiger" alt=cats_tigerµÄ²©¿Í 
-src="18f96db5-83ff-374e-a10a-4f7851f738c3.jpg_1236832416"></A> 
+</PRE>
+                </DIV>
+                <DIV id=topic_copyright>å£°æ˜ï¼šJavaEyeæ–‡ç« ç‰ˆæƒå±äºä½œè€…ï¼Œå—æ³•å¾‹ä¿æŠ¤ã€‚æ²¡æœ‰ä½œè€…ä¹¦é¢è®¸å¯ä¸å¾—è½¬è½½ã€‚ </DIV>
+                <DIV id=forum_recommended_f5>
+                  <SPAN>æ¨èé“¾æ¥</SPAN>
+                  <UL></UL>
+                </DIV>
+              </TD>
+            </TR>
+            <TR>
+              <TD class=postauthor>
+                <A href="http://www.javaeye.com/topic/240053#">è¿”å›é¡¶æ¥¼</A>
+              </TD>
+              <TD class=postcontent>
+                <DIV class=icons>
+                  <A class=icon_www title=æµè§ˆä½œè€…çš„åšå®¢ href="http://cats-tiger.javaeye.com/">&nbsp;</A>
+                  <A class=icon_profile title=æµè§ˆä½œè€…èµ„æ–™ href="http://cats-tiger.javaeye.com/blog/profile">&nbsp;</A>
+                  <A class=icon_pm title=å‘é€ç«™å†…çŸ­ä¿¡ href="http://app.javaeye.com/messages/new?message%5Breceiver_name%5D=cats_tiger">&nbsp;</A>
+                  <A class=icon_guestbook title=ç»™ä½œè€…ç•™è¨€ href="http://cats-tiger.javaeye.com/blog/guest_book">&nbsp;</A>
+                  <A onclick="var f = document.createElement('form');  f.style.display  = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;f.submit();return false;"
+                  title=å…³æ³¨ä½œè€… class=icon_rss href="feed_subscription[subscribed_user_name]=cats_tiger" >&nbsp;</A>
+                </DIV>
+              </TD>
+            </TR>
+            <TR class=sep2>
+              <TD colSpan=2></TD>
+            </TR>
+            <TR id=661671>
+              <TD class=postauthor>
+                <UL>
+                  <LI class=name>leasass
+                    <LI>ç­‰çº§: åˆçº§ä¼šå‘˜
+                      <LI>
+                        <A href="http://leasass.javaeye.com/" target=_blank>
+                          <IMG title="leasassçš„åšå®¢: leasass" class =logo alt=leasassçš„åšå®¢ src="user-logo.gif_1194185304" >
+                        </A>
+                        <LI>æ–‡ç« : 15
+                          <LI>ç§¯åˆ†: 30
+                            <LI>æ¥è‡ª: ä¸Šæµ·
+                              <LI>
+                                <IMG src="offline.gif"> </LI>
+                </UL>
+              </TD>
+              <TD class=postcontent>
+                <DIV class=postactions>
+                  <DIV class=description>&nbsp;&nbsp; å‘è¡¨æ—¶é—´ï¼š2008-09-10&nbsp;&nbsp; </DIV>
+                  <DIV class=links>
+                    <A class=favorite href="http://app.javaeye.com/links?user_favorite%5Btitle%5D=leasass%E5%9B%9E%E8%B4%B4%3A%E8%A7%A3%E5%86%B3%E5%A4%A7%E6%89%B9%E9%87%8F%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BAExcel%E4%BA%A7%E7%94%9F%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA%E7%9A%84%E6%96%B9%E6%A1%88&amp;user_favorite%5Burl%5D=http%3A%2F%2Fwww.javaeye.com%2Ftopic%2F240053%23661671"
+                    
+      target=_blank>æ”¶è—</A> </DIV>
+                </DIV>
+                <DIV class="postbody clearfix">è®²è®²æˆ‘çš„è§£å†³æ–¹æ³•,
+                  <BR>ä¸€èˆ¬å¯¼å‡ºçš„Excelç”¨æ¥åšæŠ¥è¡¨æˆ–è€…ç»Ÿè®¡ç”¨çš„,ä¹Ÿä¸è¦æ±‚å›¾ç‰‡æˆ–å…¶å®ƒå¯¹è±¡,å°±æ˜¯æ•°æ®,
+                  <BR>æˆ‘çš„åšæ³•æ˜¯å†™æ–‡æœ¬æ ¼å¼çš„Excelæ–‡ä»¶,è€Œä¸æ˜¯ç”¨POIç­‰ç”ŸæˆäºŒè¿›åˆ¶çš„æ–‡ä»¶,
+                  <BR>ç¬¬ä¸€ç§æ ¼å¼,CSV,æœ€ç®€å•çš„,æ ¼å¼æœ€å·®,æœ€åŸºæœ¬çš„è¡Œåˆ—,ä¸èƒ½åˆå¹¶,ä¸èƒ½è®¾ç½®ç€è‰²,
+                  <BR>ç¬¬äºŒç§,HTMLæ ¼å¼çš„,å¦‚:"&lt;TABLE&gt;....&lt;/TABLE&gt;"è¿™æ ·çš„æ–‡æœ¬,åè¾åæ”¹ä¸ºXLSå°±å¯ä»¥äº†,å¯ä»¥è®¾ç½®è·¨è¡Œåˆ—çš„åˆå¹¶,å¯ä»¥ç€è‰²,å›¾ç‰‡æ²¡è¯•è¿‡,ä¼°è®¡æ˜¯å¯ä»¥çš„,è¿˜å¯ä»¥è®¾ç½®å•å…ƒæ ¼å¯¹é½,å•å…ƒæ ¼çš„æ ¼å¼ç­‰,
+                  <BR>
+                  <BR>å†™æ–‡æœ¬çš„æ—¶å€™,æ ¹æœ¬ä¸ç”¨æ‹…å¿ƒ OOMçš„é—®é¢˜,æˆ‘æœ€å¤§å†™è¿‡ 500å¤šMçš„ä¸€ä¸ªexcelæ–‡ä»¶,ä¸è¿‡è¿™å·²ç»æ²¡æœ‰æ„ä¹‰äº†,excelä¸€ä¸ªSheetæœ€å¤§6ä¸‡å¤šè¡Œ,å¤šäº†ä¹Ÿæ˜¾ç¤ºä¸å‡ºæ¥.
+                  <BR>
+                </DIV>
+              </TD>
+            </TR>
+            <TR>
+              <TD class=postauthor>
+                <A href="http://www.javaeye.com/topic/240053#">è¿”å›é¡¶æ¥¼</A>
+              </TD>
+              <TD class=postcontent>
+                <DIV class=icons>
+                  <A class=icon_www title=æµè§ˆä½œè€…çš„åšå®¢ href="http://leasass.javaeye.com/">&nbsp;</A>
+                  <A class=icon_profile title=æµè§ˆä½œè€…èµ„æ–™ href="http://leasass.javaeye.com/blog/profile">&nbsp;</A>
+                  <A class=icon_pm title=å‘é€ç«™å†…çŸ­ä¿¡ href="http://app.javaeye.com/messages/new?message%5Breceiver_name%5D=leasass">&nbsp;</A>
+                  <A class=icon_guestbook title=ç»™ä½œè€…ç•™è¨€ href="http://leasass.javaeye.com/blog/guest_book">&nbsp;</A>
+                  <A onclick="var f = document.createElement('form');  f.style.display  = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;f.submit();return false;"
+                  title=å…³æ³¨ä½œè€… class=icon_rss href="feed_subscription[subscribed_user_name]=leasass" >&nbsp;</A>
+                  <A title=leasasså›å¸–:è§£å†³å¤§æ‰¹é‡æ•°æ®å¯¼å‡ºExceläº§ç”Ÿå†…å­˜æº¢å‡ºçš„æ–¹æ¡ˆ href="http://www.javaeye.com/topic/240053#661671">å›å¸–åœ°å€</A> </DIV>
+                <DIV id=post_rate_box_661671 class=post_rate_box>
+                  <A class=good title=å¥½ onclick='rate_post(661671, "good"); return false;' href="http://www.javaeye.com/topic/240053#">0</A>
+                  <A class=hidden title=å·® onclick='rate_post(661671, "hidden"); return false;' href="http://www.javaeye.com/topic/240053#">0</A> </DIV>
+              </TD>
+            </TR>
+            <TR class=sep2>
+              <TD colSpan=2></TD>
+            </TR>
+            <TR id=661785>
+              <TD class=postauthor>
+                <UL>
+                  <LI class=name>cats_tiger
+                    <LI>ç­‰çº§:
+                      <IMG title=ä¸‰æ˜Ÿä¼šå‘˜ alt=ä¸‰æ˜Ÿä¼šå‘˜ src="star3.gif">
+                      <LI>
+                        <A href="http://cats-tiger.javaeye.com/" target=_blank>
+                          <IMG title="cats_tigerçš„åšå®¢: cats_tiger" class =logo alt=cats_tigerçš„åšå®¢ src="18f96db5-83ff-374e-a10a-4f7851f738c3.jpg_1236832416" >
+                        </A>
 
-<LI>ÎÄÕÂ: 230 
-<LI>»ı·Ö: 349 
-<LI>À´×Ô: ±±¾© 
-<LI><IMG src="offline.gif"> </LI></UL></TD>
-<TD class=postcontent>
-<DIV class=postactions>
-<DIV class=description>&nbsp;&nbsp; ·¢±íÊ±¼ä£º2008-09-10&nbsp;&nbsp; </DIV>
-<DIV class=links><A class=favorite 
-href="http://app.javaeye.com/links?user_favorite%5Btitle%5D=cats_tiger%E5%9B%9E%E8%B4%B4%3A%E8%A7%A3%E5%86%B3%E5%A4%A7%E6%89%B9%E9%87%8F%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BAExcel%E4%BA%A7%E7%94%9F%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA%E7%9A%84%E6%96%B9%E6%A1%88&amp;user_favorite%5Burl%5D=http%3A%2F%2Fwww.javaeye.com%2Ftopic%2F240053%23661785" 
-target=_blank>ÊÕ²Ø</A> </DIV></DIV>
-<DIV class="postbody clearfix">
-<DIV class=quote_title>leasass Ğ´µÀ</DIV>
-<DIV class=quote_div>½²½²ÎÒµÄ½â¾ö·½·¨, <BR>Ò»°ãµ¼³öµÄExcelÓÃÀ´×ö±¨±í»òÕßÍ³¼ÆÓÃµÄ,Ò²²»ÒªÇóÍ¼Æ¬»òÆäËü¶ÔÏó,¾ÍÊÇÊı¾İ, 
-<BR>ÎÒµÄ×ö·¨ÊÇĞ´ÎÄ±¾¸ñÊ½µÄExcelÎÄ¼ş,¶ø²»ÊÇÓÃPOIµÈÉú³É¶ş½øÖÆµÄÎÄ¼ş, 
-<BR>µÚÒ»ÖÖ¸ñÊ½,CSV,×î¼òµ¥µÄ,¸ñÊ½×î²î,×î»ù±¾µÄĞĞÁĞ,²»ÄÜºÏ²¢,²»ÄÜÉèÖÃ×ÅÉ«, 
-<BR>µÚ¶şÖÖ,HTML¸ñÊ½µÄ,Èç:"&lt;TABLE&gt;....&lt;/TABLE&gt;"ÕâÑùµÄÎÄ±¾,ºóê¡Ãû¸ÄÎªXLS¾Í¿ÉÒÔÁË,¿ÉÒÔÉèÖÃ¿çĞĞÁĞµÄºÏ²¢,¿ÉÒÔ×ÅÉ«,Í¼Æ¬Ã»ÊÔ¹ı,¹À¼ÆÊÇ¿ÉÒÔµÄ,»¹¿ÉÒÔÉèÖÃµ¥Ôª¸ñ¶ÔÆë,µ¥Ôª¸ñµÄ¸ñÊ½µÈ, 
-<BR><BR>Ğ´ÎÄ±¾µÄÊ±ºò,¸ù±¾²»ÓÃµ£ĞÄ OOMµÄÎÊÌâ,ÎÒ×î´óĞ´¹ı 
-500¶àMµÄÒ»¸öexcelÎÄ¼ş,²»¹ıÕâÒÑ¾­Ã»ÓĞÒâÒåÁË,excelÒ»¸öSheet×î´ó6Íò¶àĞĞ,¶àÁËÒ²ÏÔÊ¾²»³öÀ´. 
-<BR></DIV><BR>ÄãµÄ°ì·¨ÎÒÒ²ÓÃ¹ı£¬µÄÈ·Ã»ÓĞÒç³öµÄÎÊÌâ£¬²»¹ı¿Í»§²»Í¬ÒâµÄ¡£ÎÒÃÇÏÖÔÚµÄÕâ¸öµÄ¿Í»§ºÜ¸÷É«£¬ÒÔÇ°ÆäËûµÄ¿Í»§¾Í¿ÉÒÔÓÃÄãµÄ°ì·¨¸ã¶¨¡£±ÈÈç¿Í»§ÒªÇóÒ»´Îµ¼³ö20wĞĞÊı¾İ£¬Õâ¾ÍÒªÇóµ¼³öµÄÎÄ¼ş±ØĞë´øsheet£¬ÉÏÃæµÄ´úÂëÒ²²»Ö§³Ösheet£¬ÏÂÃæµÄ¾Í¿ÉÒÔÁË£º 
-<BR>
-<DIV class=dp-highlighter>
-<DIV class=bar>
-<DIV class=tools>Java´úÂë <A title=¸´ÖÆ´úÂë 
-onclick="dp.sh.Toolbar.CopyToClipboard(this);return false;" 
-href="http://www.javaeye.com/topic/240053#"><IMG alt=¸´ÖÆ´úÂë 
-src="icon_copy.gif"></A></DIV></DIV>
-<OL class=dp-j>
-<LI><SPAN><SPAN class=annotation>@SuppressWarnings</SPAN><SPAN>(</SPAN><SPAN 
-class=string>"unchecked"</SPAN><SPAN>) &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>&nbsp;XlsMergeUtil&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=keyword>private</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>static</SPAN><SPAN>&nbsp;Logger&nbsp;logger&nbsp;=&nbsp;LoggerFactory.getLogger(XlsMergeUtil.</SPAN><SPAN 
-class=keyword>class</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=comment>/** </SPAN>&nbsp;</SPAN></LI>
-<LI><SPAN><SPAN class=comment>&nbsp;&nbsp;&nbsp;*&nbsp;½«¶à¸öXlsÎÄ¼şºÏ²¢ÎªÒ»¸ö£¬ÊÊÓÃÓÚÖ»ÓĞÒ»¸ösheet£¬²¢ÇÒ¸ñÊ½ÏàÍ¬µÄÎÄµµ 
-</SPAN>&nbsp;</SPAN></LI>
-<LI><SPAN><SPAN class=comment>&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;inputs&nbsp;ÊäÈëµÄXlsÎÄ¼ş£¬µÚÒ»¸öXLSÎÄ¼ş±ØĞë¸ø³ö×ã¹»sheet¿Õ¼ä 
-</SPAN>&nbsp;</SPAN></LI>
-<LI><SPAN><SPAN class=comment>&nbsp;&nbsp;&nbsp;*&nbsp;ÀıÈç£¬×Ü¹²200000ĞĞÊı¾İ£¬µÚÒ»¸öÎÄ¼şÖÁÉÙ3¸ö¿Õ°×sheet 
-</SPAN>&nbsp;</SPAN></LI>
-<LI><SPAN><SPAN class=comment>&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;out&nbsp;Êä³öÎÄ¼ş </SPAN>&nbsp;</SPAN></LI>
-<LI><SPAN><SPAN class=comment>&nbsp;&nbsp;&nbsp;*/</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>static</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>void</SPAN><SPAN>&nbsp;merge(InputStream[]&nbsp;inputs,&nbsp;OutputStream&nbsp;out)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>if</SPAN><SPAN>&nbsp;(inputs&nbsp;==&nbsp;</SPAN><SPAN 
-class=keyword>null</SPAN><SPAN>&nbsp;||&nbsp;inputs.length&nbsp;&lt;=&nbsp;</SPAN><SPAN 
-class=number>1</SPAN><SPAN>)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>throw</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;IllegalArgumentException(</SPAN><SPAN 
-class=string>"Ã»ÓĞ´«ÈëÊäÈëÁ÷Êı×é,»òÖ»ÓĞÒ»¸öÊäÈëÁ÷."</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;List&lt;Record&gt;&nbsp;rootRecords&nbsp;=&nbsp;getRecords(inputs[</SPAN><SPAN 
-class=number>0</SPAN><SPAN>]); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;Workbook&nbsp;workbook&nbsp;=&nbsp;Workbook.createWorkbook(rootRecords); 
-&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;List&lt;Sheet&gt;&nbsp;sheets&nbsp;=&nbsp;getSheets(workbook,&nbsp;rootRecords); 
-&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>if</SPAN><SPAN>(sheets&nbsp;==&nbsp;</SPAN><SPAN 
-class=keyword>null</SPAN><SPAN>&nbsp;||&nbsp;sheets.size()&nbsp;==&nbsp;</SPAN><SPAN 
-class=number>0</SPAN><SPAN>)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>throw</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;IllegalArgumentException(</SPAN><SPAN 
-class=string>"µÚÒ»ÆªÎÄµµµÄ¸ñÊ½´íÎó£¬±ØĞëÓĞÖÁÉÙÒ»¸ösheet"</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//ÒÔµÚÒ»ÆªÎÄµµµÄµÚÒ»¸ösheetÎª¸ù£¬ÒÔºóµÄÊı¾İ¶¼×·¼ÓÔÚÕâ¸ösheetºóÃæ 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;Sheet&nbsp;rootSheet&nbsp;=&nbsp;sheets.get(</SPAN><SPAN 
-class=number>0</SPAN><SPAN>);&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;rootRows&nbsp;=&nbsp;getRowsOfSheet(rootSheet);&nbsp;</SPAN><SPAN 
-class=comment>//¼ÇÂ¼µÚÒ»ÆªÎÄµµµÄĞĞÊı£¬ÒÔºóµÄĞĞÊıÔÚ´Ë»ù´¡ÉÏÔö¼Ó </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;rootSheet.setLoc(rootSheet.getDimsLoc()); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;Map&lt;Integer,&nbsp;Integer&gt;&nbsp;map&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;HashMap(</SPAN><SPAN 
-class=number>10000</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;sheetIndex&nbsp;=&nbsp;</SPAN><SPAN 
-class=number>0</SPAN><SPAN>; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>for</SPAN><SPAN>&nbsp;(</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;i&nbsp;=&nbsp;</SPAN><SPAN 
-class=number>1</SPAN><SPAN>;&nbsp;i&nbsp;&lt;&nbsp;inputs.length;&nbsp;i++)&nbsp;{&nbsp;</SPAN><SPAN 
-class=comment>//´ÓµÚ¶şÆª¿ªÊ¼±éÀú </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List&lt;Record&gt;&nbsp;records&nbsp;=&nbsp;getRecords(inputs[i]); 
-&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//´ïµ½×î´óĞĞÊıÏŞÖÆ£¬»»Ò»¸ösheet 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>if</SPAN><SPAN>(getRows(records)&nbsp;+&nbsp;rootRows&nbsp;&gt;=&nbsp;RowRecord.MAX_ROW_NUMBER)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>if</SPAN><SPAN>((++sheetIndex)&nbsp;&gt;&nbsp;(sheets.size()&nbsp;-&nbsp;</SPAN><SPAN 
-class=number>1</SPAN><SPAN>))&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logger.warn(</SPAN><SPAN 
-class=string>"µÚÒ»¸öÎÄµµ¸ø³öµÄsheetsĞ¡ÓÚĞèÒªµÄÊıÁ¿£¬²¿·ÖÊı¾İÎ´ÄÜºÏ²¢."</SPAN><SPAN>); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>break</SPAN><SPAN>; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rootSheet&nbsp;=&nbsp;sheets.get(sheetIndex); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rootRows&nbsp;=&nbsp;getRowsOfSheet(rootSheet); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rootSheet.setLoc(rootSheet.getDimsLoc()); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logger.debug(</SPAN><SPAN 
-class=string>"ÇĞ»»Sheet{}"</SPAN><SPAN>,&nbsp;sheetIndex); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;rowsOfCurXls&nbsp;=&nbsp;</SPAN><SPAN 
-class=number>0</SPAN><SPAN>; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//±éÀúµ±Ç°ÎÄµµµÄÃ¿Ò»¸örecord 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>for</SPAN><SPAN>&nbsp;(Iterator&nbsp;itr&nbsp;=&nbsp;records.iterator();&nbsp;itr.hasNext();)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Record&nbsp;record&nbsp;=&nbsp;(Record)&nbsp;itr.next(); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>if</SPAN><SPAN>&nbsp;(record.getSid()&nbsp;==&nbsp;RowRecord.sid)&nbsp;{&nbsp;</SPAN><SPAN 
-class=comment>//Èç¹ûÊÇRowRecord </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RowRecord&nbsp;rowRecord&nbsp;=&nbsp;(RowRecord)&nbsp;record; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//µ÷ÕûĞĞºÅ 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rowRecord.setRowNumber(rootRows&nbsp;+&nbsp;rowRecord.getRowNumber()); 
-&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rootSheet.addRow(rowRecord);&nbsp;</SPAN><SPAN 
-class=comment>//×·¼ÓRow </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rowsOfCurXls++;&nbsp;</SPAN><SPAN class=comment>//¼ÇÂ¼µ±Ç°ÎÄµµµÄĞĞÊı 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=comment>//SST¼ÇÂ¼£¬SST±£´æxlsÎÄ¼şÖĞÎ¨Ò»µÄString£¬¸÷¸öString¶¼ÊÇ¶ÔÓ¦×ÅSST¼ÇÂ¼µÄË÷Òı 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>else</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>if</SPAN><SPAN>&nbsp;(record.getSid()&nbsp;==&nbsp;SSTRecord.sid)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SSTRecord&nbsp;sstRecord&nbsp;=&nbsp;(SSTRecord)&nbsp;record; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>for</SPAN><SPAN>&nbsp;(</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;j&nbsp;=&nbsp;</SPAN><SPAN 
-class=number>0</SPAN><SPAN>;&nbsp;j&nbsp;&lt;&nbsp;sstRecord.getNumUniqueStrings();&nbsp;j++)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;index&nbsp;=&nbsp;workbook.addSSTString(sstRecord.getString(j)); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//¼ÇÂ¼Ô­À´µÄË÷ÒıºÍÏÖÔÚµÄË÷ÒıµÄ¶ÔÓ¦¹ØÏµ 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map.put(Integer.valueOf(j),&nbsp;Integer.valueOf(index)); 
-&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN><SPAN class=keyword>else</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>if</SPAN><SPAN>&nbsp;(record.getSid()&nbsp;==&nbsp;LabelSSTRecord.sid)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LabelSSTRecord&nbsp;label&nbsp;=&nbsp;(LabelSSTRecord)&nbsp;record; 
-&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//µ÷ÕûSSTË÷ÒıµÄ¶ÔÓ¦¹ØÏµ 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label.setSSTIndex(map.get(Integer.valueOf(label.getSSTIndex()))); 
-&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//×·¼ÓValueCell 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>if</SPAN><SPAN>&nbsp;(record&nbsp;</SPAN><SPAN 
-class=keyword>instanceof</SPAN><SPAN>&nbsp;CellValueRecordInterface)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CellValueRecordInterface&nbsp;cell&nbsp;=&nbsp;(CellValueRecordInterface)&nbsp;record; 
-&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;cellRow&nbsp;=&nbsp;cell.getRow()&nbsp;+&nbsp;rootRows; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cell.setRow(cellRow); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rootSheet.addValueRecord(cellRow,&nbsp;cell); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rootRows&nbsp;+=&nbsp;rowsOfCurXls; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>byte</SPAN><SPAN>[]&nbsp;data&nbsp;=&nbsp;getBytes(workbook,&nbsp;sheets.toArray(</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;Sheet[</SPAN><SPAN 
-class=number>0</SPAN><SPAN>])); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;write(out,&nbsp;data); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=keyword>static</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>void</SPAN><SPAN>&nbsp;write(OutputStream&nbsp;out,&nbsp;</SPAN><SPAN 
-class=keyword>byte</SPAN><SPAN>[]&nbsp;data)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;POIFSFileSystem&nbsp;fs&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;POIFSFileSystem(); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//&nbsp;Write&nbsp;out&nbsp;the&nbsp;Workbook&nbsp;stream 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>try</SPAN><SPAN>&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fs.createDocument(</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;ByteArrayInputStream(data),&nbsp;</SPAN><SPAN 
-class=string>"Workbook"</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fs.writeFilesystem(out); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out.flush(); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN><SPAN class=keyword>catch</SPAN><SPAN>&nbsp;(IOException&nbsp;e)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace(); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN><SPAN class=keyword>finally</SPAN><SPAN>&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>try</SPAN><SPAN>&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out.close(); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN><SPAN 
-class=keyword>catch</SPAN><SPAN>&nbsp;(IOException&nbsp;e)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace(); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>static</SPAN><SPAN>&nbsp;List&lt;Sheet&gt;&nbsp;getSheets(Workbook&nbsp;workbook,&nbsp;List&nbsp;records)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;recOffset&nbsp;=&nbsp;workbook.getNumRecords(); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;sheetNum&nbsp;=&nbsp;</SPAN><SPAN 
-class=number>0</SPAN><SPAN>; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=comment>//&nbsp;convert&nbsp;all&nbsp;LabelRecord&nbsp;records&nbsp;to&nbsp;LabelSSTRecord 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;convertLabelRecords(records,&nbsp;recOffset,&nbsp;workbook); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;List&lt;Sheet&gt;&nbsp;sheets&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;ArrayList(); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>while</SPAN><SPAN>&nbsp;(recOffset&nbsp;&lt;&nbsp;records.size())&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sheet&nbsp;sh&nbsp;=&nbsp;Sheet.createSheet(records,&nbsp;sheetNum++,&nbsp;recOffset); 
-&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;recOffset&nbsp;=&nbsp;sh.getEofLoc()&nbsp;+&nbsp;</SPAN><SPAN 
-class=number>1</SPAN><SPAN>; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>if</SPAN><SPAN>&nbsp;(recOffset&nbsp;==&nbsp;</SPAN><SPAN 
-class=number>1</SPAN><SPAN>)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>break</SPAN><SPAN>; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sheets.add(sh); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;sheets; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=keyword>static</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;getRows(List&lt;Record&gt;&nbsp;records)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>int</SPAN><SPAN>&nbsp;row&nbsp;=&nbsp;</SPAN><SPAN 
-class=number>0</SPAN><SPAN>; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>for</SPAN><SPAN>&nbsp;(Iterator&nbsp;itr&nbsp;=&nbsp;records.iterator();&nbsp;itr.hasNext();)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Record&nbsp;record&nbsp;=&nbsp;(Record)&nbsp;itr.next(); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>if</SPAN><SPAN>&nbsp;(record.getSid()&nbsp;==&nbsp;RowRecord.sid)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;row++; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;row; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=keyword>static</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;getRowsOfSheet(Sheet&nbsp;sheet)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>int</SPAN><SPAN>&nbsp;rows&nbsp;=&nbsp;</SPAN><SPAN 
-class=number>0</SPAN><SPAN>; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;sheet.setLoc(</SPAN><SPAN class=number>0</SPAN><SPAN>); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>while</SPAN><SPAN>(sheet.getNextRow()&nbsp;!=&nbsp;</SPAN><SPAN 
-class=keyword>null</SPAN><SPAN>)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows++; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;rows; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN 
-class=annotation>@SuppressWarnings</SPAN><SPAN>(</SPAN><SPAN 
-class=string>"deprecation"</SPAN><SPAN>) &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>static</SPAN><SPAN>&nbsp;List&lt;Record&gt;&nbsp;getRecords(InputStream&nbsp;input)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>try</SPAN><SPAN>&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POIFSFileSystem&nbsp;poifs&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;POIFSFileSystem(input); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InputStream&nbsp;stream&nbsp;=&nbsp;poifs.getRoot().createDocumentInputStream(</SPAN><SPAN 
-class=string>"Workbook"</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>return</SPAN><SPAN>&nbsp;org.apache.poi.hssf.record.RecordFactory.createRecords(stream); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN><SPAN class=keyword>catch</SPAN><SPAN>&nbsp;(IOException&nbsp;e)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logger.error(</SPAN><SPAN 
-class=string>"IOÒì³££º{}"</SPAN><SPAN>,&nbsp;e.getMessage()); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace(); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>return</SPAN><SPAN>&nbsp;Collections.EMPTY_LIST; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=keyword>static</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>void</SPAN><SPAN>&nbsp;convertLabelRecords(List&nbsp;records,&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;offset,&nbsp;Workbook&nbsp;workbook)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>for</SPAN><SPAN>&nbsp;(</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;k&nbsp;=&nbsp;offset;&nbsp;k&nbsp;&lt;&nbsp;records.size();&nbsp;k++)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Record&nbsp;rec&nbsp;=&nbsp;(Record)&nbsp;records.get(k); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>if</SPAN><SPAN>&nbsp;(rec.getSid()&nbsp;==&nbsp;LabelRecord.sid)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LabelRecord&nbsp;oldrec&nbsp;=&nbsp;(LabelRecord)&nbsp;rec; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;records.remove(k); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LabelSSTRecord&nbsp;newrec&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;LabelSSTRecord(); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;stringid&nbsp;=&nbsp;workbook.addSSTString(</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;UnicodeString(oldrec.getValue())); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;newrec.setRow(oldrec.getRow()); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;newrec.setColumn(oldrec.getColumn()); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;newrec.setXFIndex(oldrec.getXFIndex()); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;newrec.setSSTIndex(stringid); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;records.add(k,&nbsp;newrec); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>static</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>byte</SPAN><SPAN>[]&nbsp;getBytes(Workbook&nbsp;workbook,&nbsp;Sheet[]&nbsp;sheets)&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//&nbsp;HSSFSheet[]&nbsp;sheets&nbsp;=&nbsp;getSheets(); 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;nSheets&nbsp;=&nbsp;sheets.length; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=comment>//&nbsp;before&nbsp;getting&nbsp;the&nbsp;workbook&nbsp;size&nbsp;we&nbsp;must&nbsp;tell&nbsp;the&nbsp;sheets&nbsp;that 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//&nbsp;serialization&nbsp;is&nbsp;about&nbsp;to&nbsp;occur. 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>for</SPAN><SPAN>&nbsp;(</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;i&nbsp;=&nbsp;</SPAN><SPAN 
-class=number>0</SPAN><SPAN>;&nbsp;i&nbsp;&lt;&nbsp;nSheets;&nbsp;i++)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sheets[i].preSerialize(); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;totalsize&nbsp;=&nbsp;workbook.getSize(); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=comment>//&nbsp;pre-calculate&nbsp;all&nbsp;the&nbsp;sheet&nbsp;sizes&nbsp;and&nbsp;set&nbsp;BOF&nbsp;indexes 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>[]&nbsp;estimatedSheetSizes&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>[nSheets]; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>for</SPAN><SPAN>&nbsp;(</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;k&nbsp;=&nbsp;</SPAN><SPAN 
-class=number>0</SPAN><SPAN>;&nbsp;k&nbsp;&lt;&nbsp;nSheets;&nbsp;k++)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;workbook.setSheetBof(k,&nbsp;totalsize); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;sheetSize&nbsp;=&nbsp;sheets[k].getSize(); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;estimatedSheetSizes[k]&nbsp;=&nbsp;sheetSize; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totalsize&nbsp;+=&nbsp;sheetSize; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;logger.debug(</SPAN><SPAN 
-class=string>"·ÖÅäÄÚ´æ{}bytes"</SPAN><SPAN>,&nbsp;totalsize); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>byte</SPAN><SPAN>[]&nbsp;retval&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>byte</SPAN><SPAN>[totalsize]; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;pos&nbsp;=&nbsp;workbook.serialize(</SPAN><SPAN 
-class=number>0</SPAN><SPAN>,&nbsp;retval); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>for</SPAN><SPAN>&nbsp;(</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;k&nbsp;=&nbsp;</SPAN><SPAN 
-class=number>0</SPAN><SPAN>;&nbsp;k&nbsp;&lt;&nbsp;nSheets;&nbsp;k++)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;serializedSize&nbsp;=&nbsp;sheets[k].serialize(pos,&nbsp;retval); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>if</SPAN><SPAN>&nbsp;(serializedSize&nbsp;!=&nbsp;estimatedSheetSizes[k])&nbsp;{ 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=comment>//&nbsp;Wrong&nbsp;offset&nbsp;values&nbsp;have&nbsp;been&nbsp;passed&nbsp;in&nbsp;the&nbsp;call&nbsp;to&nbsp;setSheetBof()&nbsp;above. 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=comment>//&nbsp;For&nbsp;books&nbsp;with&nbsp;more&nbsp;than&nbsp;one&nbsp;sheet,&nbsp;this&nbsp;discrepancy&nbsp;would&nbsp;cause&nbsp;excel 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=comment>//&nbsp;to&nbsp;report&nbsp;errors&nbsp;and&nbsp;loose&nbsp;data&nbsp;while&nbsp;reading&nbsp;the&nbsp;workbook 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>throw</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;IllegalStateException(</SPAN><SPAN 
-class=string>"Actual&nbsp;serialized&nbsp;sheet&nbsp;size&nbsp;("</SPAN><SPAN>&nbsp;+&nbsp;serializedSize 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;</SPAN><SPAN 
-class=string>")&nbsp;differs&nbsp;from&nbsp;pre-calculated&nbsp;size&nbsp;("</SPAN><SPAN>&nbsp;+&nbsp;estimatedSheetSizes[k]&nbsp;+&nbsp;</SPAN><SPAN 
-class=string>")&nbsp;for&nbsp;sheet&nbsp;("</SPAN><SPAN>&nbsp;+&nbsp;k &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;</SPAN><SPAN class=string>")"</SPAN><SPAN>); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=comment>//&nbsp;TODO&nbsp;-&nbsp;add&nbsp;similar&nbsp;sanity&nbsp;check&nbsp;to&nbsp;ensure&nbsp;that&nbsp;Sheet.serializeIndexRecord()&nbsp;does&nbsp;not 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=comment>//&nbsp;write&nbsp;mis-aligned&nbsp;offsets&nbsp;either 
-</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos&nbsp;+=&nbsp;serializedSize; &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>return</SPAN><SPAN>&nbsp;retval; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>static</SPAN><SPAN>&nbsp;</SPAN><SPAN 
-class=keyword>void</SPAN><SPAN>&nbsp;main(String[]&nbsp;args)&nbsp;</SPAN><SPAN 
-class=keyword>throws</SPAN><SPAN>&nbsp;Exception&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>final</SPAN><SPAN>&nbsp;String&nbsp;PATH&nbsp;=&nbsp;</SPAN><SPAN 
-class=string>"E:\\projects\\java\\ws_0\\export\\data\\"</SPAN><SPAN>; 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;InputStream[]&nbsp;inputs&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;InputStream[</SPAN><SPAN 
-class=number>25</SPAN><SPAN>]; &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;inputs[</SPAN><SPAN class=number>0</SPAN><SPAN>]&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;java.io.FileInputStream(PATH&nbsp;+&nbsp;</SPAN><SPAN 
-class=string>"07_10.xls"</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>for</SPAN><SPAN>(</SPAN><SPAN 
-class=keyword>int</SPAN><SPAN>&nbsp;i&nbsp;=&nbsp;</SPAN><SPAN 
-class=number>1</SPAN><SPAN>;&nbsp;i&nbsp;&lt;&nbsp;</SPAN><SPAN 
-class=number>25</SPAN><SPAN>&nbsp;;&nbsp;i++)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inputs[i]&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;java.io.FileInputStream(PATH&nbsp;+&nbsp;</SPAN><SPAN 
-class=string>"07_01.xls"</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;OutputStream&nbsp;out&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;FileOutputStream(PATH&nbsp;+&nbsp;</SPAN><SPAN 
-class=string>"xx.xls"</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-class=keyword>long</SPAN><SPAN>&nbsp;t1&nbsp;=&nbsp;System.currentTimeMillis(); 
-&nbsp;&nbsp;</SPAN></SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;merge(inputs,&nbsp;out); &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(System.currentTimeMillis()&nbsp;-&nbsp;t1); 
-&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>&nbsp;&nbsp;</SPAN></LI>
-<LI><SPAN>}&nbsp;&nbsp;</SPAN></LI></OL></DIV><PRE style="DISPLAY: none" class=java name="code">@SuppressWarnings("unchecked")
+                        <LI>æ–‡ç« : 230
+                          <LI>ç§¯åˆ†: 349
+                            <LI>æ¥è‡ª: åŒ—äº¬
+                              <LI>
+                                <IMG src="offline.gif"> </LI>
+                </UL>
+              </TD>
+              <TD class=postcontent>
+                <DIV class=postactions>
+                  <DIV class=description>&nbsp;&nbsp; å‘è¡¨æ—¶é—´ï¼š2008-09-10&nbsp;&nbsp; </DIV>
+                  <DIV class=links>
+                    <A class=favorite href="http://app.javaeye.com/links?user_favorite%5Btitle%5D=cats_tiger%E5%9B%9E%E8%B4%B4%3A%E8%A7%A3%E5%86%B3%E5%A4%A7%E6%89%B9%E9%87%8F%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BAExcel%E4%BA%A7%E7%94%9F%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA%E7%9A%84%E6%96%B9%E6%A1%88&amp;user_favorite%5Burl%5D=http%3A%2F%2Fwww.javaeye.com%2Ftopic%2F240053%23661785"
+                    
+      target=_blank>æ”¶è—</A> </DIV>
+                </DIV>
+                <DIV class="postbody clearfix">
+                  <DIV class=quote_title>leasass å†™é“</DIV>
+                  <DIV class=quote_div>è®²è®²æˆ‘çš„è§£å†³æ–¹æ³•,
+                    <BR>ä¸€èˆ¬å¯¼å‡ºçš„Excelç”¨æ¥åšæŠ¥è¡¨æˆ–è€…ç»Ÿè®¡ç”¨çš„,ä¹Ÿä¸è¦æ±‚å›¾ç‰‡æˆ–å…¶å®ƒå¯¹è±¡,å°±æ˜¯æ•°æ®,
+                    <BR>æˆ‘çš„åšæ³•æ˜¯å†™æ–‡æœ¬æ ¼å¼çš„Excelæ–‡ä»¶,è€Œä¸æ˜¯ç”¨POIç­‰ç”ŸæˆäºŒè¿›åˆ¶çš„æ–‡ä»¶,
+                    <BR>ç¬¬ä¸€ç§æ ¼å¼,CSV,æœ€ç®€å•çš„,æ ¼å¼æœ€å·®,æœ€åŸºæœ¬çš„è¡Œåˆ—,ä¸èƒ½åˆå¹¶,ä¸èƒ½è®¾ç½®ç€è‰²,
+                    <BR>ç¬¬äºŒç§,HTMLæ ¼å¼çš„,å¦‚:"&lt;TABLE&gt;....&lt;/TABLE&gt;"è¿™æ ·çš„æ–‡æœ¬,åè¾åæ”¹ä¸ºXLSå°±å¯ä»¥äº†,å¯ä»¥è®¾ç½®è·¨è¡Œåˆ—çš„åˆå¹¶,å¯ä»¥ç€è‰²,å›¾ç‰‡æ²¡è¯•è¿‡,ä¼°è®¡æ˜¯å¯ä»¥çš„,è¿˜å¯ä»¥è®¾ç½®å•å…ƒæ ¼å¯¹é½,å•å…ƒæ ¼çš„æ ¼å¼ç­‰,
+                    <BR>
+                    <BR>å†™æ–‡æœ¬çš„æ—¶å€™,æ ¹æœ¬ä¸ç”¨æ‹…å¿ƒ OOMçš„é—®é¢˜,æˆ‘æœ€å¤§å†™è¿‡ 500å¤šMçš„ä¸€ä¸ªexcelæ–‡ä»¶,ä¸è¿‡è¿™å·²ç»æ²¡æœ‰æ„ä¹‰äº†,excelä¸€ä¸ªSheetæœ€å¤§6ä¸‡å¤šè¡Œ,å¤šäº†ä¹Ÿæ˜¾ç¤ºä¸å‡ºæ¥.
+                    <BR>
+                  </DIV>
+                  <BR>ä½ çš„åŠæ³•æˆ‘ä¹Ÿç”¨è¿‡ï¼Œçš„ç¡®æ²¡æœ‰æº¢å‡ºçš„é—®é¢˜ï¼Œä¸è¿‡å®¢æˆ·ä¸åŒæ„çš„ã€‚æˆ‘ä»¬ç°åœ¨çš„è¿™ä¸ªçš„å®¢æˆ·å¾ˆå„è‰²ï¼Œä»¥å‰å…¶ä»–çš„å®¢æˆ·å°±å¯ä»¥ç”¨ä½ çš„åŠæ³•æå®šã€‚æ¯”å¦‚å®¢æˆ·è¦æ±‚ä¸€æ¬¡å¯¼å‡º20wè¡Œæ•°æ®ï¼Œè¿™å°±è¦æ±‚å¯¼å‡ºçš„æ–‡ä»¶å¿…é¡»å¸¦sheetï¼Œä¸Šé¢çš„ä»£ç ä¹Ÿä¸æ”¯æŒsheetï¼Œä¸‹é¢çš„å°±å¯ä»¥äº†ï¼š
+                  <BR>
+                  <DIV class=dp-highlighter>
+                    <DIV class=bar>
+                      <DIV class=tools>Javaä»£ç 
+                        <A title=å¤åˆ¶ä»£ç  onclick="dp.sh.Toolbar.CopyToClipboard(this);return false;" href="http://www.javaeye.com/topic/240053#">
+                          <IMG alt=å¤åˆ¶ä»£ç  src="icon_copy.gif">
+                        </A>
+                      </DIV>
+                    </DIV>
+                    <OL class=dp-j>
+                      <LI>
+                        <SPAN><SPAN class=annotation>@SuppressWarnings</SPAN>
+                        <SPAN>(</SPAN>
+                        <SPAN class=string>"unchecked"</SPAN>
+                        <SPAN>) &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN></SPAN>
+                        <SPAN class=keyword>public</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>class</SPAN>
+                        <SPAN>&nbsp;XlsMergeUtil&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>private</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>static</SPAN>
+                        <SPAN>&nbsp;Logger&nbsp;logger&nbsp;=&nbsp;LoggerFactory.getLogger(XlsMergeUtil.</SPAN>
+                        <SPAN class=keyword>class</SPAN>
+                        <SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>/** </SPAN>&nbsp;</SPAN>
+                      <LI>
+                        <SPAN><SPAN class=comment>&nbsp;&nbsp;&nbsp;*&nbsp;å°†å¤šä¸ªXlsæ–‡ä»¶åˆå¹¶ä¸ºä¸€ä¸ªï¼Œé€‚ç”¨äºåªæœ‰ä¸€ä¸ªsheetï¼Œå¹¶ä¸”æ ¼å¼ç›¸åŒçš„æ–‡æ¡£ 
+</SPAN>&nbsp;</SPAN>
+                      <LI>
+                        <SPAN><SPAN class=comment>&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;inputs&nbsp;è¾“å…¥çš„Xlsæ–‡ä»¶ï¼Œç¬¬ä¸€ä¸ªXLSæ–‡ä»¶å¿…é¡»ç»™å‡ºè¶³å¤Ÿsheetç©ºé—´ 
+</SPAN>&nbsp;</SPAN>
+                      <LI>
+                        <SPAN><SPAN class=comment>&nbsp;&nbsp;&nbsp;*&nbsp;ä¾‹å¦‚ï¼Œæ€»å…±200000è¡Œæ•°æ®ï¼Œç¬¬ä¸€ä¸ªæ–‡ä»¶è‡³å°‘3ä¸ªç©ºç™½sheet 
+</SPAN>&nbsp;</SPAN>
+                      <LI>
+                        <SPAN><SPAN class=comment>&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;out&nbsp;è¾“å‡ºæ–‡ä»¶ </SPAN>&nbsp;</SPAN>
+                      <LI>
+                        <SPAN><SPAN class=comment>&nbsp;&nbsp;&nbsp;*/</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>public</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>static</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>void</SPAN>
+                        <SPAN>&nbsp;merge(InputStream[]&nbsp;inputs,&nbsp;OutputStream&nbsp;out)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>if</SPAN>
+                        <SPAN>&nbsp;(inputs&nbsp;==&nbsp;</SPAN>
+                        <SPAN class=keyword>null</SPAN>
+                        <SPAN>&nbsp;||&nbsp;inputs.length&nbsp;&lt;=&nbsp;</SPAN>
+                        <SPAN class=number>1</SPAN>
+                        <SPAN>)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>throw</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;IllegalArgumentException(</SPAN>
+                        <SPAN class=string>"æ²¡æœ‰ä¼ å…¥è¾“å…¥æµæ•°ç»„,æˆ–åªæœ‰ä¸€ä¸ªè¾“å…¥æµ."</SPAN>
+                        <SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;List&lt;Record&gt;&nbsp;rootRecords&nbsp;=&nbsp;getRecords(inputs[</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>]); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;Workbook&nbsp;workbook&nbsp;=&nbsp;Workbook.createWorkbook(rootRecords); 
+&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;List&lt;Sheet&gt;&nbsp;sheets&nbsp;=&nbsp;getSheets(workbook,&nbsp;rootRecords); 
+&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>if</SPAN>
+                        <SPAN>(sheets&nbsp;==&nbsp;</SPAN>
+                        <SPAN class=keyword>null</SPAN>
+                        <SPAN>&nbsp;||&nbsp;sheets.size()&nbsp;==&nbsp;</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>throw</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;IllegalArgumentException(</SPAN>
+                        <SPAN class=string>"ç¬¬ä¸€ç¯‡æ–‡æ¡£çš„æ ¼å¼é”™è¯¯ï¼Œå¿…é¡»æœ‰è‡³å°‘ä¸€ä¸ªsheet"</SPAN>
+                        <SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//ä»¥ç¬¬ä¸€ç¯‡æ–‡æ¡£çš„ç¬¬ä¸€ä¸ªsheetä¸ºæ ¹ï¼Œä»¥åçš„æ•°æ®éƒ½è¿½åŠ åœ¨è¿™ä¸ªsheetåé¢ 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;Sheet&nbsp;rootSheet&nbsp;=&nbsp;sheets.get(</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>);&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;rootRows&nbsp;=&nbsp;getRowsOfSheet(rootSheet);&nbsp;</SPAN>
+                        <SPAN class=comment>//è®°å½•ç¬¬ä¸€ç¯‡æ–‡æ¡£çš„è¡Œæ•°ï¼Œä»¥åçš„è¡Œæ•°åœ¨æ­¤åŸºç¡€ä¸Šå¢åŠ  </SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;rootSheet.setLoc(rootSheet.getDimsLoc()); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;Map&lt;Integer,&nbsp;Integer&gt;&nbsp;map&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;HashMap(</SPAN>
+                        <SPAN class=number>10000</SPAN>
+                        <SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;sheetIndex&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>; &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>for</SPAN>
+                        <SPAN>&nbsp;(</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;i&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=number>1</SPAN>
+                        <SPAN>;&nbsp;i&nbsp;&lt;&nbsp;inputs.length;&nbsp;i++)&nbsp;{&nbsp;</SPAN>
+                        <SPAN class=comment>//ä»ç¬¬äºŒç¯‡å¼€å§‹éå† </SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List&lt;Record&gt;&nbsp;records&nbsp;=&nbsp;getRecords(inputs[i]); 
+&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//è¾¾åˆ°æœ€å¤§è¡Œæ•°é™åˆ¶ï¼Œæ¢ä¸€ä¸ªsheet 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>if</SPAN>
+                        <SPAN>(getRows(records)&nbsp;+&nbsp;rootRows&nbsp;&gt;=&nbsp;RowRecord.MAX_ROW_NUMBER)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>if</SPAN>
+                        <SPAN>((++sheetIndex)&nbsp;&gt;&nbsp;(sheets.size()&nbsp;-&nbsp;</SPAN>
+                        <SPAN class=number>1</SPAN>
+                        <SPAN>))&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logger.warn(</SPAN>
+                        <SPAN class=string>"ç¬¬ä¸€ä¸ªæ–‡æ¡£ç»™å‡ºçš„sheetså°äºéœ€è¦çš„æ•°é‡ï¼Œéƒ¨åˆ†æ•°æ®æœªèƒ½åˆå¹¶."</SPAN>
+                        <SPAN>); 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>break</SPAN>
+                        <SPAN>; 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rootSheet&nbsp;=&nbsp;sheets.get(sheetIndex); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rootRows&nbsp;=&nbsp;getRowsOfSheet(rootSheet); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rootSheet.setLoc(rootSheet.getDimsLoc()); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logger.debug(</SPAN>
+                        <SPAN class=string>"åˆ‡æ¢Sheet{}"</SPAN>
+                        <SPAN>,&nbsp;sheetIndex); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;rowsOfCurXls&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>; &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//éå†å½“å‰æ–‡æ¡£çš„æ¯ä¸€ä¸ªrecord 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>for</SPAN>
+                        <SPAN>&nbsp;(Iterator&nbsp;itr&nbsp;=&nbsp;records.iterator();&nbsp;itr.hasNext();)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Record&nbsp;record&nbsp;=&nbsp;(Record)&nbsp;itr.next(); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>if</SPAN>
+                        <SPAN>&nbsp;(record.getSid()&nbsp;==&nbsp;RowRecord.sid)&nbsp;{&nbsp;</SPAN>
+                        <SPAN class=comment>//å¦‚æœæ˜¯RowRecord </SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RowRecord&nbsp;rowRecord&nbsp;=&nbsp;(RowRecord)&nbsp;record; &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//è°ƒæ•´è¡Œå· 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rowRecord.setRowNumber(rootRows&nbsp;+&nbsp;rowRecord.getRowNumber()); 
+&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rootSheet.addRow(rowRecord);&nbsp;</SPAN>
+                        <SPAN class=comment>//è¿½åŠ Row </SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rowsOfCurXls++;&nbsp;</SPAN>
+                        <SPAN class=comment>//è®°å½•å½“å‰æ–‡æ¡£çš„è¡Œæ•° 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//SSTè®°å½•ï¼ŒSSTä¿å­˜xlsæ–‡ä»¶ä¸­å”¯ä¸€çš„Stringï¼Œå„ä¸ªStringéƒ½æ˜¯å¯¹åº”ç€SSTè®°å½•çš„ç´¢å¼• 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>else</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>if</SPAN>
+                        <SPAN>&nbsp;(record.getSid()&nbsp;==&nbsp;SSTRecord.sid)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SSTRecord&nbsp;sstRecord&nbsp;=&nbsp;(SSTRecord)&nbsp;record; &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>for</SPAN>
+                        <SPAN>&nbsp;(</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;j&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>;&nbsp;j&nbsp;&lt;&nbsp;sstRecord.getNumUniqueStrings();&nbsp;j++)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;index&nbsp;=&nbsp;workbook.addSSTString(sstRecord.getString(j)); 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//è®°å½•åŸæ¥çš„ç´¢å¼•å’Œç°åœ¨çš„ç´¢å¼•çš„å¯¹åº”å…³ç³» 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map.put(Integer.valueOf(j),&nbsp;Integer.valueOf(index)); 
+&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN>
+                        <SPAN class=keyword>else</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>if</SPAN>
+                        <SPAN>&nbsp;(record.getSid()&nbsp;==&nbsp;LabelSSTRecord.sid)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LabelSSTRecord&nbsp;label&nbsp;=&nbsp;(LabelSSTRecord)&nbsp;record; 
+&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//è°ƒæ•´SSTç´¢å¼•çš„å¯¹åº”å…³ç³» 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label.setSSTIndex(map.get(Integer.valueOf(label.getSSTIndex()))); 
+&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//è¿½åŠ ValueCell 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>if</SPAN>
+                        <SPAN>&nbsp;(record&nbsp;</SPAN>
+                        <SPAN class=keyword>instanceof</SPAN>
+                        <SPAN>&nbsp;CellValueRecordInterface)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CellValueRecordInterface&nbsp;cell&nbsp;=&nbsp;(CellValueRecordInterface)&nbsp;record; 
+&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;cellRow&nbsp;=&nbsp;cell.getRow()&nbsp;+&nbsp;rootRows; 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cell.setRow(cellRow); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rootSheet.addValueRecord(cellRow,&nbsp;cell); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rootRows&nbsp;+=&nbsp;rowsOfCurXls; &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>byte</SPAN>
+                        <SPAN>[]&nbsp;data&nbsp;=&nbsp;getBytes(workbook,&nbsp;sheets.toArray(</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;Sheet[</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>])); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;write(out,&nbsp;data); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>static</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>void</SPAN>
+                        <SPAN>&nbsp;write(OutputStream&nbsp;out,&nbsp;</SPAN>
+                        <SPAN class=keyword>byte</SPAN>
+                        <SPAN>[]&nbsp;data)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;POIFSFileSystem&nbsp;fs&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;POIFSFileSystem(); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//&nbsp;Write&nbsp;out&nbsp;the&nbsp;Workbook&nbsp;stream 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>try</SPAN>
+                        <SPAN>&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fs.createDocument(</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;ByteArrayInputStream(data),&nbsp;</SPAN>
+                        <SPAN class=string>"Workbook"</SPAN>
+                        <SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fs.writeFilesystem(out); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out.flush(); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN>
+                        <SPAN class=keyword>catch</SPAN>
+                        <SPAN>&nbsp;(IOException&nbsp;e)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace(); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN>
+                        <SPAN class=keyword>finally</SPAN>
+                        <SPAN>&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>try</SPAN>
+                        <SPAN>&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out.close(); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN>
+                        <SPAN class=keyword>catch</SPAN>
+                        <SPAN>&nbsp;(IOException&nbsp;e)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace(); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>static</SPAN>
+                        <SPAN>&nbsp;List&lt;Sheet&gt;&nbsp;getSheets(Workbook&nbsp;workbook,&nbsp;List&nbsp;records)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;recOffset&nbsp;=&nbsp;workbook.getNumRecords(); 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;sheetNum&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>; &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//&nbsp;convert&nbsp;all&nbsp;LabelRecord&nbsp;records&nbsp;to&nbsp;LabelSSTRecord 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;convertLabelRecords(records,&nbsp;recOffset,&nbsp;workbook); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;List&lt;Sheet&gt;&nbsp;sheets&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;ArrayList(); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>while</SPAN>
+                        <SPAN>&nbsp;(recOffset&nbsp;&lt;&nbsp;records.size())&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sheet&nbsp;sh&nbsp;=&nbsp;Sheet.createSheet(records,&nbsp;sheetNum++,&nbsp;recOffset); 
+&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;recOffset&nbsp;=&nbsp;sh.getEofLoc()&nbsp;+&nbsp;</SPAN>
+                        <SPAN class=number>1</SPAN>
+                        <SPAN>; &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>if</SPAN>
+                        <SPAN>&nbsp;(recOffset&nbsp;==&nbsp;</SPAN>
+                        <SPAN class=number>1</SPAN>
+                        <SPAN>)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>break</SPAN>
+                        <SPAN>; 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sheets.add(sh); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>return</SPAN>
+                        <SPAN>&nbsp;sheets; 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>static</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;getRows(List&lt;Record&gt;&nbsp;records)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;row&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>; &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>for</SPAN>
+                        <SPAN>&nbsp;(Iterator&nbsp;itr&nbsp;=&nbsp;records.iterator();&nbsp;itr.hasNext();)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Record&nbsp;record&nbsp;=&nbsp;(Record)&nbsp;itr.next(); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>if</SPAN>
+                        <SPAN>&nbsp;(record.getSid()&nbsp;==&nbsp;RowRecord.sid)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;row++; &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>return</SPAN>
+                        <SPAN>&nbsp;row; 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>static</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;getRowsOfSheet(Sheet&nbsp;sheet)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;rows&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>; &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;sheet.setLoc(</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>); 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>while</SPAN>
+                        <SPAN>(sheet.getNextRow()&nbsp;!=&nbsp;</SPAN>
+                        <SPAN class=keyword>null</SPAN>
+                        <SPAN>)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows++; &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>return</SPAN>
+                        <SPAN>&nbsp;rows; 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                        <SPAN class=annotation>@SuppressWarnings</SPAN>
+                        <SPAN>(</SPAN>
+                        <SPAN class=string>"deprecation"</SPAN>
+                        <SPAN>) &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>static</SPAN>
+                        <SPAN>&nbsp;List&lt;Record&gt;&nbsp;getRecords(InputStream&nbsp;input)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>try</SPAN>
+                        <SPAN>&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POIFSFileSystem&nbsp;poifs&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;POIFSFileSystem(input); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InputStream&nbsp;stream&nbsp;=&nbsp;poifs.getRoot().createDocumentInputStream(</SPAN>
+                        <SPAN class=string>"Workbook"</SPAN>
+                        <SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>return</SPAN>
+                        <SPAN>&nbsp;org.apache.poi.hssf.record.RecordFactory.createRecords(stream); 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN>
+                        <SPAN class=keyword>catch</SPAN>
+                        <SPAN>&nbsp;(IOException&nbsp;e)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logger.error(</SPAN>
+                        <SPAN class=string>"IOå¼‚å¸¸ï¼š{}"</SPAN>
+                        <SPAN>,&nbsp;e.getMessage()); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace(); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>return</SPAN>
+                        <SPAN>&nbsp;Collections.EMPTY_LIST; &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>static</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>void</SPAN>
+                        <SPAN>&nbsp;convertLabelRecords(List&nbsp;records,&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;offset,&nbsp;Workbook&nbsp;workbook)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>for</SPAN>
+                        <SPAN>&nbsp;(</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;k&nbsp;=&nbsp;offset;&nbsp;k&nbsp;&lt;&nbsp;records.size();&nbsp;k++)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Record&nbsp;rec&nbsp;=&nbsp;(Record)&nbsp;records.get(k); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>if</SPAN>
+                        <SPAN>&nbsp;(rec.getSid()&nbsp;==&nbsp;LabelRecord.sid)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LabelRecord&nbsp;oldrec&nbsp;=&nbsp;(LabelRecord)&nbsp;rec; &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;records.remove(k); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LabelSSTRecord&nbsp;newrec&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;LabelSSTRecord(); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;stringid&nbsp;=&nbsp;workbook.addSSTString(</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;UnicodeString(oldrec.getValue())); 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;newrec.setRow(oldrec.getRow()); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;newrec.setColumn(oldrec.getColumn()); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;newrec.setXFIndex(oldrec.getXFIndex()); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;newrec.setSSTIndex(stringid); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;records.add(k,&nbsp;newrec); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>public</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>static</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>byte</SPAN>
+                        <SPAN>[]&nbsp;getBytes(Workbook&nbsp;workbook,&nbsp;Sheet[]&nbsp;sheets)&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//&nbsp;HSSFSheet[]&nbsp;sheets&nbsp;=&nbsp;getSheets(); 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;nSheets&nbsp;=&nbsp;sheets.length; &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//&nbsp;before&nbsp;getting&nbsp;the&nbsp;workbook&nbsp;size&nbsp;we&nbsp;must&nbsp;tell&nbsp;the&nbsp;sheets&nbsp;that 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//&nbsp;serialization&nbsp;is&nbsp;about&nbsp;to&nbsp;occur. 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>for</SPAN>
+                        <SPAN>&nbsp;(</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;i&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>;&nbsp;i&nbsp;&lt;&nbsp;nSheets;&nbsp;i++)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sheets[i].preSerialize(); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;totalsize&nbsp;=&nbsp;workbook.getSize(); 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//&nbsp;pre-calculate&nbsp;all&nbsp;the&nbsp;sheet&nbsp;sizes&nbsp;and&nbsp;set&nbsp;BOF&nbsp;indexes 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>[]&nbsp;estimatedSheetSizes&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>[nSheets]; &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>for</SPAN>
+                        <SPAN>&nbsp;(</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;k&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>;&nbsp;k&nbsp;&lt;&nbsp;nSheets;&nbsp;k++)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;workbook.setSheetBof(k,&nbsp;totalsize); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;sheetSize&nbsp;=&nbsp;sheets[k].getSize(); 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;estimatedSheetSizes[k]&nbsp;=&nbsp;sheetSize; &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totalsize&nbsp;+=&nbsp;sheetSize; &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;logger.debug(</SPAN>
+                        <SPAN class=string>"åˆ†é…å†…å­˜{}bytes"</SPAN>
+                        <SPAN>,&nbsp;totalsize); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>byte</SPAN>
+                        <SPAN>[]&nbsp;retval&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>byte</SPAN>
+                        <SPAN>[totalsize]; &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;pos&nbsp;=&nbsp;workbook.serialize(</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>,&nbsp;retval); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>for</SPAN>
+                        <SPAN>&nbsp;(</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;k&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>;&nbsp;k&nbsp;&lt;&nbsp;nSheets;&nbsp;k++)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;serializedSize&nbsp;=&nbsp;sheets[k].serialize(pos,&nbsp;retval); 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>if</SPAN>
+                        <SPAN>&nbsp;(serializedSize&nbsp;!=&nbsp;estimatedSheetSizes[k])&nbsp;{ 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//&nbsp;Wrong&nbsp;offset&nbsp;values&nbsp;have&nbsp;been&nbsp;passed&nbsp;in&nbsp;the&nbsp;call&nbsp;to&nbsp;setSheetBof()&nbsp;above. 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//&nbsp;For&nbsp;books&nbsp;with&nbsp;more&nbsp;than&nbsp;one&nbsp;sheet,&nbsp;this&nbsp;discrepancy&nbsp;would&nbsp;cause&nbsp;excel 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//&nbsp;to&nbsp;report&nbsp;errors&nbsp;and&nbsp;loose&nbsp;data&nbsp;while&nbsp;reading&nbsp;the&nbsp;workbook 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>throw</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;IllegalStateException(</SPAN>
+                        <SPAN class=string>"Actual&nbsp;serialized&nbsp;sheet&nbsp;size&nbsp;("</SPAN>
+                        <SPAN>&nbsp;+&nbsp;serializedSize 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;</SPAN>
+                        <SPAN class=string>")&nbsp;differs&nbsp;from&nbsp;pre-calculated&nbsp;size&nbsp;("</SPAN>
+                        <SPAN>&nbsp;+&nbsp;estimatedSheetSizes[k]&nbsp;+&nbsp;</SPAN>
+                        <SPAN class=string>")&nbsp;for&nbsp;sheet&nbsp;("</SPAN>
+                        <SPAN>&nbsp;+&nbsp;k &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;</SPAN>
+                        <SPAN class=string>")"</SPAN>
+                        <SPAN>); 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//&nbsp;TODO&nbsp;-&nbsp;add&nbsp;similar&nbsp;sanity&nbsp;check&nbsp;to&nbsp;ensure&nbsp;that&nbsp;Sheet.serializeIndexRecord()&nbsp;does&nbsp;not 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=comment>//&nbsp;write&nbsp;mis-aligned&nbsp;offsets&nbsp;either 
+</SPAN>
+                        <SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos&nbsp;+=&nbsp;serializedSize; &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>return</SPAN>
+                        <SPAN>&nbsp;retval; 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>public</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>static</SPAN>
+                        <SPAN>&nbsp;</SPAN>
+                        <SPAN class=keyword>void</SPAN>
+                        <SPAN>&nbsp;main(String[]&nbsp;args)&nbsp;</SPAN>
+                        <SPAN class=keyword>throws</SPAN>
+                        <SPAN>&nbsp;Exception&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>final</SPAN>
+                        <SPAN>&nbsp;String&nbsp;PATH&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=string>"E:\\projects\\java\\ws_0\\export\\data\\"</SPAN>
+                        <SPAN>; 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;InputStream[]&nbsp;inputs&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;InputStream[</SPAN>
+                        <SPAN class=number>25</SPAN>
+                        <SPAN>]; &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;inputs[</SPAN>
+                        <SPAN class=number>0</SPAN>
+                        <SPAN>]&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;java.io.FileInputStream(PATH&nbsp;+&nbsp;</SPAN>
+                        <SPAN class=string>"07_10.xls"</SPAN>
+                        <SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>for</SPAN>
+                        <SPAN>(</SPAN>
+                        <SPAN class=keyword>int</SPAN>
+                        <SPAN>&nbsp;i&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=number>1</SPAN>
+                        <SPAN>;&nbsp;i&nbsp;&lt;&nbsp;</SPAN>
+                        <SPAN class=number>25</SPAN>
+                        <SPAN>&nbsp;;&nbsp;i++)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inputs[i]&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;java.io.FileInputStream(PATH&nbsp;+&nbsp;</SPAN>
+                        <SPAN class=string>"07_01.xls"</SPAN>
+                        <SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;OutputStream&nbsp;out&nbsp;=&nbsp;</SPAN>
+                        <SPAN class=keyword>new</SPAN>
+                        <SPAN>&nbsp;FileOutputStream(PATH&nbsp;+&nbsp;</SPAN>
+                        <SPAN class=string>"xx.xls"</SPAN>
+                        <SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>
+                        <SPAN class=keyword>long</SPAN>
+                        <SPAN>&nbsp;t1&nbsp;=&nbsp;System.currentTimeMillis(); 
+&nbsp;&nbsp;</SPAN></SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;merge(inputs,&nbsp;out); &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(System.currentTimeMillis()&nbsp;-&nbsp;t1); 
+&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>&nbsp;&nbsp;</SPAN>
+                      <LI>
+                        <SPAN>}&nbsp;&nbsp;</SPAN>
+                      </LI>
+                    </OL>
+                  </DIV>
+                  <PRE style="DISPLAY: none" class=java name="code">@SuppressWarnings("unchecked")
 public class XlsMergeUtil {
   private static Logger logger = LoggerFactory.getLogger(XlsMergeUtil.class);
 
   /**
-   * ½«¶à¸öXlsÎÄ¼şºÏ²¢ÎªÒ»¸ö£¬ÊÊÓÃÓÚÖ»ÓĞÒ»¸ösheet£¬²¢ÇÒ¸ñÊ½ÏàÍ¬µÄÎÄµµ
-   * @param inputs ÊäÈëµÄXlsÎÄ¼ş£¬µÚÒ»¸öXLSÎÄ¼ş±ØĞë¸ø³ö×ã¹»sheet¿Õ¼ä
-   * ÀıÈç£¬×Ü¹²200000ĞĞÊı¾İ£¬µÚÒ»¸öÎÄ¼şÖÁÉÙ3¸ö¿Õ°×sheet
-   * @param out Êä³öÎÄ¼ş
+   * å°†å¤šä¸ªXlsæ–‡ä»¶åˆå¹¶ä¸ºä¸€ä¸ªï¼Œé€‚ç”¨äºåªæœ‰ä¸€ä¸ªsheetï¼Œå¹¶ä¸”æ ¼å¼ç›¸åŒçš„æ–‡æ¡£
+   * @param inputs è¾“å…¥çš„Xlsæ–‡ä»¶ï¼Œç¬¬ä¸€ä¸ªXLSæ–‡ä»¶å¿…é¡»ç»™å‡ºè¶³å¤Ÿsheetç©ºé—´
+   * ä¾‹å¦‚ï¼Œæ€»å…±200000è¡Œæ•°æ®ï¼Œç¬¬ä¸€ä¸ªæ–‡ä»¶è‡³å°‘3ä¸ªç©ºç™½sheet
+   * @param out è¾“å‡ºæ–‡ä»¶
    */
   public static void merge(InputStream[] inputs, OutputStream out) {
     if (inputs == null || inputs.length &lt;= 1) {
-      throw new IllegalArgumentException("Ã»ÓĞ´«ÈëÊäÈëÁ÷Êı×é,»òÖ»ÓĞÒ»¸öÊäÈëÁ÷.");
+      throw new IllegalArgumentException("æ²¡æœ‰ä¼ å…¥è¾“å…¥æµæ•°ç»„,æˆ–åªæœ‰ä¸€ä¸ªè¾“å…¥æµ.");
     }
 
     List&lt;Record&gt; rootRecords = getRecords(inputs[0]);
     Workbook workbook = Workbook.createWorkbook(rootRecords);
     List&lt;Sheet&gt; sheets = getSheets(workbook, rootRecords);
     if(sheets == null || sheets.size() == 0) {
-      throw new IllegalArgumentException("µÚÒ»ÆªÎÄµµµÄ¸ñÊ½´íÎó£¬±ØĞëÓĞÖÁÉÙÒ»¸ösheet");
+      throw new IllegalArgumentException("ç¬¬ä¸€ç¯‡æ–‡æ¡£çš„æ ¼å¼é”™è¯¯ï¼Œå¿…é¡»æœ‰è‡³å°‘ä¸€ä¸ªsheet");
     }
-    //ÒÔµÚÒ»ÆªÎÄµµµÄµÚÒ»¸ösheetÎª¸ù£¬ÒÔºóµÄÊı¾İ¶¼×·¼ÓÔÚÕâ¸ösheetºóÃæ
+    //ä»¥ç¬¬ä¸€ç¯‡æ–‡æ¡£çš„ç¬¬ä¸€ä¸ªsheetä¸ºæ ¹ï¼Œä»¥åçš„æ•°æ®éƒ½è¿½åŠ åœ¨è¿™ä¸ªsheetåé¢
     Sheet rootSheet = sheets.get(0); 
-    int rootRows = getRowsOfSheet(rootSheet); //¼ÇÂ¼µÚÒ»ÆªÎÄµµµÄĞĞÊı£¬ÒÔºóµÄĞĞÊıÔÚ´Ë»ù´¡ÉÏÔö¼Ó
+    int rootRows = getRowsOfSheet(rootSheet); //è®°å½•ç¬¬ä¸€ç¯‡æ–‡æ¡£çš„è¡Œæ•°ï¼Œä»¥åçš„è¡Œæ•°åœ¨æ­¤åŸºç¡€ä¸Šå¢åŠ 
     rootSheet.setLoc(rootSheet.getDimsLoc());
     Map&lt;Integer, Integer&gt; map = new HashMap(10000);
     int sheetIndex = 0;
     
-    for (int i = 1; i &lt; inputs.length; i++) { //´ÓµÚ¶şÆª¿ªÊ¼±éÀú
+    for (int i = 1; i &lt; inputs.length; i++) { //ä»ç¬¬äºŒç¯‡å¼€å§‹éå†
       List&lt;Record&gt; records = getRecords(inputs[i]);
-      //´ïµ½×î´óĞĞÊıÏŞÖÆ£¬»»Ò»¸ösheet
+      //è¾¾åˆ°æœ€å¤§è¡Œæ•°é™åˆ¶ï¼Œæ¢ä¸€ä¸ªsheet
       if(getRows(records) + rootRows &gt;= RowRecord.MAX_ROW_NUMBER) {
         if((++sheetIndex) &gt; (sheets.size() - 1)) {
-          logger.warn("µÚÒ»¸öÎÄµµ¸ø³öµÄsheetsĞ¡ÓÚĞèÒªµÄÊıÁ¿£¬²¿·ÖÊı¾İÎ´ÄÜºÏ²¢.");
+          logger.warn("ç¬¬ä¸€ä¸ªæ–‡æ¡£ç»™å‡ºçš„sheetså°äºéœ€è¦çš„æ•°é‡ï¼Œéƒ¨åˆ†æ•°æ®æœªèƒ½åˆå¹¶.");
           break;
         }
         rootSheet = sheets.get(sheetIndex);
         rootRows = getRowsOfSheet(rootSheet);
         rootSheet.setLoc(rootSheet.getDimsLoc());
-        logger.debug("ÇĞ»»Sheet{}", sheetIndex);
+        logger.debug("åˆ‡æ¢Sheet{}", sheetIndex);
       }
       int rowsOfCurXls = 0;
-      //±éÀúµ±Ç°ÎÄµµµÄÃ¿Ò»¸örecord
+      //éå†å½“å‰æ–‡æ¡£çš„æ¯ä¸€ä¸ªrecord
       for (Iterator itr = records.iterator(); itr.hasNext();) {
         Record record = (Record) itr.next();
-        if (record.getSid() == RowRecord.sid) { //Èç¹ûÊÇRowRecord
+        if (record.getSid() == RowRecord.sid) { //å¦‚æœæ˜¯RowRecord
           RowRecord rowRecord = (RowRecord) record;
-          //µ÷ÕûĞĞºÅ
+          //è°ƒæ•´è¡Œå·
           rowRecord.setRowNumber(rootRows + rowRecord.getRowNumber());
-          rootSheet.addRow(rowRecord); //×·¼ÓRow
-          rowsOfCurXls++; //¼ÇÂ¼µ±Ç°ÎÄµµµÄĞĞÊı
+          rootSheet.addRow(rowRecord); //è¿½åŠ Row
+          rowsOfCurXls++; //è®°å½•å½“å‰æ–‡æ¡£çš„è¡Œæ•°
         }
-        //SST¼ÇÂ¼£¬SST±£´æxlsÎÄ¼şÖĞÎ¨Ò»µÄString£¬¸÷¸öString¶¼ÊÇ¶ÔÓ¦×ÅSST¼ÇÂ¼µÄË÷Òı
+        //SSTè®°å½•ï¼ŒSSTä¿å­˜xlsæ–‡ä»¶ä¸­å”¯ä¸€çš„Stringï¼Œå„ä¸ªStringéƒ½æ˜¯å¯¹åº”ç€SSTè®°å½•çš„ç´¢å¼•
         else if (record.getSid() == SSTRecord.sid) {
           SSTRecord sstRecord = (SSTRecord) record;
           for (int j = 0; j &lt; sstRecord.getNumUniqueStrings(); j++) {
             int index = workbook.addSSTString(sstRecord.getString(j));
-            //¼ÇÂ¼Ô­À´µÄË÷ÒıºÍÏÖÔÚµÄË÷ÒıµÄ¶ÔÓ¦¹ØÏµ
+            //è®°å½•åŸæ¥çš„ç´¢å¼•å’Œç°åœ¨çš„ç´¢å¼•çš„å¯¹åº”å…³ç³»
             map.put(Integer.valueOf(j), Integer.valueOf(index));
           }
         } else if (record.getSid() == LabelSSTRecord.sid) {
           LabelSSTRecord label = (LabelSSTRecord) record;
-          //µ÷ÕûSSTË÷ÒıµÄ¶ÔÓ¦¹ØÏµ
+          //è°ƒæ•´SSTç´¢å¼•çš„å¯¹åº”å…³ç³»
           label.setSSTIndex(map.get(Integer.valueOf(label.getSSTIndex())));
         }
-        //×·¼ÓValueCell
+        //è¿½åŠ ValueCell
         if (record instanceof CellValueRecordInterface) {
           CellValueRecordInterface cell = (CellValueRecordInterface) record;
           int cellRow = cell.getRow() + rootRows;
@@ -1336,7 +2284,7 @@ public class XlsMergeUtil {
       InputStream stream = poifs.getRoot().createDocumentInputStream("Workbook");
       return org.apache.poi.hssf.record.RecordFactory.createRecords(stream);
     } catch (IOException e) {
-      logger.error("IOÒì³££º{}", e.getMessage());
+      logger.error("IOå¼‚å¸¸ï¼š{}", e.getMessage());
       e.printStackTrace();
     }
     return Collections.EMPTY_LIST;
@@ -1382,7 +2330,7 @@ public class XlsMergeUtil {
       estimatedSheetSizes[k] = sheetSize;
       totalsize += sheetSize;
     }
-    logger.debug("·ÖÅäÄÚ´æ{}bytes", totalsize);
+    logger.debug("åˆ†é…å†…å­˜{}bytes", totalsize);
     byte[] retval = new byte[totalsize];
     int pos = workbook.serialize(0, retval);
 
@@ -1418,23 +2366,31 @@ public class XlsMergeUtil {
 
 }
 
-</PRE><BR></DIV></TD></TR>
-<TR>
-<TD class=postauthor><A href="http://www.javaeye.com/topic/240053#">·µ»Ø¶¥Â¥</A></TD>
-<TD class=postcontent>
-<DIV class=icons><A class=icon_www title=ä¯ÀÀ×÷ÕßµÄ²©¿Í 
-href="http://cats-tiger.javaeye.com/">&nbsp;</A> <A class=icon_profile title=ä¯ÀÀ×÷Õß×ÊÁÏ 
-href="http://cats-tiger.javaeye.com/blog/profile">&nbsp;</A> <A class=icon_pm 
-title=·¢ËÍÕ¾ÄÚ¶ÌĞÅ 
-href="http://app.javaeye.com/messages/new?message%5Breceiver_name%5D=cats_tiger">&nbsp;</A> 
-<A class=icon_guestbook title=¸ø×÷ÕßÁôÑÔ 
-href="http://cats-tiger.javaeye.com/blog/guest_book">&nbsp;</A> <A class=icon_rss 
-title=¹Ø×¢×÷Õß 
-onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;f.submit();return false;" 
-href="feed_subscription[subscribed_user_name]=cats_tiger">&nbsp;</A></DIV></TD></TR><!--EndFragment--></TBODY>
-</TABLE>
-</DIV>
-</DIV>
-</DIV>
+</PRE>
+                  <BR>
+                </DIV>
+              </TD>
+            </TR>
+            <TR>
+              <TD class=postauthor>
+                <A href="http://www.javaeye.com/topic/240053#">è¿”å›é¡¶æ¥¼</A>
+              </TD>
+              <TD class=postcontent>
+                <DIV class=icons>
+                  <A class=icon_www title=æµè§ˆä½œè€…çš„åšå®¢ href="http://cats-tiger.javaeye.com/">&nbsp;</A>
+                  <A class=icon_profile title=æµè§ˆä½œè€…èµ„æ–™ href="http://cats-tiger.javaeye.com/blog/profile">&nbsp;</A>
+                  <A class=icon_pm title=å‘é€ç«™å†…çŸ­ä¿¡ href="http://app.javaeye.com/messages/new?message%5Breceiver_name%5D=cats_tiger">&nbsp;</A>
+                  <A class=icon_guestbook title=ç»™ä½œè€…ç•™è¨€ href="http://cats-tiger.javaeye.com/blog/guest_book">&nbsp;</A>
+                  <A onclick="var f = document.createElement('form');  f.style.display  = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;f.submit();return false;"
+                  title=å…³æ³¨ä½œè€… class=icon_rss href="feed_subscription[subscribed_user_name]=cats_tiger" >&nbsp;</A>
+                </DIV>
+              </TD>
+            </TR><!--EndFragment-->
+          </TBODY>
+        </TABLE>
+      </DIV>
+    </DIV>
+  </DIV>
 </BODY>
+
 </HTML>

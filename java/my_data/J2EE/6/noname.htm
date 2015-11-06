@@ -1,14 +1,15 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
 <HEAD>
-<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
-<TITLE>ServletÖĞÎÄÏÔÊ¾ÎÊÌâ</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Servletä¸­æ–‡æ˜¾ç¤ºé—®é¢˜</title>
 </HEAD>
 <BODY bgcolor="#e4ebf1">
-<P>javax.servlet.http.HttpResponseÀàÓÃÓÚ²úÉú·µ»ØÒ³Ãæ.Í¨¹ıHttpResponse¶¨ÒåµÄ·½·¨getOutputStream()¿ÉÒÔ»ñµÃServletOutputStreamµÄÊµÀı,ÕâÑùÓÃ»§¾Í¿ÉÒÔÀûÓÃServletOutputStream.write·½·¨ÏòÊä³öÁ÷ÖĞĞ´Èë·µ»ØÒ³ÃæµÄÄÚÈİ.
-µ«ÊÇServletOutputStreamÊ¹ÓÃµÄÊÇÈ±Ê¡µÄ±àÂë·½Ê½,Èç¹ûÒªÊ¹·µ»ØÒ³ÃæÖĞµÄÖĞÎÄ×Ö
-·ûÄÜ¹»Õı³£ÏÔÊ¾,×îºÃÏÔÊ¾µØÖ¸¶¨ËùÓÃµÄ×Ö·û±àÂë·½Ê½.
-Í¨³£ĞèÒª¹¹ÔìÒ»¸ö OutputStreamWriter , Àı³ÌÈçÏÂ:</P>
+<P>javax.servlet.http.HttpResponseç±»ç”¨äºäº§ç”Ÿè¿”å›é¡µé¢.é€šè¿‡HttpResponseå®šä¹‰çš„æ–¹æ³•getOutputStream()å¯ä»¥è·å¾—ServletOutputStreamçš„å®ä¾‹,è¿™æ ·ç”¨æˆ·å°±å¯ä»¥åˆ©ç”¨ServletOutputStream.writeæ–¹æ³•å‘è¾“å‡ºæµä¸­å†™å…¥è¿”å›é¡µé¢çš„å†…å®¹.
+ä½†æ˜¯ServletOutputStreamä½¿ç”¨çš„æ˜¯ç¼ºçœçš„ç¼–ç æ–¹å¼,å¦‚æœè¦ä½¿è¿”å›é¡µé¢ä¸­çš„ä¸­æ–‡å­—
+ç¬¦èƒ½å¤Ÿæ­£å¸¸æ˜¾ç¤º,æœ€å¥½æ˜¾ç¤ºåœ°æŒ‡å®šæ‰€ç”¨çš„å­—ç¬¦ç¼–ç æ–¹å¼.
+é€šå¸¸éœ€è¦æ„é€ ä¸€ä¸ª OutputStreamWriter , ä¾‹ç¨‹å¦‚ä¸‹:</P>
 <PRE>
          public void doGet (HttpServletRequest req, HttpServletResponse res)
                 throws ServletException, IOException
@@ -16,7 +17,7 @@
             res.setContentType(&quot;text/html&quot;);
             ServletOutputStream out = res.getOutputStream();
             OutputStreamWriter ow = new OutputStreamWriter(out,&quot;GB2312&quot;);
-            ow.write(&quot;ÕâÊÇ²âÊÔ&quot;);
+            ow.write(&quot;è¿™æ˜¯æµ‹è¯•&quot;);
             ow.flush();
             ow.close();
         }</PRE>

@@ -1,9 +1,9 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>Í¨¹ıAjax·½Ê½ÉÏ´«ÎÄ¼ş£¬Ê¹ÓÃFormData½øĞĞAjaxÇëÇó</title>
+<title>é€šè¿‡Ajaxæ–¹å¼ä¸Šä¼ æ–‡ä»¶ï¼Œä½¿ç”¨FormDataè¿›è¡ŒAjaxè¯·æ±‚</title>
 <meta name="GENERATOR" content="WinCHM">
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
 html,body { 
 	/* Default Font */
@@ -16,25 +16,25 @@ html,body {
 
 <body>
 <DIV 
-style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Helvetica, Tahoma, Arial, sans-serif; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN>Í¨¹ı</SPAN><SPAN 
-style="WHITE-SPACE: normal; COLOR: rgb(0,0,0); FONT: medium 'Microsoft YaHei'; LETTER-SPACING: normal; TEXT-INDENT: 0px">´«Í³µÄ</SPAN><SPAN>form</SPAN><SPAN>±íµ¥Ìá½»µÄ·½Ê½ÉÏ´«ÎÄ¼ş£º</SPAN></DIV>
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Helvetica, Tahoma, Arial, sans-serif; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN>é€šè¿‡</SPAN><SPAN 
+style="WHITE-SPACE: normal; COLOR: rgb(0,0,0); FONT: medium 'Microsoft YaHei'; LETTER-SPACING: normal; TEXT-INDENT: 0px">ä¼ ç»Ÿçš„</SPAN><SPAN>form</SPAN><SPAN>è¡¨å•æäº¤çš„æ–¹å¼ä¸Šä¼ æ–‡ä»¶ï¼š</SPAN></DIV>
 <DIV class=dp-highlighter 
 style="OVERFLOW: auto; WORD-WRAP: break-word; WIDTH: 679px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; WORD-BREAK: break-all; COLOR: rgb(0,0,0); PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; FONT: 12px/25px Monaco, 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Consolas, 'Courier New', monospace; PADDING-LEFT: 1px; MARGIN-LEFT: 9px; LETTER-SPACING: normal; PADDING-RIGHT: 1px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">
 <DIV class=bar>
 <DIV class=tools 
-style="FONT-WEIGHT: bold; COLOR: black; PADDING-BOTTOM: 3px; TEXT-ALIGN: left; PADDING-TOP: 3px; PADDING-LEFT: 3px; MARGIN: 0px; PADDING-RIGHT: 3px">Html´úÂë<SPAN 
+style="FONT-WEIGHT: bold; COLOR: black; PADDING-BOTTOM: 3px; TEXT-ALIGN: left; PADDING-TOP: 3px; PADDING-LEFT: 3px; MARGIN: 0px; PADDING-RIGHT: 3px">Htmlä»£ç <SPAN 
 class=Apple-converted-space>&nbsp;</SPAN><EMBED 
 type=application/x-shockwave-flash 
 pluginspage=http://www.macromedia.com/go/getflashplayer height=15 width=14 
-src=http://yunzhu.iteye.com/javascripts/syntaxhighlighter/clipboard_new.swf 
-allowscriptaccess="always" quality="high" 
-flashvars="clipboard=%3Cform%20id%3D%20%22uploadForm%22%20action%3D%20%22http%3A%2F%2Flocalhost%3A8080%2FcfJAX_RS%2Frest%2Ffile%2Fupload%22%20method%3D%20%22post%22%20enctype%20%3D%22multipart%2Fform-data%22%3E%0A%20%20%20%20%20%3Ch1%20%3E%E6%B5%8B%E8%AF%95%E9%80%9A%E8%BF%87Rest%E6%8E%A5%E5%8F%A3%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%20%3C%2Fh1%3E%0A%20%20%20%20%20%3Cp%20%3E%E6%8C%87%E5%AE%9A%E6%96%87%E4%BB%B6%E5%90%8D%EF%BC%9A%20%3Cinput%20type%20%3D%22text%22%20name%3D%22filename%22%20%2F%3E%3C%2Fp%3E%0A%20%20%20%20%20%3Cp%20%3E%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%EF%BC%9A%20%3Cinput%20type%20%3D%22file%22%20name%3D%22file%22%20%2F%3E%3C%2Fp%3E%0A%20%20%20%20%20%3Cp%20%3E%E5%85%B3%E9%94%AE%E5%AD%971%EF%BC%9A%20%3Cinput%20type%20%3D%22text%22%20name%3D%22keyword%22%20%2F%3E%3C%2Fp%3E%0A%20%20%20%20%20%3Cp%20%3E%E5%85%B3%E9%94%AE%E5%AD%972%EF%BC%9A%20%3Cinput%20type%20%3D%22text%22%20name%3D%22keyword%22%20%2F%3E%3C%2Fp%3E%0A%20%20%20%20%20%3Cp%20%3E%E5%85%B3%E9%94%AE%E5%AD%973%EF%BC%9A%20%3Cinput%20type%20%3D%22text%22%20name%3D%22keyword%22%20%2F%3E%3C%2Fp%3E%0A%20%20%20%20%20%3Cinput%20type%20%3D%22submit%22%20value%3D%22%E4%B8%8A%E4%BC%A0%22%2F%3E%0A%3C%2Fform%3E" 
-wmode="transparent">&nbsp;<A 
-onclick="code_favorites_do_favorite(this);return false;" title=ÊÕ²ØÕâ¶Î´úÂë 
+src="http://yunzhu.iteye.com/javascripts/syntaxhighlighter/clipboard_new.swf" 
+wmode="transparent" flashvars="clipboard=%3Cform%20id%3D%20%22uploadForm%22%20action%3D%20%22http%3A%2F%2Flocalhost%3A8080%2FcfJAX_RS%2Frest%2Ffile%2Fupload%22%20method%3D%20%22post%22%20enctype%20%3D%22multipart%2Fform-data%22%3E%0A%20%20%20%20%20%3Ch1%20%3E%E6%B5%8B%E8%AF%95%E9%80%9A%E8%BF%87Rest%E6%8E%A5%E5%8F%A3%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%20%3C%2Fh1%3E%0A%20%20%20%20%20%3Cp%20%3E%E6%8C%87%E5%AE%9A%E6%96%87%E4%BB%B6%E5%90%8D%EF%BC%9A%20%3Cinput%20type%20%3D%22text%22%20name%3D%22filename%22%20%2F%3E%3C%2Fp%3E%0A%20%20%20%20%20%3Cp%20%3E%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%EF%BC%9A%20%3Cinput%20type%20%3D%22file%22%20name%3D%22file%22%20%2F%3E%3C%2Fp%3E%0A%20%20%20%20%20%3Cp%20%3E%E5%85%B3%E9%94%AE%E5%AD%971%EF%BC%9A%20%3Cinput%20type%20%3D%22text%22%20name%3D%22keyword%22%20%2F%3E%3C%2Fp%3E%0A%20%20%20%20%20%3Cp%20%3E%E5%85%B3%E9%94%AE%E5%AD%972%EF%BC%9A%20%3Cinput%20type%20%3D%22text%22%20name%3D%22keyword%22%20%2F%3E%3C%2Fp%3E%0A%20%20%20%20%20%3Cp%20%3E%E5%85%B3%E9%94%AE%E5%AD%973%EF%BC%9A%20%3Cinput%20type%20%3D%22text%22%20name%3D%22keyword%22%20%2F%3E%3C%2Fp%3E%0A%20%20%20%20%20%3Cinput%20type%20%3D%22submit%22%20value%3D%22%E4%B8%8A%E4%BC%A0%22%2F%3E%0A%3C%2Fform%3E" 
+quality="high" 
+allowscriptaccess="always">&nbsp;<A 
+onclick="code_favorites_do_favorite(this);return false;" title=æ”¶è—è¿™æ®µä»£ç  
 style="TEXT-DECORATION: underline; COLOR: rgb(98,0,145)" 
 href="javascript:void()"><IMG class=star 
 style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px" 
-alt=ÊÕ²Ø´úÂë src="http://yunzhu.iteye.com/images/icon_star.png"></A></DIV></DIV>
+alt=æ”¶è—ä»£ç  src="http://yunzhu.iteye.com/images/icon_star.png"></A></DIV></DIV>
 <OL class=dp-xml 
 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1px solid; BORDER-RIGHT: rgb(209,215,220) 1px solid; BORDER-BOTTOM: rgb(209,215,220) 1px solid; COLOR: rgb(43,145,175); PADDING-BOTTOM: 2px; PADDING-TOP: 2px; PADDING-LEFT: 0px; MARGIN: 0px 0px 1px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 1.4em; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255)">
   <LI 
@@ -58,7 +58,7 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
   style="COLOR: black">&nbsp;=</SPAN><SPAN class=attribute-value 
   style="COLOR: blue">"multipart/form-data"</SPAN><SPAN class=tag 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&gt;</SPAN><SPAN 
-  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN class=tag 
@@ -66,11 +66,11 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
   class=tag-name style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">h1</SPAN><SPAN 
   style="COLOR: black">&nbsp;</SPAN><SPAN class=tag 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&gt;</SPAN><SPAN 
-  style="COLOR: black">²âÊÔÍ¨¹ıRest½Ó¿ÚÉÏ´«ÎÄ¼ş&nbsp;</SPAN><SPAN class=tag 
+  style="COLOR: black">æµ‹è¯•é€šè¿‡Restæ¥å£ä¸Šä¼ æ–‡ä»¶&nbsp;</SPAN><SPAN class=tag 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&lt;/</SPAN><SPAN 
   class=tag-name style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">h1</SPAN><SPAN 
   class=tag style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&gt;</SPAN><SPAN 
-  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN class=tag 
@@ -78,7 +78,7 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
   class=tag-name style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">p</SPAN><SPAN 
   style="COLOR: black">&nbsp;</SPAN><SPAN class=tag 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&gt;</SPAN><SPAN 
-  style="COLOR: black">Ö¸¶¨ÎÄ¼şÃû£º&nbsp;</SPAN><SPAN class=tag 
+  style="COLOR: black">æŒ‡å®šæ–‡ä»¶åï¼š&nbsp;</SPAN><SPAN class=tag 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&lt;</SPAN><SPAN 
   class=tag-name 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">input</SPAN><SPAN 
@@ -93,7 +93,7 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&lt;/</SPAN><SPAN 
   class=tag-name style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">p</SPAN><SPAN 
   class=tag style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&gt;</SPAN><SPAN 
-  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN class=tag 
@@ -101,7 +101,7 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
   class=tag-name style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">p</SPAN><SPAN 
   style="COLOR: black">&nbsp;</SPAN><SPAN class=tag 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&gt;</SPAN><SPAN 
-  style="COLOR: black">ÉÏ´«ÎÄ¼ş£º&nbsp;</SPAN><SPAN class=tag 
+  style="COLOR: black">ä¸Šä¼ æ–‡ä»¶ï¼š&nbsp;</SPAN><SPAN class=tag 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&lt;</SPAN><SPAN 
   class=tag-name 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">input</SPAN><SPAN 
@@ -116,7 +116,7 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&lt;/</SPAN><SPAN 
   class=tag-name style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">p</SPAN><SPAN 
   class=tag style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&gt;</SPAN><SPAN 
-  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN class=tag 
@@ -124,7 +124,7 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
   class=tag-name style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">p</SPAN><SPAN 
   style="COLOR: black">&nbsp;</SPAN><SPAN class=tag 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&gt;</SPAN><SPAN 
-  style="COLOR: black">¹Ø¼ü×Ö1£º&nbsp;</SPAN><SPAN class=tag 
+  style="COLOR: black">å…³é”®å­—1ï¼š&nbsp;</SPAN><SPAN class=tag 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&lt;</SPAN><SPAN 
   class=tag-name 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">input</SPAN><SPAN 
@@ -139,7 +139,7 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&lt;/</SPAN><SPAN 
   class=tag-name style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">p</SPAN><SPAN 
   class=tag style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&gt;</SPAN><SPAN 
-  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN class=tag 
@@ -147,7 +147,7 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
   class=tag-name style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">p</SPAN><SPAN 
   style="COLOR: black">&nbsp;</SPAN><SPAN class=tag 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&gt;</SPAN><SPAN 
-  style="COLOR: black">¹Ø¼ü×Ö2£º&nbsp;</SPAN><SPAN class=tag 
+  style="COLOR: black">å…³é”®å­—2ï¼š&nbsp;</SPAN><SPAN class=tag 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&lt;</SPAN><SPAN 
   class=tag-name 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">input</SPAN><SPAN 
@@ -162,7 +162,7 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&lt;/</SPAN><SPAN 
   class=tag-name style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">p</SPAN><SPAN 
   class=tag style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&gt;</SPAN><SPAN 
-  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN class=tag 
@@ -170,7 +170,7 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
   class=tag-name style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">p</SPAN><SPAN 
   style="COLOR: black">&nbsp;</SPAN><SPAN class=tag 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&gt;</SPAN><SPAN 
-  style="COLOR: black">¹Ø¼ü×Ö3£º&nbsp;</SPAN><SPAN class=tag 
+  style="COLOR: black">å…³é”®å­—3ï¼š&nbsp;</SPAN><SPAN class=tag 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&lt;</SPAN><SPAN 
   class=tag-name 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">input</SPAN><SPAN 
@@ -185,7 +185,7 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&lt;/</SPAN><SPAN 
   class=tag-name style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">p</SPAN><SPAN 
   class=tag style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&gt;</SPAN><SPAN 
-  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN class=tag 
@@ -197,9 +197,9 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
   class=attribute-value style="COLOR: blue">"submit"</SPAN><SPAN 
   style="COLOR: black">&nbsp;</SPAN><SPAN class=attribute 
   style="COLOR: red">value</SPAN><SPAN style="COLOR: black">=</SPAN><SPAN 
-  class=attribute-value style="COLOR: blue">"ÉÏ´«"</SPAN><SPAN class=tag 
+  class=attribute-value style="COLOR: blue">"ä¸Šä¼ "</SPAN><SPAN class=tag 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">/&gt;</SPAN><SPAN 
-  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black"><SPAN class=tag 
@@ -211,68 +211,68 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
 <P 
 style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/25px Helvetica, Tahoma, Arial, sans-serif; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <DIV 
-style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Helvetica, Tahoma, Arial, sans-serif; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN>²»¹ı</SPAN><SPAN>´«Í³µÄ</SPAN><SPAN>form</SPAN><SPAN>±íµ¥Ìá½»»áµ¼ÖÂÒ³ÃæË¢ĞÂ£¬</SPAN><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Helvetica, Tahoma, Arial, sans-serif; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN>ä¸è¿‡</SPAN><SPAN>ä¼ ç»Ÿçš„</SPAN><SPAN>form</SPAN><SPAN>è¡¨å•æäº¤ä¼šå¯¼è‡´é¡µé¢åˆ·æ–°ï¼Œ</SPAN><SPAN 
 style="WHITE-SPACE: normal; COLOR: rgb(0,0,0); FONT: medium 'Microsoft YaHei'; LETTER-SPACING: normal; TEXT-INDENT: 0px"><SPAN 
-style="FONT-FAMILY: 'Microsoft YaHei'">µ«ÊÇÔÚÓĞĞ©Çé¿öÏÂ£¬ÎÒÃÇ²»Ï£ÍûÒ³Ãæ±»Ë¢ĞÂ£¬ÕâÖÖÊ±ºòÎÒÃÇ¶¼ÊÇÊ¹ÓÃAjaxµÄ·½Ê½½øĞĞÇëÇóµÄ£º</SPAN></SPAN></DIV>
+style="FONT-FAMILY: 'Microsoft YaHei'">ä½†æ˜¯åœ¨æœ‰äº›æƒ…å†µä¸‹ï¼Œæˆ‘ä»¬ä¸å¸Œæœ›é¡µé¢è¢«åˆ·æ–°ï¼Œè¿™ç§æ—¶å€™æˆ‘ä»¬éƒ½æ˜¯ä½¿ç”¨Ajaxçš„æ–¹å¼è¿›è¡Œè¯·æ±‚çš„ï¼š</SPAN></SPAN></DIV>
 <DIV class=dp-highlighter 
 style="OVERFLOW: auto; WORD-WRAP: break-word; WIDTH: 679px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; WORD-BREAK: break-all; COLOR: rgb(0,0,0); PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; FONT: 12px/25px Monaco, 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Consolas, 'Courier New', monospace; PADDING-LEFT: 1px; MARGIN-LEFT: 9px; LETTER-SPACING: normal; PADDING-RIGHT: 1px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">
 <DIV class=bar>
 <DIV class=tools 
-style="FONT-WEIGHT: bold; COLOR: black; PADDING-BOTTOM: 3px; TEXT-ALIGN: left; PADDING-TOP: 3px; PADDING-LEFT: 3px; MARGIN: 0px; PADDING-RIGHT: 3px">Js´úÂë<SPAN 
+style="FONT-WEIGHT: bold; COLOR: black; PADDING-BOTTOM: 3px; TEXT-ALIGN: left; PADDING-TOP: 3px; PADDING-LEFT: 3px; MARGIN: 0px; PADDING-RIGHT: 3px">Jsä»£ç <SPAN 
 class=Apple-converted-space>&nbsp;</SPAN><EMBED 
 type=application/x-shockwave-flash 
 pluginspage=http://www.macromedia.com/go/getflashplayer height=15 width=14 
-src=http://yunzhu.iteye.com/javascripts/syntaxhighlighter/clipboard_new.swf 
-allowscriptaccess="always" quality="high" 
-flashvars="clipboard=%24.ajax(%7B%0A%20%20%20%20%20url%20%3A%20%22http%3A%2F%2Flocalhost%3A8080%2FSTS%2Frest%2Fuser%22%2C%0A%20%20%20%20%20type%20%3A%20%22POST%22%2C%0A%20%20%20%20%20data%20%3A%20%24(%20'%23postForm').serialize()%2C%0A%20%20%20%20%20success%20%3A%20function(data)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%24(%20'%23serverResponse').html(data)%3B%0A%20%20%20%20%20%7D%2C%0A%20%20%20%20%20error%20%3A%20function(data)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%24(%20'%23serverResponse').html(data.status%20%2B%20%22%20%3A%20%22%20%2B%20data.statusText%20%2B%20%22%20%3A%20%22%20%2B%20data.responseText)%3B%0A%20%20%20%20%20%7D%0A%7D)%3B" 
-wmode="transparent">&nbsp;<A 
-onclick="code_favorites_do_favorite(this);return false;" title=ÊÕ²ØÕâ¶Î´úÂë 
+src="http://yunzhu.iteye.com/javascripts/syntaxhighlighter/clipboard_new.swf" 
+wmode="transparent" flashvars="clipboard=%24.ajax(%7B%0A%20%20%20%20%20url%20%3A%20%22http%3A%2F%2Flocalhost%3A8080%2FSTS%2Frest%2Fuser%22%2C%0A%20%20%20%20%20type%20%3A%20%22POST%22%2C%0A%20%20%20%20%20data%20%3A%20%24(%20'%23postForm').serialize()%2C%0A%20%20%20%20%20success%20%3A%20function(data)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%24(%20'%23serverResponse').html(data)%3B%0A%20%20%20%20%20%7D%2C%0A%20%20%20%20%20error%20%3A%20function(data)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%24(%20'%23serverResponse').html(data.status%20%2B%20%22%20%3A%20%22%20%2B%20data.statusText%20%2B%20%22%20%3A%20%22%20%2B%20data.responseText)%3B%0A%20%20%20%20%20%7D%0A%7D)%3B" 
+quality="high" 
+allowscriptaccess="always">&nbsp;<A 
+onclick="code_favorites_do_favorite(this);return false;" title=æ”¶è—è¿™æ®µä»£ç  
 style="TEXT-DECORATION: underline; COLOR: rgb(98,0,145)" 
 href="javascript:void()"><IMG class=star 
 style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px" 
-alt=ÊÕ²Ø´úÂë src="http://yunzhu.iteye.com/images/icon_star.png"></A></DIV></DIV>
+alt=æ”¶è—ä»£ç  src="http://yunzhu.iteye.com/images/icon_star.png"></A></DIV></DIV>
 <OL class=dp-c 
 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1px solid; BORDER-RIGHT: rgb(209,215,220) 1px solid; BORDER-BOTTOM: rgb(209,215,220) 1px solid; COLOR: rgb(43,145,175); PADDING-BOTTOM: 2px; PADDING-TOP: 2px; PADDING-LEFT: 0px; MARGIN: 0px 0px 1px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 1.4em; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255)">
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black"><SPAN 
-  style="COLOR: black">$.ajax({&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">$.ajax({&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url&nbsp;:&nbsp;<SPAN 
   class=string 
   style="COLOR: blue">"http://localhost:8080/STS/rest/user"</SPAN><SPAN 
-  style="COLOR: black">,&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">,&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type&nbsp;:&nbsp;<SPAN 
   class=string style="COLOR: blue">"POST"</SPAN><SPAN 
-  style="COLOR: black">,&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">,&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;:&nbsp;$(&nbsp;<SPAN 
   class=string style="COLOR: blue">'#postForm'</SPAN><SPAN 
-  style="COLOR: black">).serialize(),&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">).serialize(),&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;:&nbsp;<SPAN 
   class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">function</SPAN><SPAN 
-  style="COLOR: black">(data)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">(data)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(&nbsp;<SPAN 
   class=string style="COLOR: blue">'#serverResponse'</SPAN><SPAN 
-  style="COLOR: black">).html(data);&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">).html(data);&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
-  style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},&nbsp;&nbsp;</SPAN></LI>
+  style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},&nbsp;&nbsp;</SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;error&nbsp;:&nbsp;<SPAN 
   class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">function</SPAN><SPAN 
-  style="COLOR: black">(data)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">(data)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(&nbsp;<SPAN 
@@ -281,10 +281,10 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
   style="COLOR: blue">"&nbsp;:&nbsp;"</SPAN><SPAN 
   style="COLOR: black">&nbsp;+&nbsp;data.statusText&nbsp;+&nbsp;</SPAN><SPAN 
   class=string style="COLOR: blue">"&nbsp;:&nbsp;"</SPAN><SPAN 
-  style="COLOR: black">&nbsp;+&nbsp;data.responseText);&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;+&nbsp;data.responseText);&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
-  style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</SPAN></LI>
+  style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">});&nbsp;&nbsp;</SPAN></LI></OL></DIV>
@@ -293,22 +293,22 @@ style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(
 <DIV 
 style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Helvetica, Tahoma, Arial, sans-serif; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">
 <DIV>
-<DIV><SPAN style="FONT-FAMILY: 'Microsoft YaHei'">ÈçÉÏ£¬Í¨¹ı</SPAN><SPAN 
+<DIV><SPAN style="FONT-FAMILY: 'Microsoft YaHei'">å¦‚ä¸Šï¼Œé€šè¿‡</SPAN><SPAN 
 style="FONT-FAMILY: 'Courier New'"><SPAN 
 style="FONT-SIZE: 12pt">$(</SPAN></SPAN><SPAN 
 style="FONT-FAMILY: 'Courier New'; COLOR: rgb(42,0,255)"><SPAN 
 style="FONT-SIZE: 12pt">'#postForm'</SPAN></SPAN><SPAN 
 style="FONT-FAMILY: 'Courier New'"><SPAN 
 style="FONT-SIZE: 12pt">).serialize()</SPAN></SPAN><SPAN 
-style="FONT-FAMILY: 'Microsoft YaHei'">¿ÉÒÔ¶Ôform±íµ¥½øĞĞĞòÁĞ»¯£¬´Ó¶ø½«form±íµ¥ÖĞµÄËùÓĞ²ÎÊı´«µİµ½·şÎñ¶Ë¡£</SPAN></DIV>
+style="FONT-FAMILY: 'Microsoft YaHei'">å¯ä»¥å¯¹formè¡¨å•è¿›è¡Œåºåˆ—åŒ–ï¼Œä»è€Œå°†formè¡¨å•ä¸­çš„æ‰€æœ‰å‚æ•°ä¼ é€’åˆ°æœåŠ¡ç«¯ã€‚</SPAN></DIV>
 <DIV>&nbsp;</DIV></DIV>
 <DIV>
-<DIV><SPAN style="FONT-FAMILY: 'Microsoft YaHei'">µ«ÊÇÉÏÊö·½Ê½£¬Ö»ÄÜ´«µİÒ»°ãµÄ²ÎÊı£¬</SPAN><SPAN 
-style="FONT-FAMILY: 'Microsoft YaHei'">ÉÏ´«ÎÄ¼şµÄÎÄ¼şÁ÷ÊÇÎŞ·¨±»ĞòÁĞ»¯²¢´«µİµÄ¡£</SPAN></DIV></DIV>
+<DIV><SPAN style="FONT-FAMILY: 'Microsoft YaHei'">ä½†æ˜¯ä¸Šè¿°æ–¹å¼ï¼Œåªèƒ½ä¼ é€’ä¸€èˆ¬çš„å‚æ•°ï¼Œ</SPAN><SPAN 
+style="FONT-FAMILY: 'Microsoft YaHei'">ä¸Šä¼ æ–‡ä»¶çš„æ–‡ä»¶æµæ˜¯æ— æ³•è¢«åºåˆ—åŒ–å¹¶ä¼ é€’çš„ã€‚</SPAN></DIV></DIV>
 <DIV><SPAN 
-style="FONT-FAMILY: 'Microsoft YaHei'">²»¹ıÈç½ñÖ÷Á÷ä¯ÀÀÆ÷¶¼¿ªÊ¼Ö§³ÖÒ»¸ö½Ğ×öFormDataµÄ¶ÔÏó£¬ÓĞÁËÕâ¸öFormData£¬ÎÒÃÇ¾Í¿ÉÒÔÇáËÉµØÊ¹ÓÃAjax·½Ê½½øĞĞÎÄ¼ş</SPAN><SPAN 
-style="FONT-FAMILY: 'Microsoft YaHei'">ÉÏ´«</SPAN><SPAN 
-style="FONT-FAMILY: 'Microsoft YaHei'">ÁË¡£</SPAN></DIV></DIV>
+style="FONT-FAMILY: 'Microsoft YaHei'">ä¸è¿‡å¦‚ä»Šä¸»æµæµè§ˆå™¨éƒ½å¼€å§‹æ”¯æŒä¸€ä¸ªå«åšFormDataçš„å¯¹è±¡ï¼Œæœ‰äº†è¿™ä¸ªFormDataï¼Œæˆ‘ä»¬å°±å¯ä»¥è½»æ¾åœ°ä½¿ç”¨Ajaxæ–¹å¼è¿›è¡Œæ–‡ä»¶</SPAN><SPAN 
+style="FONT-FAMILY: 'Microsoft YaHei'">ä¸Šä¼ </SPAN><SPAN 
+style="FONT-FAMILY: 'Microsoft YaHei'">äº†ã€‚</SPAN></DIV></DIV>
 <P 
 style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/25px Helvetica, Tahoma, Arial, sans-serif; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
@@ -316,7 +316,7 @@ style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(
 <P 
 style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/25px Helvetica, Tahoma, Arial, sans-serif; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="FONT-FAMILY: 'Microsoft YaHei'"><SPAN style="COLOR: rgb(0,0,255)"><STRONG 
-style="FONT-WEIGHT: bold">¹ØÓÚFormData¼°ÆäÓÃ·¨</STRONG></SPAN></SPAN></P>
+style="FONT-WEIGHT: bold">å…³äºFormDataåŠå…¶ç”¨æ³•</STRONG></SPAN></SPAN></P>
 <DIV 
 style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Helvetica, Tahoma, Arial, sans-serif; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">
 <DIV>
@@ -325,7 +325,7 @@ style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(
 style="HEIGHT: 1px; BORDER-BOTTOM-WIDTH: thin; BORDER-BOTTOM-COLOR: black; MARGIN: 1.5em 10px">
 </DIV>
 <DIV><SPAN 
-style="FONT-FAMILY: 'Microsoft YaHei'">FormDataÊÇÊ²Ã´ÄØ£¿ÎÒÃÇÀ´¿´¿´MozillaÉÏµÄ½éÉÜ¡£</SPAN></DIV></DIV></DIV>
+style="FONT-FAMILY: 'Microsoft YaHei'">FormDataæ˜¯ä»€ä¹ˆå‘¢ï¼Ÿæˆ‘ä»¬æ¥çœ‹çœ‹Mozillaä¸Šçš„ä»‹ç»ã€‚</SPAN></DIV></DIV></DIV>
 <TABLE class=bbcode 
 style="MAX-WIDTH: 650px; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WHITE-SPACE: normal; WORD-SPACING: 0px; MIN-WIDTH: 400px; TABLE-LAYOUT: fixed; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Helvetica, Tahoma, Arial, sans-serif; BORDER-LEFT: rgb(204,204,204) 1px solid; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">
   
@@ -333,21 +333,21 @@ style="MAX-WIDTH: 650px; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: r
     <TD 
     style="FONT-SIZE: 1em; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; BORDER-BOTTOM: rgb(204,204,204) 1px solid; PADDING-BOTTOM: 3px; PADDING-TOP: 3px; PADDING-LEFT: 3px; BORDER-LEFT: rgb(204,204,204) 1px solid; PADDING-RIGHT: 3px">
       <DIV>
-      <DIV>XMLHttpRequest Level 2Ìí¼ÓÁËÒ»¸öĞÂµÄ½Ó¿Ú<CODE 
-      style="FONT-SIZE: 1em; FONT-FAMILY: 'Courier New', Courier, monospace; WHITE-SPACE: pre">FormData</CODE>.ÀûÓÃ<CODE 
-      style="FONT-SIZE: 1em; FONT-FAMILY: 'Courier New', Courier, monospace; WHITE-SPACE: pre">FormData¶ÔÏó</CODE>,ÎÒÃÇ¿ÉÒÔÍ¨¹ıJavaScriptÓÃÒ»Ğ©¼üÖµ¶ÔÀ´Ä£ÄâÒ»ÏµÁĞ±íµ¥¿Ø¼ş,ÎÒÃÇ»¹¿ÉÒÔÊ¹ÓÃXMLHttpRequestµÄ<A 
+      <DIV>XMLHttpRequest Level 2æ·»åŠ äº†ä¸€ä¸ªæ–°çš„æ¥å£<CODE 
+      style="FONT-SIZE: 1em; FONT-FAMILY: 'Courier New', Courier, monospace; WHITE-SPACE: pre">FormData</CODE>.åˆ©ç”¨<CODE 
+      style="FONT-SIZE: 1em; FONT-FAMILY: 'Courier New', Courier, monospace; WHITE-SPACE: pre">FormDataå¯¹è±¡</CODE>,æˆ‘ä»¬å¯ä»¥é€šè¿‡JavaScriptç”¨ä¸€äº›é”®å€¼å¯¹æ¥æ¨¡æ‹Ÿä¸€ç³»åˆ—è¡¨å•æ§ä»¶,æˆ‘ä»¬è¿˜å¯ä»¥ä½¿ç”¨XMLHttpRequestçš„<A 
       title=zh-CN/XMLHttpRequest#send() 
       style="TEXT-DECORATION: underline; COLOR: rgb(98,0,145)" 
       href="https://developer.mozilla.org/zh-CN/docs/DOM/XMLHttpRequest#send%28%29"><CODE 
-      style="FONT-SIZE: 1em; FONT-FAMILY: 'Courier New', Courier, monospace; WHITE-SPACE: pre">send()</CODE></A>·½·¨À´Òì²½µÄÌá½»Õâ¸ö"±íµ¥".±ÈÆğÆÕÍ¨µÄajax,Ê¹ÓÃ<CODE 
-      style="FONT-SIZE: 1em; FONT-FAMILY: 'Courier New', Courier, monospace; WHITE-SPACE: pre">FormData</CODE>µÄ×î´óÓÅµã¾ÍÊÇÎÒÃÇ¿ÉÒÔÒì²½ÉÏ´«Ò»¸ö¶ş½øÖÆÎÄ¼ş.&nbsp;</DIV>
+      style="FONT-SIZE: 1em; FONT-FAMILY: 'Courier New', Courier, monospace; WHITE-SPACE: pre">send()</CODE></A>æ–¹æ³•æ¥å¼‚æ­¥çš„æäº¤è¿™ä¸ª"è¡¨å•".æ¯”èµ·æ™®é€šçš„ajax,ä½¿ç”¨<CODE 
+      style="FONT-SIZE: 1em; FONT-FAMILY: 'Courier New', Courier, monospace; WHITE-SPACE: pre">FormData</CODE>çš„æœ€å¤§ä¼˜ç‚¹å°±æ˜¯æˆ‘ä»¬å¯ä»¥å¼‚æ­¥ä¸Šä¼ ä¸€ä¸ªäºŒè¿›åˆ¶æ–‡ä»¶.&nbsp;</DIV>
       <DIV>&nbsp;</DIV>
       <DIV>
       <DIV>
       <DIV><SPAN style="FONT-FAMILY: 'Microsoft YaHei'"><SPAN 
-      style="FONT-FAMILY: 'Microsoft YaHei'">ËùÓĞÖ÷Á÷ä¯ÀÀÆ÷µÄ½ÏĞÂ°æ±¾¶¼ÒÑ¾­Ö§³ÖÕâ¸ö¶ÔÏóÁË£¬±ÈÈçChrome 
-      7+¡¢Firefox 4+¡¢IE 10+¡¢Opera 12+¡¢Safari 5+¡£</SPAN></SPAN></DIV>
-      <DIV>&nbsp;</DIV><SPAN style="FONT-FAMILY: 'Microsoft YaHei'">²Î¼û£º</SPAN><A 
+      style="FONT-FAMILY: 'Microsoft YaHei'">æ‰€æœ‰ä¸»æµæµè§ˆå™¨çš„è¾ƒæ–°ç‰ˆæœ¬éƒ½å·²ç»æ”¯æŒè¿™ä¸ªå¯¹è±¡äº†ï¼Œæ¯”å¦‚Chrome 
+      7+ã€Firefox 4+ã€IE 10+ã€Opera 12+ã€Safari 5+ã€‚</SPAN></SPAN></DIV>
+      <DIV>&nbsp;</DIV><SPAN style="FONT-FAMILY: 'Microsoft YaHei'">å‚è§ï¼š</SPAN><A 
       style="TEXT-DECORATION: underline; COLOR: rgb(98,0,145)" 
       href="https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/FormData">https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/FormData</A></DIV></DIV></DIV></TD></TR></TABLE>
 <P 
@@ -355,7 +355,7 @@ style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(
 <P 
 style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/25px Helvetica, Tahoma, Arial, sans-serif; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <DIV 
-style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Helvetica, Tahoma, Arial, sans-serif; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN>ÕâÀïÖ»Õ¹Ê¾Ò»¸öÍ¨¹ıfrom±íµ¥À´³õÊ¼»¯FormDataµÄ·½Ê½</SPAN></DIV>
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Helvetica, Tahoma, Arial, sans-serif; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN>è¿™é‡Œåªå±•ç¤ºä¸€ä¸ªé€šè¿‡fromè¡¨å•æ¥åˆå§‹åŒ–FormDataçš„æ–¹å¼</SPAN></DIV>
 <DIV 
 style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Helvetica, Tahoma, Arial, sans-serif; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="WHITE-SPACE: normal; COLOR: rgb(0,128,128); FONT: medium 'Courier New'; LETTER-SPACING: normal; TEXT-INDENT: 0px"><SPAN 
@@ -395,19 +395,19 @@ style="FONT-SIZE: 12pt; BACKGROUND-COLOR: rgb(232,242,254)">&gt;</SPAN></SPAN></
 style="OVERFLOW: auto; WORD-WRAP: break-word; WIDTH: 679px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; WORD-BREAK: break-all; COLOR: rgb(0,0,0); PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; FONT: 12px/25px Monaco, 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Consolas, 'Courier New', monospace; PADDING-LEFT: 1px; MARGIN-LEFT: 9px; LETTER-SPACING: normal; PADDING-RIGHT: 1px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">
 <DIV class=bar>
 <DIV class=tools 
-style="FONT-WEIGHT: bold; COLOR: black; PADDING-BOTTOM: 3px; TEXT-ALIGN: left; PADDING-TOP: 3px; PADDING-LEFT: 3px; MARGIN: 0px; PADDING-RIGHT: 3px">Js´úÂë<SPAN 
+style="FONT-WEIGHT: bold; COLOR: black; PADDING-BOTTOM: 3px; TEXT-ALIGN: left; PADDING-TOP: 3px; PADDING-LEFT: 3px; MARGIN: 0px; PADDING-RIGHT: 3px">Jsä»£ç <SPAN 
 class=Apple-converted-space>&nbsp;</SPAN><EMBED 
 type=application/x-shockwave-flash 
 pluginspage=http://www.macromedia.com/go/getflashplayer height=15 width=14 
-src=http://yunzhu.iteye.com/javascripts/syntaxhighlighter/clipboard_new.swf 
-allowscriptaccess="always" quality="high" 
-flashvars="clipboard=var%20oData%20%3D%20new%20FormData(document.forms.namedItem(%22fileinfo%22%20))%3B%0AoData.append(%20%22CustomField%22%2C%20%22This%20is%20some%20extra%20data%22%20)%3B%0Avar%20oReq%20%3D%20new%20XMLHttpRequest()%3B%0AoReq.open(%20%22POST%22%2C%20%22stash.php%22%20%2C%20true%20)%3B%0AoReq.onload%20%3D%20function(oEvent)%20%7B%0A%20%20%20%20%20%20if%20(oReq.status%20%3D%3D%20200)%20%7B%0A%20%20%20%20%20%20%20%20%20%20oOutput.innerHTML%20%3D%20%22Uploaded!%22%20%3B%0A%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20oOutput.innerHTML%20%3D%20%22Error%20%22%20%2B%20oReq.status%20%2B%20%22%20occurred%20uploading%20your%20file.%3Cbr%20%5C%2F%3E%22%3B%0A%20%20%20%20%20%7D%0A%7D%3B%0AoReq.send(oData)%3B" 
-wmode="transparent">&nbsp;<A 
-onclick="code_favorites_do_favorite(this);return false;" title=ÊÕ²ØÕâ¶Î´úÂë 
+src="http://yunzhu.iteye.com/javascripts/syntaxhighlighter/clipboard_new.swf" 
+wmode="transparent" flashvars="clipboard=var%20oData%20%3D%20new%20FormData(document.forms.namedItem(%22fileinfo%22%20))%3B%0AoData.append(%20%22CustomField%22%2C%20%22This%20is%20some%20extra%20data%22%20)%3B%0Avar%20oReq%20%3D%20new%20XMLHttpRequest()%3B%0AoReq.open(%20%22POST%22%2C%20%22stash.php%22%20%2C%20true%20)%3B%0AoReq.onload%20%3D%20function(oEvent)%20%7B%0A%20%20%20%20%20%20if%20(oReq.status%20%3D%3D%20200)%20%7B%0A%20%20%20%20%20%20%20%20%20%20oOutput.innerHTML%20%3D%20%22Uploaded!%22%20%3B%0A%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20oOutput.innerHTML%20%3D%20%22Error%20%22%20%2B%20oReq.status%20%2B%20%22%20occurred%20uploading%20your%20file.%3Cbr%20%5C%2F%3E%22%3B%0A%20%20%20%20%20%7D%0A%7D%3B%0AoReq.send(oData)%3B" 
+quality="high" 
+allowscriptaccess="always">&nbsp;<A 
+onclick="code_favorites_do_favorite(this);return false;" title=æ”¶è—è¿™æ®µä»£ç  
 style="TEXT-DECORATION: underline; COLOR: rgb(98,0,145)" 
 href="javascript:void()"><IMG class=star 
 style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px" 
-alt=ÊÕ²Ø´úÂë src="http://yunzhu.iteye.com/images/icon_star.png"></A></DIV></DIV>
+alt=æ”¶è—ä»£ç  src="http://yunzhu.iteye.com/images/icon_star.png"></A></DIV></DIV>
 <OL class=dp-c 
 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1px solid; BORDER-RIGHT: rgb(209,215,220) 1px solid; BORDER-BOTTOM: rgb(209,215,220) 1px solid; COLOR: rgb(43,145,175); PADDING-BOTTOM: 2px; PADDING-TOP: 2px; PADDING-LEFT: 0px; MARGIN: 0px 0px 1px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 1.4em; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255)">
   <LI 
@@ -418,21 +418,21 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">new</SPAN><SPAN 
   style="COLOR: black">&nbsp;FormData(document.forms.namedItem(</SPAN><SPAN 
   class=string style="COLOR: blue">"fileinfo"</SPAN><SPAN 
-  style="COLOR: black">&nbsp;));&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;));&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">oData.append(&nbsp;<SPAN class=string 
   style="COLOR: blue">"CustomField"</SPAN><SPAN 
   style="COLOR: black">,&nbsp;</SPAN><SPAN class=string 
   style="COLOR: blue">"This&nbsp;is&nbsp;some&nbsp;extra&nbsp;data"</SPAN><SPAN 
-  style="COLOR: black">&nbsp;);&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;);&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black"><SPAN class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">var</SPAN><SPAN 
   style="COLOR: black">&nbsp;oReq&nbsp;=&nbsp;</SPAN><SPAN class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">new</SPAN><SPAN 
-  style="COLOR: black">&nbsp;XMLHttpRequest();&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;XMLHttpRequest();&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">oReq.open(&nbsp;<SPAN class=string 
@@ -441,27 +441,27 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
   style="COLOR: blue">"stash.php"</SPAN><SPAN 
   style="COLOR: black">&nbsp;,&nbsp;</SPAN><SPAN class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">true</SPAN><SPAN 
-  style="COLOR: black">&nbsp;);&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;);&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">oReq.onload&nbsp;=&nbsp;<SPAN class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">function</SPAN><SPAN 
-  style="COLOR: black">(oEvent)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">(oEvent)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">if</SPAN><SPAN 
-  style="COLOR: black">&nbsp;(oReq.status&nbsp;==&nbsp;200)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;(oReq.status&nbsp;==&nbsp;200)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;oOutput.innerHTML&nbsp;=&nbsp;<SPAN 
   class=string style="COLOR: blue">"Uploaded!"</SPAN><SPAN 
-  style="COLOR: black">&nbsp;;&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;;&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<SPAN class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">else</SPAN><SPAN 
-  style="COLOR: black">&nbsp;{&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;oOutput.innerHTML&nbsp;=&nbsp;<SPAN 
@@ -469,13 +469,13 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
   style="COLOR: black">&nbsp;+&nbsp;oReq.status&nbsp;+&nbsp;</SPAN><SPAN 
   class=string 
   style="COLOR: blue">"&nbsp;occurred&nbsp;uploading&nbsp;your&nbsp;file.&lt;br&nbsp;\/&gt;"</SPAN><SPAN 
-  style="COLOR: black">;&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">;&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
-  style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</SPAN></LI>
+  style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
-  style="COLOR: black">};&nbsp;&nbsp;</SPAN></LI>
+  style="COLOR: black">};&nbsp;&nbsp;</SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">oReq.send(oData);&nbsp;&nbsp;</SPAN></LI></OL></DIV>
@@ -483,7 +483,7 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
 style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/25px Helvetica, Tahoma, Arial, sans-serif; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <DIV 
 style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/25px Helvetica, Tahoma, Arial, sans-serif; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; COLOR: rgb(0,0,0); FONT: medium 'Microsoft YaHei'; LETTER-SPACING: normal; TEXT-INDENT: 0px">²Î¼û£º</SPAN><A 
+style="WHITE-SPACE: normal; COLOR: rgb(0,0,0); FONT: medium 'Microsoft YaHei'; LETTER-SPACING: normal; TEXT-INDENT: 0px">å‚è§ï¼š</SPAN><A 
 style="TEXT-DECORATION: underline; COLOR: rgb(98,0,145)" 
 href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Using_FormData_Objects">https://developer.mozilla.org/zh-CN/docs/Web/Guide/Using_FormData_Objects</A></DIV>
 <DIV 
@@ -491,29 +491,29 @@ style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(
 <DIV>&nbsp;</DIV>
 <DIV>&nbsp;</DIV>
 <DIV><SPAN style="FONT-FAMILY: 'Microsoft YaHei'; COLOR: rgb(0,0,255)"><STRONG 
-style="FONT-WEIGHT: bold">Ê¹ÓÃFormData£¬½øĞĞAjaxÇëÇó²¢ÉÏ´«ÎÄ¼ş</STRONG></SPAN></DIV>
+style="FONT-WEIGHT: bold">ä½¿ç”¨FormDataï¼Œè¿›è¡ŒAjaxè¯·æ±‚å¹¶ä¸Šä¼ æ–‡ä»¶</STRONG></SPAN></DIV>
 <DIV>
 <HR 
 style="HEIGHT: 1px; BORDER-BOTTOM-WIDTH: thin; BORDER-BOTTOM-COLOR: black; MARGIN: 1.5em 10px">
 <SPAN 
-style="FONT-FAMILY: 'Microsoft YaHei'">ÕâÀïÊ¹ÓÃJQuery£¬µ«ÊÇÀÏ°æ±¾µÄJQuery±ÈÈç1.2ÊÇ²»Ö§³ÖµÄ£¬×îºÃÊ¹ÓÃ2.0»ò¸üĞÂ°æ±¾£º</SPAN></DIV></DIV>
+style="FONT-FAMILY: 'Microsoft YaHei'">è¿™é‡Œä½¿ç”¨JQueryï¼Œä½†æ˜¯è€ç‰ˆæœ¬çš„JQueryæ¯”å¦‚1.2æ˜¯ä¸æ”¯æŒçš„ï¼Œæœ€å¥½ä½¿ç”¨2.0æˆ–æ›´æ–°ç‰ˆæœ¬ï¼š</SPAN></DIV></DIV>
 <DIV class=dp-highlighter 
 style="OVERFLOW: auto; WORD-WRAP: break-word; WIDTH: 679px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; WORD-BREAK: break-all; COLOR: rgb(0,0,0); PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; FONT: 12px/25px Monaco, 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Consolas, 'Courier New', monospace; PADDING-LEFT: 1px; MARGIN-LEFT: 9px; LETTER-SPACING: normal; PADDING-RIGHT: 1px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">
 <DIV class=bar>
 <DIV class=tools 
-style="FONT-WEIGHT: bold; COLOR: black; PADDING-BOTTOM: 3px; TEXT-ALIGN: left; PADDING-TOP: 3px; PADDING-LEFT: 3px; MARGIN: 0px; PADDING-RIGHT: 3px">Html´úÂë<SPAN 
+style="FONT-WEIGHT: bold; COLOR: black; PADDING-BOTTOM: 3px; TEXT-ALIGN: left; PADDING-TOP: 3px; PADDING-LEFT: 3px; MARGIN: 0px; PADDING-RIGHT: 3px">Htmlä»£ç <SPAN 
 class=Apple-converted-space>&nbsp;</SPAN><EMBED 
 type=application/x-shockwave-flash 
 pluginspage=http://www.macromedia.com/go/getflashplayer height=15 width=14 
-src=http://yunzhu.iteye.com/javascripts/syntaxhighlighter/clipboard_new.swf 
-allowscriptaccess="always" quality="high" 
-flashvars="clipboard=%3Cform%20id%3D%20%22uploadForm%22%3E%0A%20%20%20%20%20%20%3Cp%20%3E%E6%8C%87%E5%AE%9A%E6%96%87%E4%BB%B6%E5%90%8D%EF%BC%9A%20%3Cinput%20type%3D%22text%22%20name%3D%22filename%22%20value%3D%20%22%22%2F%3E%3C%2Fp%20%3E%0A%20%20%20%20%20%20%3Cp%20%3E%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%EF%BC%9A%20%3Cinput%20type%3D%22file%22%20name%3D%22file%22%2F%3E%3C%2F%20p%3E%0A%20%20%20%20%20%20%3Cinput%20type%3D%22button%22%20value%3D%22%E4%B8%8A%E4%BC%A0%22%20onclick%3D%22doUpload()%22%20%2F%3E%0A%3C%2Fform%3E" 
-wmode="transparent">&nbsp;<A 
-onclick="code_favorites_do_favorite(this);return false;" title=ÊÕ²ØÕâ¶Î´úÂë 
+src="http://yunzhu.iteye.com/javascripts/syntaxhighlighter/clipboard_new.swf" 
+wmode="transparent" flashvars="clipboard=%3Cform%20id%3D%20%22uploadForm%22%3E%0A%20%20%20%20%20%20%3Cp%20%3E%E6%8C%87%E5%AE%9A%E6%96%87%E4%BB%B6%E5%90%8D%EF%BC%9A%20%3Cinput%20type%3D%22text%22%20name%3D%22filename%22%20value%3D%20%22%22%2F%3E%3C%2Fp%20%3E%0A%20%20%20%20%20%20%3Cp%20%3E%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%EF%BC%9A%20%3Cinput%20type%3D%22file%22%20name%3D%22file%22%2F%3E%3C%2F%20p%3E%0A%20%20%20%20%20%20%3Cinput%20type%3D%22button%22%20value%3D%22%E4%B8%8A%E4%BC%A0%22%20onclick%3D%22doUpload()%22%20%2F%3E%0A%3C%2Fform%3E" 
+quality="high" 
+allowscriptaccess="always">&nbsp;<A 
+onclick="code_favorites_do_favorite(this);return false;" title=æ”¶è—è¿™æ®µä»£ç  
 style="TEXT-DECORATION: underline; COLOR: rgb(98,0,145)" 
 href="javascript:void()"><IMG class=star 
 style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px" 
-alt=ÊÕ²Ø´úÂë src="http://yunzhu.iteye.com/images/icon_star.png"></A></DIV></DIV>
+alt=æ”¶è—ä»£ç  src="http://yunzhu.iteye.com/images/icon_star.png"></A></DIV></DIV>
 <OL class=dp-xml 
 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1px solid; BORDER-RIGHT: rgb(209,215,220) 1px solid; BORDER-BOTTOM: rgb(209,215,220) 1px solid; COLOR: rgb(43,145,175); PADDING-BOTTOM: 2px; PADDING-TOP: 2px; PADDING-LEFT: 0px; MARGIN: 0px 0px 1px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 1.4em; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255)">
   <LI 
@@ -526,7 +526,7 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
   style="COLOR: red">id</SPAN><SPAN style="COLOR: black">=&nbsp;</SPAN><SPAN 
   class=attribute-value style="COLOR: blue">"uploadForm"</SPAN><SPAN class=tag 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&gt;</SPAN><SPAN 
-  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN class=tag 
@@ -534,7 +534,7 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
   class=tag-name style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">p</SPAN><SPAN 
   style="COLOR: black">&nbsp;</SPAN><SPAN class=tag 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&gt;</SPAN><SPAN 
-  style="COLOR: black">Ö¸¶¨ÎÄ¼şÃû£º&nbsp;</SPAN><SPAN class=tag 
+  style="COLOR: black">æŒ‡å®šæ–‡ä»¶åï¼š&nbsp;</SPAN><SPAN class=tag 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&lt;</SPAN><SPAN 
   class=tag-name 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">input</SPAN><SPAN 
@@ -552,7 +552,7 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
   class=tag-name style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">p</SPAN><SPAN 
   style="COLOR: black">&nbsp;</SPAN><SPAN class=tag 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&gt;</SPAN><SPAN 
-  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN class=tag 
@@ -560,7 +560,7 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
   class=tag-name style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">p</SPAN><SPAN 
   style="COLOR: black">&nbsp;</SPAN><SPAN class=tag 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&gt;</SPAN><SPAN 
-  style="COLOR: black">ÉÏ´«ÎÄ¼ş£º&nbsp;</SPAN><SPAN class=tag 
+  style="COLOR: black">ä¸Šä¼ æ–‡ä»¶ï¼š&nbsp;</SPAN><SPAN class=tag 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&lt;</SPAN><SPAN 
   class=tag-name 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">input</SPAN><SPAN 
@@ -575,7 +575,7 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
   style="COLOR: black">&nbsp;</SPAN><SPAN class=tag-name 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">p</SPAN><SPAN class=tag 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">&gt;</SPAN><SPAN 
-  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN class=tag 
@@ -587,13 +587,13 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
   class=attribute-value style="COLOR: blue">"button"</SPAN><SPAN 
   style="COLOR: black">&nbsp;</SPAN><SPAN class=attribute 
   style="COLOR: red">value</SPAN><SPAN style="COLOR: black">=</SPAN><SPAN 
-  class=attribute-value style="COLOR: blue">"ÉÏ´«"</SPAN><SPAN 
+  class=attribute-value style="COLOR: blue">"ä¸Šä¼ "</SPAN><SPAN 
   style="COLOR: black">&nbsp;</SPAN><SPAN class=attribute 
   style="COLOR: red">onclick</SPAN><SPAN style="COLOR: black">=</SPAN><SPAN 
   class=attribute-value style="COLOR: blue">"doUpload()"</SPAN><SPAN 
   style="COLOR: black">&nbsp;</SPAN><SPAN class=tag 
   style="FONT-WEIGHT: bold; COLOR: rgb(0,102,153)">/&gt;</SPAN><SPAN 
-  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black"><SPAN class=tag 
@@ -608,26 +608,26 @@ style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(
 style="OVERFLOW: auto; WORD-WRAP: break-word; WIDTH: 679px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; WORD-BREAK: break-all; COLOR: rgb(0,0,0); PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; FONT: 12px/25px Monaco, 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Consolas, 'Courier New', monospace; PADDING-LEFT: 1px; MARGIN-LEFT: 9px; LETTER-SPACING: normal; PADDING-RIGHT: 1px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">
 <DIV class=bar>
 <DIV class=tools 
-style="FONT-WEIGHT: bold; COLOR: black; PADDING-BOTTOM: 3px; TEXT-ALIGN: left; PADDING-TOP: 3px; PADDING-LEFT: 3px; MARGIN: 0px; PADDING-RIGHT: 3px">Js´úÂë<SPAN 
+style="FONT-WEIGHT: bold; COLOR: black; PADDING-BOTTOM: 3px; TEXT-ALIGN: left; PADDING-TOP: 3px; PADDING-LEFT: 3px; MARGIN: 0px; PADDING-RIGHT: 3px">Jsä»£ç <SPAN 
 class=Apple-converted-space>&nbsp;</SPAN><EMBED 
 type=application/x-shockwave-flash 
 pluginspage=http://www.macromedia.com/go/getflashplayer height=15 width=14 
-src=http://yunzhu.iteye.com/javascripts/syntaxhighlighter/clipboard_new.swf 
-allowscriptaccess="always" quality="high" 
-flashvars="clipboard=function%20doUpload()%20%7B%0A%20%20%20%20%20var%20formData%20%3D%20new%20FormData(%24(%20%22%23uploadForm%22%20)%5B0%5D)%3B%0A%20%20%20%20%20%24.ajax(%7B%0A%20%20%20%20%20%20%20%20%20%20url%3A%20'http%3A%2F%2Flocalhost%3A8080%2FcfJAX_RS%2Frest%2Ffile%2Fupload'%20%2C%0A%20%20%20%20%20%20%20%20%20%20type%3A%20'POST'%2C%0A%20%20%20%20%20%20%20%20%20%20data%3A%20formData%2C%0A%20%20%20%20%20%20%20%20%20%20async%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20cache%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20contentType%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20processData%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20success%3A%20function%20(returndata)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20alert(returndata)%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20error%3A%20function%20(returndata)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20alert(returndata)%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%7D)%3B%0A%7D" 
-wmode="transparent">&nbsp;<A 
-onclick="code_favorites_do_favorite(this);return false;" title=ÊÕ²ØÕâ¶Î´úÂë 
+src="http://yunzhu.iteye.com/javascripts/syntaxhighlighter/clipboard_new.swf" 
+wmode="transparent" flashvars="clipboard=function%20doUpload()%20%7B%0A%20%20%20%20%20var%20formData%20%3D%20new%20FormData(%24(%20%22%23uploadForm%22%20)%5B0%5D)%3B%0A%20%20%20%20%20%24.ajax(%7B%0A%20%20%20%20%20%20%20%20%20%20url%3A%20'http%3A%2F%2Flocalhost%3A8080%2FcfJAX_RS%2Frest%2Ffile%2Fupload'%20%2C%0A%20%20%20%20%20%20%20%20%20%20type%3A%20'POST'%2C%0A%20%20%20%20%20%20%20%20%20%20data%3A%20formData%2C%0A%20%20%20%20%20%20%20%20%20%20async%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20cache%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20contentType%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20processData%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20success%3A%20function%20(returndata)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20alert(returndata)%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20error%3A%20function%20(returndata)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20alert(returndata)%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%7D)%3B%0A%7D" 
+quality="high" 
+allowscriptaccess="always">&nbsp;<A 
+onclick="code_favorites_do_favorite(this);return false;" title=æ”¶è—è¿™æ®µä»£ç  
 style="TEXT-DECORATION: underline; COLOR: rgb(98,0,145)" 
 href="javascript:void()"><IMG class=star 
 style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px" 
-alt=ÊÕ²Ø´úÂë src="http://yunzhu.iteye.com/images/icon_star.png"></A></DIV></DIV>
+alt=æ”¶è—ä»£ç  src="http://yunzhu.iteye.com/images/icon_star.png"></A></DIV></DIV>
 <OL class=dp-c 
 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1px solid; BORDER-RIGHT: rgb(209,215,220) 1px solid; BORDER-BOTTOM: rgb(209,215,220) 1px solid; COLOR: rgb(43,145,175); PADDING-BOTTOM: 2px; PADDING-TOP: 2px; PADDING-LEFT: 0px; MARGIN: 0px 0px 1px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 1.4em; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255)">
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black"><SPAN class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">function</SPAN><SPAN 
-  style="COLOR: black">&nbsp;doUpload()&nbsp;{&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;doUpload()&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN class=keyword 
@@ -636,76 +636,78 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">new</SPAN><SPAN 
   style="COLOR: black">&nbsp;FormData($(&nbsp;</SPAN><SPAN class=string 
   style="COLOR: blue">"#uploadForm"</SPAN><SPAN 
-  style="COLOR: black">&nbsp;)[0]);&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;)[0]);&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
-  style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$.ajax({&nbsp;&nbsp;</SPAN></LI>
+  style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$.ajax({&nbsp;&nbsp;</SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url:&nbsp;<SPAN 
   class=string 
   style="COLOR: blue">'http://localhost:8080/cfJAX_RS/rest/file/upload'</SPAN><SPAN 
-  style="COLOR: black">&nbsp;,&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;,&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type:&nbsp;<SPAN 
   class=string style="COLOR: blue">'POST'</SPAN><SPAN 
-  style="COLOR: black">,&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">,&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
-  style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;formData,&nbsp;&nbsp;</SPAN></LI>
+  style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;formData,&nbsp;&nbsp;</SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;async:&nbsp;<SPAN 
   class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">false</SPAN><SPAN 
-  style="COLOR: black">,&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">,&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cache:&nbsp;<SPAN 
   class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">false</SPAN><SPAN 
-  style="COLOR: black">,&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">,&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;contentType:&nbsp;<SPAN 
   class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">false</SPAN><SPAN 
-  style="COLOR: black">,&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">,&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processData:&nbsp;<SPAN 
   class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">false</SPAN><SPAN 
-  style="COLOR: black">,&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">,&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;success:&nbsp;<SPAN 
   class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">function</SPAN><SPAN 
-  style="COLOR: black">&nbsp;(returndata)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;(returndata)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
-  style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(returndata);&nbsp;&nbsp;</SPAN></LI>
+  style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(returndata);&nbsp;&nbsp;</SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
-  style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},&nbsp;&nbsp;</SPAN></LI>
+  style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},&nbsp;&nbsp;</SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;error:&nbsp;<SPAN 
   class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">function</SPAN><SPAN 
-  style="COLOR: black">&nbsp;(returndata)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;(returndata)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
-  style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(returndata);&nbsp;&nbsp;</SPAN></LI>
+  style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(returndata);&nbsp;&nbsp;</SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
-  style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</SPAN></LI>
+  style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
-  style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});&nbsp;&nbsp;</SPAN></LI>
+  style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});&nbsp;&nbsp;</SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
-  style="COLOR: black">}&nbsp;&nbsp;</SPAN></LI></OL></DIV></body>
+  style="COLOR: black">}&nbsp;&nbsp;</SPAN></LI></OL></DIV>
+<P>&nbsp;</P>
+<P>&nbsp;</P></body>
 </html>

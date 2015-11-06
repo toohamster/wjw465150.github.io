@@ -1,12 +1,13 @@
-<!-- saved from url=http://coolyongzi.javaeye.com/blog/218559 -->
+ï»¿<!-- saved from url=http://coolyongzi.javaeye.com/blog/218559 -->
 <script>
 window.onerror = new Function("return(false);")
 </script><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 
 <HTML dir=ltr xml:lang="zh-CN" 
-xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>Ê¹ÓÃ Spring 2.5 »ùÓÚ×¢½âÇı¶¯µÄ Spring MVC 2</TITLE><LINK 
+xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>ä½¿ç”¨ Spring 2.5 åŸºäºæ³¨è§£é©±åŠ¨çš„ Spring MVC 2</title><LINK 
 href="favicon.ico" type=image/x-icon rel="shortcut icon"><LINK 
-title=³ÌĞòÈËÉú¡ªÂ·ÂşÂş href="rss" type=application/rss+xml rel=alternate><LINK 
+title=ç¨‹åºäººç”Ÿâ€”è·¯æ¼«æ¼« href="rss" type=application/rss+xml rel=alternate><LINK 
 media=screen href="blog.css_1217128319" 
 type=text/css rel=stylesheet><LINK media=screen 
 href="purple.css_1200451876" 
@@ -47,21 +48,21 @@ type=text/javascript></SCRIPT>
 <DIV class=date><SPAN class=year>2008</SPAN><SPAN class=sep_year>-</SPAN><SPAN 
 class=month>07</SPAN><SPAN class=sep_month>-</SPAN><SPAN 
 class=day>23</SPAN></DIV>
-<H3 class=type_reprint title=×ªÔØ><A href="http://coolyongzi.javaeye.com/blog/218559">Spring 2.5 »ùÓÚ×¢½âÇı¶¯µÄ Spring 
+<H3 class=type_reprint title=è½¬è½½><A href="http://coolyongzi.javaeye.com/blog/218559">Spring 2.5 åŸºäºæ³¨è§£é©±åŠ¨çš„ Spring 
 MVC 2</A></H3></DIV>
-<DIV class=blog_content>×¢²á×Ô¼ºµÄÊôĞÔ±à¼­Æ÷ <BR><BR>Spring MVC 
-ÓĞÒ»Ì×³£ÓÃµÄÊôĞÔ±à¼­Æ÷£¬Õâ°üÀ¨»ù±¾Êı¾İÀàĞÍ¼°Æä°ü¹üÀàµÄÊôĞÔ±à¼­Æ÷¡¢String ÊôĞÔ±à¼­Æ÷¡¢JavaBean µÄÊôĞÔ±à¼­Æ÷µÈ¡£µ«ÓĞÊ±ÎÒÃÇ»¹ĞèÒªÏò Spring 
-MVC ¿ò¼Ü×¢²áÒ»Ğ©×Ô¶¨ÒåµÄÊôĞÔ±à¼­Æ÷£¬ÈçÌØ¶¨Ê±¼ä¸ñÊ½µÄÊôĞÔ±à¼­Æ÷¾ÍÊÇÆäÖĞÒ»Àı¡£ <BR><BR>Spring MVC ÔÊĞíÏòÕû¸ö Spring 
-¿ò¼Ü×¢²áÊôĞÔ±à¼­Æ÷£¬ËüÃÇ¶ÔËùÓĞ Controller ¶¼ÓĞÓ°Ïì¡£µ±È» Spring MVC Ò²ÔÊĞí½öÏòÄ³¸ö Controller ×¢²áÊôĞÔ±à¼­Æ÷£¬¶ÔÆäËüµÄ 
-Controller Ã»ÓĞÓ°Ïì¡£Ç°Õß¿ÉÒÔÍ¨¹ı AnnotationMethodHandlerAdapter µÄÅäÖÃ×öµ½£¬¶øºóÕßÔò¿ÉÒÔÍ¨¹ı @InitBinder 
-×¢½âÊµÏÖ¡£ <BR><BR>ÏÂÃæÏÈ¿´ÏòÕû¸ö Spring MVC ¿ò¼Ü×¢²áµÄ×Ô¶¨Òå±à¼­Æ÷£º <BR><BR><BR>Çåµ¥ 13. ×¢²á¿ò¼Ü¼¶µÄ×Ô¶¨ÒåÊôĞÔ±à¼­Æ÷ 
+<DIV class=blog_content>æ³¨å†Œè‡ªå·±çš„å±æ€§ç¼–è¾‘å™¨ <BR><BR>Spring MVC 
+æœ‰ä¸€å¥—å¸¸ç”¨çš„å±æ€§ç¼–è¾‘å™¨ï¼Œè¿™åŒ…æ‹¬åŸºæœ¬æ•°æ®ç±»å‹åŠå…¶åŒ…è£¹ç±»çš„å±æ€§ç¼–è¾‘å™¨ã€String å±æ€§ç¼–è¾‘å™¨ã€JavaBean çš„å±æ€§ç¼–è¾‘å™¨ç­‰ã€‚ä½†æœ‰æ—¶æˆ‘ä»¬è¿˜éœ€è¦å‘ Spring 
+MVC æ¡†æ¶æ³¨å†Œä¸€äº›è‡ªå®šä¹‰çš„å±æ€§ç¼–è¾‘å™¨ï¼Œå¦‚ç‰¹å®šæ—¶é—´æ ¼å¼çš„å±æ€§ç¼–è¾‘å™¨å°±æ˜¯å…¶ä¸­ä¸€ä¾‹ã€‚ <BR><BR>Spring MVC å…è®¸å‘æ•´ä¸ª Spring 
+æ¡†æ¶æ³¨å†Œå±æ€§ç¼–è¾‘å™¨ï¼Œå®ƒä»¬å¯¹æ‰€æœ‰ Controller éƒ½æœ‰å½±å“ã€‚å½“ç„¶ Spring MVC ä¹Ÿå…è®¸ä»…å‘æŸä¸ª Controller æ³¨å†Œå±æ€§ç¼–è¾‘å™¨ï¼Œå¯¹å…¶å®ƒçš„ 
+Controller æ²¡æœ‰å½±å“ã€‚å‰è€…å¯ä»¥é€šè¿‡ AnnotationMethodHandlerAdapter çš„é…ç½®åšåˆ°ï¼Œè€Œåè€…åˆ™å¯ä»¥é€šè¿‡ @InitBinder 
+æ³¨è§£å®ç°ã€‚ <BR><BR>ä¸‹é¢å…ˆçœ‹å‘æ•´ä¸ª Spring MVC æ¡†æ¶æ³¨å†Œçš„è‡ªå®šä¹‰ç¼–è¾‘å™¨ï¼š <BR><BR><BR>æ¸…å• 13. æ³¨å†Œæ¡†æ¶çº§çš„è‡ªå®šä¹‰å±æ€§ç¼–è¾‘å™¨ 
 <BR>&gt;bean 
 class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"&lt; 
 &gt;property name="webBindingInitializer"&lt; &gt;bean 
 class="com.baobaotao.web.MyBindingInitializer"/&lt; 
-&gt;/property&lt;&gt;/bean&lt; <BR><BR><BR>MyBindingInitializer ÊµÏÖÁË 
-WebBindingInitializer ½Ó¿Ú£¬ÔÚ½Ó¿Ú·½·¨ÖĞÍ¨¹ı binder ×¢²á¶à¸ö×Ô¶¨ÒåµÄÊôĞÔ±à¼­Æ÷£¬Æä´úÂëÈçÏÂËùÊ¾£º <BR><BR><BR>Çåµ¥ 
-14.×Ô¶¨ÒåÊôĞÔ±à¼­Æ÷ <BR>package org.springframework.samples.petclinic.web;import 
+&gt;/property&lt;&gt;/bean&lt; <BR><BR><BR>MyBindingInitializer å®ç°äº† 
+WebBindingInitializer æ¥å£ï¼Œåœ¨æ¥å£æ–¹æ³•ä¸­é€šè¿‡ binder æ³¨å†Œå¤šä¸ªè‡ªå®šä¹‰çš„å±æ€§ç¼–è¾‘å™¨ï¼Œå…¶ä»£ç å¦‚ä¸‹æ‰€ç¤ºï¼š <BR><BR><BR>æ¸…å• 
+14.è‡ªå®šä¹‰å±æ€§ç¼–è¾‘å™¨ <BR>package org.springframework.samples.petclinic.web;import 
 java.text.SimpleDateFormat;import java.util.Date;import 
 org.springframework.beans.factory.annotation.Autowired;import 
 org.springframework.beans.propertyeditors.CustomDateEditor;import 
@@ -76,18 +77,18 @@ initBinder(WebDataBinder binder, WebRequest request) { SimpleDateFormat
 dateFormat = new SimpleDateFormat("yyyy-MM-dd"); dateFormat.setLenient(false); 
 binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, 
 false)); binder.registerCustomEditor(String.class, new 
-StringTrimmerEditor(false)); }} <BR><BR><BR>Èç¹ûÏ£ÍûÄ³¸öÊôĞÔ±à¼­Æ÷½ö×÷ÓÃÓÚÌØ¶¨µÄ Controller£¬¿ÉÒÔÔÚ 
-Controller ÖĞ¶¨ÒåÒ»¸ö±ê×¢ @InitBinder ×¢½âµÄ·½·¨£¬¿ÉÒÔÔÚ¸Ã·½·¨ÖĞÏò Controller ÁË×¢²áÈô¸É¸öÊôĞÔ±à¼­Æ÷£¬À´¿´ÏÂÃæµÄ´úÂë£º 
-<BR><BR><BR>Çåµ¥ 15. ×¢²á Controller ¼¶µÄ×Ô¶¨ÒåÊôĞÔ±à¼­Æ÷ <BR>@Controllerpublic class 
+StringTrimmerEditor(false)); }} <BR><BR><BR>å¦‚æœå¸Œæœ›æŸä¸ªå±æ€§ç¼–è¾‘å™¨ä»…ä½œç”¨äºç‰¹å®šçš„ Controllerï¼Œå¯ä»¥åœ¨ 
+Controller ä¸­å®šä¹‰ä¸€ä¸ªæ ‡æ³¨ @InitBinder æ³¨è§£çš„æ–¹æ³•ï¼Œå¯ä»¥åœ¨è¯¥æ–¹æ³•ä¸­å‘ Controller äº†æ³¨å†Œè‹¥å¹²ä¸ªå±æ€§ç¼–è¾‘å™¨ï¼Œæ¥çœ‹ä¸‹é¢çš„ä»£ç ï¼š 
+<BR><BR><BR>æ¸…å• 15. æ³¨å†Œ Controller çº§çš„è‡ªå®šä¹‰å±æ€§ç¼–è¾‘å™¨ <BR>@Controllerpublic class 
 MyFormController { @InitBinder public void initBinder(WebDataBinder binder) { 
 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd"); 
 dateFormat.setLenient(false); binder.registerCustomEditor(Date.class, new 
-CustomDateEditor(dateFormat, false)); } ¡­} <BR><BR><BR>×¢Òâ±»±ê×¢ @InitBinder 
-×¢½âµÄ·½·¨±ØĞëÓµÓĞÒ»¸ö WebDataBinder ÀàĞÍµÄÈë²Î£¬ÒÔ±ã Spring MVC ¿ò¼Ü½«×¢²áÊôĞÔ±à¼­Æ÷µÄ WebDataBinder ¶ÔÏó´«µİ½øÀ´¡£ 
-<BR><BR><BR>ÈçºÎ×¼±¸Êı¾İ <BR><BR>ÔÚ ±àĞ´ Controller 
-Ê±£¬³£³£ĞèÒªÔÚÕæÕı½øÈëÇëÇó´¦Àí·½·¨Ç°×¼±¸Ò»Ğ©Êı¾İ£¬ÒÔ±ãÇëÇó´¦Àí»òÊÓÍ¼äÖÈ¾Ê±Ê¹ÓÃ¡£ÔÚ´«Í³µÄ SimpleFormController Àï£¬ÊÇÍ¨¹ı¸´Ğ´Æä 
-referenceData() ·½·¨À´×¼±¸ÒıÓÃÊı¾İµÄ¡£ÔÚ Spring 2.5 Ê±£¬¿ÉÒÔ½«ÈÎºÎÒ»¸öÓµÓĞ·µ»ØÖµµÄ·½·¨±ê×¢ÉÏ 
-@ModelAttribute£¬Ê¹Æä·µ»ØÖµ½«»á½øÈëµ½Ä£ĞÍ¶ÔÏóµÄÊôĞÔÁĞ±íÖĞ¡£À´¿´ÏÂÃæµÄÀı×Ó£º <BR><BR><BR>Çåµ¥ 16. ¶¨ÒåÎª´¦ÀíÇëÇó×¼±¸Êı¾İµÄ·½·¨ 
+CustomDateEditor(dateFormat, false)); } â€¦} <BR><BR><BR>æ³¨æ„è¢«æ ‡æ³¨ @InitBinder 
+æ³¨è§£çš„æ–¹æ³•å¿…é¡»æ‹¥æœ‰ä¸€ä¸ª WebDataBinder ç±»å‹çš„å…¥å‚ï¼Œä»¥ä¾¿ Spring MVC æ¡†æ¶å°†æ³¨å†Œå±æ€§ç¼–è¾‘å™¨çš„ WebDataBinder å¯¹è±¡ä¼ é€’è¿›æ¥ã€‚ 
+<BR><BR><BR>å¦‚ä½•å‡†å¤‡æ•°æ® <BR><BR>åœ¨ ç¼–å†™ Controller 
+æ—¶ï¼Œå¸¸å¸¸éœ€è¦åœ¨çœŸæ­£è¿›å…¥è¯·æ±‚å¤„ç†æ–¹æ³•å‰å‡†å¤‡ä¸€äº›æ•°æ®ï¼Œä»¥ä¾¿è¯·æ±‚å¤„ç†æˆ–è§†å›¾æ¸²æŸ“æ—¶ä½¿ç”¨ã€‚åœ¨ä¼ ç»Ÿçš„ SimpleFormController é‡Œï¼Œæ˜¯é€šè¿‡å¤å†™å…¶ 
+referenceData() æ–¹æ³•æ¥å‡†å¤‡å¼•ç”¨æ•°æ®çš„ã€‚åœ¨ Spring 2.5 æ—¶ï¼Œå¯ä»¥å°†ä»»ä½•ä¸€ä¸ªæ‹¥æœ‰è¿”å›å€¼çš„æ–¹æ³•æ ‡æ³¨ä¸Š 
+@ModelAttributeï¼Œä½¿å…¶è¿”å›å€¼å°†ä¼šè¿›å…¥åˆ°æ¨¡å‹å¯¹è±¡çš„å±æ€§åˆ—è¡¨ä¸­ã€‚æ¥çœ‹ä¸‹é¢çš„ä¾‹å­ï¼š <BR><BR><BR>æ¸…å• 16. å®šä¹‰ä¸ºå¤„ç†è¯·æ±‚å‡†å¤‡æ•°æ®çš„æ–¹æ³• 
 <BR>package com.baobaotao.web;import 
 com.baobaotao.service.BbtForumService;import 
 org.springframework.beans.factory.annotation.Autowired;import 
@@ -100,28 +101,30 @@ org.springframework.web.bind.annotation.SessionAttributes;import
 java.util.ArrayList;import java.util.List;import 
 java.util.Set;@Controller@RequestMapping("/bbtForum.do")public class 
 BbtForumController { @Autowired private BbtForumService bbtForumService; 
-@ModelAttribute("items")//&lt;¡ª¡ª¢ÙÏòÄ£ĞÍ¶ÔÏóÖĞÌí¼ÓÒ»¸öÃûÎªitemsµÄÊôĞÔ public List&lt;String&gt; 
+@ModelAttribute("items")//&lt;â€”â€”â‘ å‘æ¨¡å‹å¯¹è±¡ä¸­æ·»åŠ ä¸€ä¸ªåä¸ºitemsçš„å±æ€§ public List&lt;String&gt; 
 populateItems() { List&lt;String&gt; lists = new ArrayList&lt;String&gt;(); 
 lists.add("item1"); lists.add("item2"); return lists; } @RequestMapping(params = 
 "method=listAllBoard") public String 
 listAllBoard(@ModelAttribute("currUser")User user, ModelMap model) { 
-bbtForumService.getAllBoard(); //&lt;¡ª¡ª¢ÚÔÚ´Ë·ÃÎÊÄ£ĞÍÖĞµÄitemsÊôĞÔ 
+bbtForumService.getAllBoard(); //&lt;â€”â€”â‘¡åœ¨æ­¤è®¿é—®æ¨¡å‹ä¸­çš„itemså±æ€§ 
 System.out.println("model.items:" + 
 ((List&lt;String&gt;)model.get("items")).size()); return "listBoard"; }} 
-<BR><BR><BR>ÔÚ ¢Ù ´¦£¬Í¨¹ıÊ¹ÓÃ @ModelAttribute ×¢½â£¬populateItem() 
-·½·¨½«ÔÚÈÎºÎÇëÇó´¦Àí·½·¨Ö´ĞĞÇ°µ÷ÓÃ£¬Spring MVC »á½«¸Ã·½·¨·µ»ØÖµÒÔ¡°items¡±ÎªÃû·ÅÈëµ½Òşº¬µÄÄ£ĞÍ¶ÔÏóÊôĞÔÁĞ±íÖĞ¡£ <BR><BR>Ëù ÒÔÔÚ ¢Ú 
-´¦£¬ÎÒÃÇ¾Í¿ÉÒÔÍ¨¹ı ModelMap Èë²Î·ÃÎÊµ½ items ÊôĞÔ£¬µ±Ö´ĞĞ listAllBoard() ÇëÇó´¦Àí·½·¨Ê±£¬¢Ú 
-´¦½«ÔÚ¿ØÖÆÌ¨´òÓ¡³ö¡°model.items:2¡±µÄĞÅÏ¢¡£µ±È»ÎÒÃÇÒ²¿ÉÒÔÔÚÇëÇóµÄÊÓÍ¼ÖĞ·ÃÎÊµ½Ä£ĞÍ¶ÔÏóÖĞµÄ items ÊôĞÔ¡£ <BR><BR><BR>Ğ¡½á 
-<BR><BR>Spring 2.5 ¶Ô Spring MVC ½øĞĞÁËºÜ´óÔöÇ¿£¬ÏÖÔÚÎÒÃÇ¼¸ºõÍêÈ«¿ÉÒÔÊ¹ÓÃ»ùÓÚ×¢½âµÄ Spring MVC ÍêÈ«Ìæ»»µôÔ­À´»ùÓÚ½Ó¿Ú 
-Spring MVC ³ÌĞò¡£»ùÓÚ×¢½âµÄ Spring MVC ±ÈÖ®ÓÚ»ùÓÚ½Ó¿ÚµÄ Spring MVC ÓµÓĞÒÔÏÂ¼¸µãºÃ´¦£º 
-<BR><BR>·½±ãÇëÇóºÍ¿ØÖÆÆ÷µÄÓ³Éä£» <BR>·½±ãÇëÇó´¦Àí·½·¨Èë²Î°ó¶¨URL²ÎÊı£» <BR>Controller ²»±Ø¼Ì³ĞÈÎºÎ½Ó¿Ú£¬Ëü½öÊÇÒ»¸ö¼òµ¥µÄ 
-POJO¡£ <BR>µ« ÊÇ»ùÓÚ×¢½âµÄ Spring MVC ²¢²»ÍêÃÀ£¬»¹´æÔÚÓÅ»¯µÄ¿Õ¼ä£¬ÒòÎªÔÚÄ³Ğ©ÅäÖÃÉÏËü±È»ùÓÚ XML µÄÅäÖÃ¸ü·±Ëö¡£±ÈÈç¶ÔÓÚ´¦Àí¶à¸öÇëÇóµÄ 
-Controller À´Ëµ£¬¼ÙÉèÎÒÃÇÊ¹ÓÃÒ»¸ö URL ²ÎÊıÖ¸¶¨µ÷ÓÃµÄ´¦Àí·½·¨£¨Èç 
-xxx.do?method=listBoardTopic£©£¬µ±Ê¹ÓÃ×¢½âÊ±£¬Ã¿¸öÇëÇó´¦Àí·½·¨¶¼±ØĞëÊ¹ÓÃ @RequestMapping() ×¢½âÖ¸¶¨¶ÔÓ¦µÄ URL 
-²ÎÊı£¨Èç @RequestMapping(params = "method=listBoardTopic")£©£¬¶øÔÚ XML ÅäÖÃÖĞÎÒÃÇ½öĞèÒªÅäÖÃÒ»¸ö 
-ParameterMethodNameResolver ¾Í¿ÉÒÔÁË¡£ </DIV><!--EndFragment--></DIV>
+<BR><BR><BR>åœ¨ â‘  å¤„ï¼Œé€šè¿‡ä½¿ç”¨ @ModelAttribute æ³¨è§£ï¼ŒpopulateItem() 
+æ–¹æ³•å°†åœ¨ä»»ä½•è¯·æ±‚å¤„ç†æ–¹æ³•æ‰§è¡Œå‰è°ƒç”¨ï¼ŒSpring MVC ä¼šå°†è¯¥æ–¹æ³•è¿”å›å€¼ä»¥â€œitemsâ€ä¸ºåæ”¾å…¥åˆ°éšå«çš„æ¨¡å‹å¯¹è±¡å±æ€§åˆ—è¡¨ä¸­ã€‚ <BR><BR>æ‰€ ä»¥åœ¨ â‘¡ 
+å¤„ï¼Œæˆ‘ä»¬å°±å¯ä»¥é€šè¿‡ ModelMap å…¥å‚è®¿é—®åˆ° items å±æ€§ï¼Œå½“æ‰§è¡Œ listAllBoard() è¯·æ±‚å¤„ç†æ–¹æ³•æ—¶ï¼Œâ‘¡ 
+å¤„å°†åœ¨æ§åˆ¶å°æ‰“å°å‡ºâ€œmodel.items:2â€çš„ä¿¡æ¯ã€‚å½“ç„¶æˆ‘ä»¬ä¹Ÿå¯ä»¥åœ¨è¯·æ±‚çš„è§†å›¾ä¸­è®¿é—®åˆ°æ¨¡å‹å¯¹è±¡ä¸­çš„ items å±æ€§ã€‚ <BR><BR><BR>å°ç»“ 
+<BR><BR>Spring 2.5 å¯¹ Spring MVC è¿›è¡Œäº†å¾ˆå¤§å¢å¼ºï¼Œç°åœ¨æˆ‘ä»¬å‡ ä¹å®Œå…¨å¯ä»¥ä½¿ç”¨åŸºäºæ³¨è§£çš„ Spring MVC å®Œå…¨æ›¿æ¢æ‰åŸæ¥åŸºäºæ¥å£ 
+Spring MVC ç¨‹åºã€‚åŸºäºæ³¨è§£çš„ Spring MVC æ¯”ä¹‹äºåŸºäºæ¥å£çš„ Spring MVC æ‹¥æœ‰ä»¥ä¸‹å‡ ç‚¹å¥½å¤„ï¼š 
+<BR><BR>æ–¹ä¾¿è¯·æ±‚å’Œæ§åˆ¶å™¨çš„æ˜ å°„ï¼› <BR>æ–¹ä¾¿è¯·æ±‚å¤„ç†æ–¹æ³•å…¥å‚ç»‘å®šURLå‚æ•°ï¼› <BR>Controller ä¸å¿…ç»§æ‰¿ä»»ä½•æ¥å£ï¼Œå®ƒä»…æ˜¯ä¸€ä¸ªç®€å•çš„ 
+POJOã€‚ <BR>ä½† æ˜¯åŸºäºæ³¨è§£çš„ Spring MVC å¹¶ä¸å®Œç¾ï¼Œè¿˜å­˜åœ¨ä¼˜åŒ–çš„ç©ºé—´ï¼Œå› ä¸ºåœ¨æŸäº›é…ç½®ä¸Šå®ƒæ¯”åŸºäº XML çš„é…ç½®æ›´ç¹çã€‚æ¯”å¦‚å¯¹äºå¤„ç†å¤šä¸ªè¯·æ±‚çš„ 
+Controller æ¥è¯´ï¼Œå‡è®¾æˆ‘ä»¬ä½¿ç”¨ä¸€ä¸ª URL å‚æ•°æŒ‡å®šè°ƒç”¨çš„å¤„ç†æ–¹æ³•ï¼ˆå¦‚ 
+xxx.do?method=listBoardTopicï¼‰ï¼Œå½“ä½¿ç”¨æ³¨è§£æ—¶ï¼Œæ¯ä¸ªè¯·æ±‚å¤„ç†æ–¹æ³•éƒ½å¿…é¡»ä½¿ç”¨ @RequestMapping() æ³¨è§£æŒ‡å®šå¯¹åº”çš„ URL 
+å‚æ•°ï¼ˆå¦‚ @RequestMapping(params = "method=listBoardTopic")ï¼‰ï¼Œè€Œåœ¨ XML é…ç½®ä¸­æˆ‘ä»¬ä»…éœ€è¦é…ç½®ä¸€ä¸ª 
+ParameterMethodNameResolver å°±å¯ä»¥äº†ã€‚ </DIV><!--EndFragment--></DIV>
 </DIV>
 </DIV>
 </DIV>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
 </BODY>
 </HTML>

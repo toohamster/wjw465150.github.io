@@ -1,10 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 
   <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN"><!-- Source is http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/ -->
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
-<title>���� Java 2 ����ʱ��ȫģ�͵��߳�Э��</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>基于 Java 2 运行时安全模型的线程协作</title>
 <meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.icra.org/ratingsv02.html" l gen true r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true r (n 0 s 0 v 0 l 0) "http://www.classify.org/safesurf/" l gen true r (SS~~000 1))'/>
 <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/"/>
 <link rel="SHORTCUT ICON" href="http://www.ibm.com/favicon.ico"/>
@@ -16,16 +16,16 @@
 <meta name="IBM.PageAttributes" content="sid=1003,1004"/>
 <meta name="Source" content="v16 Template Generator"/>
 <meta name="Robots" content="index,follow"/>
-<meta name="Abstract" content="Java 2 ������ʱ��ȫģ���ǻ��ڲ��ԺͶ�ջ��Ȩ�İ�ȫģ�͡�Java ʹ�ô�ȡ��������AccessController��Ϊ�û������ϵĴ󲿷ֹؼ���Դ�����ļ����׽��ֵȣ��ṩ����ʱ������������������ԱΪ�����Ӧ�ö��ư�ȫ�����ļ������Ľ������ڶ��̵߳Ļ����£����ʹ�� Java �ṩ�İ�ȫ���Թ����̼߳䰲ȫЭ���� Java Ӧ�á�"/>
-<meta name="Description" content="Java 2 ������ʱ��ȫģ���ǻ��ڲ��ԺͶ�ջ��Ȩ�İ�ȫģ�͡�Java ʹ�ô�ȡ��������AccessController��Ϊ�û������ϵĴ󲿷ֹؼ���Դ�����ļ����׽��ֵȣ��ṩ����ʱ������������������ԱΪ�����Ӧ�ö��ư�ȫ�����ļ������Ľ������ڶ��̵߳Ļ����£����ʹ�� Java �ṩ�İ�ȫ���Թ����̼߳䰲ȫЭ���� Java Ӧ�á�"/>
-<meta name="Keywords" content="�̣߳���ȫ�����ԣ�Ȩ�ޣ�������, tttjca"/>
+<meta name="Abstract" content="Java 2 的运行时安全模型是基于策略和堆栈授权的安全模型。Java 使用存取控制器（AccessController）为用户主机上的大部分关键资源（如文件，套接字等）提供运行时保护，并且允许管理员为具体的应用定制安全策略文件。本文将讨论在多线程的环境下，如何使用 Java 提供的安全特性构建线程间安全协作的 Java 应用。"/>
+<meta name="Description" content="Java 2 的运行时安全模型是基于策略和堆栈授权的安全模型。Java 使用存取控制器（AccessController）为用户主机上的大部分关键资源（如文件，套接字等）提供运行时保护，并且允许管理员为具体的应用定制安全策略文件。本文将讨论在多线程的环境下，如何使用 Java 提供的安全特性构建线程间安全协作的 Java 应用。"/>
+<meta name="Keywords" content="线程，安全，策略，权限，保护域, tttjca"/>
 <meta name="DC.Date" scheme="iso8601" content="2009-09-18"/>
 <meta name="DC.Type" scheme="IBM_ContentClassTaxonomy" content="CT316"/>
 <meta name="DC.Subject" scheme="IBM_SubjectTaxonomy" content="TT300"/>
 <meta scheme="IBM_WTMCategory" name="IBM.WTMCategory" content="SOFDCJVACN" />
 <meta name="DC.Rights" content="? Copyright?IBM Corporation?2009"/>
 <meta name="IBM.Effective" scheme="W3CDTF" content="2009-09-18"/>
-<meta name="title" content="���� Java 2 ����ʱ��ȫģ�͵��߳�Э��"/>
+<meta name="title" content="基于 Java 2 运行时安全模型的线程协作"/>
 
 <!-- HEADER_SCRIPTS_AND_CSS_INCLUDE -->
 <link href="index_files/all.css" media="all" rel="stylesheet" title="www" type="text/css"/>
@@ -53,27 +53,27 @@
   // <![CDATA[
 
  dwr = {};
-  dwr.clickhere = '�������';
+  dwr.clickhere = '点击评分';
   dwr.starIntro = ''; 
-  dwr.stars = '��';
-  dwr.star = '��'; 
-  dwr.avgRatingOf = 'ƽ����';
-  dwr.youRated = '����������';
-  dwr.avgRating = 'ƽ����';
-  dwr.basedOnVote = '�� {1} ������'; // {1} to be substitue by code
-  dwr.basedOnVotes = '�� {1} ������';
-  dwr.leftParen = '��'; 
-  dwr.rightParen = ' ��'; 
+  dwr.stars = '星';
+  dwr.star = '星'; 
+  dwr.avgRatingOf = '平均分';
+  dwr.youRated = '您的评分是';
+  dwr.avgRating = '平均分';
+  dwr.basedOnVote = '共 {1} 个评分'; // {1} to be substitue by code
+  dwr.basedOnVotes = '共 {1} 个评分';
+  dwr.leftParen = '（'; 
+  dwr.rightParen = ' ）'; 
   dwr.space = ' '; 
-  dwr.yourRating = '��������';
-dwr.avgRating2 = '�ܹ� {1} ���ֵ�ƽ����';
-dwr.avgRating3 = 'ƽ����{1} ��';
-dwr.rateThisArticle = 'Ϊ��������';
-dwr.votes = '{1}������';
-dwr.vote = '{1}������';
-dwr.submitErr = '�����ύʧ�ܣ������ԡ�';
-dwr.noRatingErr = '������ѡ��һ�����ֲ������ύ��';
-dwr.submit = '�ύ';
+  dwr.yourRating = '您的评分';
+dwr.avgRating2 = '总共 {1} 评分的平均分';
+dwr.avgRating3 = '平均分{1} 星';
+dwr.rateThisArticle = '为本文评分';
+dwr.votes = '{1}个评分';
+dwr.vote = '{1}个评分';
+dwr.submitErr = '错误：提交失败，请重试。';
+dwr.noRatingErr = '错误：请选择一个评分并重新提交。';
+dwr.submit = '提交';
 // ]]>
 </script>
 
@@ -122,15 +122,15 @@ dwr.submit = '�ύ';
 
 <body id="ibm-com">
 <div id="ibm-top" class="ibm-landing-page"><!-- MASTHEAD_BEGIN --><!-- MASTHEAD_BEGIN -->
-<div class="ibm-access"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#ibm-content">��ת����Ҫ����</a></div>
+<div class="ibm-access"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#ibm-content">跳转到主要内容</a></div>
 <div id="ibm-masthead-dw"><!-- TOP ROW -->    
     <div id="dw-masthead-top-row">
     	<ul id="ibm-mast-options-dw" class="cn">
     		<li id="dw-mast-top-0"> 	
-    			<a class="dw-mf-noscript" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#" title="��¼����ע�ᣩ������ JavaScript">��¼ (��ע��)</a>
+    			<a class="dw-mf-noscript" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#" title="登录（或注册）需启用 JavaScript">登录 (或注册)</a>
     		</li>
     		<li id="dw-mast-top-1" class="dw-mast-top-1-cn">
-    			<a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#SELECTLANG">����</a><IMG class=dw-preload alt="" src="index_files/arrow-down-active.gif" width=8 height=7 >
+    			<a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#SELECTLANG">中文</a><IMG class=dw-preload alt="" src="index_files/arrow-down-active.gif" width=8 height=7 >
     		<li id="dw-mast-top-2" class="dw-mf-hide">
     			<a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#"><IMG class=dw-mast-profimg alt=PHOTO src="index_files/photo.do" width=20 height=20> [userid]</a>
     		</li>
@@ -145,82 +145,82 @@ dwr.submit = '�ύ';
                 <div class="dw-mast-columns">                
 					<div class="dw-mast-col-1-1">
 						<div id="dw-mast-sso"><!--<div id="dw-mast-sso-reg">
-								<p class="dw-mast-sso-reg-cn">�������û��ע�ᵽ IBM ע��ϵͳ������Ϊ���������Ĳ����ʾ��Ǹ������������ע�ᡣ 							
-									<a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#" onclick="(function () {window.location='/developerworks/dwwi/DWAuthRouter?m=reg&amp;lang=zh&amp;d='+encodeURIComponent(location.href);})();">����ע��</a>��</p>
+								<p class="dw-mast-sso-reg-cn">如果您还没有注册到 IBM 注册系统，我们为给您带来的不便表示道歉，并请您马上注册。 							
+									<a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#" onclick="(function () {window.location='/developerworks/dwwi/DWAuthRouter?m=reg&amp;lang=zh&amp;d='+encodeURIComponent(location.href);})();">现在注册</a>。</p>
 							</div>-->
 							<div id="signin_error_mf" class="dw-mf-hide"></div>
 							<div id="dw-mast-sso-form">
 								<form id="sForm_mf" action="" method="post" name="sForm_name_mf" onsubmit="return false;">
 									<div id="dw-mast-sso-id" class="dw-mast-sso-id-cn">
-										<label for="ibmid_mf">IBM ID��</label>
+										<label for="ibmid_mf">IBM ID：</label>
 										<input id="ibmid_mf" name="ibmid_name_mf" maxlength="100" onkeypress="handleEP(event,this.form,'mf');" >
 									</div>
 									<div id="dw-mast-sso-pw" class="dw-mast-sso-pw-cn">
-										<label for="pw_mf">���룺</label>
+										<label for="pw_mf">密码：</label>
 										<input id="pw_mf" type="password" name="pw_name_mf" maxlength="100" onkeypress="handleEP(event,this.form,'mf');" >
 									</div>
 									<div id="dw-mast-sso-target" class="dw-mast-sso-target-cn">
 										<p class="dw-mf-perm-box">
-											<input id="perm_mf" type="checkbox" name="perm_name_mf"><label for="perm_mf"> ���ֵ�¼��</label>
+											<input id="perm_mf" type="checkbox" name="perm_name_mf"><label for="perm_mf"> 保持登录。</label>
 										</p>
 									</div>
 									<div id="dw-mast-sso-terms">
-										<p class="dw-mast-sso-terms-cn">�����ύ���ʾ��ͬ��developerWorks ������������� <a href="http://www.ibm.com/developerworks/mydeveloperworks/terms?lang=zh">�鿴���������</a>.</p>
+										<p class="dw-mast-sso-terms-cn">单击提交则表示您同意developerWorks 的条款和条件。 <a href="http://www.ibm.com/developerworks/mydeveloperworks/terms?lang=zh">查看条款和条件</a>.</p>
 									</div>
 									<div>
-										<input class="dw-mf-submit-btn-cn" name="ibm_submit_name_mf" value="�ύ" onclick="signin('mf');return false;" type="submit" >
+										<input class="dw-mf-submit-btn-cn" name="ibm_submit_name_mf" value="提交" onclick="signin('mf');return false;" type="submit" >
 									</div>
 								</form>
 							</div>
 							<div id="dw-mast-sso-update">
 								<div id="dw-mast-sso-update-id">
 									<ul>
-										<li><a class="ibm-forward-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#" onclick="(function () {window.location='/developerworks/dwwi/DWAuthRouter?m=reg&amp;lang=zh_CN&amp;d='+encodeURIComponent(location.href);})();">��Ҫһ�� IBM ID��</a>
+										<li><a class="ibm-forward-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#" onclick="(function () {window.location='/developerworks/dwwi/DWAuthRouter?m=reg&amp;lang=zh_CN&amp;d='+encodeURIComponent(location.href);})();">需要一个 IBM ID？</a>
 										
-									<li><a class="ibm-forward-link" href="http://www.ibm.com/developerworks/dwwi/jsp/WSHelp.jsp?lang=zh_CN">���� IBM ID��</a></li>
+									<li><a class="ibm-forward-link" href="http://www.ibm.com/developerworks/dwwi/jsp/WSHelp.jsp?lang=zh_CN">忘记 IBM ID？</a></li>
 									</ul>
 								</div>
 								<div id="dw-mast-sso-update-pw">
 								<ul class="dw-mf-pwupdate">
-									<li><a class="ibm-forward-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#" onclick="(function () {window.location='https://www.ibm.com/account/profile?page=forgot&amp;lang=zh_CN&amp;appname=ibm&amp;required=null&amp;d='+encodeURIComponent(getAuthUrl())+'%3Fm%3Dloginpage%26lang%3Dzh_CN%26d%3D'+encodeURIComponent(location.href);})();">�������룿</a>
-									<li><a class="ibm-forward-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#" onclick="(function () {window.location='https://www.ibm.com/account/profile?page=chpw&amp;lang=zh_CN&amp;appname=ibm&amp;required=null&amp;d='+encodeURIComponent(location.href);})();">������������</a></li>
+									<li><a class="ibm-forward-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#" onclick="(function () {window.location='https://www.ibm.com/account/profile?page=forgot&amp;lang=zh_CN&amp;appname=ibm&amp;required=null&amp;d='+encodeURIComponent(getAuthUrl())+'%3Fm%3Dloginpage%26lang%3Dzh_CN%26d%3D'+encodeURIComponent(location.href);})();">忘记密码？</a>
+									<li><a class="ibm-forward-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#" onclick="(function () {window.location='https://www.ibm.com/account/profile?page=chpw&amp;lang=zh_CN&amp;appname=ibm&amp;required=null&amp;d='+encodeURIComponent(location.href);})();">更改您的密码</a></li>
 								</ul>
 									</div>
 							</div>
 							<div id="dw-mast-sso-text"><!-- lk v17 updated text -->				    
-			<p>��������һ�ε�½�� developerWorks���Ѿ��Զ�Ϊ�����������ĸ�Ҫ�ļ��� <strong>ѡ������Ҫ�ļ��п��Թ�������Ϣ����Ϣ��������������/�������Լ���˾������Щ��ϢͬʱҲ������������������������� </strong>��������ʱ�������� IBM �˺š�</p>
-							<p class="dw-mf-secure-cn">�����ύ����Ϣȷ����ȫ��</p>
+			<p>这是您第一次登陆到 developerWorks，已经自动为您创建了您的概要文件。 <strong>选择您概要文件中可以公开的信息的信息（如姓名、国家/地区，以及公司），这些信息同时也会与您所发布的内容相关联。 </strong>您可以随时更新您的 IBM 账号。</p>
+							<p class="dw-mf-secure-cn">所有提交的信息确保安全。</p>
 							</div>
 							<div class="dw-mast-close">
 								<ul>
-									<li><div class="dw-mast-close-sign-cn"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#"><IMG border=0 alt="�ر� [x]" src="index_files/c-1.gif" width=20 height=10></a></div></li>
+									<li><div class="dw-mast-close-sign-cn"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#"><IMG border=0 alt="关闭 [x]" src="index_files/c-1.gif" width=20 height=10></a></div></li>
 								</ul>
 							</div>	
 						</div>
 						
 						<div id="dw-mast-dname" class="dw-mf-hide">
-							<p>�������ε�¼�� developerWorks ʱ������Ϊ������һ�ݸ�Ҫ��Ϣ������Ҫָ��һ���ǳơ������ǳƽ������� developerWorks ������������ʾ��һ��</p><p><strong>�ǳƳ����� 3 �� 31 ���ַ�֮��</strong>�� �����ǳ��� developerWorks �����б�����Ψһ�ģ����ҳ�����˽������ԭ�򣬲��������ĵ����ʼ���ַ��</p>
+							<p>当您初次登录到 developerWorks 时，将会为您创建一份概要信息，您需要指定一个昵称。您的昵称将和您在 developerWorks 发布的内容显示在一起。</p><p><strong>昵称长度在 3 至 31 个字符之间</strong>。 您的昵称在 developerWorks 社区中必须是唯一的，并且出于隐私保护的原因，不能是您的电子邮件地址。</p>
 							<div id="signin_dname_error_mf" class="dw-mf-hide"></div>
 							<div id="dw-mast-dname-form">
 								<form id="dForm_mf" action="" method="post" name="dForm_name_mf" onsubmit="return false;">
 									<div id="dw-mast-dname-mf">
-										<label for="dname_mf">�ǳƣ�</label>
+										<label for="dname_mf">昵称：</label>
 										<input id="dname_mf" name="dname_name_mf" maxlength="31" size="25" onkeypress="handleEP(event,this.form,'mf');" >
 									</div>
 									<div id="dw-mast-dname-terms">
-										<p class="dw-mast-dname-terms-cn">����<strong>�ύ</strong>���ʾ��ͬ��developerWorks ������������� <a href="http://www.ibm.com/developerworks/mydeveloperworks/terms?lang=zh">�鿴���������</a>.</p>
+										<p class="dw-mast-dname-terms-cn">单击<strong>提交</strong>则表示您同意developerWorks 的条款和条件。 <a href="http://www.ibm.com/developerworks/mydeveloperworks/terms?lang=zh">查看条款和条件</a>.</p>
 									</div>
 									<div>
-										<input class="dw-mf-submit-btn-cn" name="dname_submit_name_mf" value="�ύ" onclick="signin('mf');return false;" type="submit" >
+										<input class="dw-mf-submit-btn-cn" name="dname_submit_name_mf" value="提交" onclick="signin('mf');return false;" type="submit" >
 									</div>
 								</form>								
 							</div>
 							<div id="dw-mast-dname-secure">
-								<p class="dw-mf-secure-cn">�����ύ����Ϣȷ����ȫ��</p>
+								<p class="dw-mf-secure-cn">所有提交的信息确保安全。</p>
 							</div>
 							<div class="dw-mast-close">
 								<ul>
-									<li><div class="dw-mast-close-sign-cn"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#"><IMG border=0 alt="�ر� [x]" src="index_files/c-1.gif" width=20 height=10></a></div></li>
+									<li><div class="dw-mast-close-sign-cn"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#"><IMG border=0 alt="关闭 [x]" src="index_files/c-1.gif" width=20 height=10></a></div></li>
 								</ul>
 							</div>	
 						</div>
@@ -230,35 +230,35 @@ dwr.submit = '�ύ';
 
 								<h2>My developerWorks:</h2><!-- lk v17 updated links and text -->							    
                		<ul>
-							<li><a id="dw-mast-top-0-0" href="http://www.ibm.com/developerworks/community/homepage?lang=zh">�ҵ���ҳ</a>						    
+							<li><a id="dw-mast-top-0-0" href="http://www.ibm.com/developerworks/community/homepage?lang=zh">我的首页</a>						    
 							<li><a
 							    
   href="http://www.ibm.com/developerworks/community/profiles/html/myProfileView.do?lang=zh" 
- >�ҵĸ�Ҫ��Ϣ</a>
+ >我的概要信息</a>
 							<li><a
 							    
   href="http://www.ibm.com/developerworks/community/groups/service/html/mycommunities?lang=zh" 
- >�ҵ�����</a>
-			                 <li><a href="http://www.ibm.com/developerworks/community/news/?lang=zh">����</a></li>
+ >我的社区</a>
+			                 <li><a href="http://www.ibm.com/developerworks/community/news/?lang=zh">设置</a></li>
 										    
 						</ul>      
 							</div>
 							<div id="dw-mast-notify" class="dw-mf-hide">
-								<h2>�ҵ�֪ͨ��</h2>
+								<h2>我的通知：</h2>
 								<ul>
-									<li><a id="new_notify" href="http://www.ibm.com/developerworks/mydeveloperworks/homepage?lang=zh">{[num_notify] ����֪ͨ}([num_notify] ����֪ͨ)</a>
+									<li><a id="new_notify" href="http://www.ibm.com/developerworks/mydeveloperworks/homepage?lang=zh">{[num_notify] 个新通知}([num_notify] 个新通知)</a>
 									<li><a id="new_invite" href="http://www.ibm.com/developerworks/mydeveloperworks/profiles/html/wc.do?action=in&amp;requireAuth=true&amp;widgetId=friends&amp;lang=[lang]" 
- >{[num_invite] ����������}([num_invite] ����������)</a></li>  
+ >{[num_invite] 个网络请求}([num_invite] 个网络请求)</a></li>  
 								</ul>
 							</div>
 							<div class="dw-mast-more">
 								<ul class="ibm-link-list">
-									<li><a class="dw-more-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#" onclick="signOut(); return false;"><strong>�˳�</strong></a></li>
+									<li><a class="dw-more-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#" onclick="signOut(); return false;"><strong>退出</strong></a></li>
 								</ul>
 							</div>
 							<div class="dw-mast-close">
 								<ul>
-									<li><div class="dw-mast-close-sign"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#"><IMG border=0 alt="�ر� [x]" src="index_files/c-1.gif" width=20 height=10></a></div></li>
+									<li><div class="dw-mast-close-sign"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#"><IMG border=0 alt="关闭 [x]" src="index_files/c-1.gif" width=20 height=10></a></div></li>
 								</ul>
 							</div>		
 						</div>
@@ -268,24 +268,24 @@ dwr.submit = '�ύ';
                 </div><!-- Site selector --> 
 				<div class="dw-mast-columns">
 					<div class="dw-mast-col-2-1">
-						<h2>ѡ�����ԣ�</h2>
+						<h2>选择语言：</h2>
 						<ul>
 							<li><a id="dw-mast-top-1-0" href="http://www.ibm.com/developerworks/">English</a>
-							<li><a href="http://www.ibm.com/developerworks/cn/">����</a>
-							<li><a href="http://www.ibm.com/developerworks/jp/">�ձ��Z</a>
-						    <li><a href="http://www.ibm.com/developerworks/ru/">������ܧڧ�</a></li>
+							<li><a href="http://www.ibm.com/developerworks/cn/">中文</a>
+							<li><a href="http://www.ibm.com/developerworks/jp/">日本語</a>
+						    <li><a href="http://www.ibm.com/developerworks/ru/">Русский</a></li>
 						</ul>
 					</div>
 					<div class="dw-mast-col-2-2">
 						<ul>
-							<li><a href="http://www.ibm.com/developerworks/br/">Portugu��s (Brasil)</a>
+							<li><a href="http://www.ibm.com/developerworks/br/">Português (Brasil)</a>
 							<li><a href="http://www.ibm.com/developerworks/ssa/">Espa?ol</a>
 							<li><a href="http://www.ibm.com/developerworks/vn/">Vi?t</a></li>
 						</ul>
 					</div>
 					<div class="dw-mast-close">
 						<ul>
-							<li><div class="dw-mast-close-lang"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#"><IMG border=0 alt="�ر� [x]" src="index_files/c-1.gif" width=20 height=10></a></div></li>
+							<li><div class="dw-mast-close-lang"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#"><IMG border=0 alt="关闭 [x]" src="index_files/c-1.gif" width=20 height=10></a></div></li>
 						</ul>
                     </div>
                 </div>
@@ -293,21 +293,21 @@ dwr.submit = '�ύ';
 				<div class="dw-mast-columns">
 					<div class="dw-mast-col-2-1">
 						<ul>
-							<li><a id="dw-mast-top-3-0" href="http://www.ibm.com/cn/zh/">IBM ��ҳ</a>
-							<li><a href="http://www.ibm.com/solutions/cn/zh/">�������</a>
-							<li><a href="http://www.ibm.com/software/cn/">����</a></li>
+							<li><a id="dw-mast-top-3-0" href="http://www.ibm.com/cn/zh/">IBM 主页</a>
+							<li><a href="http://www.ibm.com/solutions/cn/zh/">解决方案</a>
+							<li><a href="http://www.ibm.com/software/cn/">软件</a></li>
 						</ul>
 					</div>
 					<div class="dw-mast-col-2-2 dw-mast-ibm">
 						<ul>
-							<li><a href="http://www.ibm.com/support/cn/zh/">֧���Ż�</a>
-							<li><a href="http://www.ibm.com/support/documentation/cn/zh/">��Ʒ�ĵ�</a>
-							<li><a href="http://www.ibm.com/redbooks/">Redbooks��Ӣ�ģ�</a></li>
+							<li><a href="http://www.ibm.com/support/cn/zh/">支持门户</a>
+							<li><a href="http://www.ibm.com/support/documentation/cn/zh/">产品文档</a>
+							<li><a href="http://www.ibm.com/redbooks/">Redbooks（英文）</a></li>
 						</ul>
 					</div>
 					<div class="dw-mast-close">
 						<ul>
-							<li><div class="dw-mast-close-ibm-cn"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#"><IMG border=0 alt="�ر� [x]" src="index_files/c-1.gif" width=20 height=10></a></div></li>
+							<li><div class="dw-mast-close-ibm-cn"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#"><IMG border=0 alt="关闭 [x]" src="index_files/c-1.gif" width=20 height=10></a></div></li>
 						</ul>
                     </div> 
 				</div>
@@ -322,14 +322,14 @@ dwr.submit = '�ύ';
         </ul>
     	<ul id="ibm-menu-links-dw" class="ibm-menu-links-dw-cn">
     		
-    		<li id="dw-mast-nav-0"><a href="http://www.ibm.com/developerworks/cn/topics">��������</a></li>
+    		<li id="dw-mast-nav-0"><a href="http://www.ibm.com/developerworks/cn/topics">技术主题</a></li>
     		<li id="dw-mast-nav-1"><a
     			
   href="http://www.ibm.com/developerworks/cn/downloads/" 
- >��������</a></li>
+ >软件下载</a></li>
     		<li id="dw-mast-nav-2"><A
-    			href="https://www.ibm.com/developerworks/community/?lang=zh">����</A></li>
-    		<li id="dw-mast-nav-3"><A href="https://www.ibm.com/developerworks/community/groups/service/html/communityview?communityUuid=6d7f9e5d-5f89-4767-a006-a81b8d186370&amp;lang=zh">��������</A></li>
+    			href="https://www.ibm.com/developerworks/community/?lang=zh">社区</A></li>
+    		<li id="dw-mast-nav-3"><A href="https://www.ibm.com/developerworks/community/groups/service/html/communityview?communityUuid=6d7f9e5d-5f89-4767-a006-a81b8d186370&amp;lang=zh">技术讲座</A></li>
     	</ul>   
     	<form id="ibm-search-form" action="//www.ibm.com/search/csass/search/" method="get" name="form1">
     		<input type="hidden" name="sn" value="dw" >
@@ -340,9 +340,9 @@ dwr.submit = '�ύ';
     		<input type="hidden" name="dws" value="cndw" >
     		<input type="hidden" name="lo" value="zh" >
     		<p>
-    			<label for="q"><IMG alt=��ѯ: src="index_files/c-1.gif" width=1 height=1 ></label>
-    			<input value="���� developerWorks" name ="q" maxlength="100" id="q">
-    			<input type="submit" id="ibm-search" class="ibm-btn-search ibm-btn-search-cn" name="Search" value="����" >
+    			<label for="q"><IMG alt=查询: src="index_files/c-1.gif" width=1 height=1 ></label>
+    			<input value="搜索 developerWorks" name ="q" maxlength="100" id="q">
+    			<input type="submit" id="ibm-search" class="ibm-btn-search ibm-btn-search-cn" name="Search" value="搜索" >
     		</p>
     	</form>
     </div><!-- BOTTOM ROW SLIDER -->
@@ -352,7 +352,7 @@ dwr.submit = '�ύ';
   
             	<div class="dw-mast-columns">
             	<div class="dw-mast-col-5-1">
-            		<h2><a id="dw-mast-nav-0-0" href="http://www.ibm.com/developerworks/cn/topics/">��������</a></h2>
+            		<h2><a id="dw-mast-nav-0-0" href="http://www.ibm.com/developerworks/cn/topics/">技术主题</a></h2>
             		
             		<ul>
             		    <li><a href="http://www.ibm.com/developerworks/cn/agile/">Agile
@@ -395,19 +395,19 @@ dwr.submit = '�ύ';
             	</div>
             	<div class="dw-mast-col-5-5">
             		<ul>
-            			<li><a href="http://www.ibm.com/developerworks/cn/library/"><strong>�ĵ���</strong></a>
-            			<li><a href="http://www.ibm.com/developerworks/cn/products/"><strong>��Ʒ A - Z</strong></a></li>				    
+            			<li><a href="http://www.ibm.com/developerworks/cn/library/"><strong>文档库</strong></a>
+            			<li><a href="http://www.ibm.com/developerworks/cn/products/"><strong>产品 A - Z</strong></a></li>				    
             		</ul>        
             	</div>
             	<div class="dw-mast-close">
             		<ul>
-            			<li><div class="dw-mast-close-tech-cn"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#"><IMG border=0 alt="�ر� [x]" src="index_files/c-1.gif" width=20 height=10></a></div></li>
+            			<li><div class="dw-mast-close-tech-cn"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#"><IMG border=0 alt="关闭 [x]" src="index_files/c-1.gif" width=20 height=10></a></div></li>
             		</ul>
             	</div>
             </div><!-- Evaluation software category -->
             	<div class="dw-mast-columns">
             		<div class="dw-mast-col-2-1">
-            			<h2><a id="dw-mast-nav-1-0" href="http://www.ibm.com/developerworks/cn/downloads">��������</a></h2>
+            			<h2><a id="dw-mast-nav-1-0" href="http://www.ibm.com/developerworks/cn/downloads">软件下载</a></h2>
             			<ul>
             				<li><a href="http://www.ibm.com/developerworks/cn/downloads/#data">Information management</a>
             				<li><a href="http://www.ibm.com/developerworks/cn/downloads/#lotus">Lotus</a>
@@ -423,47 +423,47 @@ dwr.submit = '�ύ';
             		</div>
             		<div class="dw-mast-close">
             			<ul>
-            				<li><div class="dw-mast-close-eval-cn"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#"><IMG border=0 alt="�ر� [x]" src="index_files/c-1.gif" width=20 height=10></a></div></li>
+            				<li><div class="dw-mast-close-eval-cn"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#"><IMG border=0 alt="关闭 [x]" src="index_files/c-1.gif" width=20 height=10></a></div></li>
             			</ul>
             		</div>
             	</div><!-- Community category --><!-- lk v17 removed links, updated urls -->
             	<div class="dw-mast-columns">
             		<div class="dw-mast-col-2-1">
-            			<h2><A id=dw-mast-nav-2-0 href="https://www.ibm.com/developerworks/community/?lang=zh">����</A></h2>
+            			<h2><A id=dw-mast-nav-2-0 href="https://www.ibm.com/developerworks/community/?lang=zh">社区</A></h2>
             			<ul>
-            				<li><A href="https://www.ibm.com/developerworks/community/homepage/?lang=zh">�ҵ���ҳ</A>
-            				<li><A href="https://www.ibm.com/developerworks/community/profiles/?lang=zh">��Ҫ��Ϣ</A>
-            				<li><A href="https://www.ibm.com/developerworks/community/groups/?lang=zh">Ⱥ��</A>
-							<li><A href="https://www.ibm.com/developerworks/community/blogs/?lang=zh">����</A></li>
+            				<li><A href="https://www.ibm.com/developerworks/community/homepage/?lang=zh">我的首页</A>
+            				<li><A href="https://www.ibm.com/developerworks/community/profiles/?lang=zh">概要信息</A>
+            				<li><A href="https://www.ibm.com/developerworks/community/groups/?lang=zh">群组</A>
+							<li><A href="https://www.ibm.com/developerworks/community/blogs/?lang=zh">博客</A></li>
              			</ul>     
             		</div>
             		<div class="dw-mast-col-2-2">
             			<ul>
                     
-				    <li><A href="https://www.ibm.com/developerworks/community/forums/?lang=zh">��̳</A>
+				    <li><A href="https://www.ibm.com/developerworks/community/forums/?lang=zh">论坛</A>
 					<li><A href="https://www.ibm.com/developerworks/community/wikis/?lang=zh">Wiki</A>
-					<li><A href="https://www.ibm.com/developerworks/community/activities/?lang=zh">�</A></li>
+					<li><A href="https://www.ibm.com/developerworks/community/activities/?lang=zh">活动</A></li>
             			</ul>
             		</div>
             		<div class="dw-mast-close">
             			<ul>
-            				<li><div class="dw-mast-close-comm-cn"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#"><IMG border=0 alt="�ر� [x]" src="index_files/c-1.gif" width=20 height=10></a></div></li>
+            				<li><div class="dw-mast-close-comm-cn"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#"><IMG border=0 alt="关闭 [x]" src="index_files/c-1.gif" width=20 height=10></a></div></li>
             			</ul>
             		</div>
             	</div><!-- Events category -->
             	<div class="dw-mast-columns">
             		<div class="dw-mast-col-1-1">
-            			<h2><A id=dw-mast-nav-3-0 href="https://www.ibm.com/developerworks/community/groups/service/html/communityview?communityUuid=6d7f9e5d-5f89-4767-a006-a81b8d186370&amp;lang=zh">��������</A></h2>
+            			<h2><A id=dw-mast-nav-3-0 href="https://www.ibm.com/developerworks/community/groups/service/html/communityview?communityUuid=6d7f9e5d-5f89-4767-a006-a81b8d186370&amp;lang=zh">技术讲座</A></h2>
             			<ul>
-            				<li><A href="https://www.ibm.com/developerworks/community/groups/service/html/communityview?communityUuid=6d7f9e5d-5f89-4767-a006-a81b8d186370&amp;lang=zh">��������</A>
-            				<li><a href="http://www.ibm.com/developerworks/cn/swi/">��ý�����</a>
-            				<li><a href="http://www.ibm.com/developerworks/find/webcasts/">����㲥��Ӣ�ģ�</a>
-            				<li><a href="http://www.ibm.com/developerworks/find/events/">���һ����������������㲥������ȣ���Ӣ�ģ�</a></li> 
+            				<li><A href="https://www.ibm.com/developerworks/community/groups/service/html/communityview?communityUuid=6d7f9e5d-5f89-4767-a006-a81b8d186370&amp;lang=zh">技术讲座</A>
+            				<li><a href="http://www.ibm.com/developerworks/cn/swi/">多媒体课堂</a>
+            				<li><a href="http://www.ibm.com/developerworks/find/webcasts/">网络广播（英文）</a>
+            				<li><a href="http://www.ibm.com/developerworks/find/events/">查找活动（技术讲座，网络广播，会议等）（英文）</a></li> 
             			</ul>            
             		</div>
             		<div class="dw-mast-close">
             			<ul>
-            				<li><div class="dw-mast-close-event-cn"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#"><IMG border=0 alt="�ر� [x]" src="index_files/c-1.gif" width=20 height=10></a></div></li>
+            				<li><div class="dw-mast-close-event-cn"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#"><IMG border=0 alt="关闭 [x]" src="index_files/c-1.gif" width=20 height=10></a></div></li>
             			</ul>
             		</div>
             	</div>
@@ -476,32 +476,32 @@ dwr.submit = '�ύ';
 
 <div id="ibm-pcon"><!-- CONTENT_BEGIN -->
 <div id="ibm-content"><!-- Navigation_Trail_BEGIN --><!-- &nbsp; -->
-      <div id="ibm-content-head"><ul id="ibm-navigation-trail"><li class="ibm-first"><a href="http://www.ibm.com/developerworks/cn/">developerWorks �й�</a><li><a href="http://www.ibm.com/developerworks/cn/java/">Java technology</a><li><a href="http://www.ibm.com/developerworks/cn/views/java/libraryview.jsp">�ĵ���</a></li></ul></div><!-- Navigation_Trail_END --><!-- dW_Summary Area_START -->
+      <div id="ibm-content-head"><ul id="ibm-navigation-trail"><li class="ibm-first"><a href="http://www.ibm.com/developerworks/cn/">developerWorks 中国</a><li><a href="http://www.ibm.com/developerworks/cn/java/">Java technology</a><li><a href="http://www.ibm.com/developerworks/cn/views/java/libraryview.jsp">文档库</a></li></ul></div><!-- Navigation_Trail_END --><!-- dW_Summary Area_START -->
 <div id="dw-summary-article">
 
 <div class="dw-content-head">
-<h1>���� Java 2 ����ʱ��ȫģ�͵��߳�Э��</h1><p></p>
+<h1>基于 Java 2 运行时安全模型的线程协作</h1><p></p>
 </div>
 
 <div class="ibm-container-body ibm-two-column">
 
 <div class="ibm-column ibm-first">
-<div class="author"><a class="dwauthor" rel="#authortip1" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#author1">�� ����</a>, �߼���������ʦ, IBM</div><div id="authortip1" class="dwauthor-onload-state ibm-no-print">�����죬��ְ�� IBM CDL��Lotus ��Ʒ�������� Notes ��ȫ����з�����������֮ǰ������һֱ��������Ӧ�ÿ�����ع��������߸���Ȥ�ļ�������������ֲ�ʽ������㡢����Ӧ�á�OSGi��Э�����㡢Java ��ȫ�ȡ�</div>
+<div class="author"><a class="dwauthor" rel="#authortip1" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#author1">李 三红</a>, 高级软件工程师, IBM</div><div id="authortip1" class="dwauthor-onload-state ibm-no-print">李三红，任职于 IBM CDL，Lotus 产品部，负责 Notes 安全相关研发工作。在这之前，作者一直从事网络应用开发相关工作。作者感兴趣的技术领域包括：分布式对象计算、网络应用、OSGi、协作计算、Java 安全等。</div>
 <p></p>
-  <p><strong>��飺</strong>&nbsp;Java 2 ������ʱ��ȫģ���ǻ��ڲ��ԺͶ�ջ��Ȩ�İ�ȫģ�͡�Java ʹ�ô�ȡ��������AccessController��Ϊ�û������ϵĴ󲿷ֹؼ���Դ�����ļ����׽��ֵȣ��ṩ����ʱ������������������ԱΪ�����Ӧ�ö��ư�ȫ�����ļ������Ľ������ڶ��̵߳Ļ����£����ʹ�� Java �ṩ�İ�ȫ���Թ����̼߳䰲ȫЭ���� Java Ӧ�á�</p>
+  <p><strong>简介：</strong>&nbsp;Java 2 的运行时安全模型是基于策略和堆栈授权的安全模型。Java 使用存取控制器（AccessController）为用户主机上的大部分关键资源（如文件，套接字等）提供运行时保护，并且允许管理员为具体的应用定制安全策略文件。本文将讨论在多线程的环境下，如何使用 Java 提供的安全特性构建线程间安全协作的 Java 应用。</p>
 
  
 </div>
 
 <div class="ibm-column ibm-second">
 
-<p class="leading"><b>�������ڣ�</b>&nbsp;2009 �� 9 �� 18 ��
+<p class="leading"><b>发布日期：</b>&nbsp;2009 年 9 月 18 日
   
-<br ><b>����</b>&nbsp;����
+<br ><b>级别：</b>&nbsp;初级
     
 
-<br ><strong>������� ��</strong>&nbsp;7327 �����
-  <br ><strong>���ۣ�</strong>&nbsp;<span id="nCmts"><IMG alt="" src="//dw1.s81c.com/developerworks/i/circle-preloader.gif" width=50 height=12 ><IMG alt="" src="index_files/c-1.gif" width=1 height=14 ></span> <!-- Rating_Area_Begin -->
+<br ><strong>访问情况 ：</strong>&nbsp;7327 次浏览
+  <br ><strong>评论：</strong>&nbsp;<span id="nCmts"><IMG alt="" src="//dw1.s81c.com/developerworks/i/circle-preloader.gif" width=50 height=12 ><IMG alt="" src="index_files/c-1.gif" width=1 height=14 ></span> <!-- Rating_Area_Begin -->
   <div id="art-rating-summary"></div><!-- Rating_Area_End -->
   <br >
 <P></P>
@@ -512,76 +512,76 @@ dwr.submit = '�ύ';
 <div id="ibm-content-body"><!-- MAIN_COLUMN_BEGIN -->
 <div id="ibm-content-main"><!-- Related_Searches_Area_And_Overlays_Begin --><!-- MAIN_COLUMN_CONTAINER_BEGIN -->
 <div class="ibm-container"><!-- MAIN_COLUMN_CONTENT_BEGIN -->
-<p>�� Java 2 ֮ǰ�İ汾������ʱ�İ�ȫģ��ʹ�÷ǳ��ϸ����޵�ɳ��ģ�ͣ�Sandbox��������Ӧ����Ϥ��Java �����ŵ� Applet ������ǻ�������ϸ����޵�ɳ��ģ�����ṩ����ʱ�İ�ȫ��顣ɳ��ģ�͵ı����ǣ��κα������еĴ��붼�����ŵģ�����ȫ��Ȩ������ȡ�ؼ���ϵͳ��Դ�������� Applet�������ڲ����ŵĴ��룬ֻ�ܷ���ɳ�䷶Χ�����޵���Դ����Ȼ��������ͨ������ǩ���ķ�ʽ�������� Applet Ϊ���ŵĴ��룬����ͬ���ش���һ����Ȩ�ޡ�</p>
-			<p>�� Java 2 ��ʼ��Java �ṩ�˻��ڲ��ԣ�Policy�����ջ��Ȩ������ʱ��ȫģ�ͣ�����һ������ϸ���ȵĴ�ȡ���ƣ�������������չ��������ļܹ���ͼ 1 ��ʾ��</p>
+<p>在 Java 2 之前的版本，运行时的安全模型使用非常严格受限的沙箱模型（Sandbox）。读者应该熟悉，Java 不受信的 Applet 代码就是基于这个严格受限的沙箱模型来提供运行时的安全检查。沙箱模型的本质是，任何本地运行的代码都是受信的，有完全的权限来存取关键的系统资源。而对于 Applet，则属于不受信的代码，只能访问沙箱范围内有限的资源。当然，您可以通过数字签名的方式配置您的 Applet 为受信的代码，具有同本地代码一样的权限。</p>
+			<p>从 Java 2 开始，Java 提供了基于策略（Policy）与堆栈授权的运行时安全模型，它是一个更加细粒度的存取控制，易于配置与扩展，其总体的架构如图 1 所示：</p>
 			
-				<br ><a name="fig1"><b>ͼ 1. Java 2 ��ȫģ��</b></a><br >
-				<IMG alt="ͼ 1. Java 2 ��ȫģ��" src="index_files/image001.jpg" width=397 height=230>
+				<br ><a name="fig1"><b>图 1. Java 2 安全模型</b></a><br >
+				<IMG alt="图 1. Java 2 安全模型" src="index_files/image001.jpg" width=397 height=230>
 			<br >
-			<p>����������������װ������Class Loader�����뵽 JVM ���У���Щ����ʱ�������� Java Policy �ļ������ã������費ͬ��Ȩ�ޡ�����Щ��Ҫ����ĳЩϵͳ��Դ������� Socket����д�ļ��ȣ�������ִ��ĳЩ���еĲ����������ȡ���룩ʱ��Java �İ�ȫ��������ava.lang.SecuirtyManager���ļ��Ȩ�޷����������ã������Щ���Ƿ���б�Ҫ��Ȩ����ִ�иò�����</p>
-			<p>�ڼ�����������֮ǰ������������������ļ������</p>
+			<p>简单来讲，当类由类装载器（Class Loader）载入到 JVM 运行，这些运行时的类会根据 Java Policy 文件的配置，被赋予不同的权限。当这些类要访问某些系统资源（例如打开 Socket、读写文件等），或者执行某些敏感的操作（例如存取密码）时，Java 的安全管理器（ava.lang.SecuirtyManager）的检查权限方法将被调用，检查这些类是否具有必要的权限来执行该操作。</p>
+			<p>在继续深入讨论之前，我们先来澄清下面的几个概念：</p>
 			<ul>
 				<li>
-					<strong>����</strong>����ϵͳ��ȫ���ԣ����û����߹���Ա���ã���������ִ�д����Ȩ�ޡ�����ʱ�� 
-  java.security.Policy �������������ò����ļ��� 
+					<strong>策略</strong>，即系统安全策略，由用户或者管理员配置，用来配置执行代码的权限。运行时的 
+  java.security.Policy 对象用来代表该策略文件。 
   
 				<li>
-					<strong>Ȩ��</strong>��Java 
-  �����˲�νṹ��Ȩ�޶�������Ȩ�޶���ĸ����� java.security.Permission��Ȩ�޵Ķ����漰�����������ԣ�Ŀ�꣨Target���붯�� 
-  (Action)����������ļ���ص�Ȩ�޶��壬��Ŀ������ļ�����Ŀ¼���䶯������������д��ɾ���ȡ� 
+					<strong>权限</strong>，Java 
+  定义了层次结构的权限对象，所有权限对象的根类是 java.security.Permission。权限的定义涉及两个核心属性：目标（Target）与动作 
+  (Action)。例如对于文件相关的权限定义，其目标就是文件或者目录，其动作包括：读，写，删除等。 
   
 				<li>
-					<strong>������</strong>���������������Ϊ���й�ͬ��Ȩ�޼�����ļ��ϡ�</li>
+					<strong>保护域</strong>，保护域可以理解为具有共同的权限集的类的集合。</li>
 			</ul>
-			<p>�� Java 2 �Ȩ��ʵ�����Ǳ����豣����ģ�������ֱ�Ӹ����ࡣȨ�ޡ����������֮���ӳ���ϵ��ͼ 2��</p>
+			<p>在 Java 2 里，权限实际上是被赋予保护域的，而不是直接赋给类。权限、保护域和类之间的映射关系如图 2。</p>
 			
-				<br ><a name="fig2"><b>ͼ 2. �࣬������Ȩ�޵�ӳ���ϵ</b></a><br >
-				<IMG alt="ͼ 2. �࣬������Ȩ�޵�ӳ���ϵ" src="index_files/image002.jpg" width=470 height=215>
+				<br ><a name="fig2"><b>图 2. 类，保护域，权限的映射关系</b></a><br >
+				<IMG alt="图 2. 类，保护域，权限的映射关系" src="index_files/image002.jpg" width=470 height=215>
 			<br >
-			<p>��ͼ 2 ��ʾ����ǰ����ʱ��ջ�Ǵ� a.class �� e.class��������ʱ��ջ�ϵ�ÿһ֡��Stack Frame�����ᱻ Java ����Ϊĳ�������򣨱������� Java ���� Policy �ļ����ù��������ģ���Java �İ�ȫ��������ִ��Ȩ�޼��ʱ����Զ�ջ�ϵ�ÿ�� Stack Frame ��Ȩ�޼�飬���ҽ���ÿ�� Stack Frame �������Ȩ�޼���������Imply������Ҫ���Ȩ��ʱ���ò����ű�����ִ�У����� java.security.AccessControlException �쳣�����׳����ò���ִ��ʧ�ܡ�</p>
-			<p>�й� Java 2 ��ȫģ�ͣ��м�����Ҫ�ر�˵����</p>
+			<p>如图 2 所示，当前运行时堆栈是从 a.class 到 e.class。在运行时堆栈上的每一帧（Stack Frame）都会被 Java 划归为某个保护域（保护域是 Java 根据 Policy 文件配置构建出来的）。Java 的安全管理器在执行权限检查时，会对堆栈上的每个 Stack Frame 做权限检查，当且仅当每个 Stack Frame 被赋予的权限集都暗含（Imply）了所要求的权限时，该操作才被允许执行，否则 java.security.AccessControlException 异常将被抛出，该操作执行失败。</p>
+			<p>有关 Java 2 安全模型，有几点需要特别说明：</p>
 			<ol type="1">
-				<li>��ģ���ǻ��ڶ�ջ��Ȩ�ģ����ڶ��̵߳Ļ����£�ͬ�����á����統���̴߳��������̣߳����̵߳�ִ�б������Ǹ��߳�ִ�еļ��������� 
+				<li>该模型是基于堆栈授权的，这在多线程的环境下，同样适用。例如当父线程创建了子线程，子线程的执行被看作是父线程执行的继续，所以 
   Java 
-  �İ�ȫ��������Ȩ�޼��ʱ������������ʱ��ջ���Ȱ�����ǰ���̵߳ģ�Ҳ�����Ӹ��߳�����̳й���������ʱ��ջ������ζ�ţ��û�������ͨ���̵߳Ĵ�������ö����Ȩ�ޡ� 
+  的安全管理器在权限检查时，所检查的运行时堆栈，既包括当前子线程的，也包括从父线程那里继承过来的运行时堆栈。这意味着，用户不可能通过线程的创建来获得额外的权限。 
 
   
-				<li>Java �Ŀ����߿���ʹ�� AccessController.doPrivileged 
-  ���Ż�Ȩ�޼������Ķ������ܿ�������ͼ 3 ��ʾ��Java ��Ȩ�޼�齫�Ӷ�ջ�Ķ�����ʼ����һ���£�ֱ������ doPrivileged 
-  �ķ������ã����ߵ����ջ�ײ�Ϊֹ��ʹ�� doPrivileged ���Ա��ⲻ��Ҫ��ջ������Stack Traverse������߳�������ܡ� 
+				<li>Java 的开发者可以使用 AccessController.doPrivileged 
+  来优化权限检查带来的额外性能开销。如图 3 所示，Java 的权限检查将从堆栈的顶部开始，逐一向下，直到碰到 doPrivileged 
+  的方法调用，或者到达堆栈底部为止。使用 doPrivileged 可以避免不必要的栈遍历（Stack Traverse），提高程序的性能。 
   
-				<li>�ڸ�ģ���У���һ������ı�����ϵͳ��System Domain�������б� <em>null</em>��װ������װ�ص��඼����Ϊϵͳ���룬���Զ�ӵ�����е�Ȩ�ޡ����ң����е���Ҫ���ܱ������ⲿ��Դ�����ļ�ϵͳ�����硢��Ļ�����̵�ֻ��ͨ��ϵͳ�����á�</li>
+				<li>在该模型中，有一个特殊的保护域，系统域（System Domain）。所有被 <em>null</em>类装载器所装载的类都被称为系统代码，其自动拥有所有的权限。而且，所有的重要的受保护的外部资源，如文件系统、网络、屏幕、键盘等只能通过系统代码获得。</li>
 			</ol>
 			
-				<br ><a name="fig3"><b>ͼ 3. doPrivileged Stack Frame</b></a><br >
-				<IMG alt="ͼ 3. doPrivileged Stack Frame" src="index_files/image003.jpg" width=438 height=239>
+				<br ><a name="fig3"><b>图 3. doPrivileged Stack Frame</b></a><br >
+				<IMG alt="图 3. doPrivileged Stack Frame" src="index_files/image003.jpg" width=438 height=239>
 			<br >
-			<p>�����������Ļ����һ���򵥵�ʾ����Ȼ�����Ǹ������ʾ������һ�����룬������һ���̼߳䰲ȫЭ����Ӧ�á�</p>
-			<p><a name="major1"><span class="atitle">ʾ��</span></a></p>
-			<p>���ǵ�ʾ���ܼ򵥣��ͻ��˵��� LogService �ṩ�� API���� Message д�뵽�����ļ���</p>
-			<br ><a name="listing1"><b>�嵥 1. �ͻ��˳���</b></a><br ><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="code-outline"><pre class="displaycode">				
+			<p>接下来，本文会给出一个简单的示例，然后我们根据这个示例，进一步深入，来创建一个线程间安全协作的应用。</p>
+			<p><a name="major1"><span class="atitle">示例</span></a></p>
+			<p>我们的示例很简单：客户端调用 LogService 提供的 API，把 Message 写入到磁盘文件。</p>
+			<br ><a name="listing1"><b>清单 1. 客户端程序</b></a><br ><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="code-outline"><pre class="displaycode">				
 package sample.permtest.client;
-    ����
+    ……
     public class Client {
-        ����
+        ……
         public static void main(String[] args) {
-        //������Ϣ��־��ʹ��LogService����д��c:\\paper\\client\\out.tmp�ļ���
+        //构造消息日志，使用LogService将其写入c:\\paper\\client\\out.tmp文件。
         Message message = new Message("c:\\paper\\client\\out.tmp", 
 	    "Hi, this is called from client"+'\n');
         LogService.instance.log(message);
 		
-        //������Ϣ��־��ʹ��LogService����д��c:\\paper\\server\\out.tmp�ļ���
+        //构造消息日志，使用LogService将其写入c:\\paper\\server\\out.tmp文件。
         message = new Message("c:\\paper\\server\\out.tmp", 
 	    "Hi, this is called from client"+'\n');
         LogService.instance.log(message);	
     }
 }
 </pre></td></tr></table><br >
-			<br ><a name="listing2"><b>�嵥 2. LogService</b></a><br ><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="code-outline"><pre class="displaycode">				
+			<br ><a name="listing2"><b>清单 2. LogService</b></a><br ><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="code-outline"><pre class="displaycode">				
 package sample.permtest.server;
-����
+……
 public class LogService {
-    ����
+    ……
 	
     public void log(Message message) {
         final String destination = message.getDestination();
@@ -600,23 +600,23 @@ public class LogService {
     }
 }
 </pre></td></tr></table><br >
-			<p>���嵥 1��2 ��ʾ�������һ����ͨ�� Java Ӧ�ó������ǰ����������� Java �İ�ȫģ����ִ�С�Client ����� client.jar JAR ����� LogService ����� server.jar JAR ����</p>
-			<p>��������ʹ�� keytool ����������������Ҫ�� keystore �ļ����Լ���Ҫ������֤�飬���嵥 3 ��ʾ��</p>
-			<br ><a name="listing3"><b>�嵥 3. ���� keystore �ļ���������֤��</b></a><br ><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="code-outline"><pre class="displaycode">				
+			<p>如清单 1、2 所示，这就是一个普通的 Java 应用程序。我们把这个程序放在 Java 的安全模型中执行。Client 类放在 client.jar JAR 包里，而 LogService 类放在 server.jar JAR 包里</p>
+			<p>首先我们使用 keytool 工具来生成我们需要的 keystore 文件，以及需要的数字证书，如清单 3 所示。</p>
+			<br ><a name="listing3"><b>清单 3. 生成 keystore 文件及其数字证书</b></a><br ><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="code-outline"><pre class="displaycode">				
 &gt;keytool -genkey -alias client  -keyalg RSA -keystore C:\paper\.keystore 
 &gt;keytool -genkey -alias server  -keyalg RSA -keystore C:\paper\.keystore 
 </pre></td></tr></table><br >
-			<p>���嵥 3 �У����������� C:\paper\.keystore �ļ���ʹ�� RSA �㷨�����˱���Ϊ client �� server ����������֤�顣��ע : Ϊ���������keystore �� client��server ֤�����Կ���� 111111��</p>
-			<p>����ʹ�����嵥 4 ��ʾ��������ǩ�� client.jar �� server.jar��</p>
-			<br ><a name="listing4"><b>�嵥 4. ǩ�� JAR �ļ�</b></a><br ><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="code-outline"><pre class="displaycode">				
+			<p>在清单 3 中，我们生成了 C:\paper\.keystore 文件，使用 RSA 算法生成了别名为 client 与 server 的两个数字证书。（注 : 为方便起见，keystore 与 client，server 证书的密钥都是 111111）</p>
+			<p>我们使用如清单 4 所示的命令来签名 client.jar 与 server.jar。</p>
+			<br ><a name="listing4"><b>清单 4. 签名 JAR 文件</b></a><br ><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="code-outline"><pre class="displaycode">				
 &gt;jarsigner.exe  -keystore C:\paper\.keystore  
     -storepass  111111  c:\paper\client.jar  client
 &gt;jarsigner.exe  -keystore C:\paper\.keystore  
     -storepass  111111  c:\paper\server.jar  server
 			</pre></td></tr></table><br >
-			<p>���嵥 4 �У�����ʹ���˱���Ϊ client ������֤����ǩ�� client.jar �ļ���ʹ�ñ���Ϊ server ������֤����ǩ�� server.jar �ļ���</p>
-			<p>ʹ��ͼ�λ��Ĺ��� policytool.exe �����嵥 5 ��ʾ�� Policy �ļ���</p>
-			<br ><a name="listing5"><b>�嵥 5. Policy �ļ�</b></a><br ><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="code-outline"><pre class="displaycode">				
+			<p>在清单 4 中，我们使用了别名为 client 的数字证书来签名 client.jar 文件，使用别名为 server 的数字证书来签名 server.jar 文件。</p>
+			<p>使用图形化的工具 policytool.exe 创建清单 5 所示的 Policy 文件。</p>
+			<br ><a name="listing5"><b>清单 5. Policy 文件</b></a><br ><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="code-outline"><pre class="displaycode">				
 /* AUTOMATICALLY GENERATED ON Thu May 14 15:40:25 CST 2009*/ 
 /* DO NOT EDIT */ 
 
@@ -630,16 +630,16 @@ grant signedBy "server" {
     permission java.security.AllPermission; 
 }; 
 </pre></td></tr></table><br >
-			<p>Policy �ļ�ָ�������б���client��ǩ���Ĵ�����ж�д�� c:\\paper\\client\\��Ŀ¼�������ļ���Ȩ�ޣ������б���server��ǩ���Ĵ���������е�Ȩ�ޡ�Java �����ݸò����ļ�����ǩ���ߴ�����Ӧ�ı�����</p>
-			<p>һ�о������������д��룬���嵥 6 ��ʾ��</p>
-			<br ><a name="listing6"><b>�嵥 6. ���г���</b></a><br ><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="code-outline"><pre class="displaycode">				
+			<p>Policy 文件指出，所有被”client”签名的代码具有读写” c:\\paper\\client\\”目录下所有文件的权限，而所有被”server”签名的代码具有所有的权限。Java 将根据该策略文件按照签名者创建相应的保护域。</p>
+			<p>一切就绪，我们运行代码，如清单 6 所示。</p>
+			<br ><a name="listing6"><b>清单 6. 运行程序</b></a><br ><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="code-outline"><pre class="displaycode">				
 &gt;java -Djava.security.manager 
     -Djava.security.policy=my.policy -classpath client.jar;server.jar   
     sample.permtest.client.Client 
 </pre></td></tr></table><br >
-			<p>����������ʱѡ���ر���Ҫ��-Djava.security.manager ���� JVM װ�� Java �İ�ȫ����������������ʱ�İ�ȫ��飬�� -Djava.security.policy ����ָ������ʹ�õĲ����ļ���</p>
-			<p>���еĽ�����嵥 7 ��ʾ��</p>
-			<br ><a name="listing7"><b>�嵥 7. ���н��</b></a><br ><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="code-outline"><pre class="displaycode">				
+			<p>有两个运行时选项特别重要，-Djava.security.manager 告诉 JVM 装载 Java 的安全管理器，进行运行时的安全检查，而 -Djava.security.policy 用来指定我们使用的策略文件。</p>
+			<p>运行的结果如清单 7 所示。</p>
+			<br ><a name="listing7"><b>清单 7. 运行结果</b></a><br ><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="code-outline"><pre class="displaycode">				
 Exception in thread "main" java.security.AccessControlException: access denied ( 
 java.io.FilePermission c:\paper\server\out.tmp write) 
        at java.security.AccessControlContext.checkPermission(Unknown Source) 
@@ -652,33 +652,33 @@ java.io.FilePermission c:\paper\server\out.tmp write)
        at sample.permtest.server.LogService.log(LogService.java:19) 
        at sample.permtest.client.Client.main(Client.java:16) 
 </pre></td></tr></table><br >
-			<p>�ͻ������к󣬵�һ����Ϣ�ɹ�д�� c:\\paper\\client\\out.tmp �ļ������ڶ�����Ϣ����û�� c:\paper\server\out.tmp �ļ���дȨ�޶����ܾ�ִ�С�</p>
-			<div class="ibm-alternate-rule"><hr></div><p class="ibm-ind-link ibm-back-to-top"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#ibm-pcon" class="ibm-anchor-up-link">��ҳ��</a></p><p><a name="major2"><span class="atitle">�̼߳�İ�ȫЭ��</span></a></p>
-			<p>ǰһ�ڱ��ĸ�����ʾ������������̼߳��첽Э���Ļ����������ø��ӡ���ͼ 4 ��ʾ��</p>
+			<p>客户端运行后，第一条消息成功写入 c:\\paper\\client\\out.tmp 文件，而第二条消息由于没有 c:\paper\server\out.tmp 文件的写权限而被拒绝执行。</p>
+			<div class="ibm-alternate-rule"><hr></div><p class="ibm-ind-link ibm-back-to-top"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#ibm-pcon" class="ibm-anchor-up-link">回页首</a></p><p><a name="major2"><span class="atitle">线程间的安全协作</span></a></p>
+			<p>前一节本文给出的示例，如果放在线程间异步协作的环境里，情况会变得复杂。如图 4 所示。</p>
 			
-				<br ><a name="fig4"><b>ͼ 4. �̵߳��첽Э��</b></a><br >
-				<IMG alt="ͼ 4. �̵߳��첽Э��" src="index_files/image004.jpg" width=436 height=204>
+				<br ><a name="fig4"><b>图 4. 线程的异步协作</b></a><br >
+				<IMG alt="图 4. 线程的异步协作" src="index_files/image004.jpg" width=436 height=204>
 			<br >
-			<p>��ͼ 4�����������龰�£��ͻ����̵߳�����ʱ��ջ��ȫ�����ڷ������˵��̣߳�����֮�����ͨ�����������ݽṹ��Ϣ���н����첽Э�������磺���ͻ����̷߳��� Message X�����󣬷������˵��߳��õ� Message X ���д�����������Ȼ���� Message X ��ϣ�����������߳̽���Ϣд�� c:\paper\server\out.tmp �ļ��������ʱ�򣬷��������������ȷ���ͻ��˾���д�� c:\paper\server\out.tmp �ļ���Ȩ�ޣ�</p>
-			<p>Java �ṩ�˻����߳�Э�������Ľ�����������嵥 8 ��ʾ��</p>
-			<br ><a name="listing8"><b>�嵥 8. �߳�Э���汾�� LogService</b></a><br ><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="code-outline"><pre class="displaycode">				
+			<p>如图 4，在这样的情景下，客户端线程的运行时堆栈完全独立于服务器端的线程，它们之间仅仅通过共享的数据结构消息队列进行异步协作。例如：当客户端线程放入 Message X，而后，服务器端的线程拿到 Message X 进行处理，我们仍然假设 Message X 是希望服务器端线程将消息写入 c:\paper\server\out.tmp 文件。在这个时候，服务程序怎样才能确保客户端具有写入 c:\paper\server\out.tmp 文件的权限？</p>
+			<p>Java 提供了基于线程协作场景的解决方案，如清单 8 所示：</p>
+			<br ><a name="listing8"><b>清单 8. 线程协作版本的 LogService</b></a><br ><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="code-outline"><pre class="displaycode">				
 package sample.permtest.thread.server;
-����
+……
 public class LogService implements Runnable
 {
-    ����
+    ……
     public synchronized void log(Message message)
     {
-        //�÷������ڿͻ����̻߳�����ִ��
-        //����Ϣ������е�ʱ�����ǰѿͻ����̵߳�ִ�л���ͨ�� 
-        //AccessController.getContext() �õ���
-        //����ʱ����������
+        //该方法将在客户端线程环境中执行
+        //在消息放入队列的时候，我们把客户端线程的执行环境通过 
+        //AccessController.getContext() 得到，
+        //并及时保存下来。
         message.m_accesscontrolcontext = AccessController.getContext();
         _messageList.add(message);
         notifyAll();
     }
-    ����
-    //�Ӷ�����ȡ����Ϣ������һ����
+    ……
+    //从队列中取出消息，并逐一处理
     public void run()
     {
         while (true)
@@ -715,48 +715,48 @@ public class LogService implements Runnable
                     }
                 },
                 message.m_accesscontrolcontext 
-		//���ͻ����̵߳�ʱ��ִ�л������룬����Ȩ�޼�顣
+		//将客户端线程当时的执行环境传入，进行权限检查。
             );
         }
     }
 }
 </pre></td></tr></table><br >
-			<p>��Ϣ��� m_accesscontrolcontext ��Ա������һ�� AccessControlContext ��������װ�ĵ�ǰ�̵߳�ִ�л������գ����ǿ���ͨ������ AccessController �� getContext ������á���ȫ���߳�Э������ԭ����ͼ 5 ��ʾ��</p>
+			<p>消息类的 m_accesscontrolcontext 成员变量是一个 AccessControlContext 对象，它封装的当前线程的执行环境快照，我们可以通过调用 AccessController 的 getContext 方法获得。安全的线程协作工作原理如图 5 所示。</p>
 			
-				<br ><a name="fig5"><b>ͼ 5. �߳��첽Э��Ȩ�޼��·��</b></a><br >
-				<IMG alt="ͼ 5. �߳��첽Э��Ȩ�޼��·��" src="index_files/image005.jpg" width=459 height=235>
+				<br ><a name="fig5"><b>图 5. 线程异步协作权限检查路径</b></a><br >
+				<IMG alt="图 5. 线程异步协作权限检查路径" src="index_files/image005.jpg" width=459 height=235>
 			<br >
-			<p>ͼ 5 �еļ�ͷָʾ�� Java �İ�ȫ������Ȩ�޼���·�����ӵ�ǰ��֡ (Frame) ��ʼ�����ŷ��������̵߳�����ʱ��ջ��飬ֱ�������� AccessController.doPrivileged ֡�����������ڵ��� doPrivileged ����ʱ�������� m_accesscontrolcontext��Ҳ���ǿͻ������߳�������Ϣ�����������Ϣʱ��ִ�л��������� Java �İ�ȫ����������ת����ִ�л��������ſͻ��˲�����Ϣʱ��ִ�ж�ջ��һ��顣</p>
-			<p>�ڱ����̰߳汾�� Log ����ʵ���У�Client ���� sample.permtest.thread.client ����ð�������Ϊ thread_client.jar JAR ������ LogService �� sample.permtest.thread.server ����ð�������Ϊ thread_server.jar JAR �������й��ⲿ�ֵİ�ǩ�����Ͻ����ƣ�ʹ�������Ͻ���ͬ������֤�顣</p>
-			<p>����������Դ���룬���߿����ڱ��ĺ������Դ�б������ء�</p>
-			<div class="ibm-alternate-rule"><hr></div><p class="ibm-ind-link ibm-back-to-top"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#ibm-pcon" class="ibm-anchor-up-link">��ҳ��</a></p><p><a name="major3"><span class="atitle">С��</span></a></p>
-			<p>����ͨ��ʾ�����꾡������ Java 2 ����ʱ�İ�ȫģ�����ԣ��Լ����ڸ�ģ�ͣ���ι�����ȫ���߳�Э��Ӧ�á�ֵ��һ����ǣ������� Java Ӧ��ʹ�õ� Java 2 ���ṩ������ʱ��ȫģ�ͣ��������ܵĽ����Ǳ�Ȼ�ģ���Ϊ�����Ѿ�������Java 2 �İ�ȫģ���ǻ��ڶ�ջ��Ȩ�ģ�����ζ�ţ�ÿһ�� Java ��ȫ���������Ȩ�޷�����ִ�У����������ǰ����ʱ�ж�ջ������֡����ȷ���Ƿ�����Ȩ��Ҫ�������������һ��Ҫ�ڰ�ȫ������֮��ȡ�ᡣ��Ȼ��������Ӧ���� Java �İ�ȫģ�ͺ�����Ȼ�л���������ܵ��Ż�������ʹ�� doPrivileged ����ȥ������Ҫ�Ķ�ջ����������һ���������Ը����Լ�Ӧ�õ��ص㣬ͨ���̳� java.lang. SecurityManager �࣬�������ʺ��Լ�Ӧ�õİ�ȫ��������</p><!-- CMA ID: 429158 --><!-- Site ID: 10 --><!-- XSLT stylesheet used to transform this file:  dw-article-6.0-beta.xsl -->
-<br ><div class="ibm-alternate-rule"><hr></div><p class="ibm-ind-link ibm-back-to-top"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#ibm-pcon" class="ibm-anchor-up-link">��ҳ��</a></p><p><span class="atitle"><a name="download">����</a></span></p><table width="100%" class="ibm-data-table" cellspacing="0" cellpadding="0" border="0"><tr><th scope=col>����</th><th scope=col>����</th><th scope=col>��С</th><th scope=col>���ط���</th></tr><tr><td class="tb-row" scope=row>����ʾ������</td><td nowrap>src.zip</td><td nowrap>16 KB</td><td nowrap><a class="fbox" href="http://www.ibm.com/developerworks/apps/download/index.jsp?contentid=429158&amp;filename=src.zip&amp;method=http&amp;locale=zh_CN">HTTP</a></td></tr></table><p><a href="http://www.ibm.com/developerworks/cn/whichmethod.html" class="ibm-forward-link">�������ط�������Ϣ</a></p><br >
-<p><a name="resources"><span class="atitle">�ο����� </span></a></p><p><b>ѧϰ</b></p><ul><li>
-				���ġ�<A href="https://www.ibm.com/developerworks/cn/java/j-security/">developerWorks Java ��ȫר��</A>����ȫ���˽������� Java ƽ̨��ȫ�����������Դ��
+			<p>图 5 中的箭头指示了 Java 的安全管理器权限检查的路径，从当前的帧 (Frame) 开始，沿着服务器端线程的运行时堆栈检查，直到碰到了 AccessController.doPrivileged 帧。由于我们在调用 doPrivileged 方法时，传入了 m_accesscontrolcontext，也就是客户端线线程在往消息队列里插入消息时的执行环境，所以 Java 的安全管理器会跳转到该执行环境，沿着客户端插入消息时的执行堆栈逐一检查。</p>
+			<p>在本节线程版本的 Log 服务实现中，Client 类在 sample.permtest.thread.client 包里，该包被导出为 thread_client.jar JAR 包，而 LogService 在 sample.permtest.thread.server 包里，该包被导出为 thread_server.jar JAR 包。而有关这部分的包签名与上节类似，使用了与上节相同的数字证书。</p>
+			<p>关于完整的源代码，读者可以在本文后面的资源列表中下载。</p>
+			<div class="ibm-alternate-rule"><hr></div><p class="ibm-ind-link ibm-back-to-top"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#ibm-pcon" class="ibm-anchor-up-link">回页首</a></p><p><a name="major3"><span class="atitle">小结</span></a></p>
+			<p>本文通过示例，详尽描述了 Java 2 运行时的安全模型特性，以及基于该模型，如何构建安全的线程协作应用。值得一提的是，当您的 Java 应用使用的 Java 2 所提供的运行时安全模型，程序性能的降低是必然的，因为我们已经看到，Java 2 的安全模型是基于堆栈授权的，这意味着，每一次 Java 安全管理器检查权限方法的执行，都会遍历当前运行时行堆栈的所有帧，以确定是否满足权限要求。所以您的设计一定要在安全与性能之间取舍。当然，当您在应用了 Java 的安全模型后，您仍然有机会进行性能的优化，比如使用 doPrivileged 方法去掉不必要的堆栈遍历，更进一步，您可以根据自己应用的特点，通过继承 java.lang. SecurityManager 类，来开发适合自己应用的安全管理器。</p><!-- CMA ID: 429158 --><!-- Site ID: 10 --><!-- XSLT stylesheet used to transform this file:  dw-article-6.0-beta.xsl -->
+<br ><div class="ibm-alternate-rule"><hr></div><p class="ibm-ind-link ibm-back-to-top"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#ibm-pcon" class="ibm-anchor-up-link">回页首</a></p><p><span class="atitle"><a name="download">下载</a></span></p><table width="100%" class="ibm-data-table" cellspacing="0" cellpadding="0" border="0"><tr><th scope=col>描述</th><th scope=col>名字</th><th scope=col>大小</th><th scope=col>下载方法</th></tr><tr><td class="tb-row" scope=row>本文示例代码</td><td nowrap>src.zip</td><td nowrap>16 KB</td><td nowrap><a class="fbox" href="http://www.ibm.com/developerworks/apps/download/index.jsp?contentid=429158&amp;filename=src.zip&amp;method=http&amp;locale=zh_CN">HTTP</a></td></tr></table><p><a href="http://www.ibm.com/developerworks/cn/whichmethod.html" class="ibm-forward-link">关于下载方法的信息</a></p><br >
+<p><a name="resources"><span class="atitle">参考资料 </span></a></p><p><b>学习</b></p><ul><li>
+				参阅“<A href="https://www.ibm.com/developerworks/cn/java/j-security/">developerWorks Java 安全专题</A>”：全面了解与掌握 Java 平台安全技术的最佳资源。
 			<br ><br 
   ><li>
-				���ġ�<a href="http://www.ibm.com/developerworks/cn/java/j-concurrent/">developerWorks Java ���߳��벢�����ר��</a>�����㼯���� Java ���߳��벢�������ص����ºͽ̳̣������������� Java ������̵�ģʽ�������ף������չʾ����θ���ȷ��ʹ�� Java ƽ̨���߳�ģ�͡�
+				参阅“<a href="http://www.ibm.com/developerworks/cn/java/j-concurrent/">developerWorks Java 多线程与并发编程专题</a>”：汇集了与 Java 多线程与并发编程相关的文章和教程，帮助读者理解 Java 并发编程的模式及其利弊，向读者展示了如何更精确地使用 Java 平台的线程模型。
 			<br 
   ><br ><li>
-				<a href="http://www.ibm.com/developerworks/cn/java/">developerWorks Java ����ר��</a>����������ƪ�й� Java ��̸���������¡�
+				<a href="http://www.ibm.com/developerworks/cn/java/">developerWorks Java 技术专区</a>：查找数百篇有关 Java 编程各方面的文章。
 			<br 
-  ><br ></li></ul><p><b>��ò�Ʒ�ͼ���</b></p><ul><li>���� <a href="http://www.ibm.com/developerworks/cn/downloads/">IBM �������ð�</a>������ǿ��� DB2?��Lotus?��Rational?��Tivoli?��
-      WebSphere?������<br ><br ></li></ul><p><b>����</b></p><ul><li>�鿴 <a href="http://www.ibm.com/developerworks/blogs/">developerWorks 
-����</a> ��������Ϣ��<br ><br 
+  ><br ></li></ul><p><b>获得产品和技术</b></p><ul><li>下载 <a href="http://www.ibm.com/developerworks/cn/downloads/">IBM 软件试用版</a>，体验强大的 DB2?，Lotus?，Rational?，Tivoli?和
+      WebSphere?软件。<br ><br ></li></ul><p><b>讨论</b></p><ul><li>查看 <a href="http://www.ibm.com/developerworks/blogs/">developerWorks 
+博客</a> 的最新信息。<br ><br 
   ></li></ul>
-<p><a name="author"><span class="atitle">��������</span></a></p><div class="ibm-container ibm-portrait-module ibm-alternate-two"><div class="ibm-container-body"><p><a name="author1"> </a>�����죬��ְ�� IBM CDL��Lotus ��Ʒ�������� Notes ��ȫ����з�����������֮ǰ������һֱ��������Ӧ�ÿ�����ع��������߸���Ȥ�ļ�������������ֲ�ʽ������㡢����Ӧ�á�OSGi��Э�����㡢Java ��ȫ�ȡ�</p></div></div><!-- MAIN_COLUMN_CONTENT_END --><!-- OVERLAYS_START --><!-- Report_Abuse_Start -->
+<p><a name="author"><span class="atitle">关于作者</span></a></p><div class="ibm-container ibm-portrait-module ibm-alternate-two"><div class="ibm-container-body"><p><a name="author1"> </a>李三红，任职于 IBM CDL，Lotus 产品部，负责 Notes 安全相关研发工作。在这之前，作者一直从事网络应用开发相关工作。作者感兴趣的技术领域包括：分布式对象计算、网络应用、OSGi、协作计算、Java 安全等。</p></div></div><!-- MAIN_COLUMN_CONTENT_END --><!-- OVERLAYS_START --><!-- Report_Abuse_Start -->
   <div class="ibm-common-overlay ibm-no-print" id="reportabuseoverlay">
-    <div class="ibm-head"><p><a class="ibm-common-overlay-close" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#">�ر� [x]</a></p></div>
+    <div class="ibm-head"><p><a class="ibm-common-overlay-close" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#">关闭 [x]</a></p></div>
     <div class="ibm-body">
       <div class="ibm-main">
-        <a class="ibm-access" name="reportabuseoverlay">���ڱ������õİ���</a>   
-        <div class="ibm-title"><h1>��������</h1></div>
+        <a class="ibm-access" name="reportabuseoverlay">关于报告滥用的帮助</a>   
+        <div class="ibm-title"><h1>报告滥用</h1></div>
         <div class="ibm-container ibm-alternate">
-          <p><strong>лл!</strong>  �������Ѿ���ʶ������Աע�⡣</p>
+          <p><strong>谢谢!</strong>  此内容已经标识给管理员注意。</p>
           <div class="ibm-overlay-rule"><hr ></div>
           <div class="ibm-buttons-row">
-            <input type="button" onclick="ibmCommon.Overlays.hide('reportabuseoverlay');return false;" class="ibm-btn-cancel-sec dw-btn-cancel-sec" name="ibm-cancel" value="�ر�" >
+            <input type="button" onclick="ibmCommon.Overlays.hide('reportabuseoverlay');return false;" class="ibm-btn-cancel-sec dw-btn-cancel-sec" name="ibm-cancel" value="关闭" >
           </div>
         </div>
       </div> 
@@ -764,16 +764,16 @@ public class LogService implements Runnable
     <div class="ibm-footer"></div>
   </div><!-- Report_Abuse_Error_Start -->
   <div class="ibm-common-overlay ibm-no-print" id="reportabuseoverlayerror">
-    <div class="ibm-head"><p><a class="ibm-common-overlay-close" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#">�ر� [x]</a></p></div>
+    <div class="ibm-head"><p><a class="ibm-common-overlay-close" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#">关闭 [x]</a></p></div>
     <div class="ibm-body">
       <div class="ibm-main">
-        <a class="ibm-access" name="reportabuseoverlayerror">���ڱ������õİ���</a>   
-        <div class="ibm-title"><h1>��������</h1></div>
+        <a class="ibm-access" name="reportabuseoverlayerror">关于报告滥用的帮助</a>   
+        <div class="ibm-title"><h1>报告滥用</h1></div>
         <div class="ibm-container ibm-alternate">
-          <p class="ibm-ind-error"><strong>���������ύʧ�ܡ�  ���Ժ����ԡ�</strong></p>
+          <p class="ibm-ind-error"><strong>报告滥用提交失败。  请稍后重试。</strong></p>
           <div class="ibm-overlay-rule"><hr ></div>
           <div class="ibm-buttons-row">
-            <input type="button" onclick="ibmCommon.Overlays.hide('reportabuseoverlayerror');return false;" class="ibm-btn-cancel-sec dw-btn-cancel-sec" name="ibm-cancel" value="�ر�" >
+            <input type="button" onclick="ibmCommon.Overlays.hide('reportabuseoverlayerror');return false;" class="ibm-btn-cancel-sec dw-btn-cancel-sec" name="ibm-cancel" value="关闭" >
           </div>
         </div>
       </div> 
@@ -782,12 +782,12 @@ public class LogService implements Runnable
   </div><!-- Sign in OVERLAY STARTS HERE --> 
   <div class="ibm-common-overlay" id="signin_overlay">
     <div class="ibm-head">
-      <p><a class="ibm-common-overlay-close" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#" onclick="clearForm();">�ر� [x]</a></p>
+      <p><a class="ibm-common-overlay-close" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#" onclick="clearForm();">关闭 [x]</a></p>
     </div>
     <div class="ibm-body">
       <div class="ibm-main">
         <div class="ibm-title ibm-subtitle">
-          <h1>developerWorks����¼</h1>
+          <h1>developerWorks：登录</h1>
           <div id="ibm-overlay-error-signin" class="no-display"></div>
         </div>
         
@@ -795,27 +795,27 @@ public class LogService implements Runnable
           <div class="ibm-container-body">
 
             <form class="ibm-column-form" id="sFormId" action="" method="post" name="sForm" onsubmit="return false;">
-              <p><label for="ibmid">IBM ID��</label><span><input name="ibm-id" id="ibmid" size="25" class="required" onkeypress="handleEP(event,this.form);" >
-                <br ><a class="ibm-forward-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#" onclick="(function () {window.location='/developerworks/dwwi/DWAuthRouter?m=reg&amp;lang=zh_CN&amp;d='+encodeURIComponent(location.href);})();">��Ҫһ�� IBM ID��</a>
-                <br ><a class="ibm-forward-link" href="http://www.ibm.com/developerworks/dwwi/jsp/WSHelp.jsp?lang=zh_CN">���� IBM ID��</a></span>   
+              <p><label for="ibmid">IBM ID：</label><span><input name="ibm-id" id="ibmid" size="25" class="required" onkeypress="handleEP(event,this.form);" >
+                <br ><a class="ibm-forward-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#" onclick="(function () {window.location='/developerworks/dwwi/DWAuthRouter?m=reg&amp;lang=zh_CN&amp;d='+encodeURIComponent(location.href);})();">需要一个 IBM ID？</a>
+                <br ><a class="ibm-forward-link" href="http://www.ibm.com/developerworks/dwwi/jsp/WSHelp.jsp?lang=zh_CN">忘记 IBM ID？</a></span>   
               </p> 
-              <p><label for="password">���룺</label><span><input name="password" id="password" size="25" class="required" type="password" onkeypress="handleEP(event,this.form);" ><br >
-                <a class="ibm-forward-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#" onclick="(function () {window.location='https://www.ibm.com/account/profile?page=forgot&amp;lang=zh_CN&amp;appname=ibm&amp;required=null&amp;d='+encodeURIComponent(getAuthUrl())+'%3Fm%3Dloginpage%26lang%3Dzh_CN%26d%3D'+encodeURIComponent(location.href);})();">�������룿</a><br >
-                <a class="ibm-forward-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#" onclick="(function () {window.location='https://www.ibm.com/account/profile?page=chpw&amp;lang=zh_CN&amp;appname=ibm&amp;required=null&amp;d='+encodeURIComponent(location.href);})();">������������</a></span></p> 
+              <p><label for="password">密码：</label><span><input name="password" id="password" size="25" class="required" type="password" onkeypress="handleEP(event,this.form);" ><br >
+                <a class="ibm-forward-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#" onclick="(function () {window.location='https://www.ibm.com/account/profile?page=forgot&amp;lang=zh_CN&amp;appname=ibm&amp;required=null&amp;d='+encodeURIComponent(getAuthUrl())+'%3Fm%3Dloginpage%26lang%3Dzh_CN%26d%3D'+encodeURIComponent(location.href);})();">忘记密码？</a><br >
+                <a class="ibm-forward-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#" onclick="(function () {window.location='https://www.ibm.com/account/profile?page=chpw&amp;lang=zh_CN&amp;appname=ibm&amp;required=null&amp;d='+encodeURIComponent(location.href);})();">更改您的密码</a></span></p> 
 
               <p class="dw-perm-box">
-                <span><input id="perm" type="checkbox" name="perm_name"><label for="perm"> ���ֵ�¼��</label></span>
+                <span><input id="perm" type="checkbox" name="perm_name"><label for="perm"> 保持登录。</label></span>
               </p>
 
-              <p>�����ύ���ʾ��ͬ��developerWorks ������������� <a href="http://www.ibm.com/developerworks/mydeveloperworks/terms?lang=zh">ʹ������</a></p>
+              <p>单击提交则表示您同意developerWorks 的条款和条件。 <a href="http://www.ibm.com/developerworks/mydeveloperworks/terms?lang=zh">使用条款</a></p>
               <div class="ibm-buttons-row">
-                <p><input class="ibm-btn-arrow-pri" name="ibm-submit" value="�ύ" onclick="signin();return false;" type="submit" ><span class="ibm-sep">&nbsp;</span>
-                  <input value="ȡ��" type="button" name="ibm-cancel" class="ibm-btn-cancel-sec" onclick="clearForm();ibmCommon.Overlays.hide('signin_overlay');return false;"></p>
+                <p><input class="ibm-btn-arrow-pri" name="ibm-submit" value="提交" onclick="signin();return false;" type="submit" ><span class="ibm-sep">&nbsp;</span>
+                  <input value="取消" type="button" name="ibm-cancel" class="ibm-btn-cancel-sec" onclick="clearForm();ibmCommon.Overlays.hide('signin_overlay');return false;"></p>
               </div>
             </form>
             <div class="ibm-overlay-rule"><hr ></div>
-            <p>�������ε�¼�� developerWorks ʱ������Ϊ������һ�ݸ�Ҫ��Ϣ��<strong>���� developerWorks ��Ҫ��Ϣ��ѡ�񹫿�����Ϣ��������ʾ�������ˣ�����������ʱ�޸���Щ��Ϣ����ʾ״̬��</strong>��������������ѡ�����أ����ǳƽ������� developerWorks ����������һͬ��ʾ��</p>
-            <div class="dw-overlay-legal"><p>�����ύ����Ϣȷ����ȫ��</p></div>
+            <p>当您初次登录到 developerWorks 时，将会为您创建一份概要信息。<strong>您在 developerWorks 概要信息中选择公开的信息将公开显示给其他人，但您可以随时修改这些信息的显示状态。</strong>您的姓名（除非选择隐藏）和昵称将和您在 developerWorks 发布的内容一同显示。</p>
+            <div class="dw-overlay-legal"><p>所有提交的信息确保安全。</p></div>
           </div>
         </div>
       </div>
@@ -824,38 +824,38 @@ public class LogService implements Runnable
   </div><!-- Sign in OVERLAY ENDS HERE --><!-- Display name OVERLAY STARTS HERE --> 
   <div class="ibm-common-overlay" id="displayname_overlay">
     <div class="ibm-head">
-      <p><a class="ibm-common-overlay-close" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#" onclick="clearForm();">�ر� [x]</a></p>
+      <p><a class="ibm-common-overlay-close" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#" onclick="clearForm();">关闭 [x]</a></p>
     </div>
     <div class="ibm-body">
       <div class="ibm-main">
         <div class="ibm-title ibm-subtitle">
-          <h1>��ѡ�������ǳƣ�</h1>
+          <h1>请选择您的昵称：</h1>
           <div id="ibm-overlay-error-dname" class="no-display"></div>
         </div>
         <div class="ibm-container ibm-alternate ibm-buttons-last">
           <div class="ibm-container-body">
-            <p class="ibm-overlay-intro">�������ε�¼�� developerWorks ʱ������Ϊ������һ�ݸ�Ҫ��Ϣ������Ҫָ��һ���ǳơ������ǳƽ������� developerWorks ������������ʾ��һ��</p><p><strong>�ǳƳ����� 3 �� 31 ���ַ�֮��</strong>�� �����ǳ��� developerWorks �����б�����Ψһ�ģ����ҳ�����˽������ԭ�򣬲��������ĵ����ʼ���ַ��</p>
+            <p class="ibm-overlay-intro">当您初次登录到 developerWorks 时，将会为您创建一份概要信息，您需要指定一个昵称。您的昵称将和您在 developerWorks 发布的内容显示在一起。</p><p><strong>昵称长度在 3 至 31 个字符之间</strong>。 您的昵称在 developerWorks 社区中必须是唯一的，并且出于隐私保护的原因，不能是您的电子邮件地址。</p>
             <form id="dFormId" method="post" action="" name="dForm" onsubmit="return false;" class="ibm-column-form">
-              <p><label for="displayname">�ǳƣ�</label><span><input name="displayname" id="displayname" size="25" onkeypress="handleEP(event,this.form);" ></span><span class="ibm-form-note">�������� 3 �� 31 ���ַ�֮�䣩</span>
+              <p><label for="displayname">昵称：</label><span><input name="displayname" id="displayname" size="25" onkeypress="handleEP(event,this.form);" ></span><span class="ibm-form-note">（长度在 3 至 31 个字符之间）</span>
               </p>
               
               <div class="ibm-overlay-rule"><hr >
               </div>
-              <p>����<strong>�ύ</strong>���ʾ��ͬ��developerWorks ������������� <a href="http://www.ibm.com/developerworks/mydeveloperworks/terms?lang=zh">ʹ������</a>.</p>
+              <p>单击<strong>提交</strong>则表示您同意developerWorks 的条款和条件。 <a href="http://www.ibm.com/developerworks/mydeveloperworks/terms?lang=zh">使用条款</a>.</p>
               <div class="ibm-buttons-row">
-                <p><input class="ibm-btn-arrow-pri" name="ibm-submit" value="�ύ" onclick="signin();return false;" type="submit" ><span class="ibm-sep">&nbsp;</span>
-                  <input value="ȡ��" type="button" name="ibm-cancel" class="ibm-btn-cancel-sec" onclick="clearForm();ibmCommon.Overlays.hide('displayname_overlay');return false;" ></p>
+                <p><input class="ibm-btn-arrow-pri" name="ibm-submit" value="提交" onclick="signin();return false;" type="submit" ><span class="ibm-sep">&nbsp;</span>
+                  <input value="取消" type="button" name="ibm-cancel" class="ibm-btn-cancel-sec" onclick="clearForm();ibmCommon.Overlays.hide('displayname_overlay');return false;" ></p>
               </div>
             </form>
             <div class="ibm-overlay-rule"><hr ></div>
-            <div class="dw-overlay-legal"><p>�����ύ����Ϣȷ����ȫ��</p></div>
+            <div class="dw-overlay-legal"><p>所有提交的信息确保安全。</p></div>
           </div>
         </div>
       </div>
     </div>
     <div class="ibm-footer"></div>
   </div><!-- Display name OVERLAY ENDS HERE --><!-- OVERLAYS_END --><!-- RATINGS START -->
-  <p class="ibm-no-print"><span class="atitle"><a name="iratings">Ϊ��������</a></span></p>
+  <p class="ibm-no-print"><span class="atitle"><a name="iratings">为本文评分</a></span></p>
   <input id="art-rating" name="ratinga" type="hidden" value="0"><div id="art-rating-module"></div>
   <script language="JavaScript" type="text/javascript">
     // <![CDATA[
@@ -864,51 +864,51 @@ public class LogService implements Runnable
 // ]]>
   </script>
 <!-- RATINGS END --><!-- INLINE_COMMENTS_START -->
-  <p class="ibm-no-print"><span class="atitle"><a name="icomments">����</a></span></p>
+  <p class="ibm-no-print"><span class="atitle"><a name="icomments">评论</a></span></p>
     <script language="JavaScript" type="text/javascript">
       // <![CDATA[
 dwc = {};
-dwc.cmts = '������';
-dwc.signInPreText = '��';
-dwc.signIn = '��¼';
-dwc.or = '��';
-dwc.register = 'ע��';
+dwc.cmts = '条评论';
+dwc.signInPreText = '请';
+dwc.signIn = '登录';
+dwc.or = '或';
+dwc.register = '注册';
 dwc.signInPostText = '';
-dwc.leaveCmt = '�󷢱����ۡ�';
-dwc.view = '�鿴';
-dwc.totalCmts = '��������';
-dwc.postYourCmt = '������������';
-dwc.show = '��ʾ��';
-dwc.recentCmts = '��������';
-dwc.allCmts = '��������';
-dwc.tooLongCmt = '�������۳����� 1000 �ַ�����';
-dwc.numCharsLeft = 'ʣ�� <span id="charCount">{1}</span> �ַ�';
-dwc.reportAbuse = '��������';
-dwc.notifyMsg = '��������ʱ������';
-dwc.htmlWarning = 'ע�⣺�����в�֧�� HTML �﷨'; 
-dwc.cmt = '���ۣ�';
-dwc.addCmts = '��������';
-dwc.addCmt = '��������';
-dwc.doNotErase = '--���·���������--'; 
-dwc.viewOrAddCmts = '�鿴����������';
-dwc.reportInapprCont = '�ٱ�������Ϣ';
+dwc.leaveCmt = '后发表评论。';
+dwc.view = '查看';
+dwc.totalCmts = '共有评论';
+dwc.postYourCmt = '添加您的评论';
+dwc.show = '显示：';
+dwc.recentCmts = '最新评论';
+dwc.allCmts = '所有评论';
+dwc.tooLongCmt = '您的评论超过了 1000 字符限制';
+dwc.numCharsLeft = '剩余 <span id="charCount">{1}</span> 字符';
+dwc.reportAbuse = '报告滥用';
+dwc.notifyMsg = '有新评论时提醒我';
+dwc.htmlWarning = '注意：评论中不支持 HTML 语法'; 
+dwc.cmt = '评论：';
+dwc.addCmts = '添加评论';
+dwc.addCmt = '添加评论';
+dwc.doNotErase = '--在下方添加评论--'; 
+dwc.viewOrAddCmts = '查看或添加评论';
+dwc.reportInapprCont = '举报不良信息';
 dwc.reportInapprContLink = 'http://www.ibm.com/developerworks/forums/forum.jspa?forumID=1834';
-dwc.postingCmt = '���ڷ������ۡ���';
-dwc.noCmt = '�������ӵ�һ������';
-dwc.netwkErr = '�ڼ�������ʱ���������Ժ�ˢ�¡�';
-dwc.addACmt = '��������';
-dwc.instructCmt = '�����Ǻţ�<span class="ibm-required">*</span>�����Ǳ�����Ŀ��';
-dwc.btnPost = '����';
-dwc.btnPostAnon = '��������';
-dwc.btnClrCmt = '�������';
-dwc.btnCancel = 'ȡ��';
-dwc.showRecent = '��ʾ���µ� {1} ������'; // {1} is the count to be substituted
-dwc.showNext = '��ʾ�� {1} ������'; // {1} is the count to be substituted
-dwc.showAllCmts = '��ʾ��������';
-dwc.enterCmt = '�������������ݡ�';
-dwc.loginErr = '��ʱ�޷���֤���ĵ�¼״̬�����Ժ����ԡ�';
-dwc.postErr = '��ʱ�޷������������ۣ����Ժ����ԡ�';
-dwc.postBy = '�� <strong>{1}</strong>  �� {2} '; // {1} is the author to be substituted; {2} is the date
+dwc.postingCmt = '正在发布评论……';
+dwc.noCmt = '快来添加第一条评论';
+dwc.netwkErr = '在检索评论时出错，请稍后刷新。';
+dwc.addACmt = '添加评论';
+dwc.instructCmt = '标有星号（<span class="ibm-required">*</span>）的是必填项目。';
+dwc.btnPost = '发布';
+dwc.btnPostAnon = '匿名发布';
+dwc.btnClrCmt = '清除评论';
+dwc.btnCancel = '取消';
+dwc.showRecent = '显示最新的 {1} 条评论'; // {1} is the count to be substituted
+dwc.showNext = '显示后 {1} 条评论'; // {1} is the count to be substituted
+dwc.showAllCmts = '显示所有评论';
+dwc.enterCmt = '请输入评论内容。';
+dwc.loginErr = '暂时无法验证您的登录状态，请稍后再试。';
+dwc.postErr = '暂时无法发布您的评论，请稍后再试。';
+dwc.postBy = '由 <strong>{1}</strong>  于 {2} '; // {1} is the author to be substituted; {2} is the date
 dwc.siteId = 10;
 dwc.lang = 'zh_CN';
 dwc.viperLang = 'zh';
@@ -917,13 +917,13 @@ dwc.viperLang = 'zh';
     <div id="threadShow"></div><!-- INLINE_COMMENTS_END -->
   
 
-  <p class="ibm-ind-link ibm-back-to-top"><a class="ibm-anchor-up-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#ibm-pcon">��ҳ��</a></p><!-- Overlays --><!-- lk - pull in overlays from ww when required on cn -->
-  </div><!-- MAIN_COLUMN_CONTAINER_END --><!-- Rating_Meta_BEGIN --><!--Rating_Meta_BEGIN--><div class="metavalue">static.content.url=http://www.ibm.com/developerworks/js/artrating/</div><div class="metavalue">SITE_ID=10</div><div class="metavalue">Zone=Java technology</div><div class="metavalue">ArticleID=429158</div><div class="metavalue">ArticleTitle=���� Java 2 ����ʱ��ȫģ�͵��߳�Э��</div><div class="metavalue">publish-date=09182009</div><div class="metavalue">author1-email=lisanh@cn.ibm.com</div><div class="metavalue">author1-email-cc=</div><script language="javascript" type="text/javascript">document.write('<div class="metavalue">url='+location.href.replace(/</g, '%3C')+'</div>');</script>
+  <p class="ibm-ind-link ibm-back-to-top"><a class="ibm-anchor-up-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#ibm-pcon">回页首</a></p><!-- Overlays --><!-- lk - pull in overlays from ww when required on cn -->
+  </div><!-- MAIN_COLUMN_CONTAINER_END --><!-- Rating_Meta_BEGIN --><!--Rating_Meta_BEGIN--><div class="metavalue">static.content.url=http://www.ibm.com/developerworks/js/artrating/</div><div class="metavalue">SITE_ID=10</div><div class="metavalue">Zone=Java technology</div><div class="metavalue">ArticleID=429158</div><div class="metavalue">ArticleTitle=基于 Java 2 运行时安全模型的线程协作</div><div class="metavalue">publish-date=09182009</div><div class="metavalue">author1-email=lisanh@cn.ibm.com</div><div class="metavalue">author1-email-cc=</div><script language="javascript" type="text/javascript">document.write('<div class="metavalue">url='+location.href.replace(/</g, '%3C')+'</div>');</script>
 <!--Rating_Meta_END--><!-- Rating_Meta_END -->
 
 </div><!-- MAIN_COLUMN_END--><!-- RIGHT_COLUMN_BEGIN -->
 <div id="ibm-content-sidebar"><!-- RIGHT_COLUMN_CONTENT_BEGIN --> 
-<div class="ibm-container"><h2>����</h2><div class="ibm-container-body"><IMG alt="" src="index_files/c-2.gif" width=1 height=1><ul class="ibm-bullet-list"><li><a class="ibm-feature-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#major1">ʾ��</a></li><li><a class="ibm-feature-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#major2">�̼߳�İ�ȫЭ��</a></li><li><a class="ibm-feature-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#major3">С��</a></li><li><a class="ibm-feature-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#download">����</a></li><li><a class="ibm-feature-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#resources">�ο����� </a></li><li><a class="ibm-feature-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#author">��������</a></li><li><a class="ibm-feature-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#icomments">����</a></li></ul></div></div><!-- Dig_Deeper --><!-- High_Visibility_Offer --><!-- Special_Offers --><!-- RIGHT_COLUMN_CONTENT_END -->
+<div class="ibm-container"><h2>内容</h2><div class="ibm-container-body"><IMG alt="" src="index_files/c-2.gif" width=1 height=1><ul class="ibm-bullet-list"><li><a class="ibm-feature-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#major1">示例</a></li><li><a class="ibm-feature-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#major2">线程间的安全协作</a></li><li><a class="ibm-feature-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#major3">小结</a></li><li><a class="ibm-feature-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#download">下载</a></li><li><a class="ibm-feature-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#resources">参考资料 </a></li><li><a class="ibm-feature-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#author">关于作者</a></li><li><a class="ibm-feature-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#icomments">建议</a></li></ul></div></div><!-- Dig_Deeper --><!-- High_Visibility_Offer --><!-- Special_Offers --><!-- RIGHT_COLUMN_CONTENT_END -->
 
 </div><!-- RIGHT_COLUMN_END --><!-- CONTENT_BODY_END -->
 </div>
@@ -936,11 +936,11 @@ dwc.viperLang = 'zh';
 <div id="ibm-page-tools-dw">
 	<div id="dw-footer-top-row">
 		<ul id="dw-foot-options">
-			<li id="dw-print"><a class="ibm-print-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#">��ӡ��ҳ��</a></li>
+			<li id="dw-print"><a class="ibm-print-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#">打印此页面</a></li>
 		</ul>
 		<ul id="ibm-foot-options-dw">
-			<li id="dw-foot-0" class="dw-foot-0-cn"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#">������ҳ��</a></li>
-			<li id="dw-foot-1" class="dw-foot-1-cn"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#">��ע developerWorks</a></li>
+			<li id="dw-foot-0" class="dw-foot-0-cn"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#">分享此页面</a></li>
+			<li id="dw-foot-1" class="dw-foot-1-cn"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#">关注 developerWorks</a></li>
 		</ul>
 	</div><!-- TOP ROW SLIDER -->
     <div id="dw-page-tools-menu">    
@@ -948,32 +948,32 @@ dwc.viperLang = 'zh';
             <div class="ibm-ribbon-section-dw"><!-- Share this page -->			
                 <div class="dw-footer-columns">
                     <div class="dw-footer-col-4-1">
-                    	<h2>������ҳ�棺</h2>                            
+                    	<h2>分享此页面：</h2>                            
 						<ul class="ibm-link-list"><!--<li><a id="dw-foot-0-0" class="dwcn-sina-link"
 						        href="#"
 						        onClick="javascript:location.href='http://hits.sinajs.cn/A1/weiboshare.html?&amp;appkey=&amp;title='+escape(document.title)+'&amp;url='+escape(location.href)'+'&amp;pic=&ralateUid&amp;language=zh_cn;
-						        ">����΢��</a></li> -->
-						   <li><A onclick="javascript:location.href='http://service.weibo.com/share/share.php?title='+encodeURIComponent(document.title)+'&amp;url='+escape(location.href)+'&amp;language=zh_cn'&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9; ;&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;
+						        ">新浪微博</a></li> -->
+						   <li><A onclick="javascript:location.href='http://service.weibo.com/share/share.php?title='+encodeURIComponent(document.title)+'&amp;url='+escape(location.href)+'&amp;language=zh_cn'&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9; ;&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;
 						        "
 						        id=dw-foot-0-0
-						        class =dwcn-sina-link href="#" >����΢��</A> 
-						   <li><A onclick="javascript:location.href='http://share.renren.com/share/buttonshare?title='+encodeURIComponent(document.title)+'&amp;link='+escape(location.href);&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;
-						        " class=dwcn-renren-link href="#" >������</A> 
-						    <li><A onclick="javascript:location.href='http://v.t.qq.com/share/share.php?title='+encodeURIComponent(document.title)+'&amp;url='+escape(location.href);&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;
-						        " class=dwcn-tencent-link href="#" >��Ѷ΢��</A></li> 
+						        class =dwcn-sina-link href="#" >新浪微博</A> 
+						   <li><A onclick="javascript:location.href='http://share.renren.com/share/buttonshare?title='+encodeURIComponent(document.title)+'&amp;link='+escape(location.href);&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;
+						        " class=dwcn-renren-link href="#" >人人网</A> 
+						    <li><A onclick="javascript:location.href='http://v.t.qq.com/share/share.php?title='+encodeURIComponent(document.title)+'&amp;url='+escape(location.href);&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;
+						        " class=dwcn-tencent-link href="#" >腾讯微博</A></li> 
 						   				
 						</ul>
                     </div>
                     <div class="dw-footer-col-4-2">
 						<ul class="ibm-link-list">
-						    <li><A onclick="javascript:location.href='http://t.sohu.com/third/post.jsp?title='+encodeURIComponent(document.title)+'&amp;link='+escape(location.href);&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;
+						    <li><A onclick="javascript:location.href='http://t.sohu.com/third/post.jsp?title='+encodeURIComponent(document.title)+'&amp;link='+escape(location.href);&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;
 						        "
 						        class=dwcn-sohu-link
-						        href="#" >�Ѻ�΢��</A>
+						        href="#" >搜狐微博</A>
 						    
-						    <li><A onclick="javascript:location.href='http://t.163.com/article/user/checkLogin.do?info='+encodeURIComponent(document.title)+&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;
-						        ''&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;
-						        +escape(location.href);&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9; " class=dwcn-netease-link href="#" >����΢��</A>
+						    <li><A onclick="javascript:location.href='http://t.163.com/article/user/checkLogin.do?info='+encodeURIComponent(document.title)+&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;
+						        ''&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;
+						        +escape(location.href);&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9; " class=dwcn-netease-link href="#" >网易微博</A>
 						    <li><a class="ibm-facebook-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#">Facebook</a></li>
 						</ul>
                 </div>
@@ -988,27 +988,27 @@ dwc.viperLang = 'zh';
                    <div class="dw-footer-col-4-4">
 						<ul class="ibm-link-list">
 						 <li><a class="ibm-digg-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#">Digg</a>   
-						 <li><a class="ibm-email-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#">���ʹ�ҳ��</a></li>
+						 <li><a class="ibm-email-link" href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#">发送此页面</a></li>
 						</ul>
                     </div>
                     <div class="dw-footer-close">
 						<ul>
-							<li><div class="dw-footer-close-share"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#"><IMG alt="�ر� [x]" src ="index_files/c-1.gif" width=20 height=10 ></a></div></li>
+							<li><div class="dw-footer-close-share"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#"><IMG alt="关闭 [x]" src ="index_files/c-1.gif" width=20 height=10 ></a></div></li>
 						</ul>
                     </div>
                 </div><!-- Follow developerWorks -->
                 <div class="dw-footer-columns">
                     <div class="dw-footer-col-1-1 dw-footer-col-1-1-cn">
-                    	<h2>��ע developerWorks �й���վ��</h2>
+                    	<h2>关注 developerWorks 中国网站：</h2>
 						<ul class="ibm-link-list"><!--<li><a id="dw-foot-1-0" class="ibm-twitter-link" href="http://www.twitter.com/dwchina">Twitter</a></li>-->
 						    <li><a id="dw-foot-1-0" class="dwcn-sina-link"
 						        
-  href="http://weibo.com/ibmdw/">����΢��</a></li>
+  href="http://weibo.com/ibmdw/">新浪微博</a></li>
 						</ul>
                     </div>
                     <div class="dw-footer-close">
 						<ul>
-							<li><div class="dw-footer-close-follow-cn"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#"><IMG alt="�ر� [x]" src ="index_files/c-1.gif" width=20 height=10 ></a></div></li>
+							<li><div class="dw-footer-close-follow-cn"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-rtsecurity/#"><IMG alt="关闭 [x]" src ="index_files/c-1.gif" width=20 height=10 ></a></div></li>
 						</ul>
                     </div>
                 </div>
@@ -1021,32 +1021,32 @@ dwc.viperLang = 'zh';
 	<div class="dw-footer-columns">
 		<div class="dw-footer-col-6-1">
 			<ul><!--<li><a href="http://www.ibm.com/developerworks/aboutdw/">About</a></li>-->
-				<li><A href="https://www.ibm.com/developerworks/secure/feedback.jsp?domain=dwchina">����</A>
-				<li><a href="http://www.ibm.com/developerworks/cn/author/">��ϵ�༭</a>
-				<li><A href="https://www.ibm.com/developerworks/secure/myideas2.jsp?domain=dwchina&amp;start=true" >�ύ����</A>
-				<li><a href="http://www.ibm.com/developerworks/cn/sitemap/">��վ����</a></li>
+				<li><A href="https://www.ibm.com/developerworks/secure/feedback.jsp?domain=dwchina">帮助</A>
+				<li><a href="http://www.ibm.com/developerworks/cn/author/">联系编辑</a>
+				<li><A href="https://www.ibm.com/developerworks/secure/myideas2.jsp?domain=dwchina&amp;start=true" >提交内容</A>
+				<li><a href="http://www.ibm.com/developerworks/cn/sitemap/">网站导航</a></li>
 			</ul>
 		</div>
 		<div class="dw-footer-col-6-2">
 			<ul>
-				<li><a href="http://www.ibm.com/developerworks/cn/rss/">����Դ</a>
+				<li><a href="http://www.ibm.com/developerworks/cn/rss/">订阅源</a>
 				<li><a href="http://www.ibm.com/vrm/newsletter/10104?S_TACT=105AGX52&amp;S_CMP=dwcntop" 
- >�������ÿ��ʱ��ͨѶ</a></li>
+ >在线浏览每周时事通讯</a></li>
 			</ul>
 		</div>
 		<div class="dw-footer-col-6-3">
 			<ul>
-				<li><A href="https://www.ibm.com/developerworks/community/report?lang=zh">��������</A>
-				<li><A href="https://www.ibm.com/developerworks/community/terms?lang=zh">ʹ������</A>
-				<li><a href="http://www.ibm.com/privacy/cn/zh/">��˽��Լ</a>
-				<li><a href="http://www.ibm.com/ibm/accessibility/cn/">�������</a></li>
+				<li><A href="https://www.ibm.com/developerworks/community/report?lang=zh">报告滥用</A>
+				<li><A href="https://www.ibm.com/developerworks/community/terms?lang=zh">使用条款</A>
+				<li><a href="http://www.ibm.com/privacy/cn/zh/">隐私条约</a>
+				<li><a href="http://www.ibm.com/ibm/accessibility/cn/">浏览辅助</a></li>
 			</ul>
 		</div>
 		<div class="dw-footer-col-6-4-cn">
 			<ul><!-- lk v17 updated link -->			    
-				<li><a href="http://www.ibm.com/developerworks/cn/academic/">IBM ����ѧԺ���������ƻ�</a>
-				<li><a href="http://www.ibm.com/developerworks/cn/gep/">IBM ��ҵ��ҵȫ����ּƻ�</a>
-				<li><a href="http://www.ibm.com/partnerworld/isv/">ISV ��Դ (Ӣ��)</a></li>
+				<li><a href="http://www.ibm.com/developerworks/cn/academic/">IBM 教育学院教育培养计划</a>
+				<li><a href="http://www.ibm.com/developerworks/cn/gep/">IBM 创业企业全球扶持计划</a>
+				<li><a href="http://www.ibm.com/partnerworld/isv/">ISV 资源 (英语)</a></li>
 			</ul>
 		</div>
 		<div class="dw-footer-col-6-5">
@@ -1106,6 +1106,8 @@ dwc.viperLang = 'zh';
 <div id="ibm-metrics">
 <script src="index_files/stats.js" type="text/javascript">//</script>
 </div>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
 
 </body>
 </html>

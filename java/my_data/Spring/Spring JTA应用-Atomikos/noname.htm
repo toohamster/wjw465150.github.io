@@ -1,6 +1,6 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 
-<html dir="ltr" xml:lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml"><head><title>Spring JTAÓ¦ÓÃ-Atomikos</title><link 
+<html dir="ltr" xml:lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml"><head><title>Spring JTAåº”ç”¨-Atomikos</title><link 
 href="favicon.ico" type=image/x-icon rel="shortcut icon"><link 
 title=tom.duan href="rss" type=application/rss+xml rel=alternate><link 
 media=screen href="blog.css_1248770300" 
@@ -61,7 +61,7 @@ type=text/css rel=stylesheet>
 	COLOR: #c00000
 }
 </style>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 
 <body>
@@ -73,245 +73,245 @@ type=text/css rel=stylesheet>
 <div id=main>
 
 <div class=blog_main><!--StartFragment-->
-<div class=blog_title><h3 class="" title=""><a href="http://tom-duan.javaeye.com/blog/147599">Spring JTAÓ¦ÓÃJOTM &amp; Atomikos III 
-Atomikos</a></h3><strong>¹Ø¼ü×Ö: jta jotm atomikos</strong> </div>
+<div class=blog_title><h3 title="" ><a href="http://tom-duan.javaeye.com/blog/147599">Spring JTAåº”ç”¨JOTM &amp; Atomikos III 
+Atomikos</a></h3><strong>å…³é”®å­—: jta jotm atomikos</strong> </div>
 <div 
-class=blog_content>Ç°Ãæ¼òµ¥½éÉÜÁËJOTMÈçºÎÔÚSpringÖĞÅäÖÃ£¬²¢ÈçºÎÊ¹ÓÃËüµÄJTAÊÂÎñ£¬±¾½Ú½«½éÉÜAtomikosÈçºÎÓëSpring¼¯³É£¬²¢Ê¹ÓÃËüµÄJTAÊÂÎñ¡£ 
-<br><br>Atomikos,ÊÇÒ»¸ö»ùÓÚJavaµÄ¿ªÔ´ÊÂÎñ¹ÜÀíÆ÷£¬Ìá¹©ÁËÊÂÎñ¹ÜÀíºÍÁ¬½Ó³Ø£¬²»ĞèÒªÓ¦ÓÃ·şÎñÆ÷Ö§³Ö£¬Ö§³ÖJDBCºÍJMSÊÂÎñ£¬ÄÜÌá¹©¶ÔSpring£¬HibernateµÄ¼¯³É£¬ÓĞĞËÈ¤¶àÁË½âµÄ¿ÉÒÔÖ±½Ó²Î¿¼ËµÃ÷ÎÄµ±£¬ÓĞÏêÏ¸µÄ½éÉÜºÍÊ¹ÓÃËµÃ÷¡£ 
-<br><br>Atomikos¿ÉÒÔµ½http://www.atomikos.com/products.html#ateÏÂÔØ,×îĞÂ°æ±¾ÊÇ3.2.0 
-<br><br>Ê×ÏÈ,ÈÔÈ»ÊÇÒ»¸öÏà¹ØµÄÅäÖÃÎÄ¼ş£¬ÓÃÀ´ÉèÖÃÏà¹ØµÄ»·¾³,´ò¿ª½âÑ¹ËõºóAtomikos¸ùÄ¿Â¼,¿½±´jta.propertiesµ½classpathÖĞ£¬²¢ĞŞ¸ÄÎªÈçÏÂÄÚÈİ 
+class=blog_content>å‰é¢ç®€å•ä»‹ç»äº†JOTMå¦‚ä½•åœ¨Springä¸­é…ç½®ï¼Œå¹¶å¦‚ä½•ä½¿ç”¨å®ƒçš„JTAäº‹åŠ¡ï¼Œæœ¬èŠ‚å°†ä»‹ç»Atomikoså¦‚ä½•ä¸Springé›†æˆï¼Œå¹¶ä½¿ç”¨å®ƒçš„JTAäº‹åŠ¡ã€‚ 
+<br><br>Atomikos,æ˜¯ä¸€ä¸ªåŸºäºJavaçš„å¼€æºäº‹åŠ¡ç®¡ç†å™¨ï¼Œæä¾›äº†äº‹åŠ¡ç®¡ç†å’Œè¿æ¥æ± ï¼Œä¸éœ€è¦åº”ç”¨æœåŠ¡å™¨æ”¯æŒï¼Œæ”¯æŒJDBCå’ŒJMSäº‹åŠ¡ï¼Œèƒ½æä¾›å¯¹Springï¼ŒHibernateçš„é›†æˆï¼Œæœ‰å…´è¶£å¤šäº†è§£çš„å¯ä»¥ç›´æ¥å‚è€ƒè¯´æ˜æ–‡å½“ï¼Œæœ‰è¯¦ç»†çš„ä»‹ç»å’Œä½¿ç”¨è¯´æ˜ã€‚ 
+<br><br>Atomikoså¯ä»¥åˆ°http://www.atomikos.com/products.html#ateä¸‹è½½,æœ€æ–°ç‰ˆæœ¬æ˜¯3.2.0 
+<br><br>é¦–å…ˆ,ä»ç„¶æ˜¯ä¸€ä¸ªç›¸å…³çš„é…ç½®æ–‡ä»¶ï¼Œç”¨æ¥è®¾ç½®ç›¸å…³çš„ç¯å¢ƒ,æ‰“å¼€è§£å‹ç¼©åAtomikosæ ¹ç›®å½•,æ‹·è´jta.propertiesåˆ°classpathä¸­ï¼Œå¹¶ä¿®æ”¹ä¸ºå¦‚ä¸‹å†…å®¹ 
 <br>jta.properties <br>
 <div class=dp-highlighter>
 <div class=bar>
-<div class=tools>Java´úÂë <a title=¸´ÖÆ´úÂë 
+<div class=tools>Javaä»£ç  <a title=å¤åˆ¶ä»£ç  
 onClick="dp.sh.Toolbar.CopyToClipboard(this);return false;" 
-href="http://tom-duan.javaeye.com/blog/147599#"><img alt=¸´ÖÆ´úÂë 
+href="http://tom-duan.javaeye.com/blog/147599#"><IMG alt=å¤åˆ¶ä»£ç  
 src="icon_copy.gif"></a></div></div>
 <ol class=dp-j>
 <li><span><span>com.atomikos.icatch.service=com.atomikos.icatch.standalone.UserTransactionServiceFactory 
-&nbsp;&nbsp;</span></span></li>
-<li><span>com.atomikos.icatch.console_file_name&nbsp;=&nbsp;tm.out &nbsp;&nbsp;</span></li>
-<li><span>com.atomikos.icatch.log_base_name&nbsp;=&nbsp;tmlog &nbsp;&nbsp;</span></li>
+&nbsp;&nbsp;</span></span>
+<li><span>com.atomikos.icatch.console_file_name&nbsp;=&nbsp;tm.out &nbsp;&nbsp;</span>
+<li><span>com.atomikos.icatch.log_base_name&nbsp;=&nbsp;tmlog &nbsp;&nbsp;</span>
 <li><span>com.atomikos.icatch.tm_unique_name&nbsp;=&nbsp;com.atomikos.spring.jdbc.tm 
-&nbsp;&nbsp;</span></li>
+&nbsp;&nbsp;</span>
 <li><span>com.atomikos.icatch.console_log_level&nbsp;=&nbsp;INFO&nbsp;&nbsp;&nbsp;</span></li></ol></div><pre class=java style="DISPLAY: none" name="code">com.atomikos.icatch.service=com.atomikos.icatch.standalone.UserTransactionServiceFactory
 com.atomikos.icatch.console_file_name = tm.out
 com.atomikos.icatch.log_base_name = tmlog
 com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm
 com.atomikos.icatch.console_log_level = INFO 
-</pre><br><br>Ëæºó£¬ÊÇSpringÉÏÏÂÎÄÅäÖÃ£¬½¨Á¢Ò»¸öÃûÎªApplicationContext-atomikos.xmlµÄSpringÉÏÏÂÎÄ 
+</pre><br><br>éšåï¼Œæ˜¯Springä¸Šä¸‹æ–‡é…ç½®ï¼Œå»ºç«‹ä¸€ä¸ªåä¸ºApplicationContext-atomikos.xmlçš„Springä¸Šä¸‹æ–‡ 
 <br><br>ApplicationContext-atomikos.xml <br>
 <div class=dp-highlighter>
 <div class=bar>
-<div class=tools>Java´úÂë <a title=¸´ÖÆ´úÂë 
+<div class=tools>Javaä»£ç  <a title=å¤åˆ¶ä»£ç  
 onClick="dp.sh.Toolbar.CopyToClipboard(this);return false;" 
-href="http://tom-duan.javaeye.com/blog/147599#"><img alt=¸´ÖÆ´úÂë 
+href="http://tom-duan.javaeye.com/blog/147599#"><IMG alt=å¤åˆ¶ä»£ç  
 src="icon_copy.gif"></a></div></div>
 <ol class=dp-j>
 <li><span><span>&lt;?xml&nbsp;version=</span><span 
 class=string>"1.0"</span><span>&nbsp;encoding=</span><span 
-class=string>"UTF-8"</span><span>?&gt; &nbsp;&nbsp;</span></span></li>
+class=string>"UTF-8"</span><span>?&gt; &nbsp;&nbsp;</span></span>
 <li><span>&lt;beans&nbsp;xmlns=</span><span 
-class=string>"http://www.springframework.org/schema/beans"</span><span>&nbsp;&nbsp;</span></li>
+class=string>"http://www.springframework.org/schema/beans"</span><span>&nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;xmlns:xsi=</span><span 
-class=string>"http://www.w3.org/2001/XMLSchema-instance"</span><span>&nbsp;&nbsp;</span></li>
+class=string>"http://www.w3.org/2001/XMLSchema-instance"</span><span>&nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;xsi:schemaLocation=</span><span 
 class=string>"http://www.springframework.org/schema/beans&nbsp;http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"</span><span>&gt; 
-&nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;XA&nbsp;Datasource&nbsp;--&gt; &nbsp;&nbsp;</span></li>
+&nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;XA&nbsp;Datasource&nbsp;--&gt; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;id=</span><span 
 class=string>"datasource1"</span><span>&nbsp;</span><span 
 class=keyword>class</span><span>=</span><span 
 class=string>"com.atomikos.jdbc.SimpleDataSourceBean"</span><span>&nbsp;init-method=</span><span 
 class=string>"init"</span><span>&nbsp;destroy-method=</span><span 
-class=string>"close"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=string>"close"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
-class=string>"uniqueResourceName"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;mysql/main&lt;/value&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=string>"uniqueResourceName"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;mysql/main&lt;/value&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
-class=string>"xaDataSourceClassName"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=string>"xaDataSourceClassName"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;com.mysql.jdbc.jdbc2.optional.MysqlXADataSource&lt;/value&gt;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+&nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
-class=string>"xaDataSourceProperties"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=string>"xaDataSourceProperties"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;URL=jdbc:mysql:</span><span 
 class=comment>//localhost:3306/test;user=root;password=admin&lt;/value&gt;&nbsp;&nbsp;&nbsp; 
-</span><span>&nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+</span><span>&nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
-class=string>"exclusiveConnectionMode"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=string>"exclusiveConnectionMode"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;</span><span 
-class=keyword>true</span><span>&lt;/value&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=keyword>true</span><span>&lt;/value&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
-class=string>"connectionPoolSize"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=string>"connectionPoolSize"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;</span><span 
-class=number>3</span><span>&lt;/value&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=number>3</span><span>&lt;/value&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
-class=string>"validatingQuery"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=string>"validatingQuery"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;SELECT&nbsp;</span><span 
-class=number>1</span><span>&lt;/value&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=number>1</span><span>&lt;/value&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;id=</span><span 
 class=string>"datasource2"</span><span>&nbsp;</span><span 
 class=keyword>class</span><span>=</span><span 
 class=string>"com.atomikos.jdbc.SimpleDataSourceBean"</span><span>&nbsp;init-method=</span><span 
 class=string>"init"</span><span>&nbsp;destroy-method=</span><span 
-class=string>"close"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=string>"close"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
-class=string>"uniqueResourceName"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;mysql/news&lt;/value&gt; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=string>"uniqueResourceName"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;mysql/news&lt;/value&gt; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
-class=string>"xaDataSourceClassName"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=string>"xaDataSourceClassName"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;com.mysql.jdbc.jdbc2.optional.MysqlXADataSource&lt;/value&gt;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt; &nbsp;&nbsp;</span></li>
+&nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
-class=string>"xaDataSourceProperties"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=string>"xaDataSourceProperties"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;URL=jdbc:mysql:</span><span 
 class=comment>//localhost:3306/test2;user=root;password=admin&lt;/value&gt;&nbsp;&nbsp;&nbsp; 
-</span><span>&nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+</span><span>&nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
-class=string>"exclusiveConnectionMode"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=string>"exclusiveConnectionMode"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;</span><span 
-class=keyword>true</span><span>&lt;/value&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=keyword>true</span><span>&lt;/value&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
-class=string>"connectionPoolSize"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=string>"connectionPoolSize"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;</span><span 
-class=number>3</span><span>&lt;/value&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=number>3</span><span>&lt;/value&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
-class=string>"validatingQuery"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=string>"validatingQuery"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;SELECT&nbsp;</span><span 
-class=number>1</span><span>&lt;/value&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=number>1</span><span>&lt;/value&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;id=</span><span 
 class=string>"template1"</span><span>&nbsp;</span><span 
 class=keyword>class</span><span>=</span><span 
 class=string>"org.springframework.jdbc.core.JdbcTemplate"</span><span>&gt; 
-&nbsp;&nbsp;</span></li>
+&nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
 class=string>"dataSource"</span><span>&nbsp;ref=</span><span 
-class=string>"datasource1"</span><span>&nbsp;/&gt; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=string>"datasource1"</span><span>&nbsp;/&gt; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;id=</span><span 
 class=string>"template2"</span><span>&nbsp;</span><span 
 class=keyword>class</span><span>=</span><span 
 class=string>"org.springframework.jdbc.core.JdbcTemplate"</span><span>&gt; 
-&nbsp;&nbsp;</span></li>
+&nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
 class=string>"dataSource"</span><span>&nbsp;ref=</span><span 
-class=string>"datasource2"</span><span>&nbsp;/&gt; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=string>"datasource2"</span><span>&nbsp;/&gt; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;id=</span><span 
 class=string>"atomikosTransactionManager"</span><span>&nbsp;</span><span 
 class=keyword>class</span><span>=</span><span 
 class=string>"com.atomikos.icatch.jta.UserTransactionManager"</span><span>&nbsp;init-method=</span><span 
 class=string>"init"</span><span>&nbsp;destroy-method=</span><span 
-class=string>"close"</span><span>&gt; &nbsp;&nbsp;</span></li>
+class=string>"close"</span><span>&gt; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
 class=string>"forceShutdown"</span><span>&gt;&lt;value&gt;</span><span 
 class=keyword>true</span><span>&lt;/value&gt;&lt;/property&gt; 
-&nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+&nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;id=</span><span 
 class=string>"atomikosUserTransaction"</span><span>&nbsp;</span><span 
 class=keyword>class</span><span>=</span><span 
 class=string>"com.atomikos.icatch.jta.UserTransactionImp"</span><span>&gt; 
-&nbsp;&nbsp;</span></li>
+&nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
 class=string>"transactionTimeout"</span><span>&nbsp;value=</span><span 
-class=string>"300"</span><span>/&gt;&nbsp; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;</span></li>
+class=string>"300"</span><span>/&gt;&nbsp; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;id=</span><span 
 class=string>"springTransactionManager"</span><span>&nbsp;</span><span 
 class=keyword>class</span><span>=</span><span 
 class=string>"org.springframework.transaction.jta.JtaTransactionManager"</span><span>&gt; 
-&nbsp;&nbsp;</span></li>
+&nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
 class=string>"transactionManager"</span><span>&gt;&lt;ref&nbsp;bean=</span><span 
 class=string>"atomikosTransactionManager"</span><span>&nbsp;&nbsp;/&gt;&lt;/property&gt; 
-&nbsp;&nbsp;</span></li>
+&nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
 class=string>"userTransaction"</span><span>&gt;&lt;ref&nbsp;bean=</span><span 
 class=string>"atomikosUserTransaction"</span><span>&nbsp;&nbsp;/&gt;&lt;/property&gt; 
-&nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+&nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;id=</span><span 
 class=string>"dao1"</span><span>&nbsp;</span><span 
 class=keyword>class</span><span>=</span><span 
-class=string>"com.xa.dao.UserDao1"</span><span>&gt; &nbsp;&nbsp;</span></li>
+class=string>"com.xa.dao.UserDao1"</span><span>&gt; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
-class=string>"jdbcTemplate"</span><span>&gt; &nbsp;&nbsp;</span></li>
+class=string>"jdbcTemplate"</span><span>&gt; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ref&nbsp;bean=</span><span 
-class=string>"template1"</span><span>&gt;&lt;/ref&gt; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=string>"template1"</span><span>&gt;&lt;/ref&gt; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;id=</span><span 
 class=string>"dao2"</span><span>&nbsp;</span><span 
 class=keyword>class</span><span>=</span><span 
-class=string>"com.xa.dao.UserDao2"</span><span>&gt; &nbsp;&nbsp;</span></li>
+class=string>"com.xa.dao.UserDao2"</span><span>&gt; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
-class=string>"jdbcTemplate"</span><span>&gt; &nbsp;&nbsp;</span></li>
+class=string>"jdbcTemplate"</span><span>&gt; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ref&nbsp;bean=</span><span 
-class=string>"template2"</span><span>&gt;&lt;/ref&gt; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;--&gt; &nbsp;&nbsp;</span></li>
+class=string>"template2"</span><span>&gt;&lt;/ref&gt; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;--&gt; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;id=</span><span 
 class=string>"userServiceTarget"</span><span>&nbsp;</span><span 
 class=keyword>class</span><span>=</span><span 
 class=string>"com.xa.service.UserServiceImpl"</span><span>&gt; 
-&nbsp;&nbsp;</span></li>
+&nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
 class=string>"dao1"</span><span>&nbsp;ref=</span><span 
-class=string>"dao1"</span><span>/&gt; &nbsp;&nbsp;</span></li>
+class=string>"dao1"</span><span>/&gt; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
 class=string>"dao2"</span><span>&nbsp;ref=</span><span 
-class=string>"dao2"</span><span>/&gt; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=string>"dao2"</span><span>/&gt; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;id=</span><span 
 class=string>"userTest"</span><span>&nbsp;</span><span 
 class=keyword>class</span><span>=</span><span 
 class=string>"org.springframework.transaction.interceptor.TransactionProxyFactoryBean"</span><span>&gt;&nbsp;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</span></li>
+&nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
-class=string>"transactionManager"</span><span>&gt; &nbsp;&nbsp;</span></li>
+class=string>"transactionManager"</span><span>&gt; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ref&nbsp;bean=</span><span 
-class=string>"springTransactionManager"</span><span>/&gt; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=string>"springTransactionManager"</span><span>/&gt; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
-class=string>"target"</span><span>&gt; &nbsp;&nbsp;</span></li>
+class=string>"target"</span><span>&gt; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ref&nbsp;bean=</span><span 
-class=string>"userServiceTarget"</span><span>/&gt; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt; &nbsp;&nbsp;</span></li>
+class=string>"userServiceTarget"</span><span>/&gt; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
 class=string>"transactionAttributes"</span><span>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;props&gt; &nbsp;&nbsp;</span></li>
+&nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;props&gt; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prop&nbsp;key=</span><span 
 class=string>"insert*"</span><span>&gt;PROPAGATION_REQUIRED,-Exception&lt;/prop&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-&nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/props&gt; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span></li>
+&nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/props&gt; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/property&gt; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span>
 <li><span>&lt;/beans&gt;&nbsp;&nbsp;</span></li></ol></div><pre class=java style="DISPLAY: none" name="code">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -321,11 +321,11 @@ class=string>"insert*"</span><span>&gt;PROPAGATION_REQUIRED,-Exception&lt;/prop&
 		&lt;property name="uniqueResourceName"&gt;   
 			&lt;value&gt;mysql/main&lt;/value&gt;   
 		&lt;/property&gt;   
-		&lt;property name="xaDataSourceClassName"&gt;   
-			&lt;value&gt;com.mysql.jdbc.jdbc2.optional.MysqlXADataSource&lt;/value&gt;   
-		&lt;/property&gt;   
-		&lt;property name="xaDataSourceProperties"&gt;   
-			&lt;value&gt;URL=jdbc:mysql://localhost:3306/test;user=root;password=admin&lt;/value&gt;   
+		&lt;property name=   
+			   
+		"xaDataSourceClassName"&gt;   
+			&lt;value&gt;com.mysql.jdbc.jdbc2.optional.MysqlXADataSource&lt;/value&gt; &lt;/property&gt;&lt;property   
+			name="xaDataSourceProperties"&gt;&lt;value&gt;URL=jdbc:mysql://localhost:3306/test;user=root;password=admin&lt;/value&gt;   
 		&lt;/property&gt;   
 		&lt;property name="exclusiveConnectionMode"&gt;   
 			&lt;value&gt;true&lt;/value&gt;   
@@ -342,11 +342,11 @@ class=string>"insert*"</span><span>&gt;PROPAGATION_REQUIRED,-Exception&lt;/prop&
 		&lt;property name="uniqueResourceName"&gt;   
 			&lt;value&gt;mysql/news&lt;/value&gt;
 		&lt;/property&gt;   
-		&lt;property name="xaDataSourceClassName"&gt;   
-			&lt;value&gt;com.mysql.jdbc.jdbc2.optional.MysqlXADataSource&lt;/value&gt;   
-		&lt;/property&gt;
-		&lt;property name="xaDataSourceProperties"&gt;   
-			&lt;value&gt;URL=jdbc:mysql://localhost:3306/test2;user=root;password=admin&lt;/value&gt;   
+		&lt;property name=   
+			   
+		"xaDataSourceClassName"&gt;
+			&lt;value&gt;com.mysql.jdbc.jdbc2.optional.MysqlXADataSource&lt;/value&gt; &lt;/property&gt;&lt;property   
+			name="xaDataSourceProperties"&gt;&lt;value&gt;URL=jdbc:mysql://localhost:3306/test2;user=root;password=admin&lt;/value&gt;   
 		&lt;/property&gt;   
 		&lt;property name="exclusiveConnectionMode"&gt;   
 			&lt;value&gt;true&lt;/value&gt;   
@@ -411,42 +411,42 @@ class=string>"insert*"</span><span>&gt;PROPAGATION_REQUIRED,-Exception&lt;/prop&
 		&lt;/property&gt;
 	&lt;/bean&gt;
 &lt;/beans&gt;
-</pre><br><br>¿´ÉÏÏÂÎÄÖĞµÄ´úÂë£¬ºÜ´ó²¿·ÖºÍJOTMµÄÏàËÆ£¬atomikosÊ¹ÓÃcom.atomikos.jdbc.SimpleDataSourceBeanÀàÀ´´´½¨datasource 
-bean£¬ÕâÀïĞèÒªÌØ±ğ×¢Òâ <br>
+</pre><br><br>çœ‹ä¸Šä¸‹æ–‡ä¸­çš„ä»£ç ï¼Œå¾ˆå¤§éƒ¨åˆ†å’ŒJOTMçš„ç›¸ä¼¼ï¼Œatomikosä½¿ç”¨com.atomikos.jdbc.SimpleDataSourceBeanç±»æ¥åˆ›å»ºdatasource 
+beanï¼Œè¿™é‡Œéœ€è¦ç‰¹åˆ«æ³¨æ„ <br>
 <div class=dp-highlighter>
 <div class=bar>
-<div class=tools>Java´úÂë <a title=¸´ÖÆ´úÂë 
+<div class=tools>Javaä»£ç  <a title=å¤åˆ¶ä»£ç  
 onClick="dp.sh.Toolbar.CopyToClipboard(this);return false;" 
-href="http://tom-duan.javaeye.com/blog/147599#"><img alt=¸´ÖÆ´úÂë 
+href="http://tom-duan.javaeye.com/blog/147599#"><IMG alt=å¤åˆ¶ä»£ç  
 src="icon_copy.gif"></a></div></div>
 <ol class=dp-j>
 <li><span><span>&lt;property&nbsp;name=</span><span 
-class=string>"uniqueResourceName"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;mysql/main&lt;/value&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+class=string>"uniqueResourceName"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;mysql/main&lt;/value&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&lt;/property&gt;&nbsp;&nbsp;&nbsp;&nbsp;</span></li></ol></div><pre class=java style="DISPLAY: none" name="code">&lt;property name="uniqueResourceName"&gt;   
 	&lt;value&gt;mysql/main&lt;/value&gt;   
 &lt;/property&gt;  
 </pre><br><br>
 <div class=dp-highlighter>
 <div class=bar>
-<div class=tools>Java´úÂë <a title=¸´ÖÆ´úÂë 
+<div class=tools>Javaä»£ç  <a title=å¤åˆ¶ä»£ç  
 onClick="dp.sh.Toolbar.CopyToClipboard(this);return false;" 
-href="http://tom-duan.javaeye.com/blog/147599#"><img alt=¸´ÖÆ´úÂë 
+href="http://tom-duan.javaeye.com/blog/147599#"><IMG alt=å¤åˆ¶ä»£ç  
 src="icon_copy.gif"></a></div></div>
 <ol class=dp-j>
 <li><span><span>&lt;property&nbsp;name=</span><span 
-class=string>"uniqueResourceName"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;mysql/news&lt;/value&gt; &nbsp;&nbsp;</span></li>
+class=string>"uniqueResourceName"</span><span>&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;mysql/news&lt;/value&gt; &nbsp;&nbsp;</span>
 <li><span>&lt;/property&gt;&nbsp;&nbsp;</span></li></ol></div><pre class=java style="DISPLAY: none" name="code">&lt;property name="uniqueResourceName"&gt;   
 	&lt;value&gt;mysql/news&lt;/value&gt;
 &lt;/property&gt;
-</pre><br>ÉÏÃæµÄ´úÂëÎªÃ¿¸öDatasourceÅäÖÃÁËÒ»¸öÎ¨Ò»µÄÃû³Æ£¬Ãû³Æ²»ÔÊĞíÏàÍ¬£¬·ñÔò½«»áÊ¹ÓÃÍ¬Ò»¸ödatasource£¬¶ø²»»á³öÏÖÒì³£¡£ 
-<br><br>ÁíÍâÔÚÅäÖÃÎÄ¼şÖĞ¶¨ÒåÁËAtomikosµÄÊÂÎñ¹ÜÀíÆ÷£¬²¢ÔÚSpringµÄJtaTransactionManagerÖĞÒıÓÃ <br>
+</pre><br>ä¸Šé¢çš„ä»£ç ä¸ºæ¯ä¸ªDatasourceé…ç½®äº†ä¸€ä¸ªå”¯ä¸€çš„åç§°ï¼Œåç§°ä¸å…è®¸ç›¸åŒï¼Œå¦åˆ™å°†ä¼šä½¿ç”¨åŒä¸€ä¸ªdatasourceï¼Œè€Œä¸ä¼šå‡ºç°å¼‚å¸¸ã€‚ 
+<br><br>å¦å¤–åœ¨é…ç½®æ–‡ä»¶ä¸­å®šä¹‰äº†Atomikosçš„äº‹åŠ¡ç®¡ç†å™¨ï¼Œå¹¶åœ¨Springçš„JtaTransactionManagerä¸­å¼•ç”¨ <br>
 <div class=dp-highlighter>
 <div class=bar>
-<div class=tools>Java´úÂë <a title=¸´ÖÆ´úÂë 
+<div class=tools>Javaä»£ç  <a title=å¤åˆ¶ä»£ç  
 onClick="dp.sh.Toolbar.CopyToClipboard(this);return false;" 
-href="http://tom-duan.javaeye.com/blog/147599#"><img alt=¸´ÖÆ´úÂë 
+href="http://tom-duan.javaeye.com/blog/147599#"><IMG alt=å¤åˆ¶ä»£ç  
 src="icon_copy.gif"></a></div></div>
 <ol class=dp-j>
 <li><span><span>&lt;bean&nbsp;id=</span><span 
@@ -454,36 +454,36 @@ class=string>"atomikosTransactionManager"</span><span>&nbsp;</span><span
 class=keyword>class</span><span>=</span><span 
 class=string>"com.atomikos.icatch.jta.UserTransactionManager"</span><span>&nbsp;init-method=</span><span 
 class=string>"init"</span><span>&nbsp;destroy-method=</span><span 
-class=string>"close"</span><span>&gt; &nbsp;&nbsp;</span></span></li>
+class=string>"close"</span><span>&gt; &nbsp;&nbsp;</span></span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
 class=string>"forceShutdown"</span><span>&gt;&lt;value&gt;</span><span 
 class=keyword>true</span><span>&lt;/value&gt;&lt;/property&gt; 
-&nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+&nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;id=</span><span 
 class=string>"atomikosUserTransaction"</span><span>&nbsp;</span><span 
 class=keyword>class</span><span>=</span><span 
 class=string>"com.atomikos.icatch.jta.UserTransactionImp"</span><span>&gt; 
-&nbsp;&nbsp;</span></li>
+&nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
 class=string>"transactionTimeout"</span><span>&nbsp;value=</span><span 
-class=string>"300"</span><span>/&gt;&nbsp; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span></li>
-<li><span>&nbsp;&nbsp;</span></li>
+class=string>"300"</span><span>/&gt;&nbsp; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt; &nbsp;&nbsp;</span>
+<li><span>&nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;bean&nbsp;id=</span><span 
 class=string>"springTransactionManager"</span><span>&nbsp;</span><span 
 class=keyword>class</span><span>=</span><span 
 class=string>"org.springframework.transaction.jta.JtaTransactionManager"</span><span>&gt; 
-&nbsp;&nbsp;</span></li>
+&nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
 class=string>"transactionManager"</span><span>&gt;&lt;ref&nbsp;bean=</span><span 
 class=string>"atomikosTransactionManager"</span><span>&nbsp;&nbsp;/&gt;&lt;/property&gt; 
-&nbsp;&nbsp;</span></li>
+&nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property&nbsp;name=</span><span 
 class=string>"userTransaction"</span><span>&gt;&lt;ref&nbsp;bean=</span><span 
 class=string>"atomikosUserTransaction"</span><span>&nbsp;&nbsp;/&gt;&lt;/property&gt; 
-&nbsp;&nbsp;</span></li>
+&nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bean&gt;&nbsp;&nbsp;</span></li></ol></div><pre class=java style="DISPLAY: none" name="code">&lt;bean id="atomikosTransactionManager" class="com.atomikos.icatch.jta.UserTransactionManager" init-method="init" destroy-method="close"&gt;
 		&lt;property name="forceShutdown"&gt;&lt;value&gt;true&lt;/value&gt;&lt;/property&gt;
 	&lt;/bean&gt;
@@ -496,32 +496,34 @@ class=string>"atomikosUserTransaction"</span><span>&nbsp;&nbsp;/&gt;&lt;/propert
 		&lt;property name="transactionManager"&gt;&lt;ref bean="atomikosTransactionManager"  /&gt;&lt;/property&gt;
 		&lt;property name="userTransaction"&gt;&lt;ref bean="atomikosUserTransaction"  /&gt;&lt;/property&gt;
 	&lt;/bean&gt;
-</pre><br><br>ÆäËüµÄ´úÂëÃ»Ê²Ã´ÌØ±ğ£¬ºÍJOTMÅäÖÃ»ù±¾ÏàÍ¬£¬JdbcTemplate£¬DAO£¬Service£¬ÊÂÎñ´úÀíµÈµÈ.... 
-<br><br>ÈÔÈ»Ê¹ÓÃTestXa.java£¬ĞŞ¸Ä³ÉÒıÓÃApplicationContext-atomikos.xmlµÄÉÏÏÂÎÄÅäÖÃ <br>
+</pre><br><br>å…¶å®ƒçš„ä»£ç æ²¡ä»€ä¹ˆç‰¹åˆ«ï¼Œå’ŒJOTMé…ç½®åŸºæœ¬ç›¸åŒï¼ŒJdbcTemplateï¼ŒDAOï¼ŒServiceï¼Œäº‹åŠ¡ä»£ç†ç­‰ç­‰.... 
+<br><br>ä»ç„¶ä½¿ç”¨TestXa.javaï¼Œä¿®æ”¹æˆå¼•ç”¨ApplicationContext-atomikos.xmlçš„ä¸Šä¸‹æ–‡é…ç½® <br>
 <div class=dp-highlighter>
 <div class=bar>
-<div class=tools>Java´úÂë <a title=¸´ÖÆ´úÂë 
+<div class=tools>Javaä»£ç  <a title=å¤åˆ¶ä»£ç  
 onClick="dp.sh.Toolbar.CopyToClipboard(this);return false;" 
-href="http://tom-duan.javaeye.com/blog/147599#"><img alt=¸´ÖÆ´úÂë 
+href="http://tom-duan.javaeye.com/blog/147599#"><IMG alt=å¤åˆ¶ä»£ç  
 src="icon_copy.gif"></a></div></div>
 <ol class=dp-j>
 <li><span><span 
 class=keyword>protected</span><span>&nbsp;String[]&nbsp;getConfigLocations()&nbsp;{ 
-&nbsp;&nbsp;</span></span></li>
+&nbsp;&nbsp;</span></span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span 
 class=comment>//return&nbsp;new&nbsp;String[]&nbsp;{&nbsp;"classpath:ApplicationContext-jotm.xml"&nbsp;}; 
-</span><span>&nbsp;&nbsp;</span></li>
+</span><span>&nbsp;&nbsp;</span>
 <li><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=keyword>return</span><span>&nbsp;</span><span 
 class=keyword>new</span><span>&nbsp;String[]&nbsp;{&nbsp;</span><span 
 class=string>"classpath:ApplicationContext-atomikos.xml"</span><span>&nbsp;}; 
-&nbsp;&nbsp;</span></li>
+&nbsp;&nbsp;</span>
 <li><span>}&nbsp;&nbsp;</span></li></ol></div><pre class=java style="DISPLAY: none" name="code">protected String[] getConfigLocations() {
 	//return new String[] { "classpath:ApplicationContext-jotm.xml" };
 	return new String[] { "classpath:ApplicationContext-atomikos.xml" };
 }
-</pre><br><br>ÔËĞĞtest£¬È»ºó²é¿´Êı¾İ¿â×´Ì¬£¬ <br>È»ºóĞŞ¸Ä·½·¨²ÎÊıÊ¹Æä²»Î¥·´Êı¾İ¿âÔ¼Êø£¬ÔÙÔËĞĞTest¹Û²ìÊı¾İ¿â £º£©¡£ <br></div><!--EndFragment--></div>
+</pre><br><br>è¿è¡Œtestï¼Œç„¶åæŸ¥çœ‹æ•°æ®åº“çŠ¶æ€ï¼Œ <br>ç„¶åä¿®æ”¹æ–¹æ³•å‚æ•°ä½¿å…¶ä¸è¿åæ•°æ®åº“çº¦æŸï¼Œå†è¿è¡ŒTestè§‚å¯Ÿæ•°æ®åº“ ï¼šï¼‰ã€‚ <br></div><!--EndFragment--></div>
 </div>
 </div>
 </div>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
 </body>
 </html>

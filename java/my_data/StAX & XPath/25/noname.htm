@@ -1,10 +1,11 @@
-<!-- saved from url=https://www.ibm.com/developerworks/cn/xml/x-xpathjava/ -->
+﻿<!-- saved from url=https://www.ibm.com/developerworks/cn/xml/x-xpathjava/ -->
 <script>
 window.onerror = new Function("return(false);")
 </script><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 
 <HTML lang=zh-CN xml:lang="zh-CN" 
-xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>�� Java ƽ̨���� XPath</TITLE><!-- s-header-meta  for china --><LINK 
+xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>java处理XPath的一个实例</title><!-- s-header-meta  for china --><LINK 
 href="http://purl.org/DC/elements/1.0/" rel=schema.DC><LINK 
 href="favicon.ico" rel="SHORTCUT ICON"><!-- 5.8 0421 egd: Added IBM.Special.Purpose meta tag and the meta tag to suppress the WI login in the masthead --><!-- STYLESHEETS/SCRIPTS --><!-- for tables --><LINK 
 media=screen,print href="table.css" type=text/css 
@@ -44,7 +45,7 @@ type=text/javascript></SCRIPT>
 <SCRIPT language=javascript src="searchcount.js" 
 type=text/javascript></SCRIPT>
 <!--END RESERVED FOR FUTURE USE INCLUDE FILES-->
-<SCRIPT language=JavaScript type=text/javascript>var emailAbstract = "XPath ʹ�� XML �ĵ���ѡ��Ԫ�ء����Ժ��ı���ú����ס�ѧϰ��δ� Java ������� XPaths����ʹ�÷��صĽڵ㡣"; </SCRIPT>
+<SCRIPT language=JavaScript type=text/javascript>var emailAbstract = "XPath 使在 XML 文档中选择元素、属性和文本变得很容易。学习如何从 Java 编程评估 XPaths，并使用返回的节点。"; </SCRIPT>
 </HEAD>
 
 <BODY>
@@ -63,14 +64,14 @@ type=text/javascript></SCRIPT>
 
 <TR vAlign=top>
 
-<TD width="100%"><!--StartFragment--><P><A name=N103B5><SPAN class=atitle>����������</SPAN></A></P>
-<P>����� XPath 
-����Ľ��֮�󣬾Ϳ��ԶԽ�����д����ˡ���������ô�������С����磬������ֻ���ڽ���н��е����������Ǵ�ӡ��������Ȼ�������Խ��и��Ӹ��ӵĴ�����</P>
-<P><A name=N103BE><SPAN class=smalltitle>����ڵ��ϵ�һ���ǳ��򵥵ĵ���</SPAN></A></P>
-<P>ʵ���ϣ�<CODE>NodeList</CODE> ��ÿ����Ա����һ�� DOM 
-<CODE>Node</CODE>��<CODE>org.w3c.dom.Node</CODE>���������������ҵ�ÿ���ڵ�����ƺ����ͣ��������ڽڵ���κ����ݡ��嵥 
-12 չʾ�� <CODE>XPathEvaluator</CODE> ���һ���ǳ������ĸ��ӹ��ܣ�������һ�� XPath 
-�Խ��м��㣬��ý���������ӡ������</P><BR><A name=c12><B>�嵥 12. ��� XPathEvaluator ����</B></A><BR>
+<TD width="100%"><!--StartFragment--><P><A name=N103B5><SPAN class=atitle>处理计算结果</SPAN></A></P>
+<P>获得了 XPath 
+计算的结果之后，就可以对结果进行处理了……无论怎么处理都行。例如，您可以只是在结果中进行迭代并将它们打印出来。当然，您可以进行更加复杂的处理。</P>
+<P><A name=N103BE><SPAN class=smalltitle>结果节点上的一个非常简单的迭代</SPAN></A></P>
+<P>实际上，<CODE>NodeList</CODE> 的每个成员都是一个 DOM 
+<CODE>Node</CODE>（<CODE>org.w3c.dom.Node</CODE>），并且您可以找到每个节点的名称和类型，甚至关于节点的任何内容。清单 
+12 展示了 <CODE>XPathEvaluator</CODE> 类的一个非常基本的附加功能，它传入一个 XPath 
+以进行计算，获得结果并将其打印出来。</P><BR><A name=c12><B>清单 12. 完成 XPathEvaluator 程序</B></A><BR>
 <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
 <TBODY>
 <TR>
@@ -157,10 +158,10 @@ public class XPathEvaluator {
   }
 }
 </PRE></TD></TR></TBODY></TABLE><BR>
-<P>������Ķ��˹��� XPath �������ֽ̳̣���ô��������ѡ��һЩ����ʱ���ܵ� XPath ��ǿ���ܡ������û��ʾ���ļ� 
-<I>xerces-build.xml</I>����ô��Ӧ�����أ��μ� <A href="https://www.ibm.com/developerworks/cn/xml/x-xpathjava/#resources" 
-cmImpressionSent="1">�ο�����</A>�������д�ʾ�������嵥 13 ��ʾ��</P><BR><A name=c13><B>�嵥 13. ���� 
-XPathEvaluator ����</B></A><BR>
+<P>如果您阅读了关于 XPath 的两部分教程，那么您将会在选择一些属性时感受到 XPath 的强大功能。如果还没有示例文件 
+<I>xerces-build.xml</I>，那么您应该下载（参见 <A href="https://www.ibm.com/developerworks/cn/xml/x-xpathjava/#resources"  
+cmImpressionSent="1">参考资料</A>）并运行此示例，如清单 13 所示。</P><BR><A name=c13><B>清单 13. 运行 
+XPathEvaluator 程序</B></A><BR>
 <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
 <TBODY>
 <TR>
@@ -180,5 +181,7 @@ Result: Element node named property
 </TR>
 </TBODY>
 </TABLE>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
 </BODY>
 </HTML>

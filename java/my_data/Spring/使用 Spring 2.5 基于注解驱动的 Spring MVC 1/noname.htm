@@ -1,12 +1,13 @@
-<!-- saved from url=http://coolyongzi.javaeye.com/blog/218558 -->
+ï»¿<!-- saved from url=http://coolyongzi.javaeye.com/blog/218558 -->
 <script>
 window.onerror = new Function("return(false);")
 </script><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 
 <HTML dir=ltr xml:lang="zh-CN" 
-xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>Ê¹ÓÃ Spring 2.5 »ùÓÚ×¢½âÇı¶¯µÄ Spring MVC 1 - ³ÌĞòÈËÉú¡ªÂ·ÂşÂş - JavaEye¼¼ÊõÍøÕ¾</TITLE><LINK 
+xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>ä½¿ç”¨ Spring 2.5 åŸºäºæ³¨è§£é©±åŠ¨çš„ Spring MVC 1 - ç¨‹åºäººç”Ÿâ€”è·¯æ¼«æ¼« - JavaEyeæŠ€æœ¯ç½‘ç«™</title><LINK 
 href="favicon.ico" type=image/x-icon rel="shortcut icon"><LINK 
-title=³ÌĞòÈËÉú¡ªÂ·ÂşÂş href="rss" type=application/rss+xml rel=alternate><LINK 
+title=ç¨‹åºäººç”Ÿâ€”è·¯æ¼«æ¼« href="rss" type=application/rss+xml rel=alternate><LINK 
 media=screen href="blog.css_1217128319" 
 type=text/css rel=stylesheet><LINK media=screen 
 href="purple.css_1200451876" 
@@ -47,65 +48,65 @@ type=text/javascript></SCRIPT>
 <DIV class=date><SPAN class=year>2008</SPAN><SPAN class=sep_year>-</SPAN><SPAN 
 class=month>07</SPAN><SPAN class=sep_month>-</SPAN><SPAN 
 class=day>23</SPAN></DIV>
-<H3 class=type_reprint title=×ªÔØ><A href="http://coolyongzi.javaeye.com/blog/218558">Ê¹ÓÃ Spring 2.5 »ùÓÚ×¢½âÇı¶¯µÄ 
+<H3 class=type_reprint title=è½¬è½½><A href="http://coolyongzi.javaeye.com/blog/218558">ä½¿ç”¨ Spring 2.5 åŸºäºæ³¨è§£é©±åŠ¨çš„ 
 Spring MVC 1 </A></H3></DIV>
-<DIV class=blog_content>¸ÅÊö <BR><BR>¼Ì Spring 2.0 ¶Ô Spring MVC ½øĞĞÖØ´óÉı¼¶ºó£¬Spring 2.5 
-ÓÖÎª Spring MVC ÒıÈëÁË×¢½âÇı¶¯¹¦ÄÜ¡£ÏÖÔÚÄãÎŞĞëÈÃ Controller ¼Ì³ĞÈÎºÎ½Ó¿Ú£¬ÎŞĞèÔÚ XML ÅäÖÃÎÄ¼şÖĞ¶¨ÒåÇëÇóºÍ Controller 
-µÄÓ³Éä¹ØÏµ£¬½ö½öÊ¹ÓÃ×¢½â¾Í¿ÉÒÔÈÃÒ»¸ö POJO ¾ßÓĞ Controller µÄ¾ø´ó²¿·Ö¹¦ÄÜ ¡ª¡ª Spring MVC 
-¿ò¼ÜµÄÒ×ÓÃĞÔµÃµ½ÁË½øÒ»²½µÄÔöÇ¿.ÔÚ¿ò¼ÜÁé»îĞÔ¡¢Ò×ÓÃĞÔºÍÀ©Õ¹ĞÔÉÏ£¬Spring MVC ÒÑ¾­È«Ãæ³¬Ô½ÁËÆäËüµÄ MVC ¿ò¼Ü£¬°éËæ×Å Spring 
-Ò»Â·¸ß³ªÃÍ½ø£¬¿ÉÒÔÔ¤¼û Spring MVC ÔÚ MVC ÊĞ³¡ÉÏµÄÎüÒıÁ¦½«Ô½À´Ô½²»¿É¿¹¾Ü¡£ <BR><BR>±¾ÎÄ½«½éÉÜ Spring 2.5 ĞÂÔöµÄ Sping 
-MVC ×¢½â¹¦ÄÜ£¬½²ÊöÈçºÎÊ¹ÓÃ×¢½âÅäÖÃÌæ»»´«Í³µÄ»ùÓÚ XML µÄ Spring MVC ÅäÖÃ¡£ <BR><BR><BR>Ò»¸ö¼òµ¥µÄ»ùÓÚ×¢½âµÄ 
-Controller <BR><BR>Ê¹ ÓÃ¹ıµÍ°æ±¾ Spring MVC µÄ¶ÁÕß¶¼ÖªµÀ£ºµ±´´½¨Ò»¸ö Controller Ê±£¬ÎÒÃÇĞèÒªÖ±½Ó»ò¼ä½ÓµØÊµÏÖ 
-org.springframework.web.servlet.mvc.Controller ½Ó¿Ú¡£Ò»°ãÇé¿öÏÂ£¬ÎÒÃÇÊÇÍ¨¹ı¼Ì³Ğ 
-SimpleFormController »ò MultiActionController À´¶¨Òå×Ô¼ºµÄ Controller µÄ¡£ÔÚ¶¨Òå Controller 
-ºó£¬Ò»¸öÖØÒªµÄÊÂ¼şÊÇÔÚ Spring MVC µÄÅäÖÃÎÄ¼şÖĞÍ¨¹ı HandlerMapping ¶¨ÒåÇëÇóºÍ¿ØÖÆÆ÷µÄÓ³Éä¹ØÏµ£¬ÒÔ±ã½«Á½Õß¹ØÁªÆğÀ´¡£ 
-<BR><BR>À´¿´Ò»ÏÂ»ùÓÚ×¢½âµÄ Controller ÊÇÈçºÎ¶¨Òå×öµ½ÕâÒ»µãµÄ£¬ÏÂÃæÊÇÊ¹ÓÃ×¢½âµÄ BbtForumController£º 
-<BR><BR><BR>Çåµ¥ 1. BbtForumController.java <BR>package com.baobaotao.web; 
+<DIV class=blog_content>æ¦‚è¿° <BR><BR>ç»§ Spring 2.0 å¯¹ Spring MVC è¿›è¡Œé‡å¤§å‡çº§åï¼ŒSpring 2.5 
+åˆä¸º Spring MVC å¼•å…¥äº†æ³¨è§£é©±åŠ¨åŠŸèƒ½ã€‚ç°åœ¨ä½ æ— é¡»è®© Controller ç»§æ‰¿ä»»ä½•æ¥å£ï¼Œæ— éœ€åœ¨ XML é…ç½®æ–‡ä»¶ä¸­å®šä¹‰è¯·æ±‚å’Œ Controller 
+çš„æ˜ å°„å…³ç³»ï¼Œä»…ä»…ä½¿ç”¨æ³¨è§£å°±å¯ä»¥è®©ä¸€ä¸ª POJO å…·æœ‰ Controller çš„ç»å¤§éƒ¨åˆ†åŠŸèƒ½ â€”â€” Spring MVC 
+æ¡†æ¶çš„æ˜“ç”¨æ€§å¾—åˆ°äº†è¿›ä¸€æ­¥çš„å¢å¼º.åœ¨æ¡†æ¶çµæ´»æ€§ã€æ˜“ç”¨æ€§å’Œæ‰©å±•æ€§ä¸Šï¼ŒSpring MVC å·²ç»å…¨é¢è¶…è¶Šäº†å…¶å®ƒçš„ MVC æ¡†æ¶ï¼Œä¼´éšç€ Spring 
+ä¸€è·¯é«˜å”±çŒ›è¿›ï¼Œå¯ä»¥é¢„è§ Spring MVC åœ¨ MVC å¸‚åœºä¸Šçš„å¸å¼•åŠ›å°†è¶Šæ¥è¶Šä¸å¯æŠ—æ‹’ã€‚ <BR><BR>æœ¬æ–‡å°†ä»‹ç» Spring 2.5 æ–°å¢çš„ Sping 
+MVC æ³¨è§£åŠŸèƒ½ï¼Œè®²è¿°å¦‚ä½•ä½¿ç”¨æ³¨è§£é…ç½®æ›¿æ¢ä¼ ç»Ÿçš„åŸºäº XML çš„ Spring MVC é…ç½®ã€‚ <BR><BR><BR>ä¸€ä¸ªç®€å•çš„åŸºäºæ³¨è§£çš„ 
+Controller <BR><BR>ä½¿ ç”¨è¿‡ä½ç‰ˆæœ¬ Spring MVC çš„è¯»è€…éƒ½çŸ¥é“ï¼šå½“åˆ›å»ºä¸€ä¸ª Controller æ—¶ï¼Œæˆ‘ä»¬éœ€è¦ç›´æ¥æˆ–é—´æ¥åœ°å®ç° 
+org.springframework.web.servlet.mvc.Controller æ¥å£ã€‚ä¸€èˆ¬æƒ…å†µä¸‹ï¼Œæˆ‘ä»¬æ˜¯é€šè¿‡ç»§æ‰¿ 
+SimpleFormController æˆ– MultiActionController æ¥å®šä¹‰è‡ªå·±çš„ Controller çš„ã€‚åœ¨å®šä¹‰ Controller 
+åï¼Œä¸€ä¸ªé‡è¦çš„äº‹ä»¶æ˜¯åœ¨ Spring MVC çš„é…ç½®æ–‡ä»¶ä¸­é€šè¿‡ HandlerMapping å®šä¹‰è¯·æ±‚å’Œæ§åˆ¶å™¨çš„æ˜ å°„å…³ç³»ï¼Œä»¥ä¾¿å°†ä¸¤è€…å…³è”èµ·æ¥ã€‚ 
+<BR><BR>æ¥çœ‹ä¸€ä¸‹åŸºäºæ³¨è§£çš„ Controller æ˜¯å¦‚ä½•å®šä¹‰åšåˆ°è¿™ä¸€ç‚¹çš„ï¼Œä¸‹é¢æ˜¯ä½¿ç”¨æ³¨è§£çš„ BbtForumControllerï¼š 
+<BR><BR><BR>æ¸…å• 1. BbtForumController.java <BR>package com.baobaotao.web; 
 <BR>import com.baobaotao.service.BbtForumService; <BR>import 
 org.springframework.beans.factory.annotation.Autowired; <BR>import 
 org.springframework.stereotype.Controller; <BR>import 
 org.springframework.web.bind.annotation.ModelAttribute; <BR>import 
 org.springframework.web.bind.annotation.RequestMapping; <BR>import 
 org.springframework.web.bind.annotation.RequestMethod; <BR>import 
-java.util.Collection;@Controller <BR>//&lt;¡ª¡ª¢Ù@RequestMapping("/forum.do") 
+java.util.Collection;@Controller <BR>//&lt;â€”â€”â‘ @RequestMapping("/forum.do") 
 <BR>public class BbtForumController { <BR>@Autowired <BR>private BbtForumService 
-bbtForumService; <BR>@RequestMapping <BR>//&lt;¡ª¡ª¢Ú <BR>public String 
+bbtForumService; <BR>@RequestMapping <BR>//&lt;â€”â€”â‘¡ <BR>public String 
 listAllBoard() { <BR>bbtForumService.getAllBoard(); <BR>System.out.println("call 
-listAllBoard method."); <BR>return "listBoard"; <BR>}} <BR><BR><BR>´ÓÉÏÃæ´úÂëÖĞ£¬ÎÒÃÇ¿ÉÒÔ¿´³ö 
-BbtForumController ºÍÒ»°ãµÄÀà²¢Ã»ÓĞÇø±ğ£¬ËüÃ»ÓĞÊµÏÖÈÎºÎÌØÊâµÄ½Ó¿Ú£¬Òò¶øÊÇÒ»¸öµØµÀµÄ POJO¡£ÈÃÕâ¸ö POJO ÓëÖÚ²»Í¬µÄÄ§°ô¾ÍÊÇ 
-Spring MVC µÄ×¢½â£¡ <BR><BR>ÔÚ ¢Ù ´¦Ê¹ÓÃÁËÁ½¸ö×¢½â£¬·Ö±ğÊÇ @Controller ºÍ @RequestMapping¡£ÔÚ¡°Ê¹ÓÃ 
-Spring 2.5 »ùÓÚ×¢½âÇı¶¯µÄ IoC¡± ÕâÆªÎÄÕÂÀï£¬±ÊÕßÔø¾­Ö¸³ö¹ı @Controller¡¢@Service ÒÔ¼° @Repository ºÍ 
-@Component ×¢½âµÄ×÷ÓÃÊÇµÈ¼ÛµÄ£º½«Ò»¸öÀà³ÉÎª Spring ÈİÆ÷µÄ Bean¡£ÓÉÓÚ Spring MVC µÄ Controller ±ØĞëÊÂÏÈÊÇÒ»¸ö 
-Bean£¬ËùÒÔ @Controller ×¢½âÊÇ²»¿ÉÈ±ÉÙµÄ¡£ <BR><BR>ÕæÕıÈÃ BbtForumController ¾ß±¸ Spring MVC 
-Controller ¹¦ÄÜµÄÊÇ @RequestMapping Õâ¸ö×¢½â¡£@RequestMapping ¿ÉÒÔ±ê×¢ÔÚÀà¶¨Òå´¦£¬½« Controller 
-ºÍÌØ¶¨ÇëÇó¹ØÁªÆğÀ´£»»¹¿ÉÒÔ±ê×¢ÔÚ·½·¨Ç©Ãû´¦£¬ÒÔ±ã½øÒ»²½¶ÔÇëÇó½øĞĞ·ÖÁ÷¡£ÔÚ ¢Ù ´¦£¬ÎÒÃÇÈÃ BbtForumController 
-¹ØÁª¡°/forum.do¡±µÄÇëÇó£¬¶ø ¢Ú ´¦£¬ÎÒÃÇ¾ßÌåµØÖ¸¶¨ listAllBoard() ·½·¨À´´¦ÀíÇëÇó¡£ËùÒÔÔÚÀàÉùÃ÷´¦±ê×¢µÄ @RequestMapping 
-Ïàµ±ÓÚÈÃ POJO ÊµÏÖÁË Controller ½Ó¿Ú£¬¶øÔÚ·½·¨¶¨Òå´¦µÄ @RequestMapping Ïàµ±ÓÚÈÃ POJO À©Õ¹ Spring Ô¤¶¨ÒåµÄ 
-Controller£¨Èç SimpleFormController µÈ£©¡£ <BR><BR>ÎªÁËÈÃ»ùÓÚ×¢½âµÄ Spring MVC ÕæÕı¹¤×÷ÆğÀ´£¬ĞèÒªÔÚ 
-Spring MVC ¶ÔÓ¦µÄ xxx-servlet.xml ÅäÖÃÎÄ¼şÖĞ×öÒ»Ğ©ÊÖ½Å¡£ÔÚ´ËÖ®Ç°£¬»¹ÊÇÏÈÀ´¿´Ò»ÏÂ web.xml µÄÅäÖÃ°É£º 
-<BR><BR><BR>Çåµ¥ 2. web.xml£ºÆôÓÃ Spring ÈİÆ÷ºÍ Spring MVC ¿ò¼Ü <BR>&lt;?xml version="1.0" 
+listAllBoard method."); <BR>return "listBoard"; <BR>}} <BR><BR><BR>ä»ä¸Šé¢ä»£ç ä¸­ï¼Œæˆ‘ä»¬å¯ä»¥çœ‹å‡º 
+BbtForumController å’Œä¸€èˆ¬çš„ç±»å¹¶æ²¡æœ‰åŒºåˆ«ï¼Œå®ƒæ²¡æœ‰å®ç°ä»»ä½•ç‰¹æ®Šçš„æ¥å£ï¼Œå› è€Œæ˜¯ä¸€ä¸ªåœ°é“çš„ POJOã€‚è®©è¿™ä¸ª POJO ä¸ä¼—ä¸åŒçš„é­”æ£’å°±æ˜¯ 
+Spring MVC çš„æ³¨è§£ï¼ <BR><BR>åœ¨ â‘  å¤„ä½¿ç”¨äº†ä¸¤ä¸ªæ³¨è§£ï¼Œåˆ†åˆ«æ˜¯ @Controller å’Œ @RequestMappingã€‚åœ¨â€œä½¿ç”¨ 
+Spring 2.5 åŸºäºæ³¨è§£é©±åŠ¨çš„ IoCâ€ è¿™ç¯‡æ–‡ç« é‡Œï¼Œç¬”è€…æ›¾ç»æŒ‡å‡ºè¿‡ @Controllerã€@Service ä»¥åŠ @Repository å’Œ 
+@Component æ³¨è§£çš„ä½œç”¨æ˜¯ç­‰ä»·çš„ï¼šå°†ä¸€ä¸ªç±»æˆä¸º Spring å®¹å™¨çš„ Beanã€‚ç”±äº Spring MVC çš„ Controller å¿…é¡»äº‹å…ˆæ˜¯ä¸€ä¸ª 
+Beanï¼Œæ‰€ä»¥ @Controller æ³¨è§£æ˜¯ä¸å¯ç¼ºå°‘çš„ã€‚ <BR><BR>çœŸæ­£è®© BbtForumController å…·å¤‡ Spring MVC 
+Controller åŠŸèƒ½çš„æ˜¯ @RequestMapping è¿™ä¸ªæ³¨è§£ã€‚@RequestMapping å¯ä»¥æ ‡æ³¨åœ¨ç±»å®šä¹‰å¤„ï¼Œå°† Controller 
+å’Œç‰¹å®šè¯·æ±‚å…³è”èµ·æ¥ï¼›è¿˜å¯ä»¥æ ‡æ³¨åœ¨æ–¹æ³•ç­¾åå¤„ï¼Œä»¥ä¾¿è¿›ä¸€æ­¥å¯¹è¯·æ±‚è¿›è¡Œåˆ†æµã€‚åœ¨ â‘  å¤„ï¼Œæˆ‘ä»¬è®© BbtForumController 
+å…³è”â€œ/forum.doâ€çš„è¯·æ±‚ï¼Œè€Œ â‘¡ å¤„ï¼Œæˆ‘ä»¬å…·ä½“åœ°æŒ‡å®š listAllBoard() æ–¹æ³•æ¥å¤„ç†è¯·æ±‚ã€‚æ‰€ä»¥åœ¨ç±»å£°æ˜å¤„æ ‡æ³¨çš„ @RequestMapping 
+ç›¸å½“äºè®© POJO å®ç°äº† Controller æ¥å£ï¼Œè€Œåœ¨æ–¹æ³•å®šä¹‰å¤„çš„ @RequestMapping ç›¸å½“äºè®© POJO æ‰©å±• Spring é¢„å®šä¹‰çš„ 
+Controllerï¼ˆå¦‚ SimpleFormController ç­‰ï¼‰ã€‚ <BR><BR>ä¸ºäº†è®©åŸºäºæ³¨è§£çš„ Spring MVC çœŸæ­£å·¥ä½œèµ·æ¥ï¼Œéœ€è¦åœ¨ 
+Spring MVC å¯¹åº”çš„ xxx-servlet.xml é…ç½®æ–‡ä»¶ä¸­åšä¸€äº›æ‰‹è„šã€‚åœ¨æ­¤ä¹‹å‰ï¼Œè¿˜æ˜¯å…ˆæ¥çœ‹ä¸€ä¸‹ web.xml çš„é…ç½®å§ï¼š 
+<BR><BR><BR>æ¸…å• 2. web.xmlï¼šå¯ç”¨ Spring å®¹å™¨å’Œ Spring MVC æ¡†æ¶ <BR>&lt;?xml version="1.0" 
 encoding="UTF-8"?&gt;&lt;web-app xmlns="http://java.sun.com/xml/ns/javaee" 
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5"&gt; 
 &lt;display-name&gt;Spring Annotation MVC Sample&lt;/display-name&gt; 
-<BR>&lt;!-- Spring ·şÎñ²ãµÄÅäÖÃÎÄ¼ş --&gt; <BR>&lt;context-param&gt; 
+<BR>&lt;!-- Spring æœåŠ¡å±‚çš„é…ç½®æ–‡ä»¶ --&gt; <BR>&lt;context-param&gt; 
 <BR>&lt;param-name&gt;contextConfigLocation&lt;/param-name&gt; 
 <BR>&lt;param-value&gt;classpath:applicationContext.xml&lt;/param-value&gt; 
-&lt;/context-param&gt; <BR>&lt;!-- Spring ÈİÆ÷Æô¶¯¼àÌıÆ÷ --&gt; <BR>&lt;listener&gt; 
+&lt;/context-param&gt; <BR>&lt;!-- Spring å®¹å™¨å¯åŠ¨ç›‘å¬å™¨ --&gt; <BR>&lt;listener&gt; 
 <BR>&lt;listener_class&gt; 
 <BR>org.springframework.web.context.ContextLoaderListener 
 &lt;/listener-class&gt; <BR>&lt;/listener&gt; <BR>&lt;!-- Spring MVC 
-µÄServlet£¬Ëü½«¼ÓÔØWEB-INF/annomvc-servlet.xml µÄÅäÖÃÎÄ¼ş£¬ÒÔÆô¶¯Spring MVCÄ£¿é--&gt; 
+çš„Servletï¼Œå®ƒå°†åŠ è½½WEB-INF/annomvc-servlet.xml çš„é…ç½®æ–‡ä»¶ï¼Œä»¥å¯åŠ¨Spring MVCæ¨¡å—--&gt; 
 <BR>&lt;servlet&gt; <BR>&lt;servlet-name&gt;annomvc&lt;/servlet-name&gt; 
 <BR>&lt;servlet_class&gt; <BR>org.springframework.web.servlet.DispatcherServlet 
 &lt;/servlet-class&gt; &lt;load-on-startup&gt;2&lt;/load-on-startup&gt; 
 &lt;/servlet&gt; &lt;servlet-mapping&gt; 
 &lt;servlet-name&gt;annomvc&lt;/servlet-name&gt; 
 &lt;url-pattern&gt;*.do&lt;/url-pattern&gt; 
-&lt;/servlet-mapping&gt;&lt;/web-app&gt; <BR><BR><BR>web.xml ÖĞ¶¨ÒåÁËÒ»¸öÃûÎª annomvc µÄ 
-Spring MVC Ä£¿é£¬°´ÕÕ Spring MVC µÄÆõÔ¼£¬ĞèÒªÔÚ WEB-INF/annomvc-servlet.xml ÅäÖÃÎÄ¼şÖĞ¶¨Òå Spring 
-MVC Ä£¿éµÄ¾ßÌåÅäÖÃ¡£annomvc-servlet.xml µÄÅäÖÃÄÚÈİÈçÏÂËùÊ¾£º <BR><BR>Çåµ¥ 3. annomvc-servlet.xml 
+&lt;/servlet-mapping&gt;&lt;/web-app&gt; <BR><BR><BR>web.xml ä¸­å®šä¹‰äº†ä¸€ä¸ªåä¸º annomvc çš„ 
+Spring MVC æ¨¡å—ï¼ŒæŒ‰ç…§ Spring MVC çš„å¥‘çº¦ï¼Œéœ€è¦åœ¨ WEB-INF/annomvc-servlet.xml é…ç½®æ–‡ä»¶ä¸­å®šä¹‰ Spring 
+MVC æ¨¡å—çš„å…·ä½“é…ç½®ã€‚annomvc-servlet.xml çš„é…ç½®å†…å®¹å¦‚ä¸‹æ‰€ç¤ºï¼š <BR><BR>æ¸…å• 3. annomvc-servlet.xml 
 <BR><BR>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;beans 
 xmlns="http://www.springframework.org/schema/beans" 
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
@@ -115,60 +116,60 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd 
 http://www.springframework.org/schema/context 
 http://www.springframework.org/schema/context/spring-context-2.5.xsd"&gt; 
-&lt;!-- ¢Ù£º¶Ôweb°üÖĞµÄËùÓĞÀà½øĞĞÉ¨Ãè£¬ÒÔÍê³ÉBean´´½¨ºÍ×Ô¶¯ÒÀÀµ×¢ÈëµÄ¹¦ÄÜ --&gt; &lt;context:component-scan 
-base-package="com.baobaotao.web"/&gt; &lt;!-- ¢Ú£ºÆô¶¯Spring MVCµÄ×¢½â¹¦ÄÜ£¬Íê³ÉÇëÇóºÍ×¢½âPOJOµÄÓ³Éä 
+&lt;!-- â‘ ï¼šå¯¹webåŒ…ä¸­çš„æ‰€æœ‰ç±»è¿›è¡Œæ‰«æï¼Œä»¥å®ŒæˆBeanåˆ›å»ºå’Œè‡ªåŠ¨ä¾èµ–æ³¨å…¥çš„åŠŸèƒ½ --&gt; &lt;context:component-scan 
+base-package="com.baobaotao.web"/&gt; &lt;!-- â‘¡ï¼šå¯åŠ¨Spring MVCçš„æ³¨è§£åŠŸèƒ½ï¼Œå®Œæˆè¯·æ±‚å’Œæ³¨è§£POJOçš„æ˜ å°„ 
 --&gt; &lt;bean class="org.springframework.web.servlet.mvc.annotation. 
-AnnotationMethodHandlerAdapter"/&gt; &lt;!-- ¢Û£º¶ÔÄ£ĞÍÊÓÍ¼Ãû³ÆµÄ½âÎö£¬¼´ÔÚÄ£ĞÍÊÓÍ¼Ãû³ÆÌí¼ÓÇ°ºó×º --&gt; 
+AnnotationMethodHandlerAdapter"/&gt; &lt;!-- â‘¢ï¼šå¯¹æ¨¡å‹è§†å›¾åç§°çš„è§£æï¼Œå³åœ¨æ¨¡å‹è§†å›¾åç§°æ·»åŠ å‰åç¼€ --&gt; 
 &lt;bean 
 class="org.springframework.web.servlet.view.InternalResourceViewResolver" 
-p:prefix="/WEB-INF/jsp/" p:suffix=".jsp"/&gt;&lt;/beans&gt; <BR><BR><BR>ÒòÎª 
-Spring ËùÓĞ¹¦ÄÜ¶¼ÔÚ Bean µÄ»ù´¡ÉÏÑİ»¯¶øÀ´£¬ËùÒÔ±ØĞëÊÂÏÈ½« Controller ±ä³É Bean£¬ÕâÊÇÍ¨¹ıÔÚÀàÖĞ±ê×¢ @Controller ²¢ÔÚ 
-annomvc-servlet.xml ÖĞÆôÓÃ×é¼şÉ¨Ãè»úÖÆÀ´Íê³ÉµÄ£¬Èç ¢Ù ËùÊ¾¡£ <BR><BR>ÔÚ ¢Ú ´¦£¬ÅäÖÃÁËÒ»¸ö 
-AnnotationMethodHandlerAdapter£¬Ëü¸ºÔğ¸ù¾İ Bean ÖĞµÄ Spring MVC ×¢½â¶Ô Bean ½øĞĞ¼Ó¹¤´¦Àí£¬Ê¹ÕâĞ© Bean 
-±ä³É¿ØÖÆÆ÷²¢Ó³ÉäÌØ¶¨µÄ URL ÇëÇó¡£ <BR><BR>¶ø ¢Û ´¦µÄ¹¤×÷ÊÇ¶¨ÒåÄ£ĞÍÊÓÍ¼Ãû³ÆµÄ½âÎö¹æÔò£¬ÕâÀïÎÒÃÇÊ¹ÓÃÁË Spring 2.5 µÄÌØÊâÃüÃû¿Õ¼ä£¬¼´ 
-p ÃüÃû¿Õ¼ä£¬Ëü½«Ô­ÏÈĞèÒªÍ¨¹ı &lt;property&gt; ÔªËØÅäÖÃµÄÄÚÈİ×ª»¯Îª &lt;bean&gt; ÊôĞÔÅäÖÃ£¬ÔÚÒ»¶¨³Ì¶ÈÉÏ¼ò»¯ÁË 
-&lt;bean&gt; µÄÅäÖÃ¡£ <BR><BR>Æô¶¯ Tomcat£¬·¢ËÍ http://localhost/forum.do URL 
-ÇëÇó£¬BbtForumController µÄ listAllBoard() ·½·¨½«ÏìÓ¦Õâ¸öÇëÇó£¬²¢×ªÏò WEB-INF/jsp/listBoard.jsp 
-µÄÊÓÍ¼Ò³Ãæ¡£ <BR><BR><BR>ÈÃÒ»¸ö Controller ´¦Àí¶à¸ö URL ÇëÇó <BR><BR>ÔÚµÍ°æ±¾µÄ Spring MVC 
-ÖĞ£¬ÎÒÃÇ¿ÉÒÔÍ¨¹ı¼Ì³Ğ MultiActionController ÈÃÒ»¸ö Controller ´¦Àí¶à¸ö URL ÇëÇó¡£Ê¹ÓÃ @RequestMapping 
-×¢½âºó£¬Õâ¸ö¹¦ÄÜ¸ü¼ÓÈİÒ×ÊµÏÖÁË¡£Çë¿´ÏÂÃæµÄ´úÂë£º <BR><BR>Çåµ¥ 3. Ã¿¸öÇëÇó´¦Àí²ÎÊı¶ÔÓ¦Ò»¸ö URL <BR><BR>package 
+p:prefix="/WEB-INF/jsp/" p:suffix=".jsp"/&gt;&lt;/beans&gt; <BR><BR><BR>å› ä¸º 
+Spring æ‰€æœ‰åŠŸèƒ½éƒ½åœ¨ Bean çš„åŸºç¡€ä¸Šæ¼”åŒ–è€Œæ¥ï¼Œæ‰€ä»¥å¿…é¡»äº‹å…ˆå°† Controller å˜æˆ Beanï¼Œè¿™æ˜¯é€šè¿‡åœ¨ç±»ä¸­æ ‡æ³¨ @Controller å¹¶åœ¨ 
+annomvc-servlet.xml ä¸­å¯ç”¨ç»„ä»¶æ‰«ææœºåˆ¶æ¥å®Œæˆçš„ï¼Œå¦‚ â‘  æ‰€ç¤ºã€‚ <BR><BR>åœ¨ â‘¡ å¤„ï¼Œé…ç½®äº†ä¸€ä¸ª 
+AnnotationMethodHandlerAdapterï¼Œå®ƒè´Ÿè´£æ ¹æ® Bean ä¸­çš„ Spring MVC æ³¨è§£å¯¹ Bean è¿›è¡ŒåŠ å·¥å¤„ç†ï¼Œä½¿è¿™äº› Bean 
+å˜æˆæ§åˆ¶å™¨å¹¶æ˜ å°„ç‰¹å®šçš„ URL è¯·æ±‚ã€‚ <BR><BR>è€Œ â‘¢ å¤„çš„å·¥ä½œæ˜¯å®šä¹‰æ¨¡å‹è§†å›¾åç§°çš„è§£æè§„åˆ™ï¼Œè¿™é‡Œæˆ‘ä»¬ä½¿ç”¨äº† Spring 2.5 çš„ç‰¹æ®Šå‘½åç©ºé—´ï¼Œå³ 
+p å‘½åç©ºé—´ï¼Œå®ƒå°†åŸå…ˆéœ€è¦é€šè¿‡ &lt;property&gt; å…ƒç´ é…ç½®çš„å†…å®¹è½¬åŒ–ä¸º &lt;bean&gt; å±æ€§é…ç½®ï¼Œåœ¨ä¸€å®šç¨‹åº¦ä¸Šç®€åŒ–äº† 
+&lt;bean&gt; çš„é…ç½®ã€‚ <BR><BR>å¯åŠ¨ Tomcatï¼Œå‘é€ http://localhost/forum.do URL 
+è¯·æ±‚ï¼ŒBbtForumController çš„ listAllBoard() æ–¹æ³•å°†å“åº”è¿™ä¸ªè¯·æ±‚ï¼Œå¹¶è½¬å‘ WEB-INF/jsp/listBoard.jsp 
+çš„è§†å›¾é¡µé¢ã€‚ <BR><BR><BR>è®©ä¸€ä¸ª Controller å¤„ç†å¤šä¸ª URL è¯·æ±‚ <BR><BR>åœ¨ä½ç‰ˆæœ¬çš„ Spring MVC 
+ä¸­ï¼Œæˆ‘ä»¬å¯ä»¥é€šè¿‡ç»§æ‰¿ MultiActionController è®©ä¸€ä¸ª Controller å¤„ç†å¤šä¸ª URL è¯·æ±‚ã€‚ä½¿ç”¨ @RequestMapping 
+æ³¨è§£åï¼Œè¿™ä¸ªåŠŸèƒ½æ›´åŠ å®¹æ˜“å®ç°äº†ã€‚è¯·çœ‹ä¸‹é¢çš„ä»£ç ï¼š <BR><BR>æ¸…å• 3. æ¯ä¸ªè¯·æ±‚å¤„ç†å‚æ•°å¯¹åº”ä¸€ä¸ª URL <BR><BR>package 
 com.baobaotao.web;import com.baobaotao.service.BbtForumService;import 
 org.springframework.beans.factory.annotation.Autowired;import 
 org.springframework.stereotype.Controller;import 
 org.springframework.web.bind.annotation.RequestMapping;@Controllerpublic class 
 BbtForumController { @Autowired private BbtForumService bbtForumService; 
-@RequestMapping("/listAllBoard.do") // &lt;¡ª¡ª ¢Ù public String listAllBoard() { 
+@RequestMapping("/listAllBoard.do") // &lt;â€”â€” â‘  public String listAllBoard() { 
 bbtForumService.getAllBoard(); System.out.println("call listAllBoard method."); 
-return "listBoard"; } @RequestMapping("/listBoardTopic.do") // &lt;¡ª¡ª ¢Ú public 
+return "listBoard"; } @RequestMapping("/listBoardTopic.do") // &lt;â€”â€” â‘¡ public 
 String listBoardTopic(int topicId) { bbtForumService.getBoardTopics(topicId); 
 System.out.println("call listBoardTopic method."); return "listTopic"; }} 
-<BR><BR><BR>ÔÚÕâÀï£¬ÎÒÃÇ·Ö±ğÔÚ ¢Ù ºÍ ¢Ú ´¦Îª listAllBoard() ºÍ listBoardTopic() ·½·¨±ê×¢ÁË 
-@RequestMapping ×¢½â£¬·Ö±ğÖ¸¶¨ÕâÁ½¸ö·½·¨´¦ÀíµÄ URL ÇëÇó£¬ÕâÏàµ±ÓÚ½« BbtForumController ¸ÄÔìÎª 
-MultiActionController¡£ÕâÑù /listAllBoard.do µÄ URL ÇëÇó½«ÓÉ listAllBoard() ¸ºÔğ´¦Àí£¬¶ø 
-/listBoardTopic.do?topicId=1 µÄ URL ÇëÇóÔòÓÉ listBoardTopic() ·½·¨´¦Àí¡£ <BR><BR>¶Ô ÓÚ´¦Àí¶à¸ö 
-URL ÇëÇóµÄ Controller À´Ëµ£¬ÎÒÃÇÇãÏòÓÚÍ¨¹ıÒ»¸ö URL ²ÎÊıÖ¸¶¨ Controller ´¦Àí·½·¨µÄÃû³Æ£¨Èç 
-method=listAllBoard£©£¬¶ø·ÇÖ±½ÓÍ¨¹ı²»Í¬µÄ URL Ö¸¶¨ Controller µÄ´¦Àí·½·¨¡£Ê¹ÓÃ @RequestMapping 
-×¢½âºÜÈİÒ×ÊµÏÖÕâ¸ö³£ÓÃµÄĞèÇó¡£À´¿´ÏÂÃæµÄ´úÂë£º <BR><BR><BR>Çåµ¥ 4. Ò»¸ö Controller ¶ÔÓ¦Ò»¸ö URL£¬ÓÉÇëÇó²ÎÊı¾ö¶¨ÇëÇó´¦Àí·½·¨ 
+<BR><BR><BR>åœ¨è¿™é‡Œï¼Œæˆ‘ä»¬åˆ†åˆ«åœ¨ â‘  å’Œ â‘¡ å¤„ä¸º listAllBoard() å’Œ listBoardTopic() æ–¹æ³•æ ‡æ³¨äº† 
+@RequestMapping æ³¨è§£ï¼Œåˆ†åˆ«æŒ‡å®šè¿™ä¸¤ä¸ªæ–¹æ³•å¤„ç†çš„ URL è¯·æ±‚ï¼Œè¿™ç›¸å½“äºå°† BbtForumController æ”¹é€ ä¸º 
+MultiActionControllerã€‚è¿™æ · /listAllBoard.do çš„ URL è¯·æ±‚å°†ç”± listAllBoard() è´Ÿè´£å¤„ç†ï¼Œè€Œ 
+/listBoardTopic.do?topicId=1 çš„ URL è¯·æ±‚åˆ™ç”± listBoardTopic() æ–¹æ³•å¤„ç†ã€‚ <BR><BR>å¯¹ äºå¤„ç†å¤šä¸ª 
+URL è¯·æ±‚çš„ Controller æ¥è¯´ï¼Œæˆ‘ä»¬å€¾å‘äºé€šè¿‡ä¸€ä¸ª URL å‚æ•°æŒ‡å®š Controller å¤„ç†æ–¹æ³•çš„åç§°ï¼ˆå¦‚ 
+method=listAllBoardï¼‰ï¼Œè€Œéç›´æ¥é€šè¿‡ä¸åŒçš„ URL æŒ‡å®š Controller çš„å¤„ç†æ–¹æ³•ã€‚ä½¿ç”¨ @RequestMapping 
+æ³¨è§£å¾ˆå®¹æ˜“å®ç°è¿™ä¸ªå¸¸ç”¨çš„éœ€æ±‚ã€‚æ¥çœ‹ä¸‹é¢çš„ä»£ç ï¼š <BR><BR><BR>æ¸…å• 4. ä¸€ä¸ª Controller å¯¹åº”ä¸€ä¸ª URLï¼Œç”±è¯·æ±‚å‚æ•°å†³å®šè¯·æ±‚å¤„ç†æ–¹æ³• 
 <BR>package com.baobaotao.web;import 
 com.baobaotao.service.BbtForumService;import 
 org.springframework.beans.factory.annotation.Autowired;import 
 org.springframework.stereotype.Controller;import 
 org.springframework.web.bind.annotation.RequestMapping;@Controller@RequestMapping("/bbtForum.do") 
-// &lt;¡ª¡ª ¢Ù Ö¸¶¨¿ØÖÆÆ÷¶ÔÓ¦URLÇëÇópublic class BbtForumController { @Autowired private 
-BbtForumService bbtForumService; // &lt;¡ª¡ª ¢Ú 
-Èç¹ûURLÇëÇóÖĞ°üÀ¨"method=listAllBoard"µÄ²ÎÊı£¬ÓÉ±¾·½·¨½øĞĞ´¦Àí @RequestMapping(params = 
+// &lt;â€”â€” â‘  æŒ‡å®šæ§åˆ¶å™¨å¯¹åº”URLè¯·æ±‚public class BbtForumController { @Autowired private 
+BbtForumService bbtForumService; // &lt;â€”â€” â‘¡ 
+å¦‚æœURLè¯·æ±‚ä¸­åŒ…æ‹¬"method=listAllBoard"çš„å‚æ•°ï¼Œç”±æœ¬æ–¹æ³•è¿›è¡Œå¤„ç† @RequestMapping(params = 
 "method=listAllBoard") public String listAllBoard() { 
 bbtForumService.getAllBoard(); System.out.println("call listAllBoard method."); 
-return "listBoard"; } // &lt;¡ª¡ª ¢Û Èç¹ûURLÇëÇóÖĞ°üÀ¨"method=listBoardTopic"µÄ²ÎÊı£¬ÓÉ±¾·½·¨½øĞĞ´¦Àí 
+return "listBoard"; } // &lt;â€”â€” â‘¢ å¦‚æœURLè¯·æ±‚ä¸­åŒ…æ‹¬"method=listBoardTopic"çš„å‚æ•°ï¼Œç”±æœ¬æ–¹æ³•è¿›è¡Œå¤„ç† 
 @RequestMapping(params = "method=listBoardTopic") public String 
 listBoardTopic(int topicId) { bbtForumService.getBoardTopics(topicId); 
 System.out.println("call listBoardTopic method."); return "listTopic"; }} 
-<BR><BR><BR>ÔÚÀà¶¨Òå´¦±ê×¢µÄ @RequestMapping ÈÃ BbtForumController ´¦ÀíËùÓĞ°üº¬ /bbtForum.do µÄ 
-URL ÇëÇó£¬¶ø BbtForumController ÖĞµÄÇëÇó´¦Àí·½·¨¶Ô URL ÇëÇóµÄ·ÖÁ÷¹æÔòÔÚ ¢Ú ºÍ ¢Û ´¦¶¨Òå·ÖÁ÷¹æÔò°´ÕÕ URL µÄ method 
-ÇëÇó²ÎÊıÈ·¶¨¡£ËùÒÔ·Ö±ğÔÚÀà¶¨Òå´¦ºÍ·½·¨¶¨Òå´¦Ê¹ÓÃ @RequestMapping ×¢½â£¬¾Í¿ÉÒÔºÜÈİÒ×Í¨¹ı URL ²ÎÊıÖ¸¶¨ Controller µÄ´¦Àí·½·¨ÁË¡£ 
-<BR><BR>@RequestMapping ×¢½âÖĞ³ıÁË params ÊôĞÔÍâ£¬»¹ÓĞÒ»¸ö³£ÓÃµÄÊôĞÔÊÇ method£¬Ëü¿ÉÒÔÈÃ Controller 
-·½·¨´¦ÀíÌØ¶¨ HTTP ÇëÇó·½Ê½µÄÇëÇó£¬ÈçÈÃÒ»¸ö·½·¨´¦Àí HTTP GET ÇëÇó£¬¶øÁíÒ»¸ö·½·¨´¦Àí HTTP POST ÇëÇó£¬ÈçÏÂËùÊ¾£º 
-<BR><BR><BR>Çåµ¥ 4. ÈÃÇëÇó´¦Àí·½·¨´¦ÀíÌØ¶¨µÄ HTTP ÇëÇó·½·¨ <BR>package com.baobaotao.web;import 
+<BR><BR><BR>åœ¨ç±»å®šä¹‰å¤„æ ‡æ³¨çš„ @RequestMapping è®© BbtForumController å¤„ç†æ‰€æœ‰åŒ…å« /bbtForum.do çš„ 
+URL è¯·æ±‚ï¼Œè€Œ BbtForumController ä¸­çš„è¯·æ±‚å¤„ç†æ–¹æ³•å¯¹ URL è¯·æ±‚çš„åˆ†æµè§„åˆ™åœ¨ â‘¡ å’Œ â‘¢ å¤„å®šä¹‰åˆ†æµè§„åˆ™æŒ‰ç…§ URL çš„ method 
+è¯·æ±‚å‚æ•°ç¡®å®šã€‚æ‰€ä»¥åˆ†åˆ«åœ¨ç±»å®šä¹‰å¤„å’Œæ–¹æ³•å®šä¹‰å¤„ä½¿ç”¨ @RequestMapping æ³¨è§£ï¼Œå°±å¯ä»¥å¾ˆå®¹æ˜“é€šè¿‡ URL å‚æ•°æŒ‡å®š Controller çš„å¤„ç†æ–¹æ³•äº†ã€‚ 
+<BR><BR>@RequestMapping æ³¨è§£ä¸­é™¤äº† params å±æ€§å¤–ï¼Œè¿˜æœ‰ä¸€ä¸ªå¸¸ç”¨çš„å±æ€§æ˜¯ methodï¼Œå®ƒå¯ä»¥è®© Controller 
+æ–¹æ³•å¤„ç†ç‰¹å®š HTTP è¯·æ±‚æ–¹å¼çš„è¯·æ±‚ï¼Œå¦‚è®©ä¸€ä¸ªæ–¹æ³•å¤„ç† HTTP GET è¯·æ±‚ï¼Œè€Œå¦ä¸€ä¸ªæ–¹æ³•å¤„ç† HTTP POST è¯·æ±‚ï¼Œå¦‚ä¸‹æ‰€ç¤ºï¼š 
+<BR><BR><BR>æ¸…å• 4. è®©è¯·æ±‚å¤„ç†æ–¹æ³•å¤„ç†ç‰¹å®šçš„ HTTP è¯·æ±‚æ–¹æ³• <BR>package com.baobaotao.web;import 
 com.baobaotao.service.BbtForumService;import 
 org.springframework.beans.factory.annotation.Autowired;import 
 org.springframework.stereotype.Controller;import 
@@ -177,91 +178,91 @@ org.springframework.web.bind.annotation.RequestMethod;@Controller@RequestMapping
 public class BbtForumController { @RequestMapping(params = 
 "method=createTopic",method = RequestMethod.POST) public String createTopic(){ 
 System.out.println("call createTopic method."); return "createTopic"; }} 
-<BR><BR><BR>ÕâÑùÖ»ÓĞµ± /bbtForum.do?method=createTopic ÇëÇóÒÔ HTTP POST 
-·½Ê½Ìá½»Ê±£¬createTopic() ·½·¨²Å»á½øĞĞ´¦Àí¡£ <BR><BR><BR>´¦Àí·½·¨Èë²ÎÈçºÎ°ó¶¨ URL ²ÎÊı <BR><BR>°´ÆõÔ¼°ó¶¨ 
-<BR><BR>Controller µÄ·½·¨±ê×¢ÁË @RequestMapping ×¢½âºó£¬Ëü¾ÍÄÜ´¦ÀíÌØ¶¨µÄ URL 
-ÇëÇó¡£ÎÒÃÇ²»½ûÒªÎÊ£ºÇëÇó´¦Àí·½·¨Èë²ÎÊÇÈçºÎ°ó¶¨ URL ²ÎÊıµÄÄØ£¿ÔÚ»Ø´ğÕâ¸öÎÊÌâÖ®Ç°ÏÈÀ´¿´ÏÂÃæµÄ´úÂë£º <BR><BR>Çåµ¥ 5. °´²ÎÊıÃûÆ¥Åä½øĞĞ°ó¶¨ 
-<BR><BR>@RequestMapping(params = "method=listBoardTopic") //&lt;¡ª¡ª ¢Ù 
-topicIdÈë²ÎÊÇÈçºÎ°ó¶¨URLÇëÇó²ÎÊıµÄ£¿ public String listBoardTopic(int topicId) { 
+<BR><BR><BR>è¿™æ ·åªæœ‰å½“ /bbtForum.do?method=createTopic è¯·æ±‚ä»¥ HTTP POST 
+æ–¹å¼æäº¤æ—¶ï¼ŒcreateTopic() æ–¹æ³•æ‰ä¼šè¿›è¡Œå¤„ç†ã€‚ <BR><BR><BR>å¤„ç†æ–¹æ³•å…¥å‚å¦‚ä½•ç»‘å®š URL å‚æ•° <BR><BR>æŒ‰å¥‘çº¦ç»‘å®š 
+<BR><BR>Controller çš„æ–¹æ³•æ ‡æ³¨äº† @RequestMapping æ³¨è§£åï¼Œå®ƒå°±èƒ½å¤„ç†ç‰¹å®šçš„ URL 
+è¯·æ±‚ã€‚æˆ‘ä»¬ä¸ç¦è¦é—®ï¼šè¯·æ±‚å¤„ç†æ–¹æ³•å…¥å‚æ˜¯å¦‚ä½•ç»‘å®š URL å‚æ•°çš„å‘¢ï¼Ÿåœ¨å›ç­”è¿™ä¸ªé—®é¢˜ä¹‹å‰å…ˆæ¥çœ‹ä¸‹é¢çš„ä»£ç ï¼š <BR><BR>æ¸…å• 5. æŒ‰å‚æ•°ååŒ¹é…è¿›è¡Œç»‘å®š 
+<BR><BR>@RequestMapping(params = "method=listBoardTopic") //&lt;â€”â€” â‘  
+topicIdå…¥å‚æ˜¯å¦‚ä½•ç»‘å®šURLè¯·æ±‚å‚æ•°çš„ï¼Ÿ public String listBoardTopic(int topicId) { 
 bbtForumService.getBoardTopics(topicId); System.out.println("call listBoardTopic 
-method."); return "listTopic"; } <BR><BR><BR>µ±ÎÒÃÇ·¢ËÍ 
-http://localhost//bbtForum.do?method=listBoardTopic&amp;topicId=10 µÄ URL 
-ÇëÇóÊ±£¬Spring ²»µ«ÈÃ listBoardTopic() ·½·¨´¦ÀíÕâ¸öÇëÇó£¬¶øÇÒ»¹½« topicId ÇëÇó²ÎÊıÔÚÀàĞÍ×ª»»ºó°ó¶¨µ½ 
-listBoardTopic() ·½·¨µÄ topicId Èë²ÎÉÏ¡£¶ø listBoardTopic() ·½·¨µÄ·µ»ØÀàĞÍÊÇ 
-String£¬Ëü½«±»½âÎöÎªÂß¼­ÊÓÍ¼µÄÃû³Æ¡£Ò²¾ÍÊÇËµ Spring ÔÚÈçºÎ¸ø´¦Àí·½·¨Èë²Î×Ô¶¯¸³ÖµÒÔ¼°ÈçºÎ½«´¦Àí·½·¨·µ»ØÖµ×ª»¯Îª ModelAndView 
-ÖĞµÄ¹ı³ÌÖĞ´æÔÚÒ»Ì×Ç±ÔÚµÄ¹æÔò£¬²»ÊìÏ¤Õâ¸ö¹æÔò¾Í²»¿ÉÄÜºÜºÃµØ¿ª·¢»ùÓÚ×¢½âµÄÇëÇó´¦Àí·½·¨£¬Òò´ËÁË½âÕâ¸öÇ±ÔÚ¹æÔòÎŞÒÉ³ÉÎªÀí½â Spring MVC 
-¿ò¼Ü»ùÓÚ×¢½â¹¦ÄÜµÄºËĞÄÎÊÌâ¡£ <BR><BR>ÎÒÃÇ²»·Á´Ó×î³£¼ûµÄ¿ªÊ¼ËµÆğ£ºÇëÇó´¦Àí·½·¨Èë²ÎµÄÀàĞÍ¿ÉÒÔÊÇ Java »ù±¾Êı¾İÀàĞÍ»ò String 
-ÀàĞÍ£¬ÕâÊ±·½·¨Èë²Î°´²ÎÊıÃûÆ¥ÅäµÄÔ­Ôò°ó¶¨µ½ URL ÇëÇó²ÎÊı£¬Í¬Ê±»¹×Ô¶¯Íê³É String ÀàĞÍµÄ URL 
-ÇëÇó²ÎÊıµ½ÇëÇó´¦Àí·½·¨²ÎÊıÀàĞÍµÄ×ª»»¡£ÏÂÃæ¸ø³ö¼¸¸öÀı×Ó£º <BR><BR>listBoardTopic(int topicId)£ººÍ topicId URL 
-ÇëÇó²ÎÊı°ó¶¨£» <BR>listBoardTopic(int topicId,String boardName)£º·Ö±ğºÍ topicId¡¢boardName 
-URL ÇëÇó²ÎÊı°ó¶¨£» <BR>? <BR>ÌØ±ğµÄ£¬Èç¹ûÈë²ÎÊÇ»ù±¾Êı¾İÀàĞÍ£¨Èç int¡¢long¡¢float µÈ£©£¬URL 
-ÇëÇó²ÎÊıÖĞÒ»¶¨ÒªÓĞ¶ÔÓ¦µÄ²ÎÊı£¬·ñÔò½«Å×³ö TypeMismatchException Òì³££¬ÌáÊ¾ÎŞ·¨½« null ×ª»»Îª»ù±¾Êı¾İÀàĞÍ¡£ 
-<BR><BR>ÁíÍâ£¬ÇëÇó´¦Àí·½·¨µÄÈë²ÎÒ²¿ÉÒÔÒ»¸ö JavaBean£¬ÈçÏÂÃæµÄ User ¶ÔÏó¾Í¿ÉÒÔ×÷ÎªÒ»¸öÈë²Î£º <BR><BR><BR>Çåµ¥ 6. 
-User.java£ºÒ»¸ö JavaBean <BR>package com.baobaotao.web;public class User { private 
-int userId; private String userName; //Ê¡ÂÔget/setter·½·¨ public String toString(){ 
-return this.userName +","+this.userId; }} <BR><BR><BR>ÏÂÃæÊÇ½« User ×÷Îª 
-listBoardTopic() ÇëÇó´¦Àí·½·¨µÄÈë²Î£º <BR><BR><BR>Çåµ¥ 7. Ê¹ÓÃ JavaBean ×÷ÎªÇëÇó´¦Àí·½·¨µÄÈë²Î 
+method."); return "listTopic"; } <BR><BR><BR> 
+å½“æˆ‘ä»¬å‘é€http://localhost//bbtForum.do?method=listBoardTopic&amp;topicId=10 çš„ URL 
+è¯·æ±‚æ—¶ï¼ŒSpring ä¸ä½†è®© listBoardTopic() æ–¹æ³•å¤„ç†è¿™ä¸ªè¯·æ±‚ï¼Œè€Œä¸”è¿˜å°† topicId è¯·æ±‚å‚æ•°åœ¨ç±»å‹è½¬æ¢åç»‘å®šåˆ° 
+listBoardTopic() æ–¹æ³•çš„ topicId å…¥å‚ä¸Šã€‚è€Œ listBoardTopic() æ–¹æ³•çš„è¿”å›ç±»å‹æ˜¯ 
+Stringï¼Œå®ƒå°†è¢«è§£æä¸ºé€»è¾‘è§†å›¾çš„åç§°ã€‚ä¹Ÿå°±æ˜¯è¯´ Spring åœ¨å¦‚ä½•ç»™å¤„ç†æ–¹æ³•å…¥å‚è‡ªåŠ¨èµ‹å€¼ä»¥åŠå¦‚ä½•å°†å¤„ç†æ–¹æ³•è¿”å›å€¼è½¬åŒ–ä¸º ModelAndView 
+ä¸­çš„è¿‡ç¨‹ä¸­å­˜åœ¨ä¸€å¥—æ½œåœ¨çš„è§„åˆ™ï¼Œä¸ç†Ÿæ‚‰è¿™ä¸ªè§„åˆ™å°±ä¸å¯èƒ½å¾ˆå¥½åœ°å¼€å‘åŸºäºæ³¨è§£çš„è¯·æ±‚å¤„ç†æ–¹æ³•ï¼Œå› æ­¤äº†è§£è¿™ä¸ªæ½œåœ¨è§„åˆ™æ— ç–‘æˆä¸ºç†è§£ Spring MVC 
+æ¡†æ¶åŸºäºæ³¨è§£åŠŸèƒ½çš„æ ¸å¿ƒé—®é¢˜ã€‚ <BR><BR>æˆ‘ä»¬ä¸å¦¨ä»æœ€å¸¸è§çš„å¼€å§‹è¯´èµ·ï¼šè¯·æ±‚å¤„ç†æ–¹æ³•å…¥å‚çš„ç±»å‹å¯ä»¥æ˜¯ Java åŸºæœ¬æ•°æ®ç±»å‹æˆ– String 
+ç±»å‹ï¼Œè¿™æ—¶æ–¹æ³•å…¥å‚æŒ‰å‚æ•°ååŒ¹é…çš„åŸåˆ™ç»‘å®šåˆ° URL è¯·æ±‚å‚æ•°ï¼ŒåŒæ—¶è¿˜è‡ªåŠ¨å®Œæˆ String ç±»å‹çš„ URL 
+è¯·æ±‚å‚æ•°åˆ°è¯·æ±‚å¤„ç†æ–¹æ³•å‚æ•°ç±»å‹çš„è½¬æ¢ã€‚ä¸‹é¢ç»™å‡ºå‡ ä¸ªä¾‹å­ï¼š <BR><BR>listBoardTopic(int topicId)ï¼šå’Œ topicId URL 
+è¯·æ±‚å‚æ•°ç»‘å®šï¼› <BR>listBoardTopic(int topicId,String boardName)ï¼šåˆ†åˆ«å’Œ topicIdã€boardName 
+URL è¯·æ±‚å‚æ•°ç»‘å®šï¼› <BR>? <BR>ç‰¹åˆ«çš„ï¼Œå¦‚æœå…¥å‚æ˜¯åŸºæœ¬æ•°æ®ç±»å‹ï¼ˆå¦‚ intã€longã€float ç­‰ï¼‰ï¼ŒURL 
+è¯·æ±‚å‚æ•°ä¸­ä¸€å®šè¦æœ‰å¯¹åº”çš„å‚æ•°ï¼Œå¦åˆ™å°†æŠ›å‡º TypeMismatchException å¼‚å¸¸ï¼Œæç¤ºæ— æ³•å°† null è½¬æ¢ä¸ºåŸºæœ¬æ•°æ®ç±»å‹ã€‚ 
+<BR><BR>å¦å¤–ï¼Œè¯·æ±‚å¤„ç†æ–¹æ³•çš„å…¥å‚ä¹Ÿå¯ä»¥ä¸€ä¸ª JavaBeanï¼Œå¦‚ä¸‹é¢çš„ User å¯¹è±¡å°±å¯ä»¥ä½œä¸ºä¸€ä¸ªå…¥å‚ï¼š <BR><BR><BR>æ¸…å• 6. 
+User.javaï¼šä¸€ä¸ª JavaBean <BR>package com.baobaotao.web;public class User { private 
+int userId; private String userName; //çœç•¥get/setteræ–¹æ³• public String toString(){ 
+return this.userName +","+this.userId; }} <BR><BR><BR>ä¸‹é¢æ˜¯å°† User ä½œä¸º 
+listBoardTopic() è¯·æ±‚å¤„ç†æ–¹æ³•çš„å…¥å‚ï¼š <BR><BR><BR>æ¸…å• 7. ä½¿ç”¨ JavaBean ä½œä¸ºè¯·æ±‚å¤„ç†æ–¹æ³•çš„å…¥å‚ 
 <BR>@RequestMapping(params = "method=listBoardTopic") public String 
 listBoardTopic(int topicId,User user) { bbtForumService.getBoardTopics(topicId); 
 System.out.println("topicId:"+topicId); System.out.println("user:"+user); 
 System.out.println("call listBoardTopic method."); return "listTopic"; } 
-<BR><BR><BR>ÕâÊ±£¬Èç¹ûÎÒÃÇÊ¹ÓÃÒÔÏÂµÄ URL 
-ÇëÇó£ºhttp://localhost/bbtForum.do?method=listBoardTopic&amp;topicId=1&amp;userId=10&amp;userName=tom 
-<BR><BR>topicId URL ²ÎÊı½«°ó¶¨µ½ topicId Èë²ÎÉÏ£¬¶ø userId ºÍ userName URL ²ÎÊı½«°ó¶¨µ½ user ¶ÔÏóµÄ 
-userId ºÍ userName ÊôĞÔÖĞ¡£ºÍ URL ÇëÇóÖĞ²»ÔÊĞíÃ»ÓĞ topicId ²ÎÊı²»Í¬£¬ËäÈ» User µÄ userId 
-ÊôĞÔµÄÀàĞÍÊÇ»ù±¾Êı¾İÀàĞÍ£¬µ«Èç¹û URL ÖĞ²»´æÔÚ userId ²ÎÊı£¬Spring Ò²²»»á±¨´í£¬´ËÊ± user.userId ÖµÎª 0¡£Èç¹û User 
-¶ÔÏóÓµÓĞÒ»¸ö dept.deptId µÄ¼¶ÁªÊôĞÔ£¬ÄÇÃ´Ëü½«ºÍ dept.deptId URL ²ÎÊı°ó¶¨¡£ <BR><BR>Í¨¹ı×¢½âÖ¸¶¨°ó¶¨µÄ URL ²ÎÊı 
-<BR><BR>Èç¹ûÎÒÃÇÏë¸Ä±äÕâÖÖÄ¬ÈÏµÄ°´Ãû³ÆÆ¥ÅäµÄ²ßÂÔ£¬±ÈÈçÈÃ listBoardTopic(int topicId,User user) ÖĞµÄ 
-topicId °ó¶¨µ½ id Õâ¸ö URL ²ÎÊı£¬ÄÇÃ´¿ÉÒÔÍ¨¹ı¶ÔÈë²ÎÊ¹ÓÃ @RequestParam ×¢½âÀ´´ïµ½Ä¿µÄ£º <BR><BR>Çåµ¥ 8. Í¨¹ı 
-@RequestParam ×¢½âÖ¸¶¨ <BR><BR>package com.baobaotao.web;import 
+<BR><BR><  
+BR>è¿™æ—¶ï¼Œå¦‚æœæˆ‘ä»¬ä½¿ç”¨ä»¥ä¸‹çš„URLè¯·æ±‚ï¼šhttp://localhost/bbtForum.do?method=listBoardTopic&amp;topicId=1&amp;userId=10&amp;userName=tom 
+<BR><BR>topicId URL å‚æ•°å°†ç»‘å®šåˆ° topicId å…¥å‚ä¸Šï¼Œè€Œ userId å’Œ userName URL å‚æ•°å°†ç»‘å®šåˆ° user å¯¹è±¡çš„ 
+userId å’Œ userName å±æ€§ä¸­ã€‚å’Œ URL è¯·æ±‚ä¸­ä¸å…è®¸æ²¡æœ‰ topicId å‚æ•°ä¸åŒï¼Œè™½ç„¶ User çš„ userId 
+å±æ€§çš„ç±»å‹æ˜¯åŸºæœ¬æ•°æ®ç±»å‹ï¼Œä½†å¦‚æœ URL ä¸­ä¸å­˜åœ¨ userId å‚æ•°ï¼ŒSpring ä¹Ÿä¸ä¼šæŠ¥é”™ï¼Œæ­¤æ—¶ user.userId å€¼ä¸º 0ã€‚å¦‚æœ User 
+å¯¹è±¡æ‹¥æœ‰ä¸€ä¸ª dept.deptId çš„çº§è”å±æ€§ï¼Œé‚£ä¹ˆå®ƒå°†å’Œ dept.deptId URL å‚æ•°ç»‘å®šã€‚ <BR><BR>é€šè¿‡æ³¨è§£æŒ‡å®šç»‘å®šçš„ URL å‚æ•° 
+<BR><BR>å¦‚æœæˆ‘ä»¬æƒ³æ”¹å˜è¿™ç§é»˜è®¤çš„æŒ‰åç§°åŒ¹é…çš„ç­–ç•¥ï¼Œæ¯”å¦‚è®© listBoardTopic(int topicId,User user) ä¸­çš„ 
+topicId ç»‘å®šåˆ° id è¿™ä¸ª URL å‚æ•°ï¼Œé‚£ä¹ˆå¯ä»¥é€šè¿‡å¯¹å…¥å‚ä½¿ç”¨ @RequestParam æ³¨è§£æ¥è¾¾åˆ°ç›®çš„ï¼š <BR><BR>æ¸…å• 8. é€šè¿‡ 
+@RequestParam æ³¨è§£æŒ‡å®š <BR><BR>package com.baobaotao.web;import 
 org.springframework.web.bind.annotation.RequestMapping;import 
-org.springframework.web.bind.annotation.RequestParam;¡­@Controller@RequestMapping("/bbtForum.do")public 
+org.springframework.web.bind.annotation.RequestParam;â€¦@Controller@RequestMapping("/bbtForum.do")public 
 class BbtForumController { @RequestMapping(params = "method=listBoardTopic") 
 public String listBoardTopic(@RequestParam("id") int topicId,User user) { 
 bbtForumService.getBoardTopics(topicId); System.out.println("topicId:"+topicId); 
 System.out.println("user:"+user); System.out.println("call listBoardTopic 
-method."); return "listTopic"; }¡­} <BR><BR><BR>ÕâÀï£¬¶Ô listBoardTopic() ÇëÇó´¦Àí·½·¨µÄ 
-topicId Èë²Î±ê×¢ÁË @RequestParam("id") ×¢½â£¬ËùÒÔËü½«ºÍ id µÄ URL ²ÎÊı°ó¶¨¡£ <BR><BR>°ó¶¨Ä£ĞÍ¶ÔÏóÖĞÄ³¸öÊôĞÔ 
-<BR><BR>Spring 2.0 ¶¨ÒåÁËÒ»¸ö org.springframework.ui.ModelMap 
-Àà£¬Ëü×÷ÎªÍ¨ÓÃµÄÄ£ĞÍÊı¾İ³ĞÔØ¶ÔÏó£¬´«µİÊı¾İ¹©ÊÓÍ¼ËùÓÃ¡£ÎÒÃÇ¿ÉÒÔÔÚÇëÇó´¦Àí·½·¨ÖĞÉùÃ÷Ò»¸ö ModelMap ÀàĞÍµÄÈë²Î£¬Spring 
-»á½«±¾´ÎÇëÇóÄ£ĞÍ¶ÔÏóÒıÓÃÍ¨¹ı¸ÃÈë²Î´«µİ½øÀ´£¬ÕâÑù¾Í¿ÉÒÔÔÚÇëÇó´¦Àí·½·¨ÄÚ²¿·ÃÎÊÄ£ĞÍ¶ÔÏóÁË¡£À´¿´ÏÂÃæµÄÀı×Ó£º <BR><BR><BR>Çåµ¥ 9. Ê¹ÓÃ 
-ModelMap ·ÃÎÊÇëÊ¾¶ÔÓ¦µÄÒşº¬Ä£ĞÍ¶ÔÏó <BR>@RequestMapping(params = "method=listBoardTopic") 
+method."); return "listTopic"; }â€¦} <BR><BR><BR>è¿™é‡Œï¼Œå¯¹ listBoardTopic() è¯·æ±‚å¤„ç†æ–¹æ³•çš„ 
+topicId å…¥å‚æ ‡æ³¨äº† @RequestParam("id") æ³¨è§£ï¼Œæ‰€ä»¥å®ƒå°†å’Œ id çš„ URL å‚æ•°ç»‘å®šã€‚ <BR><BR>ç»‘å®šæ¨¡å‹å¯¹è±¡ä¸­æŸä¸ªå±æ€§ 
+<BR><BR>Spring 2.0 å®šä¹‰äº†ä¸€ä¸ª org.springframework.ui.ModelMap 
+ç±»ï¼Œå®ƒä½œä¸ºé€šç”¨çš„æ¨¡å‹æ•°æ®æ‰¿è½½å¯¹è±¡ï¼Œä¼ é€’æ•°æ®ä¾›è§†å›¾æ‰€ç”¨ã€‚æˆ‘ä»¬å¯ä»¥åœ¨è¯·æ±‚å¤„ç†æ–¹æ³•ä¸­å£°æ˜ä¸€ä¸ª ModelMap ç±»å‹çš„å…¥å‚ï¼ŒSpring 
+ä¼šå°†æœ¬æ¬¡è¯·æ±‚æ¨¡å‹å¯¹è±¡å¼•ç”¨é€šè¿‡è¯¥å…¥å‚ä¼ é€’è¿›æ¥ï¼Œè¿™æ ·å°±å¯ä»¥åœ¨è¯·æ±‚å¤„ç†æ–¹æ³•å†…éƒ¨è®¿é—®æ¨¡å‹å¯¹è±¡äº†ã€‚æ¥çœ‹ä¸‹é¢çš„ä¾‹å­ï¼š <BR><BR><BR>æ¸…å• 9. ä½¿ç”¨ 
+ModelMap è®¿é—®è¯·ç¤ºå¯¹åº”çš„éšå«æ¨¡å‹å¯¹è±¡ <BR>@RequestMapping(params =  "method=listBoardTopic") 
 public String listBoardTopic(@RequestParam("id")int topicId, User user,ModelMap 
 model) { bbtForumService.getBoardTopics(topicId); System.out.println("topicId:" 
-+ topicId); System.out.println("user:" + user); //¢Ù ½«user¶ÔÏóÒÔcurrUserÎª¼ü·ÅÈëµ½modelÖĞ 
++ topicId); System.out.println("user:" + user); //â‘  å°†userå¯¹è±¡ä»¥currUserä¸ºé”®æ”¾å…¥åˆ°modelä¸­ 
 model.addAttribute("currUser",user); return "listTopic"; } 
-<BR><BR><BR>¶ÔÓÚµ±´ÎÇëÇóËù¶ÔÓ¦µÄÄ£ĞÍ¶ÔÏóÀ´Ëµ£¬ÆäËù ÓĞÊôĞÔ¶¼½«´æ·Åµ½ request µÄÊôĞÔÁĞ±íÖĞ¡£ÏóÉÏÃæµÄÀı×Ó£¬ModelMap ÖĞµÄ 
-currUser ÊôĞÔ½«·Åµ½ request µÄÊôĞÔÁĞ±íÖĞ£¬ËùÒÔ¿ÉÒÔÔÚ JSP ÊÓÍ¼Ò³ÃæÖĞÍ¨¹ı request.getAttribute(¡°currUser¡±) 
-»òÕßÍ¨¹ı ${currUser} EL ±í´ïÊ½·ÃÎÊÄ£ĞÍ¶ÔÏóÖĞµÄ user ¶ÔÏó¡£´ÓÕâ¸ö½Ç¶ÈÉÏ¿´£¬ ModelMap Ïàµ±ÓÚÊÇÒ»¸öÏò request 
-ÊôĞÔÁĞ±íÖĞÌí¼Ó¶ÔÏóµÄÒ»Ìõ¹ÜµÀ£¬½èÓÉ ModelMap ¶ÔÏóµÄÖ§³Ö£¬ÎÒÃÇ¿ÉÒÔÔÚÒ»¸ö²»ÒÀÀµ Servlet API µÄ Controller ÖĞÏò request 
-ÖĞÌí¼ÓÊôĞÔ¡£ <BR><BR>ÔÚÄ¬ÈÏÇé¿öÏÂ£¬ModelMap ÖĞµÄÊôĞÔ×÷ÓÃÓòÊÇ request ¼¶±ğÊÇ£¬Ò²¾ÍÊÇËµ£¬µ±±¾´ÎÇëÇó½áÊøºó£¬ModelMap 
-ÖĞµÄÊôĞÔ½«Ïú»Ù¡£Èç¹ûÏ£ÍûÔÚ¶à¸öÇëÇóÖĞ¹²Ïí ModelMap ÖĞµÄÊôĞÔ£¬±ØĞë½«ÆäÊôĞÔ×ª´æµ½ session ÖĞ£¬ÕâÑù ModelMap µÄÊôĞÔ²Å¿ÉÒÔ±»¿çÇëÇó·ÃÎÊ¡£ 
-<BR><BR>Spring ÔÊĞíÎÒÃÇÓĞÑ¡ÔñµØÖ¸¶¨ ModelMap ÖĞµÄÄÄĞ©ÊôĞÔĞèÒª×ª´æµ½ session ÖĞ£¬ÒÔ±ãÏÂÒ»¸öÇëÇóÊô¶ÔÓ¦µÄ ModelMap 
-µÄÊôĞÔÁĞ±íÖĞ»¹ÄÜ·ÃÎÊµ½ÕâĞ©ÊôĞÔ¡£ÕâÒ»¹¦ÄÜÊÇÍ¨¹ıÀà¶¨Òå´¦±ê×¢ @SessionAttributes ×¢½âÀ´ÊµÏÖµÄ¡£Çë¿´ÏÂÃæµÄ´úÂë£º <BR><BR><BR>Çåµ¥ 
-10. Ê¹Ä£ĞÍ¶ÔÏóµÄÌØ¶¨ÊôĞÔ¾ßÓĞ Session ·¶Î§µÄ×÷ÓÃÓò <BR>package com.baobaotao.web;¡­import 
+<BR><BR><BR>å¯¹äºå½“æ¬¡è¯·æ±‚æ‰€å¯¹åº”çš„æ¨¡å‹å¯¹è±¡æ¥è¯´ï¼Œå…¶æ‰€ æœ‰å±æ€§éƒ½å°†å­˜æ”¾åˆ° request çš„å±æ€§åˆ—è¡¨ä¸­ã€‚è±¡ä¸Šé¢çš„ä¾‹å­ï¼ŒModelMap ä¸­çš„ 
+currUser å±æ€§å°†æ”¾åˆ° request çš„å±æ€§åˆ—è¡¨ä¸­ï¼Œæ‰€ä»¥å¯ä»¥åœ¨ JSP è§†å›¾é¡µé¢ä¸­é€šè¿‡ request.getAttribute(â€œcurrUserâ€) 
+æˆ–è€…é€šè¿‡ ${currUser} EL è¡¨è¾¾å¼è®¿é—®æ¨¡å‹å¯¹è±¡ä¸­çš„ user å¯¹è±¡ã€‚ä»è¿™ä¸ªè§’åº¦ä¸Šçœ‹ï¼Œ ModelMap ç›¸å½“äºæ˜¯ä¸€ä¸ªå‘ request 
+å±æ€§åˆ—è¡¨ä¸­æ·»åŠ å¯¹è±¡çš„ä¸€æ¡ç®¡é“ï¼Œå€Ÿç”± ModelMap å¯¹è±¡çš„æ”¯æŒï¼Œæˆ‘ä»¬å¯ä»¥åœ¨ä¸€ä¸ªä¸ä¾èµ– Servlet API çš„ Controller ä¸­å‘ request 
+ä¸­æ·»åŠ å±æ€§ã€‚ <BR><BR>åœ¨é»˜è®¤æƒ…å†µä¸‹ï¼ŒModelMap ä¸­çš„å±æ€§ä½œç”¨åŸŸæ˜¯ request çº§åˆ«æ˜¯ï¼Œä¹Ÿå°±æ˜¯è¯´ï¼Œå½“æœ¬æ¬¡è¯·æ±‚ç»“æŸåï¼ŒModelMap 
+ä¸­çš„å±æ€§å°†é”€æ¯ã€‚å¦‚æœå¸Œæœ›åœ¨å¤šä¸ªè¯·æ±‚ä¸­å…±äº« ModelMap ä¸­çš„å±æ€§ï¼Œå¿…é¡»å°†å…¶å±æ€§è½¬å­˜åˆ° session ä¸­ï¼Œè¿™æ · ModelMap çš„å±æ€§æ‰å¯ä»¥è¢«è·¨è¯·æ±‚è®¿é—®ã€‚ 
+<BR><BR>Spring å…è®¸æˆ‘ä»¬æœ‰é€‰æ‹©åœ°æŒ‡å®š ModelMap ä¸­çš„å“ªäº›å±æ€§éœ€è¦è½¬å­˜åˆ° session ä¸­ï¼Œä»¥ä¾¿ä¸‹ä¸€ä¸ªè¯·æ±‚å±å¯¹åº”çš„ ModelMap 
+çš„å±æ€§åˆ—è¡¨ä¸­è¿˜èƒ½è®¿é—®åˆ°è¿™äº›å±æ€§ã€‚è¿™ä¸€åŠŸèƒ½æ˜¯é€šè¿‡ç±»å®šä¹‰å¤„æ ‡æ³¨ @SessionAttributes æ³¨è§£æ¥å®ç°çš„ã€‚è¯·çœ‹ä¸‹é¢çš„ä»£ç ï¼š <BR><BR><BR>æ¸…å• 
+10. ä½¿æ¨¡å‹å¯¹è±¡çš„ç‰¹å®šå±æ€§å…·æœ‰ Session èŒƒå›´çš„ä½œç”¨åŸŸ <BR>package com.baobaotao.web;â€¦import 
 org.springframework.ui.ModelMap;import 
 org.springframework.web.bind.annotation.SessionAttributes;@Controller@RequestMapping("/bbtForum.do")@SessionAttributes("currUser") 
-//¢Ù½«ModelMapÖĞÊôĞÔÃûÎªcurrUserµÄÊôĞÔ//·Åµ½SessionÊôĞÔÁĞ±íÖĞ£¬ÒÔ±ãÕâ¸öÊôĞÔ¿ÉÒÔ¿çÇëÇó·ÃÎÊpublic class 
-BbtForumController {¡­ @RequestMapping(params = "method=listBoardTopic") public 
+//â‘ å°†ModelMapä¸­å±æ€§åä¸ºcurrUserçš„å±æ€§//æ”¾åˆ°Sessionå±æ€§åˆ—è¡¨ä¸­ï¼Œä»¥ä¾¿è¿™ä¸ªå±æ€§å¯ä»¥è·¨è¯·æ±‚è®¿é—®public class 
+BbtForumController {â€¦ @RequestMapping(params = "method=listBoardTopic") public 
 String listBoardTopic(@RequestParam("id")int topicId, User user,ModelMap model) 
 { bbtForumService.getBoardTopics(topicId); System.out.println("topicId:" + 
 topicId); System.out.println("user:" + user); 
-model.addAttribute("currUser",user); //¢ÚÏòModelMapÖĞÌí¼ÓÒ»¸öÊôĞÔ return "listTopic"; }} 
-<BR><BR><BR>ÎÒÃÇÔÚ ¢Ú ´¦Ìí¼ÓÁËÒ»¸ö ModelMap ÊôĞÔ£¬ÆäÊôĞÔÃûÎª currUser£¬¶ø ¢Ù ´¦Í¨¹ı @SessionAttributes 
-×¢½â½« ModelMap ÖĞÃûÎª currUser µÄÊôĞÔ·ÅÖÃµ½ Session ÖĞ£¬ËùÒÔÎÒÃÇ²»µ«¿ÉÒÔÔÚ listBoardTopic() ÇëÇóËù¶ÔÓ¦µÄ JSP 
-ÊÓÍ¼Ò³ÃæÖĞÍ¨¹ı request.getAttribute(¡°currUser¡±) ºÍ session.getAttribute(¡°currUser¡±) »ñÈ¡ 
-user ¶ÔÏó£¬»¹¿ÉÒÔÔÚÏÂÒ»¸öÇëÇóËù¶ÔÓ¦µÄ JSP ÊÓÍ¼Ò³ÃæÖĞÍ¨¹ı session.getAttribute(¡°currUser¡±) »ò 
-ModelMap#get(¡°currUser¡±) ·ÃÎÊµ½Õâ¸öÊôĞÔ¡£ <BR><BR>ÕâÀïÎÒÃÇ½ö½«Ò»¸ö ModelMap µÄÊôĞÔ·ÅÈë Session ÖĞ£¬ÆäÊµ 
-@SessionAttributes ÔÊĞíÖ¸¶¨¶à¸öÊôĞÔ¡£Äã¿ÉÒÔÍ¨¹ı×Ö·û´®Êı×éµÄ·½Ê½Ö¸¶¨¶à¸öÊôĞÔ£¬Èç 
-@SessionAttributes({¡°attr1¡±,¡±attr2¡±})¡£´ËÍâ£¬@SessionAttributes »¹¿ÉÒÔÍ¨¹ıÊôĞÔÀàĞÍÖ¸¶¨Òª session 
-»¯µÄ ModelMap ÊôĞÔ£¬Èç @SessionAttributes(types = User.class)£¬µ±È»Ò²¿ÉÒÔÖ¸¶¨¶à¸öÀà£¬Èç 
+model.addAttribute("currUser",user); //â‘¡å‘ModelMapä¸­æ·»åŠ ä¸€ä¸ªå±æ€§ return "listTopic"; }} 
+<BR><BR><BR>æˆ‘ä»¬åœ¨ â‘¡ å¤„æ·»åŠ äº†ä¸€ä¸ª ModelMap å±æ€§ï¼Œå…¶å±æ€§åä¸º currUserï¼Œè€Œ â‘  å¤„é€šè¿‡ @SessionAttributes 
+æ³¨è§£å°† ModelMap ä¸­åä¸º currUser çš„å±æ€§æ”¾ç½®åˆ° Session ä¸­ï¼Œæ‰€ä»¥æˆ‘ä»¬ä¸ä½†å¯ä»¥åœ¨ listBoardTopic() è¯·æ±‚æ‰€å¯¹åº”çš„ JSP 
+è§†å›¾é¡µé¢ä¸­é€šè¿‡ request.getAttribute(â€œcurrUserâ€) å’Œ session.getAttribute(â€œcurrUserâ€) è·å– 
+user å¯¹è±¡ï¼Œè¿˜å¯ä»¥åœ¨ä¸‹ä¸€ä¸ªè¯·æ±‚æ‰€å¯¹åº”çš„ JSP è§†å›¾é¡µé¢ä¸­é€šè¿‡ session.getAttribute(â€œcurrUserâ€) æˆ– 
+ModelMap#get(â€œcurrUserâ€) è®¿é—®åˆ°è¿™ä¸ªå±æ€§ã€‚ <BR><BR>è¿™é‡Œæˆ‘ä»¬ä»…å°†ä¸€ä¸ª ModelMap çš„å±æ€§æ”¾å…¥ Session ä¸­ï¼Œå…¶å® 
+@SessionAttributes å…è®¸æŒ‡å®šå¤šä¸ªå±æ€§ã€‚ä½ å¯ä»¥é€šè¿‡å­—ç¬¦ä¸²æ•°ç»„çš„æ–¹å¼æŒ‡å®šå¤šä¸ªå±æ€§ï¼Œå¦‚ 
+@SessionAttributes({â€œattr1â€,â€attr2â€})ã€‚æ­¤å¤–ï¼Œ@SessionAttributes è¿˜å¯ä»¥é€šè¿‡å±æ€§ç±»å‹æŒ‡å®šè¦ session 
+åŒ–çš„ ModelMap å±æ€§ï¼Œå¦‚ @SessionAttributes(types = User.class)ï¼Œå½“ç„¶ä¹Ÿå¯ä»¥æŒ‡å®šå¤šä¸ªç±»ï¼Œå¦‚ 
 @SessionAttributes(types = 
-{User.class,Dept.class})£¬»¹¿ÉÒÔÁªºÏÊ¹ÓÃÊôĞÔÃûºÍÊôĞÔÀàĞÍÖ¸¶¨£º@SessionAttributes(types = 
-{User.class,Dept.class},value={¡°attr1¡±,¡±attr2¡±})¡£ <BR><BR>ÉÏÃæ 
-½²ÊöÁËÈçºÎÍùModelMapÖĞ·ÅÖÃÊôĞÔÒÔ¼°ÈçºÎÊ¹ModelMapÖĞµÄÊôĞÔÓµÓĞSessionÓòµÄ×÷ÓÃ·¶Î§¡£³ıÁËÔÚJSPÊÓÍ¼Ò³ÃæÖĞÍ¨¹ı´«Í³µÄ·½·¨·ÃÎÊ 
-ModelMapÖĞµÄÊôĞÔÍâ£¬¶ÁÕßÅóÓÑ¿ÉÄÜ»áÎÊ£ºÊÇ·ñ¿ÉÒÔ½«ModelMapÖĞµÄÊôĞÔ°ó¶¨µ½ÇëÇó´¦Àí·½·¨µÄÈë²ÎÖĞÄØ£¿´ğ°¸ÊÇ¿Ï¶¨µÄ¡£SpringÎª´ËÌá¹© 
-ÁËÒ»¸ö@ModelAttributeµÄ×¢½â£¬ÏÂÃæÊÇÊ¹ÓÃ@ModelAttribute×¢½âµÄÀı×Ó£º <BR><BR>Çåµ¥ 11. Ê¹Ä£ĞÍ¶ÔÏóµÄÌØ¶¨ÊôĞÔ¾ßÓĞ 
-Session ·¶Î§µÄ×÷ÓÃÓò <BR><BR>package com.baobaotao.web;import 
+{User.class,Dept.class})ï¼Œè¿˜å¯ä»¥è”åˆä½¿ç”¨å±æ€§åå’Œå±æ€§ç±»å‹æŒ‡å®šï¼š@SessionAttributes(types = 
+{User.class,Dept.class},value={â€œattr1â€,â€attr2â€})ã€‚ <BR><BR>ä¸Šé¢ 
+è®²è¿°äº†å¦‚ä½•å¾€ModelMapä¸­æ”¾ç½®å±æ€§ä»¥åŠå¦‚ä½•ä½¿ModelMapä¸­çš„å±æ€§æ‹¥æœ‰SessionåŸŸçš„ä½œç”¨èŒƒå›´ã€‚é™¤äº†åœ¨JSPè§†å›¾é¡µé¢ä¸­é€šè¿‡ä¼ ç»Ÿçš„æ–¹æ³•è®¿é—® 
+ModelMapä¸­çš„å±æ€§å¤–ï¼Œè¯»è€…æœ‹å‹å¯èƒ½ä¼šé—®ï¼šæ˜¯å¦å¯ä»¥å°†ModelMapä¸­çš„å±æ€§ç»‘å®šåˆ°è¯·æ±‚å¤„ç†æ–¹æ³•çš„å…¥å‚ä¸­å‘¢ï¼Ÿç­”æ¡ˆæ˜¯è‚¯å®šçš„ã€‚Springä¸ºæ­¤æä¾› 
+äº†ä¸€ä¸ª@ModelAttributeçš„æ³¨è§£ï¼Œä¸‹é¢æ˜¯ä½¿ç”¨@ModelAttributeæ³¨è§£çš„ä¾‹å­ï¼š <BR><BR>æ¸…å• 11. ä½¿æ¨¡å‹å¯¹è±¡çš„ç‰¹å®šå±æ€§å…·æœ‰ 
+Session èŒƒå›´çš„ä½œç”¨åŸŸ <BR><BR>package com.baobaotao.web;import 
 com.baobaotao.service.BbtForumService;import 
 org.springframework.beans.factory.annotation.Autowired;import 
 org.springframework.stereotype.Controller;import 
@@ -272,70 +273,73 @@ org.springframework.web.bind.annotation.SessionAttributes;import
 org.springframework.web.bind.annotation.ModelAttribute;import 
 javax.servlet.http.HttpServletRequest;import 
 javax.servlet.http.HttpSession;@Controller@RequestMapping("/bbtForum.do")@SessionAttributes("currUser") 
-//¢ÙÈÃModelMapµÄcurrUserÊôĞÔÓµÓĞsession¼¶×÷ÓÃÓòpublic class BbtForumController { 
+//â‘ è®©ModelMapçš„currUserå±æ€§æ‹¥æœ‰sessionçº§ä½œç”¨åŸŸpublic class BbtForumController { 
 @Autowiredprivate BbtForumService bbtForumService; @RequestMapping(params = 
 "method=listBoardTopic") public String listBoardTopic(@RequestParam("id")int 
 topicId, User user,ModelMap model) { bbtForumService.getBoardTopics(topicId); 
 System.out.println("topicId:" + topicId); System.out.println("user:" + user); 
-model.addAttribute("currUser",user); //¢ÚÏòModelMapÖĞÌí¼ÓÒ»¸öÊôĞÔ return "listTopic"; } 
-@RequestMapping(params = "method=listAllBoard") //¢Û½«ModelMapÖĞµÄpublic String 
-listAllBoard(@ModelAttribute("currUser") User user) { //currUserÊôĞÔ°ó¶¨µ½userÈë²ÎÖĞ¡£ 
+model.addAttribute("currUser",user); //â‘¡å‘ModelMapä¸­æ·»åŠ ä¸€ä¸ªå±æ€§ return "listTopic"; } 
+@RequestMapping(params = "method=listAllBoard") //â‘¢å°†ModelMapä¸­çš„public String 
+listAllBoard(@ModelAttribute("currUser") User user) { //currUserå±æ€§ç»‘å®šåˆ°userå…¥å‚ä¸­ã€‚ 
 bbtForumService.getAllBoard(); System.out.println("user:"+user); return 
-"listBoard"; }} <BR><BR><BR>ÔÚ ¢Ú ´¦£¬ÎÒÃÇÏò ModelMap ÖĞÌí¼ÓÒ»¸öÃûÎª currUser µÄÊôĞÔ£¬¶ø ¢Ù ÍâµÄ×¢½âÊ¹Õâ¸ö 
-currUser ÊôĞÔÓµÓĞÁË session ¼¶µÄ×÷ÓÃÓò¡£ËùÒÔ£¬ÎÒÃÇ¿ÉÒÔÔÚ ¢Û ´¦Í¨¹ı @ModelAttribute ×¢½â½« ModelMap ÖĞµÄ 
-currUser ÊôĞÔ°ó¶¨ÒÔÇëÇó´¦Àí·½·¨µÄ user Èë²ÎÖĞ¡£ <BR><BR>ËùÒÔµ±ÎÒÃÇÏÈµ÷ÓÃÒÔÏÂ URL ÇëÇó£º 
-http://localhost/bbtForum.do?method=listBoardTopic&amp;id=1&amp;userName=tom&amp;dept.deptId=12 
-<BR><BR>ÒÔÖ´ĞĞlistBoardTopic()ÇëÇó´¦Àí·½·¨£¬È»ºóÔÙ·ÃÎÊÒÔÏÂURL£º 
-http://localhost/sample/bbtForum.do?method=listAllBoard <BR><BR>Äã½«¿ÉÒÔ¿´µ½ 
-listAllBoard() µÄ user Èë²ÎÒÑ¾­³É¹¦°ó¶¨µ½ listBoardTopic() ÖĞ×¢²áµÄ session ¼¶µÄ currUser ÊôĞÔÉÏÁË¡£ 
-<BR><BR>ÇëÇó´¦Àí·½·¨µÄÇ©Ãû¹æÔ¼ <BR><BR>·½·¨Èë²Î <BR><BR>ÎÒÃÇÖªµÀ±ê×¢ÁË @RequestMapping ×¢½âµÄ Controller 
-·½·¨¾Í³ÉÎªÁËÇëÇó´¦Àí·½·¨£¬Spring MVC ÔÊĞí¼«ÆäÁé»îµÄÇëÇó´¦Àí·½·¨Ç©Ãû·½Ê½¡£¶ÔÓÚ·½·¨Èë²ÎÀ´Ëµ£¬ËüÔÊĞí¶àÖÖÀàĞÍµÄÈë²Î£¬Í¨¹ıÏÂ±í½øĞĞËµÃ÷£º 
-<BR><BR>ÇëÇó´¦Àí·½·¨Èë²ÎµÄ¿ÉÑ¡ÀàĞÍ ËµÃ÷ <BR>Java »ù±¾Êı¾İÀàĞÍºÍ String Ä¬ÈÏÇé¿öÏÂ½«°´Ãû³ÆÆ¥ÅäµÄ·½Ê½°ó¶¨µ½ URL ²ÎÊıÉÏ£¬¿ÉÒÔÍ¨¹ı 
-@RequestParam ×¢½â¸Ä±äÄ¬ÈÏµÄ°ó¶¨¹æÔò <BR>request/response/session ¼È¿ÉÒÔÊÇ Servlet API µÄÒ²¿ÉÒÔÊÇ 
-Portlet API ¶ÔÓ¦µÄ¶ÔÏó£¬Spring »á½«ËüÃÇ°ó¶¨µ½ Servlet ºÍ Portlet ÈİÆ÷µÄÏàÓ¦¶ÔÏóÉÏ 
-<BR>org.springframework.web.context.request.WebRequest ÄÚ²¿°üº¬ÁË request ¶ÔÏó 
-<BR>java.util.Locale °ó¶¨µ½ request ¶ÔÓ¦µÄ Locale ¶ÔÏóÉÏ 
-<BR>java.io.InputStream/java.io.Reader ¿ÉÒÔ½è´Ë·ÃÎÊ request µÄÄÚÈİ 
-<BR>java.io.OutputStream / java.io.Writer ¿ÉÒÔ½è´Ë²Ù×÷ response µÄÄÚÈİ <BR>ÈÎºÎ±ê×¢ÁË 
-@RequestParam ×¢½âµÄÈë²Î ±»±ê×¢ @RequestParam ×¢½âµÄÈë²Î½«°ó¶¨µ½ÌØ¶¨µÄ request ²ÎÊıÉÏ¡£ 
-<BR>java.util.Map / org.springframework.ui.ModelMap Ëü°ó¶¨ Spring MVC 
-¿ò¼ÜÖĞÃ¿¸öÇëÇóËù´´½¨µÄÇ±ÔÚµÄÄ£ĞÍ¶ÔÏó£¬ËüÃÇ¿ÉÒÔ±» Web ÊÓÍ¼¶ÔÏó·ÃÎÊ£¨Èç JSP£© <BR>ÃüÁî/±íµ¥¶ÔÏó£¨×¢£ºÒ»°ã³Æ°ó¶¨Ê¹ÓÃ HTTP GET ·¢ËÍµÄ 
-URL ²ÎÊıµÄ¶ÔÏóÎªÃüÁî¶ÔÏó£¬¶ø³Æ°ó¶¨Ê¹ÓÃ HTTP POST ·¢ËÍµÄ URL ²ÎÊıµÄ¶ÔÏóÎª±íµ¥¶ÔÏó£© ËüÃÇµÄÊôĞÔ½«ÒÔÃû³ÆÆ¥ÅäµÄ¹æÔò°ó¶¨µ½ URL 
-²ÎÊıÉÏ£¬Í¬Ê±Íê³ÉÀàĞÍµÄ×ª»»¡£¶øÀàĞÍ×ª»»µÄ¹æÔò¿ÉÒÔÍ¨¹ı @InitBinder ×¢½â»òÍ¨¹ı HandlerAdapter µÄÅäÖÃ½øĞĞµ÷Õû 
+"listBoard"; }} <BR><BR><BR>åœ¨ â‘¡ å¤„ï¼Œæˆ‘ä»¬å‘ ModelMap ä¸­æ·»åŠ ä¸€ä¸ªåä¸º currUser çš„å±æ€§ï¼Œè€Œ â‘  å¤–çš„æ³¨è§£ä½¿è¿™ä¸ª 
+currUser å±æ€§æ‹¥æœ‰äº† session çº§çš„ä½œç”¨åŸŸã€‚æ‰€ä»¥ï¼Œæˆ‘ä»¬å¯ä»¥åœ¨ â‘¢ å¤„é€šè¿‡ @ModelAttribute æ³¨è§£å°† ModelMap ä¸­çš„ 
+currUser å±æ€§ç»‘å®šä»¥è¯·æ±‚å¤„ç†æ–¹æ³•çš„ user å…¥å‚ä¸­ã€‚ <BR><BR>   
+æ‰€ä»¥å½“æˆ‘ä»¬å…ˆè°ƒç”¨ä»¥ä¸‹URLè¯·æ±‚ï¼šhttp://localhost/bbtForum.do?method=listBoardTopic&amp;id=1&amp;userName=tom&amp;dept.deptId=12 
+<BR><BR>ä»¥æ‰§è¡ŒlistBoardTopic()è¯·æ±‚å¤„ç†æ–¹æ³•ï¼Œç„¶åå†è®¿é—®ä»¥ä¸‹URLï¼š 
+http://localhost/sample/bbtForum.do?method=listAllBoard <BR><BR>ä½ å°†å¯ä»¥çœ‹åˆ° 
+listAllBoard() çš„ user å…¥å‚å·²ç»æˆåŠŸç»‘å®šåˆ° listBoardTopic() ä¸­æ³¨å†Œçš„ session çº§çš„ currUser å±æ€§ä¸Šäº†ã€‚ 
+<BR><BR>è¯·æ±‚å¤„ç†æ–¹æ³•çš„ç­¾åè§„çº¦ <BR><BR>æ–¹æ³•å…¥å‚ <BR><BR>æˆ‘ä»¬çŸ¥é“æ ‡æ³¨äº† @RequestMapping æ³¨è§£çš„ Controller 
+æ–¹æ³•å°±æˆä¸ºäº†è¯·æ±‚å¤„ç†æ–¹æ³•ï¼ŒSpring MVC å…è®¸æå…¶çµæ´»çš„è¯·æ±‚å¤„ç†æ–¹æ³•ç­¾åæ–¹å¼ã€‚å¯¹äºæ–¹æ³•å…¥å‚æ¥è¯´ï¼Œå®ƒå…è®¸å¤šç§ç±»å‹çš„å…¥å‚ï¼Œé€šè¿‡ä¸‹è¡¨è¿›è¡Œè¯´æ˜ï¼š 
+<BR><BR>è¯·æ±‚å¤„ç†æ–¹æ³•å…¥å‚çš„å¯é€‰ç±»å‹ è¯´æ˜ <BR>Java åŸºæœ¬æ•°æ®ç±»å‹å’Œ String é»˜è®¤æƒ…å†µä¸‹å°†æŒ‰åç§°åŒ¹é…çš„æ–¹å¼ç»‘å®šåˆ° URL å‚æ•°ä¸Šï¼Œå¯ä»¥é€šè¿‡ 
+@RequestParam æ³¨è§£æ”¹å˜é»˜è®¤çš„ç»‘å®šè§„åˆ™ <BR>request/response/session æ—¢å¯ä»¥æ˜¯ Servlet API çš„ä¹Ÿå¯ä»¥æ˜¯ 
+Portlet API å¯¹åº”çš„å¯¹è±¡ï¼ŒSpring ä¼šå°†å®ƒä»¬ç»‘å®šåˆ° Servlet å’Œ Portlet å®¹å™¨çš„ç›¸åº”å¯¹è±¡ä¸Š 
+<BR>org.springframework.web.context.request.WebRequest å†…éƒ¨åŒ…å«äº† request å¯¹è±¡ 
+<BR>java.util.Locale ç»‘å®šåˆ° request å¯¹åº”çš„ Locale å¯¹è±¡ä¸Š 
+<BR>java.io.InputStream/java.io.Reader å¯ä»¥å€Ÿæ­¤è®¿é—® request çš„å†…å®¹ 
+<BR>java.io.OutputStream / java.io.Writer å¯ä»¥å€Ÿæ­¤æ“ä½œ response çš„å†…å®¹ <BR>ä»»ä½•æ ‡æ³¨äº† 
+@RequestParam æ³¨è§£çš„å…¥å‚ è¢«æ ‡æ³¨ @RequestParam æ³¨è§£çš„å…¥å‚å°†ç»‘å®šåˆ°ç‰¹å®šçš„ request å‚æ•°ä¸Šã€‚ 
+<BR>java.util.Map / org.springframework.ui.ModelMap å®ƒç»‘å®š Spring MVC 
+æ¡†æ¶ä¸­æ¯ä¸ªè¯·æ±‚æ‰€åˆ›å»ºçš„æ½œåœ¨çš„æ¨¡å‹å¯¹è±¡ï¼Œå®ƒä»¬å¯ä»¥è¢« Web è§†å›¾å¯¹è±¡è®¿é—®ï¼ˆå¦‚ JSPï¼‰ <BR>å‘½ä»¤/è¡¨å•å¯¹è±¡ï¼ˆæ³¨ï¼šä¸€èˆ¬ç§°ç»‘å®šä½¿ç”¨ HTTP GET å‘é€çš„ 
+URL å‚æ•°çš„å¯¹è±¡ä¸ºå‘½ä»¤å¯¹è±¡ï¼Œè€Œç§°ç»‘å®šä½¿ç”¨ HTTP POST å‘é€çš„ URL å‚æ•°çš„å¯¹è±¡ä¸ºè¡¨å•å¯¹è±¡ï¼‰ å®ƒä»¬çš„å±æ€§å°†ä»¥åç§°åŒ¹é…çš„è§„åˆ™ç»‘å®šåˆ° URL 
+å‚æ•°ä¸Šï¼ŒåŒæ—¶å®Œæˆç±»å‹çš„è½¬æ¢ã€‚è€Œç±»å‹è½¬æ¢çš„è§„åˆ™å¯ä»¥é€šè¿‡ @InitBinder æ³¨è§£æˆ–é€šè¿‡ HandlerAdapter çš„é…ç½®è¿›è¡Œè°ƒæ•´ 
 <BR>org.springframework.validation.Errors / 
 org.springframework.validation.BindingResult 
-ÎªÊôĞÔÁĞ±íÖĞµÄÃüÁî/±íµ¥¶ÔÏóµÄĞ£Ñé½á¹û£¬×¢Òâ¼ìÑé½á¹û²ÎÊı±ØĞë½ô¸úÔÚÃüÁî/±íµ¥¶ÔÏóµÄºóÃæ 
-<BR>rg.springframework.web.bind.support.SessionStatus ¿ÉÒÔÍ¨¹ı¸ÃÀàĞÍ status 
-¶ÔÏóÏÔÊ½½áÊø±íµ¥µÄ´¦Àí£¬ÕâÏàµ±ÓÚ´¥·¢ session Çå³ıÆäÖĞµÄÍ¨¹ı @SessionAttributes ¶¨ÒåµÄÊôĞÔ <BR><BR>Spring MVC 
-¿ò¼ÜµÄÒ×ÓÃÖ®´¦ÔÚÓÚ£¬Äã¿ÉÒÔ°´ÈÎÒâË³Ğò¶¨ÒåÇëÇó´¦Àí·½·¨µÄÈë²Î£¨³ıÁË Errors ºÍ BindingResult 
-±ØĞë½ô¸úÔÚÃüÁî¶ÔÏó/±íµ¥²ÎÊıºóÃæÒÔÍâ£©£¬Spring MVC »á¸ù¾İ·´Éä»úÖÆ×Ô¶¯½«¶ÔÓ¦µÄ¶ÔÏóÍ¨¹ıÈë²Î´«µİ¸øÇëÇó´¦Àí·½·¨¡£ÕâÖÖ»úÖÆÈÃ¿ª·¢ÕßÍêÈ«¿ÉÒÔ²»ÒÀÀµ 
-Servlet API ¿ª·¢¿ØÖÆ²ãµÄ³ÌĞò£¬µ±ÇëÇó´¦Àí·½·¨ĞèÒªÌØ¶¨µÄ¶ÔÏóÊ±£¬½ö½öĞèÒªÔÚ²ÎÊıÁĞ±íÖĞÉùÃ÷Èë²Î¼´¿É£¬²»ĞèÒª¿¼ÂÇÈçºÎ»ñÈ¡ÕâĞ©¶ÔÏó£¬Spring MVC 
-¿ò¼Ü¾ÍÏóÒ»¸ö´ó¹Ü¼ÒÒ»Ñù¡°²»´ÇĞÁ¿à¡±µØÎªÎÒÃÇ×¼±¸ºÃÁËËùĞèµÄÒ»ÇĞ¡£ÏÂÃæÑİÊ¾Ò»ÏÂÊ¹ÓÃ SessionStatus µÄÀı×Ó£º <BR><BR><BR>Çåµ¥ 12. Ê¹ÓÃ 
-SessionStatus ¿ØÖÆ Session ¼¶±ğµÄÄ£ĞÍÊôĞÔ <BR>@RequestMapping(method = 
+ä¸ºå±æ€§åˆ—è¡¨ä¸­çš„å‘½ä»¤/è¡¨å•å¯¹è±¡çš„æ ¡éªŒç»“æœï¼Œæ³¨æ„æ£€éªŒç»“æœå‚æ•°å¿…é¡»ç´§è·Ÿåœ¨å‘½ä»¤/è¡¨å•å¯¹è±¡çš„åé¢ 
+<BR>rg.springframework.web.bind.support.SessionStatus å¯ä»¥é€šè¿‡è¯¥ç±»å‹ status 
+å¯¹è±¡æ˜¾å¼ç»“æŸè¡¨å•çš„å¤„ç†ï¼Œè¿™ç›¸å½“äºè§¦å‘ session æ¸…é™¤å…¶ä¸­çš„é€šè¿‡ @SessionAttributes å®šä¹‰çš„å±æ€§ <BR><BR>Spring MVC 
+æ¡†æ¶çš„æ˜“ç”¨ä¹‹å¤„åœ¨äºï¼Œä½ å¯ä»¥æŒ‰ä»»æ„é¡ºåºå®šä¹‰è¯·æ±‚å¤„ç†æ–¹æ³•çš„å…¥å‚ï¼ˆé™¤äº† Errors å’Œ BindingResult 
+å¿…é¡»ç´§è·Ÿåœ¨å‘½ä»¤å¯¹è±¡/è¡¨å•å‚æ•°åé¢ä»¥å¤–ï¼‰ï¼ŒSpring MVC ä¼šæ ¹æ®åå°„æœºåˆ¶è‡ªåŠ¨å°†å¯¹åº”çš„å¯¹è±¡é€šè¿‡å…¥å‚ä¼ é€’ç»™è¯·æ±‚å¤„ç†æ–¹æ³•ã€‚è¿™ç§æœºåˆ¶è®©å¼€å‘è€…å®Œå…¨å¯ä»¥ä¸ä¾èµ– 
+Servlet API å¼€å‘æ§åˆ¶å±‚çš„ç¨‹åºï¼Œå½“è¯·æ±‚å¤„ç†æ–¹æ³•éœ€è¦ç‰¹å®šçš„å¯¹è±¡æ—¶ï¼Œä»…ä»…éœ€è¦åœ¨å‚æ•°åˆ—è¡¨ä¸­å£°æ˜å…¥å‚å³å¯ï¼Œä¸éœ€è¦è€ƒè™‘å¦‚ä½•è·å–è¿™äº›å¯¹è±¡ï¼ŒSpring MVC 
+æ¡†æ¶å°±è±¡ä¸€ä¸ªå¤§ç®¡å®¶ä¸€æ ·â€œä¸è¾è¾›è‹¦â€åœ°ä¸ºæˆ‘ä»¬å‡†å¤‡å¥½äº†æ‰€éœ€çš„ä¸€åˆ‡ã€‚ä¸‹é¢æ¼”ç¤ºä¸€ä¸‹ä½¿ç”¨ SessionStatus çš„ä¾‹å­ï¼š <BR><BR><BR>æ¸…å• 12. ä½¿ç”¨ 
+SessionStatus æ§åˆ¶ Session çº§åˆ«çš„æ¨¡å‹å±æ€§ <BR>@RequestMapping(method = 
 RequestMethod.POST)public String processSubmit(@ModelAttribute Owner owner, 
-BindingResult result, SessionStatus status) {//&lt;¡ª¡ª¢Ù new 
+BindingResult result, SessionStatus status) {//&lt;â€”â€”â‘  new 
 OwnerValidator().validate(owner, result); if (result.hasErrors()) { return 
 "ownerForm"; } else { this.clinic.storeOwner(owner); 
-status.setComplete();//&lt;¡ª¡ª¢Ú return "redirect:owner.do?ownerId=" + 
-owner.getId(); }} <BR><BR><BR>processSubmit() ·½·¨ÖĞµÄ owner ±íµ¥¶ÔÏó½«°ó¶¨µ½ ModelMap 
-µÄ¡°owner¡±ÊôĞÔÖĞ£¬result ²ÎÊıÓÃÓÚ´æ·Å¼ìÑé owner ½á¹ûµÄ¶ÔÏó£¬¶ø status ÓÃÓÚ¿ØÖÆ±íµ¥´¦ÀíµÄ×´Ì¬¡£ÔÚ ¢Ú ´¦£¬ÎÒÃÇÍ¨¹ıµ÷ÓÃ 
-status.setComplete() ·½·¨£¬¸Ã Controller ËùÓĞ·ÅÔÚ session ¼¶±ğµÄÄ£ĞÍÊôĞÔÊı¾İ½«´Ó session ÖĞÇå¿Õ¡£ 
-<BR><BR>·½·¨·µ»Ø²ÎÊı <BR><BR>ÔÚµÍ°æ±¾µÄ Spring MVC ÖĞ£¬ÇëÇó´¦Àí·½·¨µÄ·µ»ØÖµÀàĞÍ¶¼±ØĞëÊÇ ModelAndView¡£¶øÔÚ 
-Spring 2.5 ÖĞ£¬ÄãÓµÓĞ¶àÖÖÁé»îµÄÑ¡Ôñ¡£Í¨¹ıÏÂ±í½øĞĞËµÃ÷£º <BR><BR>ÇëÇó´¦Àí·½·¨Èë²ÎµÄ¿ÉÑ¡ÀàĞÍ ËµÃ÷ <BR>void 
-´ËÊ±Âß¼­ÊÓÍ¼ÃûÓÉÇëÇó´¦Àí·½·¨¶ÔÓ¦µÄ URL È·¶¨£¬ÈçÒÔÏÂµÄ·½·¨£º <BR><BR>@RequestMapping("/welcome.do")public 
-void welcomeHandler() {} <BR><BR><BR>¶ÔÓ¦µÄÂß¼­ÊÓÍ¼ÃûÎª¡°welcome¡± <BR><BR>String 
-´ËÊ±Âß¼­ÊÓÍ¼ÃûÎª·µ»ØµÄ×Ö·û£¬ÈçÒÔÏÂµÄ·½·¨£º <BR><BR>@RequestMapping(method = RequestMethod.GET)public 
-String setupForm(@RequestParam("ownerId") int ownerId, ModelMap model) { Owner 
-owner = this.clinic.loadOwner(ownerId); model.addAttribute(owner); return 
-"ownerForm";} <BR><BR><BR>¶ÔÓ¦µÄÂß¼­ÊÓÍ¼ÃûÎª¡°ownerForm¡± 
-<BR><BR>org.springframework.ui.ModelMap ºÍ·µ»ØÀàĞÍÎª void Ò»Ñù£¬Âß¼­ÊÓÍ¼ÃûÈ¡¾öÓÚ¶ÔÓ¦ÇëÇóµÄ URL£¬ÈçÏÂÃæµÄÀı×Ó£º 
+status.setComplete();//&lt;â€”â€”â‘¡ return "redirect:owner.do?ownerId=" + 
+owner.getId(); }} <BR><BR><BR>processSubmit() æ–¹æ³•ä¸­çš„ owner è¡¨å•å¯¹è±¡å°†ç»‘å®šåˆ° ModelMap 
+çš„â€œownerâ€å±æ€§ä¸­ï¼Œresult å‚æ•°ç”¨äºå­˜æ”¾æ£€éªŒ owner ç»“æœçš„å¯¹è±¡ï¼Œè€Œ status ç”¨äºæ§åˆ¶è¡¨å•å¤„ç†çš„çŠ¶æ€ã€‚åœ¨ â‘¡ å¤„ï¼Œæˆ‘ä»¬é€šè¿‡è°ƒç”¨ 
+status.setComplete() æ–¹æ³•ï¼Œè¯¥ Controller æ‰€æœ‰æ”¾åœ¨ session çº§åˆ«çš„æ¨¡å‹å±æ€§æ•°æ®å°†ä» session ä¸­æ¸…ç©ºã€‚ 
+<BR><BR>æ–¹æ³•è¿”å›å‚æ•° <BR><BR>åœ¨ä½ç‰ˆæœ¬çš„ Spring MVC ä¸­ï¼Œè¯·æ±‚å¤„ç†æ–¹æ³•çš„è¿”å›å€¼ç±»å‹éƒ½å¿…é¡»æ˜¯ ModelAndViewã€‚è€Œåœ¨ 
+Spring 2.5 ä¸­ï¼Œä½ æ‹¥æœ‰å¤šç§çµæ´»çš„é€‰æ‹©ã€‚é€šè¿‡ä¸‹è¡¨è¿›è¡Œè¯´æ˜ï¼š <BR><BR>è¯·æ±‚å¤„ç†æ–¹æ³•å…¥å‚çš„å¯é€‰ç±»å‹ è¯´æ˜ <BR>void 
+æ­¤æ—¶é€»è¾‘è§†å›¾åç”±è¯·æ±‚å¤„ç†æ–¹æ³•å¯¹åº”çš„ URL ç¡®å®šï¼Œå¦‚ä»¥ä¸‹çš„æ–¹æ³•ï¼š <BR><BR>@RequestMapping("/welcome.do")public 
+void welcomeHandler() {} <BR><BR><BR>å¯¹åº”çš„é€»è¾‘è§†å›¾åä¸ºâ€œwelcomeâ€ <BR><BR>String 
+æ­¤æ—¶é€»è¾‘è§†å›¾åä¸ºè¿”å›çš„å­—ç¬¦ï¼Œå¦‚ä»¥ä¸‹çš„æ–¹æ³•ï¼š <BR><BR>@RequestMapping(method = RequestMethod.GET)public String 
+setupForm(@RequestParam("ownerId") int ownerId, ModelMap model) { Owner owner =  
+        
+  this.clinic.loadOwner(ownerId); model.addAttribute(owner); return 
+"ownerForm";} <BR><BR><BR>å¯¹åº”çš„é€»è¾‘è§†å›¾åä¸ºâ€œownerFormâ€ 
+<BR><BR>org.springframework.ui.ModelMap å’Œè¿”å›ç±»å‹ä¸º void ä¸€æ ·ï¼Œé€»è¾‘è§†å›¾åå–å†³äºå¯¹åº”è¯·æ±‚çš„ URLï¼Œå¦‚ä¸‹é¢çš„ä¾‹å­ï¼š 
 <BR><BR>@RequestMapping("/vets.do")public ModelMap vetsHandler() { return new 
-ModelMap(this.clinic.getVets());} <BR><BR><BR>¶ÔÓ¦µÄÂß¼­ÊÓÍ¼ÃûÎª¡°vets¡±£¬·µ»ØµÄ ModelMap 
-½«±»×÷ÎªÇëÇó¶ÔÓ¦µÄÄ£ĞÍ¶ÔÏó£¬¿ÉÒÔÔÚ JSP ÊÓÍ¼Ò³ÃæÖĞ·ÃÎÊµ½¡£ <BR><BR>ModelAndView µ±È»»¹¿ÉÒÔÊÇ´«Í³µÄ ModelAndView¡£ 
-<BR><BR>Ó¦¸ÃËµÊ¹ÓÃ String ×÷ÎªÇëÇó´¦Àí·½·¨µÄ·µ»ØÖµÀàĞÍÊÇ±È½ÏÍ¨ÓÃµÄ·½·¨£¬ÕâÑù·µ»ØµÄÂß¼­ÊÓÍ¼Ãû²»»áºÍÇëÇó URL 
-°ó¶¨£¬¾ßÓĞºÜ´óµÄÁé»îĞÔ£¬¶øÄ£ĞÍÊı¾İÓÖ¿ÉÒÔÍ¨¹ı ModelMap ¿ØÖÆ¡£µ±È»Ö±½ÓÊ¹ÓÃ´«Í³µÄ ModelAndView Ò²²»Ê§ÎªÒ»¸öºÃµÄÑ¡Ôñ¡£</DIV><!--EndFragment--></DIV>
+ModelMap(this.clinic.getVets());} <BR><BR><BR>å¯¹åº”çš„é€»è¾‘è§†å›¾åä¸ºâ€œvetsâ€ï¼Œè¿”å›çš„ ModelMap 
+å°†è¢«ä½œä¸ºè¯·æ±‚å¯¹åº”çš„æ¨¡å‹å¯¹è±¡ï¼Œå¯ä»¥åœ¨ JSP è§†å›¾é¡µé¢ä¸­è®¿é—®åˆ°ã€‚ <BR><BR>ModelAndView å½“ç„¶è¿˜å¯ä»¥æ˜¯ä¼ ç»Ÿçš„ ModelAndViewã€‚ 
+<BR><BR>åº”è¯¥è¯´ä½¿ç”¨ String ä½œä¸ºè¯·æ±‚å¤„ç†æ–¹æ³•çš„è¿”å›å€¼ç±»å‹æ˜¯æ¯”è¾ƒé€šç”¨çš„æ–¹æ³•ï¼Œè¿™æ ·è¿”å›çš„é€»è¾‘è§†å›¾åä¸ä¼šå’Œè¯·æ±‚ URL 
+ç»‘å®šï¼Œå…·æœ‰å¾ˆå¤§çš„çµæ´»æ€§ï¼Œè€Œæ¨¡å‹æ•°æ®åˆå¯ä»¥é€šè¿‡ ModelMap æ§åˆ¶ã€‚å½“ç„¶ç›´æ¥ä½¿ç”¨ä¼ ç»Ÿçš„ ModelAndView ä¹Ÿä¸å¤±ä¸ºä¸€ä¸ªå¥½çš„é€‰æ‹©ã€‚</DIV><!--EndFragment--></DIV>
 </DIV>
 </DIV>
 </DIV>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
 </BODY>
 </HTML>

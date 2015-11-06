@@ -1,213 +1,242 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<title>tomcat reloadÊ±ÄÚ´æĞ¹Â©µÄ´¦Àí</title>
+ï»¿<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>tomcat reloadæ—¶å†…å­˜æ³„æ¼çš„å¤„ç†</title>
+</head>
+
 <body>
-<!--StartFragment--><h2>
-			<a id="viewpost1_TitleUrl" href="http://www.blogjava.net/super/archive/2010/06/30/324916.html">tomcat reloadÊ±ÄÚ´æĞ¹Â©µÄ´¦Àí</a>
+  <!--StartFragment-->
+  <h2>
+			<a id="viewpost1_TitleUrl" href="http://www.blogjava.net/super/archive/2010/06/30/324916.html">tomcat reloadæ—¶å†…å­˜æ³„æ¼çš„å¤„ç†</a>
 		</h2>
-		<p>ÎÒ×öµÄÓ¦ÓÃÊÇÒÔSpringÎªÏµÍ³µÄ»ù´¡¿ò¼Ü,mysqlÎªºóÌ¨Êı¾İ¿â.ÔÚtomcatÉÏ·¢²¼ºó,×ÜÊÇ²»ÄÜ½øĞĞÈÈ²¿Êğ(reload),¶à´Îreloadºó,¾Í»á³öOutOfMemory PermGen,</p>
-<p>Îª´Ë·³ÄÕÁËºÜ¾Ã,×ÜÓÚÏÂ¶¨¾öĞÄÕÒÕÒ¸ùÔ´.<br>
-¾­¹ı3ÌìµÄ²»Ğ¸Å¬Á¦,Ğ¡ÓĞ³É¹û,¼ÇÂ¼ÏÂÀ´</p>
-<p>Êµ¼ÊÉÏÏÂÃæµÄ·ÖÎö¶¼ÒÑ¾­Ã»Ê²Ã´ÓÃÁË,Èç¹ûÄãÊ¹ÓÃtomcat6.0.26¼°ÒÔºóµÄ°æ±¾,ÎÒËùËµµÄÕâĞ©Çé¿ö¶¼ÒÑ¾­±»´¦ÀíÁË,²¢ÇÒ±ÈÎÒ´¦ÀíµÄ»¹Òª¶àºÜ¶à.¿ÉÒÔÏÂÔØtomcat6.0.26µÄÔ´´úÂë<br>
-¿´¿´WebappClassLoaderÀàµÄ´¦Àí¾Í³ÉÁË.</p>
-<p>&nbsp;</p>
-<p>Í¨¹ı·ÖÎö¹¤¾ßµÄ·ÖÎö(ÓÃÁËYourKit,ÒÔ¼°JDK1.6/binÏÂµÄjps/jmap/jhat),·¢ÏÖÓĞÏÂÃæ¼¸¸ö·½Ãæ»áÔì³Émemory leak.</p>
-<p>1.SystemClassLoaderÓëWebappClassLoader¼ÓÔØµÄÀàÏà»¥ÒıÓÃ,tomcat 
-reloadÖ»ÊÇĞ¶ÔØWebappClassloaderÖĞµÄclass,SystemClassLoaderÊÇ²»»áĞ¶ÔØµÄ(·ñÔòÆäËûÓ¦ÓÃÒ²Í£Ö¹ÁË).µ«
-ÊÇWebappClassloader¼ÓÔØµÄÀà±»SystemClassLoaderÒıÓÃµÄ»¯,WebappClassloaderÖĞµÄÏà¹ØÀà¾Í²»»á±»
-JVM½øĞĞÀ¬»øÊÕ¼¯</p>
-<p>Ä¿Ç°·¢ÏÖ2ÖÖÈİÒ×²úÉúÕâÖÖleakµÄÏÖÏó.<br>
-a.ÔÚÊ¹ÓÃjava.lang.ThreadLocalµÄÊ±ºòºÜÈİÒ×²úÉúÕâÖÖÇé¿ö<br>
-b.Ê¹ÓÃjdbcÇı¶¯,¶øÇÒ²»ÊÇÔÚtomcatÖĞÅäÖÃµÄ¹«¹²Á¬½Ó³Ø.Ôòjava.sql.DriverManagerÒ»¶¨»á²úÉúÕâÖÖÏÖÏó</p>
-<p><br>
-ThreadLocal.set(Object),Èç¹ûÕâ¸öObjectÊÇWebappsClassLoader¼ÓÔØµÄ,Ê¹ÓÃÖ®ºóÃ»ÓĞ×öThreadLocal.set(null)»òÕßThreadLocal.remove(),¾Í»á²úÉúmemory leak.<br>
-ÓÉÓÚThreadLocalÊµ¼ÊÉÏ²Ù×÷µÄÊÇjava.lang.ThreadÀàÖĞµÄThreadLocalMap,ThreadÀàÊÇÓÉ
-SystemClassLoder¼ÓÔØµÄ.¶øÕâ¸öÏß³ÌÊµÀı(main thread)ÔÚtomcat 
-reloadµÄÊ±ºò²»»áÏú»ÙÖØ½¨,±ØÈ»¾Í²úÉúÁËSystemClassLoderÖĞµÄÀàÒıÓÃWebappsClassLoaderµÄÀà.</p>
-<p>DriverManagerÒ²ÊÇÓÉSystemClassLoderÔØÈëµÄ,µ±³õÊ¼»¯Ä³¸öJDBCÇı¶¯µÄÊ±ºò,»áÏòDriverManagerÖĞ×¢²á¸ÃÇı¶¯,Í¨³£ÊÇ***.driver,ÀıÈçcom.mysql.jdbc.Driver<br>
-Õâ¸öDriverÊÇÍ¨¹ıclass.forName()¼ÓÔØµÄ,Í¨³£Ò²ÊÇ¼ÓÔØµ½WebappClassLoader.Õâ¾Í³öÏÖÁËÁ½¸öclassLoaderÖĞµÄÀàµÄ½»²æÒıÓÃ.µ¼ÖÂmemory leak.</p>
-<p>&nbsp;</p>
-<p>½â¾ö°ì·¨:<br>
-Ğ´Ò»¸öServletContextListener,ÔÚcontextDestroyed·½·¨ÖĞÍ³Ò»É¾³ıµ±Ç°ThreadµÄThreadLocalMapÖĞµÄÄÚÈİ.<br>
-public class ApplicationCleanListener implements ServletContextListener {</p>
-<p>&nbsp;public void contextInitialized(ServletContextEvent event) {<br>
-&nbsp;}</p>
-<p>&nbsp;public void contextDestroyed(ServletContextEvent event) {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //´¦ÀíThreadLocal<br>
-&nbsp;&nbsp;ThreadLocalCleanUtil.clearThreadLocals();</p>
-<p>&nbsp;&nbsp;/*<br>
-&nbsp;&nbsp; * Èç¹ûÊı¾İ¹ÊÇı¶¯ÊÇÍ¨¹ıÓ¦ÓÃ·şÎñÆ÷(tomcat etc...)ÖĞÅäÖÃµÄ&lt;¹«ÓÃ&gt;Á¬½Ó³Ø,ÕâÀï²»ĞèÒª ·ñÔò±ØĞëĞ¶ÔØDriver<br>
-&nbsp;&nbsp; * <br>
-&nbsp;&nbsp; * Ô­Òò: DriverManagerÊÇSystem classloader¼ÓÔØµÄ, DriverÊÇwebappclassloader¼ÓÔØµÄ,<br>
-&nbsp;&nbsp; * driver±£´æÔÚDriverManagerÖĞ,ÔÚreload¹ı³ÌÖĞ,ÓÉÓÚsystem<br>
-&nbsp;&nbsp; * classloader²»»áÏú»Ù,driverManager¾ÍÒ»Ö±±£³Ö×Å¶ÔdriverµÄÒıÓÃ,<br>
-&nbsp;&nbsp; * driverÎŞ·¨Ğ¶ÔØ,Óëdriver¹ØÁªµÄÆäËûÀà<br>
-&nbsp;&nbsp; * ,ÀıÈçDataSource,jdbcTemplate,dao,service....¶¼ÎŞ·¨Ğ¶ÔØ<br>
-&nbsp;&nbsp; */<br>
-&nbsp;&nbsp;try {<br>
-&nbsp;&nbsp;&nbsp;System.out.println("clean jdbc Driver......");<br>
-&nbsp;&nbsp;&nbsp;for (Enumeration e = DriverManager.getDrivers(); e<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.hasMoreElements();) {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Driver driver = (Driver) e.nextElement();<br>
-&nbsp;&nbsp;&nbsp;&nbsp;if (driver.getClass().getClassLoader() == getClass()<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.getClassLoader()) {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DriverManager.deregisterDriver(driver);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;}</p>
-<p>&nbsp;&nbsp;} catch (Exception e) {<br>
-&nbsp;&nbsp;&nbsp;System.out<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.println("Exception cleaning up java.sql.DriverManager's driver: "<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ e.getMessage());<br>
-&nbsp;&nbsp;}</p>
-<p><br>
-&nbsp;}</p>
-<p>}</p>
-<p><br>
-/**<br>
-&nbsp;* Õâ¸öÀà¸ù¾İ<br>
-*/<br>
-public class ThreadLocalCleanUtil {</p>
-<p>&nbsp;/**<br>
-&nbsp; * µÃµ½µ±Ç°Ïß³Ì×éÖĞµÄËùÓĞÏß³Ì description:<br>
-&nbsp; * <br>
-&nbsp; * @return<br>
-&nbsp; */<br>
-&nbsp;private static Thread[] getThreads() {<br>
-&nbsp;&nbsp;ThreadGroup tg = Thread.currentThread().getThreadGroup();</p>
-<p>&nbsp;&nbsp;while (tg.getParent() != null) {<br>
-&nbsp;&nbsp;&nbsp;tg = tg.getParent();<br>
-&nbsp;&nbsp;}</p>
-<p>&nbsp;&nbsp;int threadCountGuess = tg.activeCount() + 50;<br>
-&nbsp;&nbsp;Thread[] threads = new Thread[threadCountGuess];<br>
-&nbsp;&nbsp;int threadCountActual = tg.enumerate(threads);</p>
-<p>&nbsp;&nbsp;while (threadCountActual == threadCountGuess) {<br>
-&nbsp;&nbsp;&nbsp;threadCountGuess *= 2;<br>
-&nbsp;&nbsp;&nbsp;threads = new Thread[threadCountGuess];</p>
-<p>&nbsp;&nbsp;&nbsp;threadCountActual = tg.enumerate(threads);<br>
-&nbsp;&nbsp;}</p>
-<p>&nbsp;&nbsp;return threads;<br>
-&nbsp;}</p>
-<p>&nbsp;public static void clearThreadLocals() {<br>
-&nbsp;&nbsp;ClassLoader classloader = Thread<br>
-&nbsp;&nbsp;&nbsp;&nbsp;.currentThread()<br>
-&nbsp;&nbsp;&nbsp;&nbsp;.getContextClassLoader();</p>
-<p>&nbsp;&nbsp;Thread[] threads = getThreads();<br>
-&nbsp;&nbsp;try {<br>
-&nbsp;&nbsp;&nbsp;Field threadLocalsField = Thread.class<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.getDeclaredField("threadLocals");</p>
-<p>&nbsp;&nbsp;&nbsp;threadLocalsField.setAccessible(true);<br>
-&nbsp;&nbsp;&nbsp;Field inheritableThreadLocalsField = Thread.class<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.getDeclaredField("inheritableThreadLocals");</p>
-<p>&nbsp;&nbsp;&nbsp;inheritableThreadLocalsField.setAccessible(true);</p>
-<p>&nbsp;&nbsp;&nbsp;Class tlmClass = Class<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.forName("java.lang.ThreadLocal$ThreadLocalMap");</p>
-<p>&nbsp;&nbsp;&nbsp;Field tableField = tlmClass.getDeclaredField("table");<br>
-&nbsp;&nbsp;&nbsp;tableField.setAccessible(true);</p>
-<p>&nbsp;&nbsp;&nbsp;for (int i = 0; i &lt; threads.length; ++i) {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;if (threads[i] == null)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Object threadLocalMap = threadLocalsField.get(threads[i]);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;clearThreadLocalMap(threadLocalMap, tableField, classloader);</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;threadLocalMap = inheritableThreadLocalsField.get(threads[i]);</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;clearThreadLocalMap(threadLocalMap, tableField, classloader);<br>
-&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;} catch (Exception e) {</p>
-<p>&nbsp;&nbsp;&nbsp;e.printStackTrace();<br>
-&nbsp;&nbsp;}<br>
-&nbsp;}</p>
-<p>&nbsp;private static void clearThreadLocalMap(Object map,<br>
-&nbsp;&nbsp;&nbsp;Field internalTableField, ClassLoader classloader)<br>
-&nbsp;&nbsp;&nbsp;throws NoSuchMethodException, IllegalAccessException,<br>
-&nbsp;&nbsp;&nbsp;NoSuchFieldException, InvocationTargetException {<br>
-&nbsp;&nbsp;if (map != null) {<br>
-&nbsp;&nbsp;&nbsp;Method mapRemove = map.getClass().getDeclaredMethod("remove",<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;new Class[] { ThreadLocal.class });</p>
-<p>&nbsp;&nbsp;&nbsp;mapRemove.setAccessible(true);<br>
-&nbsp;&nbsp;&nbsp;Object[] table = (Object[]) internalTableField.get(map);<br>
-&nbsp;&nbsp;&nbsp;int staleEntriesCount = 0;<br>
-&nbsp;&nbsp;&nbsp;if (table != null) {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;for (int j = 0; j &lt; table.length; ++j) {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (table[j] != null) {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;boolean remove = false;</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Object key = ((Reference) table[j]).get();<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ((key != null)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;&amp; (key.getClass().getClassLoader() == classloader)) {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;remove = true;</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("clean threadLocal key,class="<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ key.getClass().getCanonicalName()<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ ",value=" + key.toString());<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Field valueField = table[j]<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.getClass()<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.getDeclaredField("value");</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valueField.setAccessible(true);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Object value = valueField.get(table[j]);</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ((value != null)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;&amp; (value.getClass().getClassLoader() == classloader)) {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;remove = true;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("clean threadLocal value,class="<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ value.getClass().getCanonicalName()<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ ",value=" + value.toString());</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (remove) {</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (key == null)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++staleEntriesCount;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mapRemove.invoke(map, new Object[] { key });<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;if (staleEntriesCount &gt; 0) {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Method mapRemoveStale = map<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.getClass()<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.getDeclaredMethod("expungeStaleEntries", new Class[0]);</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;mapRemoveStale.setAccessible(true);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;mapRemoveStale.invoke(map, new Object[0]);<br>
-&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;}<br>
-&nbsp;}<br>
-}</p>
-<p>&nbsp;</p>
-<p>2.¶ÔÓÚÊ¹ÓÃmysql JDBCÇı¶¯µÄ:mysql JDBCÇı¶¯»áÆô¶¯Ò»¸öTimer Thread,Õâ¸öÏß³ÌÔÚreloadµÄÊ±ºòÒ²ÊÇÎŞ·¨×Ô¶¯Ïú»Ù.<br>
-&nbsp; Òò´Ë,ĞèÒªÇ¿ÖÆ½áÊøÕâ¸ötimer<br>
-&nbsp; <br>
-&nbsp; ¿ÉÒÔÔÚ ÉÏÃæµÄApplicationCleanListenerÖĞ¼ÓÈëÈçÏÂ´úÂë:</p>
-<p>&nbsp; &nbsp;&nbsp;try {<br>
-&nbsp;&nbsp;&nbsp;Class ConnectionImplClass = Thread<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.currentThread()<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.getContextClassLoader()<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.loadClass("com.mysql.jdbc.ConnectionImpl");<br>
-&nbsp;&nbsp;&nbsp;if (ConnectionImplClass != null<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;&amp; ConnectionImplClass.getClassLoader() == getClass()<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.getClassLoader()) {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("clean mysql timer......");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Field f = ConnectionImplClass.getDeclaredField("cancelTimer");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;f.setAccessible(true);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Timer timer = (Timer) f.get(null);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;timer.cancel();<br>
-&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;} catch (java.lang.ClassNotFoundException e1) {<br>
-&nbsp;&nbsp;&nbsp;// do nothing<br>
-&nbsp;&nbsp;} catch (Exception e) {<br>
-&nbsp;&nbsp;&nbsp;System.out<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.println("Exception cleaning up MySQL cancellation timer: "<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ e.getMessage());<br>
-&nbsp;&nbsp;}</p>
-<p>&nbsp;</p>
-<p><br>
-3.common-logging+log4jËÆºõÒ²»áµ¼ÖÂleak,¿´ÍøÉÏÓĞÈËËµÔÚApplicationCleanListene6ÖĞ¼ÓÈëÕâĞĞ´úÂë¾Í¿ÉÒÔ:<br>
-&nbsp;LogFactory.release(Thread.currentThread().getContextClassLoader());</p>
-<p>&nbsp; ÎÒÃ»ÊÔ³É¹¦,ÀÁµÃÔÙÕÒÔ­Òò,Ö±½Ó»»³ÉÁËslf4j+logback,Ã»ÓĞÎÊÌâ.¾İËµslf4j+logbackµÄĞÔÄÜ»¹Òª¸üºÃ.</p>
-<p>&nbsp;</p>
-<p>&nbsp;<br>
-ºó¼Ç:<br>
-&nbsp;tomcat-6.0.26Ö®Ç°µÄ°æ±¾(ÎÒÓÃµÄÊÇtomcat-6.0.18),¼ÓÈëÉÏÊöApplicationCleanListenerºó,¶à´Îreload,²»»á³öÏÖoutOfMemory.<br>
-&nbsp;µ«Òª×¢Òâ,µÚÒ»´ÎÆô¶¯ºó,reloadÒ»´Î,ÄÚ´æ»áÔö¼Ó,Ò²¾ÍÊÇ¿´×Å»¹ÊÇÓÉmemory 
-Leak,µ«ÊÇÖØ¸´reload,ÄÚ´æÊ¼ÖÕ±£³ÖÔÚµÚÒ»´ÎreloadµÄ´óĞ¡.ËÆºõtomcatÊ¼ÖÕ±£ÁôÁËË«WebappClassLoader.Òò´Ë,Åä
-ÖÃÄÚ´æÒªĞ¡ĞÄĞ©,ÖÁÉÙÒª±£Ö¤ÄÜ¹»loadÁ½±¶µÄÄãµÄËùÓĞjar°üµÄ´óĞ¡(µ±È»,ÊÇÖ¸PermµÄÄÚ´æ´óĞ¡).<br>
-&nbsp;<br>
-&nbsp;²âÊÔ¹ı³ÌÖĞ×îºÃ¼ÓÉÏ JVM²ÎÊı -verbosegc,ÕâÑù,ÔÚ×öGCµÄÊ±ºò¿ÉÒÔÖ±¹ÛµÄ¿´µ½class±»Ğ¶ÔØ.</p><!--EndFragment-->
+  <p>æˆ‘åšçš„åº”ç”¨æ˜¯ä»¥Springä¸ºç³»ç»Ÿçš„åŸºç¡€æ¡†æ¶,mysqlä¸ºåå°æ•°æ®åº“.åœ¨tomcatä¸Šå‘å¸ƒå,æ€»æ˜¯ä¸èƒ½è¿›è¡Œçƒ­éƒ¨ç½²(reload),å¤šæ¬¡reloadå,å°±ä¼šå‡ºOutOfMemory PermGen,</p>
+  <p>ä¸ºæ­¤çƒ¦æ¼äº†å¾ˆä¹…,æ€»äºä¸‹å®šå†³å¿ƒæ‰¾æ‰¾æ ¹æº.
+    <br> ç»è¿‡3å¤©çš„ä¸æ‡ˆåŠªåŠ›,å°æœ‰æˆæœ,è®°å½•ä¸‹æ¥
+  </p>
+  <p>å®é™…ä¸Šä¸‹é¢çš„åˆ†æéƒ½å·²ç»æ²¡ä»€ä¹ˆç”¨äº†,å¦‚æœä½ ä½¿ç”¨tomcat6.0.26åŠä»¥åçš„ç‰ˆæœ¬,æˆ‘æ‰€è¯´çš„è¿™äº›æƒ…å†µéƒ½å·²ç»è¢«å¤„ç†äº†,å¹¶ä¸”æ¯”æˆ‘å¤„ç†çš„è¿˜è¦å¤šå¾ˆå¤š.å¯ä»¥ä¸‹è½½tomcat6.0.26çš„æºä»£ç 
+    <br> çœ‹çœ‹WebappClassLoaderç±»çš„å¤„ç†å°±æˆäº†.
+  </p>
+  <p>&nbsp;</p>
+  <p>é€šè¿‡åˆ†æå·¥å…·çš„åˆ†æ(ç”¨äº†YourKit,ä»¥åŠJDK1.6/binä¸‹çš„jps/jmap/jhat),å‘ç°æœ‰ä¸‹é¢å‡ ä¸ªæ–¹é¢ä¼šé€ æˆmemory leak.</p>
+  <p>
+    1.SystemClassLoaderä¸WebappClassLoaderåŠ è½½çš„ç±»ç›¸äº’å¼•ç”¨,tomcat reloadåªæ˜¯å¸è½½WebappClassloaderä¸­çš„class,SystemClassLoaderæ˜¯ä¸ä¼šå¸è½½çš„(å¦åˆ™å…¶ä»–åº”ç”¨ä¹Ÿåœæ­¢äº†).ä½†æ˜¯WebappClassloaderåŠ è½½çš„ç±»è¢«SystemClassLoaderå¼•ç”¨çš„åŒ–,WebappClassloaderä¸­çš„ç›¸å…³ç±»å°±ä¸ä¼šè¢« JVMè¿›è¡Œåƒåœ¾æ”¶é›†
+  </p>
+  <p>ç›®å‰å‘ç°2ç§å®¹æ˜“äº§ç”Ÿè¿™ç§leakçš„ç°è±¡.
+    <br> a.åœ¨ä½¿ç”¨java.lang.ThreadLocalçš„æ—¶å€™å¾ˆå®¹æ˜“äº§ç”Ÿè¿™ç§æƒ…å†µ
+    <br> b.ä½¿ç”¨jdbcé©±åŠ¨,è€Œä¸”ä¸æ˜¯åœ¨tomcatä¸­é…ç½®çš„å…¬å…±è¿æ¥æ± .åˆ™java.sql.DriverManagerä¸€å®šä¼šäº§ç”Ÿè¿™ç§ç°è±¡
+  </p>
+  <p>
+    <br> ThreadLocal.set(Object),å¦‚æœè¿™ä¸ªObjectæ˜¯WebappsClassLoaderåŠ è½½çš„,ä½¿ç”¨ä¹‹åæ²¡æœ‰åšThreadLocal.set(null)æˆ–è€…ThreadLocal.remove(),å°±ä¼šäº§ç”Ÿmemory leak.
+    <br> ç”±äºThreadLocalå®é™…ä¸Šæ“ä½œçš„æ˜¯java.lang.Threadç±»ä¸­çš„ThreadLocalMap,Threadç±»æ˜¯ç”± SystemClassLoderåŠ è½½çš„.è€Œè¿™ä¸ªçº¿ç¨‹å®ä¾‹(main thread)åœ¨tomcat reloadçš„æ—¶å€™ä¸ä¼šé”€æ¯é‡å»º,å¿…ç„¶å°±äº§ç”Ÿäº†SystemClassLoderä¸­çš„ç±»å¼•ç”¨WebappsClassLoaderçš„ç±».
+  </p>
+  <p>DriverManagerä¹Ÿæ˜¯ç”±SystemClassLoderè½½å…¥çš„,å½“åˆå§‹åŒ–æŸä¸ªJDBCé©±åŠ¨çš„æ—¶å€™,ä¼šå‘DriverManagerä¸­æ³¨å†Œè¯¥é©±åŠ¨,é€šå¸¸æ˜¯***.driver,ä¾‹å¦‚com.mysql.jdbc.Driver
+    <br> è¿™ä¸ªDriveræ˜¯é€šè¿‡class.forName()åŠ è½½çš„,é€šå¸¸ä¹Ÿæ˜¯åŠ è½½åˆ°WebappClassLoader.è¿™å°±å‡ºç°äº†ä¸¤ä¸ªclassLoaderä¸­çš„ç±»çš„äº¤å‰å¼•ç”¨.å¯¼è‡´memory leak.</p>
+  <p>&nbsp;</p>
+  <p>è§£å†³åŠæ³•:
+    <br> å†™ä¸€ä¸ªServletContextListener,åœ¨contextDestroyedæ–¹æ³•ä¸­ç»Ÿä¸€åˆ é™¤å½“å‰Threadçš„ThreadLocalMapä¸­çš„å†…å®¹.
+    <br> public class ApplicationCleanListener implements ServletContextListener {</p>
+  <p>&nbsp;public void contextInitialized(ServletContextEvent event) {
+    <br> &nbsp;}
+  </p>
+  <p>&nbsp;public void contextDestroyed(ServletContextEvent event) {
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //å¤„ç†ThreadLocal
+    <br> &nbsp;&nbsp;ThreadLocalCleanUtil.clearThreadLocals();
+  </p>
+  <p>&nbsp;&nbsp;/*
+    <br> &nbsp;&nbsp; * å¦‚æœæ•°æ®æ•…é©±åŠ¨æ˜¯é€šè¿‡åº”ç”¨æœåŠ¡å™¨(tomcat etc...)ä¸­é…ç½®çš„&lt;å…¬ç”¨&gt;è¿æ¥æ± ,è¿™é‡Œä¸éœ€è¦ å¦åˆ™å¿…é¡»å¸è½½Driver
+    <br> &nbsp;&nbsp; *
+    <br> &nbsp;&nbsp; * åŸå› : DriverManageræ˜¯System classloaderåŠ è½½çš„, Driveræ˜¯webappclassloaderåŠ è½½çš„,
+    <br> &nbsp;&nbsp; * driverä¿å­˜åœ¨DriverManagerä¸­,åœ¨reloadè¿‡ç¨‹ä¸­,ç”±äºsystem
+    <br> &nbsp;&nbsp; * classloaderä¸ä¼šé”€æ¯,driverManagerå°±ä¸€ç›´ä¿æŒç€å¯¹driverçš„å¼•ç”¨,
+    <br> &nbsp;&nbsp; * driveræ— æ³•å¸è½½,ä¸driverå…³è”çš„å…¶ä»–ç±»
+    <br> &nbsp;&nbsp; * ,ä¾‹å¦‚DataSource,jdbcTemplate,dao,service....éƒ½æ— æ³•å¸è½½
+    <br> &nbsp;&nbsp; */
+    <br> &nbsp;&nbsp;try {
+    <br> &nbsp;&nbsp;&nbsp;System.out.println("clean jdbc Driver......");
+    <br>&nbsp;&nbsp;&nbsp;for (Enumeration e = DriverManager.getDrivers(); e
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.hasMoreElements();) {
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;Driver driver = (Driver) e.nextElement();
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;if (driver.getClass().getClassLoader() == getClass()
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.getClassLoader()) {
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DriverManager.deregisterDriver(driver);
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;}
+    <br> &nbsp;&nbsp;&nbsp;}
+  </p>
+  <p>&nbsp;&nbsp;} catch (Exception e) {
+    <br> &nbsp;&nbsp;&nbsp;System.out
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.println("Exception cleaning up java.sql.DriverManager's driver: "
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ e.getMessage());
+    <br> &nbsp;&nbsp;}
+  </p>
+  <p>
+    <br> &nbsp;}
+  </p>
+  <p>}</p>
+  <p>
+    <br> /**
+    <br> &nbsp;* è¿™ä¸ªç±»æ ¹æ®
+    <br> */
+    <br> public class ThreadLocalCleanUtil {</p>
+  <p>&nbsp;/**
+    <br> &nbsp; * å¾—åˆ°å½“å‰çº¿ç¨‹ç»„ä¸­çš„æ‰€æœ‰çº¿ç¨‹ description:
+    <br> &nbsp; *
+    <br> &nbsp; * @return
+    <br> &nbsp; */
+    <br> &nbsp;private static Thread[] getThreads() {
+    <br> &nbsp;&nbsp;ThreadGroup tg = Thread.currentThread().getThreadGroup();</p>
+  <p>&nbsp;&nbsp;while (tg.getParent() != null) {
+    <br> &nbsp;&nbsp;&nbsp;tg = tg.getParent();
+    <br> &nbsp;&nbsp;}
+  </p>
+  <p>&nbsp;&nbsp;int threadCountGuess = tg.activeCount() + 50;
+    <br> &nbsp;&nbsp;Thread[] threads = new Thread[threadCountGuess];
+    <br> &nbsp;&nbsp;int threadCountActual = tg.enumerate(threads);</p>
+  <p>&nbsp;&nbsp;while (threadCountActual == threadCountGuess) {
+    <br> &nbsp;&nbsp;&nbsp;threadCountGuess *= 2;
+    <br> &nbsp;&nbsp;&nbsp;threads = new Thread[threadCountGuess];</p>
+  <p>&nbsp;&nbsp;&nbsp;threadCountActual = tg.enumerate(threads);
+    <br> &nbsp;&nbsp;}
+  </p>
+  <p>&nbsp;&nbsp;return threads;
+    <br> &nbsp;}
+  </p>
+  <p>&nbsp;public static void clearThreadLocals() {
+    <br> &nbsp;&nbsp;ClassLoader classloader = Thread
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;.currentThread()
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;.getContextClassLoader();
+  </p>
+  <p>&nbsp;&nbsp;Thread[] threads = getThreads();
+    <br> &nbsp;&nbsp;try {
+    <br> &nbsp;&nbsp;&nbsp;Field threadLocalsField = Thread.class
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.getDeclaredField("threadLocals");
+  </p>
+  <p>&nbsp;&nbsp;&nbsp;threadLocalsField.setAccessible(true);
+    <br>&nbsp;&nbsp;&nbsp;Field inheritableThreadLocalsField = Thread.class
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.getDeclaredField("inheritableThreadLocals");
+  </p>
+  <p>&nbsp;&nbsp;&nbsp;inheritableThreadLocalsField.setAccessible(true);</p>
+  <p>&nbsp;&nbsp;&nbsp;Class tlmClass = Class
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.forName("java.lang.ThreadLocal$ThreadLocalMap");
+  </p>
+  <p>&nbsp;&nbsp;&nbsp;Field tableField = tlmClass.getDeclaredField("table");
+    <br> &nbsp;&nbsp;&nbsp;tableField.setAccessible(true);
+  </p>
+  <p>&nbsp;&nbsp;&nbsp;for (int i = 0; i &lt; threads.length; ++i) {
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;if (threads[i] == null)
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue;
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;Object threadLocalMap = threadLocalsField.get(threads[i]);
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;clearThreadLocalMap(threadLocalMap, tableField, classloader);</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;threadLocalMap = inheritableThreadLocalsField.get(threads[i]);</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;clearThreadLocalMap(threadLocalMap, tableField, classloader);
+    <br> &nbsp;&nbsp;&nbsp;}
+    <br> &nbsp;&nbsp;} catch (Exception e) {</p>
+  <p>&nbsp;&nbsp;&nbsp;e.printStackTrace();
+    <br> &nbsp;&nbsp;}
+    <br> &nbsp;}
+  </p>
+  <p>&nbsp;private static void clearThreadLocalMap(Object map,
+    <br> &nbsp;&nbsp;&nbsp;Field internalTableField, ClassLoader classloader)
+    <br> &nbsp;&nbsp;&nbsp;throws NoSuchMethodException, IllegalAccessException,
+    <br> &nbsp;&nbsp;&nbsp;NoSuchFieldException, InvocationTargetException {
+    <br> &nbsp;&nbsp;if (map != null) {
+    <br>&nbsp;&nbsp;&nbsp;Method mapRemove = map.getClass().getDeclaredMethod("remove",
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;new Class[] { ThreadLocal.class });</p>
+  <p>&nbsp;&nbsp;&nbsp;mapRemove.setAccessible(true);
+    <br> &nbsp;&nbsp;&nbsp;Object[] table = (Object[]) internalTableField.get(map);
+    <br> &nbsp;&nbsp;&nbsp;int staleEntriesCount = 0;
+    <br>&nbsp;&nbsp;&nbsp;if (table != null) {
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;for (int j = 0; j &lt; table.length; ++j) {
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (table[j] != null) {
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;boolean remove = false;
+  </p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Object key = ((Reference) table[j]).get();
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ((key != null)
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;&amp; (key.getClass().getClassLoader() == classloader)) {
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;remove = true;
+  </p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("clean threadLocal key,class="
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ key.getClass().getCanonicalName()
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ ",value=" + key.toString());
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+  </p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Field valueField = table[j]
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.getClass()
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.getDeclaredField("value");
+  </p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valueField.setAccessible(true);
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Object value = valueField.get(table[j]);
+  </p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ((value != null)
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;&amp; (value.getClass().getClassLoader() == classloader)) {
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;remove = true;
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("clean threadLocal value,class="
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ value.getClass().getCanonicalName()
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ ",value=" + value.toString());</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (remove) {</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (key == null)
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++staleEntriesCount;
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else {
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mapRemove.invoke(map, new Object[] { key });
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;}
+    <br> &nbsp;&nbsp;&nbsp;}
+    <br> &nbsp;&nbsp;&nbsp;if (staleEntriesCount &gt; 0) {
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;Method mapRemoveStale = map
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.getClass()
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.getDeclaredMethod("expungeStaleEntries", new Class[0]);</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;mapRemoveStale.setAccessible(true);
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;mapRemoveStale.invoke(map, new Object[0]);
+    <br> &nbsp;&nbsp;&nbsp;}
+    <br> &nbsp;&nbsp;}
+    <br> &nbsp;}
+    <br> }
+  </p>
+  <p>&nbsp;</p>
+  <p>2.å¯¹äºä½¿ç”¨mysql JDBCé©±åŠ¨çš„:mysql JDBCé©±åŠ¨ä¼šå¯åŠ¨ä¸€ä¸ªTimer Thread,è¿™ä¸ªçº¿ç¨‹åœ¨reloadçš„æ—¶å€™ä¹Ÿæ˜¯æ— æ³•è‡ªåŠ¨é”€æ¯.
+    <br> &nbsp; å› æ­¤,éœ€è¦å¼ºåˆ¶ç»“æŸè¿™ä¸ªtimer
+    <br> &nbsp;
+    <br> &nbsp; å¯ä»¥åœ¨ ä¸Šé¢çš„ApplicationCleanListenerä¸­åŠ å…¥å¦‚ä¸‹ä»£ç :</p>
+  <p>&nbsp; &nbsp;&nbsp;try {
+    <br> &nbsp;&nbsp;&nbsp;Class ConnectionImplClass = Thread
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.currentThread()
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.getContextClassLoader()
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.loadClass("com.mysql.jdbc.ConnectionImpl");
+    <br> &nbsp;&nbsp;&nbsp;if (ConnectionImplClass != null
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;&amp; ConnectionImplClass.getClassLoader() == getClass()
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.getClassLoader()) {
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;System.out.println("clean mysql timer......");
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;Field f = ConnectionImplClass.getDeclaredField("cancelTimer");
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;f.setAccessible(true);
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;Timer timer = (Timer) f.get(null);
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;timer.cancel();
+    <br> &nbsp;&nbsp;&nbsp;}
+    <br> &nbsp;&nbsp;} catch (java.lang.ClassNotFoundException e1) {
+    <br> &nbsp;&nbsp;&nbsp;// do nothing
+    <br> &nbsp;&nbsp;} catch (Exception e) {
+    <br> &nbsp;&nbsp;&nbsp;System.out
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.println("Exception cleaning up MySQL cancellation timer: "
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ e.getMessage());
+    <br> &nbsp;&nbsp;}
+  </p>
+  <p>&nbsp;</p>
+  <p>
+    <br> 3.common-logging+log4jä¼¼ä¹ä¹Ÿä¼šå¯¼è‡´leak,çœ‹ç½‘ä¸Šæœ‰äººè¯´åœ¨ApplicationCleanListene6ä¸­åŠ å…¥è¿™è¡Œä»£ç å°±å¯ä»¥:
+    <br> &nbsp;LogFactory.release(Thread.currentThread().getContextClassLoader());
+  </p>
+  <p>&nbsp; æˆ‘æ²¡è¯•æˆåŠŸ,æ‡’å¾—å†æ‰¾åŸå› ,ç›´æ¥æ¢æˆäº†slf4j+logback,æ²¡æœ‰é—®é¢˜.æ®è¯´slf4j+logbackçš„æ€§èƒ½è¿˜è¦æ›´å¥½.</p>
+  <p>&nbsp;</p>
+  <p>
+    <br> åè®°:
+    <br> &nbsp;tomcat-6.0.26ä¹‹å‰çš„ç‰ˆæœ¬(æˆ‘ç”¨çš„æ˜¯tomcat-6.0.18),åŠ å…¥ä¸Šè¿°ApplicationCleanListenerå,å¤šæ¬¡reload,ä¸ä¼šå‡ºç°outOfMemory.
+    <br> &nbsp;ä½†è¦æ³¨æ„,ç¬¬ä¸€æ¬¡å¯åŠ¨å,reloadä¸€æ¬¡,å†…å­˜ä¼šå¢åŠ ,ä¹Ÿå°±æ˜¯çœ‹ç€è¿˜æ˜¯ç”±memory Leak,ä½†æ˜¯é‡å¤reload,å†…å­˜å§‹ç»ˆä¿æŒåœ¨ç¬¬ä¸€æ¬¡reloadçš„å¤§å°.ä¼¼ä¹tomcatå§‹ç»ˆä¿ç•™äº†åŒWebappClassLoader.å› æ­¤,é…ç½®å†…å­˜è¦å°å¿ƒäº›,è‡³å°‘è¦ä¿è¯èƒ½å¤Ÿloadä¸¤å€çš„ä½ çš„æ‰€æœ‰jaråŒ…çš„å¤§å°(å½“ç„¶,æ˜¯æŒ‡Permçš„å†…å­˜å¤§å°).
+    <br> &nbsp;
+    <br> &nbsp;æµ‹è¯•è¿‡ç¨‹ä¸­æœ€å¥½åŠ ä¸Š JVMå‚æ•° -verbosegc,è¿™æ ·,åœ¨åšGCçš„æ—¶å€™å¯ä»¥ç›´è§‚çš„çœ‹åˆ°classè¢«å¸è½½.</p>
+  <p>
+    &nbsp;</p>
+  <!--EndFragment-->
 </body>
 </htm</html>

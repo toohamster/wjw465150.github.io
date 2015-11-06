@@ -1,13 +1,13 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>JAVA Eclipse RCP¼¸µãÄÚÈİ</title>
+<title>JAVA Eclipse RCPå‡ ç‚¹å†…å®¹</title>
 <meta name="GENERATOR" content="WinCHM">
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
 html,body { 
 	/* Default Font */
-	font-family: ËÎÌå, Arial, Helvetica, sans-serif;
+	font-family: å®‹ä½“, Arial, Helvetica, sans-serif;
 	font-size: 10pt;
 }
 </style>
@@ -15,40 +15,40 @@ html,body {
 </head>
 
 <body>
-<P><STRONG>×Ô¶¨ÒåWORKSPACEµÄÂ·¾¶£º</STRONG></P>
+<P><STRONG>è‡ªå®šä¹‰WORKSPACEçš„è·¯å¾„ï¼š</STRONG></P>
 <P>&nbsp;configuration\config.ini&nbsp; <A 
 href="mailto:osgi.instance.area.default=@user.home/workspace">osgi.instance.area.default=@user.home/workspace</A></P>
 <P><SPAN class=Apple-style-span 
-style="WHITE-SPACE: normal; BORDER-COLLAPSE: separate; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-size-adjust: none; font-stretch: normal; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"><SPAN 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; BORDER-COLLAPSE: separate; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; font-stretch: normal; -webkit-text-size-adjust: auto; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; font-size-adjust: none"><SPAN 
 class=Apple-style-span style="TEXT-ALIGN: left"></SPAN></SPAN></P>
 <H1 
-style="LIST-STYLE-TYPE: none; FONT-SIZE: 12pt; HEIGHT: 15px; FONT-FAMILY: arial, nsimsun, sans-serif; FONT-WEIGHT: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px; WIDTH: 448px">Eclipse 
-³ÌĞò½çÃæÃÀ»¯¼¼Êõ</H1>
+style="LIST-STYLE-TYPE: none; FONT-SIZE: 12pt; HEIGHT: 15px; FONT-FAMILY: arial, nsimsun, sans-serif; WIDTH: 448px; FONT-WEIGHT: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">Eclipse 
+ç¨‹åºç•Œé¢ç¾åŒ–æŠ€æœ¯</H1>
 <P><A 
 href="http://www.ibm.com/developerworks/cn/opensource/os-cn-ecl-rcprich/">http://www.ibm.com/developerworks/cn/opensource/os-cn-ecl-rcprich/</A> 
 </P>
 <P>&nbsp;</P>
-<P><STRONG>JAVA°´Ö¸¶¨±àÂë¶ÁĞ´ÎÄ¼ş</STRONG></P>
+<P><STRONG>JAVAæŒ‰æŒ‡å®šç¼–ç è¯»å†™æ–‡ä»¶</STRONG></P>
 <P>&nbsp;</P>
 <P>&nbsp;ArrayList&lt;String&gt; nameArr=new 
 ArrayList();<BR>&nbsp;&nbsp;StringBuilder builder=new 
 StringBuilder();<BR>&nbsp;&nbsp;try {<BR>&nbsp;String 
-txtPath="C:\\µØÃû2.txt";<BR>&nbsp;&nbsp;&nbsp; String 
-txtNewPath="C:\\µØÃû3.txt";<BR><SPAN 
+txtPath="C:\\åœ°å2.txt";<BR>&nbsp;&nbsp;&nbsp; String 
+txtNewPath="C:\\åœ°å3.txt";<BR><SPAN 
 style="COLOR: red">&nbsp;&nbsp;&nbsp;BufferedReader reader = new 
 BufferedReader(new InputStreamReader(</SPAN><BR><SPAN 
 style="COLOR: red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;new FileInputStream(txtPath), 
 "GBK"));</SPAN><BR>&nbsp;&nbsp;&nbsp;String line = 
-null;<BR>&nbsp;&nbsp;&nbsp;boolean first = true;<BR>&nbsp;&nbsp;&nbsp;while 
-((line = reader.readLine()) != null) {<BR>&nbsp;&nbsp;&nbsp;&nbsp;String[] 
+null;<BR>&nbsp;&nbsp;&nbsp;boolean first = true;<BR>&nbsp;&nbsp;&nbsp;while ((line = reader.readLine()) 
+! =   null) {<BR>&nbsp;&nbsp;&nbsp;&nbsp;String[] 
 names=line.split(" ");<BR>&nbsp;&nbsp;&nbsp;&nbsp;for (String name : names) 
-{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(name.length()&gt;2)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=name.replace("ÊĞÏ½Çø", 
-"").replace("×ÔÖÎÏØ", 
-"");<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=name.replace("×ÔÖÎÇø", 
-"");<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=name.replace("ÏØ", 
-"");<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=name.replace("Ê¡", 
-"");<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(name.indexOf("ÊĞ")&gt;0)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String[] 
-newNames=name.split("ÊĞ");<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(newNames==null)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(newNames.length==1)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=newNames[0];<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=newNames[1];&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(nameArr.indexOf(name)==-1)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nameArr.add(name);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;builder.append(name+"\r\n");<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;reader.close();<BR><SPAN 
+{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(name.length()&gt;2)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=name.replace("å¸‚è¾–åŒº", 
+"").replace("è‡ªæ²»å¿", 
+"");<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=name.replace("è‡ªæ²»åŒº", 
+"");<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=name.replace("å¿", 
+"");<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=name.replace("çœ", 
+"");<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(name.indexOf("å¸‚")&gt;0)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String[] 
+newNames=name.split("å¸‚");<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(newNames==null)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(newNames.length==1)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=newNames[0];<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=newNames[1];&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(nameArr.indexOf(name)==-1)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nameArr.add(name);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;builder.append(name+"\r\n");<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;reader.close();<BR><SPAN 
 style="COLOR: red">&nbsp;&nbsp;&nbsp;BufferedWriter writer=new 
 BufferedWriter(new OutputStreamWriter(</SPAN><BR><SPAN 
 style="COLOR: red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;new 
@@ -58,8 +58,8 @@ style="COLOR: red">&nbsp;&nbsp;&nbsp;writer.close();</SPAN><BR>&nbsp;&nbsp;}
 catch (FileNotFoundException e) 
 {<BR>&nbsp;&nbsp;&nbsp;e.printStackTrace();<BR>&nbsp;&nbsp;} catch (IOException 
 e) {<BR>&nbsp;&nbsp;&nbsp;e.printStackTrace();<BR>&nbsp;&nbsp;}<BR></P>
-<P><STRONG>JAVA RCP¿ª·¢ »ñÈ¡Ó¦ÓÃ³ÌĞòWORKSPACEÏÂÎÄ¼ş</STRONG></P>
-<P>&nbsp;/**<BR>&nbsp; * »ñÈ¡Êı¾İ¿âÂ·¾¶<BR>&nbsp; * @return<BR>&nbsp; 
+<P><STRONG>JAVA RCPå¼€å‘ è·å–åº”ç”¨ç¨‹åºWORKSPACEä¸‹æ–‡ä»¶</STRONG></P>
+<P>&nbsp;/**<BR>&nbsp; * è·å–æ•°æ®åº“è·¯å¾„<BR>&nbsp; * @return<BR>&nbsp; 
 */<BR>&nbsp;public static String getDB() {<BR><STRONG><SPAN 
 style="COLOR: red">&nbsp;&nbsp;Location instanceLocation = 
 Platform.getInstanceLocation();</SPAN><BR><SPAN 
@@ -67,7 +67,7 @@ style="COLOR: red">&nbsp;&nbsp;URL path =
 instanceLocation.getURL();</SPAN></STRONG><BR>&nbsp;&nbsp;String strPath = 
 path.getPath() + "GS.db";<BR>&nbsp;&nbsp;return strPath;<BR>&nbsp;}</P>
 <P>&nbsp;</P>
-<P><STRONG style="FONT-SIZE: 18pt">»ñÈ¡RCPÓ¦ÓÃ³ÌĞòµÄÆô¶¯ÔËĞĞÂ·¾¶</STRONG></P>
+<P><STRONG style="FONT-SIZE: 18pt">è·å–RCPåº”ç”¨ç¨‹åºçš„å¯åŠ¨è¿è¡Œè·¯å¾„</STRONG></P>
 <P>&nbsp;</P>
 <P>&nbsp;&nbsp;File bundleFile=null;<BR>&nbsp;&nbsp;try 
 {<BR>&nbsp;<STRONG>&nbsp;&nbsp;bundleFile = 
@@ -78,7 +78,7 @@ null;<BR>&nbsp;&nbsp;<STRONG>File geosearchFolder =
 bundleFile.getAbsoluteFile();<BR></STRONG>&nbsp;&nbsp;String geoSearchDisk= 
 geosearchFolder.getParent(); </P>
 <P>&nbsp;</P>
-<P><STRONG style="FONT-SIZE: 18pt">¸ù¾İVIEW ID»ñÈ¡ÏàÓ¦µÄVIEW¶ÔÏó</STRONG></P>
+<P><STRONG style="FONT-SIZE: 18pt">æ ¹æ®VIEW IDè·å–ç›¸åº”çš„VIEWå¯¹è±¡</STRONG></P>
 <P>&nbsp;&nbsp; String 
 viewID="com.geocompass.geosearch.views.filejudger";<BR><SPAN 
 style="COLOR: red">&nbsp;&nbsp; IViewPart part = 
@@ -88,19 +88,20 @@ judgeView=(FileJudgerView)part;</SPAN><BR>&nbsp;&nbsp;
 judgeView.reloadData();</P>
 <P>&nbsp;</P>
 <P>&nbsp;</P>
-<P><STRONG style="FONT-SIZE: 18pt">JAVA´ò¿ªÎÄ¼ş¼Ğ·½Ê½£º</STRONG></P>
+<P><STRONG style="FONT-SIZE: 18pt">JAVAæ‰“å¼€æ–‡ä»¶å¤¹æ–¹å¼ï¼š</STRONG></P>
 <P>&nbsp;</P>
 <P><SPAN>java.awt.Desktop.getDesktop().open(</SPAN><SPAN 
 class=keyword><STRONG><FONT color=#7f0055>new</FONT></STRONG></SPAN><SPAN>&nbsp;File(</SPAN><SPAN 
 class=string><FONT color=#0000ff>"D:\\Java"</FONT></SPAN><SPAN>));&nbsp;&nbsp;</SPAN></P>
 <P>&nbsp;</P>
 <P><SPAN 
-style="FONT-SIZE: 18pt; COLOR: red"><STRONG>É¾³ıÎÄ¼ş¼ĞÒÔ¼°ÎÄ¼ş¼ĞÄÚÈİ</STRONG></SPAN></P>
+style="FONT-SIZE: 18pt; COLOR: red"><STRONG>åˆ é™¤æ–‡ä»¶å¤¹ä»¥åŠæ–‡ä»¶å¤¹å†…å®¹</STRONG></SPAN></P>
 <P>public void deleteFile(File targetFile)<BR>{<BR>&nbsp; 
 if(targetFile.isDirectory())<BR>&nbsp; {<BR>&nbsp;&nbsp; File[] list = 
 targetFile.listFiles();<BR>&nbsp;&nbsp; for (int i = 0; i &lt; list.length; i++) 
 {<BR>&nbsp;&nbsp;&nbsp; deleteFile(list[i]);<BR>&nbsp;&nbsp; }<BR>&nbsp;&nbsp; 
 //<BR>&nbsp;&nbsp; targetFile.deleteOnExit();<BR>&nbsp; }<BR>&nbsp; 
 else<BR>&nbsp;&nbsp; targetFile.deleteOnExit();<BR>}</P>
+<P>&nbsp;</P>
 <P>&nbsp;</P></body>
 </html>

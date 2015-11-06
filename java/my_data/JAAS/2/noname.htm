@@ -1,6 +1,7 @@
-<HTML><HEAD><TITLE>ActiveMQÀïÄÚÇ¶µÄjettyµÄ°²È«ÅäÖÃ</TITLE><LINK 
+ï»¿<HTML><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>ActiveMQé‡Œå†…åµŒçš„jettyçš„å®‰å…¨é…ç½®</title><LINK 
 href="favicon.ico" type=image/x-icon rel="shortcut icon"><LINK 
-title=´úÂëÃñ¹¤ href="rss" type=application/rss+xml rel=alternate><LINK media=screen 
+title=ä»£ç æ°‘å·¥ href="rss" type=application/rss+xml rel=alternate><LINK media=screen 
 href="blog.css_1253897601" type=text/css 
 rel=stylesheet><LINK media=screen 
 href="blue.css_1235723792" 
@@ -25,39 +26,41 @@ type=text/css rel=stylesheet>
 <DIV class=date><SPAN class=year>2009</SPAN><SPAN class=sep_year>-</SPAN><SPAN 
 class=month>09</SPAN><SPAN class=sep_month>-</SPAN><SPAN 
 class=day>28</SPAN></DIV>
-<H3 class=type_original title=Ô­´´><A 
-href="http://wjw465150.javaeye.com/blog/479527">ActiveMQÀïÄÚÇ¶µÄjettyµÄ°²È«ÅäÖÃ</A></H3><A 
-href="http://wjw465150.javaeye.com/admin/blogs/479527/edit">±à¼­</A> <STRONG>¹Ø¼ü×Ö: 
-activemqÀïÄÚÇ¶µÄjettyµÄ°²È«ÅäÖÃ</STRONG> </DIV>
+<H3 class=type_original title=åŸåˆ›><A 
+href="http://wjw465150.javaeye.com/blog/479527">ActiveMQé‡Œå†…åµŒçš„jettyçš„å®‰å…¨é…ç½®</A></H3><A 
+href="http://wjw465150.javaeye.com/admin/blogs/479527/edit">ç¼–è¾‘</A> <STRONG>å…³é”®å­—: 
+activemqé‡Œå†…åµŒçš„jettyçš„å®‰å…¨é…ç½®</STRONG> </DIV>
 <DIV class=blog_content>
-<P>1. ¿½±´ jetty-plus-6.1.9.jar µ½ ${activemq.base}/lib/web/</P>
-<P>2. ÔÚÅäÖÃÎÄ¼ş${activemq.base}/conf/activemq.xmlµÄ&lt;jetty xmlns="<A 
-href="http://mortbay.com/schemas/jetty/1.0">http://mortbay.com/schemas/jetty/1.0</A>"&gt;½ÚµãÀï¼ÓÉÏ:<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<P>1. æ‹·è´ jetty-plus-6.1.9.jar åˆ° ${activemq.base}/lib/web/</P>
+<P>2. åœ¨é…ç½®æ–‡ä»¶${activemq.base}/conf/activemq.xmlçš„&lt;jetty xmlns="<A 
+href="http://mortbay.com/schemas/jetty/1.0">http://mortbay.com/schemas/jetty/1.0</A>"&gt;èŠ‚ç‚¹é‡ŒåŠ ä¸Š:<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 &lt;!-- @wjw_add --&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;userRealms&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 &lt;jaasUserRealm name="ActiveMQ Realm" loginModuleName="ActiveMQ" 
 /&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/userRealms&gt;</P>
 <P>3. 
-½¨Á¢:${activemq.base}/conf/mylogin.conf<BR>###########################################<BR>ActiveMQ{<BR>org.mortbay.jetty.plus.jaas.spi.PropertyFileLoginModule 
+å»ºç«‹:${activemq.base}/conf/mylogin.conf<BR>###########################################<BR>ActiveMQ{<BR>org.mortbay.jetty.plus.jaas.spi.PropertyFileLoginModule 
 required<BR>debug="true"<BR>file="${activemq.base}/conf/mylogin.properties";<BR>};<BR>###########################################</P>
 <P>4. 
-½¨Á¢:${activemq.base}/conf/mylogin.properties<BR>###########################################<BR>#The 
+å»ºç«‹:${activemq.base}/conf/mylogin.properties<BR>###########################################<BR>#The 
 format is: &lt;username&gt;: &lt;password&gt;[,&lt;rolename&gt; ...]<BR>admin: 
 adminadmin,roleAdmin<BR>###########################################</P>
 <P>5. Configure the security constraint either in the webconsoles web.xml or in 
 jetty's 
-webdefault.xml<BR>ÔÚ${activemq.base}/webapps/admin/WEB-INF/web.xmlÎÄ¼şÀïÌí¼ÓÒÔÏÂÄÚÈİ<BR>###########################################<BR>&lt;security-constraint&gt;<BR>&nbsp;&lt;web-resource-collection&gt;<BR>&nbsp;&nbsp;&lt;web-resource-name&gt;A 
+webdefault.xml<BR>åœ¨${activemq.base}/webapps/admin/WEB-INF/web.xmlæ–‡ä»¶é‡Œæ·»åŠ ä»¥ä¸‹å†…å®¹<BR>###########################################<BR>&lt;security-constraint&gt;<BR>&nbsp;&lt;web-resource-collection&gt;<BR>&nbsp;&nbsp;&lt;web-resource-name&gt;A 
 Protected 
 Page&lt;/web-resource-name&gt;<BR>&nbsp;&nbsp;&lt;url-pattern&gt;/*&lt;/url-pattern&gt;<BR>&nbsp;&lt;/web-resource-collection&gt;<BR>&nbsp;&lt;auth-constraint&gt;<BR>&nbsp;&nbsp;&lt;role-name&gt;roleAdmin&lt;/role-name&gt;<BR>&nbsp;&lt;/auth-constraint&gt;<BR>&lt;/security-constraint&gt;<BR>&nbsp;<BR>&lt;login-config&gt;<BR>&nbsp;&lt;auth-method&gt;BASIC&lt;/auth-method&gt;<BR>&nbsp;&lt;realm-name&gt;ActiveMQ 
 Realm&lt;/realm-name&gt;<BR>&lt;/login-config&gt;<BR>###########################################</P>
-<P>6. ÔÚÎÄ¼ş: 
-${activemq.base}/bin/activemqÀï°Ñ»·¾³±äÁ¿"-Djava.security.auth.login.config=${ACTIVEMQ_BASE}/conf/mylogin.conf"¼Óµ½ACTIVEMQ_OPTS<BR>ÀıÈç: 
+<P>6. åœ¨æ–‡ä»¶: 
+${activemq.base}/bin/activemqé‡ŒæŠŠç¯å¢ƒå˜é‡"-Djava.security.auth.login.config=${ACTIVEMQ_BASE}/conf/mylogin.conf"åŠ åˆ°ACTIVEMQ_OPTS<BR>ä¾‹å¦‚: 
 ACTIVEMQ_OPTS="$ACTIVEMQ_OPTS $SUNJMX $SSL_OPTS 
 -Djava.security.auth.login.config=${ACTIVEMQ_BASE}/conf/mylogin.conf"</P>
-<P>½áÊø:Ê¹ÓÃä¯ÀÀÆ÷·ÃÎÊ<A href="http://activemq/">http://activemq<SPAN 
-style="COLOR: #000000">µÄIP:8161/</SPAN>admin</A>,ä¯ÀÀÆ÷¾Í»áµ¯³öµÇÂ¼¶Ô»°¿ò!</P>
+<P>ç»“æŸ:ä½¿ç”¨æµè§ˆå™¨è®¿é—®<A href="http://activemq">http://activemq<SPAN 
+style="COLOR: #000000">çš„IP:8161/</SPAN>admin</A>,æµè§ˆå™¨å°±ä¼šå¼¹å‡ºç™»å½•å¯¹è¯æ¡†!</P>
 <P>&nbsp;</P></DIV><!--EndFragment--></DIV>
 </DIV>
 </DIV>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
 </DIV>
 </BODY>
 </HTML>

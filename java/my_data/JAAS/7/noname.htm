@@ -1,9 +1,10 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 
 <HTML dir=ltr xml:lang="zh-CN" 
-xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>ÍêÈ«ÍÑÀë·±ËöµÄacegi£¬×Ô¼ºÉè¼ÆÒ»Ì×È¨ÏŞ¿ØÖÆ</TITLE><LINK 
+xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>å®Œå…¨è„±ç¦»ç¹ççš„acegiï¼Œè‡ªå·±è®¾è®¡ä¸€å¥—æƒé™æ§åˆ¶</title><LINK 
 href="favicon.ico" type=image/x-icon rel="shortcut icon"><LINK 
-title=JavaEyeÂÛÌ³ href="Java" type=application/rss+xml 
+title=JavaEyeè®ºå› href="Java" type=application/rss+xml 
 rel=alternate><LINK media=screen 
 href="forum.css_1257050886" type=text/css 
 rel=stylesheet>
@@ -28,26 +29,26 @@ type=text/css rel=stylesheet>
 
 <TD class=postcontent>
 
-<DIV class="postbody clearfix"><!--StartFragment-->ÓÃ»§±í <BR>CREATE TABLE `users` ( <BR>&nbsp; `id` int(10) NOT NULL AUTO_INCREMENT, <BR>&nbsp; 
+<DIV class="postbody clearfix"><!--StartFragment-->ç”¨æˆ·è¡¨ <BR>CREATE TABLE `users` ( <BR>&nbsp; `id` int(10) NOT NULL AUTO_INCREMENT, <BR>&nbsp; 
 `username` varchar(100) NOT NULL, <BR>&nbsp; `fast` int(10) NOT NULL DEFAULT '0', 
 <BR>&nbsp; `loginname` varchar(100) NOT NULL, <BR>&nbsp; `loginpass` varchar(100) DEFAULT 
-NULL, <BR>&nbsp; `importuserid` int(255) DEFAULT NULL COMMENT '´´½¨ÈË', <BR>&nbsp; 
-`importdate` datetime DEFAULT NULL COMMENT '´´½¨Ê±¼ä', <BR>&nbsp; PRIMARY KEY (`id`) 
-<BR>) <BR><BR>½ÇÉ«±í <BR>CREATE TABLE `role` ( <BR>&nbsp; `id` int(10) NOT NULL 
+NULL, <BR>&nbsp; `importuserid` int(255) DEFAULT NULL COMMENT 'åˆ›å»ºäºº', <BR>&nbsp; 
+`importdate` datetime DEFAULT NULL COMMENT 'åˆ›å»ºæ—¶é—´', <BR>&nbsp; PRIMARY KEY (`id`) 
+<BR>) <BR><BR>è§’è‰²è¡¨ <BR>CREATE TABLE `role` ( <BR>&nbsp; `id` int(10) NOT NULL 
 AUTO_INCREMENT, <BR>&nbsp; `groupname` varchar(100) NOT NULL, <BR>&nbsp; `fast` int(11) 
 NOT NULL DEFAULT '0', <BR>&nbsp; `importdate` datetime NOT NULL, <BR>&nbsp; `importuserid` 
-int(11) NOT NULL £¬ <BR>&nbsp; PRIMARY KEY (`id`) <BR>) <BR><BR><BR>½ÇÉ«ºÍÓÃ»§¹ØÁª±í 
+int(11) NOT NULL ï¼Œ <BR>&nbsp; PRIMARY KEY (`id`) <BR>) <BR><BR><BR>è§’è‰²å’Œç”¨æˆ·å…³è”è¡¨ 
 <BR>CREATE TABLE `roleanduser` ( <BR>&nbsp; `groupid` int(11) NOT NULL, <BR>&nbsp; 
-`userid` int(11) NOT NULL <BR>) <BR><BR>½ÇÉ«È¨ÏŞ¹ØÁª±í <BR>CREATE TABLE `roleandright` 
+`userid` int(11) NOT NULL <BR>) <BR><BR>è§’è‰²æƒé™å…³è”è¡¨ <BR>CREATE TABLE `roleandright` 
 ( <BR>&nbsp; `groupid` int(10) NOT NULL, <BR>&nbsp; `rightid` int(10) NOT NULL <BR>) 
-<BR><BR>È¨ÏŞ±í <BR>CREATE TABLE `right` ( <BR>&nbsp; `id` int(10) NOT NULL, <BR>&nbsp; 
+<BR><BR>æƒé™è¡¨ <BR>CREATE TABLE `right` ( <BR>&nbsp; `id` int(10) NOT NULL, <BR>&nbsp; 
 `rightpath` varchar(200) NOT NULL, <BR>&nbsp; `isShow` int(11) NOT NULL DEFAULT '0' 
-COMMENT '1±íÊ¾²»ÏÔÊ¾0±íÊ¾ÏÔÊ¾', <BR>&nbsp; `importdate` datetime NOT NULL, <BR>&nbsp; 
+COMMENT '1è¡¨ç¤ºä¸æ˜¾ç¤º0è¡¨ç¤ºæ˜¾ç¤º', <BR>&nbsp; `importdate` datetime NOT NULL, <BR>&nbsp; 
 `importuserid` int(10) NOT NULL, <BR>&nbsp; `coding` int(11) DEFAULT NULL, <BR>&nbsp; 
 `isLeaf` int(11) DEFAULT NULL, <BR>&nbsp; `backinfo` varchar(1000) NOT NULL DEFAULT 
-'' COMMENT '±¸×¢', <BR>&nbsp; PRIMARY KEY (`id`) <BR>) 
-<BR><BR><BR>¸öÈË¸Ğ¾õÓÃspringµÄacegi»¹²»Èç°´ÕÕ×Ô¼ºµÄ±í½á¹¹Éè¼ÆÈ¨ÏŞ£¬Íê³ÉÍÑÀëacegiµÄ·±ËöÅäÖÃ 
-<BR>£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡ÈçÓĞ¸üºÃµÄ½¨Òé£¬»¶Ó­´ó¼ÒÖ¸Õı£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡ <!--EndFragment--></DIV>
+'' COMMENT 'å¤‡æ³¨', <BR>&nbsp; PRIMARY KEY (`id`) <BR>) 
+<BR><BR><BR>ä¸ªäººæ„Ÿè§‰ç”¨springçš„acegiè¿˜ä¸å¦‚æŒ‰ç…§è‡ªå·±çš„è¡¨ç»“æ„è®¾è®¡æƒé™ï¼Œå®Œæˆè„±ç¦»acegiçš„ç¹çé…ç½® 
+<BR>ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼å¦‚æœ‰æ›´å¥½çš„å»ºè®®ï¼Œæ¬¢è¿å¤§å®¶æŒ‡æ­£ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ <!--EndFragment--></DIV>
 </TD>
 </TR>
 </TBODY>
@@ -55,5 +56,7 @@ COMMENT '1±íÊ¾²»ÏÔÊ¾0±íÊ¾ÏÔÊ¾', <BR>&nbsp; `importdate` datetime NOT NULL, <BR>&
 </DIV>
 </DIV>
 </DIV>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
 </BODY>
 </HTML>

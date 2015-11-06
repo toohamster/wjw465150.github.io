@@ -1,6 +1,6 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Apache+Tomcat¸ºÔØ¾ùºâÓëÈº¼¯</title>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Apache+Tomcatè´Ÿè½½å‡è¡¡ä¸ç¾¤é›†</title>
 <script src="def.js"></script>
 
 <script language=javascript src="message.js" 
@@ -28,13 +28,13 @@ function add_flink(){
 		ajax.onreadystatechange = function() {
 			if (ajax.readyState == 4 && ajax.status == 200) {
 				if(ajax.responseText==""){
-					alert("Ìí¼Ó³É¹¦¡£");
+					alert("æ·»åŠ æˆåŠŸã€‚");
 				}
 				if(ajax.responseText=="1"){
-				alert("Á´½ÓÖ¸Ïò×Ô¼º¡£");
+				alert("é“¾æ¥æŒ‡å‘è‡ªå·±ã€‚");
 				}
 				if(ajax.responseText=="2"){
-				alert("ÓÑÇéÁ´½ÓÒÑ´æÔÚ¡£")
+				alert("å‹æƒ…é“¾æ¥å·²å­˜åœ¨ã€‚")
 				}
 			}
 		}
@@ -66,7 +66,7 @@ function copylink(ourl){
 		var clipBoardContent = ourl;
 	}
 	window.clipboardData.setData("Text",clipBoardContent);
-	alert("¸´ÖÆ³É¹¦!");
+	alert("å¤åˆ¶æˆåŠŸ!");
 	return false;
 }
 function correctPNG() {
@@ -129,7 +129,7 @@ color:#000;
 
 #fixed{position:fixed;top:120px;right:40%;z-index:255;}
 </style>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 
 <body>
@@ -142,7 +142,7 @@ color:#000;
 
 <div id=innerMainWrapper>
 
-<div class=mod id=layout_1 style="FLOAT: right; WIDTH: 74%">
+<div class=mod id=layout_1 style="WIDTH: 74%; FLOAT: right">
 
 <div class=nouse id=face>
 
@@ -153,688 +153,689 @@ color:#000;
 <div class=c>
 
 <div class=article id=article align=left><!--StartFragment-->
-<h1 class=subject style="WORD-WRAP: break-word"><b>Apache+Tomcat¸ºÔØ¾ùºâÓëÈº¼¯ </b></h1>
+<h1 class=subject style="WORD-WRAP: break-word"><b>Apache+Tomcatè´Ÿè½½å‡è¡¡ä¸ç¾¤é›† </b></h1>
 <hr 
-style="BORDER-RIGHT: #eeeeee 1px solid; BORDER-TOP: #eeeeee 1px solid; BORDER-LEFT: #eeeeee 1px solid; BORDER-BOTTOM: #eeeeee 1px solid" 
+style="BORDER-TOP: #eeeeee 1px solid; BORDER-RIGHT: #eeeeee 1px solid; BORDER-BOTTOM: #eeeeee 1px solid; BORDER-LEFT: #eeeeee 1px solid" 
 align=center width="94%" size=1>
 
 <div>
 <div class=posttime><small>2008-06-12 11:17:40</small></div>
-<div style="PADDING-LEFT: 20px; WIDTH: 94%">¡¡±êÇ©£º<span style="COLOR: #aaaaaa"><a 
+<div style="WIDTH: 94%; PADDING-LEFT: 20px">ã€€æ ‡ç­¾ï¼š<span style="COLOR: #aaaaaa"><A 
 class=operlink 
-href="tagindex.php_keyword=Apache¡¡Tomcat¡¡¸ºÔØ¾ùºâ¡¡Èº¼¯" 
-target=_blank>Apache¡¡Tomcat¡¡¸ºÔØ¾ùºâ¡¡Èº¼¯</a></span>¡¡¡¡¡¡[<a class=operlink 
-onClick="javascript:dfanologin();return false;" href="http://411086.blog.51cto.com/401086/81418#">ÍÆËÍµ½¼¼ÊõÈ¦</a>] 
+href="tagindex.php_keyword=Apacheã€€Tomcatã€€è´Ÿè½½å‡è¡¡ã€€ç¾¤é›†" 
+target=_blank>Apacheã€€Tomcatã€€è´Ÿè½½å‡è¡¡ã€€ç¾¤é›†</a></span>ã€€ã€€ã€€[<a class=operlink 
+onClick="javascript:dfanologin();return false;" href="http://411086.blog.51cto.com/401086/81418#">æ¨é€åˆ°æŠ€æœ¯åœˆ</a>] 
 <br><br></div></div>
 <div>
-<table id=content style="TABLE-LAYOUT: fixed; WIDTH: 650px" cellspacing=10 
+<table id=content style="WIDTH: 650px; TABLE-LAYOUT: fixed" cellspacing=10 
 cellpadding=0 width=650 border=0>
 <tbody>
 <tr>
 <td>
-<div class=copy><strong>°æÈ¨ÉùÃ÷£º</strong>Ô­´´×÷Æ·£¬ÔÊĞí×ªÔØ£¬×ªÔØÊ±ÇëÎñ±ØÒÔ³¬Á´½ÓĞÎÊ½±êÃ÷ÎÄÕÂ <a 
-style="TEXT-DECORATION: underline" href="http://411086.blog.51cto.com/401086/81418" target=_blank>Ô­Ê¼³ö´¦</a> 
-¡¢×÷ÕßĞÅÏ¢ºÍ±¾ÉùÃ÷¡£·ñÔò½«×·¾¿·¨ÂÉÔğÈÎ¡£<a 
+<div class=copy><strong>ç‰ˆæƒå£°æ˜ï¼š</strong>åŸåˆ›ä½œå“ï¼Œå…è®¸è½¬è½½ï¼Œè½¬è½½æ—¶è¯·åŠ¡å¿…ä»¥è¶…é“¾æ¥å½¢å¼æ ‡æ˜æ–‡ç«  <a 
+style="TEXT-DECORATION: underline" href="http://411086.blog.51cto.com/401086/81418" target=_blank>åŸå§‹å‡ºå¤„</a> 
+ã€ä½œè€…ä¿¡æ¯å’Œæœ¬å£°æ˜ã€‚å¦åˆ™å°†è¿½ç©¶æ³•å¾‹è´£ä»»ã€‚<a 
 href="http://411086.blog.51cto.com/401086/81418">http://411086.blog.51cto.com/401086/81418</a></div></td></tr>
 <tr>
 <td>
 <div 
-style="FONT-SIZE: 10pt; WORD-BREAK: break-all; POSITION: relative; WORD-WRAP: break-word">&nbsp; 
+style="WORD-WRAP: break-word; FONT-SIZE: 10pt; POSITION: relative; WORD-BREAK: break-all">&nbsp; 
 
-<div style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: ËÎÌå">»·¾³£º</div>
+<div style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“; MARGIN: 0in">ç¯å¢ƒï¼š</div>
 <ul 
-style="MARGIN-TOP: 0in; MARGIN-BOTTOM: 0in; MARGIN-LEFT: 0.75in; DIRECTION: ltr; unicode-bidi: embed" 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; DIRECTION: ltr; MARGIN-LEFT: 0.75in; MARGIN-TOP: 0in" 
 type=disc>
-<li style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle"><span 
-lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">²Ù×÷ÏµÍ³¾ùÎª£º</span><span 
+<li style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><span 
+lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">æ“ä½œç³»ç»Ÿå‡ä¸ºï¼š</span><span 
 lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">CentOS 5.1</span> 
-<li style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle"><span 
+<li style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><span 
 lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">Apache2.X</span><span 
-lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">·şÎñÆ÷Ò»Ì¨£º</span><span 
+lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">æœåŠ¡å™¨ä¸€å°ï¼š</span><span 
 lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">IP</span><span 
-lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">µØÖ·</span><span lang=en-US 
+lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">åœ°å€</span><span lang=en-US 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">192.168.232.4</span><span 
-lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">£»°²×°Â·¾¶</span><span 
+lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">ï¼›å®‰è£…è·¯å¾„</span><span 
 lang=en-US 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">/usr/local/apache</span><span 
-lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">£»</span> 
-<li style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle"><span 
+lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">ï¼›</span> 
+<li style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><span 
 lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">Tomcat6</span><span 
-lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">·şÎñÆ÷Ò»Ì¨£º</span><span 
+lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">æœåŠ¡å™¨ä¸€å°ï¼š</span><span 
 lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">IP</span><span 
-lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">µØÖ·</span><span lang=en-US 
+lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">åœ°å€</span><span lang=en-US 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">192.168.232.5</span><span 
-lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">£»°²×°Â·¾¶</span><span 
+lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">ï¼›å®‰è£…è·¯å¾„</span><span 
 lang=en-US 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">/usr/local/tomcat</span><span 
-lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">£»</span> 
-<li style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle"><span 
+lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">ï¼›</span> 
+<li style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><span 
 lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">Tomcat6</span><span 
-lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">·şÎñÆ÷Ò»Ì¨£º</span><span 
+lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">æœåŠ¡å™¨ä¸€å°ï¼š</span><span 
 lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">IP</span><span 
-lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">µØÖ·</span><span lang=en-US 
+lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">åœ°å€</span><span lang=en-US 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">192.168.232.6</span><span 
-lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">£»°²×°Â·¾¶</span><span 
+lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">ï¼›å®‰è£…è·¯å¾„</span><span 
 lang=en-US 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">/usr/local/tomcat</span><span 
-lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">£»</span></li></ul>
+lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">ï¼›</span></li></ul>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&nbsp;</div>
-<div style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: ËÎÌå">ÅäÖÃ£º</div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&nbsp;</div>
+<div style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“; MARGIN: 0in">é…ç½®ï¼š</div>
 <ol 
-style="MARGIN-TOP: 0in; FONT-SIZE: 10.5pt; MARGIN-BOTTOM: 0in; MARGIN-LEFT: 0.75in; DIRECTION: ltr; FONT-FAMILY: simsun; unicode-bidi: embed" 
+style="MARGIN-BOTTOM: 0in; FONT-SIZE: 10.5pt; FONT-FAMILY: simsun; unicode-bidi: embed; DIRECTION: ltr; MARGIN-LEFT: 0.75in; MARGIN-TOP: 0in" 
 type=1>
-<li style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle" 
+<li style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px" 
 value=1><span lang=en-US 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">Apache</span><span lang=zh-CN 
-style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">°²×°£º</span></li></ol>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">å®‰è£…ï¼š</span></li></ol>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">#./configure 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">#./configure 
 --prefix=/usr/local/apache --enable-modules=so --enable-mods-shared=all 
 --enable-proxy --enable-proxy-connect --enable-proxy-ftp --enable-proxy-http 
 --enable-proxy-ajp --enable-proxy-balancer --enable-rewrite</div>
 <div style="FONT-SIZE: 10.5pt; MARGIN: 0in"><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">×¢ÊÍ£º¼¤»î</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">æ³¨é‡Šï¼šæ¿€æ´»</span><span lang=en-US 
 style="FONT-FAMILY: calibri">tomcat</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">¼¯ÈºĞèÒªµÄ</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">é›†ç¾¤éœ€è¦çš„</span><span lang=en-US 
 style="FONT-FAMILY: calibri"> enable-proxy</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">£¬</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">ï¼Œ</span><span lang=en-US 
 style="FONT-FAMILY: calibri">enable-proxy-http</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">£¬</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">ï¼Œ</span><span lang=en-US 
 style="FONT-FAMILY: calibri">enable-proxy-connect</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">£¬</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">ï¼Œ</span><span lang=en-US 
 style="FONT-FAMILY: calibri">enable-proxy-ajp</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">ºÍ</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">å’Œ</span><span lang=en-US 
 style="FONT-FAMILY: calibri">enable-proxy-balancer</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">£¬ÆäÖĞ</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">ï¼Œå…¶ä¸­</span><span lang=en-US 
 style="FONT-FAMILY: calibri">proxy-ajp</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">ºÍ</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">å’Œ</span><span lang=en-US 
 style="FONT-FAMILY: calibri">proxy-balancer</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">±ØĞëÒÀÀµ</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">å¿…é¡»ä¾èµ–</span><span lang=en-US 
 style="FONT-FAMILY: calibri">proxy</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">£¬Èç¹ûÊÇ×Ô¶¨ÒåµÄ±àÒë³ıÁËÒÔÉÏ¼¸¸ö±ØĞëµÄÄ£¿éÍâ£¬</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">ï¼Œå¦‚æœæ˜¯è‡ªå®šä¹‰çš„ç¼–è¯‘é™¤äº†ä»¥ä¸Šå‡ ä¸ªå¿…é¡»çš„æ¨¡å—å¤–ï¼Œ</span><span lang=en-US 
 style="FONT-FAMILY: calibri">mod_status</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">Ò²Òª±àÒë½øÈ¥£¬ÇĞ¼Ç¡£</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">ä¹Ÿè¦ç¼–è¯‘è¿›å»ï¼Œåˆ‡è®°ã€‚</span><span lang=en-US 
 style="FONT-FAMILY: calibri">enable-proxy-ftp</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">¿ÉÒÔ²»±àÒë¡£</span></div>
+style="FONT-FAMILY: å®‹ä½“">å¯ä»¥ä¸ç¼–è¯‘ã€‚</span></div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">#make;make 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">#make;make 
 install</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&nbsp;</div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&nbsp;</div>
 <ol 
-style="MARGIN-TOP: 0in; FONT-SIZE: 10.5pt; MARGIN-BOTTOM: 0in; MARGIN-LEFT: 0.75in; DIRECTION: ltr; FONT-FAMILY: simsun; unicode-bidi: embed" 
+style="MARGIN-BOTTOM: 0in; FONT-SIZE: 10.5pt; FONT-FAMILY: simsun; unicode-bidi: embed; DIRECTION: ltr; MARGIN-LEFT: 0.75in; MARGIN-TOP: 0in" 
 type=1>
-<li style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle" 
+<li style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px" 
 value=2><span lang=zh-CN 
-style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">ÖÆ×÷</span><span lang=en-US 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">åˆ¶ä½œ</span><span lang=en-US 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">Apache</span><span lang=zh-CN 
-style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">Æô¶¯Ïî£º</span></li></ol>
-<div lang=en-US style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">#cp 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">å¯åŠ¨é¡¹ï¼š</span></li></ol>
+<div lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">#cp 
 support/apachectl /etc/rc.d/init.d/httpd</div>
-<div lang=en-US style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">#vi 
+<div lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">#vi 
 /etc/rc.d/init.d/httpd</div>
-<div style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: ËÎÌå">Ìí¼ÓÒÔÏÂÄÚÈİ£º£¨°üÀ¨££ºÅ£©</div>
-<div lang=en-US style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri"># 
+<div style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“; MARGIN: 0in">æ·»åŠ ä»¥ä¸‹å†…å®¹ï¼šï¼ˆåŒ…æ‹¬ï¼ƒå·ï¼‰</div>
+<div lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in"># 
 Startup script for the Apache Web Server</div>
-<div lang=en-US style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri"># 
+<div lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in"># 
 chkconfig: 2345 85 15</div>
-<div lang=en-US style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri"># 
+<div lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in"># 
 description: Apache is a World Wide Web server .It is used to server</div>
-<div lang=en-US style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri"># 
+<div lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in"># 
 HTML files and CGI.</div>
-<div lang=en-US style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri"># 
+<div lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in"># 
 processname: httpd</div>
-<div lang=en-US style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri"># 
+<div lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in"># 
 pidfile: /usr/local/apache/log/httpd.pid</div>
-<div lang=en-US style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri"># 
+<div lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in"># 
 config: /usr/local/apache/conf/httpd.conf</div>
-<div style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: ËÎÌå">Ôö¼Ó·şÎñÏî</div>
+<div style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“; MARGIN: 0in">å¢åŠ æœåŠ¡é¡¹</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">#chkconfig --add 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">#chkconfig --add 
 httpd</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">#chmod 755 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">#chmod 755 
 /etc/rc.d/init.d/httpd</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">#chkconfig --level 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">#chkconfig --level 
 345 httpd on</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&nbsp;</div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&nbsp;</div>
 <ol 
-style="MARGIN-TOP: 0in; FONT-SIZE: 10.5pt; MARGIN-BOTTOM: 0in; MARGIN-LEFT: 0.75in; DIRECTION: ltr; FONT-FAMILY: simsun; unicode-bidi: embed" 
+style="MARGIN-BOTTOM: 0in; FONT-SIZE: 10.5pt; FONT-FAMILY: simsun; unicode-bidi: embed; DIRECTION: ltr; MARGIN-LEFT: 0.75in; MARGIN-TOP: 0in" 
 type=1>
-<li style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle" 
+<li style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px" 
 value=3><span lang=en-US 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">JDK</span><span lang=zh-CN 
-style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">°²×°£º</span></li></ol>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">å®‰è£…ï¼š</span></li></ol>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">#chmod a+x 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">#chmod a+x 
 jdk-6u4-linux-i586-rpm.bin</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">#./jdk-6u4-linux-i586-rpm.bin</div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">#./jdk-6u4-linux-i586-rpm.bin</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&nbsp;</div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&nbsp;</div>
 <ol 
-style="MARGIN-TOP: 0in; FONT-SIZE: 10.5pt; MARGIN-BOTTOM: 0in; MARGIN-LEFT: 0.75in; DIRECTION: ltr; FONT-FAMILY: simsun; unicode-bidi: embed" 
+style="MARGIN-BOTTOM: 0in; FONT-SIZE: 10.5pt; FONT-FAMILY: simsun; unicode-bidi: embed; DIRECTION: ltr; MARGIN-LEFT: 0.75in; MARGIN-TOP: 0in" 
 type=1>
-<li style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle" 
+<li style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px" 
 value=4><span lang=en-US 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">JAVA</span><span lang=zh-CN 
-style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">»·¾³±äÁ¿ÉèÖÃ£º</span></li></ol>
-<div lang=en-US style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">#vi 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">ç¯å¢ƒå˜é‡è®¾ç½®ï¼š</span></li></ol>
+<div lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">#vi 
 /etc/profile</div>
-<div style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: ËÎÌå">ÔÚÎÄ¼ş×îºóÌí¼ÓÒÔÏÂÄÚÈİ£º</div>
+<div style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“; MARGIN: 0in">åœ¨æ–‡ä»¶æœ€åæ·»åŠ ä»¥ä¸‹å†…å®¹ï¼š</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">JAVA_HOME=/usr/java/jdk1.6.0_04</div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">JAVA_HOME=/usr/java/jdk1.6.0_04</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">CLASSPATH=.:$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar</div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">CLASSPATH=.:$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">PATH=$JAVA_HOME/bin:$PATH</div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">PATH=$JAVA_HOME/bin:$PATH</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">CATALINA_HOME=/usr/local/tomcat</div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">CATALINA_HOME=/usr/local/tomcat</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">export JAVA_HOME 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">export JAVA_HOME 
 CLASSPATH PATH CATALINA_HOME </div>
 <div 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: ËÎÌå">Ö´ĞĞÈçÏÂÃüÁîÊ¹»·¾³±äÁ¿ÉúĞ§£º</div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“; MARGIN: 0in">æ‰§è¡Œå¦‚ä¸‹å‘½ä»¤ä½¿ç¯å¢ƒå˜é‡ç”Ÿæ•ˆï¼š</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">source 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">source 
 /etc/profile</div>
-<div style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: ËÎÌå">²âÊÔÅäÖÃÊÇ·ñ³É¹¦£º</div>
+<div style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“; MARGIN: 0in">æµ‹è¯•é…ç½®æ˜¯å¦æˆåŠŸï¼š</div>
 <div lang=en-US style="FONT-SIZE: 10.5pt; MARGIN: 0in"><span 
 style="FONT-FAMILY: calibri">java </span><span 
-style="FONT-FAMILY: simsun">¨C</span><span 
+style="FONT-FAMILY: simsun">â€“</span><span 
 style="FONT-FAMILY: calibri">version</span></div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&nbsp;</div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&nbsp;</div>
 <ol 
-style="MARGIN-TOP: 0in; FONT-SIZE: 10.5pt; MARGIN-BOTTOM: 0in; MARGIN-LEFT: 0.75in; DIRECTION: ltr; FONT-FAMILY: simsun; unicode-bidi: embed" 
+style="MARGIN-BOTTOM: 0in; FONT-SIZE: 10.5pt; FONT-FAMILY: simsun; unicode-bidi: embed; DIRECTION: ltr; MARGIN-LEFT: 0.75in; MARGIN-TOP: 0in" 
 type=1>
-<li style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle" 
+<li style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px" 
 value=5><span lang=en-US 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">Tomcat</span><span lang=zh-CN 
-style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">°²×°£º</span></li></ol>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">å®‰è£…ï¼š</span></li></ol>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">#wget <a 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">#wget <a 
 href="http://apache.mirror.phpchina.com/tomcat/tomcat-6/v6.0.16/bin/apache-tomcat-6.0.16.tar.gz">[url]http://apache.mirror.phpchina.com/tomcat/tomcat-6/v6.0.16/bin/apache-tomcat-6.0.16.tar.gz[/url]</a></div>
 <div lang=en-US style="MARGIN: 0in"><span 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">#tar zxvf </span><span 
-style="FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: black; FONT-FAMILY: tahoma">apache-tomcat-6.0.16.tar.gz</span></div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: tahoma; FONT-WEIGHT: bold; COLOR: black">apache-tomcat-6.0.16.tar.gz</span></div>
 <div lang=en-US 
-style="FONT-WEIGHT: bold; FONT-SIZE: 9pt; MARGIN: 0in; COLOR: black; FONT-FAMILY: tahoma">#mv 
+style="FONT-SIZE: 9pt; FONT-FAMILY: tahoma; FONT-WEIGHT: bold; COLOR: black; MARGIN: 0in">#mv 
 apache-tomcat-6.0.16 /usr/local/tomcat</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; COLOR: black; FONT-FAMILY: tahoma">&nbsp;</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: tahoma; COLOR: black; MARGIN: 0in">&nbsp;</div>
 <ol 
-style="MARGIN-TOP: 0in; FONT-SIZE: 10.5pt; MARGIN-BOTTOM: 0in; MARGIN-LEFT: 0.75in; DIRECTION: ltr; FONT-FAMILY: simsun; unicode-bidi: embed" 
+style="MARGIN-BOTTOM: 0in; FONT-SIZE: 10.5pt; FONT-FAMILY: simsun; unicode-bidi: embed; DIRECTION: ltr; MARGIN-LEFT: 0.75in; MARGIN-TOP: 0in" 
 type=1>
-<li style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle" 
+<li style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px" 
 value=6><span lang=en-US 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">Tomcat</span><span lang=zh-CN 
-style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">Ëæ»úÆô¶¯£º</span></li></ol>
-<div lang=en-US style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">#vi 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">éšæœºå¯åŠ¨ï¼š</span></li></ol>
+<div lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">#vi 
 /etc/rc.local</div>
-<div style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: ËÎÌå">Ìí¼ÓÒÔÏÂÄÚÈİ£º</div>
+<div style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“; MARGIN: 0in">æ·»åŠ ä»¥ä¸‹å†…å®¹ï¼š</div>
 <div lang=en-US 
-style="FONT-WEIGHT: bold; FONT-SIZE: 9pt; MARGIN: 0in; COLOR: black; FONT-FAMILY: tahoma">/usr/local/tomcat/bin/startup.sh</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: tahoma; FONT-WEIGHT: bold; COLOR: black; MARGIN: 0in">/usr/local/tomcat/bin/startup.sh</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&nbsp;</div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&nbsp;</div>
 <ol 
-style="MARGIN-TOP: 0in; FONT-SIZE: 10.5pt; MARGIN-BOTTOM: 0in; MARGIN-LEFT: 0.75in; DIRECTION: ltr; FONT-FAMILY: simsun; unicode-bidi: embed" 
+style="MARGIN-BOTTOM: 0in; FONT-SIZE: 10.5pt; FONT-FAMILY: simsun; unicode-bidi: embed; DIRECTION: ltr; MARGIN-LEFT: 0.75in; MARGIN-TOP: 0in" 
 type=1>
-<li style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle" 
+<li style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px" 
 value=7><span lang=en-US 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">tomcat6</span><span lang=zh-CN 
-style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">ÅäÖÃÎÄ¼ş</span><span lang=en-US 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">é…ç½®æ–‡ä»¶</span><span lang=en-US 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">server.xml</span><span 
-lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">£º</span></li></ol>
-<div style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: ËÎÌå">°Ñ</div>
+lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">ï¼š</span></li></ol>
+<div style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“; MARGIN: 0in">æŠŠ</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;!-- You should 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;!-- You should 
 set jvmRoute to support load-balancing via AJP ie :</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;Engine 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;Engine 
 name="Standalone" defaultHost="localhost" jvmRoute="<span 
 style="FONT-WEIGHT: bold">jvm1</span>"&gt;</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">--&gt;</div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">--&gt;</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;Engine 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;Engine 
 name="Catalina" defaultHost="localhost"&gt;</div>
-<div style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: ËÎÌå">¸Ä³É</div>
+<div style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“; MARGIN: 0in">æ”¹æˆ</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&nbsp;</div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&nbsp;</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;!-- You should 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;!-- You should 
 set jvmRoute to support load-balancing via AJP ie :</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">--&gt;</div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">--&gt;</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;Engine 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;Engine 
 name="Standalone" defaultHost="localhost" jvmRoute="<span 
 style="FONT-WEIGHT: bold">tomcatX</span>"&gt;</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;!-- </div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;!-- </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;Engine 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;Engine 
 name="Catalina" defaultHost="localhost"&gt;</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">--&gt;</div>
-<div style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: ËÎÌå">ËµÃ÷£º</div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">--&gt;</div>
+<div style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“; MARGIN: 0in">è¯´æ˜ï¼š</div>
 <div style="FONT-SIZE: 10.5pt; MARGIN: 0in"><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">µÚÒ»Ì¨</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">ç¬¬ä¸€å°</span><span lang=en-US 
 style="FONT-FAMILY: calibri">tomcat</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">¾Í°Ñ</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">å°±æŠŠ</span><span lang=en-US 
 style="FONT-FAMILY: calibri">jvmRoute="tomcat1"</span></div>
 <div style="FONT-SIZE: 10.5pt; MARGIN: 0in"><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">µÚ¶şÌ¨</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">ç¬¬äºŒå°</span><span lang=en-US 
 style="FONT-FAMILY: calibri">tomcat</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">¾Í°Ñ</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">å°±æŠŠ</span><span lang=en-US 
 style="FONT-FAMILY: calibri">jvmRoute="tomcat2"</span></div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&nbsp;</div>
-<div style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: ËÎÌå">°Ñ</div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&nbsp;</div>
+<div style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“; MARGIN: 0in">æŠŠ</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;!--</div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;!--</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;Cluster 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;Cluster 
 className="org.apache.catalina.ha.tcp.SimpleTcpCluster"/&gt;</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">--&gt;</div>
-<div style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: ËÎÌå">¸ÄÎª</div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">--&gt;</div>
+<div style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“; MARGIN: 0in">æ”¹ä¸º</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;Cluster 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;Cluster 
 className="org.apache.catalina.ha.tcp.SimpleTcpCluster"/&gt;</div>
-<div style="FONT-WEIGHT: bold; FONT-SIZE: 10.5pt; MARGIN: 0in"><span lang=en-US 
+<div style="FONT-SIZE: 10.5pt; FONT-WEIGHT: bold; MARGIN: 0in"><span lang=en-US 
 style="FONT-FAMILY: calibri">***</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">Èº¼¯ÏêÏ¸ÅäÖÃ</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">ç¾¤é›†è¯¦ç»†é…ç½®</span><span lang=en-US 
 style="FONT-FAMILY: calibri">***</span></div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;Cluster 
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;Cluster 
 className="org.apache.catalina.ha.tcp.SimpleTcpCluster"</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">channelSendOptions="8"&gt;</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">channelSendOptions="8"&gt;</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">&nbsp;</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">&nbsp;</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;Manager 
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;Manager 
 className="org.apache.catalina.ha.session.DeltaManager"</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">expireSessionsOnShutdown="false"</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">expireSessionsOnShutdown="false"</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">notifyListenersOnReplication="true"/&gt;</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">notifyListenersOnReplication="true"/&gt;</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">&nbsp;</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">&nbsp;</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;Channel 
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;Channel 
 className="org.apache.catalina.tribes.group.GroupChannel"&gt;</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;Membership 
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;Membership 
 className="org.apache.catalina.tribes.membership.McastService"</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">address="228.0.0.4"</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">address="228.0.0.4"</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">port="45564"</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">port="45564"</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">frequency="500"</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">frequency="500"</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">dropTime="3000"/&gt;</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">dropTime="3000"/&gt;</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;Receiver 
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;Receiver 
 className="org.apache.catalina.tribes.transport.nio.NioReceiver"</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">address="auto"</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">address="auto"</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">port="4000"</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">port="4000"</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">autoBind="100"</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">autoBind="100"</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">selectorTimeout="5000"</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">selectorTimeout="5000"</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">maxThreads="6"/&gt;</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">maxThreads="6"/&gt;</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">&nbsp;</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">&nbsp;</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;Sender 
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;Sender 
 className="org.apache.catalina.tribes.transport.ReplicationTransmitter"&gt;</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;Transport 
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;Transport 
 className="org.apache.catalina.tribes.transport.nio.PooledParallelSender"/&gt;</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;/Sender&gt;</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;/Sender&gt;</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;Interceptor 
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;Interceptor 
 className="org.apache.catalina.tribes.group.interceptors.TcpFailureDetector"/&gt;</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;Interceptor 
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;Interceptor 
 className="org.apache.catalina.tribes.group.interceptors.MessageDispatch15Interceptor"/&gt;</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;/Channel&gt;</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;/Channel&gt;</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">&nbsp;</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">&nbsp;</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;Valve 
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;Valve 
 className="org.apache.catalina.ha.tcp.ReplicationValve"</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">filter=""/&gt;</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">filter=""/&gt;</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;Valve 
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;Valve 
 className="org.apache.catalina.ha.session.JvmRouteBinderValve"/&gt;</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">&nbsp;</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">&nbsp;</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;Deployer 
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;Deployer 
 className="org.apache.catalina.ha.deploy.FarmWarDeployer"</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">tempDir="/tmp/war-temp/"</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">tempDir="/tmp/war-temp/"</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">deployDir="/tmp/war-deploy/"</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">deployDir="/tmp/war-deploy/"</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">watchDir="/tmp/war-listen/"</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">watchDir="/tmp/war-listen/"</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">watchEnabled="false"/&gt;</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">watchEnabled="false"/&gt;</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">&nbsp;</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">&nbsp;</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;ClusterListener 
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;ClusterListener 
 className="org.apache.catalina.ha.session.JvmRouteSessionIDBinderListener"/&gt;</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;ClusterListener 
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;ClusterListener 
 className="org.apache.catalina.ha.session.ClusterSessionListener"/&gt;</div>
 <div lang=en-US 
-style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;/Cluster&gt;</div>
+style="FONT-SIZE: 9pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;/Cluster&gt;</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&nbsp;</div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&nbsp;</div>
 <ol 
-style="MARGIN-TOP: 0in; FONT-SIZE: 10.5pt; MARGIN-BOTTOM: 0in; MARGIN-LEFT: 0.75in; DIRECTION: ltr; FONT-FAMILY: simsun; unicode-bidi: embed" 
+style="MARGIN-BOTTOM: 0in; FONT-SIZE: 10.5pt; FONT-FAMILY: simsun; unicode-bidi: embed; DIRECTION: ltr; MARGIN-LEFT: 0.75in; MARGIN-TOP: 0in" 
 type=1>
-<li style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle" 
+<li style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px" 
 value=8><span lang=zh-CN 
-style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">ÅäÖÃÓ¦ÓÃµÄ</span><span lang=en-US 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">é…ç½®åº”ç”¨çš„</span><span lang=en-US 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">web.xml</span><span lang=zh-CN 
-style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">£º</span></li></ol>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">ï¼š</span></li></ol>
 <div style="FONT-SIZE: 10.5pt; MARGIN: 0in"><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">ÔÚÃ¿¸ö</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">åœ¨æ¯ä¸ª</span><span lang=en-US 
 style="FONT-FAMILY: calibri">webapps</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">Ó¦ÓÃÖĞ</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">åº”ç”¨ä¸­</span><span lang=en-US 
 style="FONT-FAMILY: calibri">,</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">ĞŞ¸ÄÅäÖÃÎÄ¼ş</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">ä¿®æ”¹é…ç½®æ–‡ä»¶</span><span lang=en-US 
 style="FONT-FAMILY: calibri">web.xml</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">ÎÄ¼ş</span><span lang=zh-CN style="FONT-FAMILY: calibri"> 
-</span><span lang=zh-CN style="FONT-FAMILY: ËÎÌå">Ìí¼ÓÔªËØ</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">æ–‡ä»¶</span><span lang=zh-CN style="FONT-FAMILY: calibri"> 
+</span><span lang=zh-CN style="FONT-FAMILY: å®‹ä½“">æ·»åŠ å…ƒç´ </span><span lang=en-US 
 style="FONT-FAMILY: calibri">&lt;distributable/&gt; </span></div>
 <div style="FONT-SIZE: 10.5pt; MARGIN: 0in"><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">ÔÚ</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">åœ¨</span><span lang=en-US 
 style="FONT-FAMILY: calibri">web.xml</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">ÎÄ¼şÖĞ</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">æ–‡ä»¶ä¸­</span><span lang=en-US 
 style="FONT-FAMILY: calibri">&lt;web-app&gt;</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">ÔªËØÏÂÔö¼ÓÒÔÏÂÄÚÈİ£º</span><span lang=zh-CN 
+style="FONT-FAMILY: å®‹ä½“">å…ƒç´ ä¸‹å¢åŠ ä»¥ä¸‹å†…å®¹ï¼š</span><span lang=zh-CN 
 style="FONT-FAMILY: calibri"> </span></div>
 <div style="FONT-SIZE: 10.5pt; MARGIN: 0in"><span lang=en-US 
 style="FONT-FAMILY: calibri">&lt;!--</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">´ËÓ¦ÓÃ½«ÓëÈº¼¯·şÎñÆ÷¸´ÖÆ</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">æ­¤åº”ç”¨å°†ä¸ç¾¤é›†æœåŠ¡å™¨å¤åˆ¶</span><span lang=en-US 
 style="FONT-FAMILY: calibri">Session--&gt; </span></div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;distributable/&gt; 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;distributable/&gt; 
 </div>
 <div style="FONT-SIZE: 10.5pt; MARGIN: 0in"><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">¾ßÌåĞŞ¸ÄÈçÏÂ</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">å…·ä½“ä¿®æ”¹å¦‚ä¸‹</span><span lang=en-US 
 style="FONT-FAMILY: calibri">: </span></div>
 <div style="FONT-SIZE: 10.5pt; MARGIN: 0in"><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">ĞŞ¸ÄÇ°</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">ä¿®æ”¹å‰</span><span lang=en-US 
 style="FONT-FAMILY: calibri">: </span></div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;?xml 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;?xml 
 version="1.0" encoding="ISO-8859-1"?&gt; </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;web-app 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;web-app 
 xmlns="<a 
 href="http://java.sun.com/xml/ns/javaee">[url]http://java.sun.com/xml/ns/javaee[/url]</a>" 
 </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 <a 
 href="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">[url]http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd[/url]</a>" 
 </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">version="2.5"&gt; 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">version="2.5"&gt; 
 </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;/web-app&gt; 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;/web-app&gt; 
 </div>
 <div style="FONT-SIZE: 10.5pt; MARGIN: 0in"><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">ĞŞ¸Äºó</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">ä¿®æ”¹å</span><span lang=en-US 
 style="FONT-FAMILY: calibri">: </span></div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;?xml 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;?xml 
 version="1.0" encoding="ISO-8859-1"?&gt; </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;web-app 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;web-app 
 xmlns="<a 
 href="http://java.sun.com/xml/ns/javaee">[url]http://java.sun.com/xml/ns/javaee[/url]</a>" 
 </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 <a 
 href="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">[url]http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd[/url]</a>" 
 </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">version="2.5"&gt; 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">version="2.5"&gt; 
 </div>
 <div style="FONT-SIZE: 10.5pt; MARGIN: 0in"><span lang=en-US 
 style="FONT-FAMILY: calibri">&lt;!--</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">´ËÓ¦ÓÃ½«ÓëÈº¼¯·şÎñÆ÷¸´ÖÆ</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">æ­¤åº”ç”¨å°†ä¸ç¾¤é›†æœåŠ¡å™¨å¤åˆ¶</span><span lang=en-US 
 style="FONT-FAMILY: calibri">Session--&gt; </span></div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;distributable/&gt; 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;distributable/&gt; 
 </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;/web-app&gt;</div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;/web-app&gt;</div>
 <ol 
-style="MARGIN-TOP: 0in; FONT-SIZE: 10.5pt; MARGIN-BOTTOM: 0in; MARGIN-LEFT: 0.75in; DIRECTION: ltr; FONT-FAMILY: simsun; unicode-bidi: embed" 
+style="MARGIN-BOTTOM: 0in; FONT-SIZE: 10.5pt; FONT-FAMILY: simsun; unicode-bidi: embed; DIRECTION: ltr; MARGIN-LEFT: 0.75in; MARGIN-TOP: 0in" 
 type=1>
-<li style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle" 
+<li style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px" 
 value=9><span lang=zh-CN 
-style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">ÅäÖÃ</span><span lang=en-US 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">é…ç½®</span><span lang=en-US 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">apache</span><span lang=zh-CN 
-style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">µÄ</span><span lang=en-US 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">çš„</span><span lang=en-US 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">ajp</span><span lang=zh-CN 
-style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">¸ºÔØ¾ùºâ¹¦ÄÜ£º</span></li></ol>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">è´Ÿè½½å‡è¡¡åŠŸèƒ½ï¼š</span></li></ol>
 <div style="FONT-SIZE: 10.5pt; MARGIN: 0in"><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">È·±£½«ÒÔÏÂ</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">ç¡®ä¿å°†ä»¥ä¸‹</span><span lang=en-US 
 style="FONT-FAMILY: calibri">Module</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">µÄ×¢ÊÍÈ¥µô</span></div>
+style="FONT-FAMILY: å®‹ä½“">çš„æ³¨é‡Šå»æ‰</span></div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">LoadModule 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">LoadModule 
 proxy_module modules/mod_proxy.so </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">LoadModule 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">LoadModule 
 proxy_connect_module modules/mod_proxy_connect.so </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">LoadModule 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">LoadModule 
 proxy_ftp_module modules/mod_proxy_ftp.so </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">LoadModule 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">LoadModule 
 proxy_http_module modules/mod_proxy_http.so </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">LoadModule 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">LoadModule 
 proxy_ajp_module modules/mod_proxy_ajp.so </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">LoadModule 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">LoadModule 
 proxy_balancer_module modules/mod_proxy_balancer.so </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">LoadModule 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">LoadModule 
 status_module modules/mod_status.so</div>
-<div style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: ËÎÌå">Ôö¼ÓÒÔÏÂÄÚÈİ£º</div>
-<div style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: " new?? courier># 
+<div style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“; MARGIN: 0in">å¢åŠ ä»¥ä¸‹å†…å®¹ï¼š</div>
+<div style="FONT-SIZE: 9pt; FONT-FAMILY: ; MARGIN: 0in" courier new??># 
 Proxypass Config</div>
-<div lang=en-US style="FONT-SIZE: 9pt; MARGIN: 0in; FONT-FAMILY: " new?? 
-courier>Include conf/extra/httpd-modproxy.conf</div>
+<div lang=en-US style="FONT-SIZE: 9pt; FONT-FAMILY: ; MARGIN: 0in" courier 
+new??>Include conf/extra/httpd-modproxy.conf</div>
 <div style="MARGIN: 0in"><span lang=zh-CN 
-style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">½¨Á¢ÎÄ¼ş</span><span lang=en-US 
-style="FONT-SIZE: 9pt; FONT-FAMILY: " new?? 
-courier>httpd-modproxy.conf</span><span lang=zh-CN 
-style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">ÊäÈëÄÚÈİ£º</span></div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">å»ºç«‹æ–‡ä»¶</span><span lang=en-US 
+style="FONT-SIZE: 9pt; FONT-FAMILY: " courier 
+new??>httpd-modproxy.conf</span><span lang=zh-CN 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">è¾“å…¥å†…å®¹ï¼š</span></div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;Location 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;Location 
 /server-status&gt; </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">SetHandler 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">SetHandler 
 server-status </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">Order Deny,Allow 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">Order Deny,Allow 
 </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">Deny from all 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">Deny from all 
 </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">Allow from all 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">Allow from all 
 </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;/Location&gt; 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;/Location&gt; 
 </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;Location 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;Location 
 /balancer-manager&gt; </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">SetHandler 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">SetHandler 
 balancer-manager </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">Order Deny,Allow 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">Order Deny,Allow 
 </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">Deny from all 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">Deny from all 
 </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">Allow from all 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">Allow from all 
 </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;/Location&gt; 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;/Location&gt; 
 </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">ProxyRequests Off 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">ProxyRequests Off 
 </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">ProxyPass <span 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">ProxyPass <span 
 style="FONT-WEIGHT: bold">/</span> balancer://tomcatcluster 
 stickysession=jsessionid nofailover=On</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&nbsp;</div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&nbsp;</div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;Proxy 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;Proxy 
 balancer://tomcatcluster&gt; </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">BalancerMember <a 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">BalancerMember <a 
 href="http://192.168.232.5:8080/">[url]http://192.168.232.5:8080[/url]</a> 
 loadfactor=1 </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">BalancerMember <a 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">BalancerMember <a 
 href="http://192.168.232.6:8080/">[url]http://192.168.232.6:8080[/url]</a> 
 loadfactor=2 </div>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&lt;/Proxy&gt;</div>
-<div style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: ËÎÌå">×¢ÊÍ£º</div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&lt;/Proxy&gt;</div>
+<div style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“; MARGIN: 0in">æ³¨é‡Šï¼š</div>
 <ul 
-style="MARGIN-TOP: 0in; MARGIN-BOTTOM: 0in; MARGIN-LEFT: 0.75in; DIRECTION: ltr; unicode-bidi: embed" 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; DIRECTION: ltr; MARGIN-LEFT: 0.75in; MARGIN-TOP: 0in" 
 type=disc>
-<li style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle"><span 
+<li style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><span 
 lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">ProxyRequests Off 
 </span><span lang=zh-CN 
-style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">±íÊ¾ÆôÓÃ·´Ïò´úÀí£¬±ØĞë¿ªÆô£»</span> 
-<li style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle"><span 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">è¡¨ç¤ºå¯ç”¨åå‘ä»£ç†ï¼Œå¿…é¡»å¼€å¯ï¼›</span> 
+<li style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><span 
 lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">ProxyPass</span><span 
-lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">Îª´úÀí×ª·¢µÄ</span><span 
+lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">ä¸ºä»£ç†è½¬å‘çš„</span><span 
 lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">Url,</span><span 
-lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">¼´½«ËùÓĞ·ÃÎÊ</span><span 
+lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">å³å°†æ‰€æœ‰è®¿é—®</span><span 
 lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">/</span><span 
-lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">µÄÇëÇó×ª·¢µ½Èº¼¯</span><span 
+lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">çš„è¯·æ±‚è½¬å‘åˆ°ç¾¤é›†</span><span 
 lang=en-US 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">balancer://tomcatcluster</span><span 
-lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">£¬ÕâÀïÎª</span><span 
+lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">ï¼Œè¿™é‡Œä¸º</span><span 
 lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">/</span><span 
-lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">¼´½«ËùÓĞ·ÃÎÊ</span><span 
+lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">å³å°†æ‰€æœ‰è®¿é—®</span><span 
 lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">/</span><span 
-lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">µÄÇëÇó×ª·¢µ½Èº¼¯</span><span 
+lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">çš„è¯·æ±‚è½¬å‘åˆ°ç¾¤é›†</span><span 
 lang=en-US 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">balancer://tomcatcluster</span><span 
-lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">µÄ</span><span lang=en-US 
+lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">çš„</span><span lang=en-US 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">/test</span><span lang=zh-CN 
-style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">Ä¿Â¼£»</span> 
-<li style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle"><span 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">ç›®å½•ï¼›</span> 
+<li style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><span 
 lang=en-US 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">BalancerMember</span><span 
-lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">ÎªÈº¼¯µÄ³ÉÔ±</span><span 
+lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">ä¸ºç¾¤é›†çš„æˆå‘˜</span><span 
 lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">,</span><span 
-lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">¼´Èº¼¯·şÎñÆ÷</span><span 
+lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">å³ç¾¤é›†æœåŠ¡å™¨</span><span 
 lang=en-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">1</span><span 
-lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">»ò</span><span lang=en-US 
+lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">æˆ–</span><span lang=en-US 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">2,</span><span lang=zh-CN 
-style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">¸ºÔØ¾ùºâ·şÎñÆ÷»á¸ù¾İ¾ùºâ¹æÔòÀ´½«ÇëÇó×ª·¢¸ø</span><span 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">è´Ÿè½½å‡è¡¡æœåŠ¡å™¨ä¼šæ ¹æ®å‡è¡¡è§„åˆ™æ¥å°†è¯·æ±‚è½¬å‘ç»™</span><span 
 lang=en-US 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">BalancerMember</span><span 
-lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">£»</span></li></ul>
+lang=zh-CN style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">ï¼›</span></li></ul>
 <div lang=en-US 
-style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&nbsp;</div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; MARGIN: 0in">&nbsp;</div>
 <ol 
-style="MARGIN-TOP: 0in; FONT-SIZE: 10.5pt; MARGIN-BOTTOM: 0in; MARGIN-LEFT: 0.75in; DIRECTION: ltr; FONT-FAMILY: simsun; unicode-bidi: embed" 
+style="MARGIN-BOTTOM: 0in; FONT-SIZE: 10.5pt; FONT-FAMILY: simsun; unicode-bidi: embed; DIRECTION: ltr; MARGIN-LEFT: 0.75in; MARGIN-TOP: 0in" 
 type=1>
-<li style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle" 
+<li style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px" 
 value=10><span 
-style="FONT-SIZE: 10.5pt; FONT-FAMILY: ËÎÌå">µ÷ÊÔ¸ºÔØ¾ùºâ¼¯ÈºÏµÍ³£º</span></li></ol>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“">è°ƒè¯•è´Ÿè½½å‡è¡¡é›†ç¾¤ç³»ç»Ÿï¼š</span></li></ol>
 <div style="FONT-SIZE: 10.5pt; MARGIN: 0in"><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">·ÃÎÊ</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">è®¿é—®</span><span lang=en-US 
 style="FONT-FAMILY: calibri">apache</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">·şÎñÆ÷µÄ</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">æœåŠ¡å™¨çš„</span><span lang=en-US 
 style="FONT-FAMILY: calibri">web</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">·şÎñ£º</span><a 
+style="FONT-FAMILY: å®‹ä½“">æœåŠ¡ï¼š</span><a 
 href="http://192.168.232.4/balancer-manager"><span lang=en-US 
 style="FONT-FAMILY: calibri">[url]http://192.168.232.4/balancer-manager[/url]</span></a></div>
 <div style="FONT-SIZE: 10.5pt; MARGIN: 0in"><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">Èç¹ûÏÔÊ¾¸ºÔØ¾ùºâÓĞ¹ØĞÅÏ¢ÔòËµÃ÷³É¹¦ÁË£¬½Ó×Å¿ÉÒÔ·ÃÎÊ</span><a 
-href="http://192.168.232.4/¼´·ÃÎÊµ½ÁËtomcatµÄÓ¦ÓÃ"><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">å¦‚æœæ˜¾ç¤ºè´Ÿè½½å‡è¡¡æœ‰å…³ä¿¡æ¯åˆ™è¯´æ˜æˆåŠŸäº†ï¼Œæ¥ç€å¯ä»¥è®¿é—®</span><a 
+href="http://192.168.232.4/å³è®¿é—®åˆ°äº†tomcatçš„åº”ç”¨"><span lang=en-US 
 style="FONT-FAMILY: calibri">[url]http://192.168.232.4/[/url]</span><span 
-lang=zh-CN style="FONT-FAMILY: ËÎÌå">¼´·ÃÎÊµ½ÁË</span><span lang=en-US 
+lang=zh-CN style="FONT-FAMILY: å®‹ä½“">å³è®¿é—®åˆ°äº†</span><span lang=en-US 
 style="FONT-FAMILY: calibri">tomcat</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">µÄÓ¦ÓÃ</span></a></div>
-<div style="FONT-WEIGHT: bold; FONT-SIZE: 10.5pt; MARGIN: 0in"><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">çš„åº”ç”¨</span></a></div>
+<div style="FONT-SIZE: 10.5pt; FONT-WEIGHT: bold; MARGIN: 0in"><span lang=en-US 
 style="FONT-FAMILY: calibri">***</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">±ØĞëÏÈÆô¶¯</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">å¿…é¡»å…ˆå¯åŠ¨</span><span lang=en-US 
 style="FONT-FAMILY: calibri">Tomcat</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">·şÎñÔÙÆô¶¯</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">æœåŠ¡å†å¯åŠ¨</span><span lang=en-US 
 style="FONT-FAMILY: calibri">Apache</span><span lang=zh-CN 
-style="FONT-FAMILY: ËÎÌå">·şÎñ£¡</span><span lang=en-US 
+style="FONT-FAMILY: å®‹ä½“">æœåŠ¡ï¼</span><span lang=en-US 
 style="FONT-FAMILY: calibri">***</span></div>
 <div lang=en-US 
-style="FONT-WEIGHT: bold; FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: calibri">&nbsp;</div>
-<div style="FONT-SIZE: 10.5pt; MARGIN: 0in; FONT-FAMILY: ËÎÌå">²Î¿¼ÎÄµµ£º</div>
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri; FONT-WEIGHT: bold; MARGIN: 0in">&nbsp;</div>
+<div style="FONT-SIZE: 10.5pt; FONT-FAMILY: å®‹ä½“; MARGIN: 0in">å‚è€ƒæ–‡æ¡£ï¼š</div>
 <ul 
-style="MARGIN-TOP: 0in; MARGIN-BOTTOM: 0in; MARGIN-LEFT: 0.75in; DIRECTION: ltr; unicode-bidi: embed" 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; DIRECTION: ltr; MARGIN-LEFT: 0.75in; MARGIN-TOP: 0in" 
 type=disc>
 <li lang=en-US 
-style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle"><a 
+style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><a 
 href="http://tomcat.apache.org/tomcat-6.0-doc/cluster-howto.html"><span 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">[url]http://tomcat.apache.org/tomcat-6.0-doc/cluster-howto.html[/url]</span></a> 
 
 <li lang=en-US 
-style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle"><a 
+style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><a 
 href="http://tomcat.apache.org/tomcat-6.0-doc/balancer-howto.html"><span 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">[url]http://tomcat.apache.org/tomcat-6.0-doc/balancer-howto.html[/url]</span></a> 
 
 <li lang=en-US 
-style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle"><a 
+style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><a 
 href="http://man.chinaunix.net/newsoft/ApacheMenual_CN_2.2new/mod/mod_proxy.html"><span 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">[url]http://man.chinaunix.net/newsoft/ApacheMenual_CN_2.2new/mod/mod_proxy.html[/url]</span></a> 
 
 <li lang=en-US 
-style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle"><a 
-href="http://man.chinaunix.net/newsoft/ApacheMenual_CN_2.2new/mod/mod_proxy_balancer.html"><span 
+style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><a 
+href="http://man.chinaunix.net/newsoft/ApacheMenual_CN_2.2new/mod/mod_proxy_balancer.html[/url]" 
+       ><span 
 style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">[url]http://man.chinaunix.net/newsoft/ApacheMenual_CN_2.2new/mod/mod_proxy_balancer.html[/url]</span></a></li></ul></div></td></tr></tbody></table></div><!--EndFragment--></div>
 </div>
 </div>
@@ -845,5 +846,7 @@ style="FONT-SIZE: 10.5pt; FONT-FAMILY: calibri">[url]http://man.chinaunix.net/ne
 </div>
 </div>
 </div>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
 </body>
 </html>

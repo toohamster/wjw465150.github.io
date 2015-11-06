@@ -1,26 +1,27 @@
-<!-- saved from url=http://www.w3school.com.cn/xpath/xpath_examples.asp -->
+﻿<!-- saved from url=http://www.w3school.com.cn/xpath/xpath_examples.asp -->
 <script>
 window.onerror = new Function("return(false);")
 </script><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 
-<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META content="IE=7.0000" 
+<HTML xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><META content="IE=7.0000" 
 http-equiv="X-UA-Compatible">
-<TITLE>XPath ʵ��</TITLE><LINK rel=stylesheet type=text/css href="c3.css"></HEAD>
+<title>XPath 实例</title><LINK rel=stylesheet type=text/css href="c3.css"></HEAD>
 
 <BODY class=xml>
 
 <DIV id=wrapper>
 
-<DIV id=maincontent><!--StartFragment--><H1>XPath ʵ��</H1>
+<DIV id=maincontent><!--StartFragment--><H1>XPath 实例</H1>
 <DIV id=tpn>
 <UL class=prenext>
 <LI class=pre><A href="http://www.w3school.com.cn/xpath/xpath_operators.asp">Previous Page</A> </LI>
 <LI class=next><A href="http://www.w3school.com.cn/xpath/xpath_summary.asp">Next Page</A> </LI></UL></DIV>
 <DIV id=intro>
-<P><STRONG>�ڱ��ڣ�������ͨ��ʵ����ѧϰһЩ������ XPath �﷨��</STRONG></P></DIV>
+<P><STRONG>在本节，让我们通过实例来学习一些基础的 XPath 语法。</STRONG></P></DIV>
 <DIV>
-<H2>XMLʵ���ĵ�</H2>
-<P>���ǽ��������������ʹ����� XML �ĵ���</P>
+<H2>XML实例文档</H2>
+<P>我们将在下面的例子中使用这个 XML 文档：</P>
 <H3>"books.xml" :</H3><PRE>&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;
 
 &lt;bookstore&gt;
@@ -58,46 +59,48 @@ http-equiv="X-UA-Compatible">
 &lt;/book&gt;
 
 &lt;/bookstore&gt;</PRE>
-<P><A href="http://www.w3school.com.cn/xpath/books.xml">������������в鿴�� "books.xml" �ļ�</A>��</P></DIV>
+<P><A href="http://www.w3school.com.cn/xpath/books.xml">在您的浏览器中查看此 "books.xml" 文件</A>。</P></DIV>
 <DIV>
-<H2>�ڵ�ѡȡ</H2>
-<P>���ǽ�ʹ��΢���� XML DOM ���������� XML �ĵ�����ʹ�� selectNodes() ������ XML �ĵ�ѡȡ�ڵ㣺</P><PRE>set xmlDoc=CreateObject("Microsoft.XMLDOM")
+<H2>节点选取</H2>
+<P>我们将使用微软的 XML DOM 对象来载入 XML 文档，并使用 selectNodes() 函数从 XML 文档选取节点：</P><PRE>set xmlDoc=CreateObject("Microsoft.XMLDOM")
 xmlDoc.async="false"
 xmlDoc.load("books.xml")
 
-xmlDoc.selectNodes(·������ʽ)</PRE></DIV>
+xmlDoc.selectNodes(路径表达式)</PRE></DIV>
 <DIV>
-<H2>ѡȡ���е� book �ڵ�</H2>
-<P>������������ѡȡ�� bookstore Ԫ�������е� book �ڵ㣺</P><PRE>xmlDoc.selectNodes("/bookstore/book")</PRE>
-<P>����������ʹ�� IE 5 ����ߵİ汾������<A 
-href="http://www.w3school.com.cn/tiy/t.asp?f=xpth_select_cdnodes">������һ��</A>��</P></DIV>
+<H2>选取所有的 book 节点</H2>
+<P>下面的这个例子选取了 bookstore 元素下所有的 book 节点：</P><PRE>xmlDoc.selectNodes("/bookstore/book")</PRE>
+<P>假如您正在使用 IE 5 或更高的版本，可以<A 
+href="http://www.w3school.com.cn/tiy/t.asp?f=xpth_select_cdnodes">亲自试一试</A>。</P></DIV>
 <DIV>
-<H2>ѡȡ��һ�� book �ڵ�</H2>
-<P>��������ӽ�ѡȡ bookstore Ԫ���µ�һ�� book �ڵ㣺</P><PRE>xmlDoc.selectNodes("/bookstore/book[0]")</PRE>
-<P>����������ʹ�� IE 5����ߵİ汾������<A 
-href="http://www.w3school.com.cn/tiy/t.asp?f=xpth_select_cdnodes_first">������һ��</A>��</P>
-<P class=note><SPAN>ע�ͣ�</SPAN>IE 5 �� 6 ��� [0] ��Ϊ��һ���ڵ���ִ�У����Ǹ��� W3C �ı�׼��Ӧ��ʹ�� [1] 
-����</P>
-<P class=note><SPAN>ע�ͣ�</SPAN>��������� IE 6 SP2 �б������ˣ�</P></DIV>
+<H2>选取第一个 book 节点</H2>
+<P>下面的例子仅选取 bookstore 元素下第一个 book 节点：</P><PRE>xmlDoc.selectNodes("/bookstore/book[0]")</PRE>
+<P>假如您正在使用 IE 5或更高的版本，可以<A 
+href="http://www.w3school.com.cn/tiy/t.asp?f=xpth_select_cdnodes_first">亲自试一试</A>。</P>
+<P class=note><SPAN>注释：</SPAN>IE 5 和 6 会把 [0] 作为第一个节点来执行，但是根据 W3C 的标准，应该使用 [1] 
+！！</P>
+<P class=note><SPAN>注释：</SPAN>这个问题在 IE 6 SP2 中被纠正了！</P></DIV>
 <DIV>
-<H2>ѡȡ price</H2>
-<P>��������Ӵ����е� price �ڵ�ѡȡ�ı���</P><PRE>xmlDoc.selectNodes("/bookstore/book/price/text()")</PRE>
-<P>����������ʹ�� IE 5 ����ߵİ汾������<A 
-href="http://www.w3school.com.cn/tiy/t.asp?f=xpth_select_pricenodes_text">������һ��</A>��</P></DIV>
+<H2>选取 price</H2>
+<P>下面的例子从所有的 price 节点选取文本：</P><PRE>xmlDoc.selectNodes("/bookstore/book/price/text()")</PRE>
+<P>假如您正在使用 IE 5 或更高的版本，可以<A 
+href="http://www.w3school.com.cn/tiy/t.asp?f=xpth_select_pricenodes_text">亲自试一试</A>。</P></DIV>
 <DIV>
-<H2>ѡȡ�۸���� 35 �� price �۸�</H2>
-<P>��������ӻ�ѡȡ���м۸���� 35 �� price �ڵ㣺</P><PRE>xmlDoc.selectNodes("/bookstore/book[price&gt;35]/price")</PRE>
-<P>����������ʹ�� IE 5 ����ߵİ汾������<A 
-href="http://www.w3school.com.cn/tiy/t.asp?f=xpth_select_pricenodes_35">������һ��</A>��</P></DIV>
+<H2>选取价格高于 35 的 price 价格</H2>
+<P>下面的例子会选取所有价格高于 35 的 price 节点：</P><PRE>xmlDoc.selectNodes("/bookstore/book[price&gt;35]/price")</PRE>
+<P>假如您正在使用 IE 5 或更高的版本，可以<A 
+href="http://www.w3school.com.cn/tiy/t.asp?f=xpth_select_pricenodes_35">亲自试一试</A>。</P></DIV>
 <DIV>
-<H2>ѡȡ�۸���� 35 �� title �ڵ�</H2>
-<P>��������ӻ�ѡȡ���м۸���� 35 �� title �ڵ㣺</P><PRE>xmlDoc.selectNodes("/bookstore/book[price&gt;35]/title")</PRE>
-<P>����������ʹ�� IE 5 ����ߵİ汾������<A 
-href="http://www.w3school.com.cn/tiy/t.asp?f=xpth_select_pricenodes_high">������һ��</A>��</P></DIV>
+<H2>选取价格高于 35 的 title 节点</H2>
+<P>下面的例子会选取所有价格高于 35 的 title 节点：</P><PRE>xmlDoc.selectNodes("/bookstore/book[price&gt;35]/title")</PRE>
+<P>假如您正在使用 IE 5 或更高的版本，可以<A 
+href="http://www.w3school.com.cn/tiy/t.asp?f=xpth_select_pricenodes_high">亲自试一试</A>。</P></DIV>
 <DIV id=bpn>
 <UL class=prenext>
 <LI class=pre><A href="http://www.w3school.com.cn/xpath/xpath_operators.asp">Previous Page</A> </LI>
 <LI class=next><A href="http://www.w3school.com.cn/xpath/xpath_summary.asp">Next Page</A> </LI></UL></DIV><!--EndFragment--></DIV>
 </DIV>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
 </BODY>
 </HTML>
