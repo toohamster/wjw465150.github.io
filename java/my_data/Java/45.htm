@@ -1,18 +1,18 @@
-<HTML>
+ï»¿<HTML>
 <HEAD>
-<META HTTP-EQUIV=Content-Type CONTENT=text/html; charset=gb2312>
-<title>JavaÖĞÊµÏÖÊı×Ö½ğ¶îµ½ÖĞÎÄ´óĞ´×Ö·ûµÄ×ª»»</title>
+<META HTTP-EQUIV=Content-Type CONTENT=text/html; charset=UTF-8>
+<title>Javaä¸­å®ç°æ•°å­—é‡‘é¢åˆ°ä¸­æ–‡å¤§å†™å­—ç¬¦çš„è½¬æ¢</title>
 <style type="text/css">
 <!--
 .9t {
 	font-size: 9pt;
 	color: #000000;
-	font-family: "ËÎÌå";
+	font-family: "å®‹ä½“";
 }
 -->
 </style>
 </HEAD>
-<body bgcolor="#FFFFFF">
+<body bgcolor="#ffffff">
 <table width="90%" border="0" align="center" >
   <tr>
     <td><PRE class="9t">
@@ -21,7 +21,7 @@ package testjdbctemplate;
 import java.lang.Math;
 
 public class Money {
-  //µ÷ÊÔÊ±ÓÃmainº¯Êı
+  //è°ƒè¯•æ—¶ç”¨mainå‡½æ•°
   public static void main(String args[]) {
     Money mon = new Money();
     System.out.println( -99999999999999.999 + mon.NumToRMBStr( -99999999999999.999));
@@ -33,20 +33,20 @@ public class Money {
     System.out.println(mon.NumToRMBStr(200.02));
   }
 
-  String HanDigiStr[] = new String[] {"Áã","Ò¼","·¡","Èş","ËÁ","Îé","Â½","Æâ","°Æ","¾Á"};
+  String HanDigiStr[] = new String[] {"é›¶","å£¹","è´°","å","è‚†","ä¼","é™†","æŸ’","æŒ","ç–"};
 
-  String HanDiviStr[] = new String[] {"","Ê°","°Û","Çª","Íò","Ê°","°Û","Çª","ÒÚ",
-                        "Ê°","°Û","Çª","Íò","Ê°","°Û","Çª","ÒÚ",
-                        "Ê°","°Û","Çª","Íò","Ê°","°Û","Çª"};
+  String HanDiviStr[] = new String[] {"","æ‹¾","ä½°","ä»Ÿ","ä¸‡","æ‹¾","ä½°","ä»Ÿ","äº¿",
+                        "æ‹¾","ä½°","ä»Ÿ","ä¸‡","æ‹¾","ä½°","ä»Ÿ","äº¿",
+                        "æ‹¾","ä½°","ä»Ÿ","ä¸‡","æ‹¾","ä½°","ä»Ÿ"};
 
-  String PositiveIntegerToHanStr(String NumStr) { // ÊäÈë×Ö·û´®±ØĞëÕıÕûÊı£¬Ö»ÔÊĞíÇ°µ¼¿Õ¸ñ(±ØĞëÓÒ¶ÔÆë)£¬²»ÒËÓĞÇ°µ¼Áã
+  String PositiveIntegerToHanStr(String NumStr) { // è¾“å…¥å­—ç¬¦ä¸²å¿…é¡»æ­£æ•´æ•°ï¼Œåªå…è®¸å‰å¯¼ç©ºæ ¼(å¿…é¡»å³å¯¹é½)ï¼Œä¸å®œæœ‰å‰å¯¼é›¶
     String RMBStr = "";
     boolean lastzero = false;
-    boolean hasvalue = false; // ÒÚ¡¢Íò½øÎ»Ç°ÓĞÊıÖµ±ê¼Ç
+    boolean hasvalue = false; // äº¿ã€ä¸‡è¿›ä½å‰æœ‰æ•°å€¼æ ‡è®°
     int len,n;
     len = NumStr.length();
     if (len &gt; 15) {
-      return "ÊıÖµ¹ı´ó!";
+      return "æ•°å€¼è¿‡å¤§!";
     }
     for (int i = len - 1; i &gt;= 0; i--) {
       if (NumStr.charAt(len - i - 1) == ' ') {
@@ -54,34 +54,34 @@ public class Money {
       }
       n = NumStr.charAt(len - i - 1) - '0';
       if (n &lt; 0 || n &gt; 9) {
-        return "ÊäÈëº¬·ÇÊı×Ö×Ö·û!";
+        return "è¾“å…¥å«éæ•°å­—å­—ç¬¦!";
       }
 
       if (n != 0) {
         if (lastzero) {
-          RMBStr += HanDigiStr[0]; // Èô¸ÉÁãºóÈô¸ú·ÇÁãÖµ£¬Ö»ÏÔÊ¾Ò»¸öÁã
-          // ³ıÁËÒÚÍòÇ°µÄÁã²»´øµ½ºóÃæ
-          //if( !( n==1 &amp;&amp; (i%4)==1 &amp;&amp; (lastzero || i==len-1) ) )    // ÈçÊ®½øÎ»Ç°ÓĞÁãÒ²²»·¢Ò¼ÒôÓÃ´ËĞĞ
+          RMBStr += HanDigiStr[0]; // è‹¥å¹²é›¶åè‹¥è·Ÿéé›¶å€¼ï¼Œåªæ˜¾ç¤ºä¸€ä¸ªé›¶
+          // é™¤äº†äº¿ä¸‡å‰çš„é›¶ä¸å¸¦åˆ°åé¢
+          //if( !( n==1 &amp;&amp; (i%4)==1 &amp;&amp; (lastzero || i==len-1) ) )    // å¦‚åè¿›ä½å‰æœ‰é›¶ä¹Ÿä¸å‘å£¹éŸ³ç”¨æ­¤è¡Œ
         }
-        if (! (n == 1 &amp;&amp; (i % 4) == 1 &amp;&amp; i == len - 1)) { // Ê®½øÎ»´¦ÓÚµÚÒ»Î»²»·¢Ò¼Òô
+        if (! (n == 1 &amp;&amp; (i % 4) == 1 &amp;&amp; i == len - 1)) { // åè¿›ä½å¤„äºç¬¬ä¸€ä½ä¸å‘å£¹éŸ³
           RMBStr += HanDigiStr[n];
         }
-        RMBStr += HanDiviStr[i]; // ·ÇÁãÖµºó¼Ó½øÎ»£¬¸öÎ»Îª¿Õ
-        hasvalue = true; // ÖÃÍò½øÎ»Ç°ÓĞÖµ±ê¼Ç
+        RMBStr += HanDiviStr[i]; // éé›¶å€¼ååŠ è¿›ä½ï¼Œä¸ªä½ä¸ºç©º
+        hasvalue = true; // ç½®ä¸‡è¿›ä½å‰æœ‰å€¼æ ‡è®°
 
       } else {
-        if ( (i % 8) == 0 || ( (i % 8) == 4 &amp;&amp; hasvalue)) { // ÒÚÍòÖ®¼ä±ØĞëÓĞ·ÇÁãÖµ·½ÏÔÊ¾Íò
-          RMBStr += HanDiviStr[i]; // ¡°ÒÚ¡±»ò¡°Íò¡±
+        if ( (i % 8) == 0 || ( (i % 8) == 4 &amp;&amp; hasvalue)) { // äº¿ä¸‡ä¹‹é—´å¿…é¡»æœ‰éé›¶å€¼æ–¹æ˜¾ç¤ºä¸‡
+          RMBStr += HanDiviStr[i]; // â€œäº¿â€æˆ–â€œä¸‡â€
         }
       }
       if (i % 8 == 0) {
-        hasvalue = false; // Íò½øÎ»Ç°ÓĞÖµ±ê¼Ç·êÒÚ¸´Î»
+        hasvalue = false; // ä¸‡è¿›ä½å‰æœ‰å€¼æ ‡è®°é€¢äº¿å¤ä½
       }
       lastzero = (n == 0) &amp;&amp; (i % 4 != 0);
     }
 
     if (RMBStr.length() == 0) {
-      return HanDigiStr[0]; // ÊäÈë¿Õ×Ö·û»ò"0"£¬·µ»Ø"Áã"
+      return HanDigiStr[0]; // è¾“å…¥ç©ºå­—ç¬¦æˆ–"0"ï¼Œè¿”å›"é›¶"
     }
     return RMBStr;
   }
@@ -94,36 +94,36 @@ public class Money {
 
     if (val &lt; 0) {
       val = -val;
-      SignStr = "¸º";
+      SignStr = "è´Ÿ";
     }
     if (val &gt; 99999999999999.999 || val &lt; -99999999999999.999) {
-      return "ÊıÖµÎ»Êı¹ı´ó!";
+      return "æ•°å€¼ä½æ•°è¿‡å¤§!";
     }
-    // ËÄÉáÎåÈëµ½·Ö
+    // å››èˆäº”å…¥åˆ°åˆ†
     long temp = Math.round(val * 100);
     integer = temp / 100;
     fraction = temp % 100;
     jiao = (int) fraction / 10;
     fen = (int) fraction % 10;
     if (jiao == 0 &amp;&amp; fen == 0) {
-      TailStr = "Õû";
+      TailStr = "æ•´";
     } else {
       TailStr = HanDigiStr[jiao];
       if (jiao != 0) {
-        TailStr += "½Ç";
+        TailStr += "è§’";
       }
-      if (integer == 0 &amp;&amp; jiao == 0) { // ÁãÔªºó²»Ğ´Áã¼¸·Ö
+      if (integer == 0 &amp;&amp; jiao == 0) { // é›¶å…ƒåä¸å†™é›¶å‡ åˆ†
         TailStr = "";
       }
       if (fen != 0) {
-        TailStr += HanDigiStr[fen] + "·Ö";
+        TailStr += HanDigiStr[fen] + "åˆ†";
       }
     }
 
-    // ÏÂÒ»ĞĞ¿ÉÓÃÓÚ·ÇÕı¹æ½ğÈÚ³¡ºÏ£¬0.03Ö»ÏÔÊ¾¡°Èş·Ö¡±¶ø²»ÊÇ¡°ÁãÔªÈş·Ö¡±
+    // ä¸‹ä¸€è¡Œå¯ç”¨äºéæ­£è§„é‡‘èåœºåˆï¼Œ0.03åªæ˜¾ç¤ºâ€œååˆ†â€è€Œä¸æ˜¯â€œé›¶å…ƒååˆ†â€
     //        if( !integer ) return  SignStr+TailStr;
 
-    return "£¤" + SignStr + PositiveIntegerToHanStr(String.valueOf(integer)) + "Ôª" + TailStr;
+    return "ï¿¥" + SignStr + PositiveIntegerToHanStr(String.valueOf(integer)) + "å…ƒ" + TailStr;
   }
 
 } //END public class Money
@@ -131,5 +131,7 @@ public class Money {
 </PRE></td>
   </tr>
 </table>
-</Body>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+</body>
 </HTML>

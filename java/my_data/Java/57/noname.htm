@@ -1,173 +1,177 @@
-<html>
-<title>ËµËµMongoDBµÄObjectId</title>
+ï»¿<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>è¯´è¯´MongoDBçš„ObjectId</title>
 <body>
-<div>Ç°¶ÎÊ±¼äÓĞ¸öÅóÓÑÎÊÎÒ£¬·Ö²¼Ê½Ö÷¼üÉú³É²ßÂÔÔÚÎÒÃÇÕâ±ßÊÇÔõÃ´ÊµÏÖµÄ£¬µ±Ê±ÎÒ¸øµÄ´ğ°¸ÊÇsequence£¬µ±È»ÕâÔÚ²»¸ß²¢·¢µÄÇé¿öÏÂÊÇÃ»ÓĞÈÎºÎÎÊÌâ£¬Êµ¼ÊÉÏ£¬ÎÒÃÇµÄÖ÷¼üÉú³ÉÊÇ¿É¿ØµÄ£¬µ«Èç¹ûÊÇÔÚ·Ö²¼Ê½¸ß²¢·¢µÄÇé¿öÏÂ£¬ÄÇ¿Ï¶¨ÊÇÓĞÎÊÌâµÄ¡£<br>
+<div>å‰æ®µæ—¶é—´æœ‰ä¸ªæœ‹å‹é—®æˆ‘ï¼Œåˆ†å¸ƒå¼ä¸»é”®ç”Ÿæˆç­–ç•¥åœ¨æˆ‘ä»¬è¿™è¾¹æ˜¯æ€ä¹ˆå®ç°çš„ï¼Œå½“æ—¶æˆ‘ç»™çš„ç­”æ¡ˆæ˜¯sequenceï¼Œå½“ç„¶è¿™åœ¨ä¸é«˜å¹¶å‘çš„æƒ…å†µä¸‹æ˜¯æ²¡æœ‰ä»»ä½•é—®é¢˜ï¼Œå®é™…ä¸Šï¼Œæˆ‘ä»¬çš„ä¸»é”®ç”Ÿæˆæ˜¯å¯æ§çš„ï¼Œä½†å¦‚æœæ˜¯åœ¨åˆ†å¸ƒå¼é«˜å¹¶å‘çš„æƒ…å†µä¸‹ï¼Œé‚£è‚¯å®šæ˜¯æœ‰é—®é¢˜çš„ã€‚<br>
   <br>
-  Í»
-  È»ÏëÆğmongodbµÄobjectid£¬¼ÇµÃÒÔÇ°¿´¹ıÎÄµµ£¬objectidÊÇÒ»ÖÖÇáÁ¿ĞÍµÄ£¬²»Í¬µÄ»úÆ÷¶¼ÄÜÓÃÈ«¾ÖÎ¨Ò»µÄÍ¬ÖÖ·½·¨ÇáÁ¿µÄÉú³ÉËü£¬¶ø²»ÊÇ
-  ²ÉÓÃ´«Í³µÄ×ÔÔöµÄÖ÷¼ü²ßÂÔ£¬ÒòÎªÔÚ¶àÌ¨·şÎñÆ÷ÉÏÍ¬²½×Ô¶¯Ôö¼ÓÖ÷¼ü¼È·ÑÁ¦ÓÖ·ÑÊ±£¬²»µÃ²»Åå·ş£¬mongodb´Ó¿ªÊ¼Éè¼Æ¾Í±»¶¨ÒåÎª·Ö²¼Ê½Êı¾İ¿â¡£<br>
-  ÏÂÃæÉîÈëÒ»µãÀ´·­·­Õâ¸öObjectidµÄµ×Ï¸£¬ÔÚmongodb¼¯ºÏÖĞµÄÃ¿¸ödocumentÖĞ¶¼±ØĞëÓĞÒ»¸ö"_id"½¨£¬Õâ¸ö¼üµÄÖµ¿ÉÒÔÊÇÈÎºÎÀàĞÍµÄ£¬ÔÚÄ¬ÈÏµÄÇé¿öÏÂÊÇ¸öObjectid¶ÔÏó¡£<br>
-  µ±ÎÒÃÇÈÃÒ»¸öcollectionÖĞ²åÈëÒ»Ìõ²»´ø_idµÄ¼ÇÂ¼£¬ÏµÍ³»á×Ô¶¯µØÉú³ÉÒ»¸ö_idµÄkey</div>
+  çª
+  ç„¶æƒ³èµ·mongodbçš„objectidï¼Œè®°å¾—ä»¥å‰çœ‹è¿‡æ–‡æ¡£ï¼Œobjectidæ˜¯ä¸€ç§è½»é‡å‹çš„ï¼Œä¸åŒçš„æœºå™¨éƒ½èƒ½ç”¨å…¨å±€å”¯ä¸€çš„åŒç§æ–¹æ³•è½»é‡çš„ç”Ÿæˆå®ƒï¼Œè€Œä¸æ˜¯
+  é‡‡ç”¨ä¼ ç»Ÿçš„è‡ªå¢çš„ä¸»é”®ç­–ç•¥ï¼Œå› ä¸ºåœ¨å¤šå°æœåŠ¡å™¨ä¸ŠåŒæ­¥è‡ªåŠ¨å¢åŠ ä¸»é”®æ—¢è´¹åŠ›åˆè´¹æ—¶ï¼Œä¸å¾—ä¸ä½©æœï¼Œmongodbä»å¼€å§‹è®¾è®¡å°±è¢«å®šä¹‰ä¸ºåˆ†å¸ƒå¼æ•°æ®åº“ã€‚<br>
+  ä¸‹é¢æ·±å…¥ä¸€ç‚¹æ¥ç¿»ç¿»è¿™ä¸ªObjectidçš„åº•ç»†ï¼Œåœ¨mongodbé›†åˆä¸­çš„æ¯ä¸ªdocumentä¸­éƒ½å¿…é¡»æœ‰ä¸€ä¸ª"_id"å»ºï¼Œè¿™ä¸ªé”®çš„å€¼å¯ä»¥æ˜¯ä»»ä½•ç±»å‹çš„ï¼Œåœ¨é»˜è®¤çš„æƒ…å†µä¸‹æ˜¯ä¸ªObjectidå¯¹è±¡ã€‚<br>
+  å½“æˆ‘ä»¬è®©ä¸€ä¸ªcollectionä¸­æ’å…¥ä¸€æ¡ä¸å¸¦_idçš„è®°å½•ï¼Œç³»ç»Ÿä¼šè‡ªåŠ¨åœ°ç”Ÿæˆä¸€ä¸ª_idçš„key</div>
 <br>
-<div style="background-color: #eeeeee; font-size: 13px; border: 1px solid #cccccc; padding: 4px 5px 4px 4px; width: 98%;"><span style="color: #000000;">&gt;&nbsp;db.t_test.insert({"name":"cyz"})<br>
+<div style="FONT-SIZE: 13px; BORDER-TOP: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid; WIDTH: 98%; BORDER-BOTTOM: #cccccc 1px solid; PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 4px; BORDER-LEFT: #cccccc 1px solid; PADDING-RIGHT: 5px; BACKGROUND-COLOR: #eeeeee"><span style="COLOR: #000000">&gt;&nbsp;db.t_test.insert({"name":"cyz"})<br>
   &gt;&nbsp;db.t_test.findOne({"name":"cyz"})<br>
   {&nbsp;"_id"&nbsp;:&nbsp;ObjectId("4df2dcec2cdcd20936a8b817"),&nbsp;"name"&nbsp;:&nbsp;"cyz"&nbsp;}</span></div>
 <br>
-<div>¿ÉÒÔ·¢ÏÖÕâÀï¶à³öÒ»¸öObjectidÀàĞÍµÄ_id£¬µ±È»ÁË£¬Õâ¸ö_idÊÇÏµÍ³Ä¬ÈÏÉú³ÉµÄ£¬ÄãÒ²¿ÉÒÔÎªÆäÖ¸¶¨Ò»¸öÖµ£¬²»¹ıÔÚÍ¬Ò»collectionsÖĞ¸ÃÖµ±ØĞëÊÇÎ¨Ò»µÄ<br>
+<div>å¯ä»¥å‘ç°è¿™é‡Œå¤šå‡ºä¸€ä¸ªObjectidç±»å‹çš„_idï¼Œå½“ç„¶äº†ï¼Œè¿™ä¸ª_idæ˜¯ç³»ç»Ÿé»˜è®¤ç”Ÿæˆçš„ï¼Œä½ ä¹Ÿå¯ä»¥ä¸ºå…¶æŒ‡å®šä¸€ä¸ªå€¼ï¼Œä¸è¿‡åœ¨åŒä¸€collectionsä¸­è¯¥å€¼å¿…é¡»æ˜¯å”¯ä¸€çš„<br>
   <br>
-  °Ñ ObjectId("4df2dcec2cdcd20936a8b817")Õâ´®ÖµÄÃ³öÀ´²¢¶ÔÕÕ¹ÙÍøµÄ½âÎöÀ´ÉîÈë·ÖÎö¡£<br>
+  æŠŠ ObjectId("4df2dcec2cdcd20936a8b817")è¿™ä¸²å€¼æ‹¿å‡ºæ¥å¹¶å¯¹ç…§å®˜ç½‘çš„è§£ææ¥æ·±å…¥åˆ†æã€‚<br>
   <br>
   "4df2dcec2cdcd20936a8b817"
   
-  ÒÔÕâ¶Î×Ö·û´®ÎªÀıÀ´½øĞĞ½âÎö£¬ÕâÊÇÒ»¸ö24Î»µÄ×Ö·û´®£¬¿´ÆğÀ´ºÜ³¤£¬ºÜÄÑÀí½â£¬Êµ¼ÊÉÏËüÊÇÓÉObjectId(string)Ëù´´½¨µÄÒ»×éÊ®Áù½øÖÆµÄ×Ö
-  ·û£¬Ã¿¸ö×Ö½ÚÁ½Î»µÄÊ®Áù½øÖÆÊı×Ö£¬×Ü¹²Ê¹ÓÃÁË12×Ö½ÚµÄ´æ´¢¿Õ¼ä£¬¿ÉÄÜÓĞĞ©ÅóÓÑ»á¸Ğµ½ºÜÆæ¹Ö£¬¾ÓÈ»ÊÇÓÃÁË12¸ö×Ö½Ú£¬¶ømysqlµÄINTÀàĞÍÒ²Ö»ÓĞ4¸ö
-  ×Ö½Ú£¬²»¹ı°´ÕÕÏÖÔÚµÄ´æ´¢Éè±¸£¬¶à³öÀ´µÄÕâµã×Ö½ÚÒ²Ó¦¸Ã²»»á³ÉÎªÊ²Ã´Æ¿¾±£¬Êµ¼ÊÉÏ£¬mongodbÔÚÉè¼ÆÉÏÎŞ´¦²»ÔÚµÄÌåÏÖ×ÅÓÃ¿Õ¼ä»»Ê±¼äµÄË¼Ïë£¬½ÓÏÂ¿´°É<br>
+  ä»¥è¿™æ®µå­—ç¬¦ä¸²ä¸ºä¾‹æ¥è¿›è¡Œè§£æï¼Œè¿™æ˜¯ä¸€ä¸ª24ä½çš„å­—ç¬¦ä¸²ï¼Œçœ‹èµ·æ¥å¾ˆé•¿ï¼Œå¾ˆéš¾ç†è§£ï¼Œå®é™…ä¸Šå®ƒæ˜¯ç”±ObjectId(string)æ‰€åˆ›å»ºçš„ä¸€ç»„åå…­è¿›åˆ¶çš„å­—
+  ç¬¦ï¼Œæ¯ä¸ªå­—èŠ‚ä¸¤ä½çš„åå…­è¿›åˆ¶æ•°å­—ï¼Œæ€»å…±ä½¿ç”¨äº†12å­—èŠ‚çš„å­˜å‚¨ç©ºé—´ï¼Œå¯èƒ½æœ‰äº›æœ‹å‹ä¼šæ„Ÿåˆ°å¾ˆå¥‡æ€ªï¼Œå±…ç„¶æ˜¯ç”¨äº†12ä¸ªå­—èŠ‚ï¼Œè€Œmysqlçš„INTç±»å‹ä¹Ÿåªæœ‰4ä¸ª
+  å­—èŠ‚ï¼Œä¸è¿‡æŒ‰ç…§ç°åœ¨çš„å­˜å‚¨è®¾å¤‡ï¼Œå¤šå‡ºæ¥çš„è¿™ç‚¹å­—èŠ‚ä¹Ÿåº”è¯¥ä¸ä¼šæˆä¸ºä»€ä¹ˆç“¶é¢ˆï¼Œå®é™…ä¸Šï¼Œmongodbåœ¨è®¾è®¡ä¸Šæ— å¤„ä¸åœ¨çš„ä½“ç°ç€ç”¨ç©ºé—´æ¢æ—¶é—´çš„æ€æƒ³ï¼Œæ¥ä¸‹çœ‹å§<br>
   <br>
-  ÏÂÃæÊÇ¹ÙÍøÖ¸¶¨BsonÖĞObjectIdµÄÏêÏ¸¹æ·¶<br>
+  ä¸‹é¢æ˜¯å®˜ç½‘æŒ‡å®šBsonä¸­ObjectIdçš„è¯¦ç»†è§„èŒƒ<br>
   <br>
-  <img alt="" src="o_111.PNG"><br>
+  <IMG alt="" src="o_111.PNG"><br>
   <br>
   <div><strong>TimeStamp</strong><br>
-    Ç°
-    4Î»ÊÇÒ»¸öunixµÄÊ±¼ä´Á£¬ÊÇÒ»¸öintÀà±ğ£¬ÎÒÃÇ½«ÉÏÃæµÄÀı×ÓÖĞµÄobjectidµÄÇ°4Î»½øĞĞÌáÈ¡¡°4df2dcec¡±£¬È»ºóÔÙ½«ËûÃÇ°²×°Ê®Áù½øÖÆ
-    ×¨ÎªÊ®½øÖÆ£º¡°1307761900¡±£¬Õâ¸öÊı×Ö¾ÍÊÇÒ»¸öÊ±¼ä´Á£¬ÎªÁËÈÃĞ§¹û¸ü¼ÑÃ÷ÏÔ£¬ÎÒÃÇ½«Õâ¸öÊ±¼ä´Á×ª»»³ÉÎÒÃÇÏ°¹ßµÄÊ±¼ä¸ñÊ½</div>
+    å‰
+    4ä½æ˜¯ä¸€ä¸ªunixçš„æ—¶é—´æˆ³ï¼Œæ˜¯ä¸€ä¸ªintç±»åˆ«ï¼Œæˆ‘ä»¬å°†ä¸Šé¢çš„ä¾‹å­ä¸­çš„objectidçš„å‰4ä½è¿›è¡Œæå–â€œ4df2dcecâ€ï¼Œç„¶åå†å°†ä»–ä»¬å®‰è£…åå…­è¿›åˆ¶
+    ä¸“ä¸ºåè¿›åˆ¶ï¼šâ€œ1307761900â€ï¼Œè¿™ä¸ªæ•°å­—å°±æ˜¯ä¸€ä¸ªæ—¶é—´æˆ³ï¼Œä¸ºäº†è®©æ•ˆæœæ›´ä½³æ˜æ˜¾ï¼Œæˆ‘ä»¬å°†è¿™ä¸ªæ—¶é—´æˆ³è½¬æ¢æˆæˆ‘ä»¬ä¹ æƒ¯çš„æ—¶é—´æ ¼å¼</div>
   <br>
-  <div style="background-color: #eeeeee; font-size: 13px; border: 1px solid #cccccc; padding: 4px 5px 4px 4px; width: 98%;"><span style="color: #000000;">$&nbsp;date&nbsp;-d&nbsp;'1970-01-01&nbsp;UTC&nbsp;1307761900&nbsp;&nbsp;sec'&nbsp;&nbsp;-u<br>
-    2011Äê&nbsp;06ÔÂ&nbsp;11ÈÕ&nbsp;ĞÇÆÚÁù&nbsp;03:11:40&nbsp;UTC</span></div>
+  <div style="FONT-SIZE: 13px; BORDER-TOP: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid; WIDTH: 98%; BORDER-BOTTOM: #cccccc 1px solid; PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 4px; BORDER-LEFT: #cccccc 1px solid; PADDING-RIGHT: 5px; BACKGROUND-COLOR: #eeeeee"><span style="COLOR: #000000">$&nbsp;date&nbsp;-d&nbsp;'1970-01-01&nbsp;UTC&nbsp;1307761900&nbsp;&nbsp;sec'&nbsp;&nbsp;-u<br>
+    2011å¹´&nbsp;06æœˆ&nbsp;11æ—¥&nbsp;æ˜ŸæœŸå…­&nbsp;03:11:40&nbsp;UTC</span></div>
   <br>
-  <div>Ç°
-    4¸ö×Ö½ÚÆäÊµÒş²ØÁËÎÄµµ´´½¨µÄÊ±¼ä£¬²¢ÇÒÊ±¼ä´Á´¦ÔÚÓÚ×Ö·ûµÄ×îÇ°Ãæ£¬Õâ¾ÍÒâÎ¶×ÅObjectId´óÖÂ»á°´ÕÕ²åÈë½øĞĞÅÅĞò£¬Õâ¶ÔÓÚÄ³Ğ©·½ÃæÆğµ½ºÜ´ó×÷ÓÃ£¬Èç
-    ×÷ÎªË÷ÒıÌá¸ßËÑË÷Ğ§ÂÊµÈµÈ¡£Ê¹ÓÃÊ±¼ä´Á»¹ÓĞÒ»¸öºÃ´¦ÊÇ£¬Ä³Ğ©¿Í»§¶ËÇı¶¯¿ÉÒÔÍ¨¹ıObjectId½âÎö³ö¸Ã¼ÇÂ¼ÊÇºÎÊ±²åÈëµÄ£¬ÕâÒ²½â´ğÁËÎÒÃÇÆ½Ê±¿ìËÙÁ¬Ğø´´
-    ½¨¶à¸öObjectidÊ±£¬»á·¢ÏÖÇ°¼¸Î»Êı×ÖºÜÉÙ·¢ÏÖ±ä»¯µÄÏÖÊµ£¬ÒòÎªÊ¹ÓÃµÄÊÇµ±Ç°Ê±¼ä£¬ºÜ¶àÓÃ»§µ£ĞÄÒª¶Ô·şÎñÆ÷½øĞĞÊ±¼äÍ¬²½£¬ÆäÊµÕâ¸öÊ±¼ä´ÁµÄÕæÊµÖµ²¢
-    ²»ÖØÒª£¬Ö»ÒªÆä×Ü²»Í£Ôö¼Ó¾ÍºÃ¡£</div>
+  <div>å‰
+    4ä¸ªå­—èŠ‚å…¶å®éšè—äº†æ–‡æ¡£åˆ›å»ºçš„æ—¶é—´ï¼Œå¹¶ä¸”æ—¶é—´æˆ³å¤„åœ¨äºå­—ç¬¦çš„æœ€å‰é¢ï¼Œè¿™å°±æ„å‘³ç€ObjectIdå¤§è‡´ä¼šæŒ‰ç…§æ’å…¥è¿›è¡Œæ’åºï¼Œè¿™å¯¹äºæŸäº›æ–¹é¢èµ·åˆ°å¾ˆå¤§ä½œç”¨ï¼Œå¦‚
+    ä½œä¸ºç´¢å¼•æé«˜æœç´¢æ•ˆç‡ç­‰ç­‰ã€‚ä½¿ç”¨æ—¶é—´æˆ³è¿˜æœ‰ä¸€ä¸ªå¥½å¤„æ˜¯ï¼ŒæŸäº›å®¢æˆ·ç«¯é©±åŠ¨å¯ä»¥é€šè¿‡ObjectIdè§£æå‡ºè¯¥è®°å½•æ˜¯ä½•æ—¶æ’å…¥çš„ï¼Œè¿™ä¹Ÿè§£ç­”äº†æˆ‘ä»¬å¹³æ—¶å¿«é€Ÿè¿ç»­åˆ›
+    å»ºå¤šä¸ªObjectidæ—¶ï¼Œä¼šå‘ç°å‰å‡ ä½æ•°å­—å¾ˆå°‘å‘ç°å˜åŒ–çš„ç°å®ï¼Œå› ä¸ºä½¿ç”¨çš„æ˜¯å½“å‰æ—¶é—´ï¼Œå¾ˆå¤šç”¨æˆ·æ‹…å¿ƒè¦å¯¹æœåŠ¡å™¨è¿›è¡Œæ—¶é—´åŒæ­¥ï¼Œå…¶å®è¿™ä¸ªæ—¶é—´æˆ³çš„çœŸå®å€¼å¹¶
+    ä¸é‡è¦ï¼Œåªè¦å…¶æ€»ä¸åœå¢åŠ å°±å¥½ã€‚</div>
   <br>
   <div><strong>Machine </strong><br>
-    ½ÓÏÂÀ´µÄÈı¸ö×Ö½Ú£¬¾ÍÊÇ 2cdcd2 ,ÕâÈı¸ö×Ö½ÚÊÇËùÔÚÖ÷»úµÄÎ¨Ò»±êÊ¶·û£¬Ò»°ãÊÇ»úÆ÷Ö÷»úÃûµÄÉ¢ÁĞÖµ£¬ÕâÑù¾ÍÈ·±£ÁË²»Í¬Ö÷»úÉú³É²»Í¬µÄ»úÆ÷hashÖµ£¬È·±£ÔÚ·Ö²¼Ê½ÖĞ²»Ôì³É³åÍ»£¬ÕâÒ²¾ÍÊÇÔÚÍ¬Ò»Ì¨»úÆ÷Éú³ÉµÄobjectidÖĞ¼äµÄ×Ö·û´®¶¼ÊÇÒ»Ä£Ò»ÑùµÄÔ­Òò¡£<br>
+    æ¥ä¸‹æ¥çš„ä¸‰ä¸ªå­—èŠ‚ï¼Œå°±æ˜¯ 2cdcd2 ,è¿™ä¸‰ä¸ªå­—èŠ‚æ˜¯æ‰€åœ¨ä¸»æœºçš„å”¯ä¸€æ ‡è¯†ç¬¦ï¼Œä¸€èˆ¬æ˜¯æœºå™¨ä¸»æœºåçš„æ•£åˆ—å€¼ï¼Œè¿™æ ·å°±ç¡®ä¿äº†ä¸åŒä¸»æœºç”Ÿæˆä¸åŒçš„æœºå™¨hashå€¼ï¼Œç¡®ä¿åœ¨åˆ†å¸ƒå¼ä¸­ä¸é€ æˆå†²çªï¼Œè¿™ä¹Ÿå°±æ˜¯åœ¨åŒä¸€å°æœºå™¨ç”Ÿæˆçš„objectidä¸­é—´çš„å­—ç¬¦ä¸²éƒ½æ˜¯ä¸€æ¨¡ä¸€æ ·çš„åŸå› ã€‚<br>
     <br>
     <strong>pid</strong><br>
-    ÉÏÃæµÄMachineÊÇÎªÁËÈ·±£ÔÚ²»Í¬»úÆ÷²úÉúµÄobjectid²»³åÍ»£¬¶øpid¾ÍÊÇÎªÁËÔÚÍ¬Ò»Ì¨»úÆ÷²»Í¬µÄmongodb½ø³Ì²úÉúÁËobjectid²»³åÍ»£¬½ÓÏÂÀ´µÄ0936Á½Î»¾ÍÊÇ²úÉúobjectidµÄ½ø³Ì±êÊ¶·û¡£<br>
+    ä¸Šé¢çš„Machineæ˜¯ä¸ºäº†ç¡®ä¿åœ¨ä¸åŒæœºå™¨äº§ç”Ÿçš„objectidä¸å†²çªï¼Œè€Œpidå°±æ˜¯ä¸ºäº†åœ¨åŒä¸€å°æœºå™¨ä¸åŒçš„mongodbè¿›ç¨‹äº§ç”Ÿäº†objectidä¸å†²çªï¼Œæ¥ä¸‹æ¥çš„0936ä¸¤ä½å°±æ˜¯äº§ç”Ÿobjectidçš„è¿›ç¨‹æ ‡è¯†ç¬¦ã€‚<br>
     <br>
     <strong>increment</strong><br>
-    Ç°ÃæµÄ¾Å¸ö×Ö½ÚÊÇ±£Ö¤ÁËÒ»ÃëÄÚ²»Í¬»úÆ÷²»Í¬½ø³ÌÉú³Éobjectid²»³åÍ»£¬ÕâºóÃæµÄÈı¸ö×Ö½Úa8b817£¬ÊÇÒ»¸ö×Ô¶¯Ôö¼ÓµÄ¼ÆÊıÆ÷£¬ÓÃÀ´È·±£ÔÚÍ¬Ò»ÃëÄÚ²úÉúµÄobjectidÒ²²»»á·¢ÏÖ³åÍ»£¬ÔÊĞí256µÄ3´Î·½µÈÓÚ16777216Ìõ¼ÇÂ¼µÄÎ¨Ò»ĞÔ¡£</div>
+    å‰é¢çš„ä¹ä¸ªå­—èŠ‚æ˜¯ä¿è¯äº†ä¸€ç§’å†…ä¸åŒæœºå™¨ä¸åŒè¿›ç¨‹ç”Ÿæˆobjectidä¸å†²çªï¼Œè¿™åé¢çš„ä¸‰ä¸ªå­—èŠ‚a8b817ï¼Œæ˜¯ä¸€ä¸ªè‡ªåŠ¨å¢åŠ çš„è®¡æ•°å™¨ï¼Œç”¨æ¥ç¡®ä¿åœ¨åŒä¸€ç§’å†…äº§ç”Ÿçš„objectidä¹Ÿä¸ä¼šå‘ç°å†²çªï¼Œå…è®¸256çš„3æ¬¡æ–¹ç­‰äº16777216æ¡è®°å½•çš„å”¯ä¸€æ€§ã€‚</div>
   <br>
-  <div><strong>¿Í»§¶ËÉú³É</strong><br>
-    mongodb²úÉúobjectid»¹ÓĞÒ»¸ö¸ü´óµÄÓÅÊÆ£¬¾ÍÊÇmongodb¿ÉÒÔÍ¨¹ı×ÔÉíµÄ·şÎñÀ´²úÉúobjectid£¬Ò²¿ÉÒÔÍ¨¹ı¿Í»§¶ËµÄÇı¶¯³ÌĞòÀ´²úÉú£¬Èç¹ûÄã×ĞÏ¸¿´ÎÄµµÄã»á¸ĞÌ¾£¬mongodbµÄÉè¼ÆÎŞ´¦²»ÔÚµÄÊ¹<br>
+  <div><strong>å®¢æˆ·ç«¯ç”Ÿæˆ</strong><br>
+    mongodbäº§ç”Ÿobjectidè¿˜æœ‰ä¸€ä¸ªæ›´å¤§çš„ä¼˜åŠ¿ï¼Œå°±æ˜¯mongodbå¯ä»¥é€šè¿‡è‡ªèº«çš„æœåŠ¡æ¥äº§ç”Ÿobjectidï¼Œä¹Ÿå¯ä»¥é€šè¿‡å®¢æˆ·ç«¯çš„é©±åŠ¨ç¨‹åºæ¥äº§ç”Ÿï¼Œå¦‚æœä½ ä»”ç»†çœ‹æ–‡æ¡£ä½ ä¼šæ„Ÿå¹ï¼Œmongodbçš„è®¾è®¡æ— å¤„ä¸åœ¨çš„ä½¿<br>
     <br>
-    ÓÃ¿Õ¼ä»»Ê±¼äµÄË¼Ïë£¬±È½ÏobjectidÊÇÇáÁ¿¼¶£¬µ«·şÎñ¶Ë²úÉúÒ²±ØĞë¿ªÏúÊ±¼ä£¬ËùÒÔÄÜ´Ó·şÎñÆ÷×ªÒÆµ½¿Í»§¶ËÇı¶¯³ÌĞòÍê³ÉµÄ¾Í¾¡Á¿µÄ×ªÒÆ£¬±ØĞë½«ÊÂÎñÈÓ¸ø¿Í»§¶ËÀ´Íê³É£¬¼õµÍ·şÎñ¶ËµÄ¿ªÏú£¬Áí»¹ÓĞÒ»µãÔ­Òò¾ÍÊÇÀ©Õ¹Ó¦ÓÃ²ã±ÈÀ©Õ¹Êı¾İ¿â²ãÒª±äÁ¿µÃ¶à¡£<br>
+    ç”¨ç©ºé—´æ¢æ—¶é—´çš„æ€æƒ³ï¼Œæ¯”è¾ƒobjectidæ˜¯è½»é‡çº§ï¼Œä½†æœåŠ¡ç«¯äº§ç”Ÿä¹Ÿå¿…é¡»å¼€é”€æ—¶é—´ï¼Œæ‰€ä»¥èƒ½ä»æœåŠ¡å™¨è½¬ç§»åˆ°å®¢æˆ·ç«¯é©±åŠ¨ç¨‹åºå®Œæˆçš„å°±å°½é‡çš„è½¬ç§»ï¼Œå¿…é¡»å°†äº‹åŠ¡æ‰”ç»™å®¢æˆ·ç«¯æ¥å®Œæˆï¼Œå‡ä½æœåŠ¡ç«¯çš„å¼€é”€ï¼Œå¦è¿˜æœ‰ä¸€ç‚¹åŸå› å°±æ˜¯æ‰©å±•åº”ç”¨å±‚æ¯”æ‰©å±•æ•°æ®åº“å±‚è¦å˜é‡å¾—å¤šã€‚<br>
     <br>
-    ºÃ°É£¬¼ÈÈ»ÎÒÃÇÁË½âµ½ÎÒÃÇµÄ³ÌĞò²úÉúobjectidÊÇÔÚ¿Í»§¶ËÍê³É£¬ÄÇÔÙ¼ÌĞø£¬½øÒ»²½ÁË½â£¬´ò¿ª<strong>mongodb java driverÔ´Âë</strong>£¬ÎŞÔ´Âë¿ÉÒÔµ½mongodb¹ÙÍø½øĞĞÏÂÔØ£¬ÏÂÃæÕªÂ¼²¿·Ö´úÂë<br>
+    å¥½å§ï¼Œæ—¢ç„¶æˆ‘ä»¬äº†è§£åˆ°æˆ‘ä»¬çš„ç¨‹åºäº§ç”Ÿobjectidæ˜¯åœ¨å®¢æˆ·ç«¯å®Œæˆï¼Œé‚£å†ç»§ç»­ï¼Œè¿›ä¸€æ­¥äº†è§£ï¼Œæ‰“å¼€<strong>mongodb java driveræºç </strong>ï¼Œæ— æºç å¯ä»¥åˆ°mongodbå®˜ç½‘è¿›è¡Œä¸‹è½½ï¼Œä¸‹é¢æ‘˜å½•éƒ¨åˆ†ä»£ç <br>
     <br>
-    <div style="background-color: #eeeeee; font-size: 13px; border: 1px solid #cccccc; padding: 4px 5px 4px 4px; width: 98%;"><span style="color: #0000ff;">public</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000ff;">class</span><span style="color: #000000;">&nbsp;ObjectId&nbsp;</span><span style="color: #0000ff;">implements</span><span style="color: #000000;">&nbsp;Comparable</span><span style="color: #000000;">&lt;</span><span style="color: #000000;">ObjectId</span><span style="color: #000000;">&gt;</span><span style="color: #000000;">&nbsp;,&nbsp;java.io.Serializable&nbsp;{<br>
-      <img src="dot.gif" alt=""><br>
-      &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">final</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000ff;">int</span><span style="color: #000000;">&nbsp;_time;<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">final</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000ff;">int</span><span style="color: #000000;">&nbsp;_machine;<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">final</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000ff;">int</span><span style="color: #000000;">&nbsp;_inc;<br>
-      <img src="dot.gif" alt=""><br>
-      &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">public</span><span style="color: #000000;">&nbsp;ObjectId(&nbsp;</span><span style="color: #0000ff;">byte</span><span style="color: #000000;">[]&nbsp;b&nbsp;){<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">if</span><span style="color: #000000;">&nbsp;(&nbsp;b.length&nbsp;</span><span style="color: #000000;">!=</span><span style="color: #000000;">&nbsp;</span><span style="color: #000000;">12</span><span style="color: #000000;">&nbsp;)<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">throw</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000ff;">new</span><span style="color: #000000;">&nbsp;IllegalArgumentException(&nbsp;</span><span style="color: #000000;">"</span><span style="color: #000000;">need&nbsp;12&nbsp;bytes</span><span style="color: #000000;">"</span><span style="color: #000000;">&nbsp;);<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ByteBuffer&nbsp;bb&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;ByteBuffer.wrap(&nbsp;b&nbsp;);<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_time&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;bb.getInt();<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_machine&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;bb.getInt();<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_inc&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;bb.getInt();<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_new&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000ff;">false</span><span style="color: #000000;">;<br>
+    <div style="FONT-SIZE: 13px; BORDER-TOP: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid; WIDTH: 98%; BORDER-BOTTOM: #cccccc 1px solid; PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 4px; BORDER-LEFT: #cccccc 1px solid; PADDING-RIGHT: 5px; BACKGROUND-COLOR: #eeeeee"><span style="COLOR: #0000ff">public</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #0000ff">class</span><span style="COLOR: #000000">&nbsp;ObjectId&nbsp;</span><span style="COLOR: #0000ff">implements</span><span style="COLOR: #000000">&nbsp;Comparable</span><span style="COLOR: #000000">&lt;</span><span style="COLOR: #000000">ObjectId</span><span style="COLOR: #000000">&gt;</span><span style="COLOR: #000000">&nbsp;,&nbsp;java.io.Serializable&nbsp;{<br>
+      <IMG alt="" src="dot.gif"><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: #0000ff">final</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #0000ff">int</span><span style="COLOR: #000000">&nbsp;_time;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: #0000ff">final</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #0000ff">int</span><span style="COLOR: #000000">&nbsp;_machine;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: #0000ff">final</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #0000ff">int</span><span style="COLOR: #000000">&nbsp;_inc;<br>
+      <IMG alt="" src="dot.gif"><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: #0000ff">public</span><span style="COLOR: #000000">&nbsp;ObjectId(&nbsp;</span><span style="COLOR: #0000ff">byte</span><span style="COLOR: #000000">[]&nbsp;b&nbsp;){<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: #0000ff">if</span><span style="COLOR: #000000">&nbsp;(&nbsp;b.length&nbsp;</span><span style="COLOR: #000000">!=</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #000000">12</span><span style="COLOR: #000000">&nbsp;)<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: #0000ff">throw</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000">&nbsp;IllegalArgumentException(&nbsp;</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">need&nbsp;12&nbsp;bytes</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">&nbsp;);<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ByteBuffer&nbsp;bb&nbsp;</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">&nbsp;ByteBuffer.wrap(&nbsp;b&nbsp;);<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_time&nbsp;</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">&nbsp;bb.getInt();<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_machine&nbsp;</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">&nbsp;bb.getInt();<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_inc&nbsp;</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">&nbsp;bb.getInt();<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_new&nbsp;</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #0000ff">false</span><span style="COLOR: #000000">;<br>
       &nbsp;&nbsp;&nbsp;&nbsp;}<br>
       &nbsp;&nbsp;&nbsp;&nbsp;<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">public</span><span style="color: #000000;">&nbsp;ObjectId(&nbsp;</span><span style="color: #0000ff;">int</span><span style="color: #000000;">&nbsp;time&nbsp;,&nbsp;</span><span style="color: #0000ff;">int</span><span style="color: #000000;">&nbsp;machine&nbsp;,&nbsp;</span><span style="color: #0000ff;">int</span><span style="color: #000000;">&nbsp;inc&nbsp;){<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_time&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;time;<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_machine&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;machine;<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_inc&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;inc;<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_new&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000ff;">false</span><span style="color: #000000;">;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: #0000ff">public</span><span style="COLOR: #000000">&nbsp;ObjectId(&nbsp;</span><span style="COLOR: #0000ff">int</span><span style="COLOR: #000000">&nbsp;time&nbsp;,&nbsp;</span><span style="COLOR: #0000ff">int</span><span style="COLOR: #000000">&nbsp;machine&nbsp;,&nbsp;</span><span style="COLOR: #0000ff">int</span><span style="COLOR: #000000">&nbsp;inc&nbsp;){<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_time&nbsp;</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">&nbsp;time;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_machine&nbsp;</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">&nbsp;machine;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_inc&nbsp;</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">&nbsp;inc;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_new&nbsp;</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #0000ff">false</span><span style="COLOR: #000000">;<br>
       &nbsp;&nbsp;&nbsp;&nbsp;}<br>
       &nbsp;&nbsp;&nbsp;&nbsp;<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">public</span><span style="color: #000000;">&nbsp;ObjectId(){<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_time&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;(</span><span style="color: #0000ff;">int</span><span style="color: #000000;">)&nbsp;(System.currentTimeMillis()&nbsp;</span><span style="color: #000000;">/</span><span style="color: #000000;">&nbsp;</span><span style="color: #000000;">1000</span><span style="color: #000000;">);<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_machine&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;_genmachine;<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_inc&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;_nextInc.getAndIncrement();<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_new&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000ff;">true</span><span style="color: #000000;">;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: #0000ff">public</span><span style="COLOR: #000000">&nbsp;ObjectId(){<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_time&nbsp;</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">&nbsp;(</span><span style="COLOR: #0000ff">int</span><span style="COLOR: #000000">)&nbsp;(System.currentTimeMillis()&nbsp;</span><span style="COLOR: #000000">/</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #000000">1000</span><span style="COLOR: #000000">);<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_machine&nbsp;</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">&nbsp;_genmachine;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_inc&nbsp;</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">&nbsp;_nextInc.getAndIncrement();<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_new&nbsp;</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #0000ff">true</span><span style="COLOR: #000000">;<br>
       &nbsp;&nbsp;&nbsp;&nbsp;}<br>
       <br>
-      <img src="dot.gif" alt=""><br>
-      £¨ÍêÕû´úÂëÇë²é¿´Ô´Âë£©</span></div>
+      <IMG alt="" src="dot.gif"><br>
+      ï¼ˆå®Œæ•´ä»£ç è¯·æŸ¥çœ‹æºç ï¼‰</span></div>
     <br>
-    <div>ÕâÀï¿ÉÒÔ·¢ÏÖObjectIdµÄ¹¹½¨¿ÉÒÔÓĞ¶àÖÖ·½Ê½£¬¿ÉÒÔÓÉ×Ô¼ºÖÆ¶¨×Ö½Ú£¬Ò²¿ÉÒÔÖ¸¶¨Ê±¼ä£¬»úÆ÷ÂëºÍ×ÔÔöÖµ£¬ÕâÀïÖØµã¿´¿´Çı¶¯³ÌĞòÄ¬ÈÏµÄ¹¹½¨£¬Ò²¾ÍÊÇpublic ObjectId()<br>
-      ¿ÉÒÔ¿´µ½objectidÖ÷ÒªÓÉ_time _machine _inc Ëù×é³É£¬ÆäÖĞ _timeÖ±½ÓÓÉ(System.currentTimeMillis() / 1000)¼ÆËã³öËùÎ½µÄÊ±¼ä´Á£¬ÕâÀïºÜ¼òµ¥£¬½ÓÏÂÀ´ÊÇÖØµã£¬Ö÷Òª¿´¿´<strong>»úÆ÷ÂëºÍ½ø³ÌÂë</strong>µÄ¹¹½¨</div>
+    <div>è¿™é‡Œå¯ä»¥å‘ç°ObjectIdçš„æ„å»ºå¯ä»¥æœ‰å¤šç§æ–¹å¼ï¼Œå¯ä»¥ç”±è‡ªå·±åˆ¶å®šå­—èŠ‚ï¼Œä¹Ÿå¯ä»¥æŒ‡å®šæ—¶é—´ï¼Œæœºå™¨ç å’Œè‡ªå¢å€¼ï¼Œè¿™é‡Œé‡ç‚¹çœ‹çœ‹é©±åŠ¨ç¨‹åºé»˜è®¤çš„æ„å»ºï¼Œä¹Ÿå°±æ˜¯public ObjectId()<br>
+      å¯ä»¥çœ‹åˆ°objectidä¸»è¦ç”±_time _machine _inc æ‰€ç»„æˆï¼Œå…¶ä¸­ _timeç›´æ¥ç”±(System.currentTimeMillis() / 1000)è®¡ç®—å‡ºæ‰€è°“çš„æ—¶é—´æˆ³ï¼Œè¿™é‡Œå¾ˆç®€å•ï¼Œæ¥ä¸‹æ¥æ˜¯é‡ç‚¹ï¼Œä¸»è¦çœ‹çœ‹<strong>æœºå™¨ç å’Œè¿›ç¨‹ç </strong>çš„æ„å»º</div>
   </div>
   <br>
-  <div style="background-color: #eeeeee; font-size: 13px; border: 1px solid #cccccc; padding: 4px 5px 4px 4px; width: 98%;"><span style="color: #000000;">&nbsp;</span><span style="color: #0000ff;">private</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000ff;">static</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000ff;">final</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000ff;">int</span><span style="color: #000000;">&nbsp;_genmachine;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">static</span><span style="color: #000000;">&nbsp;{<br>
+  <div style="FONT-SIZE: 13px; BORDER-TOP: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid; WIDTH: 98%; BORDER-BOTTOM: #cccccc 1px solid; PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 4px; BORDER-LEFT: #cccccc 1px solid; PADDING-RIGHT: 5px; BACKGROUND-COLOR: #eeeeee"><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #0000ff">private</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #0000ff">static</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #0000ff">final</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #0000ff">int</span><span style="COLOR: #000000">&nbsp;_genmachine;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: #0000ff">static</span><span style="COLOR: #000000">&nbsp;{<br>
     <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">try</span><span style="color: #000000;">&nbsp;{</span><span style="color: #008000;"><br>
-    </span><span style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">final</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000ff;">int</span><span style="color: #000000;">&nbsp;machinePiece;</span><span style="color: #008000;">//</span><span style="color: #008000;">»úÆ÷Âë¿é</span><span style="color: #008000;"><br>
-    </span><span style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StringBuilder&nbsp;sb&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000ff;">new</span><span style="color: #000000;">&nbsp;StringBuilder();<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enumeration</span><span style="color: #000000;">&lt;</span><span style="color: #000000;">NetworkInterface</span><span style="color: #000000;">&gt;</span><span style="color: #000000;">&nbsp;e&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;NetworkInterface.getNetworkInterfaces();</span><span style="color: #008000;">//</span><span style="color: #008000;">NetworkInterface´ËÀà±íÊ¾Ò»¸öÓÉÃû³ÆºÍ·ÖÅä¸ø´Ë½Ó¿ÚµÄ&nbsp;IP&nbsp;µØÖ·ÁĞ±í×é³ÉµÄÍøÂç½Ó¿Ú£¬ËüÓÃÓÚ±êÊ¶½«¶à²¥×é¼ÓÈëµÄ±¾µØ½Ó¿Ú£¬ÕâÀïÍ¨¹ıNetworkInterface´Ë»úÆ÷ÉÏËùÓĞµÄ½Ó¿Ú</span><span style="color: #008000;"><br>
-    </span><span style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">while</span><span style="color: #000000;">&nbsp;(&nbsp;e.hasMoreElements()&nbsp;){<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NetworkInterface&nbsp;ni&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;e.nextElement();<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: #0000ff">try</span><span style="COLOR: #000000">&nbsp;{</span><span style="COLOR: #008000"><br>
+    </span><span style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: #0000ff">final</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #0000ff">int</span><span style="COLOR: #000000">&nbsp;machinePiece;</span><span style="COLOR: #008000">//</span><span style="COLOR: #008000">æœºå™¨ç å—</span><span style="COLOR: #008000"><br>
+    </span><span style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StringBuilder&nbsp;sb&nbsp;</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000">&nbsp;StringBuilder();<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enumeration</span><span style="COLOR: #000000">&lt;</span><span style="COLOR: #000000">NetworkInterface</span><span style="COLOR: #000000">&gt;</span><span style="COLOR: #000000">&nbsp;e&nbsp;</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">&nbsp;NetworkInterface.getNetworkInterfaces();</span><span style="COLOR: #008000">//</span><span style="COLOR: #008000">NetworkInterfaceæ­¤ç±»è¡¨ç¤ºä¸€ä¸ªç”±åç§°å’Œåˆ†é…ç»™æ­¤æ¥å£çš„&nbsp;IP&nbsp;åœ°å€åˆ—è¡¨ç»„æˆçš„ç½‘ç»œæ¥å£ï¼Œå®ƒç”¨äºæ ‡è¯†å°†å¤šæ’­ç»„åŠ å…¥çš„æœ¬åœ°æ¥å£ï¼Œè¿™é‡Œé€šè¿‡NetworkInterfaceæ­¤æœºå™¨ä¸Šæ‰€æœ‰çš„æ¥å£</span><span style="COLOR: #008000"><br>
+    </span><span style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: #0000ff">while</span><span style="COLOR: #000000">&nbsp;(&nbsp;e.hasMoreElements()&nbsp;){<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NetworkInterface&nbsp;ni&nbsp;</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">&nbsp;e.nextElement();<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.append(&nbsp;ni.toString()&nbsp;);<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;machinePiece&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;sb.toString().hashCode()&nbsp;</span><span style="color: #000000;">&lt;&lt;</span><span style="color: #000000;">&nbsp;</span><span style="color: #000000;">16</span><span style="color: #000000;">;&nbsp;</span><span style="color: #008000;">//</span><span style="color: #008000;">½«µÃµ½ËùÓĞ½Ó¿ÚµÄ×Ö·û´®½øĞĞÈ¡É¢ÁĞÖµ</span><span style="color: #008000;"><br>
-    </span><span style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOGGER.fine(&nbsp;</span><span style="color: #000000;">"</span><span style="color: #000000;">machine&nbsp;piece&nbsp;post:&nbsp;</span><span style="color: #000000;">"</span><span style="color: #000000;">&nbsp;</span><span style="color: #000000;">+</span><span style="color: #000000;">&nbsp;Integer.toHexString(&nbsp;machinePiece&nbsp;)&nbsp;);<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><span style="color: #008000;"><br>
-    </span><span style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">final</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000ff;">int</span><span style="color: #000000;">&nbsp;processPiece;</span><span style="color: #008000;">//</span><span style="color: #008000;">½ø³Ì¿é</span><span style="color: #008000;"><br>
-    </span><span style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">int</span><span style="color: #000000;">&nbsp;processId&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000ff;">new</span><span style="color: #000000;">&nbsp;java.util.Random().nextInt();<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">try</span><span style="color: #000000;">&nbsp;{<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processId&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;java.lang.management.ManagementFactory.getRuntimeMXBean().getName().hashCode();</span><span style="color: #008000;">//</span><span style="color: #008000;">RuntimeMXBeanÊÇJavaĞéÄâ»úµÄÔËĞĞÊ±ÏµÍ³µÄ¹ÜÀí½Ó¿Ú£¬ÕâÀïÊÇ·µ»Ø±íÊ¾ÕıÔÚÔËĞĞµÄ&nbsp;Java&nbsp;ĞéÄâ»úµÄÃû³Æ£¬²¢½øĞĞÈ¡É¢ÁĞÖµ¡£</span><span style="color: #008000;"><br>
-    </span><span style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">catch</span><span style="color: #000000;">&nbsp;(&nbsp;Throwable&nbsp;t&nbsp;){<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;machinePiece&nbsp;</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">&nbsp;sb.toString().hashCode()&nbsp;</span><span style="COLOR: #000000">&lt;&lt;</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #000000">16</span><span style="COLOR: #000000">;&nbsp;</span><span style="COLOR: #008000">//</span><span style="COLOR: #008000">å°†å¾—åˆ°æ‰€æœ‰æ¥å£çš„å­—ç¬¦ä¸²è¿›è¡Œå–æ•£åˆ—å€¼</span><span style="COLOR: #008000"><br>
+    </span><span style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOGGER.fine(&nbsp;</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">machine&nbsp;piece&nbsp;post:&nbsp;</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #000000">+</span><span style="COLOR: #000000">&nbsp;Integer.toHexString(&nbsp;machinePiece&nbsp;)&nbsp;);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><span style="COLOR: #008000"><br>
+    </span><span style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: #0000ff">final</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #0000ff">int</span><span style="COLOR: #000000">&nbsp;processPiece;</span><span style="COLOR: #008000">//</span><span style="COLOR: #008000">è¿›ç¨‹å—</span><span style="COLOR: #008000"><br>
+    </span><span style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: #0000ff">int</span><span style="COLOR: #000000">&nbsp;processId&nbsp;</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000">&nbsp;java.util.Random().nextInt();<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: #0000ff">try</span><span style="COLOR: #000000">&nbsp;{<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processId&nbsp;</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">&nbsp;java.lang.management.ManagementFactory.getRuntimeMXBean().getName().hashCode();</span><span style="COLOR: #008000">//</span><span style="COLOR: #008000">RuntimeMXBeanæ˜¯Javaè™šæ‹Ÿæœºçš„è¿è¡Œæ—¶ç³»ç»Ÿçš„ç®¡ç†æ¥å£ï¼Œè¿™é‡Œæ˜¯è¿”å›è¡¨ç¤ºæ­£åœ¨è¿è¡Œçš„&nbsp;Java&nbsp;è™šæ‹Ÿæœºçš„åç§°ï¼Œå¹¶è¿›è¡Œå–æ•£åˆ—å€¼ã€‚</span><span style="COLOR: #008000"><br>
+    </span><span style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: #0000ff">catch</span><span style="COLOR: #000000">&nbsp;(&nbsp;Throwable&nbsp;t&nbsp;){<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
     <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ClassLoader&nbsp;loader&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;ObjectId.</span><span style="color: #0000ff;">class</span><span style="color: #000000;">.getClassLoader();<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">int</span><span style="color: #000000;">&nbsp;loaderId&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;loader&nbsp;</span><span style="color: #000000;">!=</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000ff;">null</span><span style="color: #000000;">&nbsp;</span><span style="color: #000000;">?</span><span style="color: #000000;">&nbsp;System.identityHashCode(loader)&nbsp;:&nbsp;</span><span style="color: #000000;">0</span><span style="color: #000000;">;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ClassLoader&nbsp;loader&nbsp;</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">&nbsp;ObjectId.</span><span style="COLOR: #0000ff">class</span><span style="COLOR: #000000">.getClassLoader();<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: #0000ff">int</span><span style="COLOR: #000000">&nbsp;loaderId&nbsp;</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">&nbsp;loader&nbsp;</span><span style="COLOR: #000000">!=</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #0000ff">null</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #000000">?</span><span style="COLOR: #000000">&nbsp;System.identityHashCode(loader)&nbsp;:&nbsp;</span><span style="COLOR: #000000">0</span><span style="COLOR: #000000">;<br>
     <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StringBuilder&nbsp;sb&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000ff;">new</span><span style="color: #000000;">&nbsp;StringBuilder();<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StringBuilder&nbsp;sb&nbsp;</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000">&nbsp;StringBuilder();<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.append(Integer.toHexString(processId));<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.append(Integer.toHexString(loaderId));<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processPiece&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;sb.toString().hashCode()&nbsp;</span><span style="color: #000000;">&amp;</span><span style="color: #000000;">&nbsp;</span><span style="color: #000000;">0xFFFF</span><span style="color: #000000;">;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOGGER.fine(&nbsp;</span><span style="color: #000000;">"</span><span style="color: #000000;">process&nbsp;piece:&nbsp;</span><span style="color: #000000;">"</span><span style="color: #000000;">&nbsp;</span><span style="color: #000000;">+</span><span style="color: #000000;">&nbsp;Integer.toHexString(&nbsp;processPiece&nbsp;)&nbsp;);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processPiece&nbsp;</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">&nbsp;sb.toString().hashCode()&nbsp;</span><span style="COLOR: #000000">&amp;</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #000000">0xFFFF</span><span style="COLOR: #000000">;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOGGER.fine(&nbsp;</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">process&nbsp;piece:&nbsp;</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #000000">+</span><span style="COLOR: #000000">&nbsp;Integer.toHexString(&nbsp;processPiece&nbsp;)&nbsp;);<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_genmachine&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;machinePiece&nbsp;</span><span style="color: #000000;">|</span><span style="color: #000000;">&nbsp;processPiece;&nbsp;</span><span style="color: #008000;">//</span><span style="color: #008000;">×îºó½«»úÆ÷Âë¿éµÄÉ¢ÁĞÖµÓë½ø³Ì¿éµÄÉ¢ÁĞÖµ½øĞĞÎ»»òÔËËã£¬µÃµ½&nbsp;_genmachine&nbsp;</span><span style="color: #008000;"><br>
-    </span><span style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOGGER.fine(&nbsp;</span><span style="color: #000000;">"</span><span style="color: #000000;">machine&nbsp;:&nbsp;</span><span style="color: #000000;">"</span><span style="color: #000000;">&nbsp;</span><span style="color: #000000;">+</span><span style="color: #000000;">&nbsp;Integer.toHexString(&nbsp;_genmachine&nbsp;)&nbsp;);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_genmachine&nbsp;</span><span style="COLOR: #000000">=</span><span style="COLOR: #000000">&nbsp;machinePiece&nbsp;</span><span style="COLOR: #000000">|</span><span style="COLOR: #000000">&nbsp;processPiece;&nbsp;</span><span style="COLOR: #008000">//</span><span style="COLOR: #008000">æœ€åå°†æœºå™¨ç å—çš„æ•£åˆ—å€¼ä¸è¿›ç¨‹å—çš„æ•£åˆ—å€¼è¿›è¡Œä½æˆ–è¿ç®—ï¼Œå¾—åˆ°&nbsp;_genmachine&nbsp;</span><span style="COLOR: #008000"><br>
+    </span><span style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOGGER.fine(&nbsp;</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">machine&nbsp;:&nbsp;</span><span style="COLOR: #000000">"</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #000000">+</span><span style="COLOR: #000000">&nbsp;Integer.toHexString(&nbsp;_genmachine&nbsp;)&nbsp;);<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">catch</span><span style="color: #000000;">&nbsp;(&nbsp;java.io.IOException&nbsp;ioe&nbsp;){<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">throw</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000ff;">new</span><span style="color: #000000;">&nbsp;RuntimeException(&nbsp;ioe&nbsp;);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: #0000ff">catch</span><span style="COLOR: #000000">&nbsp;(&nbsp;java.io.IOException&nbsp;ioe&nbsp;){<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: #0000ff">throw</span><span style="COLOR: #000000">&nbsp;</span><span style="COLOR: #0000ff">new</span><span style="COLOR: #000000">&nbsp;RuntimeException(&nbsp;ioe&nbsp;);<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
   &nbsp;&nbsp;&nbsp;&nbsp;}</span></div>
 </div>
 <br>
-<div><strong>&nbsp;Enumeration&lt;NetworkInterface&gt; e = NetworkInterface.getNetworkInterfaces();<br>
+<div><strong>&nbsp;Enumeration&lt;NetworkInterface&gt; e =   NetworkInterface.getNetworkInterfaces();<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while ( e.hasMoreElements() ){<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NetworkInterface ni = e.nextElement();<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sb.append( ni.toString() );<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
   &nbsp;machinePiece = sb.toString().hashCode() &lt;&lt; 16;</strong><br>
-  ÕâÀïµÄNetworkInterface.getNetworkInterfaces();È¡µÃµÄ½Ó¿ÚÍ¨³£ÊÇ°´Ãû³Æ£¨Èç "le0"£©Çø·ÖµÄ£¬´óÔ¼ÊÇÏÂÃæµÄÀàĞÍ</div>
+  è¿™é‡Œçš„NetworkInterface.getNetworkInterfaces();å–å¾—çš„æ¥å£é€šå¸¸æ˜¯æŒ‰åç§°ï¼ˆå¦‚ "le0"ï¼‰åŒºåˆ†çš„ï¼Œå¤§çº¦æ˜¯ä¸‹é¢çš„ç±»å‹</div>
 <br>
-<div style="background-color: #eeeeee; font-size: 13px; border: 1px solid #cccccc; padding: 4px 5px 4px 4px; width: 98%;"><span style="color: #000000;">name:lo&nbsp;(Software&nbsp;Loopback&nbsp;Interface&nbsp;</span><span style="color: #000000;">1</span><span style="color: #000000;">)&nbsp;index:&nbsp;</span><span style="color: #000000;">1</span><span style="color: #000000;">&nbsp;addresses:<br>
-  </span><span style="color: #000000;">/</span><span style="color: #000000;">0</span><span style="color: #000000;">:</span><span style="color: #000000;">0</span><span style="color: #000000;">:</span><span style="color: #000000;">0</span><span style="color: #000000;">:</span><span style="color: #000000;">0</span><span style="color: #000000;">:</span><span style="color: #000000;">0</span><span style="color: #000000;">:</span><span style="color: #000000;">0</span><span style="color: #000000;">:</span><span style="color: #000000;">0</span><span style="color: #000000;">:</span><span style="color: #000000;">1</span><span style="color: #000000;">;<br>
-  </span><span style="color: #000000;">/</span><span style="color: #000000;">127.0</span><span style="color: #000000;">.</span><span style="color: #000000;">0.1</span><span style="color: #000000;">;<br>
-  name:net0&nbsp;(WAN&nbsp;Miniport&nbsp;(SSTP))&nbsp;index:&nbsp;</span><span style="color: #000000;">2</span><span style="color: #000000;">&nbsp;addresses:<br>
-  name:net1&nbsp;(WAN&nbsp;Miniport&nbsp;(IKEv2))&nbsp;index:&nbsp;</span><span style="color: #000000;">3</span><span style="color: #000000;">&nbsp;addresses:<br>
-  name:net2&nbsp;(WAN&nbsp;Miniport&nbsp;(L2TP))&nbsp;index:&nbsp;</span><span style="color: #000000;">4</span><span style="color: #000000;">&nbsp;addresses:<br>
-  name:net3&nbsp;(WAN&nbsp;Miniport&nbsp;(PPTP))&nbsp;index:&nbsp;</span><span style="color: #000000;">5</span><span style="color: #000000;">&nbsp;addresses:<br>
-  name:ppp0&nbsp;(WAN&nbsp;Miniport&nbsp;(PPPOE))&nbsp;index:&nbsp;</span><span style="color: #000000;">6</span><span style="color: #000000;">&nbsp;addresses:</span></div>
+<div style="FONT-SIZE: 13px; BORDER-TOP: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid; WIDTH: 98%; BORDER-BOTTOM: #cccccc 1px solid; PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 4px; BORDER-LEFT: #cccccc 1px solid; PADDING-RIGHT: 5px; BACKGROUND-COLOR: #eeeeee"><span style="COLOR: #000000">name:lo&nbsp;(Software&nbsp;Loopback&nbsp;Interface&nbsp;</span><span style="COLOR: #000000">1</span><span style="COLOR: #000000">)&nbsp;index:&nbsp;</span><span style="COLOR: #000000">1</span><span style="COLOR: #000000">&nbsp;addresses:<br>
+  </span><span style="COLOR: #000000">/</span><span style="COLOR: #000000">0</span><span style="COLOR: #000000">:</span><span style="COLOR: #000000">0</span><span style="COLOR: #000000">:</span><span style="COLOR: #000000">0</span><span style="COLOR: #000000">:</span><span style="COLOR: #000000">0</span><span style="COLOR: #000000">:</span><span style="COLOR: #000000">0</span><span style="COLOR: #000000">:</span><span style="COLOR: #000000">0</span><span style="COLOR: #000000">:</span><span style="COLOR: #000000">0</span><span style="COLOR: #000000">:</span><span style="COLOR: #000000">1</span><span style="COLOR: #000000">;<br>
+  </span><span style="COLOR: #000000">/</span><span style="COLOR: #000000">127.0</span><span style="COLOR: #000000">.</span><span style="COLOR: #000000">0.1</span><span style="COLOR: #000000">;<br>
+  name:net0&nbsp;(WAN&nbsp;Miniport&nbsp;(SSTP))&nbsp;index:&nbsp;</span><span style="COLOR: #000000">2</span><span style="COLOR: #000000">&nbsp;addresses:<br>
+  name:net1&nbsp;(WAN&nbsp;Miniport&nbsp;(IKEv2))&nbsp;index:&nbsp;</span><span style="COLOR: #000000">3</span><span style="COLOR: #000000">&nbsp;addresses:<br>
+  name:net2&nbsp;(WAN&nbsp;Miniport&nbsp;(L2TP))&nbsp;index:&nbsp;</span><span style="COLOR: #000000">4</span><span style="COLOR: #000000">&nbsp;addresses:<br>
+  name:net3&nbsp;(WAN&nbsp;Miniport&nbsp;(PPTP))&nbsp;index:&nbsp;</span><span style="COLOR: #000000">5</span><span style="COLOR: #000000">&nbsp;addresses:<br>
+  name:ppp0&nbsp;(WAN&nbsp;Miniport&nbsp;(PPPOE))&nbsp;index:&nbsp;</span><span style="COLOR: #000000">6</span><span style="COLOR: #000000">&nbsp;addresses:</span></div>
 <br>
-<div>ÕâÀïÎªÊ²Ã´Òª²ÉÈ¡ÕâÑù·½Ãæ½øĞĞÈ¡É¢ÁĞÖµ£¬¸Ğ¾õÓĞĞ©²»Ì«Àí½â£¬Ó¦¸ÃÍøÂç½Ó¿Ú±¾ÉíÏà¶Ô¶øÑÔÊÇ²¢²»ÎÈ¶¨µÄ<br>
+<div>è¿™é‡Œä¸ºä»€ä¹ˆè¦é‡‡å–è¿™æ ·æ–¹é¢è¿›è¡Œå–æ•£åˆ—å€¼ï¼Œæ„Ÿè§‰æœ‰äº›ä¸å¤ªç†è§£ï¼Œåº”è¯¥ç½‘ç»œæ¥å£æœ¬èº«ç›¸å¯¹è€Œè¨€æ˜¯å¹¶ä¸ç¨³å®šçš„<br>
   <br>
   <div><strong>int processId = new java.util.Random().nextInt();<br>
-    &nbsp;try {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; processId = java.lang.management.ManagementFactory.getRuntimeMXBean().getName().hashCode();<br>
+    &nbsp;try {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; processId =
+       java.lang.management.ManagementFactory.getRuntimeMXBean().getName().hashCode();<br>
     &nbsp;}<br>
     &nbsp;catch ( Throwable t ){<br>
     }</strong><br>
-    RuntimeMXBeanÊÇJavaĞéÄâ»úµÄÔËĞĞÊ±ÏµÍ³µÄ¹ÜÀí½Ó¿Ú£¬ÕâÀïÊÇ·µ»Ø±íÊ¾ÕıÔÚÔËĞĞµÄ Java ĞéÄâ»úµÄÃû³Æ£¬²¢½øĞĞÈ¡É¢ÁĞÖµ£¬Èç¹ûÔÚÕâ¹ı³ÌÖĞ³öÏÖÒì³££¬processId ½«ÒÔËæ»úÊıµÄ·½Ê½¼ÌĞø¼ÆËã<br>
+    RuntimeMXBeanæ˜¯Javaè™šæ‹Ÿæœºçš„è¿è¡Œæ—¶ç³»ç»Ÿçš„ç®¡ç†æ¥å£ï¼Œè¿™é‡Œæ˜¯è¿”å›è¡¨ç¤ºæ­£åœ¨è¿è¡Œçš„ Java è™šæ‹Ÿæœºçš„åç§°ï¼Œå¹¶è¿›è¡Œå–æ•£åˆ—å€¼ï¼Œå¦‚æœåœ¨è¿™è¿‡ç¨‹ä¸­å‡ºç°å¼‚å¸¸ï¼ŒprocessId å°†ä»¥éšæœºæ•°çš„æ–¹å¼ç»§ç»­è®¡ç®—<br>
     <br>
     <strong>_genmachine = machinePiece | processPiece;</strong><br>
-    <div>×îºó½«»úÆ÷Âë¿éµÄÉ¢ÁĞÖµÓë½ø³Ì¿éµÄÉ¢ÁĞÖµ½øĞĞÎ»»òÔËËã£¬µ±È»ÕâÀïÊÇÊ®½øÖÆ£¬Äã°ÑÕâÀïµÄÊ®½øÖÆ×¨ÎªÊ®Áù½øÖÆ£¬¾Í»á·¢ÏÖÕâ¿éµÄÖµ¾ÍÊÇÉú²úobjectidÖĞ¼ä²¿·ÖµÄÖµ£¬ÕâÀïµÄ¹¹½¨¸ú·şÎñ¶ËµÄ¹¹½¨ÊÇÓĞĞ©²»Ò»ÑùµÄ£¬²»¹ı×î»ù±¾µÄ¹¹½¨ÔªËØ»¹ÊÇÒ»ÖÂµÄ£¬¾ÍÊÇ<strong>TimeStamp£¬Machine £¬pid£¬increment</strong>¡£<br>
+    <div>æœ€åå°†æœºå™¨ç å—çš„æ•£åˆ—å€¼ä¸è¿›ç¨‹å—çš„æ•£åˆ—å€¼è¿›è¡Œä½æˆ–è¿ç®—ï¼Œå½“ç„¶è¿™é‡Œæ˜¯åè¿›åˆ¶ï¼Œä½ æŠŠè¿™é‡Œçš„åè¿›åˆ¶ä¸“ä¸ºåå…­è¿›åˆ¶ï¼Œå°±ä¼šå‘ç°è¿™å—çš„å€¼å°±æ˜¯ç”Ÿäº§objectidä¸­é—´éƒ¨åˆ†çš„å€¼ï¼Œè¿™é‡Œçš„æ„å»ºè·ŸæœåŠ¡ç«¯çš„æ„å»ºæ˜¯æœ‰äº›ä¸ä¸€æ ·çš„ï¼Œä¸è¿‡æœ€åŸºæœ¬çš„æ„å»ºå…ƒç´ è¿˜æ˜¯ä¸€è‡´çš„ï¼Œå°±æ˜¯<strong>TimeStampï¼ŒMachine ï¼Œpidï¼Œincrement</strong>ã€‚<br>
       <br>
-      mongodbµÄObejctIdÉú²úË¼ÏëÔÚºÜ¶à·½ÃæÍ¦ÖµµÃÎÒÃÇ½è¼øµÄ£¬ÌØ±ğÊÇÔÚ´óĞÍ·Ö²¼Ê½µÄ¿ª·¢£¬ÈçºÎ¹¹½¨ÇáÁ¿¼¶µÄÉú²ú£¬ÈçºÎ½«Éú²úµÄ¸ºÔØ½øĞĞ×ªÒÆ£¬ÈçºÎÒÔ¿Õ¼ä»»È¡Ê±¼äÌá¸ßÉú²úµÄ×î´óÓÅ»¯µÈµÈ¡£</div>
+      mongodbçš„ObejctIdç”Ÿäº§æ€æƒ³åœ¨å¾ˆå¤šæ–¹é¢æŒºå€¼å¾—æˆ‘ä»¬å€Ÿé‰´çš„ï¼Œç‰¹åˆ«æ˜¯åœ¨å¤§å‹åˆ†å¸ƒå¼çš„å¼€å‘ï¼Œå¦‚ä½•æ„å»ºè½»é‡çº§çš„ç”Ÿäº§ï¼Œå¦‚ä½•å°†ç”Ÿäº§çš„è´Ÿè½½è¿›è¡Œè½¬ç§»ï¼Œå¦‚ä½•ä»¥ç©ºé—´æ¢å–æ—¶é—´æé«˜ç”Ÿäº§çš„æœ€å¤§ä¼˜åŒ–ç­‰ç­‰ã€‚</div>
   </div>
   ----------------------------------------</div>
+<div>
+  &nbsp;</div>
 </body>
 </htm>

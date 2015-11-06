@@ -1,27 +1,28 @@
-<html>
+ï»¿<html>
 <head>
-<title>ÎÄ¼şÉÏ´«JAVABEAN</title>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>æ–‡ä»¶ä¸Šä¼ JAVABEAN</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 
 <body bgcolor="#e4ebf1" text="#000000">
-±ê Ìâ£º°³Ğ´µÄÒ»¸öÎÄ¼şÉÏ´«JAVABEAN£¬Ï£Íû´ó¼ÒÏ²»¶¡£
-<p>·¢±íÓÚ£º2000-12-04 12:31 À´×Ô£º61.140.188.94<br>
-  »Ø¸´ <br>
+æ ‡ é¢˜ï¼šä¿ºå†™çš„ä¸€ä¸ªæ–‡ä»¶ä¸Šä¼ JAVABEANï¼Œå¸Œæœ›å¤§å®¶å–œæ¬¢ã€‚
+<p>å‘è¡¨äºï¼š2000-12-04 12:31 æ¥è‡ªï¼š61.140.188.94<br>
+  å›å¤ <br>
   package com.upload; </p>
 <p>import java.io.*; <br>
   import javax.servlet.http.HttpServletRequest; <br>
   import javax.servlet.ServletInputStream; <br>
   import javax.servlet.ServletException; </p>
 <p>public class upload{ <br>
-  private static String newline = &quot;\n&quot;; <br>
-  private String uploadDirectory = &quot;.&quot;; <br>
-  private String ContentType = &quot;&quot;; <br>
-  private String CharacterEncoding = &quot;&quot;; </p>
+  private static String newline = "\n"; <br>
+  private String uploadDirectory = "."; <br>
+  private String ContentType = ""; <br>
+  private String CharacterEncoding = ""; </p>
 <p>private String getFileName(String s){ <br>
-  int i = s.lastIndexOf(&quot;\\&quot;); <br>
+  int i = s.lastIndexOf("\\"); <br>
   if(i &lt; 0 // i &gt;= s.length() - 1){ <br>
-  i = s.lastIndexOf(&quot;/&quot;); <br>
+  i =
+    s.lastIndexOf("/"); <br>
   if(i &lt; 0 // i &gt;= s.length() - 1) <br>
   return s; <br>
   } <br>
@@ -33,9 +34,9 @@
 <p>public void setContentType(String s){ <br>
   ContentType = s; <br>
   int j; <br>
-  if((j = ContentType.indexOf(&quot;boundary=&quot;)) != -1){ <br>
+  if((j = ContentType.indexOf("boundary=")) != -1){ <br>
   ContentType = ContentType.substring(j + 9); <br>
-  ContentType = &quot;--&quot; + ContentType; <br>
+  ContentType = "--" + ContentType; <br>
   } <br>
   } </p>
 <p>public void setCharacterEncoding(String s){ <br>
@@ -54,25 +55,27 @@
   byte Linebyte[] = new byte[4096]; <br>
   byte outLinebyte[] = new byte[4096]; <br>
   int ai[] = new int[1]; <br>
-  int ai1[] = new int[1]; </p>
+  int ai1[] =
+     new int[1]; </p>
 <p>String line; <br>
-  //µÃµ½ÎÄ¼şÃû <br>
+  //å¾—åˆ°æ–‡ä»¶å <br>
   while((line = readLine(Linebyte, ai, servletinputstream, CharacterEncoding)) 
   != null){ <br>
-  int i = line.indexOf(&quot;filename=&quot;); <br>
+  int i =
+     line.indexOf("filename="); <br>
   if(i &gt;= 0){ <br>
   line = line.substring(i + 10); <br>
-  if((i = line.indexOf(&quot;\&quot;&quot;)) &gt; 0) <br>
+  if((i = line.indexOf("\"")) &gt; 0) <br>
   line = line.substring(0, i); <br>
   break; <br>
   } <br>
   } </p>
 <p>filename = line; </p>
-<p>if(filename != null &amp;&amp; !filename.equals(&quot;\&quot;&quot;)){ <br>
+<p>if(filename != null &amp;&amp; !filename.equals("\"")){ <br>
   filename = getFileName(filename); </p>
 <p>String sContentType = readLine(Linebyte, ai, servletinputstream, CharacterEncoding); 
   <br>
-  if(sContentType.indexOf(&quot;Content-Type&quot;) &gt;= 0) <br>
+  if(sContentType.indexOf("Content-Type") &gt;= 0) <br>
   readLine(Linebyte, ai, servletinputstream, CharacterEncoding); </p>
 <p>//File(String parent, String child) <br>
   //Creates a new File instance from a parent pathname string <br>
@@ -127,12 +130,13 @@
   return null; <br>
   } <br>
   try{ <br>
-  if(CharacterEncoding == null){ <br>
-  //ÓÃÈ±Ê¡µÄ±àÂë·½Ê½°Ñ¸ø¶¨µÄbyteÊı×é×ª»»Îª×Ö·û´® <br>
+  if(CharacterEncoding ==
+    null){ <br>
+  //ç”¨ç¼ºçœçš„ç¼–ç æ–¹å¼æŠŠç»™å®šçš„byteæ•°ç»„è½¬æ¢ä¸ºå­—ç¬¦ä¸² <br>
   //String(byte[] bytes, int offset, int length) <br>
   return new String(Linebyte, 0, ai[0]); <br>
   }else{ <br>
-  //ÓÃ¸ø¶¨µÄ±àÂë·½Ê½°Ñ¸ø¶¨µÄbyteÊı×é×ª»»Îª×Ö·û´® <br>
+  //ç”¨ç»™å®šçš„ç¼–ç æ–¹å¼æŠŠç»™å®šçš„byteæ•°ç»„è½¬æ¢ä¸ºå­—ç¬¦ä¸² <br>
   //String(byte[] bytes, int offset, int length, String enc) <br>
   return new String(Linebyte, 0, ai[0], CharacterEncoding); <br>
   } <br>
@@ -144,8 +148,8 @@
   public int readLine(byte[] buffer, <br>
   int offset, <br>
   int length) throws java.io.IOException <br>
-  ´ÓPOSTÀ´µÄÊı¾İÖĞ¶ÁÒ»ĞĞ <br>
-  ²ÎÊı: <br>
+  ä»POSTæ¥çš„æ•°æ®ä¸­è¯»ä¸€è¡Œ <br>
+  å‚æ•°: <br>
   buffer - buffer to hold the line data <br>
   offset - offset into the buffer to start <br>
   length - maximum number of bytes to read. <br>
@@ -155,13 +159,14 @@
   } </p>
 <p><br>
   upload.jsp <br>
-  &lt;%@page import=&quot;com.upload.upload&quot;%&gt; <br>
+  &lt;%@page import="com.upload.upload"%&gt; <br>
   &lt;% <br>
-  String Dir = &quot;/home/tonywan/upload&quot;; </p>
+  String Dir =
+     "/home/tonywan/upload"; </p>
 <p>upload upload = new upload(); <br>
   upload.setUploadDirectory(Dir); <br>
   upload.uploadFile(request); <br>
-  out.print(&quot;&lt;center&gt;&lt;font color=red&gt;³É¹¦ÉÏÔØÎÄ¼şÖÁ&quot; + Dir + &quot;&lt;/font&gt;&lt;/center&gt;&quot;); 
+  out.print("&lt;center&gt;&lt;font color=red&gt;æˆåŠŸä¸Šè½½æ–‡ä»¶è‡³" + Dir + "&lt;/font&gt;&lt;/center&gt;"); 
   <br>
   %&gt; </p>
 <p><br>
@@ -169,15 +174,17 @@
   &lt;center&gt;File upload test&lt;/center&gt; <br>
   &lt;br&gt; <br>
   &lt;table&gt;&lt;tr&gt; <br>
-  &lt;form method=&quot;post&quot; enctype=&quot;multipart/form-data&quot; action=&quot;upload.jsp&quot;&gt; 
+  &lt;form method="post" enctype="multipart/form-data" action="upload.jsp"&gt; 
   <br>
-  &lt;td&gt; &lt;input type=file size=20 name=&quot;fname&quot;&gt; &lt;/td&gt; 
+  &lt;td&gt; &lt;input type=file size=20 name="fname"&gt; &lt;/td&gt; 
   <br>
   &lt;td&gt; &lt;input type=Submit value=Upload&gt; &lt;/td&gt; &lt;/form&gt; 
   <br>
   &lt;/tr&gt;&lt;/table&gt; </p>
 <p></p>
-<p><br>
+<p><br>&nbsp;
+</p>
+<p>&nbsp;
 </p>
 </body>
 </html>

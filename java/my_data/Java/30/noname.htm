@@ -1,402 +1,403 @@
-<html>
-<title>½éÉÜBASE64¡¢MD5¡¢SHA¡¢HMAC¼¸ÖÖ¼ÓÃÜËã·¨¡£</title>
-<body>
-<!--StartFragment-->±¾ÆªÄÚÈİ¼òÒª½éÉÜ<strong>BASE64</strong>¡¢<strong>MD5</strong>¡¢<strong>SHA</strong>¡¢<strong>HMAC</strong>¼¸ÖÖ¼ÓÃÜËã·¨¡£ <br>
-&nbsp;&nbsp;&nbsp; <strong>BASE64</strong>±àÂëËã·¨²»ËãÊÇÕæÕıµÄ¼ÓÃÜËã·¨¡£ <br>
-&nbsp;&nbsp;&nbsp; <strong>MD5</strong>¡¢<strong>SHA</strong>¡¢<strong>HMAC</strong>ÕâÈıÖÖ¼ÓÃÜËã·¨£¬¿ÉÎ½ÊÇ·Ç¿ÉÄæ¼ÓÃÜ£¬¾ÍÊÇ²»¿É½âÃÜµÄ¼ÓÃÜ·½·¨£¬ÎÒÃÇ³ÆÖ®Îªµ¥Ïò¼ÓÃÜËã·¨¡£ÎÒÃÇÍ¨³£Ö»°ÑËûÃÇ×÷Îª¼ÓÃÜµÄ»ù´¡¡£µ¥´¿µÄÒÔÉÏÈıÖÖµÄ¼ÓÃÜ²¢²»¿É¿¿¡£ <br>
+ï»¿<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>ä»‹ç»BASE64ã€MD5ã€SHAã€HMACå‡ ç§åŠ å¯†ç®—æ³•ã€‚</title>
+<body><!--StartFragment-->æœ¬ç¯‡å†…å®¹ç®€è¦ä»‹ç»<strong>BASE64</strong>ã€<strong>MD5</strong>ã€<strong>SHA</strong>ã€<strong>HMAC</strong>å‡ ç§åŠ å¯†ç®—æ³•ã€‚ <br>
+&nbsp;&nbsp;&nbsp; <strong>BASE64</strong>ç¼–ç ç®—æ³•ä¸ç®—æ˜¯çœŸæ­£çš„åŠ å¯†ç®—æ³•ã€‚ <br>
+&nbsp;&nbsp;&nbsp; <strong>MD5</strong>ã€<strong>SHA</strong>ã€<strong>HMAC</strong>è¿™ä¸‰ç§åŠ å¯†ç®—æ³•ï¼Œå¯è°“æ˜¯éå¯é€†åŠ å¯†ï¼Œå°±æ˜¯ä¸å¯è§£å¯†çš„åŠ å¯†æ–¹æ³•ï¼Œæˆ‘ä»¬ç§°ä¹‹ä¸ºå•å‘åŠ å¯†ç®—æ³•ã€‚æˆ‘ä»¬é€šå¸¸åªæŠŠä»–ä»¬ä½œä¸ºåŠ å¯†çš„åŸºç¡€ã€‚å•çº¯çš„ä»¥ä¸Šä¸‰ç§çš„åŠ å¯†å¹¶ä¸å¯é ã€‚ <br>
 <br>
 <strong>BASE64</strong> <br>
-°´ÕÕRFC2045µÄ¶¨Òå£¬Base64±»¶¨ÒåÎª£ºBase64ÄÚÈİ´«ËÍ±àÂë±»Éè¼ÆÓÃÀ´°ÑÈÎÒâĞòÁĞµÄ8Î»×Ö½ÚÃèÊöÎªÒ»ÖÖ²»Ò×±»ÈËÖ±½ÓÊ¶±ğµÄĞÎÊ½¡£
-£¨The Base64 Content-Transfer-Encoding is designed to represent arbitrary
- sequences of octets in a form that need not be humanly readable.£© <br>
-³£¼ûÓÚÓÊ¼ş¡¢http¼ÓÃÜ£¬½ØÈ¡httpĞÅÏ¢£¬Äã¾Í»á·¢ÏÖµÇÂ¼²Ù×÷µÄÓÃ»§Ãû¡¢ÃÜÂë×Ö¶ÎÍ¨¹ıBASE64¼ÓÃÜµÄ¡£ <br>
+
+æŒ‰ç…§RFC2045çš„å®šä¹‰ï¼ŒBase64è¢«å®šä¹‰ä¸ºï¼šBase64å†…å®¹ä¼ é€ç¼–ç è¢«è®¾è®¡ç”¨æ¥æŠŠä»»æ„åºåˆ—çš„8ä½å­—èŠ‚æè¿°ä¸ºä¸€ç§ä¸æ˜“è¢«äººç›´æ¥è¯†åˆ«çš„å½¢å¼ã€‚ï¼ˆThe Base64 Content-Transfer-Encoding is designed to represent arbitrary
+ sequences of octets in a form that need not be humanly readable.ï¼‰ <br>
+å¸¸è§äºé‚®ä»¶ã€httpåŠ å¯†ï¼Œæˆªå–httpä¿¡æ¯ï¼Œä½ å°±ä¼šå‘ç°ç™»å½•æ“ä½œçš„ç”¨æˆ·åã€å¯†ç å­—æ®µé€šè¿‡BASE64åŠ å¯†çš„ã€‚ <br>
 <br>
-<img src="ab497a43-1c90-3053-b196-1db7af6cd792.jpg"> <br>
+<IMG src="ab497a43-1c90-3053-b196-1db7af6cd792.jpg"> <br>
 <br>
-Í¨¹ıjava´úÂëÊµÏÖÈçÏÂ£º <br>
-<div id="" class="dp-highlighter">
+é€šè¿‡javaä»£ç å®ç°å¦‚ä¸‹ï¼š <br>
+<div class="dp-highlighter" >
   <div class="bar">
-    <div class="tools">Java´úÂë
-      <div role="button" tabindex="0" srcattribute="/javascripts/syntaxhighlighter/clipboard_new.swf" title="/javascripts/syntaxhighlighter/clipboard_new.swf" style="background: url(&quot;chrome://flashblock/content/flash.png&quot;) no-repeat scroll center center transparent ! important; min-width: 32px ! important; min-height: 32px ! important; width: 32px; height: 32px; border: 1px solid rgb(223, 223, 223); cursor: pointer; overflow: hidden; display: inline-block; visibility: visible ! important; -moz-box-sizing: border-box;" bgactive="url(chrome://flashblock/content/flashplay.png) no-repeat center" bginactive="url(chrome://flashblock/content/flash.png) no-repeat center"></div>
-    &nbsp;<a href="javascript:void()" title="ÊÕ²ØÕâ¶Î´úÂë" onClick="code_favorites_do_favorite(this);return false;"><img class="star" src="icon_star.png" alt="ÊÕ²Ø´úÂë"></a></div>
+    <div class="tools">Javaä»£ç 
+      <div role=button tabindex="0" title="/javascripts/syntaxhighlighter/clipboard_new.swf" style="OVERFLOW: hidden; CURSOR: pointer; BORDER-TOP: rgb(223,223,223) 1px solid; HEIGHT: 32px; BORDER-RIGHT: rgb(223,223,223) 1px solid; WIDTH: 32px; BACKGROUND: url(chrome://flashblock/content/flash.png) no-repeat center center; MIN-WIDTH: 32px !important; BORDER-BOTTOM: rgb(223,223,223) 1px solid; MIN-HEIGHT: 32px !important; BORDER-LEFT: rgb(223,223,223) 1px solid; DISPLAY: inline-block; VISIBILITY: visible !important; -moz-box-sizing: border-box" bginactive ="url(chrome://flashblock/content/flash.png) no-repeat center" bgactive="url(chrome://flashblock/content/flashplay.png) no-repeat center" srcattribute="/javascripts/syntaxhighlighter/clipboard_new.swf"></div>
+    &nbsp;<A onclick="code_favorites_do_favorite(this);return false;" title=æ”¶è—è¿™æ®µä»£ç  href="javascript:void()" ><IMG class=star alt=æ”¶è—ä»£ç  src="icon_star.png"></a></div>
   </div>
-  <ol class="dp-j" start="1">
-    <li><span><span class="comment">/**</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;BASE64½âÃÜ</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;@param&nbsp;key</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;@return</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;@throws&nbsp;Exception</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li>
-    <li><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">byte</span><span>[]&nbsp;decryptBASE64(String&nbsp;key)&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;(</span><span class="keyword">new</span><span>&nbsp;BASE64Decoder()).decodeBuffer(key);&nbsp;&nbsp;</span></span></li>
-    <li><span>}&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span><span class="comment">/**</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;BASE64¼ÓÃÜ</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;@param&nbsp;key</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;@return</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;@throws&nbsp;Exception</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li>
-    <li><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;String&nbsp;encryptBASE64(</span><span class="keyword">byte</span><span>[]&nbsp;key)&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;(</span><span class="keyword">new</span><span>&nbsp;BASE64Encoder()).encodeBuffer(key);&nbsp;&nbsp;</span></span></li>
+  <ol class="dp-j" >
+    <li><span><span class="comment">/**</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;BASE64è§£å¯†</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;@param&nbsp;key</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;@return</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;@throws&nbsp;Exception</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*/</span><span>&nbsp;&nbsp;</span></span>
+    <li><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">byte</span><span>[]&nbsp;decryptBASE64(String&nbsp;key)&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;(</span><span class="keyword">new</span><span>&nbsp;BASE64Decoder()).decodeBuffer(key);&nbsp;&nbsp;</span></span>
+    <li><span>}&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span><span class="comment">/**</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;BASE64åŠ å¯†</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;@param&nbsp;key</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;@return</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;@throws&nbsp;Exception</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*/</span><span>&nbsp;&nbsp;</span></span>
+    <li><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;String&nbsp;encryptBASE64(</span><span class="keyword">byte</span><span>[]&nbsp;key)&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;(</span><span class="keyword">new</span><span>&nbsp;BASE64Encoder()).encodeBuffer(key);&nbsp;&nbsp;</span></span>
     <li><span>}&nbsp;&nbsp;</span></li>
   </ol>
 </div>
 <br>
-Ö÷Òª¾ÍÊÇBASE64Encoder¡¢BASE64DecoderÁ½¸öÀà£¬ÎÒÃÇÖ»ĞèÒªÖªµÀÊ¹ÓÃ¶ÔÓ¦µÄ·½·¨¼´¿É¡£Áí£¬BASE¼ÓÃÜºó²úÉúµÄ×Ö½ÚÎ»ÊıÊÇ8µÄ±¶Êı£¬Èç¹û²»¹»Î»ÊıÒÔ<strong>=</strong>·ûºÅÌî³ä¡£ <br>
+ä¸»è¦å°±æ˜¯BASE64Encoderã€BASE64Decoderä¸¤ä¸ªç±»ï¼Œæˆ‘ä»¬åªéœ€è¦çŸ¥é“ä½¿ç”¨å¯¹åº”çš„æ–¹æ³•å³å¯ã€‚å¦ï¼ŒBASEåŠ å¯†åäº§ç”Ÿçš„å­—èŠ‚ä½æ•°æ˜¯8çš„å€æ•°ï¼Œå¦‚æœä¸å¤Ÿä½æ•°ä»¥<strong>=</strong>ç¬¦å·å¡«å……ã€‚ <br>
 <br>
 <strong>MD5</strong> <br>
-MD5 -- message-digest algorithm 5 
-£¨ĞÅÏ¢-ÕªÒªËã·¨£©ËõĞ´£¬¹ã·ºÓÃÓÚ¼ÓÃÜºÍ½âÃÜ¼¼Êõ£¬³£ÓÃÓÚÎÄ¼şĞ£Ñé¡£Ğ£Ñé£¿²»¹ÜÎÄ¼ş¶à´ó£¬¾­¹ıMD5ºó¶¼ÄÜÉú³ÉÎ¨Ò»µÄMD5Öµ¡£ºÃ±ÈÏÖÔÚµÄISOĞ£Ñé£¬¶¼
-ÊÇMD5Ğ£Ñé¡£ÔõÃ´ÓÃ£¿µ±È»ÊÇ°ÑISO¾­¹ıMD5ºó²úÉúMD5µÄÖµ¡£Ò»°ãÏÂÔØlinux-ISOµÄÅóÓÑ¶¼¼û¹ıÏÂÔØÁ´½ÓÅÔ±ß·Å×ÅMD5µÄ´®¡£¾ÍÊÇÓÃÀ´ÑéÖ¤ÎÄ
-¼şÊÇ·ñÒ»ÖÂµÄ¡£ <br>
+  MD5 -- message-digest 
+algorithm
+5
+ï¼ˆä¿¡æ¯-æ‘˜è¦ç®—æ³•ï¼‰ç¼©å†™ï¼Œå¹¿æ³›ç”¨äºåŠ å¯†å’Œè§£å¯†æŠ€æœ¯ï¼Œå¸¸ç”¨äºæ–‡ä»¶æ ¡éªŒã€‚æ ¡éªŒï¼Ÿä¸ç®¡æ–‡ä»¶å¤šå¤§ï¼Œç»è¿‡MD5åéƒ½èƒ½ç”Ÿæˆå”¯ä¸€çš„MD5å€¼ã€‚å¥½æ¯”ç°åœ¨çš„ISOæ ¡éªŒï¼Œéƒ½æ˜¯MD5æ ¡éªŒã€‚æ€ä¹ˆç”¨ï¼Ÿå½“ç„¶æ˜¯æŠŠISOç»è¿‡MD5åäº§ç”ŸMD5çš„å€¼ã€‚ä¸€èˆ¬ä¸‹è½½linux-ISOçš„æœ‹å‹éƒ½è§è¿‡ä¸‹è½½é“¾æ¥æ—è¾¹æ”¾ç€MD5çš„ä¸²ã€‚å°±æ˜¯ç”¨æ¥éªŒè¯æ–‡ä»¶æ˜¯å¦ä¸€è‡´çš„ã€‚ <br>
 <br>
-<img src="74b43fdc-8b41-3618-ae71-98fd6bd7ea33.jpg"> <br>
+<IMG src="74b43fdc-8b41-3618-ae71-98fd6bd7ea33.jpg"> <br>
 <br>
-Í¨¹ıjava´úÂëÊµÏÖÈçÏÂ£º <br>
-<div id="" class="dp-highlighter">
+é€šè¿‡javaä»£ç å®ç°å¦‚ä¸‹ï¼š <br>
+<div class="dp-highlighter" >
   <div class="bar">
-    <div class="tools">Java´úÂë
-      <div role="button" tabindex="0" srcattribute="about:blank" title="about:blank" style="background: url(&quot;chrome://flashblock/content/flash.png&quot;) no-repeat scroll center center transparent ! important; min-width: 32px ! important; min-height: 32px ! important; width: 32px; height: 32px; border: 1px solid rgb(223, 223, 223); cursor: pointer; overflow: hidden; display: inline-block; visibility: visible ! important; -moz-box-sizing: border-box;" bgactive="url(chrome://flashblock/content/flashplay.png) no-repeat center" bginactive="url(chrome://flashblock/content/flash.png) no-repeat center"></div>
-    &nbsp;<a href="javascript:void()" title="ÊÕ²ØÕâ¶Î´úÂë" onClick="code_favorites_do_favorite(this);return false;"><img class="star" src="icon_star.png" alt="ÊÕ²Ø´úÂë"></a></div>
+    <div class="tools">Javaä»£ç 
+      <div role=button tabindex="0" title="about:blank" style="OVERFLOW: hidden; CURSOR: pointer; BORDER-TOP: rgb(223,223,223) 1px solid; HEIGHT: 32px; BORDER-RIGHT: rgb(223,223,223) 1px solid; WIDTH: 32px; BACKGROUND: url(chrome://flashblock/content/flash.png) no-repeat center center; MIN-WIDTH: 32px !important; BORDER-BOTTOM: rgb(223,223,223) 1px solid; MIN-HEIGHT: 32px !important; BORDER-LEFT: rgb(223,223,223) 1px solid; DISPLAY: inline-block; VISIBILITY: visible !important; -moz-box-sizing: border-box" bginactive ="url(chrome://flashblock/content/flash.png) no-repeat center" bgactive="url(chrome://flashblock/content/flashplay.png) no-repeat center" srcattribute="about:blank"></div>
+    &nbsp;<A onclick="code_favorites_do_favorite(this);return false;" title=æ”¶è—è¿™æ®µä»£ç  href="javascript:void()" ><IMG class=star alt=æ”¶è—ä»£ç  src="icon_star.png"></a></div>
   </div>
-  <ol class="dp-j" start="1">
-    <li><span><span class="comment">/**</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;MD5¼ÓÃÜ</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;@param&nbsp;data</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;@return</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;@throws&nbsp;Exception</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li>
-    <li><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">byte</span><span>[]&nbsp;encryptMD5(</span><span class="keyword">byte</span><span>[]&nbsp;data)&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;MessageDigest&nbsp;md5&nbsp;=&nbsp;MessageDigest.getInstance(KEY_MD5);&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;md5.update(data);&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;md5.digest();&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
+  <ol class="dp-j" >
+    <li><span><span class="comment">/**</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;MD5åŠ å¯†</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;@param&nbsp;data</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;@return</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;@throws&nbsp;Exception</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*/</span><span>&nbsp;&nbsp;</span></span>
+    <li><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">byte</span><span>[]&nbsp;encryptMD5(</span><span class="keyword">byte</span><span>[]&nbsp;data)&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;MessageDigest&nbsp;md5&nbsp;=&nbsp;MessageDigest.getInstance(KEY_MD5);&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;md5.update(data);&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;md5.digest();&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
     <li><span>}&nbsp;&nbsp;</span></li>
   </ol>
 </div>
 <br>
 <br>
-Í¨³£ÎÒÃÇ²»Ö±½ÓÊ¹ÓÃÉÏÊöMD5¼ÓÃÜ¡£Í¨³£½«MD5²úÉúµÄ×Ö½ÚÊı×é½»¸øBASE64ÔÙ¼ÓÃÜÒ»°Ñ£¬µÃµ½ÏàÓ¦µÄ×Ö·û´®¡£ <br>
+é€šå¸¸æˆ‘ä»¬ä¸ç›´æ¥ä½¿ç”¨ä¸Šè¿°MD5åŠ å¯†ã€‚é€šå¸¸å°†MD5äº§ç”Ÿçš„å­—èŠ‚æ•°ç»„äº¤ç»™BASE64å†åŠ å¯†ä¸€æŠŠï¼Œå¾—åˆ°ç›¸åº”çš„å­—ç¬¦ä¸²ã€‚ <br>
 <br>
 <strong>SHA</strong> <br>
-SHA(Secure Hash Algorithm£¬°²È«É¢ÁĞËã·¨£©£¬Êı×ÖÇ©ÃûµÈÃÜÂëÑ§Ó¦ÓÃÖĞÖØÒªµÄ¹¤¾ß£¬±»¹ã·ºµØÓ¦ÓÃÓÚµç×ÓÉÌÎñµÈĞÅÏ¢°²È«ÁìÓò¡£ËäÈ»£¬SHAÓëMD5Í¨¹ıÅö×²·¨¶¼±»ÆÆ½âÁË£¬<img src="icon_sad.gif"> µ«ÊÇSHAÈÔÈ»ÊÇ¹«ÈÏµÄ°²È«¼ÓÃÜËã·¨£¬½ÏÖ®MD5¸üÎª°²È«¡£<img src="icon_biggrin.gif"> <br>
+SHA(Secure Hash Algorithmï¼Œå®‰å…¨æ•£åˆ—ç®—æ³•ï¼‰ï¼Œæ•°å­—ç­¾åç­‰å¯†ç å­¦åº”ç”¨ä¸­é‡è¦çš„å·¥å…·ï¼Œè¢«å¹¿æ³›åœ°åº”ç”¨äºç”µå­å•†åŠ¡ç­‰ä¿¡æ¯å®‰å…¨é¢†åŸŸã€‚è™½ç„¶ï¼ŒSHAä¸MD5é€šè¿‡ç¢°æ’æ³•éƒ½è¢«ç ´è§£äº†ï¼Œ<IMG src="icon_sad.gif"> ä½†æ˜¯SHAä»ç„¶æ˜¯å…¬è®¤çš„å®‰å…¨åŠ å¯†ç®—æ³•ï¼Œè¾ƒä¹‹MD5æ›´ä¸ºå®‰å…¨ã€‚<IMG src="icon_biggrin.gif"> <br>
 <br>
-<img src="74b43fdc-8b41-3618-ae71-98fd6bd7ea33.jpg"> <br>
+<IMG src="74b43fdc-8b41-3618-ae71-98fd6bd7ea33.jpg"> <br>
 <br>
-Í¨¹ıjava´úÂëÊµÏÖÈçÏÂ£º <br>
-<div id="" class="dp-highlighter">
+é€šè¿‡javaä»£ç å®ç°å¦‚ä¸‹ï¼š <br>
+<div class="dp-highlighter" >
   <div class="bar">
-    <div class="tools">Java´úÂë
-      <div role="button" tabindex="0" srcattribute="about:blank" title="about:blank" style="background: url(&quot;chrome://flashblock/content/flash.png&quot;) no-repeat scroll center center transparent ! important; min-width: 32px ! important; min-height: 32px ! important; width: 32px; height: 32px; border: 1px solid rgb(223, 223, 223); cursor: pointer; overflow: hidden; display: inline-block; visibility: visible ! important; -moz-box-sizing: border-box;" bgactive="url(chrome://flashblock/content/flashplay.png) no-repeat center" bginactive="url(chrome://flashblock/content/flash.png) no-repeat center"></div>
-    &nbsp;<a href="javascript:void()" title="ÊÕ²ØÕâ¶Î´úÂë" onClick="code_favorites_do_favorite(this);return false;"><img class="star" src="icon_star.png" alt="ÊÕ²Ø´úÂë"></a></div>
+    <div class="tools">Javaä»£ç 
+      <div role=button tabindex="0" title="about:blank" style="OVERFLOW: hidden; CURSOR: pointer; BORDER-TOP: rgb(223,223,223) 1px solid; HEIGHT: 32px; BORDER-RIGHT: rgb(223,223,223) 1px solid; WIDTH: 32px; BACKGROUND: url(chrome://flashblock/content/flash.png) no-repeat center center; MIN-WIDTH: 32px !important; BORDER-BOTTOM: rgb(223,223,223) 1px solid; MIN-HEIGHT: 32px !important; BORDER-LEFT: rgb(223,223,223) 1px solid; DISPLAY: inline-block; VISIBILITY: visible !important; -moz-box-sizing: border-box" bginactive ="url(chrome://flashblock/content/flash.png) no-repeat center" bgactive="url(chrome://flashblock/content/flashplay.png) no-repeat center" srcattribute="about:blank"></div>
+    &nbsp;<A onclick="code_favorites_do_favorite(this);return false;" title=æ”¶è—è¿™æ®µä»£ç  href="javascript:void()" ><IMG class=star alt=æ”¶è—ä»£ç  src="icon_star.png"></a></div>
   </div>
-  <ol class="dp-j" start="1">
-    <li><span><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment">/**</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;SHA¼ÓÃÜ</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;data</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@throws&nbsp;Exception</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">byte</span><span>[]&nbsp;encryptSHA(</span><span class="keyword">byte</span><span>[]&nbsp;data)&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageDigest&nbsp;sha&nbsp;=&nbsp;MessageDigest.getInstance(KEY_SHA);&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sha.update(data);&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;sha.digest();&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li>
+  <ol class="dp-j" >
+    <li><span><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment">/**</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;SHAåŠ å¯†</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;data</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@throws&nbsp;Exception</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span><span>&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">byte</span><span>[]&nbsp;encryptSHA(</span><span class="keyword">byte</span><span>[]&nbsp;data)&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageDigest&nbsp;sha&nbsp;=&nbsp;MessageDigest.getInstance(KEY_SHA);&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sha.update(data);&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;sha.digest();&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span>
     <li><span>}&nbsp;&nbsp;</span></li>
   </ol>
 </div>
 <br>
 <br>
 <strong>HMAC</strong> <br>
-HMAC(Hash Message Authentication 
-Code£¬É¢ÁĞÏûÏ¢¼ø±ğÂë£¬»ùÓÚÃÜÔ¿µÄHashËã·¨µÄÈÏÖ¤Ğ­Òé¡£ÏûÏ¢¼ø±ğÂëÊµÏÖ¼ø±ğµÄÔ­ÀíÊÇ£¬ÓÃ¹«¿ªº¯ÊıºÍÃÜÔ¿²úÉúÒ»¸ö¹Ì¶¨³¤¶ÈµÄÖµ×÷ÎªÈÏÖ¤±êÊ¶£¬ÓÃÕâ¸ö
-±êÊ¶¼ø±ğÏûÏ¢µÄÍêÕûĞÔ¡£Ê¹ÓÃÒ»¸öÃÜÔ¿Éú³ÉÒ»¸ö¹Ì¶¨´óĞ¡µÄĞ¡Êı¾İ¿é£¬¼´MAC£¬²¢½«Æä¼ÓÈëµ½ÏûÏ¢ÖĞ£¬È»ºó´«Êä¡£½ÓÊÕ·½ÀûÓÃÓë·¢ËÍ·½¹²ÏíµÄÃÜÔ¿½øĞĞ¼ø±ğÈÏÖ¤
-µÈ¡£ <br>
+  HMAC(Hash 
+Message
+Authentication
+Codeï¼Œæ•£åˆ—æ¶ˆæ¯é‰´åˆ«ç ï¼ŒåŸºäºå¯†é’¥çš„Hashç®—æ³•çš„è®¤è¯åè®®ã€‚æ¶ˆæ¯é‰´åˆ«ç å®ç°é‰´åˆ«çš„åŸç†æ˜¯ï¼Œç”¨å…¬å¼€å‡½æ•°å’Œå¯†é’¥äº§ç”Ÿä¸€ä¸ªå›ºå®šé•¿åº¦çš„å€¼ä½œä¸ºè®¤è¯æ ‡è¯†ï¼Œç”¨è¿™ä¸ªæ ‡è¯†é‰´åˆ«æ¶ˆæ¯çš„å®Œæ•´æ€§ã€‚ä½¿ç”¨ä¸€ä¸ªå¯†é’¥ç”Ÿæˆä¸€ä¸ªå›ºå®šå¤§å°çš„å°æ•°æ®å—ï¼Œå³MACï¼Œå¹¶å°†å…¶åŠ å…¥åˆ°æ¶ˆæ¯ä¸­ï¼Œç„¶åä¼ è¾“ã€‚æ¥æ”¶æ–¹åˆ©ç”¨ä¸å‘é€æ–¹å…±äº«çš„å¯†é’¥è¿›è¡Œé‰´åˆ«è®¤è¯ç­‰ã€‚ <br>
 <br>
-<img src="facd8b84-2e47-3125-872c-2e446898a1d0.jpg"> <br>
+<IMG src="facd8b84-2e47-3125-872c-2e446898a1d0.jpg"> <br>
 <br>
-Í¨¹ıjava´úÂëÊµÏÖÈçÏÂ£º <br>
-<div id="" class="dp-highlighter">
+é€šè¿‡javaä»£ç å®ç°å¦‚ä¸‹ï¼š <br>
+<div class="dp-highlighter" >
   <div class="bar">
-    <div class="tools">Java´úÂë
-      <div role="button" tabindex="0" srcattribute="about:blank" title="about:blank" style="background: url(&quot;chrome://flashblock/content/flash.png&quot;) no-repeat scroll center center transparent ! important; min-width: 32px ! important; min-height: 32px ! important; width: 32px; height: 32px; border: 1px solid rgb(223, 223, 223); cursor: pointer; overflow: hidden; display: inline-block; visibility: visible ! important; -moz-box-sizing: border-box;" bgactive="url(chrome://flashblock/content/flashplay.png) no-repeat center" bginactive="url(chrome://flashblock/content/flash.png) no-repeat center"></div>
-    &nbsp;<a href="javascript:void()" title="ÊÕ²ØÕâ¶Î´úÂë" onClick="code_favorites_do_favorite(this);return false;"><img class="star" src="icon_star.png" alt="ÊÕ²Ø´úÂë"></a></div>
+    <div class="tools">Javaä»£ç 
+      <div role=button tabindex="0" title="about:blank" style="OVERFLOW: hidden; CURSOR: pointer; BORDER-TOP: rgb(223,223,223) 1px solid; HEIGHT: 32px; BORDER-RIGHT: rgb(223,223,223) 1px solid; WIDTH: 32px; BACKGROUND: url(chrome://flashblock/content/flash.png) no-repeat center center; MIN-WIDTH: 32px !important; BORDER-BOTTOM: rgb(223,223,223) 1px solid; MIN-HEIGHT: 32px !important; BORDER-LEFT: rgb(223,223,223) 1px solid; DISPLAY: inline-block; VISIBILITY: visible !important; -moz-box-sizing: border-box" bginactive ="url(chrome://flashblock/content/flash.png) no-repeat center" bgactive="url(chrome://flashblock/content/flashplay.png) no-repeat center" srcattribute="about:blank"></div>
+    &nbsp;<A onclick="code_favorites_do_favorite(this);return false;" title=æ”¶è—è¿™æ®µä»£ç  href="javascript:void()" ><IMG class=star alt=æ”¶è—ä»£ç  src="icon_star.png"></a></div>
   </div>
-  <ol class="dp-j" start="1">
-    <li><span><span class="comment">/**</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;³õÊ¼»¯HMACÃÜÔ¿</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;@return</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;@throws&nbsp;Exception</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li>
-    <li><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;String&nbsp;initMacKey()&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;KeyGenerator&nbsp;keyGenerator&nbsp;=&nbsp;KeyGenerator.getInstance(KEY_MAC);&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;SecretKey&nbsp;secretKey&nbsp;=&nbsp;keyGenerator.generateKey();&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;encryptBASE64(secretKey.getEncoded());&nbsp;&nbsp;</span></span></li>
-    <li><span>}&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span><span class="comment">/**</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;HMAC¼ÓÃÜ</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;@param&nbsp;data</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;@param&nbsp;key</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;@return</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;@throws&nbsp;Exception</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li>
-    <li><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">byte</span><span>[]&nbsp;encryptHMAC(</span><span class="keyword">byte</span><span>[]&nbsp;data,&nbsp;String&nbsp;key)&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;SecretKey&nbsp;secretKey&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;SecretKeySpec(decryptBASE64(key),&nbsp;KEY_MAC);&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;Mac&nbsp;mac&nbsp;=&nbsp;Mac.getInstance(secretKey.getAlgorithm());&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;mac.init(secretKey);&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;mac.doFinal(data);&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>}&nbsp;&nbsp;</span></li>
-  </ol>
-</div>
-<br>
-<br>
-¸ø³öÒ»¸öÍêÕûÀà£¬ÈçÏÂ£º <br>
-<div id="" class="dp-highlighter">
-  <div class="bar">
-    <div class="tools">Java´úÂë
-      <div role="button" tabindex="0" srcattribute="about:blank" title="about:blank" style="background: url(&quot;chrome://flashblock/content/flash.png&quot;) no-repeat scroll center center transparent ! important; min-width: 32px ! important; min-height: 32px ! important; width: 32px; height: 32px; border: 1px solid rgb(223, 223, 223); cursor: pointer; overflow: hidden; display: inline-block; visibility: visible ! important; -moz-box-sizing: border-box;" bgactive="url(chrome://flashblock/content/flashplay.png) no-repeat center" bginactive="url(chrome://flashblock/content/flash.png) no-repeat center"></div>
-    &nbsp;<a href="javascript:void()" title="ÊÕ²ØÕâ¶Î´úÂë" onClick="code_favorites_do_favorite(this);return false;"><img class="star" src="icon_star.png" alt="ÊÕ²Ø´úÂë"></a></div>
-  </div>
-  <ol class="dp-j" start="1">
-    <li><span><span class="keyword">import</span><span>&nbsp;java.security.MessageDigest;&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span><span class="keyword">import</span><span>&nbsp;javax.crypto.KeyGenerator;&nbsp;&nbsp;</span></span></li>
-    <li><span><span class="keyword">import</span><span>&nbsp;javax.crypto.Mac;&nbsp;&nbsp;</span></span></li>
-    <li><span><span class="keyword">import</span><span>&nbsp;javax.crypto.SecretKey;&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span><span class="keyword">import</span><span>&nbsp;sun.misc.BASE64Decoder;&nbsp;&nbsp;</span></span></li>
-    <li><span><span class="keyword">import</span><span>&nbsp;sun.misc.BASE64Encoder;&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span><span class="comment">/**</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;»ù´¡¼ÓÃÜ×é¼ş</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;@author&nbsp;Áº¶°</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;@version&nbsp;1.0</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;@since&nbsp;1.0</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li>
-    <li><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">abstract</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;Coder&nbsp;{&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">final</span><span>&nbsp;String&nbsp;KEY_SHA&nbsp;=&nbsp;</span><span class="string">"SHA"</span><span>;&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">final</span><span>&nbsp;String&nbsp;KEY_MD5&nbsp;=&nbsp;</span><span class="string">"MD5"</span><span>;&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/**</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;MACËã·¨¿ÉÑ¡ÒÔÏÂ¶àÖÖËã·¨</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&lt;pre&gt;</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;HmacMD5&nbsp;</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;HmacSHA1&nbsp;</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;HmacSHA256&nbsp;</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;HmacSHA384&nbsp;</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;HmacSHA512</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&lt;/pre&gt;</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">final</span><span>&nbsp;String&nbsp;KEY_MAC&nbsp;=&nbsp;</span><span class="string">"HmacMD5"</span><span>;&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/**</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;BASE64½âÃÜ</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;key</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@throws&nbsp;Exception</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">byte</span><span>[]&nbsp;decryptBASE64(String&nbsp;key)&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;(</span><span class="keyword">new</span><span>&nbsp;BASE64Decoder()).decodeBuffer(key);&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/**</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;BASE64¼ÓÃÜ</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;key</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@throws&nbsp;Exception</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;String&nbsp;encryptBASE64(</span><span class="keyword">byte</span><span>[]&nbsp;key)&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;(</span><span class="keyword">new</span><span>&nbsp;BASE64Encoder()).encodeBuffer(key);&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/**</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;MD5¼ÓÃÜ</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;data</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@throws&nbsp;Exception</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">byte</span><span>[]&nbsp;encryptMD5(</span><span class="keyword">byte</span><span>[]&nbsp;data)&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageDigest&nbsp;md5&nbsp;=&nbsp;MessageDigest.getInstance(KEY_MD5);&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;md5.update(data);&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;md5.digest();&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/**</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;SHA¼ÓÃÜ</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;data</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@throws&nbsp;Exception</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">byte</span><span>[]&nbsp;encryptSHA(</span><span class="keyword">byte</span><span>[]&nbsp;data)&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageDigest&nbsp;sha&nbsp;=&nbsp;MessageDigest.getInstance(KEY_SHA);&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sha.update(data);&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;sha.digest();&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/**</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;³õÊ¼»¯HMACÃÜÔ¿</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@throws&nbsp;Exception</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;String&nbsp;initMacKey()&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KeyGenerator&nbsp;keyGenerator&nbsp;=&nbsp;KeyGenerator.getInstance(KEY_MAC);&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SecretKey&nbsp;secretKey&nbsp;=&nbsp;keyGenerator.generateKey();&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;encryptBASE64(secretKey.getEncoded());&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/**</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;HMAC¼ÓÃÜ</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;data</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;key</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@throws&nbsp;Exception</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">byte</span><span>[]&nbsp;encryptHMAC(</span><span class="keyword">byte</span><span>[]&nbsp;data,&nbsp;String&nbsp;key)&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SecretKey&nbsp;secretKey&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;SecretKeySpec(decryptBASE64(key),&nbsp;KEY_MAC);&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mac&nbsp;mac&nbsp;=&nbsp;Mac.getInstance(secretKey.getAlgorithm());&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mac.init(secretKey);&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;mac.doFinal(data);&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li>
+  <ol class="dp-j" >
+    <li><span><span class="comment">/**</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;åˆå§‹åŒ–HMACå¯†é’¥</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;@return</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;@throws&nbsp;Exception</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*/</span><span>&nbsp;&nbsp;</span></span>
+    <li><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;String&nbsp;initMacKey()&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;KeyGenerator&nbsp;keyGenerator&nbsp;=&nbsp;KeyGenerator.getInstance(KEY_MAC);&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;SecretKey&nbsp;secretKey&nbsp;=&nbsp;keyGenerator.generateKey();&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;encryptBASE64(secretKey.getEncoded());&nbsp;&nbsp;</span></span>
+    <li><span>}&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span><span class="comment">/**</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;HMACåŠ å¯†</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;@param&nbsp;data</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;@param&nbsp;key</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;@return</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;@throws&nbsp;Exception</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*/</span><span>&nbsp;&nbsp;</span></span>
+    <li><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">byte</span><span>[]&nbsp;encryptHMAC(</span><span class="keyword">byte</span><span>[]&nbsp;data,&nbsp;String&nbsp;key)&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;SecretKey&nbsp;secretKey&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;SecretKeySpec(decryptBASE64(key),&nbsp;KEY_MAC);&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;Mac&nbsp;mac&nbsp;=&nbsp;Mac.getInstance(secretKey.getAlgorithm());&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;mac.init(secretKey);&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;mac.doFinal(data);&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
     <li><span>}&nbsp;&nbsp;</span></li>
   </ol>
 </div>
 <br>
 <br>
-ÔÙ¸ø³öÒ»¸ö²âÊÔÀà£º <br>
-<div id="" class="dp-highlighter">
+ç»™å‡ºä¸€ä¸ªå®Œæ•´ç±»ï¼Œå¦‚ä¸‹ï¼š <br>
+<div class="dp-highlighter" >
   <div class="bar">
-    <div class="tools">Java´úÂë
-      <div role="button" tabindex="0" srcattribute="about:blank" title="about:blank" style="background: url(&quot;chrome://flashblock/content/flash.png&quot;) no-repeat scroll center center transparent ! important; min-width: 32px ! important; min-height: 32px ! important; width: 32px; height: 32px; border: 1px solid rgb(223, 223, 223); cursor: pointer; overflow: hidden; display: inline-block; visibility: visible ! important; -moz-box-sizing: border-box;" bgactive="url(chrome://flashblock/content/flashplay.png) no-repeat center" bginactive="url(chrome://flashblock/content/flash.png) no-repeat center"></div>
-    &nbsp;<a href="javascript:void()" title="ÊÕ²ØÕâ¶Î´úÂë" onClick="code_favorites_do_favorite(this);return false;"><img class="star" src="icon_star.png" alt="ÊÕ²Ø´úÂë"></a></div>
+    <div class="tools">Javaä»£ç 
+      <div role=button tabindex="0" title="about:blank" style="OVERFLOW: hidden; CURSOR: pointer; BORDER-TOP: rgb(223,223,223) 1px solid; HEIGHT: 32px; BORDER-RIGHT: rgb(223,223,223) 1px solid; WIDTH: 32px; BACKGROUND: url(chrome://flashblock/content/flash.png) no-repeat center center; MIN-WIDTH: 32px !important; BORDER-BOTTOM: rgb(223,223,223) 1px solid; MIN-HEIGHT: 32px !important; BORDER-LEFT: rgb(223,223,223) 1px solid; DISPLAY: inline-block; VISIBILITY: visible !important; -moz-box-sizing: border-box" bginactive ="url(chrome://flashblock/content/flash.png) no-repeat center" bgactive="url(chrome://flashblock/content/flashplay.png) no-repeat center" srcattribute="about:blank"></div>
+    &nbsp;<A onclick="code_favorites_do_favorite(this);return false;" title=æ”¶è—è¿™æ®µä»£ç  href="javascript:void()" ><IMG class=star alt=æ”¶è—ä»£ç  src="icon_star.png"></a></div>
   </div>
-  <ol class="dp-j" start="1">
-    <li><span><span class="keyword">import</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;org.junit.Assert.*;&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span><span class="keyword">import</span><span>&nbsp;org.junit.Test;&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span><span class="comment">/**</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;@author&nbsp;Áº¶°</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;@version&nbsp;1.0</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*&nbsp;@since&nbsp;1.0</span>&nbsp;</span></li>
-    <li><span><span class="comment">&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li>
-    <li><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;CoderTest&nbsp;{&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="annotation">@Test</span><span>&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">void</span><span>&nbsp;test()&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;inputStr&nbsp;=&nbsp;<span class="string">"¼òµ¥¼ÓÃÜ"</span><span>;&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.err.println(<span class="string">"Ô­ÎÄ:\n"</span><span>&nbsp;+&nbsp;inputStr);&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">byte</span><span>[]&nbsp;inputData&nbsp;=&nbsp;inputStr.getBytes();&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;code&nbsp;=&nbsp;Coder.encryptBASE64(inputData);&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.err.println(<span class="string">"BASE64¼ÓÃÜºó:\n"</span><span>&nbsp;+&nbsp;code);&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">byte</span><span>[]&nbsp;output&nbsp;=&nbsp;Coder.decryptBASE64(code);&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;outputStr&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;String(output);&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.err.println(<span class="string">"BASE64½âÃÜºó:\n"</span><span>&nbsp;+&nbsp;outputStr);&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;ÑéÖ¤BASE64¼ÓÃÜ½âÃÜÒ»ÖÂĞÔ</span><span>&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertEquals(inputStr,&nbsp;outputStr);&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;ÑéÖ¤MD5¶ÔÓÚÍ¬Ò»ÄÚÈİ¼ÓÃÜÊÇ·ñÒ»ÖÂ</span><span>&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertArrayEquals(Coder.encryptMD5(inputData),&nbsp;Coder&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.encryptMD5(inputData));&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;ÑéÖ¤SHA¶ÔÓÚÍ¬Ò»ÄÚÈİ¼ÓÃÜÊÇ·ñÒ»ÖÂ</span><span>&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertArrayEquals(Coder.encryptSHA(inputData),&nbsp;Coder&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.encryptSHA(inputData));&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;key&nbsp;=&nbsp;Coder.initMacKey();&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.err.println(<span class="string">"MacÃÜÔ¿:\n"</span><span>&nbsp;+&nbsp;key);&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;ÑéÖ¤HMAC¶ÔÓÚÍ¬Ò»ÄÚÈİ£¬Í¬Ò»ÃÜÔ¿¼ÓÃÜÊÇ·ñÒ»ÖÂ</span><span>&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertArrayEquals(Coder.encryptHMAC(inputData,&nbsp;key),&nbsp;Coder.encryptHMAC(&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inputData,&nbsp;key));&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BigInteger&nbsp;md5&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;BigInteger(Coder.encryptMD5(inputData));&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.err.println(<span class="string">"MD5:\n"</span><span>&nbsp;+&nbsp;md5.toString(</span><span class="number">16</span><span>));&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BigInteger&nbsp;sha&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;BigInteger(Coder.encryptSHA(inputData));&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.err.println(<span class="string">"SHA:\n"</span><span>&nbsp;+&nbsp;sha.toString(</span><span class="number">32</span><span>));&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BigInteger&nbsp;mac&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;BigInteger(Coder.encryptHMAC(inputData,&nbsp;inputStr));&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.err.println(<span class="string">"HMAC:\n"</span><span>&nbsp;+&nbsp;mac.toString(</span><span class="number">16</span><span>));&nbsp;&nbsp;</span></span></li>
-    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li>
+  <ol class="dp-j" >
+    <li><span><span class="keyword">import</span><span>&nbsp;java.security.MessageDigest;&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span><span class="keyword">import</span><span>&nbsp;javax.crypto.KeyGenerator;&nbsp;&nbsp;</span></span>
+    <li><span><span class="keyword">import</span><span>&nbsp;javax.crypto.Mac;&nbsp;&nbsp;</span></span>
+    <li><span><span class="keyword">import</span><span>&nbsp;javax.crypto.SecretKey;&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span><span class="keyword">import</span><span>&nbsp;sun.misc.BASE64Decoder;&nbsp;&nbsp;</span></span>
+    <li><span><span class="keyword">import</span><span>&nbsp;sun.misc.BASE64Encoder;&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span><span class="comment">/**</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;åŸºç¡€åŠ å¯†ç»„ä»¶</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;@author&nbsp;æ¢æ ‹</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;@version&nbsp;1.0</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;@since&nbsp;1.0</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*/</span><span>&nbsp;&nbsp;</span></span>
+    <li><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">abstract</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;Coder&nbsp;{&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">final</span><span>&nbsp;String&nbsp;KEY_SHA&nbsp;=&nbsp;</span><span class="string">"SHA"</span><span>;&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">final</span><span>&nbsp;String&nbsp;KEY_MD5&nbsp;=&nbsp;</span><span class="string">"MD5"</span><span>;&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/**</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;MACç®—æ³•å¯é€‰ä»¥ä¸‹å¤šç§ç®—æ³•</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&lt;pre&gt;</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;HmacMD5&nbsp;</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;HmacSHA1&nbsp;</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;HmacSHA256&nbsp;</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;HmacSHA384&nbsp;</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;HmacSHA512</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&lt;/pre&gt;</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span><span>&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">final</span><span>&nbsp;String&nbsp;KEY_MAC&nbsp;=&nbsp;</span><span class="string">"HmacMD5"</span><span>;&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/**</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;BASE64è§£å¯†</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;key</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@throws&nbsp;Exception</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span><span>&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">byte</span><span>[]&nbsp;decryptBASE64(String&nbsp;key)&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;(</span><span class="keyword">new</span><span>&nbsp;BASE64Decoder()).decodeBuffer(key);&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/**</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;BASE64åŠ å¯†</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;key</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@throws&nbsp;Exception</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span><span>&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;String&nbsp;encryptBASE64(</span><span class="keyword">byte</span><span>[]&nbsp;key)&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;(</span><span class="keyword">new</span><span>&nbsp;BASE64Encoder()).encodeBuffer(key);&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/**</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;MD5åŠ å¯†</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;data</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@throws&nbsp;Exception</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span><span>&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">byte</span><span>[]&nbsp;encryptMD5(</span><span class="keyword">byte</span><span>[]&nbsp;data)&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageDigest&nbsp;md5&nbsp;=&nbsp;MessageDigest.getInstance(KEY_MD5);&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;md5.update(data);&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;md5.digest();&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/**</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;SHAåŠ å¯†</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;data</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@throws&nbsp;Exception</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span><span>&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">byte</span><span>[]&nbsp;encryptSHA(</span><span class="keyword">byte</span><span>[]&nbsp;data)&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageDigest&nbsp;sha&nbsp;=&nbsp;MessageDigest.getInstance(KEY_SHA);&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sha.update(data);&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;sha.digest();&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/**</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;åˆå§‹åŒ–HMACå¯†é’¥</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@throws&nbsp;Exception</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span><span>&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;String&nbsp;initMacKey()&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KeyGenerator&nbsp;keyGenerator&nbsp;=&nbsp;KeyGenerator.getInstance(KEY_MAC);&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SecretKey&nbsp;secretKey&nbsp;=&nbsp;keyGenerator.generateKey();&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;encryptBASE64(secretKey.getEncoded());&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/**</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;HMACåŠ å¯†</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;data</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;key</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@throws&nbsp;Exception</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span><span>&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">byte</span><span>[]&nbsp;encryptHMAC(</span><span class="keyword">byte</span><span>[]&nbsp;data,&nbsp;String&nbsp;key)&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SecretKey&nbsp;secretKey&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;SecretKeySpec(decryptBASE64(key),&nbsp;KEY_MAC);&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mac&nbsp;mac&nbsp;=&nbsp;Mac.getInstance(secretKey.getAlgorithm());&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mac.init(secretKey);&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;mac.doFinal(data);&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span>
     <li><span>}&nbsp;&nbsp;</span></li>
   </ol>
 </div>
 <br>
 <br>
-¿ØÖÆÌ¨Êä³ö£º <br>
-<div id="" class="dp-highlighter">
+å†ç»™å‡ºä¸€ä¸ªæµ‹è¯•ç±»ï¼š <br>
+<div class="dp-highlighter" >
   <div class="bar">
-    <div class="tools">Console´úÂë
-      <div role="button" tabindex="0" srcattribute="about:blank" title="about:blank" style="background: url(&quot;chrome://flashblock/content/flash.png&quot;) no-repeat scroll center center transparent ! important; min-width: 32px ! important; min-height: 32px ! important; width: 32px; height: 32px; border: 1px solid rgb(223, 223, 223); cursor: pointer; overflow: hidden; display: inline-block; visibility: visible ! important; -moz-box-sizing: border-box;" bgactive="url(chrome://flashblock/content/flashplay.png) no-repeat center" bginactive="url(chrome://flashblock/content/flash.png) no-repeat center"></div>
-    &nbsp;<a href="javascript:void()" title="ÊÕ²ØÕâ¶Î´úÂë" onClick="code_favorites_do_favorite(this);return false;"><img class="star" src="icon_star.png" alt="ÊÕ²Ø´úÂë"></a></div>
+    <div class="tools">Javaä»£ç 
+      <div role=button tabindex="0" title="about:blank" style="OVERFLOW: hidden; CURSOR: pointer; BORDER-TOP: rgb(223,223,223) 1px solid; HEIGHT: 32px; BORDER-RIGHT: rgb(223,223,223) 1px solid; WIDTH: 32px; BACKGROUND: url(chrome://flashblock/content/flash.png) no-repeat center center; MIN-WIDTH: 32px !important; BORDER-BOTTOM: rgb(223,223,223) 1px solid; MIN-HEIGHT: 32px !important; BORDER-LEFT: rgb(223,223,223) 1px solid; DISPLAY: inline-block; VISIBILITY: visible !important; -moz-box-sizing: border-box" bginactive ="url(chrome://flashblock/content/flash.png) no-repeat center" bgactive="url(chrome://flashblock/content/flashplay.png) no-repeat center" srcattribute="about:blank"></div>
+    &nbsp;<A onclick="code_favorites_do_favorite(this);return false;" title=æ”¶è—è¿™æ®µä»£ç  href="javascript:void()" ><IMG class=star alt=æ”¶è—ä»£ç  src="icon_star.png"></a></div>
   </div>
-  <ol class="dp-default" start="1">
-    <li><span><span>Ô­ÎÄ:&nbsp;&nbsp;</span></span></li>
-    <li><span>¼òµ¥¼ÓÃÜ&nbsp;&nbsp;</span></li>
-    <li><span>BASE64¼ÓÃÜºó:&nbsp;&nbsp;</span></li>
-    <li><span>566A5Y2V5Yqg5a+G&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>BASE64½âÃÜºó:&nbsp;&nbsp;</span></li>
-    <li><span>¼òµ¥¼ÓÃÜ&nbsp;&nbsp;</span></li>
-    <li><span>MacÃÜÔ¿:&nbsp;&nbsp;</span></li>
-    <li><span>uGxdHC+6ylRDaik++leFtGwiMbuYUJ6mqHWyhSgF4trVkVBBSQvY/a22xU8XT1RUemdCWW155Bke&nbsp;&nbsp;</span></li>
-    <li><span>pBIpkd7QHg==&nbsp;&nbsp;</span></li>
-    <li><span>&nbsp;&nbsp;</span></li>
-    <li><span>MD5:&nbsp;&nbsp;</span></li>
-    <li><span>-550b4d90349ad4629462113e7934de56&nbsp;&nbsp;</span></li>
-    <li><span>SHA:&nbsp;&nbsp;</span></li>
-    <li><span>91k9vo7p400cjkgfhjh0ia9qthsjagfn&nbsp;&nbsp;</span></li>
-    <li><span>HMAC:&nbsp;&nbsp;</span></li>
+  <ol class="dp-j" >
+    <li><span><span class="keyword">import</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;org.junit.Assert.*;&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span><span class="keyword">import</span><span>&nbsp;org.junit.Test;&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span><span class="comment">/**</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;@author&nbsp;æ¢æ ‹</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;@version&nbsp;1.0</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*&nbsp;@since&nbsp;1.0</span>&nbsp;</span>
+    <li><span><span class="comment">&nbsp;*/</span><span>&nbsp;&nbsp;</span></span>
+    <li><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;CoderTest&nbsp;{&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="annotation">@Test</span><span>&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">void</span><span>&nbsp;test()&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;inputStr&nbsp;=&nbsp;<span class="string">"ç®€å•åŠ å¯†"</span><span>;&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.err.println(<span class="string">"åŸæ–‡:\n"</span><span>&nbsp;+&nbsp;inputStr);&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">byte</span><span>[]&nbsp;inputData&nbsp;=&nbsp;inputStr.getBytes();&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;code&nbsp;=&nbsp;Coder.encryptBASE64(inputData);&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.err.println(<span class="string">"BASE64åŠ å¯†å:\n"</span><span>&nbsp;+&nbsp;code);&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">byte</span><span>[]&nbsp;output&nbsp;=&nbsp;Coder.decryptBASE64(code);&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;outputStr&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;String(output);&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.err.println(<span class="string">"BASE64è§£å¯†å:\n"</span><span>&nbsp;+&nbsp;outputStr);&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;éªŒè¯BASE64åŠ å¯†è§£å¯†ä¸€è‡´æ€§</span><span>&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertEquals(inputStr,&nbsp;outputStr);&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;éªŒè¯MD5å¯¹äºåŒä¸€å†…å®¹åŠ å¯†æ˜¯å¦ä¸€è‡´</span><span>&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertArrayEquals(Coder.encryptMD5(inputData),&nbsp;Coder&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.encryptMD5(inputData));&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;éªŒè¯SHAå¯¹äºåŒä¸€å†…å®¹åŠ å¯†æ˜¯å¦ä¸€è‡´</span><span>&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertArrayEquals(Coder.encryptSHA(inputData),&nbsp;Coder&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.encryptSHA(inputData));&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;key&nbsp;=&nbsp;Coder.initMacKey();&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.err.println(<span class="string">"Macå¯†é’¥:\n"</span><span>&nbsp;+&nbsp;key);&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;éªŒè¯HMACå¯¹äºåŒä¸€å†…å®¹ï¼ŒåŒä¸€å¯†é’¥åŠ å¯†æ˜¯å¦ä¸€è‡´</span><span>&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assertArrayEquals(Coder.encryptHMAC(inputData,&nbsp;key),&nbsp;Coder.encryptHMAC(&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inputData,&nbsp;key));&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BigInteger&nbsp;md5&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;BigInteger(Coder.encryptMD5(inputData));&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.err.println(<span class="string">"MD5:\n"</span><span>&nbsp;+&nbsp;md5.toString(</span><span class="number">16</span><span>));&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BigInteger&nbsp;sha&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;BigInteger(Coder.encryptSHA(inputData));&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.err.println(<span class="string">"SHA:\n"</span><span>&nbsp;+&nbsp;sha.toString(</span><span class="number">32</span><span>));&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BigInteger&nbsp;mac&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;BigInteger(Coder.encryptHMAC(inputData,&nbsp;inputStr));&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.err.println(<span class="string">"HMAC:\n"</span><span>&nbsp;+&nbsp;mac.toString(</span><span class="number">16</span><span>));&nbsp;&nbsp;</span></span>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span>
+    <li><span>}&nbsp;&nbsp;</span></li>
+  </ol>
+</div>
+<br>
+<br>
+æ§åˆ¶å°è¾“å‡ºï¼š <br>
+<div class="dp-highlighter" >
+  <div class="bar">
+    <div class="tools">Consoleä»£ç 
+      <div role=button tabindex="0" title="about:blank" style="OVERFLOW: hidden; CURSOR: pointer; BORDER-TOP: rgb(223,223,223) 1px solid; HEIGHT: 32px; BORDER-RIGHT: rgb(223,223,223) 1px solid; WIDTH: 32px; BACKGROUND: url(chrome://flashblock/content/flash.png) no-repeat center center; MIN-WIDTH: 32px !important; BORDER-BOTTOM: rgb(223,223,223) 1px solid; MIN-HEIGHT: 32px !important; BORDER-LEFT: rgb(223,223,223) 1px solid; DISPLAY: inline-block; VISIBILITY: visible !important; -moz-box-sizing: border-box" bginactive ="url(chrome://flashblock/content/flash.png) no-repeat center" bgactive="url(chrome://flashblock/content/flashplay.png) no-repeat center" srcattribute="about:blank"></div>
+    &nbsp;<A onclick="code_favorites_do_favorite(this);return false;" title=æ”¶è—è¿™æ®µä»£ç  href="javascript:void()" ><IMG class=star alt=æ”¶è—ä»£ç  src="icon_star.png"></a></div>
+  </div>
+  <ol class="dp-default" >
+    <li><span><span>åŸæ–‡:&nbsp;&nbsp;</span></span>
+    <li><span>ç®€å•åŠ å¯†&nbsp;&nbsp;</span>
+    <li><span>BASE64åŠ å¯†å:&nbsp;&nbsp;</span>
+    <li><span>566A5Y2V5Yqg5a+G&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>BASE64è§£å¯†å:&nbsp;&nbsp;</span>
+    <li><span>ç®€å•åŠ å¯†&nbsp;&nbsp;</span>
+    <li><span>Macå¯†é’¥:&nbsp;&nbsp;</span>
+    <li><span>uGxdHC+6ylRDaik++leFtGwiMbuYUJ6mqHWyhSgF4trVkVBBSQvY/a22xU8XT1RUemdCWW155Bke&nbsp;&nbsp;</span>
+    <li><span>pBIpkd7QHg==&nbsp;&nbsp;</span>
+    <li><span>&nbsp;&nbsp;</span>
+    <li><span>MD5:&nbsp;&nbsp;</span>
+    <li><span>-550b4d90349ad4629462113e7934de56&nbsp;&nbsp;</span>
+    <li><span>SHA:&nbsp;&nbsp;</span>
+    <li><span>91k9vo7p400cjkgfhjh0ia9qthsjagfn&nbsp;&nbsp;</span>
+    <li><span>HMAC:&nbsp;&nbsp;</span>
     <li><span>2287d192387e95694bdbba2fa941009a&nbsp;&nbsp;</span></li>
   </ol>
 </div>
+<P>
 <br>
 <br>
-&nbsp;&nbsp;&nbsp; BASE64µÄ¼ÓÃÜ½âÃÜÊÇË«ÏòµÄ£¬¿ÉÒÔÇó·´½â¡£ <br>
-&nbsp;&nbsp;&nbsp; MD5¡¢SHAÒÔ¼°HMACÊÇµ¥Ïò¼ÓÃÜ£¬ÈÎºÎÊı¾İ¼ÓÃÜºóÖ»»á²úÉúÎ¨Ò»µÄÒ»¸ö¼ÓÃÜ´®£¬Í¨³£ÓÃÀ´Ğ£ÑéÊı¾İÔÚ´«Êä¹ı³ÌÖĞÊÇ·ñ±»ĞŞ¸Ä¡£ÆäÖĞHMACËã·¨ÓĞÒ»¸öÃÜÔ¿£¬ÔöÇ¿ÁËÊı¾İ´«Êä¹ı³ÌÖĞµÄ°²È«ĞÔ£¬Ç¿»¯ÁËËã·¨ÍâµÄ²»¿É¿ØÒòËØ¡£<img src="icon_biggrin.gif"> <br>
-&nbsp;&nbsp;&nbsp; µ¥Ïò¼ÓÃÜµÄÓÃÍ¾Ö÷ÒªÊÇÎªÁËĞ£ÑéÊı¾İÔÚ´«Êä¹ı³ÌÖĞÊÇ·ñ±»ĞŞ¸Ä¡£ 
-<!--EndFragment-->
+&nbsp;&nbsp;&nbsp; BASE64çš„åŠ å¯†è§£å¯†æ˜¯åŒå‘çš„ï¼Œå¯ä»¥æ±‚åè§£ã€‚ <br>
+&nbsp;&nbsp;&nbsp; MD5ã€SHAä»¥åŠHMACæ˜¯å•å‘åŠ å¯†ï¼Œä»»ä½•æ•°æ®åŠ å¯†ååªä¼šäº§ç”Ÿå”¯ä¸€çš„ä¸€ä¸ªåŠ å¯†ä¸²ï¼Œé€šå¸¸ç”¨æ¥æ ¡éªŒæ•°æ®åœ¨ä¼ è¾“è¿‡ç¨‹ä¸­æ˜¯å¦è¢«ä¿®æ”¹ã€‚å…¶ä¸­HMACç®—æ³•æœ‰ä¸€ä¸ªå¯†é’¥ï¼Œå¢å¼ºäº†æ•°æ®ä¼ è¾“è¿‡ç¨‹ä¸­çš„å®‰å…¨æ€§ï¼Œå¼ºåŒ–äº†ç®—æ³•å¤–çš„ä¸å¯æ§å› ç´ ã€‚<IMG src="icon_biggrin.gif"> <br>&nbsp;&nbsp;&nbsp; å•å‘åŠ å¯†çš„ç”¨é€”ä¸»è¦æ˜¯ä¸ºäº†æ ¡éªŒæ•°æ®åœ¨ä¼ è¾“è¿‡ç¨‹ä¸­æ˜¯å¦è¢«ä¿®æ”¹ã€‚ </P>
+<P><!--EndFragment--></P>
 </body>
 </htm>

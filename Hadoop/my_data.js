@@ -17,8 +17,8 @@ d.add("13","0","cloudera(CDH)官网介绍：安装包、离线包该如何下载
 d.add("14","0","hadoop socket超时导致put失败解决方案","my_data/hadoop_socket超时导致put失败解决方案.htm");
 d.add("15","0","Hadoop常见问题及解决办法","my_data/Hadoop常见问题及解决办法.htm");
 d.add("16","0","将本地文件目录移动（或cp）到hdfs下shell脚本","my_data/将本地文件目录移动（或cp）到hdfs下shell脚本.htm");
-d.add("17","0","Hadoop客户端该如何配置","my_data/Hadoop客户端该如何配置.htm");
-d.add("18","0","如何进行单元测试","my_data/如何进行单元测试.htm");
+d.add("17","0","如何进行单元测试","my_data/如何进行单元测试.htm");
+d.add("18","0","Hadoop客户端该如何配置","my_data/Hadoop客户端该如何配置.htm");
 d.add("19","0","MapReduce","");
 d.add("20","19","Hadoop1 MapReduce 编写例子","my_data/MapReduce/Hadoop1 MapReduce 编写例子.htm");
 d.add("21","19","Hadoop2 Mapreduce实例WordCount体验","my_data/MapReduce/Hadoop2 Mapreduce实例WordCount体验.htm");

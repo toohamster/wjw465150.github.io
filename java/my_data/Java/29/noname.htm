@@ -1,349 +1,353 @@
-<html>
+ï»¿<html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="style.css">
-<title>ÀûÓÃJavaÊµÏÖzipÑ¹Ëõ_½âÑ¹Ëõ</title>
+<title>åˆ©ç”¨Javaå®ç°zipå‹ç¼©_è§£å‹ç¼©</title>
 </head>
 
 <body bgcolor="#ffffcc">
 <script language="JavaScript" src="top.js"></script>
 <div align="center"><center>
 
-<table border="1" cellpadding="0" cellspacing="0" width="70%" bordercolorlight="#0000FF"
-bordercolordark="#FFFFFF" height="15">
+<table border="1" cellpadding="0" cellspacing="0" width="70%" bordercolorlight="#0000ff"
+ bordercolordark="#ffffff" height="15">
   <tr>
-    <td width="100%" height="20"><p align="center"><strong>ÀûÓÃJavaÊµÏÖzipÑ¹Ëõ/½âÑ¹Ëõ</strong></td>
+    <td width="100%" height="20"><p align="center"><strong>åˆ©ç”¨Javaå®ç°zipå‹ç¼©/è§£å‹ç¼©</strong></p></td>
   </tr>
   <tr>
     <td width="100%" height="20"><br>
-    ¡¡¡¡ÓÉÓÚÍøÂç´ø¿íÓĞÏŞ,ËùÒÔÊı¾İÎÄ¼şµÄÑ¹ËõÓĞÀûÓÚÊı¾İÔÚInternetÉÏµÄ¿ìËÙ´«Êä,Í¬Ê±Ò²½Ú 
+    ã€€ã€€ç”±äºç½‘ç»œå¸¦å®½æœ‰é™,æ‰€ä»¥æ•°æ®æ–‡ä»¶çš„å‹ç¼©æœ‰åˆ©äºæ•°æ®åœ¨Internetä¸Šçš„å¿«é€Ÿä¼ è¾“,åŒæ—¶ä¹ŸèŠ‚ 
     <br>
     <br>
-    Ê¡·şÎñÆ÷µÄÍâ´æ¿Õ¼ä¡£ <br>
+    çœæœåŠ¡å™¨çš„å¤–å­˜ç©ºé—´ã€‚ <br>
     <br>
-    ¡¡¡¡Java 1.1ÊµÏÖÁËI/OÊı¾İÁ÷ÓëÍøÂçÊı¾İÁ÷µÄµ¥Ò»½Ó¿Ú,Òò´ËÊı¾İµÄÑ¹Ëõ¡¢ÍøÂç´«ÊäºÍ½â 
+    ã€€ã€€Java 1.1å®ç°äº†I/Oæ•°æ®æµä¸ç½‘ç»œæ•°æ®æµçš„å•ä¸€æ¥å£,å› æ­¤æ•°æ®çš„å‹ç¼©ã€ç½‘ç»œä¼ è¾“å’Œè§£ 
     <br>
     <br>
-    Ñ¹ËõµÄÊµÏÖ±È½ÏÈİÒ×,ÏÂÃæ½éÉÜÀûÓÃZipEntry¡¢ZipInputStreamºÍZipOutputStreamÈı¸öJava 
+    å‹ç¼©çš„å®ç°æ¯”è¾ƒå®¹æ˜“,ä¸‹é¢ä»‹ç»åˆ©ç”¨ZipEntryã€ZipInputStreamå’ŒZipOutputStreamä¸‰ä¸ªJava 
     <br>
     <br>
-    ÀàÊµÏÖzipÊı¾İÑ¹Ëõ·½Ê½µÄ±à³Ì·½·¨¡£ <br>
+    ç±»å®ç°zipæ•°æ®å‹ç¼©æ–¹å¼çš„ç¼–ç¨‹æ–¹æ³•ã€‚ <br>
     <br>
-    ¡¡¡¡zipÑ¹ËõÎÄ¼ş½á¹¹:Ò»¸özipÎÄ¼şÓÉ¶à¸öentry×é³É,Ã¿¸öentryÓĞÒ»¸öÎ¨Ò»µÄÃû³Æ,entryµÄ 
+    ã€€ã€€zipå‹ç¼©æ–‡ä»¶ç»“æ„:ä¸€ä¸ªzipæ–‡ä»¶ç”±å¤šä¸ªentryç»„æˆ,æ¯ä¸ªentryæœ‰ä¸€ä¸ªå”¯ä¸€çš„åç§°,entryçš„ 
     <br>
     <br>
-    Êı¾İÏî´æ´¢Ñ¹ËõÊı¾İ¡£ <br>
+    æ•°æ®é¡¹å­˜å‚¨å‹ç¼©æ•°æ®ã€‚ <br>
     <br>
-    ¡¡¡¡ÓëzipÎÄ¼şÓĞ¹ØµÄ¼¸¸öJavaÀà <br>
+    ã€€ã€€ä¸zipæ–‡ä»¶æœ‰å…³çš„å‡ ä¸ªJavaç±» <br>
     <br>
-    ¡¡¡¡&middot;ÀàZipEntry <br>
+    ã€€ã€€Â·ç±»ZipEntry <br>
     <br>
-    ¡¡¡¡public ZipEntry(String name); <br>
+    ã€€ã€€public ZipEntry(String name); <br>
     <br>
-    ¡¡¡¡nameÎªÖ¸¶¨µÄÊı¾İÏîÃû¡£ <br>
+    ã€€ã€€nameä¸ºæŒ‡å®šçš„æ•°æ®é¡¹åã€‚ <br>
     <br>
-    ¡¡¡¡&middot;ÀàZipOutputStream <br>
+    ã€€ã€€Â·ç±»ZipOutputStream <br>
     <br>
-    ¡¡¡¡ZipOutputStreamÊµÏÖÁËzipÑ¹ËõÎÄ¼şµÄĞ´Êä³öÁ÷,Ö§³ÖÑ¹ËõºÍ·ÇÑ¹Ëõentry¡£ÏÂÃæÊÇËüµÄ 
+    ã€€ã€€ZipOutputStreamå®ç°äº†zipå‹ç¼©æ–‡ä»¶çš„å†™è¾“å‡ºæµ,æ”¯æŒå‹ç¼©å’Œéå‹ç¼©entryã€‚ä¸‹é¢æ˜¯å®ƒçš„ 
     <br>
     <br>
-    ¼¸¸öº¯Êı: <br>
+    å‡ ä¸ªå‡½æ•°: <br>
     <br>
-    ¡¡¡¡public ZipOutputStream(OutputStream out); <br>
+    ã€€ã€€public ZipOutputStream(OutputStream out); <br>
     <br>
-    ¡¡¡¡¡ÎÀûÓÃÊä³öÁ÷out¹¹ÔìÒ»¸öZIPÊä³öÁ÷¡£ <br>
+    ã€€ã€€âˆ¥åˆ©ç”¨è¾“å‡ºæµoutæ„é€ ä¸€ä¸ªZIPè¾“å‡ºæµã€‚ <br>
     <br>
-    ¡¡¡¡public void setMethod(int method); <br>
+    ã€€ã€€public void setMethod(int method); <br>
     <br>
-    ¡¡¡¡¡ÎÉèÖÃentryÑ¹Ëõ·½·¨,È±Ê¡ÖµÎªDEFLATED¡£ <br>
+    ã€€ã€€âˆ¥è®¾ç½®entryå‹ç¼©æ–¹æ³•,ç¼ºçœå€¼ä¸ºDEFLATEDã€‚ <br>
     <br>
-    ¡¡¡¡public void putNextEntry(ZipEntry newe); <br>
+    ã€€ã€€public void putNextEntry(ZipEntry newe); <br>
     <br>
-    ¡¡¡¡¡ÎÈç¹ûµ±Ç°µÄentry´æÔÚÇÒ´¦ÓÚ¼¤»î×´Ì¬Ê±,¹Ø±ÕËü,ÔÚzipÎÄ¼şÖĞĞ´ÈëĞÂµÄentry-newe 
+    ã€€ã€€âˆ¥å¦‚æœå½“å‰çš„entryå­˜åœ¨ä¸”å¤„äºæ¿€æ´»çŠ¶æ€æ—¶,å…³é—­å®ƒ,åœ¨zipæ–‡ä»¶ä¸­å†™å…¥æ–°çš„entry-newe 
     <br>
     <br>
-    ²¢½«Êı¾İÁ÷¶¨Î»ÓÚentryÊı¾İÏîµÄÆğÊ¼Î»ÖÃ,Ñ¹Ëõ·½·¨ÎªsetMethodÖ¸¶¨µÄ·½·¨¡£ 
+    å¹¶å°†æ•°æ®æµå®šä½äºentryæ•°æ®é¡¹çš„èµ·å§‹ä½ç½®,å‹ç¼©æ–¹æ³•ä¸ºsetMethodæŒ‡å®šçš„æ–¹æ³•ã€‚ 
     <br>
     <br>
-    ¡¡¡¡&middot;ÀàZipInputStream <br>
+    ã€€ã€€Â·ç±»ZipInputStream <br>
     <br>
-    ¡¡¡¡ZipInputStreamÊµÏÖÁËzipÑ¹ËõÎÄ¼şµÄ¶ÁÊäÈëÁ÷,Ö§³ÖÑ¹ËõºÍ·ÇÑ¹Ëõentry¡£ÏÂÃæÊÇËüµÄ 
+    ã€€ã€€ZipInputStreamå®ç°äº†zipå‹ç¼©æ–‡ä»¶çš„è¯»è¾“å…¥æµ,æ”¯æŒå‹ç¼©å’Œéå‹ç¼©entryã€‚ä¸‹é¢æ˜¯å®ƒçš„ 
     <br>
     <br>
-    ¼¸¸öº¯Êı: <br>
+    å‡ ä¸ªå‡½æ•°: <br>
     <br>
-    ¡¡¡¡public ZipInputStream(InputStream in); <br>
+    ã€€ã€€public ZipInputStream(InputStream in); <br>
     <br>
-    ¡¡¡¡¡ÎÀûÓÃÊäÈëÁ÷in¹¹ÔìÒ»¸öZIPÊä³öÁ÷¡£ <br>
+    ã€€ã€€âˆ¥åˆ©ç”¨è¾“å…¥æµinæ„é€ ä¸€ä¸ªZIPè¾“å‡ºæµã€‚ <br>
     <br>
-    ¡¡¡¡public ZipEntry getNextEntry(); <br>
+    ã€€ã€€public ZipEntry getNextEntry(); <br>
     <br>
-    ¡¡¡¡¡Î·µ»ØZIPÎÄ¼şÖĞµÄÏÂÒ»¸öentry,²¢½«Êä³öÁ÷¶¨Î»ÔÚ´ËentryÊı¾İÏîµÄÆğÊ¼Î»ÖÃ¡£ 
+    ã€€ã€€âˆ¥è¿”å›ZIPæ–‡ä»¶ä¸­çš„ä¸‹ä¸€ä¸ªentry,å¹¶å°†è¾“å‡ºæµå®šä½åœ¨æ­¤entryæ•°æ®é¡¹çš„èµ·å§‹ä½ç½®ã€‚ 
     <br>
     <br>
-    ¡¡¡¡public void closeEntry(); <br>
+    ã€€ã€€public void closeEntry(); <br>
     <br>
-    ¡¡¡¡¡Î¹Ø±Õµ±Ç°µÄzip entry,²¢½«Êı¾İÁ÷¶¨Î»ÓÚÏÂÒ»¸öentryµÄÆğÊ¼Î»ÖÃ¡£ 
+    ã€€ã€€âˆ¥å…³é—­å½“å‰çš„zip entry,å¹¶å°†æ•°æ®æµå®šä½äºä¸‹ä¸€ä¸ªentryçš„èµ·å§‹ä½ç½®ã€‚ 
     <br>
     <br>
-    ¡¡¡¡³ÌĞò´úÂë¼°Æä×¢ÊÍ <br>
+    ã€€ã€€ç¨‹åºä»£ç åŠå…¶æ³¨é‡Š <br>
     <br>
-    ¡¡¡¡ÏÂÁĞµÄ³ÌĞòÊµÏÖÁËÊı¾İÎÄ¼şzip·½Ê½µÄÑ¹ËõºÍ½âÑ¹Ëõ·½·¨¡£randomData()º¯ÊıËæ»úÉú³É 
+    ã€€ã€€ä¸‹åˆ—çš„ç¨‹åºå®ç°äº†æ•°æ®æ–‡ä»¶zipæ–¹å¼çš„å‹ç¼©å’Œè§£å‹ç¼©æ–¹æ³•ã€‚randomData()å‡½æ•°éšæœºç”Ÿæˆ 
     <br>
     <br>
-    50¸ödoubleÊı¾İ,²¢·ÅÔÚdoc×Ö·û´®±äÁ¿ÖĞ;openFile()º¯Êı¶ÁÈ¡ZIPÑ¹ËõÎÄ¼ş;saveFile()º¯Êı 
+    50ä¸ªdoubleæ•°æ®,å¹¶æ”¾åœ¨docå­—ç¬¦ä¸²å˜é‡ä¸­;openFile()å‡½æ•°è¯»å–ZIPå‹ç¼©æ–‡ä»¶;saveFile()å‡½æ•° 
     <br>
     <br>
-    ½«Ëæ»úÉú³ÉµÄÊı¾İ´æµ½ZIP¸ñÊ½µÄÑ¹ËõÎÄ¼şÖĞ¡£ <br>
+    å°†éšæœºç”Ÿæˆçš„æ•°æ®å­˜åˆ°ZIPæ ¼å¼çš„å‹ç¼©æ–‡ä»¶ä¸­ã€‚ <br>
     <br>
-    ¡¡¡¡import java.util.zip.*; <br>
+    ã€€ã€€import java.util.zip.*; <br>
     <br>
-    ¡¡¡¡import java.awt.event.*; <br>
+    ã€€ã€€import java.awt.event.*; <br>
     <br>
-    ¡¡¡¡import java.awt.*; <br>
+    ã€€ã€€import java.awt.*; <br>
     <br>
-    ¡¡¡¡import java.lang.Math; <br>
+    ã€€ã€€import java.lang.Math; <br>
     <br>
-    ¡¡¡¡import java.io.*; <br>
+    ã€€ã€€import java.io.*; <br>
     <br>
-    ¡¡¡¡public class TestZip extends Frame implements ActionListener { <br>
+    ã€€ã€€public class TestZip extends Frame implements ActionListener { <br>
     <br>
-    ¡¡¡¡TextArea textarea; ¡ÎÏÔÊ¾Êı¾İÎÄ¼şµÄ¶àĞĞÎÄ±¾ÏÔÊ¾Óò <br>
+    ã€€ã€€TextArea textarea; âˆ¥æ˜¾ç¤ºæ•°æ®æ–‡ä»¶çš„å¤šè¡Œæ–‡æœ¬æ˜¾ç¤ºåŸŸ <br>
     <br>
-    ¡¡¡¡TextField infotip; 
-    ¡ÎÏÔÊ¾Êı¾İÎÄ¼şÎ´Ñ¹Ëõ´óĞ¡¼°Ñ¹Ëõ´óĞ¡µ¥ĞĞÎÄ±¾ÏÔÊ¾Óò <br>
+    ã€€ã€€TextField infotip; 
+    âˆ¥æ˜¾ç¤ºæ•°æ®æ–‡ä»¶æœªå‹ç¼©å¤§å°åŠå‹ç¼©å¤§å°å•è¡Œæ–‡æœ¬æ˜¾ç¤ºåŸŸ <br>
     <br>
-    ¡¡¡¡String doc; ¡Î´æ´¢Ëæ»úÉú³ÉµÄÊı¾İ <br>
+    ã€€ã€€String doc; âˆ¥å­˜å‚¨éšæœºç”Ÿæˆçš„æ•°æ® <br>
     <br>
-    ¡¡¡¡long doczipsize = 0;¡ÎÑ¹ËõÊı¾İÎÄ¼şµÄ´óĞ¡ <br>
+    ã€€ã€€long doczipsize = 0;âˆ¥å‹ç¼©æ•°æ®æ–‡ä»¶çš„å¤§å° <br>
     <br>
-    ¡¡¡¡public TestZip(){ <br>
+    ã€€ã€€public TestZip(){ <br>
     <br>
-    ¡¡¡¡¡ÎÉú³É²Ëµ¥ <br>
+    ã€€ã€€âˆ¥ç”Ÿæˆèœå• <br>
     <br>
-    ¡¡¡¡MenuBar menubar = new MenuBar(); <br>
+    ã€€ã€€MenuBar menubar = new MenuBar(); <br>
     <br>
-    ¡¡¡¡setMenuBar(menubar); <br>
+    ã€€ã€€setMenuBar(menubar); <br>
     <br>
-    ¡¡¡¡Menu file = new Menu(&quot;File&quot;,true); <br>
+    ã€€ã€€Menu file = new Menu("File",true); <br>
     <br>
-    ¡¡¡¡menubar.add(file); <br>
+    ã€€ã€€menubar.add(file); <br>
     <br>
-    ¡¡¡¡MenuItem neww= new MenuItem(&quot;New&quot;); <br>
+    ã€€ã€€MenuItem neww= new MenuItem("New"); <br>
     <br>
-    ¡¡¡¡neww.addActionListener(this); <br>
+    ã€€ã€€neww.addActionListener(this); <br>
     <br>
-    ¡¡¡¡file.add(neww); <br>
+    ã€€ã€€file.add(neww); <br>
     <br>
-    ¡¡¡¡MenuItem open=new MenuItem(&quot;Open&quot;); <br>
+    ã€€ã€€MenuItem open=new MenuItem("Open"); <br>
     <br>
-    ¡¡¡¡open.addActionListener(this); <br>
+    ã€€ã€€open.addActionListener(this); <br>
     <br>
-    ¡¡¡¡file.add(open); <br>
+    ã€€ã€€file.add(open); <br>
     <br>
-    ¡¡¡¡MenuItem save=new MenuItem(&quot;Save&quot;); <br>
+    ã€€ã€€MenuItem save=new MenuItem("Save"); <br>
     <br>
-    ¡¡¡¡save.addActionListener(this); <br>
+    ã€€ã€€save.addActionListener(this); <br>
     <br>
-    ¡¡¡¡file.add(save); <br>
+    ã€€ã€€file.add(save); <br>
     <br>
-    ¡¡¡¡MenuItem exit=new MenuItem(&quot;Exit&quot;); <br>
+    ã€€ã€€MenuItem exit=new MenuItem("Exit"); <br>
     <br>
-    ¡¡¡¡exit.addActionListener(this); <br>
+    ã€€ã€€exit.addActionListener(this); <br>
     <br>
-    ¡¡¡¡file.add(exit); <br>
+    ã€€ã€€file.add(exit); <br>
     <br>
-    ¡¡¡¡¡ÎËæ»úÉú³ÉµÄÊı¾İÎÄ¼şµÄ¶àĞĞÎÄ±¾ÏÔÊ¾Óò <br>
+    ã€€ã€€âˆ¥éšæœºç”Ÿæˆçš„æ•°æ®æ–‡ä»¶çš„å¤šè¡Œæ–‡æœ¬æ˜¾ç¤ºåŸŸ <br>
     <br>
-    ¡¡¡¡add(&quot;Center&quot;,textarea = new TextArea()); <br>
+    ã€€ã€€add("Center",textarea =
+      new TextArea()); <br>
     <br>
-    ¡¡¡¡¡ÎÌáÊ¾ÎÄ±¾Ô­Ê¼´óĞ¡¡¢Ñ¹Ëõ´óĞ¡µÄµ¥ĞĞÎÄ±¾ÏÔÊ¾Óò <br>
+    ã€€ã€€âˆ¥æç¤ºæ–‡æœ¬åŸå§‹å¤§å°ã€å‹ç¼©å¤§å°çš„å•è¡Œæ–‡æœ¬æ˜¾ç¤ºåŸŸ <br>
     <br>
-    ¡¡¡¡add(&quot;South&quot;,infotip = new TextField()); <br>
+    ã€€ã€€add("South",infotip = new TextField()); <br>
     <br>
-    ¡¡¡¡} <br>
+    ã€€ã€€} <br>
     <br>
-    ¡¡¡¡public static void main(String args[]){ <br>
+    ã€€ã€€public static void main(String args[]){ <br>
     <br>
-    ¡¡¡¡TestZip ok=new TestZip(); <br>
+    ã€€ã€€TestZip ok=new TestZip(); <br>
     <br>
-    ¡¡¡¡ok.setTitle(&quot;zip sample&quot;); <br>
+    ã€€ã€€ok.setTitle("zip sample"); <br>
     <br>
-    ¡¡¡¡ok.setSize(600,300); <br>
+    ã€€ã€€ok.setSize(600,300); <br>
     <br>
-    ¡¡¡¡ok.show(); <br>
+    ã€€ã€€ok.show(); <br>
     <br>
-    ¡¡¡¡} <br>
+    ã€€ã€€} <br>
     <br>
-    ¡¡¡¡private void randomData(){ <br>
+    ã€€ã€€private void randomData(){ <br>
     <br>
-    ¡¡¡¡¡ÎËæ»úÉú³É50¸ödoubleÊı¾İ,²¢·ÅÔÚdoc×Ö·û´®±äÁ¿ÖĞ¡£ <br>
+    ã€€ã€€âˆ¥éšæœºç”Ÿæˆ50ä¸ªdoubleæ•°æ®,å¹¶æ”¾åœ¨docå­—ç¬¦ä¸²å˜é‡ä¸­ã€‚ <br>
     <br>
-    ¡¡¡¡doc=&quot;&quot;; <br>
+    ã€€ã€€doc=""; <br>
     <br>
-    ¡¡¡¡for(int i=1;i&lt;51;i++){ <br>
+    ã€€ã€€for(int i=1;i&lt;51;i++){ <br>
     <br>
-    ¡¡¡¡ double rdm=Math.random()*10; <br>
+    ã€€ã€€ double rdm=Math.random()*10; <br>
     <br>
-    ¡¡¡¡ doc=doc+new Double(rdm).toString(); <br>
+    ã€€ã€€ doc=doc+new Double(rdm).toString(); <br>
     <br>
-    ¡¡¡¡ if(i%5 == 0) doc=doc+&quot;\n&quot;; <br>
+    ã€€ã€€ if(i%5 == 0) doc=doc+"\n"; <br>
     <br>
-    ¡¡¡¡ else doc=doc+&quot; &quot;; <br>
+    ã€€ã€€ else doc=doc+" "; <br>
     <br>
-    ¡¡¡¡} <br>
+    ã€€ã€€} <br>
     <br>
-    ¡¡¡¡doczipsize = 0; <br>
+    ã€€ã€€doczipsize = 0; <br>
     <br>
-    ¡¡¡¡showTextandInfo(); <br>
+    ã€€ã€€showTextandInfo(); <br>
     <br>
-    ¡¡¡¡} <br>
+    ã€€ã€€} <br>
     <br>
-    ¡¡¡¡private void openFile(){ <br>
+    ã€€ã€€private void openFile(){ <br>
     <br>
-    ¡¡¡¡¡Î´ò¿ªzipÎÄ¼ş,½«ÎÄ¼şÄÚÈİ¶ÁÈëdoc×Ö·û´®±äÁ¿ÖĞ¡£ <br>
+    ã€€ã€€âˆ¥æ‰“å¼€zipæ–‡ä»¶,å°†æ–‡ä»¶å†…å®¹è¯»å…¥docå­—ç¬¦ä¸²å˜é‡ä¸­ã€‚ <br>
     <br>
-    ¡¡¡¡FileDialog dlg=new FileDialog(this,&quot;Open&quot;,FileDialog.LOA D); <br>
+    ã€€ã€€FileDialog dlg=new FileDialog(this,"Open",FileDialog.LOA D); <br>
     <br>
-    ¡¡¡¡dlg.show(); <br>
+    ã€€ã€€dlg.show(); <br>
     <br>
-    ¡¡¡¡String filename=dlg.getDirectory()+dlg.getFile(); <br>
+    ã€€ã€€String filename=dlg.getDirectory()+dlg.getFile(); <br>
     <br>
-    ¡¡¡¡try{ <br>
+    ã€€ã€€try{ <br>
     <br>
-    ¡¡¡¡¡Î´´½¨Ò»¸öÎÄ¼şÊµÀı <br>
+    ã€€ã€€âˆ¥åˆ›å»ºä¸€ä¸ªæ–‡ä»¶å®ä¾‹ <br>
     <br>
-    ¡¡¡¡File f=new File(filename); <br>
+    ã€€ã€€File f=new File(filename); <br>
     <br>
-    ¡¡¡¡if(!f.exists()) return; ¡ÎÎÄ¼ş²»´æÔÚ,Ôò·µ»Ø <br>
+    ã€€ã€€if(!f.exists()) return; âˆ¥æ–‡ä»¶ä¸å­˜åœ¨,åˆ™è¿”å› <br>
     <br>
-    ¡¡¡¡¡ÎÓÃÎÄ¼şÊäÈëÁ÷¹¹½¨ZIPÑ¹ËõÊäÈëÁ÷ <br>
+    ã€€ã€€âˆ¥ç”¨æ–‡ä»¶è¾“å…¥æµæ„å»ºZIPå‹ç¼©è¾“å…¥æµ <br>
     <br>
-    ¡¡¡¡ZipInputStream zipis=new ZipInputStream(new FileInputStream(f)); <br>
+    ã€€ã€€ZipInputStream zipis=new ZipInputStream(new FileInputStream(f)); <br>
     <br>
-    ¡¡¡¡zipis.getNextEntry(); <br>
+    ã€€ã€€zipis.getNextEntry(); <br>
     <br>
-    ¡¡¡¡¡Î½«ÊäÈëÁ÷¶¨Î»ÔÚµ±Ç°entryÊı¾İÏîÎ»ÖÃ <br>
+    ã€€ã€€âˆ¥å°†è¾“å…¥æµå®šä½åœ¨å½“å‰entryæ•°æ®é¡¹ä½ç½® <br>
     <br>
-    ¡¡¡¡DataInputStream dis=new DataInputStream(zipis); <br>
+    ã€€ã€€DataInputStream dis=new DataInputStream(zipis); <br>
     <br>
-    ¡¡¡¡¡ÎÓÃZIPÊäÈëÁ÷¹¹½¨DataInputStream <br>
+    ã€€ã€€âˆ¥ç”¨ZIPè¾“å…¥æµæ„å»ºDataInputStream <br>
     <br>
-    ¡¡¡¡doc=dis.readUTF();¡Î¶ÁÈ¡ÎÄ¼şÄÚÈİ <br>
+    ã€€ã€€doc=dis.readUTF();âˆ¥è¯»å–æ–‡ä»¶å†…å®¹ <br>
     <br>
-    ¡¡¡¡dis.close();¡Î¹Ø±ÕÎÄ¼ş <br>
+    ã€€ã€€dis.close();âˆ¥å…³é—­æ–‡ä»¶ <br>
     <br>
-    ¡¡¡¡doczipsize = f.length();¡Î»ñÈ¡ZIPÎÄ¼ş³¤¶È <br>
+    ã€€ã€€doczipsize =
+      f.length();âˆ¥è·å–ZIPæ–‡ä»¶é•¿åº¦ <br>
     <br>
-    ¡¡¡¡showTextandInfo();¡ÎÏÔÊ¾Êı¾İ <br>
+    ã€€ã€€showTextandInfo();âˆ¥æ˜¾ç¤ºæ•°æ® <br>
     <br>
-    ¡¡¡¡} <br>
+    ã€€ã€€} <br>
     <br>
-    ¡¡¡¡catch(IOException ioe){ <br>
+    ã€€ã€€catch(IOException ioe){ <br>
     <br>
-    ¡¡¡¡System.out.println(ioe); <br>
+    ã€€ã€€System.out.println(ioe); <br>
     <br>
-    ¡¡¡¡} <br>
+    ã€€ã€€} <br>
     <br>
-    ¡¡¡¡} <br>
+    ã€€ã€€} <br>
     <br>
-    ¡¡¡¡private void saveFile(){ <br>
+    ã€€ã€€private void saveFile(){ <br>
     <br>
-    ¡¡¡¡¡Î´ò¿ªzipÎÄ¼ş,½«doc×Ö·û´®±äÁ¿Ğ´ÈëzipÎÄ¼şÖĞ¡£ <br>
+    ã€€ã€€âˆ¥æ‰“å¼€zipæ–‡ä»¶,å°†docå­—ç¬¦ä¸²å˜é‡å†™å…¥zipæ–‡ä»¶ä¸­ã€‚ <br>
     <br>
-    ¡¡¡¡FileDialog dlg=new FileDialog(this,&quot;Save&quot;,FileDialog.SAVE); <br>
+    ã€€ã€€FileDialog dlg=new FileDialog(this,"Save",FileDialog.SAVE); <br>
     <br>
-    ¡¡¡¡dlg.show(); <br>
+    ã€€ã€€dlg.show(); <br>
     <br>
-    ¡¡¡¡String filename=dlg.getDirectory()+dlg.getFile(); <br>
+    ã€€ã€€String filename=dlg.getDirectory()+dlg.getFile(); <br>
     <br>
-    ¡¡¡¡try{ <br>
+    ã€€ã€€try{ <br>
     <br>
-    ¡¡¡¡¡Î´´½¨Ò»¸öÎÄ¼şÊµÀı <br>
+    ã€€ã€€âˆ¥åˆ›å»ºä¸€ä¸ªæ–‡ä»¶å®ä¾‹ <br>
     <br>
-    ¡¡¡¡File f=new File(filename); <br>
+    ã€€ã€€File f=new File(filename); <br>
     <br>
-    ¡¡¡¡if(!f.exists()) return; ¡ÎÎÄ¼ş²»´æÔÚ,Ôò·µ»Ø <br>
+    ã€€ã€€if(!f.exists()) return; âˆ¥æ–‡ä»¶ä¸å­˜åœ¨,åˆ™è¿”å› <br>
     <br>
-    ¡¡¡¡¡ÎÓÃÎÄ¼şÊä³öÁ÷¹¹½¨ZIPÑ¹ËõÊä³öÁ÷ <br>
+    ã€€ã€€âˆ¥ç”¨æ–‡ä»¶è¾“å‡ºæµæ„å»ºZIPå‹ç¼©è¾“å‡ºæµ <br>
     <br>
-    ¡¡¡¡ZipOutputStream zipos=new ZipOutputStream(new FileOutputStream(f)); <br>
+    ã€€ã€€ZipOutputStream zipos=new ZipOutputStream(new FileOutputStream(f)); <br>
     <br>
-    ¡¡¡¡zipos.setMethod(ZipOutputStream.DEFLATED); ¡ÎÉèÖÃÑ¹Ëõ·½·¨ <br>
+    ã€€ã€€zipos.setMethod(ZipOutputStream.DEFLATED); âˆ¥è®¾ç½®å‹ç¼©æ–¹æ³• <br>
     <br>
-    ¡¡¡¡zipos.putNextEntry(new ZipEntry(&quot;zip&quot;)); <br>
+    ã€€ã€€zipos.putNextEntry(new ZipEntry("zip")); <br>
     <br>
-    ¡¡¡¡¡ÎÉú³ÉÒ»¸öZIP entry,Ğ´ÈëÎÄ¼şÊä³öÁ÷ÖĞ,²¢½«Êä³öÁ÷¶¨Î»ÓÚentryÆğÊ¼´¦¡£ 
+    ã€€ã€€âˆ¥ç”Ÿæˆä¸€ä¸ªZIP entry,å†™å…¥æ–‡ä»¶è¾“å‡ºæµä¸­,å¹¶å°†è¾“å‡ºæµå®šä½äºentryèµ·å§‹å¤„ã€‚ 
     <br>
     <br>
-    ¡¡¡¡DataOutputStream os=new DataOutputStream(zipos); <br>
+    ã€€ã€€DataOutputStream os=new DataOutputStream(zipos); <br>
     <br>
-    ¡¡¡¡¡ÎÓÃZIPÊä³öÁ÷¹¹½¨DataOutputStream; <br>
+    ã€€ã€€âˆ¥ç”¨ZIPè¾“å‡ºæµæ„å»ºDataOutputStream; <br>
     <br>
-    ¡¡¡¡os.writeUTF(doc);¡Î½«Ëæ»úÉú³ÉµÄÊı¾İĞ´ÈëÎÄ¼şÖĞ <br>
+    ã€€ã€€os.writeUTF(doc);âˆ¥å°†éšæœºç”Ÿæˆçš„æ•°æ®å†™å…¥æ–‡ä»¶ä¸­ <br>
     <br>
-    ¡¡¡¡os.close();¡Î¹Ø±ÕÊı¾İÁ÷ <br>
+    ã€€ã€€os.close();âˆ¥å…³é—­æ•°æ®æµ <br>
     <br>
-    ¡¡¡¡doczipsize = f.length(); <br>
+    ã€€ã€€doczipsize = f.length(); <br>
     <br>
-    ¡¡¡¡¡Î»ñÈ¡Ñ¹ËõÎÄ¼şµÄ³¤¶È <br>
+    ã€€ã€€âˆ¥è·å–å‹ç¼©æ–‡ä»¶çš„é•¿åº¦ <br>
     <br>
-    ¡¡¡¡showTextandInfo();¡ÎÏÔÊ¾Êı¾İ <br>
+    ã€€ã€€showTextandInfo();âˆ¥æ˜¾ç¤ºæ•°æ® <br>
     <br>
-    ¡¡¡¡} <br>
+    ã€€ã€€} <br>
     <br>
-    ¡¡¡¡catch(IOException ioe){ <br>
+    ã€€ã€€catch(IOException ioe){ <br>
     <br>
-    ¡¡¡¡System.out.println(ioe); <br>
+    ã€€ã€€System.out.println(ioe); <br>
     <br>
-    ¡¡¡¡} <br>
+    ã€€ã€€} <br>
     <br>
-    ¡¡¡¡} <br>
+    ã€€ã€€} <br>
     <br>
-    ¡¡¡¡private void showTextandInfo(){ <br>
+    ã€€ã€€private void showTextandInfo(){ <br>
     <br>
-    ¡¡¡¡¡ÎÏÔÊ¾Êı¾İÎÄ¼şºÍÑ¹ËõĞÅÏ¢ <br>
+    ã€€ã€€âˆ¥æ˜¾ç¤ºæ•°æ®æ–‡ä»¶å’Œå‹ç¼©ä¿¡æ¯ <br>
     <br>
-    ¡¡¡¡textarea.replaceRange(doc,0,textarea.getText().length()); <br>
+    ã€€ã€€textarea.replaceRange(doc,0,textarea.getText().length()); <br>
     <br>
-    ¡¡¡¡infotip.setText(&quot;uncompressed size: &quot;+doc.length()+&quot;compressed size: 
-    &quot;+dc zipsize); <br>
+    ã€€ã€€infotip.setText("uncompressed size: "+doc.length()+"compressed size: 
+    "+dc zipsize); <br>
     <br>
-    ¡¡¡¡} <br>
+    ã€€ã€€} <br>
     <br>
-    ¡¡¡¡public void actionPerformed(ActionEvent e){ <br>
+    ã€€ã€€public void actionPerformed(ActionEvent e){ <br>
     <br>
-    ¡¡¡¡String arg = e.getActionCommand(); <br>
+    ã€€ã€€String arg = e.getActionCommand(); <br>
     <br>
-    ¡¡¡¡if (&quot;New&quot;.equals(arg)) randomData(); <br>
+    ã€€ã€€if ("New".equals(arg)) randomData(); <br>
     <br>
-    ¡¡¡¡else if (&quot;Open&quot;.equals(arg)) openFile(); <br>
+    ã€€ã€€else if ("Open".equals(arg)) openFile(); <br>
     <br>
-    ¡¡¡¡else if (&quot;Save&quot;.equals(arg)) saveFile(); <br>
+    ã€€ã€€else if ("Save".equals(arg)) saveFile(); <br>
     <br>
-    ¡¡¡¡else if (&quot;Exit&quot;.equals(arg)){ <br>
+    ã€€ã€€else if ("Exit".equals(arg)){ <br>
     <br>
-    ¡¡¡¡ dispose();¡Î¹Ø±Õ´°¿Ú <br>
+    ã€€ã€€ dispose();âˆ¥å…³é—­çª—å£ <br>
     <br>
-    ¡¡¡¡ System.exit(0);¡Î¹Ø±Õ³ÌĞò <br>
+    ã€€ã€€ System.exit(0);âˆ¥å…³é—­ç¨‹åº <br>
     <br>
-    ¡¡¡¡} <br>
+    ã€€ã€€} <br>
     <br>
-    ¡¡¡¡else { <br>
+    ã€€ã€€else { <br>
     <br>
-    ¡¡¡¡ System.out.println(&quot;no this command!&quot;); <br>
+    ã€€ã€€ System.out.println("no this command!"); <br>
     <br>
-    ¡¡¡¡} <br>
+    ã€€ã€€} <br>
     <br>
-    ¡¡¡¡} <br>
+    ã€€ã€€} <br>
     <br>
-    ¡¡¡¡} <br>
+    ã€€ã€€} <br>
     <br>
     </td>
   </tr>
 </table>
 </center></div>
+
+<p align="center">&nbsp; </p>
 
 <p align="center"><script language="JavaScript" src="bottom.js"></script> </p>
 </body>

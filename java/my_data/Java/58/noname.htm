@@ -1,50 +1,55 @@
-<html>
-<title>Google Guava Collections Ê¹ÓÃ½éÉÜ</title>
-<body>
-<!--StartFragment-->
-<p><a name="major1"><span class="atitle">Google Guava Collections Ê¹ÓÃ½éÉÜ</span></a></p>
-<p>Google Guava Collections£¨ÒÔÏÂ¶¼¼ò³ÆÎª Guava Collections£©ÊÇ Java 
-  Collections Framework µÄÔöÇ¿ºÍÀ©Õ¹¡£Ã¿¸ö Java ¿ª·¢Õß¶¼»áÔÚ¹¤×÷ÖĞÊ¹ÓÃ¸÷ÖÖÊı¾İ½á¹¹£¬ºÜ¶àÇé¿öÏÂ Java 
-  Collections Framework ¿ÉÒÔ°ïÖúÄãÍê³ÉÕâÀà¹¤×÷¡£µ«ÊÇÔÚÓĞĞ©³¡ºÏÄãÊ¹ÓÃÁË Java Collections Framework
-  µÄ API£¬µ«»¹ÊÇĞèÒªĞ´ºÜ¶à´úÂëÀ´ÊµÏÖÒ»Ğ©¸´ÔÓÂß¼­£¬Õâ¸öÊ±ºò¾Í¿ÉÒÔ³¢ÊÔÊ¹ÓÃ Guava Collections 
-  À´°ïÖúÄãÍê³ÉÕâĞ©¹¤×÷¡£ÕâĞ©¸ßÖÊÁ¿µÄ API Ê¹ÄãµÄ´úÂë¸ü¶Ì£¬¸üÒ×ÓÚÔÄ¶ÁºÍĞŞ¸Ä£¬¹¤×÷¸ü¼ÓÇáËÉ¡£</p>
-<p><a name="minor1.1"><span class="smalltitle">Ä¿±ê¶ÁÕß</span></a></p>
-<p>¶ÔÓÚÀí½â Java ¿ªÔ´¹¤¾ßÀ´Ëµ£¬±¾ÎÄ¶ÁÕßÖÁÉÙÓ¦¾ß±¸»ù´¡µÄ Java ÖªÊ¶£¬ÌØ±ğÊÇ JDK5 µÄÌØĞÔ¡£ÒòÎª Guava 
-  Collections ³ä·ÖÊ¹ÓÃÁË·¶ĞÍ£¬Ñ­»·ÔöÇ¿ÕâÑùµÄÌØĞÔ¡£×÷Îª Java Collections Framework µÄÔöÇ¿£¬¶ÁÕß±ØĞë¶Ô 
-  Java Collections Framework ÓĞÇåÎúµÄÀí½â£¬°üÀ¨Ö÷ÒªµÄ½Ó¿ÚÔ¼¶¨ºÍ³£ÓÃµÄÊµÏÖÀà¡£²¢ÇÒ Guava Collections 
-  ºÜ´ó³Ì¶ÈÉÏÊÇ°ïÖú¿ª·¢ÕßÍê³É±È½Ï¸´ÔÓµÄÊı¾İ½á¹¹µÄ²Ù×÷£¬Òò´Ë»ù´¡µÄÊı¾İ½á¹¹ºÍËã·¨µÄÖªÊ¶Ò²ÊÇÇåÎúÀí½â Guava Collections µÄ±ØÒªÌõ¼ş¡£</p>
-<p><a name="minor1.2"><span class="smalltitle">ÏîÄ¿±³¾°</span></a></p>
-<p>Guava Collections ÊÇ Google µÄ¹¤³ÌÊ¦ Kevin Bourrillion ºÍ Jared Levy 
-  ÔÚÖøÃû"20%"Ê±¼äĞ´µÄ´úÂë¡£µ±È»×÷Îª¿ªÔ´ÏîÄ¿»¹ÓĞÆäËûµÄ¿ª·¢Õß¹±Ï×ÁË´úÂë¡£ÔÚ±àĞ´µÄ¹ı³ÌÖĞ£¬Java Collections Framework 
-  µÄ×÷Õß Joshua Bloch Ò²²ÎÓëÁË´úÂëÉóºËºÍÌá³ö½¨Òé¡£Ä¿Ç°ËüÒÑ¾­ÒÆµ½ÁíÍâÒ»¸ö½Ğ guava-libraries µÄ¿ªÔ´ÏîÄ¿ÏÂÃæÀ´Î¬»¤¡£</p>
-<p>ÒòÎª¹¦ÄÜÏàËÆ¶øÇÒÓÖÍ¬ÊÇ¿ªÔ´ÏîÄ¿£¬ÈËÃÇºÜºÜ×ÔÈ»»á°ÑËüºÍ Apache Commons Collections À´×ö±È½Ï¡£ÆäÇø±ğ¹é½áÆğÀ´ÓĞÒÔÏÂ¼¸µã£º</p>
-<p>Guava Collections ³ä·ÖÀûÓÃÁË JDK5 µÄ·¶ĞÍºÍÃ¶¾ÙÕâÑùµÄÌØĞÔ£¬¶ø Apache Commons 
-  Collections ÔòÊÇ»ùÓÚ JDK1.2¡£Æä´Î Guava Collections ¸ü¼ÓÑÏ¸ñ×ñÊØ Java Collections 
-  Framework ¶¨ÒåµÄ½Ó¿ÚÆõÔ¼£¬¶øÔÚ Apache Commons Collections Äã»á·¢ÏÖ²»ÉÙÎ¥·´ÕâĞ© JDK 
-  ½Ó¿ÚÆõÔ¼µÄµØ·½¡£ÕâĞ©²»×ñÊØ±ê×¼µÄµØ·½¾ÍÊÇ³ö bug µÄ·çÏÕºÜ¸ß¡£×îºó Guava Collections 
-  ´¦ÓÚ»ı¼«µÄÎ¬»¤×´Ì¬£¬±¾ÎÄ½éÉÜµÄÌØĞÔ¶¼»ùÓÚÄ¿Ç°×îĞÂ 2011 Äê 4 ÔÂµÄ Guava r09 °æ±¾£¬¶ø Apache Commons 
-  Collections ×îĞÂÒ»´Î·¢²¼Ò²ÒÑ¾­ÊÇ 2008 ÄêÁË¡£</p>
-<p><a name="minor1.3"><span class="smalltitle">¹¦ÄÜÁĞ¾Ù</span></a></p>
-<p>¿ÉÒÔËµ Java Collections Framework 
-  Âú×ãÁËÎÒÃÇ´ó¶àÊıÇé¿öÏÂÊ¹ÓÃ¼¯ºÏµÄÒªÇó£¬µ«ÊÇµ±Óöµ½Ò»Ğ©ÌØÊâµÄÇé¿öÎÒÃÇµÄ´úÂë»á±È½ÏÈß³¤£¬±È½ÏÈİÒ×³ö´í¡£Guava Collections 
-  ¿ÉÒÔ°ïÖúÄãµÄ´úÂë¸ü¼ò¶Ì¾«Á¶£¬¸üÖØÒªÊÇËüÔöÇ¿ÁË´úÂëµÄ¿É¶ÁĞÔ¡£¿´¿´ Guava Collections ÎªÎÒÃÇ×öÁËÄÄĞ©ºÜ¿áµÄÊÂÇé¡£</p>
+ï»¿<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Google Guava Collections ä½¿ç”¨ä»‹ç»</title>
+<body><!--StartFragment-->
+<p><a name="major1"><span class="atitle">Google Guava Collections ä½¿ç”¨ä»‹ç»</span></a></p>
+<p>Google Guava Collectionsï¼ˆä»¥ä¸‹éƒ½ç®€ç§°ä¸º Guava Collectionsï¼‰æ˜¯ Java 
+  Collections Framework çš„å¢å¼ºå’Œæ‰©å±•ã€‚æ¯ä¸ª Java å¼€å‘è€…éƒ½ä¼šåœ¨å·¥ä½œä¸­ä½¿ç”¨å„ç§æ•°æ®ç»“æ„ï¼Œå¾ˆå¤šæƒ…å†µä¸‹ Java 
+  Collections Framework å¯ä»¥å¸®åŠ©ä½ å®Œæˆè¿™ç±»å·¥ä½œã€‚ä½†æ˜¯åœ¨æœ‰äº›åœºåˆä½ ä½¿ç”¨äº† Java Collections Framework
+  çš„ APIï¼Œä½†è¿˜æ˜¯éœ€è¦å†™å¾ˆå¤šä»£ç æ¥å®ç°ä¸€äº›å¤æ‚é€»è¾‘ï¼Œè¿™ä¸ªæ—¶å€™å°±å¯ä»¥å°è¯•ä½¿ç”¨ Guava Collections 
+  æ¥å¸®åŠ©ä½ å®Œæˆè¿™äº›å·¥ä½œã€‚è¿™äº›é«˜è´¨é‡çš„ API ä½¿ä½ çš„ä»£ç æ›´çŸ­ï¼Œæ›´æ˜“äºé˜…è¯»å’Œä¿®æ”¹ï¼Œå·¥ä½œæ›´åŠ è½»æ¾ã€‚</p>
+<p><a name="minor1.1"><span class="smalltitle">ç›®æ ‡è¯»è€…</span></a></p>
+<p>å¯¹äºç†è§£ Java å¼€æºå·¥å…·æ¥è¯´ï¼Œæœ¬æ–‡è¯»è€…è‡³å°‘åº”å…·å¤‡åŸºç¡€çš„ Java çŸ¥è¯†ï¼Œç‰¹åˆ«æ˜¯ JDK5 çš„ç‰¹æ€§ã€‚å› ä¸º Guava 
+  Collections å……åˆ†ä½¿ç”¨äº†èŒƒå‹ï¼Œå¾ªç¯å¢å¼ºè¿™æ ·çš„ç‰¹æ€§ã€‚ä½œä¸º Java Collections Framework çš„å¢å¼ºï¼Œè¯»è€…å¿…é¡»å¯¹ 
+  Java Collections Framework æœ‰æ¸…æ™°çš„ç†è§£ï¼ŒåŒ…æ‹¬ä¸»è¦çš„æ¥å£çº¦å®šå’Œå¸¸ç”¨çš„å®ç°ç±»ã€‚å¹¶ä¸” Guava Collections 
+  å¾ˆå¤§ç¨‹åº¦ä¸Šæ˜¯å¸®åŠ©å¼€å‘è€…å®Œæˆæ¯”è¾ƒå¤æ‚çš„æ•°æ®ç»“æ„çš„æ“ä½œï¼Œå› æ­¤åŸºç¡€çš„æ•°æ®ç»“æ„å’Œç®—æ³•çš„çŸ¥è¯†ä¹Ÿæ˜¯æ¸…æ™°ç†è§£ Guava Collections çš„å¿…è¦æ¡ä»¶ã€‚</p>
+<p><a name="minor1.2"><span class="smalltitle">é¡¹ç›®èƒŒæ™¯</span></a></p>
+<p>Guava Collections æ˜¯ Google çš„å·¥ç¨‹å¸ˆ Kevin Bourrillion å’Œ Jared Levy 
+  åœ¨è‘—å"20%"æ—¶é—´å†™çš„ä»£ç ã€‚å½“ç„¶ä½œä¸ºå¼€æºé¡¹ç›®è¿˜æœ‰å…¶ä»–çš„å¼€å‘è€…è´¡çŒ®äº†ä»£ç ã€‚åœ¨ç¼–å†™çš„è¿‡ç¨‹ä¸­ï¼ŒJava Collections Framework 
+  çš„ä½œè€… Joshua Bloch ä¹Ÿå‚ä¸äº†ä»£ç å®¡æ ¸å’Œæå‡ºå»ºè®®ã€‚ç›®å‰å®ƒå·²ç»ç§»åˆ°å¦å¤–ä¸€ä¸ªå« guava-libraries çš„å¼€æºé¡¹ç›®ä¸‹é¢æ¥ç»´æŠ¤ã€‚</p>
+<p>å› ä¸ºåŠŸèƒ½ç›¸ä¼¼è€Œä¸”åˆåŒæ˜¯å¼€æºé¡¹ç›®ï¼Œäººä»¬å¾ˆå¾ˆè‡ªç„¶ä¼šæŠŠå®ƒå’Œ Apache Commons Collections æ¥åšæ¯”è¾ƒã€‚å…¶åŒºåˆ«å½’ç»“èµ·æ¥æœ‰ä»¥ä¸‹å‡ ç‚¹ï¼š</p>
+<p>Guava Collections å……åˆ†åˆ©ç”¨äº† JDK5 çš„èŒƒå‹å’Œæšä¸¾è¿™æ ·çš„ç‰¹æ€§ï¼Œè€Œ Apache Commons 
+  Collections åˆ™æ˜¯åŸºäº JDK1.2ã€‚å…¶æ¬¡ Guava Collections æ›´åŠ ä¸¥æ ¼éµå®ˆ Java Collections 
+  Framework å®šä¹‰çš„æ¥å£å¥‘çº¦ï¼Œè€Œåœ¨ Apache Commons Collections ä½ ä¼šå‘ç°ä¸å°‘è¿åè¿™äº› JDK 
+  æ¥å£å¥‘çº¦çš„åœ°æ–¹ã€‚è¿™äº›ä¸éµå®ˆæ ‡å‡†çš„åœ°æ–¹å°±æ˜¯å‡º bug çš„é£é™©å¾ˆé«˜ã€‚æœ€å Guava Collections 
+  å¤„äºç§¯æçš„ç»´æŠ¤çŠ¶æ€ï¼Œæœ¬æ–‡ä»‹ç»çš„ç‰¹æ€§éƒ½åŸºäºç›®å‰æœ€æ–° 2011 å¹´ 4 æœˆçš„ Guava r09 ç‰ˆæœ¬ï¼Œè€Œ Apache Commons 
+  Collections æœ€æ–°ä¸€æ¬¡å‘å¸ƒä¹Ÿå·²ç»æ˜¯ 2008 å¹´äº†ã€‚</p>
+<p><a name="minor1.3"><span class="smalltitle">åŠŸèƒ½åˆ—ä¸¾</span></a></p>
+<p>å¯ä»¥è¯´ Java Collections Framework 
+  æ»¡è¶³äº†æˆ‘ä»¬å¤§å¤šæ•°æƒ…å†µä¸‹ä½¿ç”¨é›†åˆçš„è¦æ±‚ï¼Œä½†æ˜¯å½“é‡åˆ°ä¸€äº›ç‰¹æ®Šçš„æƒ…å†µæˆ‘ä»¬çš„ä»£ç ä¼šæ¯”è¾ƒå†—é•¿ï¼Œæ¯”è¾ƒå®¹æ˜“å‡ºé”™ã€‚Guava Collections 
+  å¯ä»¥å¸®åŠ©ä½ çš„ä»£ç æ›´ç®€çŸ­ç²¾ç‚¼ï¼Œæ›´é‡è¦æ˜¯å®ƒå¢å¼ºäº†ä»£ç çš„å¯è¯»æ€§ã€‚çœ‹çœ‹ Guava Collections ä¸ºæˆ‘ä»¬åšäº†å“ªäº›å¾ˆé…·çš„äº‹æƒ…ã€‚</p>
 <ul>
-  <li> Immutable Collections: »¹ÔÚÊ¹ÓÃ Collections.unmodifiableXXX() £¿ Immutable Collections Õâ²ÅÊÇÕæÕıµÄ²»¿ÉĞŞ¸ÄµÄ¼¯ºÏ</li>
-  <li> Multiset: ¿´¿´ÈçºÎ°ÑÖØ¸´µÄÔªËØ·ÅÈëÒ»¸ö¼¯ºÏ</li>
-  <li> Multimaps: ĞèÒªÔÚÒ»¸ö key ¶ÔÓ¦¶à¸ö value µÄÊ±ºò , ×Ô¼ºĞ´Ò»¸öÊµÏÖ±È½Ï·±Ëö - ÈÃ Multimaps À´°ïÃ¦</li>
-  <li> BiMap: java.util.Map Ö»ÄÜ±£Ö¤ key µÄ²»ÖØ¸´£¬BiMap ±£Ö¤ value Ò²²»ÖØ¸´</li>
-  <li> MapMaker: ³¬¼¶Ç¿´óµÄ Map ¹¹ÔìÀà</li>
-  <li> Ordering class: ´ó¼ÒÖªµÀÓÃ Comparator ×÷Îª±È½ÏÆ÷À´¶Ô¼¯ºÏÅÅĞò£¬µ«ÊÇ¶ÔÓÚ¶à¹Ø¼ü×ÖÅÅĞò Ordering class ¿ÉÒÔ¼ò»¯ºÜ¶àµÄ´úÂë</li>
-  <li> ÆäËûÌØĞÔ</li>
+  <li> Immutable Collections: è¿˜åœ¨ä½¿ç”¨ 
+  Collections.unmodifiableXXX() ï¼Ÿ Immutable Collections è¿™æ‰æ˜¯çœŸæ­£çš„ä¸å¯ä¿®æ”¹çš„é›†åˆ 
+  <li> Multiset: çœ‹çœ‹å¦‚ä½•æŠŠé‡å¤çš„å…ƒç´ æ”¾å…¥ä¸€ä¸ªé›†åˆ 
+  <li> Multimaps: éœ€è¦åœ¨ä¸€ä¸ª key å¯¹åº”å¤šä¸ª value çš„æ—¶å€™ , è‡ªå·±å†™ä¸€ä¸ªå®ç°æ¯”è¾ƒç¹ç - è®© 
+  Multimaps æ¥å¸®å¿™ 
+  <li> BiMap: java.util.Map åªèƒ½ä¿è¯ key çš„ä¸é‡å¤ï¼ŒBiMap ä¿è¯ value 
+  ä¹Ÿä¸é‡å¤ 
+  <li> MapMaker: è¶…çº§å¼ºå¤§çš„ Map æ„é€ ç±» 
+  <li> Ordering class: å¤§å®¶çŸ¥é“ç”¨ Comparator 
+  ä½œä¸ºæ¯”è¾ƒå™¨æ¥å¯¹é›†åˆæ’åºï¼Œä½†æ˜¯å¯¹äºå¤šå…³é”®å­—æ’åº Ordering class å¯ä»¥ç®€åŒ–å¾ˆå¤šçš„ä»£ç  
+  <li> å…¶ä»–ç‰¹æ€§</li>
 </ul>
-<p>µ±È»£¬Èç¹ûÃ»ÓĞ Guava Collections ÄãÒ²¿ÉÒÔÓÃ Java Collections Framework 
-  Íê³ÉÉÏÃæµÄ¹¦ÄÜ¡£µ«ÊÇ Guava Collections Ìá¹©µÄÕâĞ© API ¾­¹ı¾«ĞÄÉè¼Æ£¬¶øÇÒ»¹ÓĞ 25000 
-  ¸öµ¥Ôª²âÊÔÀ´±£ÕÏËüµÄÖÊÁ¿¡£ËùÒÔÎÒÃÇÃ»±ØÒªÖØĞÂ·¢Ã÷ÂÖ×Ó¡£½ÓÏÂÀ´ÎÒÃÇÀ´ÏêÏ¸¿´¿´ Guava Collections µÄÒ»Ğ©¾ßÌå¹¦ÄÜ¡£</p>
+<p>å½“ç„¶ï¼Œå¦‚æœæ²¡æœ‰ Guava Collections ä½ ä¹Ÿå¯ä»¥ç”¨ Java Collections Framework 
+  å®Œæˆä¸Šé¢çš„åŠŸèƒ½ã€‚ä½†æ˜¯ Guava Collections æä¾›çš„è¿™äº› API ç»è¿‡ç²¾å¿ƒè®¾è®¡ï¼Œè€Œä¸”è¿˜æœ‰ 25000 
+  ä¸ªå•å…ƒæµ‹è¯•æ¥ä¿éšœå®ƒçš„è´¨é‡ã€‚æ‰€ä»¥æˆ‘ä»¬æ²¡å¿…è¦é‡æ–°å‘æ˜è½®å­ã€‚æ¥ä¸‹æ¥æˆ‘ä»¬æ¥è¯¦ç»†çœ‹çœ‹ Guava Collections çš„ä¸€äº›å…·ä½“åŠŸèƒ½ã€‚</p>
 <div class="ibm-alternate-rule"></div>
-<p class="ibm-ind-link ibm-back-to-top"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-googlecollection/#ibm-pcon" class="ibm-anchor-up-link">»ØÒ³Ê×</a></p>
-<p><a name="major2"><span class="atitle">Immutable Collections: ÕæÕıµÄ²»¿ÉĞŞ¸ÄµÄ¼¯ºÏ</span></a></p>
-<p>´ó¼Ò¶¼ÓÃ¹ı Collections.unmodifiableXXX() À´×öÒ»¸ö²»¿ÉĞŞ¸ÄµÄ¼¯ºÏ¡£ÀıÈçÄãÒª¹¹Ôì´æ´¢³£Á¿µÄ Set£¬Äã¿ÉÒÔÕâÑùÀ´×ö :</p>
-<table summary="This table contains a code listing." border="0" cellpadding="0" cellspacing="0" width="100%">
+<p class="ibm-ind-link ibm-back-to-top"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-googlecollection/#ibm-pcon" class="ibm-anchor-up-link">å›é¡µé¦–</a></p>
+<p><a name="major2"><span class="atitle">Immutable Collections: çœŸæ­£çš„ä¸å¯ä¿®æ”¹çš„é›†åˆ</span></a></p>
+<p>å¤§å®¶éƒ½ç”¨è¿‡ Collections.unmodifiableXXX() æ¥åšä¸€ä¸ªä¸å¯ä¿®æ”¹çš„é›†åˆã€‚ä¾‹å¦‚ä½ è¦æ„é€ å­˜å‚¨å¸¸é‡çš„ Setï¼Œä½ å¯ä»¥è¿™æ ·æ¥åš :</p>
+<table border="0" cellpadding     ="0" cellspacing="0" width="100%" summary="This table contains a code listing.">
   <tbody>
     <tr>
       <td class="code-outline"><pre class="displaycode"> Set&lt;String&gt; set = new HashSet&lt;String&gt;(Arrays.asList(new String[]{"RED", "GREEN"})); 
@@ -54,11 +59,11 @@
   </tbody>
 </table>
 <br>
-<p>Õâ¿´ÉÏÈ¥ËÆºõ²»´í£¬ÒòÎªÃ¿´Îµ÷ unmodifiableSet.add() ¶¼»áÅ×³öÒ»¸ö 
-  UnsupportedOperationException¡£¸Ğ¾õ°²È«ÁË£¿Âı£¡Èç¹ûÓĞÈËÔÚÔ­À´µÄ set ÉÏ add »òÕß remove 
-  ÔªËØ»áÔõÃ´Ñù£¿½á¹û unmodifiableSet Ò²ÊÇ±» add »òÕß remove ÔªËØÁË¡£¶øÇÒ¹¹ÔìÕâÑùÒ»¸ö¼òµ¥µÄ set 
-  Ğ´ÁËÁ½¾ä³¤µÄ´úÂë¡£ÏÂÃæ¿´¿´ ImmutableSet ÊÇÔõÃ´À´×öµØ¸ü°²È«ºÍ¼ò½à :</p>
-<table summary="This table contains a code listing." border="0" cellpadding="0" cellspacing="0" width="100%">
+<p>è¿™çœ‹ä¸Šå»ä¼¼ä¹ä¸é”™ï¼Œå› ä¸ºæ¯æ¬¡è°ƒ unmodifiableSet.add() éƒ½ä¼šæŠ›å‡ºä¸€ä¸ª 
+  UnsupportedOperationExceptionã€‚æ„Ÿè§‰å®‰å…¨äº†ï¼Ÿæ…¢ï¼å¦‚æœæœ‰äººåœ¨åŸæ¥çš„ set ä¸Š add æˆ–è€… remove 
+  å…ƒç´ ä¼šæ€ä¹ˆæ ·ï¼Ÿç»“æœ unmodifiableSet ä¹Ÿæ˜¯è¢« add æˆ–è€… remove å…ƒç´ äº†ã€‚è€Œä¸”æ„é€ è¿™æ ·ä¸€ä¸ªç®€å•çš„ set 
+  å†™äº†ä¸¤å¥é•¿çš„ä»£ç ã€‚ä¸‹é¢çœ‹çœ‹ ImmutableSet æ˜¯æ€ä¹ˆæ¥åšåœ°æ›´å®‰å…¨å’Œç®€æ´ :</p>
+<table border="0" cellpadding     ="0" cellspacing="0" width="100%" summary="This table contains a code listing.">
   <tbody>
     <tr>
       <td class="code-outline"><pre class="displaycode"> ImmutableSet&lt;String&gt; immutableSet = ImmutableSet.of("RED", "GREEN"); 
@@ -67,8 +72,8 @@
   </tbody>
 </table>
 <br>
-<p>¾ÍÕâÑùÒ»¾ä¾Í¹»ÁË£¬¶øÇÒÊÔÍ¼µ÷ add ·½·¨µÄÊ±ºò£¬ËüÒ»Ñù»áÅ×³ö UnsupportedOperationException¡£ÖØÒªµÄÊÇ´úÂëµÄ¿É¶ÁĞÔÔöÇ¿ÁË²»ÉÙ£¬·Ç³£Ö±¹ÛµØÕ¹ÏÖÁË´úÂëµÄÓÃÒâ¡£Èç¹ûÏñÖ®Ç°Õâ¸ö´úÂë±£»¤Ò»¸ö set ÔõÃ´×öÄØ£¿Äã¿ÉÒÔ :</p>
-<table summary="This table contains a code listing." border="0" cellpadding="0" cellspacing="0" width="100%">
+<p>å°±è¿™æ ·ä¸€å¥å°±å¤Ÿäº†ï¼Œè€Œä¸”è¯•å›¾è°ƒ add æ–¹æ³•çš„æ—¶å€™ï¼Œå®ƒä¸€æ ·ä¼šæŠ›å‡º UnsupportedOperationExceptionã€‚é‡è¦çš„æ˜¯ä»£ç çš„å¯è¯»æ€§å¢å¼ºäº†ä¸å°‘ï¼Œéå¸¸ç›´è§‚åœ°å±•ç°äº†ä»£ç çš„ç”¨æ„ã€‚å¦‚æœåƒä¹‹å‰è¿™ä¸ªä»£ç ä¿æŠ¤ä¸€ä¸ª set æ€ä¹ˆåšå‘¢ï¼Ÿä½ å¯ä»¥ :</p>
+<table border="0" cellpadding     ="0" cellspacing="0" width="100%" summary="This table contains a code listing.">
   <tbody>
     <tr>
       <td class="code-outline"><pre class="displaycode"> ImmutableSet&lt;String&gt; immutableSet = ImmutableSet.copyOf(set); 
@@ -77,8 +82,8 @@
   </tbody>
 </table>
 <br>
-<p>´Ó¹¹ÔìµÄ·½Ê½À´Ëµ£¬ImmutableSet ¼¯ºÏ»¹Ìá¹©ÁË Builder Ä£Ê½À´¹¹ÔìÒ»¸ö¼¯ºÏ :</p>
-<table summary="This table contains a code listing." border="0" cellpadding="0" cellspacing="0" width="100%">
+<p>ä»æ„é€ çš„æ–¹å¼æ¥è¯´ï¼ŒImmutableSet é›†åˆè¿˜æä¾›äº† Builder æ¨¡å¼æ¥æ„é€ ä¸€ä¸ªé›†åˆ :</p>
+<table border="0" cellpadding     ="0" cellspacing="0" width="100%" summary="This table contains a code listing.">
   <tbody>
     <tr>
       <td class="code-outline"><pre class="displaycode"> Builder&lt;String&gt;  builder = ImmutableSet.builder(); 
@@ -88,16 +93,16 @@
   </tbody>
 </table>
 <br>
-<p>ÔÚÕâ¸öÀı×ÓÀïÃæ Builder ²»µ«ÄÜ¼ÓÈëµ¥¸öÔªËØ»¹ÄÜ¼ÓÈë¼ÈÓĞµÄ¼¯ºÏ¡£</p>
-<p>³ı´ËÖ®Íâ£¬Guava Collections »¹Ìá¹©ÁË¸÷ÖÖ Immutable ¼¯ºÏµÄÊµÏÖ£ºImmutableList£¬ImmutableMap£¬ImmutableSortedSet£¬ImmutableSortedMap¡£</p>
+<p>åœ¨è¿™ä¸ªä¾‹å­é‡Œé¢ Builder ä¸ä½†èƒ½åŠ å…¥å•ä¸ªå…ƒç´ è¿˜èƒ½åŠ å…¥æ—¢æœ‰çš„é›†åˆã€‚</p>
+<p>é™¤æ­¤ä¹‹å¤–ï¼ŒGuava Collections è¿˜æä¾›äº†å„ç§ Immutable é›†åˆçš„å®ç°ï¼šImmutableListï¼ŒImmutableMapï¼ŒImmutableSortedSetï¼ŒImmutableSortedMapã€‚</p>
 <div class="ibm-alternate-rule"></div>
-<p class="ibm-ind-link ibm-back-to-top"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-googlecollection/#ibm-pcon" class="ibm-anchor-up-link">»ØÒ³Ê×</a></p>
-<p><a name="major3"><span class="atitle">Multiset: °ÑÖØ¸´µÄÔªËØ·ÅÈë¼¯ºÏ</span></a></p>
-<p>Äã¿ÉÄÜ»áËµÕâºÍ Set ½Ó¿ÚµÄÆõÔ¼³åÍ»£¬ÒòÎª Set ½Ó¿ÚµÄ JavaDoc ÀïÃæ¹æ¶¨²»ÄÜ·ÅÈëÖØ¸´ÔªËØ¡£ÊÂÊµÉÏ£¬Multiset 
-  ²¢Ã»ÓĞÊµÏÖ java.util.Set ½Ó¿Ú£¬Ëü¸üÏñÊÇÒ»¸ö Bag¡£ÆÕÍ¨µÄ Set ¾ÍÏñÕâÑù :[car, ship, bike]£¬¶ø 
-  Multiset »áÊÇÕâÑù : [car x 2, ship x 6, bike x 3]¡£</p>
-<p>Æ©ÈçÒ»¸ö List ÀïÃæÓĞ¸÷ÖÖ×Ö·û´®£¬È»ºóÄãÒªÍ³¼ÆÃ¿¸ö×Ö·û´®ÔÚ List ÀïÃæ³öÏÖµÄ´ÎÊı :</p>
-<table summary="This table contains a code listing." border="0" cellpadding="0" cellspacing="0" width="100%">
+<p class="ibm-ind-link ibm-back-to-top"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-googlecollection/#ibm-pcon" class="ibm-anchor-up-link">å›é¡µé¦–</a></p>
+<p><a name="major3"><span class="atitle">Multiset: æŠŠé‡å¤çš„å…ƒç´ æ”¾å…¥é›†åˆ</span></a></p>
+<p>ä½ å¯èƒ½ä¼šè¯´è¿™å’Œ Set æ¥å£çš„å¥‘çº¦å†²çªï¼Œå› ä¸º Set æ¥å£çš„ JavaDoc é‡Œé¢è§„å®šä¸èƒ½æ”¾å…¥é‡å¤å…ƒç´ ã€‚äº‹å®ä¸Šï¼ŒMultiset 
+  å¹¶æ²¡æœ‰å®ç° java.util.Set æ¥å£ï¼Œå®ƒæ›´åƒæ˜¯ä¸€ä¸ª Bagã€‚æ™®é€šçš„ Set å°±åƒè¿™æ · :[car, ship, bike]ï¼Œè€Œ 
+  Multiset ä¼šæ˜¯è¿™æ · : [car x 2, ship x 6, bike x 3]ã€‚</p>
+<p>è­¬å¦‚ä¸€ä¸ª List é‡Œé¢æœ‰å„ç§å­—ç¬¦ä¸²ï¼Œç„¶åä½ è¦ç»Ÿè®¡æ¯ä¸ªå­—ç¬¦ä¸²åœ¨ List é‡Œé¢å‡ºç°çš„æ¬¡æ•° :</p>
+<table border="0" cellpadding     ="0" cellspacing="0" width="100%" summary="This table contains a code listing.">
   <tbody>
     <tr>
       <td class="code-outline"><pre class="displaycode"> Map&lt;String, Integer&gt; map = new HashMap&lt;String, Integer&gt;(); 
@@ -105,49 +110,50 @@
     Integer count = map.get(word); 
     map.put(word, (count == null) ? 1 : count + 1); 
  } 
- //count word ¡°the¡±
- Integer count = map.get(¡°the¡±); 
+ //count word â€œtheâ€
+ Integer count = map.get(â€œtheâ€); 
 </pre></td>
     </tr>
   </tbody>
 </table>
 <br>
-<p>Èç¹ûÓÃ Multiset ¾Í¿ÉÒÔÕâÑù :</p>
-<table summary="This table contains a code listing." border="0" cellpadding="0" cellspacing="0" width="100%">
+<p>å¦‚æœç”¨ Multiset å°±å¯ä»¥è¿™æ · :</p>
+<table border="0" cellpadding     ="0" cellspacing="0" width="100%" summary="This table contains a code listing.">
   <tbody>
     <tr>
       <td class="code-outline"><pre class="displaycode"> HashMultiset&lt;String&gt; multiSet = HashMultiset.create(); 
  multiSet.addAll(wordList); 
- //count word ¡°the¡±
- Integer count = multiSet.count(¡°the¡±); 
+ //count word â€œtheâ€
+ Integer count = multiSet.count(â€œtheâ€); 
 </pre></td>
     </tr>
   </tbody>
 </table>
 <br>
-<p>ÕâÑùÁ¬Ñ­»·¶¼²»ÓÃÁË£¬¶øÇÒ Multiset ÓÃµÄ·½·¨½Ğ count£¬ÏÔÈ»±ÈÔÚ Map ÀïÃæµ÷ get 
-  ÓĞ¸üºÃµÄ¿É¶ÁĞÔ¡£Multiset »¹Ìá¹©ÁË setCount ÕâÑùÉè¶¨ÔªËØÖØ¸´´ÎÊıµÄ·½·¨£¬ËäÈ»Äã¿ÉÒÔÍ¨¹ıÊ¹ÓÃ Map 
-  À´ÊµÏÖÀàËÆµÄ¹¦ÄÜ£¬µ«ÊÇ³ÌĞòµÄ¿É¶ÁĞÔ±È Multiset ²îÁËºÜ¶à¡£</p>
-<p>³£ÓÃÊµÏÖ Multiset ½Ó¿ÚµÄÀàÓĞ£º</p>
+<p>è¿™æ ·è¿å¾ªç¯éƒ½ä¸ç”¨äº†ï¼Œè€Œä¸” Multiset ç”¨çš„æ–¹æ³•å« countï¼Œæ˜¾ç„¶æ¯”åœ¨ Map é‡Œé¢è°ƒ get 
+  æœ‰æ›´å¥½çš„å¯è¯»æ€§ã€‚Multiset è¿˜æä¾›äº† setCount è¿™æ ·è®¾å®šå…ƒç´ é‡å¤æ¬¡æ•°çš„æ–¹æ³•ï¼Œè™½ç„¶ä½ å¯ä»¥é€šè¿‡ä½¿ç”¨ Map 
+  æ¥å®ç°ç±»ä¼¼çš„åŠŸèƒ½ï¼Œä½†æ˜¯ç¨‹åºçš„å¯è¯»æ€§æ¯” Multiset å·®äº†å¾ˆå¤šã€‚</p>
+<p>å¸¸ç”¨å®ç° Multiset æ¥å£çš„ç±»æœ‰ï¼š</p>
 <ul>
-  <li> HashMultiset: ÔªËØ´æ·ÅÓÚ HashMap</li>
-  <li> LinkedHashMultiset: ÔªËØ´æ·ÅÓÚ LinkedHashMap£¬¼´ÔªËØµÄÅÅÁĞË³ĞòÓÉµÚÒ»´Î·ÅÈëµÄË³Ğò¾ö¶¨</li>
-  <li> TreeMultiset:<code>ÔªËØ±»ÅÅĞò´æ·ÅÓÚ</code>TreeMap</li>
-  <li> EnumMultiset: ÔªËØ±ØĞëÊÇ enum ÀàĞÍ</li>
-  <li> ImmutableMultiset: ²»¿ÉĞŞ¸ÄµÄ Mutiset</li>
+  <li> HashMultiset: å…ƒç´ å­˜æ”¾äº HashMap 
+  <li> LinkedHashMultiset: å…ƒç´ å­˜æ”¾äº 
+  LinkedHashMapï¼Œå³å…ƒç´ çš„æ’åˆ—é¡ºåºç”±ç¬¬ä¸€æ¬¡æ”¾å…¥çš„é¡ºåºå†³å®š 
+  <li> TreeMultiset:<code>å…ƒç´ è¢«æ’åºå­˜æ”¾äº</code>TreeMap 
+  <li> EnumMultiset: å…ƒç´ å¿…é¡»æ˜¯ enum ç±»å‹ 
+  <li> ImmutableMultiset: ä¸å¯ä¿®æ”¹çš„ Mutiset</li>
 </ul>
-<p>¿´µ½ÕâÀïÄã¿ÉÄÜÒÑ¾­·¢ÏÖ Guava Collections ¶¼ÊÇÒÔ create »òÊÇ of 
-  ÕâÑùµÄ¾²Ì¬·½·¨À´¹¹Ôì¶ÔÏó¡£ÕâÊÇÒòÎªÕâĞ©¼¯ºÏÀà´ó¶àÓĞ¶à¸ö²ÎÊıµÄË½ÓĞ¹¹Ôì·½·¨£¬ÓÉÓÚ²ÎÊıÊıÄ¿ºÜ¶à£¬¿Í»§´úÂë³ÌĞòÔ±Ê¹ÓÃÆğÀ´¾ÍºÜ²»·½±ã¡£¶øÇÒÒÔÕâÖÖ·½Ê½¿ÉÒÔ
-  ·µ»ØÔ­ÀàĞÍµÄ×ÓÀàĞÍ¶ÔÏó¡£ÁíÍâ£¬¶ÔÓÚ´´½¨·¶ĞÍ¶ÔÏóÀ´½²£¬ÕâÖÖ·½Ê½¸ü¼Ó¼ò½à¡£</p>
+<p>çœ‹åˆ°è¿™é‡Œä½ å¯èƒ½å·²ç»å‘ç° Guava Collections éƒ½æ˜¯ä»¥ create æˆ–æ˜¯ of 
+  è¿™æ ·çš„é™æ€æ–¹æ³•æ¥æ„é€ å¯¹è±¡ã€‚è¿™æ˜¯å› ä¸ºè¿™äº›é›†åˆç±»å¤§å¤šæœ‰å¤šä¸ªå‚æ•°çš„ç§æœ‰æ„é€ æ–¹æ³•ï¼Œç”±äºå‚æ•°æ•°ç›®å¾ˆå¤šï¼Œå®¢æˆ·ä»£ç ç¨‹åºå‘˜ä½¿ç”¨èµ·æ¥å°±å¾ˆä¸æ–¹ä¾¿ã€‚è€Œä¸”ä»¥è¿™ç§æ–¹å¼å¯ä»¥
+  è¿”å›åŸç±»å‹çš„å­ç±»å‹å¯¹è±¡ã€‚å¦å¤–ï¼Œå¯¹äºåˆ›å»ºèŒƒå‹å¯¹è±¡æ¥è®²ï¼Œè¿™ç§æ–¹å¼æ›´åŠ ç®€æ´ã€‚</p>
 <div class="ibm-alternate-rule"></div>
-<p class="ibm-ind-link ibm-back-to-top"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-googlecollection/#ibm-pcon" class="ibm-anchor-up-link">»ØÒ³Ê×</a></p>
-<p><a name="major4"><span class="atitle">Multimap: ÔÚ Map µÄ value ÀïÃæ·Å¶à¸öÔªËØ</span></a></p>
-<p>Muitimap ¾ÍÊÇÒ»¸ö key ¶ÔÓ¦¶à¸ö value µÄÊı¾İ½á¹¹¡£¿´ÉÏÈ¥ËüºÜÏñ java.util.Map µÄ½á¹¹£¬µ«ÊÇ 
-  Muitimap ²»ÊÇ Map£¬Ã»ÓĞÊµÏÖ Map µÄ½Ó¿Ú¡£ÉèÏëÄã¶Ô Map µ÷ÁË 2 ´Î²ÎÊı key Ò»ÑùµÄ put ·½·¨£¬½á¹û¾ÍÊÇµÚ 2 ´ÎµÄ
-  value ¸²¸ÇÁËµÚ 1 ´ÎµÄ value¡£µ«ÊÇ¶Ô Muitimap À´ËµÕâ¸ö key Í¬Ê±¶ÔÓ¦ÁË 2 ¸ö value¡£ËùÒÔ Map ¿´ÉÏÈ¥ÊÇ
-  : {k1=v1, k2=v2,...}£¬¶ø Muitimap ÊÇ :{k1=[v1, v2, v3], k2=[v7, v8],....}¡£</p>
-<p>¾Ù¸ö¼ÇÃûÍ¶Æ±µÄÀı×Ó¡£ËùÓĞÑ¡Æ±¶¼·ÅÔÚÒ»¸ö List&lt;Ticket&gt; ÀïÃæ£¬List µÄÃ¿¸öÔªËØ°üÀ¨Í¶Æ±ÈËºÍÑ¡¾ÙÈËµÄÃû×Ö¡£ÎÒÃÇ¿ÉÒÔÕâÑùĞ´ :</p>
-<table summary="This table contains a code listing." border="0" cellpadding="0" cellspacing="0" width="100%">
+<p class="ibm-ind-link ibm-back-to-top"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-googlecollection/#ibm-pcon" class="ibm-anchor-up-link">å›é¡µé¦–</a></p>
+<p><a name="major4"><span class="atitle">Multimap: åœ¨ Map çš„ value é‡Œé¢æ”¾å¤šä¸ªå…ƒç´ </span></a></p>
+<p>Muitimap å°±æ˜¯ä¸€ä¸ª key å¯¹åº”å¤šä¸ª value çš„æ•°æ®ç»“æ„ã€‚çœ‹ä¸Šå»å®ƒå¾ˆåƒ java.util.Map çš„ç»“æ„ï¼Œä½†æ˜¯ 
+  Muitimap ä¸æ˜¯ Mapï¼Œæ²¡æœ‰å®ç° Map çš„æ¥å£ã€‚è®¾æƒ³ä½ å¯¹ Map è°ƒäº† 2 æ¬¡å‚æ•° key ä¸€æ ·çš„ put æ–¹æ³•ï¼Œç»“æœå°±æ˜¯ç¬¬ 2 æ¬¡çš„
+  value è¦†ç›–äº†ç¬¬ 1 æ¬¡çš„ valueã€‚ä½†æ˜¯å¯¹ Muitimap æ¥è¯´è¿™ä¸ª key åŒæ—¶å¯¹åº”äº† 2 ä¸ª valueã€‚æ‰€ä»¥ Map çœ‹ä¸Šå»æ˜¯
+  : {k1=v1, k2=v2,...}ï¼Œè€Œ Muitimap æ˜¯ :{k1=[v1, v2, v3], k2=[v7, v8],....}ã€‚</p>
+<p>ä¸¾ä¸ªè®°åæŠ•ç¥¨çš„ä¾‹å­ã€‚æ‰€æœ‰é€‰ç¥¨éƒ½æ”¾åœ¨ä¸€ä¸ª List&lt;Ticket&gt; é‡Œé¢ï¼ŒList çš„æ¯ä¸ªå…ƒç´ åŒ…æ‹¬æŠ•ç¥¨äººå’Œé€‰ä¸¾äººçš„åå­—ã€‚æˆ‘ä»¬å¯ä»¥è¿™æ ·å†™ :</p>
+<table border="0" cellpadding     ="0" cellspacing="0" width="100%" summary="This table contains a code listing.">
   <tbody>
     <tr>
       <td class="code-outline"><pre class="displaycode"> //Key is candidate name, its value is his voters 
@@ -165,8 +171,8 @@
   </tbody>
 </table>
 <br>
-<p>ÎÒÃÇÔÙÀ´¿´¿´ Muitimap ÄÜ×öĞ©Ê²Ã´ :</p>
-<table summary="This table contains a code listing." border="0" cellpadding="0" cellspacing="0" width="100%">
+<p>æˆ‘ä»¬å†æ¥çœ‹çœ‹ Muitimap èƒ½åšäº›ä»€ä¹ˆ :</p>
+<table border="0" cellpadding     ="0" cellspacing="0" width="100%" summary="This table contains a code listing.">
   <tbody>
     <tr>
       <td class="code-outline"><pre class="displaycode"> HashMultimap&lt;String, String&gt; map = HashMultimap.create(); 
@@ -178,23 +184,27 @@
   </tbody>
 </table>
 <br>
-<p>¾ÍÕâÃ´¼òµ¥£¡</p>
-<p>Muitimap ½Ó¿ÚµÄÖ÷ÒªÊµÏÖÀàÓĞ£º</p>
+<p>å°±è¿™ä¹ˆç®€å•ï¼</p>
+<p>Muitimap æ¥å£çš„ä¸»è¦å®ç°ç±»æœ‰ï¼š</p>
 <ul>
-  <li> HashMultimap: key ·ÅÔÚ HashMap£¬¶ø value ·ÅÔÚ HashSet£¬¼´Ò»¸ö key ¶ÔÓ¦µÄ value ²»¿ÉÖØ¸´</li>
-  <li> ArrayListMultimap: key ·ÅÔÚ HashMap£¬¶ø value ·ÅÔÚ ArrayList£¬¼´Ò»¸ö key ¶ÔÓ¦µÄ value ÓĞË³Ğò¿ÉÖØ¸´</li>
-  <li> LinkedHashMultimap: key ·ÅÔÚ LinkedHashMap£¬¶ø value ·ÅÔÚ LinkedHashSet£¬¼´Ò»¸ö key ¶ÔÓ¦µÄ value ÓĞË³Ğò²»¿ÉÖØ¸´</li>
-  <li> TreeMultimap: key ·ÅÔÚ TreeMap£¬¶ø value ·ÅÔÚ TreeSet£¬¼´Ò»¸ö key ¶ÔÓ¦µÄ value ÓĞÅÅÁĞË³Ğò</li>
-  <li> ImmutableMultimap: ²»¿ÉĞŞ¸ÄµÄ Multimap</li>
+  <li> HashMultimap: key æ”¾åœ¨ HashMapï¼Œè€Œ value æ”¾åœ¨ HashSetï¼Œå³ä¸€ä¸ª 
+  key å¯¹åº”çš„ value ä¸å¯é‡å¤ 
+  <li> ArrayListMultimap: key æ”¾åœ¨ HashMapï¼Œè€Œ value æ”¾åœ¨ 
+  ArrayListï¼Œå³ä¸€ä¸ª key å¯¹åº”çš„ value æœ‰é¡ºåºå¯é‡å¤ 
+  <li> LinkedHashMultimap: key æ”¾åœ¨ LinkedHashMapï¼Œè€Œ value æ”¾åœ¨ 
+  LinkedHashSetï¼Œå³ä¸€ä¸ª key å¯¹åº”çš„ value æœ‰é¡ºåºä¸å¯é‡å¤ 
+  <li> TreeMultimap: key æ”¾åœ¨ TreeMapï¼Œè€Œ value æ”¾åœ¨ TreeSetï¼Œå³ä¸€ä¸ª 
+  key å¯¹åº”çš„ value æœ‰æ’åˆ—é¡ºåº 
+  <li> ImmutableMultimap: ä¸å¯ä¿®æ”¹çš„ Multimap</li>
 </ul>
 <div class="ibm-alternate-rule"></div>
-<p class="ibm-ind-link ibm-back-to-top"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-googlecollection/#ibm-pcon" class="ibm-anchor-up-link">»ØÒ³Ê×</a></p>
-<p><a name="major5"><span class="atitle">BiMap: Ë«Ïò Map</span></a></p>
-<p>BiMap ÊµÏÖÁË java.util.Map ½Ó¿Ú¡£ËüµÄÌØµãÊÇËüµÄ value ºÍËü key Ò»ÑùÒ²ÊÇ²»¿ÉÖØ¸´µÄ£¬»»¾ä»°ËµËüµÄ 
-  key ºÍ value ÊÇµÈ¼ÛµÄ¡£Èç¹ûÄãÍù BiMap µÄ value ÀïÃæ·ÅÁËÖØ¸´µÄÔªËØ£¬¾Í»áµÃµ½ 
-  IllegalArgumentException¡£</p>
-<p>¾Ù¸öÀı×Ó£¬Äã¿ÉÄÜ¾­³£»áÅöµ½ÔÚ Map ÀïÃæ¸ù¾İ value ÖµÀ´·´ÍÆËüµÄ key ÖµµÄÂß¼­£º</p>
-<table summary="This table contains a code listing." border="0" cellpadding="0" cellspacing="0" width="100%">
+<p class="ibm-ind-link ibm-back-to-top"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-googlecollection/#ibm-pcon" class="ibm-anchor-up-link">å›é¡µé¦–</a></p>
+<p><a name="major5"><span class="atitle">BiMap: åŒå‘ Map</span></a></p>
+<p>BiMap å®ç°äº† java.util.Map æ¥å£ã€‚å®ƒçš„ç‰¹ç‚¹æ˜¯å®ƒçš„ value å’Œå®ƒ key ä¸€æ ·ä¹Ÿæ˜¯ä¸å¯é‡å¤çš„ï¼Œæ¢å¥è¯è¯´å®ƒçš„ 
+  key å’Œ value æ˜¯ç­‰ä»·çš„ã€‚å¦‚æœä½ å¾€ BiMap çš„ value é‡Œé¢æ”¾äº†é‡å¤çš„å…ƒç´ ï¼Œå°±ä¼šå¾—åˆ° 
+  IllegalArgumentExceptionã€‚</p>
+<p>ä¸¾ä¸ªä¾‹å­ï¼Œä½ å¯èƒ½ç»å¸¸ä¼šç¢°åˆ°åœ¨ Map é‡Œé¢æ ¹æ® value å€¼æ¥åæ¨å®ƒçš„ key å€¼çš„é€»è¾‘ï¼š</p>
+<table border="0" cellpadding     ="0" cellspacing="0" width="100%" summary="This table contains a code listing.">
   <tbody>
     <tr>
       <td class="code-outline"><pre class="displaycode"> for(Map.Entry&lt;User, Address&gt; entry : map.entreSet()){ 
@@ -208,8 +218,8 @@
   </tbody>
 </table>
 <br>
-<p>Èç¹û°Ñ User ºÍ Address ¶¼·ÅÔÚ BiMap£¬ÄÇÃ´Ò»¾ä´úÂë¾ÍµÃµ½½á¹ûÁË£º</p>
-<table summary="This table contains a code listing." border="0" cellpadding="0" cellspacing="0" width="100%">
+<p>å¦‚æœæŠŠ User å’Œ Address éƒ½æ”¾åœ¨ BiMapï¼Œé‚£ä¹ˆä¸€å¥ä»£ç å°±å¾—åˆ°ç»“æœäº†ï¼š</p>
+<table border="0" cellpadding     ="0" cellspacing="0" width="100%" summary="This table contains a code listing.">
   <tbody>
     <tr>
       <td class="code-outline"><pre class="displaycode"> return biMap.inverse().get(anAddess); 
@@ -218,16 +228,16 @@
   </tbody>
 </table>
 <br>
-<p>ÕâÀïµÄ inverse ·½·¨¾ÍÊÇ°Ñ BiMap µÄ key ¼¯ºÏ value ¼¯ºÏ¶Ôµ÷£¬Òò´Ë biMap == biMap.inverse().inverse()¡£</p>
-<p>BiMap<code>µÄ³£ÓÃÊµÏÖÓĞ£º</code></p>
-<p>HashBiMap: key ¼¯ºÏÓë value ¼¯ºÏ¶¼ÓĞ HashMap ÊµÏÖ</p>
-<p>EnumBiMap: key Óë value ¶¼±ØĞëÊÇ enum ÀàĞÍ</p>
-<p>ImmutableBiMap: ²»¿ÉĞŞ¸ÄµÄ BiMap</p>
+<p>è¿™é‡Œçš„ inverse æ–¹æ³•å°±æ˜¯æŠŠ BiMap çš„ key é›†åˆ value é›†åˆå¯¹è°ƒï¼Œå› æ­¤ biMap ==           biMap.inverse().inverse()ã€‚</p>
+<p>BiMap<code>çš„å¸¸ç”¨å®ç°æœ‰ï¼š</code></p>
+<p>HashBiMap: key é›†åˆä¸ value é›†åˆéƒ½æœ‰ HashMap å®ç°</p>
+<p>EnumBiMap: key ä¸ value éƒ½å¿…é¡»æ˜¯ enum ç±»å‹</p>
+<p>ImmutableBiMap: ä¸å¯ä¿®æ”¹çš„ BiMap</p>
 <div class="ibm-alternate-rule"></div>
-<p class="ibm-ind-link ibm-back-to-top"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-googlecollection/#ibm-pcon" class="ibm-anchor-up-link">»ØÒ³Ê×</a></p>
-<p><a name="major6"><span class="atitle">MapMaker: ³¬¼¶Ç¿´óµÄ Map ¹¹Ôì¹¤¾ß</span></a></p>
-<p>MapMaker ÊÇÓÃÀ´¹¹Ôì ConcurrentMap µÄ¹¤¾ßÀà¡£ÎªÊ²Ã´¿ÉÒÔ°Ñ MapMaker ½Ğ×ö³¬¼¶Ç¿´ó£¿¿´ÁËÏÂÃæµÄÀı×ÓÄã¾ÍÖªµÀÁË¡£Ê×ÏÈ£¬Ëü¿ÉÒÔÓÃÀ´¹¹Ôì ConcurrentHashMap:</p>
-<table summary="This table contains a code listing." border="0" cellpadding="0" cellspacing="0" width="100%">
+<p class="ibm-ind-link ibm-back-to-top"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-googlecollection/#ibm-pcon" class="ibm-anchor-up-link">å›é¡µé¦–</a></p>
+<p><a name="major6"><span class="atitle">MapMaker: è¶…çº§å¼ºå¤§çš„ Map æ„é€ å·¥å…·</span></a></p>
+<p>MapMaker æ˜¯ç”¨æ¥æ„é€  ConcurrentMap çš„å·¥å…·ç±»ã€‚ä¸ºä»€ä¹ˆå¯ä»¥æŠŠ MapMaker å«åšè¶…çº§å¼ºå¤§ï¼Ÿçœ‹äº†ä¸‹é¢çš„ä¾‹å­ä½ å°±çŸ¥é“äº†ã€‚é¦–å…ˆï¼Œå®ƒå¯ä»¥ç”¨æ¥æ„é€  ConcurrentHashMap:</p>
+<table border="0" cellpadding     ="0" cellspacing="0" width="100%" summary="This table contains a code listing.">
   <tbody>
     <tr>
       <td class="code-outline"><pre class="displaycode"> //ConcurrentHashMap with concurrency level 8 
@@ -239,8 +249,8 @@
   </tbody>
 </table>
 <br>
-<p>»òÕß¹¹ÔìÓÃ¸÷ÖÖ²»Í¬ reference ×÷Îª key ºÍ value µÄ Map:</p>
-<table summary="This table contains a code listing." border="0" cellpadding="0" cellspacing="0" width="100%">
+<p>æˆ–è€…æ„é€ ç”¨å„ç§ä¸åŒ reference ä½œä¸º key å’Œ value çš„ Map:</p>
+<table border="0" cellpadding     ="0" cellspacing="0" width="100%" summary="This table contains a code listing.">
   <tbody>
     <tr>
       <td class="code-outline"><pre class="displaycode"> //ConcurrentMap with soft reference key and weak reference value 
@@ -253,8 +263,8 @@
   </tbody>
 </table>
 <br>
-<p>»òÕß¹¹ÔìÓĞ×Ô¶¯ÒÆ³ıÊ±¼ä¹ıÆÚÏîµÄ Map:</p>
-<table summary="This table contains a code listing." border="0" cellpadding="0" cellspacing="0" width="100%">
+<p>æˆ–è€…æ„é€ æœ‰è‡ªåŠ¨ç§»é™¤æ—¶é—´è¿‡æœŸé¡¹çš„ Map:</p>
+<table border="0" cellpadding     ="0" cellspacing="0" width="100%" summary="This table contains a code listing.">
   <tbody>
     <tr>
       <td class="code-outline"><pre class="displaycode"> //Automatically removed entries from map after 30 seconds since they are created 
@@ -266,8 +276,8 @@
   </tbody>
 </table>
 <br>
-<p>»òÕß¹¹ÔìÓĞ×î´óÏŞÖÆÊıÄ¿µÄ Map£º</p>
-<table summary="This table contains a code listing." border="0" cellpadding="0" cellspacing="0" width="100%">
+<p>æˆ–è€…æ„é€ æœ‰æœ€å¤§é™åˆ¶æ•°ç›®çš„ Mapï¼š</p>
+<table border="0" cellpadding     ="0" cellspacing="0" width="100%" summary="This table contains a code listing.">
   <tbody>
     <tr>
       <td class="code-outline"><pre class="displaycode"> //Map size grows close to the 100, the map will evict 
@@ -280,8 +290,8 @@
   </tbody>
 </table>
 <br>
-<p>»òÕßÌá¹©µ± Map ÀïÃæ²»°üº¬Ëù get µÄÏî£¬¶øĞèÒª×Ô¶¯¼ÓÈëµ½ Map µÄ¹¦ÄÜ¡£Õâ¸ö¹¦ÄÜµ± Map ×÷Îª»º´æµÄÊ±ºòºÜÓĞÓÃ :</p>
-<table summary="This table contains a code listing." border="0" cellpadding="0" cellspacing="0" width="100%">
+<p>æˆ–è€…æä¾›å½“ Map é‡Œé¢ä¸åŒ…å«æ‰€ get çš„é¡¹ï¼Œè€Œéœ€è¦è‡ªåŠ¨åŠ å…¥åˆ° Map çš„åŠŸèƒ½ã€‚è¿™ä¸ªåŠŸèƒ½å½“ Map ä½œä¸ºç¼“å­˜çš„æ—¶å€™å¾ˆæœ‰ç”¨ :</p>
+<table border="0" cellpadding     ="0" cellspacing="0" width="100%" summary="This table contains a code listing.">
   <tbody>
     <tr>
       <td class="code-outline"><pre class="displaycode"> //Create an Object to the map, when get() is missing in map 
@@ -296,8 +306,8 @@
   </tbody>
 </table>
 <br>
-<p>ÕâĞ©»¹²»ÊÇ×îÇ¿´óµÄÌØĞÔ£¬×îÀ÷º¦µÄÊÇ MapMaker ¿ÉÒÔÌá¹©ÓµÓĞÒÔÉÏËùÓĞÌØĞÔµÄ Map:</p>
-<table summary="This table contains a code listing." border="0" cellpadding="0" cellspacing="0" width="100%">
+<p>è¿™äº›è¿˜ä¸æ˜¯æœ€å¼ºå¤§çš„ç‰¹æ€§ï¼Œæœ€å‰å®³çš„æ˜¯ MapMaker å¯ä»¥æä¾›æ‹¥æœ‰ä»¥ä¸Šæ‰€æœ‰ç‰¹æ€§çš„ Map:</p>
+<table border="0" cellpadding     ="0" cellspacing="0" width="100%" summary="This table contains a code listing.">
   <tbody>
     <tr>
       <td class="code-outline"><pre class="displaycode"> //Put all features together! 
@@ -318,27 +328,27 @@
 </table>
 <br>
 <div class="ibm-alternate-rule"></div>
-<p class="ibm-ind-link ibm-back-to-top"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-googlecollection/#ibm-pcon" class="ibm-anchor-up-link">»ØÒ³Ê×</a></p>
-<p><a name="major7"><span class="atitle">Ordering class: Áé»îµÄ¶à×Ö¶ÎÅÅĞò±È½ÏÆ÷</span></a></p>
-<p>Òª¶Ô¼¯ºÏÅÅĞò»òÕßÇó×î´óÖµ×îĞ¡Öµ£¬Ê×ÍÆ java.util.Collections Àà£¬µ«¹Ø¼üÊÇÒªÌá¹© Comparator 
-  ½Ó¿ÚµÄÊµÏÖ¡£¼ÙÉèÓĞ¸ö´ıÅÅĞòµÄ List&lt;Foo&gt;£¬¶ø Foo ÀïÃæÓĞÁ½¸öÅÅĞò¹Ø¼ü×Ö int a, int b ºÍ int c:</p>
-<table summary="This table contains a code listing." border="0" cellpadding="0" cellspacing="0" width="100%">
+<p class="ibm-ind-link ibm-back-to-top"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-googlecollection/#ibm-pcon" class="ibm-anchor-up-link">å›é¡µé¦–</a></p>
+<p><a name="major7"><span class="atitle">Ordering class: çµæ´»çš„å¤šå­—æ®µæ’åºæ¯”è¾ƒå™¨</span></a></p>
+<p>è¦å¯¹é›†åˆæ’åºæˆ–è€…æ±‚æœ€å¤§å€¼æœ€å°å€¼ï¼Œé¦–æ¨ java.util.Collections ç±»ï¼Œä½†å…³é”®æ˜¯è¦æä¾› Comparator 
+  æ¥å£çš„å®ç°ã€‚å‡è®¾æœ‰ä¸ªå¾…æ’åºçš„ List&lt;Foo&gt;ï¼Œè€Œ Foo é‡Œé¢æœ‰ä¸¤ä¸ªæ’åºå…³é”®å­— int a, int b å’Œ int c:</p>
+<table border="0" cellpadding     ="0" cellspacing="0" width="100%" summary="This table contains a code listing.">
   <tbody>
     <tr>
       <td class="code-outline"><pre class="displaycode"> Collections.sort(list, new Comparator&lt;Foo&gt;(){    
     @Override    
     public int compare(Foo f1, Foo f2) {    
-        int resultA = f1.a ¨C f2.a; 
-        int resultB = f1.b ¨C f2.b; 
-        return  resultA == 0 ? (resultB == 0 ? f1.c ¨C f2.c : resultB) : resultA; 
+        int resultA = f1.a â€“ f2.a; 
+        int resultB = f1.b â€“ f2.b; 
+        return  resultA == 0 ? (resultB == 0 ? f1.c â€“ f2.c : resultB) : resultA; 
 </pre></td>
     </tr>
   </tbody>
 </table>
 <br>
 <p><code>}});</code> </p>
-<p>Õâ¿´ÉÏÈ¥ÓĞµãÑÛÔÎ£¬Èç¹ûÓÃÒ»´® if-else Ò²ºÃ²»µ½ÄÄÀïÈ¥¡£¿´¿´ ComparisonChain ÄÜ×öµ½Ê²Ã´ :</p>
-<table summary="This table contains a code listing." border="0" cellpadding="0" cellspacing="0" width="100%">
+<p>è¿™çœ‹ä¸Šå»æœ‰ç‚¹çœ¼æ™•ï¼Œå¦‚æœç”¨ä¸€ä¸² if-else ä¹Ÿå¥½ä¸åˆ°å“ªé‡Œå»ã€‚çœ‹çœ‹ ComparisonChain èƒ½åšåˆ°ä»€ä¹ˆ :</p>
+<table border="0" cellpadding     ="0" cellspacing="0" width="100%" summary="This table contains a code listing.">
   <tbody>
     <tr>
       <td class="code-outline"><pre class="displaycode"> Collections.sort(list, new Comparator&lt;Foo&gt;(){    
@@ -353,8 +363,8 @@
   </tbody>
 </table>
 <br>
-<p>Èç¹ûÅÅĞò¹Ø¼ü×ÖÒªÓÃ×Ô¶¨Òå±È½ÏÆ÷£¬compare ·½·¨Ò²ÓĞ½ÓÊÜ Comparator µÄÖØÔØ°æ±¾¡£Æ©Èç Foo ÀïÃæÃ¿¸öÅÅĞò¹Ø¼ü×Ö¶¼ÒÑ¾­ÓĞÁË¸÷×ÔµÄ Comparator£¬ÄÇÃ´ÀûÓÃ ComparisonChain ¿ÉÒÔ :</p>
-<table summary="This table contains a code listing." border="0" cellpadding="0" cellspacing="0" width="100%">
+<p>å¦‚æœæ’åºå…³é”®å­—è¦ç”¨è‡ªå®šä¹‰æ¯”è¾ƒå™¨ï¼Œcompare æ–¹æ³•ä¹Ÿæœ‰æ¥å— Comparator çš„é‡è½½ç‰ˆæœ¬ã€‚è­¬å¦‚ Foo é‡Œé¢æ¯ä¸ªæ’åºå…³é”®å­—éƒ½å·²ç»æœ‰äº†å„è‡ªçš„ Comparatorï¼Œé‚£ä¹ˆåˆ©ç”¨ ComparisonChain å¯ä»¥ :</p>
+<table border="0" cellpadding     ="0" cellspacing="0" width="100%" summary="This table contains a code listing.">
   <tbody>
     <tr>
       <td class="code-outline"><pre class="displaycode"> Collections.sort(list, new Comparator&lt;Foo&gt;(){    
@@ -369,8 +379,8 @@
   </tbody>
 </table>
 <br>
-<p>Ordring Àà»¹Ìá¹©ÁËÒ»¸ö×éºÏ Comparator ¶ÔÏóµÄ·½·¨¡£¶øÇÒ Ordring ±¾ÉíÊµÏÖÁË Comparator ½Ó¿ÚËùÒÔËüÄÜÖ±½Ó×÷Îª Comparator Ê¹ÓÃ£º</p>
-<table summary="This table contains a code listing." border="0" cellpadding="0" cellspacing="0" width="100%">
+<p>Ordring ç±»è¿˜æä¾›äº†ä¸€ä¸ªç»„åˆ Comparator å¯¹è±¡çš„æ–¹æ³•ã€‚è€Œä¸” Ordring æœ¬èº«å®ç°äº† Comparator æ¥å£æ‰€ä»¥å®ƒèƒ½ç›´æ¥ä½œä¸º Comparator ä½¿ç”¨ï¼š</p>
+<table border="0" cellpadding     ="0" cellspacing="0" width="100%" summary="This table contains a code listing.">
   <tbody>
     <tr>
       <td class="code-outline"><pre class="displaycode"> Ordering&lt;Foo&gt; ordering = Ordering.compound(\
@@ -382,10 +392,10 @@
 </table>
 <br>
 <div class="ibm-alternate-rule"></div>
-<p class="ibm-ind-link ibm-back-to-top"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-googlecollection/#ibm-pcon" class="ibm-anchor-up-link">»ØÒ³Ê×</a></p>
-<p><a name="major8"><span class="atitle">ÆäËûÌØĞÔ :</span></a></p>
-<p>¹ıÂËÆ÷£ºÀûÓÃ Collections2.filter() ·½·¨¹ıÂË¼¯ºÏÖĞ²»·ûºÏÌõ¼şµÄÔªËØ¡£Æ©Èç¹ıÂËÒ»¸ö List&lt;Integer&gt; ÀïÃæĞ¡ÓÚ 10 µÄÔªËØ :</p>
-<table summary="This table contains a code listing." border="0" cellpadding="0" cellspacing="0" width="100%">
+<p class="ibm-ind-link ibm-back-to-top"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-googlecollection/#ibm-pcon" class="ibm-anchor-up-link">å›é¡µé¦–</a></p>
+<p><a name="major8"><span class="atitle">å…¶ä»–ç‰¹æ€§ :</span></a></p>
+<p>è¿‡æ»¤å™¨ï¼šåˆ©ç”¨ Collections2.filter() æ–¹æ³•è¿‡æ»¤é›†åˆä¸­ä¸ç¬¦åˆæ¡ä»¶çš„å…ƒç´ ã€‚è­¬å¦‚è¿‡æ»¤ä¸€ä¸ª List&lt;Integer&gt; é‡Œé¢å°äº 10 çš„å…ƒç´  :</p>
+<table border="0" cellpadding     ="0" cellspacing="0" width="100%" summary="This table contains a code listing.">
   <tbody>
     <tr>
       <td class="code-outline"><pre class="displaycode"> Collection&lt;Integer&gt;  filterCollection = 
@@ -399,11 +409,11 @@
   </tbody>
 </table>
 <br>
-<p>µ±È»£¬Äã¿ÉÒÔ×Ô¼ºĞ´Ò»¸öÑ­»·À´ÊµÏÖÕâ¸ö¹¦ÄÜ£¬µ«ÊÇÕâÑù²»ÄÜ±£Ö¤Ö®ºóĞ¡ÓÚ 10 µÄÔªËØ²»±»·ÅÈë¼¯ºÏ¡£filter µÄÇ¿´óÖ®´¦ÔÚÓÚ·µ»ØµÄ 
-  filterCollection ÈÔÈ»ÓĞÅÅ³âĞ¡ÓÚ 10 µÄÔªËØµÄÌØĞÔ£¬Èç¹ûµ÷ filterCollection.add(9) ¾Í»áµÃµ½Ò»¸ö 
-  IllegalArgumentException¡£</p>
-<p>×ª»»Æ÷£ºÀûÓÃ Collections2.transform() ·½·¨À´×ª»»¼¯ºÏÖĞµÄÔªËØ¡£Æ©Èç°ÑÒ»¸ö Set&lt;Integer&gt; ÀïÃæËùÓĞÔªËØ¶¼×ª»»³É´ø¸ñÊ½µÄ String À´²úÉúĞÂµÄ Collection&lt;String&gt;:</p>
-<table summary="This table contains a code listing." border="0" cellpadding="0" cellspacing="0" width="100%">
+<p>å½“ç„¶ï¼Œä½ å¯ä»¥è‡ªå·±å†™ä¸€ä¸ªå¾ªç¯æ¥å®ç°è¿™ä¸ªåŠŸèƒ½ï¼Œä½†æ˜¯è¿™æ ·ä¸èƒ½ä¿è¯ä¹‹åå°äº 10 çš„å…ƒç´ ä¸è¢«æ”¾å…¥é›†åˆã€‚filter çš„å¼ºå¤§ä¹‹å¤„åœ¨äºè¿”å›çš„ 
+  filterCollection ä»ç„¶æœ‰æ’æ–¥å°äº 10 çš„å…ƒç´ çš„ç‰¹æ€§ï¼Œå¦‚æœè°ƒ filterCollection.add(9) å°±ä¼šå¾—åˆ°ä¸€ä¸ª 
+  IllegalArgumentExceptionã€‚</p>
+<p>è½¬æ¢å™¨ï¼šåˆ©ç”¨ Collections2.transform() æ–¹æ³•æ¥è½¬æ¢é›†åˆä¸­çš„å…ƒç´ ã€‚è­¬å¦‚æŠŠä¸€ä¸ª Set&lt;Integer&gt; é‡Œé¢æ‰€æœ‰å…ƒç´ éƒ½è½¬æ¢æˆå¸¦æ ¼å¼çš„ String æ¥äº§ç”Ÿæ–°çš„ Collection&lt;String&gt;:</p>
+<table border="0" cellpadding     ="0" cellspacing="0" width="100%" summary="This table contains a code listing.">
   <tbody>
     <tr>
       <td class="code-outline"><pre class="displaycode"> Collection&lt;String&gt;  formatCollection = 
@@ -418,14 +428,14 @@
 </table>
 <br>
 <div class="ibm-alternate-rule"></div>
-<p class="ibm-ind-link ibm-back-to-top"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-googlecollection/#ibm-pcon" class="ibm-anchor-up-link">»ØÒ³Ê×</a></p>
-<p><a name="major9"><span class="atitle">ÏÂÔØÓëÊ¹ÓÃ</span></a></p>
-<p>Õâ¸ö¿ªÔ´ÏîÄ¿·¢²¼µÄ jar °ü¿ÉÒÔÔÚËüµÄ¹Ù·½ÍøÕ¾ÄÚ£¨<a href="http://code.google.com/p/guava-libraries/downloads/list">http://code.google.com/p/guava-libraries/downloads/list</a>£©
-  ÕÒµ½¡£ÆäÏÂÔØµÄ zip °üÖĞº¬ÓĞ Guava Collections µÄ jar °ü guava-r09.jar ¼°ÆäÒÀÀµ°ü 
-  guava-r09-gwt.jar£¬javadoc£¬Ô´´úÂë£¬readme µÈÎÄ¼ş¡£Ê¹ÓÃÊ±Ö»Ğè½« guava-r09.jar ºÍÒÀÀµ°ü 
-  guava-r09-gwt.jar ·ÅÈë CLASSPATH ÖĞ¼´¿É¡£</p>
-<p>Èç¹ûÄúÊ¹ÓÃ Maven ×÷Îª¹¹½¨¹¤¾ßµÄ»°¿ÉÒÔÔÚ pom.xml ÄÚ¼ÓÈë£º</p>
-<table summary="This table contains a code listing." border="0" cellpadding="0" cellspacing="0" width="100%">
+<p class="ibm-ind-link ibm-back-to-top"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-googlecollection/#ibm-pcon" class="ibm-anchor-up-link">å›é¡µé¦–</a></p>
+<p><a name="major9"><span class="atitle">ä¸‹è½½ä¸ä½¿ç”¨</span></a></p>
+<p>è¿™ä¸ªå¼€æºé¡¹ç›®å‘å¸ƒçš„ jar åŒ…å¯ä»¥åœ¨å®ƒçš„å®˜æ–¹ç½‘ç«™å†…ï¼ˆ<a href="http://code.google.com/p/guava-libraries/downloads/list">http://code.google.com/p/guava-libraries/downloads/list</a>ï¼‰
+  æ‰¾åˆ°ã€‚å…¶ä¸‹è½½çš„ zip åŒ…ä¸­å«æœ‰ Guava Collections çš„ jar åŒ… guava-r09.jar åŠå…¶ä¾èµ–åŒ… 
+  guava-r09-gwt.jarï¼Œjavadocï¼Œæºä»£ç ï¼Œreadme ç­‰æ–‡ä»¶ã€‚ä½¿ç”¨æ—¶åªéœ€å°† guava-r09.jar å’Œä¾èµ–åŒ… 
+  guava-r09-gwt.jar æ”¾å…¥ CLASSPATH ä¸­å³å¯ã€‚</p>
+<p>å¦‚æœæ‚¨ä½¿ç”¨ Maven ä½œä¸ºæ„å»ºå·¥å…·çš„è¯å¯ä»¥åœ¨ pom.xml å†…åŠ å…¥ï¼š</p>
+<table border="0" cellpadding     ="0" cellspacing="0" width="100%" summary="This table contains a code listing.">
   <tbody>
     <tr>
       <td class="code-outline"><pre class="displaycode"> &lt;dependency&gt; 
@@ -438,13 +448,15 @@
   </tbody>
 </table>
 <br>
-<p>ĞèÒª×¢ÒâµÄÊÇ±¾ÎÄ½éÉÜµÄ Guava r09 ĞèÒª 1.5 »òÕß¸ü¸ß°æ±¾µÄ JDK¡£</p>
+<p>éœ€è¦æ³¨æ„çš„æ˜¯æœ¬æ–‡ä»‹ç»çš„ Guava r09 éœ€è¦ 1.5 æˆ–è€…æ›´é«˜ç‰ˆæœ¬çš„ JDKã€‚</p>
 <div class="ibm-alternate-rule"></div>
-<p class="ibm-ind-link ibm-back-to-top"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-googlecollection/#ibm-pcon" class="ibm-anchor-up-link">»ØÒ³Ê×</a></p>
-<p><a name="major10"><span class="atitle">½áÊøÓï</span></a></p>
-<p>ÒÔÉÏ½éÉÜÁË Guava Collections µÄÒ»Ğ©»ù±¾µÄ¹¦ÄÜÌØĞÔ¡£Äã¿ÉÒÔ´Ó guava-libraries µÄ¹Ù·½ÍøÕ¾ÏÂÔØËüµÄ 
-  jar °üºÍËüÆäËûµÄÏà¹ØÎÄµµ¡£Èç¹ûÄãÊ¹ÓÃ Maven À´¹ÜÀíÄãµÄÏîÄ¿ÒÀÀµ°ü£¬Maven ÖĞÑë¿âÒ²Ìá¹©ÁËËü°æ±¾µÄÒÀÀµ¡£×îºóÏ£Íû Guava 
-  Collections Ê¹ÄãµÄ±à³Ì¹¤×÷¸üÇáËÉ£¬¸üÓĞÀÖÈ¤¡£</p>
-<!--EndFragment-->
+<p class="ibm-ind-link ibm-back-to-top"><a href="http://www.ibm.com/developerworks/cn/java/j-lo-googlecollection/#ibm-pcon" class="ibm-anchor-up-link">å›é¡µé¦–</a></p>
+<p><a name="major10"><span class="atitle">ç»“æŸè¯­</span></a></p>
+<p>ä»¥ä¸Šä»‹ç»äº† Guava Collections çš„ä¸€äº›åŸºæœ¬çš„åŠŸèƒ½ç‰¹æ€§ã€‚ä½ å¯ä»¥ä» guava-libraries çš„å®˜æ–¹ç½‘ç«™ä¸‹è½½å®ƒçš„ 
+  jar åŒ…å’Œå®ƒå…¶ä»–çš„ç›¸å…³æ–‡æ¡£ã€‚å¦‚æœä½ ä½¿ç”¨ Maven æ¥ç®¡ç†ä½ çš„é¡¹ç›®ä¾èµ–åŒ…ï¼ŒMaven ä¸­å¤®åº“ä¹Ÿæä¾›äº†å®ƒç‰ˆæœ¬çš„ä¾èµ–ã€‚æœ€åå¸Œæœ› Guava 
+  Collections ä½¿ä½ çš„ç¼–ç¨‹å·¥ä½œæ›´è½»æ¾ï¼Œæ›´æœ‰ä¹è¶£ã€‚</p>
+<p>      
+        
+   &nbsp;</p><!--EndFragment-->
 </body>
 </htm>

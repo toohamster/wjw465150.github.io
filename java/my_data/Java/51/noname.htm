@@ -1,10 +1,10 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 
 <HTML xmlns="http://www.w3.org/1999/xhtml" sizcache="1" 
 sizset="32">
 <HEAD>
-<TITLE>Lucene2.9.1使用小结</TITLE>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Lucene2.9.1使用小结</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <<LINK media=all href="Hover_1.css" 
 type=text/css rel=stylesheet>
 <LINK media=all 
@@ -68,32 +68,31 @@ type=text/css rel=stylesheet>
 </STYLE>
 </HEAD>
 
-<BODY id=defaultuser sizcache="1" sizset="32">
-<DIV id=csdnblog_allwrap sizcache="1" sizset="32">
-  <DIV id=csdnblog_midwrap sizcache="1" sizset="32">
+<BODY id="defaultuser" sizcache="1" sizset="32">
+<DIV id="csdnblog_allwrap" sizcache="1" sizset="32">
+  <DIV id="csdnblog_midwrap" sizcache="1" sizset="32">
     <DIV id=csdnblog_content><!--StartFragment-->
       <DIV class=gutter>
         <DIV class=default_contents>
           <DIV class=user_article> 
             
-            <H1 class=title_txt><IMG height=16 alt=原创 
-src="authorship.gif" width=15 border=0>&nbsp; 
-              Lucene2.9.1使用小结 <CITE class=fav_csdnstylebykimi><A class=fav_csdnstylebykimi 
-title=收藏到我的网摘中，并分享给我的朋友 
+            <H1 class=title_txt><IMG border=0 alt=原创 
+src="authorship.gif" width=15 height=16>&nbsp; 
+              Lucene2.9.1使用小结 <CITE class=fav_csdnstylebykimi><A title=收藏到我的网摘中，并分享给我的朋友 
+class=fav_csdnstylebykimi 
 href="javascript:d=document;t=d.selection%3F(d.selection.type!='None'?d.selection.createRange().text:''):(d.getSelection?d.getSelection():'');void(saveit=window.open('http://wz.csdn.net/storeit.aspx?t='+escape(d.title)+'&amp;u='+escape(d.location.href)+'&amp;c='+escape(t),'saveit','scrollbars=no,width=590,height=300,left=75,top=20,status=no,resizable=yes'));saveit.focus();">收藏</A> </CITE> 
               
               <SPAN onmouseover="change_alt1('alt02','block')" 
-style="WIDTH: 0px; POSITION: absolute; HEIGHT: 0px" 
+style="HEIGHT: 0px; WIDTH: 0px; POSITION: absolute" 
 onmouseout="change_alt1('alt02','none')"><IMG 
-style="LEFT: 50px; POSITION: absolute; TOP: -40px" 
+style="POSITION: absolute; LEFT: 50px; TOP: -40px" 
 src="tuijian.gif" align=absMiddle>
               <DIV class=div>
                 <P id=alt02 onmouseover="change_alt1('alt02','block')" 
 onmouseout="change_alt1('alt02','none')">此文于2009-11-25被推荐到CSDN首页<BR>
                   <A 
 href="http://blog.csdn.net/blogdevteam/archive/2009/08/25/4481848.aspx" 
-target=_blank>如何被推荐？</A></P>
-              </DIV>
+target=_blank>如何被推荐？</A></P></DIV>
               </SPAN></H1>
             <DIV class=blogstory> 
               
@@ -187,99 +186,99 @@ href="http://blog.csdn.net/qjyong">http://blog.csdn.net/qjyong</A>】</P>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Field.Index: 指定Field是否被索引或怎么被索引. NO(不索引), 
                 ANALYZED(分词后索引), NOT_ANALYZED(不分词直接索引) <BR>
                 &nbsp; 7) 示例代码:<BR>
+              </P>
               
               <DIV class=dp-highlighter>
                 <DIV class=bar></DIV>
                 <OL class=dp-j>
-                  <LI class=alt><SPAN><SPAN class=comment>//src要创建索引的文件，destDir索引存放的目录 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
+                  <LI class=alt><SPAN><SPAN class=comment>//src要创建索引的文件，destDir索引存放的目录 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>static</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>void</SPAN><SPAN>&nbsp;createIndex(File&nbsp;src,&nbsp;File&nbsp;destDir){ 
-                    &nbsp;&nbsp;</SPAN></SPAN></LI>
+                    &nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN>&nbsp;Analyzer&nbsp;analyzer&nbsp;=&nbsp;</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;StandardAnalyzer(Version.LUCENE_CURRENT);&nbsp;</SPAN><SPAN 
-class=comment>//创建一个语法分析器 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;IndexWriter&nbsp;iwriter&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>null</SPAN><SPAN>; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=comment>//创建一个语法分析器 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;IndexWriter&nbsp;iwriter&nbsp;=&nbsp;</SPAN><SPAN 
+class=keyword>null</SPAN><SPAN>; &nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN>&nbsp;Directory&nbsp;directory&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>null</SPAN><SPAN>; &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;</SPAN><SPAN class=keyword>try</SPAN><SPAN>&nbsp;{ 
-                    &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>null</SPAN><SPAN>; &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;</SPAN><SPAN class=keyword>try</SPAN><SPAN>&nbsp;{ 
+                    &nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN>&nbsp;&nbsp;directory&nbsp;=&nbsp;FSDirectory.open(destDir);&nbsp;</SPAN><SPAN 
-class=comment>//把索引文件存储到磁盘目录 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;</SPAN><SPAN 
-class=comment>//创建一个IndexWriter(存放索引文件的目录,分析器,Field的最大长度) </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=comment>//把索引文件存储到磁盘目录 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;</SPAN><SPAN 
+class=comment>//创建一个IndexWriter(存放索引文件的目录,分析器,Field的最大长度) </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN>&nbsp;&nbsp;iwriter&nbsp;=&nbsp;</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;IndexWriter(directory,&nbsp;analyzer,</SPAN><SPAN 
 class=keyword>true</SPAN><SPAN>,&nbsp;IndexWriter.MaxFieldLength.UNLIMITED); 
-                    &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;</SPAN><SPAN 
-class=comment>//iwriter.setUseCompoundFile(true);//使用复合文件 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;Document&nbsp;doc&nbsp;=&nbsp;</SPAN><SPAN 
+                    &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;</SPAN><SPAN 
+class=comment>//iwriter.setUseCompoundFile(true);//使用复合文件 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;Document&nbsp;doc&nbsp;=&nbsp;</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;Document();&nbsp;</SPAN><SPAN 
-class=comment>//创建一个Document对象 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=alt><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=comment>//把文件路径作为"path"域：不分词,索引,保存 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;doc.add(</SPAN><SPAN 
+class=comment>//创建一个Document对象 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                  <LI class=alt><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=comment>//把文件路径作为"path"域：不分词,索引,保存 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;doc.add(</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;Field(</SPAN><SPAN 
 class=string>"path"</SPAN><SPAN>,&nbsp;src.getCanonicalPath(),&nbsp;Field.Store.YES,&nbsp;Field.Index.NOT_ANALYZED)); 
-                    &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=alt><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;StringBuilder&nbsp;sb&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;StringBuilder(); &nbsp;&nbsp;</SPAN></SPAN></LI>
+                    &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI class=alt><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;StringBuilder&nbsp;sb&nbsp;=&nbsp;</SPAN><SPAN 
+class=keyword>new</SPAN><SPAN>&nbsp;StringBuilder(); &nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN>&nbsp;&nbsp;BufferedReader&nbsp;br&nbsp;=&nbsp;</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;BufferedReader(</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;FileReader(src)); &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;</SPAN><SPAN 
+class=keyword>new</SPAN><SPAN>&nbsp;FileReader(src)); &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;</SPAN><SPAN 
 class=keyword>for</SPAN><SPAN>(String&nbsp;str&nbsp;=&nbsp;</SPAN><SPAN 
 class=keyword>null</SPAN><SPAN>;&nbsp;(str&nbsp;=&nbsp;br.readLine())!=</SPAN><SPAN 
-class=keyword>null</SPAN><SPAN>;){ &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>null</SPAN><SPAN>;){ &nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;sb.append(str).append(System.getProperty(</SPAN><SPAN 
-class=string>"line.separator"</SPAN><SPAN>));&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-                  <LI class=alt><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=comment>//文件内容作为"content"域：分词,索引,保存 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;doc.add(</SPAN><SPAN 
+class=string>"line.separator"</SPAN><SPAN>));&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                  <LI class=alt><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=comment>//文件内容作为"content"域：分词,索引,保存 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;doc.add(</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;Field(</SPAN><SPAN 
 class=string>"contents"</SPAN><SPAN>,&nbsp;sb.toString(),&nbsp;Field.Store.YES,&nbsp;Field.Index.ANALYZED));&nbsp; 
-                    &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=alt><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;iwriter.addDocument(doc);&nbsp;</SPAN><SPAN 
-class=comment>//把Document存放到IndexWriter中 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+                    &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI class=alt><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;iwriter.addDocument(doc);&nbsp;</SPAN><SPAN 
+class=comment>//把Document存放到IndexWriter中 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN>&nbsp;&nbsp;iwriter.optimize();&nbsp;&nbsp;</SPAN><SPAN 
-class=comment>//对索引进行优化&nbsp;&nbsp; </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;}&nbsp;</SPAN><SPAN 
-class=keyword>catch</SPAN><SPAN>&nbsp;(IOException&nbsp;e)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=alt><SPAN>&nbsp;&nbsp;e.printStackTrace(); &nbsp;&nbsp;</SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;}&nbsp;</SPAN><SPAN class=keyword>finally</SPAN><SPAN>&nbsp;{&nbsp; 
-                    &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=comment>//对索引进行优化&nbsp;&nbsp; </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;}&nbsp;</SPAN><SPAN 
+class=keyword>catch</SPAN><SPAN>&nbsp;(IOException&nbsp;e)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI class=alt><SPAN>&nbsp;&nbsp;e.printStackTrace(); &nbsp;&nbsp;</SPAN>
+                  <LI ><SPAN>&nbsp;}&nbsp;</SPAN><SPAN class=keyword>finally</SPAN><SPAN>&nbsp;{&nbsp; 
+                    &nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN>&nbsp;&nbsp;</SPAN><SPAN 
 class=keyword>if</SPAN><SPAN>&nbsp;(iwriter&nbsp;!=&nbsp;</SPAN><SPAN 
-class=keyword>null</SPAN><SPAN>)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>try</SPAN><SPAN>&nbsp;{ 
-                    &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>null</SPAN><SPAN>)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>try</SPAN><SPAN>&nbsp;{ 
+                    &nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;iwriter.close();&nbsp;</SPAN><SPAN 
-class=comment>//关闭IndexWriter时,才把内存中的数据写到文件&nbsp; </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN><SPAN 
-class=keyword>catch</SPAN><SPAN>&nbsp;(IOException&nbsp;e)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace(); &nbsp;&nbsp;</SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;&nbsp;}&nbsp; &nbsp;&nbsp;</SPAN></LI>
-                  <LI class=alt><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;</SPAN><SPAN 
+class=comment>//关闭IndexWriter时,才把内存中的数据写到文件&nbsp; </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN><SPAN 
+class=keyword>catch</SPAN><SPAN>&nbsp;(IOException&nbsp;e)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace(); &nbsp;&nbsp;</SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;&nbsp;}&nbsp; &nbsp;&nbsp;</SPAN>
+                  <LI class=alt><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;</SPAN><SPAN 
 class=keyword>if</SPAN><SPAN>&nbsp;(directory&nbsp;!=&nbsp;</SPAN><SPAN 
-class=keyword>null</SPAN><SPAN>)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>null</SPAN><SPAN>)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>try</SPAN><SPAN>&nbsp;{ 
-                    &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;directory.close();&nbsp;</SPAN><SPAN class=comment>//关闭索引存放目录 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+                    &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;directory.close();&nbsp;</SPAN><SPAN class=comment>//关闭索引存放目录 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN><SPAN 
-class=keyword>catch</SPAN><SPAN>&nbsp;(IOException&nbsp;e)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace(); &nbsp;&nbsp;</SPAN></LI>
-                  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-                  <LI class=alt><SPAN>&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-                  <LI class=""><SPAN>}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></LI>
+class=keyword>catch</SPAN><SPAN>&nbsp;(IOException&nbsp;e)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace(); &nbsp;&nbsp;</SPAN>
+                  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                  <LI class=alt><SPAN>&nbsp;} &nbsp;&nbsp;</SPAN>
+                  <LI ><SPAN>}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></LI>
                 </OL>
-              </DIV>
-              <TEXTAREA class=java:nocontrols style="DISPLAY: none" name=code rows=15 cols=78>//src要创建索引的文件，destDir索引存放的目录
+              </DIV><TEXTAREA class=java:nocontrols style="DISPLAY: none" rows=15 cols=78 name=code>//src要创建索引的文件，destDir索引存放的目录
 public static void createIndex(File src, File destDir){
  Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_CURRENT); //创建一个语法分析器
  IndexWriter iwriter = null;
@@ -323,8 +322,8 @@ public static void createIndex(File src, File destDir){
   }
  }
 }   
-</TEXTAREA>
-              </P>
+</TEXTAREA> 
+<P></P>
               <P>6. 查询索引<BR>
                 &nbsp; 1) IndexSearcher: 索引查询器<BR>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a) 构造器: 
@@ -345,110 +344,110 @@ public static void createIndex(File src, File destDir){
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b) 
                 scoreDocs: 查询结果信息。它包含符合条件的Document的内部编号(doc)及评分(score)。<BR>
                 &nbsp;&nbsp; 5) 示例代码:<BR>
+              </P>
               
               <DIV class=dp-highlighter>
                 <DIV class=bar></DIV>
                 <OL class=dp-j>
-                  <LI class=alt><SPAN><SPAN class=comment>//keyword要搜索的关键字。indexDir索引存放的目录 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
+                  <LI class=alt><SPAN><SPAN class=comment>//keyword要搜索的关键字。indexDir索引存放的目录 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN></SPAN><SPAN class=keyword>public</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>static</SPAN><SPAN>&nbsp;</SPAN><SPAN 
 class=keyword>void</SPAN><SPAN>&nbsp;searcher(String&nbsp;keyword,&nbsp;File&nbsp;indexDir){ 
-                    &nbsp;&nbsp;</SPAN></SPAN></LI>
+                    &nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN>&nbsp;IndexSearcher&nbsp;isearcher&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>null</SPAN><SPAN>; &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;Directory&nbsp;directory&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>null</SPAN><SPAN>; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>null</SPAN><SPAN>; &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;Directory&nbsp;directory&nbsp;=&nbsp;</SPAN><SPAN 
+class=keyword>null</SPAN><SPAN>; &nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN>&nbsp;</SPAN><SPAN class=keyword>try</SPAN><SPAN>{ 
-                    &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;Analyzer&nbsp;analyzer&nbsp;=&nbsp;</SPAN><SPAN 
+                    &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;Analyzer&nbsp;analyzer&nbsp;=&nbsp;</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;StandardAnalyzer(Version.LUCENE_CURRENT); 
-                    &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=alt><SPAN>&nbsp;&nbsp;directory&nbsp;=&nbsp;FSDirectory.open(indexDir); &nbsp;&nbsp;</SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-                  <LI class=alt><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=comment>//创建解析器 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;QueryParser&nbsp;parser&nbsp;=&nbsp;</SPAN><SPAN 
+                    &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI class=alt><SPAN>&nbsp;&nbsp;directory&nbsp;=&nbsp;FSDirectory.open(indexDir); &nbsp;&nbsp;</SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+                  <LI class=alt><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=comment>//创建解析器 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;QueryParser&nbsp;parser&nbsp;=&nbsp;</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;QueryParser(Version.LUCENE_CURRENT,&nbsp;</SPAN><SPAN 
-class=string>"contents"</SPAN><SPAN>,&nbsp;analyzer); &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"contents"</SPAN><SPAN>,&nbsp;analyzer); &nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN>&nbsp;&nbsp;Query&nbsp;query&nbsp;=&nbsp;parser.parse(keyword);</SPAN><SPAN 
-class=comment>//获取查询对象 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=comment>//获取查询对象 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
                   <LI class=alt><SPAN></SPAN><SPAN 
-class=comment>//&nbsp;&nbsp;Query&nbsp;query1&nbsp;=&nbsp;new&nbsp;TermQuery(new&nbsp;Term("contents",&nbsp;keyword)); </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN></SPAN><SPAN 
-class=comment>//&nbsp;&nbsp;Query&nbsp;query2&nbsp;=&nbsp;new&nbsp;TermQuery(new&nbsp;Term("contents",&nbsp;keyword2)); </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=comment>//&nbsp;&nbsp;Query&nbsp;query1&nbsp;=&nbsp;new&nbsp;TermQuery(new&nbsp;Term("contents",&nbsp;keyword)); </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN></SPAN><SPAN 
+class=comment>//&nbsp;&nbsp;Query&nbsp;query2&nbsp;=&nbsp;new&nbsp;TermQuery(new&nbsp;Term("contents",&nbsp;keyword2)); </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN></SPAN><SPAN 
-class=comment>//&nbsp;&nbsp;BooleanQuery&nbsp;query&nbsp;=&nbsp;new&nbsp;BooleanQuery(); </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN></SPAN><SPAN 
-class=comment>//&nbsp;&nbsp;query.add(query1,&nbsp;Occur.SHOULD); </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=comment>//&nbsp;&nbsp;BooleanQuery&nbsp;query&nbsp;=&nbsp;new&nbsp;BooleanQuery(); </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN></SPAN><SPAN 
+class=comment>//&nbsp;&nbsp;query.add(query1,&nbsp;Occur.SHOULD); </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN></SPAN><SPAN 
-class=comment>//&nbsp;&nbsp;query.add(query2,&nbsp;Occur.SHOULD); </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=comment>//&nbsp;&nbsp;query.add(query2,&nbsp;Occur.SHOULD); </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
                   <LI class=alt><SPAN></SPAN><SPAN 
-class=comment>//&nbsp;&nbsp;QueryParser&nbsp;parser&nbsp;=&nbsp;new&nbsp;MultiFieldQueryParser(Version.LUCENE_CURRENT,&nbsp;new&nbsp;String[]{"path",&nbsp;"contents"},&nbsp;analyzer); </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN></SPAN><SPAN 
-class=comment>//&nbsp;&nbsp;Query&nbsp;query&nbsp;=&nbsp;parser.parse(keyword); </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;isearcher&nbsp;=&nbsp;</SPAN><SPAN 
+class=comment>//&nbsp;&nbsp;QueryParser&nbsp;parser&nbsp;=&nbsp;new&nbsp;MultiFieldQueryParser(Version.LUCENE_CURRENT,&nbsp;new&nbsp;String[]{"path",&nbsp;"contents"},&nbsp;analyzer); </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN></SPAN><SPAN 
+class=comment>//&nbsp;&nbsp;Query&nbsp;query&nbsp;=&nbsp;parser.parse(keyword); </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;isearcher&nbsp;=&nbsp;</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;IndexSearcher(directory,&nbsp;</SPAN><SPAN 
-class=keyword>true</SPAN><SPAN>);&nbsp;&nbsp;</SPAN><SPAN class=comment>//创建索引搜索器 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>true</SPAN><SPAN>);&nbsp;&nbsp;</SPAN><SPAN class=comment>//创建索引搜索器 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN>&nbsp;&nbsp;TopDocs&nbsp;ts&nbsp;=&nbsp;isearcher.search(query,&nbsp;</SPAN><SPAN 
 class=keyword>null</SPAN><SPAN>,&nbsp;</SPAN><SPAN 
-class=number>100</SPAN><SPAN>);&nbsp;&nbsp;</SPAN><SPAN class=comment>//执行搜索，获取查询结果集对象 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=number>100</SPAN><SPAN>);&nbsp;&nbsp;</SPAN><SPAN class=comment>//执行搜索，获取查询结果集对象 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
                   <LI class=alt><SPAN>&nbsp;&nbsp;</SPAN><SPAN 
 class=keyword>int</SPAN><SPAN>&nbsp;totalHits&nbsp;=&nbsp;ts.totalHits;&nbsp;&nbsp;</SPAN><SPAN 
-class=comment>//获取命中数 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;System.out.println(</SPAN><SPAN 
-class=string>"命中数："</SPAN><SPAN>&nbsp;+&nbsp;totalHits); &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;ScoreDoc[]&nbsp;hits&nbsp;=&nbsp;ts.scoreDocs;&nbsp;&nbsp;</SPAN><SPAN 
-class=comment>//获取命中的文档信息对象 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=comment>//获取命中数 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;System.out.println(</SPAN><SPAN 
+class=string>"命中数："</SPAN><SPAN>&nbsp;+&nbsp;totalHits); &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;ScoreDoc[]&nbsp;hits&nbsp;=&nbsp;ts.scoreDocs;&nbsp;&nbsp;</SPAN><SPAN 
+class=comment>//获取命中的文档信息对象 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN>&nbsp;&nbsp;</SPAN><SPAN class=keyword>for</SPAN><SPAN>&nbsp;(</SPAN><SPAN 
 class=keyword>int</SPAN><SPAN>&nbsp;i&nbsp;=&nbsp;</SPAN><SPAN 
-class=number>0</SPAN><SPAN>;&nbsp;i&nbsp;&lt;&nbsp;hits.length;&nbsp;i++)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=number>0</SPAN><SPAN>;&nbsp;i&nbsp;&lt;&nbsp;hits.length;&nbsp;i++)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
                   <LI 
-class=""><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Document&nbsp;hitDoc&nbsp;=&nbsp;isearcher.doc(hits[i].doc);&nbsp;</SPAN><SPAN 
-class=comment>//根据命中的文档的内部编号获取该文档&nbsp; </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Document&nbsp;hitDoc&nbsp;=&nbsp;isearcher.doc(hits[i].doc);&nbsp;</SPAN><SPAN 
+class=comment>//根据命中的文档的内部编号获取该文档&nbsp; </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(hitDoc.getField(</SPAN><SPAN 
 class=string>"contents"</SPAN><SPAN>).stringValue());&nbsp;</SPAN><SPAN 
-class=comment>//输出该文档指定域的值 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
+class=comment>//输出该文档指定域的值 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
                   <LI class=alt><SPAN>&nbsp;}&nbsp;</SPAN><SPAN 
-class=keyword>catch</SPAN><SPAN>&nbsp;(IOException&nbsp;e)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;e.printStackTrace();&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></LI>
+class=keyword>catch</SPAN><SPAN>&nbsp;(IOException&nbsp;e)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;e.printStackTrace();&nbsp;&nbsp; &nbsp;&nbsp;</SPAN>
                   <LI class=alt><SPAN>&nbsp;}&nbsp;</SPAN><SPAN 
-class=keyword>catch</SPAN><SPAN>&nbsp;(ParseException&nbsp;e)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;e.printStackTrace(); &nbsp;&nbsp;</SPAN></LI>
+class=keyword>catch</SPAN><SPAN>&nbsp;(ParseException&nbsp;e)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;e.printStackTrace(); &nbsp;&nbsp;</SPAN>
                   <LI class=alt><SPAN>&nbsp;}&nbsp;</SPAN><SPAN class=keyword>finally</SPAN><SPAN>&nbsp;{&nbsp;&nbsp;&nbsp; 
-                    &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;</SPAN><SPAN 
+                    &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;</SPAN><SPAN 
 class=keyword>if</SPAN><SPAN>&nbsp;(isearcher&nbsp;!=&nbsp;</SPAN><SPAN 
-class=keyword>null</SPAN><SPAN>)&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>null</SPAN><SPAN>)&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>try</SPAN><SPAN>&nbsp;{&nbsp;&nbsp;&nbsp; 
-                    &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;isearcher.close();&nbsp;</SPAN><SPAN class=comment>//关闭搜索器&nbsp;&nbsp; </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+                    &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;isearcher.close();&nbsp;</SPAN><SPAN class=comment>//关闭搜索器&nbsp;&nbsp; </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN><SPAN 
-class=keyword>catch</SPAN><SPAN>&nbsp;(IOException&nbsp;e)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace(); &nbsp;&nbsp;</SPAN></LI>
-                  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
+class=keyword>catch</SPAN><SPAN>&nbsp;(IOException&nbsp;e)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace(); &nbsp;&nbsp;</SPAN>
+                  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
                   <LI class=alt><SPAN>&nbsp;&nbsp;</SPAN><SPAN 
 class=keyword>if</SPAN><SPAN>&nbsp;(directory&nbsp;!=&nbsp;</SPAN><SPAN 
-class=keyword>null</SPAN><SPAN>)&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>try</SPAN><SPAN>&nbsp;{&nbsp;&nbsp;&nbsp; 
-                    &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>null</SPAN><SPAN>)&nbsp;{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=keyword>try</SPAN><SPAN>&nbsp;{&nbsp;&nbsp;&nbsp; 
+                    &nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;directory.close();&nbsp;</SPAN><SPAN 
-class=comment>//关闭索引存放目录&nbsp; </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN><SPAN 
-class=keyword>catch</SPAN><SPAN>&nbsp;(IOException&nbsp;e)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace(); &nbsp;&nbsp;</SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-                  <LI class=alt><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;} &nbsp;&nbsp;</SPAN></LI>
+class=comment>//关闭索引存放目录&nbsp; </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN><SPAN 
+class=keyword>catch</SPAN><SPAN>&nbsp;(IOException&nbsp;e)&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace(); &nbsp;&nbsp;</SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                  <LI class=alt><SPAN>&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN>
+                  <LI ><SPAN>&nbsp;} &nbsp;&nbsp;</SPAN>
                   <LI class=alt><SPAN>}&nbsp;&nbsp;</SPAN></LI>
                 </OL>
-              </DIV>
-              <TEXTAREA class=java:nocontrols style="DISPLAY: none" name=code rows=15 cols=79>//keyword要搜索的关键字。indexDir索引存放的目录
+              </DIV><TEXTAREA class=java:nocontrols style="DISPLAY: none" rows=15 cols=79 name=code>//keyword要搜索的关键字。indexDir索引存放的目录
 public static void searcher(String keyword, File indexDir){
  IndexSearcher isearcher = null;
  Directory directory = null;
@@ -501,8 +500,8 @@ public static void searcher(String keyword, File indexDir){
   }
  }
 }
-</TEXTAREA>
-              </P>
+</TEXTAREA> 
+<P></P>
               <P>7. 删除索引<BR>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IndexWriter提供deleteDocuments(Term term);&nbsp; 
                 //会删除索引文件里含有指定Term的所有Document。<BR>
@@ -513,6 +512,7 @@ public static void searcher(String keyword, File indexDir){
                 //实际上是先删除再创建索引。</P>
               <P>9. 常用查询器<BR>
                 &nbsp; 1) TermQuery : 按Term（关键字）查询。构造方法：TermQuery(Term&nbsp;t) <BR>
+              </P>
               
               <DIV class=dp-highlighter>
                 <DIV class=bar></DIV>
@@ -520,20 +520,20 @@ public static void searcher(String keyword, File indexDir){
                   <LI class=alt><SPAN><SPAN>Query&nbsp;query&nbsp;=&nbsp;</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;TermQuery(</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;Term(</SPAN><SPAN 
-class=string>"contents"</SPAN><SPAN>,&nbsp;keyword)); &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>isearcher&nbsp;=&nbsp;</SPAN><SPAN 
+class=string>"contents"</SPAN><SPAN>,&nbsp;keyword)); &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>isearcher&nbsp;=&nbsp;</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;IndexSearcher(FSDirectory.open(indexDir),&nbsp;</SPAN><SPAN 
-class=keyword>true</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>true</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN>TopDocs&nbsp;ts&nbsp;=&nbsp;isearcher.search(query,&nbsp;</SPAN><SPAN 
 class=keyword>null</SPAN><SPAN>,&nbsp;</SPAN><SPAN 
 class=number>100</SPAN><SPAN>);&nbsp;&nbsp;&nbsp;</SPAN></SPAN></LI>
                 </OL>
-              </DIV>
-              <TEXTAREA class=java:nocontrols style="DISPLAY: none" name=code rows=15 cols=50>      Query query = new TermQuery(new Term("contents", keyword));
+              </DIV><TEXTAREA class=java:nocontrols style="DISPLAY: none" rows=15 cols=50 name=code>      Query query = new TermQuery(new Term("contents", keyword));
       isearcher = new IndexSearcher(FSDirectory.open(indexDir), true);
-      TopDocs ts = isearcher.search(query, null, 100); </TEXTAREA>
-              </P>
+      TopDocs ts = isearcher.search(query, null, 100); </TEXTAREA> 
+<P></P>
               <P>&nbsp; 2) BooleanQuery: 布尔查询。组合多个查询器。<BR>
+              </P>
               
               <DIV class=dp-highlighter>
                 <DIV class=bar></DIV>
@@ -541,26 +541,25 @@ class=number>100</SPAN><SPAN>);&nbsp;&nbsp;&nbsp;</SPAN></SPAN></LI>
                   <LI class=alt><SPAN><SPAN>Query&nbsp;query1&nbsp;=&nbsp;</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;TermQuery(</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;Term(</SPAN><SPAN 
-class=string>"contents"</SPAN><SPAN>,&nbsp;keyword)); &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>Query&nbsp;query2&nbsp;=&nbsp;</SPAN><SPAN 
+class=string>"contents"</SPAN><SPAN>,&nbsp;keyword)); &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>Query&nbsp;query2&nbsp;=&nbsp;</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;TermQuery(</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;Term(</SPAN><SPAN 
-class=string>"contents"</SPAN><SPAN>,&nbsp;keyword2)); &nbsp;&nbsp;</SPAN></SPAN></LI>
+class=string>"contents"</SPAN><SPAN>,&nbsp;keyword2)); &nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN>BooleanQuery&nbsp;query&nbsp;=&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;BooleanQuery(); &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>query.add(query1,&nbsp;Occur.SHOULD); &nbsp;&nbsp;</SPAN></LI>
-                  <LI class=alt><SPAN>query.add(query2,&nbsp;Occur.SHOULD); &nbsp;&nbsp;</SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;</SPAN></LI>
+class=keyword>new</SPAN><SPAN>&nbsp;BooleanQuery(); &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>query.add(query1,&nbsp;Occur.SHOULD); &nbsp;&nbsp;</SPAN>
+                  <LI class=alt><SPAN>query.add(query2,&nbsp;Occur.SHOULD); &nbsp;&nbsp;</SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;</SPAN>
                   <LI class=alt><SPAN>isearcher&nbsp;=&nbsp;</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;IndexSearcher(directory,&nbsp;</SPAN><SPAN 
-class=keyword>true</SPAN><SPAN>);&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>&nbsp;&nbsp;</SPAN></LI>
+class=keyword>true</SPAN><SPAN>);&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>&nbsp;&nbsp;</SPAN>
                   <LI class=alt><SPAN>TopDocs&nbsp;ts&nbsp;=&nbsp;isearcher.search(query,&nbsp;</SPAN><SPAN 
 class=keyword>null</SPAN><SPAN>,&nbsp;</SPAN><SPAN 
 class=number>100</SPAN><SPAN>);&nbsp;&nbsp;&nbsp;</SPAN></SPAN></LI>
                 </OL>
-              </DIV>
-              <TEXTAREA class=java:nocontrols style="DISPLAY: none" name=code rows=15 cols=50>  Query query1 = new TermQuery(new Term("contents", keyword));
+              </DIV><TEXTAREA class=java:nocontrols style="DISPLAY: none" rows=15 cols=50 name=code>  Query query1 = new TermQuery(new Term("contents", keyword));
   Query query2 = new TermQuery(new Term("contents", keyword2));
   BooleanQuery query = new BooleanQuery();
   query.add(query1, Occur.SHOULD);
@@ -569,9 +568,10 @@ class=number>100</SPAN><SPAN>);&nbsp;&nbsp;&nbsp;</SPAN></SPAN></LI>
   isearcher = new IndexSearcher(directory, true); 
 
   TopDocs ts = isearcher.search(query, null, 100); 
-</TEXTAREA>
-              </P>
+</TEXTAREA> 
+<P></P>
               <P>&nbsp; 3) MultiFieldQueryParser: 多Field中查询。<BR>
+              </P>
               
               <DIV class=dp-highlighter>
                 <DIV class=bar></DIV>
@@ -580,25 +580,25 @@ class=number>100</SPAN><SPAN>);&nbsp;&nbsp;&nbsp;</SPAN></SPAN></LI>
 class=keyword>new</SPAN><SPAN>&nbsp;MultiFieldQueryParser(Version.LUCENE_CURRENT,&nbsp;</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;String[]{</SPAN><SPAN 
 class=string>"path"</SPAN><SPAN>,&nbsp;</SPAN><SPAN 
-class=string>"contents"</SPAN><SPAN>},&nbsp;analyzer); &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>Query&nbsp;query&nbsp;=&nbsp;parser.parse(keyword); &nbsp;&nbsp;</SPAN></LI>
+class=string>"contents"</SPAN><SPAN>},&nbsp;analyzer); &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>Query&nbsp;query&nbsp;=&nbsp;parser.parse(keyword); &nbsp;&nbsp;</SPAN>
                   <LI class=alt><SPAN>isearcher&nbsp;=&nbsp;</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;IndexSearcher(FSDirectory.open(indexDir),&nbsp;</SPAN><SPAN 
-class=keyword>true</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN>TopDocs&nbsp;ts&nbsp;=&nbsp;isearcher.search(query,&nbsp;</SPAN><SPAN 
+class=keyword>true</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN>TopDocs&nbsp;ts&nbsp;=&nbsp;isearcher.search(query,&nbsp;</SPAN><SPAN 
 class=keyword>null</SPAN><SPAN>,&nbsp;</SPAN><SPAN 
 class=number>100</SPAN><SPAN>);&nbsp;&nbsp;</SPAN></SPAN></LI>
                 </OL>
-              </DIV>
-              <TEXTAREA class=java:nocontrols style="DISPLAY: none" name=code rows=15 cols=50>      QueryParser parser = new MultiFieldQueryParser(Version.LUCENE_CURRENT, new String[]{"path", "contents"}, analyzer);
+              </DIV><TEXTAREA class=java:nocontrols style="DISPLAY: none" rows=15 cols=50 name=code>      QueryParser parser = new MultiFieldQueryParser(Version.LUCENE_CURRENT, new String[]{"path", "contents"}, analyzer);
       Query query = parser.parse(keyword);
       isearcher = new IndexSearcher(FSDirectory.open(indexDir), true);
-      TopDocs ts = isearcher.search(query, null, 100);</TEXTAREA>
-              </P>
+      TopDocs ts = isearcher.search(query, null, 100);</TEXTAREA> 
+<P></P>
               <P>10. 高亮器Highlighter：在网页中对搜索结果予以高亮显示。<BR>
                 &nbsp;&nbsp; 1) 
                 在classpath添加contrib/highlighter/lucene-highlighter-2.9.1.jar<BR>
                 &nbsp;&nbsp; 2) 示例伪代码<BR>
+              </P>
               
               <DIV class=dp-highlighter>
                 <DIV class=bar></DIV>
@@ -609,28 +609,28 @@ class=string>"&lt;span&nbsp;style="</SPAN><SPAN>color:red</SPAN><SPAN
 class=string>"&nbsp;mce_style="</SPAN><SPAN>color:red</SPAN><SPAN 
 class=string>"&gt;"</SPAN><SPAN>,&nbsp;</SPAN><SPAN 
 class=string>"&lt;/span&gt;"</SPAN><SPAN>);&nbsp;</SPAN><SPAN 
-class=comment>//默认是&lt;b&gt;..&lt;/b&gt;&nbsp; </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN></SPAN><SPAN class=comment>//&nbsp;构造高亮器:指定高亮的格式,指定查询计分器&nbsp;&nbsp;&nbsp; </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=comment>//默认是&lt;b&gt;..&lt;/b&gt;&nbsp; </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN></SPAN><SPAN class=comment>//&nbsp;构造高亮器:指定高亮的格式,指定查询计分器&nbsp;&nbsp;&nbsp; </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN>Highlighter&nbsp;highlighter&nbsp;=&nbsp;</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;Highlighter(shf,&nbsp;</SPAN><SPAN 
-class=keyword>new</SPAN><SPAN>&nbsp;QueryScorer(query));&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN></LI>
-                  <LI class=""><SPAN></SPAN><SPAN class=comment>//设置块划分器 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI>
+class=keyword>new</SPAN><SPAN>&nbsp;QueryScorer(query));&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</SPAN></SPAN>
+                  <LI ><SPAN></SPAN><SPAN class=comment>//设置块划分器 </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN>
                   <LI class=alt><SPAN>highlighter.setTextFragmenter(</SPAN><SPAN 
 class=keyword>new</SPAN><SPAN>&nbsp;SimpleFragmenter(Integer.MAX_VALUE));&nbsp;&nbsp; 
-                    &nbsp;&nbsp;</SPAN></SPAN></LI>
+                    &nbsp;&nbsp;</SPAN></SPAN>
                   <LI 
-class=""><SPAN>String&nbsp;content&nbsp;=&nbsp;highlighter.getBestFragment(Analyzer,&nbsp;</SPAN><SPAN 
+><SPAN>String&nbsp;content&nbsp;=&nbsp;highlighter.getBestFragment(Analyzer,&nbsp;</SPAN><SPAN 
 class=string>"fieldName"</SPAN><SPAN>,&nbsp;</SPAN><SPAN 
 class=string>"fieldValue"</SPAN><SPAN>);&nbsp;&nbsp;</SPAN></SPAN></LI>
                 </OL>
-              </DIV>
-              <TEXTAREA class=java:nocontrols style="DISPLAY: none" name=code rows=15 cols=50>       SimpleHTMLFormatter shf = new SimpleHTMLFormatter("&lt;span style="color:red" mce_style="color:red"&gt;", "&lt;/span&gt;"); //默认是&lt;b&gt;..&lt;/b&gt; 
+              </DIV><TEXTAREA class=java:nocontrols style="DISPLAY: none" rows=15 cols=50 name=code>       SimpleHTMLFormatter shf = new SimpleHTMLFormatter("&lt;span style="color:red" mce_style="color:red"&gt;", "&lt;/span&gt;"); //默认是&lt;b&gt;..&lt;/b&gt; 
        // 构造高亮器:指定高亮的格式,指定查询计分器   
        Highlighter highlighter = new Highlighter(shf, new QueryScorer(query));   
        //设置块划分器
        highlighter.setTextFragmenter(new SimpleFragmenter(Integer.MAX_VALUE));  
-       String content = highlighter.getBestFragment(Analyzer, "fieldName", "fieldValue");</TEXTAREA>
-              </P>
+       String content = highlighter.getBestFragment(Analyzer, "fieldName", "fieldValue");</TEXTAREA> 
+
+<P></P>
               <P>11. 优化<BR>
                 &nbsp; 1) 使用IndexWriter须注意<BR>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 修改索引后，需flush()或close()方能生效<BR>
@@ -654,9 +654,10 @@ class=string>"fieldValue"</SPAN><SPAN>);&nbsp;&nbsp;</SPAN></SPAN></LI>
               <P>13. 使用Compass简化Lucene操作。(未完待续)</P>
             </DIV>
           </DIV>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
         </DIV>
-      </DIV>
-      <!--EndFragment--></DIV>
+      </DIV><!--EndFragment--></DIV>
   </DIV>
 </DIV>
 </BODY>

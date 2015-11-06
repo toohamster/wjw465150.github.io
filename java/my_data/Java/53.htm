@@ -1,28 +1,30 @@
-<HTML>
+锘�<HTML>
 <HEAD>
-<META HTTP-EQUIV=Content-Type CONTENT=text/html; charset=gb2312>
-<title>对jar文件进行签名</title>
+<META HTTP-EQUIV=Content-Type CONTENT=text/html; charset=UTF-8>
+<title>瀵筳ar鏂囦欢杩涜绛惧悕</title>
 <style type="text/css">
 <!--
 .9t {
 	font-size: 9pt;
 	color: #000000;
-	font-family: "宋体";
+	font-family: "瀹嬩綋";
 }
 -->
 </style>
 </HEAD>
-<body bgcolor="#FFFFFF">
+<body bgcolor="#ffffff">
 <table width="90%" border="0" align="center" >
   <tr>
     <td><PRE class="9t">
-1、创建签名密钥
+1銆佸垱寤虹鍚嶅瘑閽�
 keytool -genkey -alias hello -dname "CN=John Doe, O=JFX Inc." -validity 9999 -keystore hello.keystore  -keypass keyPassword -storepass storePassword
-2、对jar文件进行签名
+2銆佸jar鏂囦欢杩涜绛惧悕
 jarsigner -keystore hello.keystore -verbose -keypass keyPassword -storepass storePassword hello.jar  hello
  
 </PRE></td>
   </tr>
 </table>
-</Body>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+</body>
 </HTML>

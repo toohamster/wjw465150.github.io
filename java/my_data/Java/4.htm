@@ -1,24 +1,24 @@
-<HTML>
+﻿<HTML>
 <HEAD>
-<META HTTP-EQUIV=Content-Type CONTENT=text/html; charset=gb2312>
-<title>java�Ƿ���Ҫ��ʽ�ӿ�ʵ�֣�</title>
+<META HTTP-EQUIV=Content-Type CONTENT=text/html; charset=UTF-8>
+<title>java是否需要显式接口实现(两个接口有相同的方法)</title>
 <style type="text/css">
 <!--
 .9t {
 	font-size: 9pt;
 	color: #000000;
-	font-family: "����";
+	font-family: "宋体";
 }
 -->
 </style>
 </HEAD>
-<body bgcolor="#FFFFFF">
+<body bgcolor="#ffffff">
 <table width="90%" border="0" align="center" >
   <tr>
     <td><PRE class="9t">
-����:
+问题:
 
-    java���룺  
+    java代码：  
     public interface Color{  
     String getName();;  
     }  
@@ -26,34 +26,36 @@
     String getName();;  
     }  
     public class RedCar implements Color,Car{  
-    //����������java��û��д����ΪColor��Car��name���岻ͬ�����Color��Car�ķ������Ͳ�ͬ�������û��д��  
+    //这样的类在java中没法写，因为Color和Car的name意义不同，如果Color和Car的返回类型不同，会更加没法写。  
     }  
 
-�������:
+解决方法:
 
-���������mooniscrazy����Ҫ��һ��������ʵ�������ӿڵ���������������ӿ������ݻ��ݻ��žͳ�����ǩ����ͬ�ķ�����
-ֱ�ӹ������캯����ͬ־�Ǿ����е�æ�ˡ�
+如果出现了mooniscrazy的需要在一个类里面实现两个接口的情况，而这两个接口碰巧演化演化着就出现了签名相同的方法。
+直接公开构造函数的同志们就又有的忙了。
 
-Java����
+Java代码
 
     class C implements I1, I2{  
       ......  
     }  
 
 
-ԭ������ֻҪnew C()�� �Ϳ��Ե���I1, Ҳ���Ե���I2ʹ�á�
+原来，你只要new C()， 就可以当作I1, 也可以当作I2使用。
 
-���ǣ������Ƿ���I1��I2����Ҫһ����ͬǩ���ķ�����C�ͱ������ڲ��ࡣnew C()�Ͳ���ʹ�ˡ���Ŀͻ����루��֪������ֻ��Ҫ�Ķ������ļ�����
-�෴��ʹ�þ�̬������ȴû�����⡣
-ԭ����C.getI1Instance();��C.getI2Instance()��������Ȼ��������������
+可是，当我们发现I1和I2都需要一个相同签名的方法，C就必须用内部类。new C()就不好使了。你的客户代码（我知道，你只需要改动配置文件！）
+相反，使用静态工厂，却没有问题。
+原来是C.getI1Instance();和C.getI2Instance()，现在仍然是这两个函数。
 
 
-��C��implements I1, I2�ع������ڲ���ֱ�implements I1��I2���Կͻ�û��˿��Ӱ�졣
+把C从implements I1, I2重构成用内部类分别implements I1和I2，对客户没有丝毫影响。
 
-�ɴ�Ҳ���Կ�����ֻҪ�����������ӿں��㹻�ķ�װ����Щ���ܶ�̳�֮��Ķ����͸����������⡣ 
+由此也可以看出，只要你采用了面向接口和足够的封装，这些不能多继承之类的东西就根本不是问题。 
  
 </PRE></td>
   </tr>
 </table>
-</Body>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+</body>
 </HTML>

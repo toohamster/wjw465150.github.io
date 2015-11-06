@@ -1,28 +1,28 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 
 <HTML>
 <HEAD>
-<TITLE>ʵ���̳̣�����Java ʵ�ָ���MSN���칦�� ��2��</TITLE>
+<title>实例教程：巧用Java 实现个性MSN聊天功能 （2）</title>
 <LINK 
 href="index_css_new.css" 
 type=text/css rel=stylesheet>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </HEAD>
 
 <BODY>
 <DIV style="WIDTH: 986px">
   <DIV id=aaaa 
-style="MARGIN-TOP: 5px; FLOAT: left; MARGIN-LEFT: 20px; WIDTH: 639px">
+style="WIDTH: 639px; FLOAT: left; MARGIN-LEFT: 20px; MARGIN-TOP: 5px">
     <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
       <TBODY>
         <TR>
-          <TD align=middle 
+          <TD align=center 
 background=wz_left_2.gif><!--StartFragment-->
             <TABLE class=titel style="BORDER-TOP: #ffffff 17px solid" cellSpacing=0 
 cellPadding=0 width=560 border=0>
               <TBODY>
                 <TR>
-                  <TD align=middle><H1 class=titel>ʵ���̳̣�����Java ʵ�ָ���MSN���칦�� ��2�� </H1></TD>
+                  <TD align=center><H1 class=titel>实例教程：巧用Java 实现个性MSN聊天功能 （2） </H1></TD>
                 </TR>
               </TBODY>
             </TABLE>
@@ -38,9 +38,9 @@ border=0>
 border=0>
               <TBODY>
                 <TR>
-                  <TD align=middle><SPAN class=content01></SPAN><SPAN class=b>����ʱ�䣺2008.09.18 
-                    10:50</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;<SPAN class=b> ��Դ��������</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
-class=b>���ߣ�DuDu</SPAN></TD>
+                  <TD align=center><SPAN class=content01></SPAN><SPAN class=b>发布时间：2008.09.18 
+                    10:50</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;<SPAN class=b> 来源：赛迪网</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+class=b>作者：DuDu</SPAN></TD>
                 </TR>
               </TBODY>
             </TABLE>
@@ -51,9 +51,9 @@ class=b>���ߣ�DuDu</SPAN></TD>
                     <SPAN class=a14c id=zoom>
                     <P style="TEXT-INDENT: 2em">
                     <P 
-style="TEXT-INDENT: 2em">������˵��˵�Ʋ�ֵǮ���л�˵����ô�࣬�������ǾͿ�ʼ�����������Լ�����JAVA�Ŀ�ƽ̨��MSN�ͻ��˳���������������Ҷ������Ѫ�����ͣ�û��������ʲô�ȶ���д����������˷ܵ������أ��ο����ǻ���JAVA�ġ���ƽ̨�ģ�
+style="TEXT-INDENT: 2em">闽南语说：说破不值钱！闲话说了那么多，现在我们就开始来开发我们自己基于JAVA的跨平台的MSN客户端程序。相信听到这句大家都会觉得血脉膨胀，没错，还有什么比动手写程序更让人兴奋的事情呢？何况还是基于JAVA的、跨平台的！
                     <P 
-style="TEXT-INDENT: 2em">�����ȸ���һ�ο����еĴ��������һ����򵥵Ĺ��ܣ������˰����������ʱ�������Զ���֮������ѣ������˸���������Ϣ�������Զ��ظ�һ����ͬ����Ϣ��OK�������ô�򵥵Ĺ��ܵĴ������£�
+style="TEXT-INDENT: 2em">我们先给出一段可运行的代码来完成一个最简单的功能：当有人把它加入好友时，程序自动将之加入好友，当有人给它发送信息，程序自动回复一条相同的信息。OK，完成这么简单的功能的代码如下：
                     <P style="TEXT-INDENT: 2em">
                     <CENTER>
                       <CCID_NOBR>
@@ -83,7 +83,7 @@ import rath.msnm.msg.MimeMessage;
 
 /**
 
-* MSN��ʾ����
+* MSN演示程序
 
 * @author Liudong
 
@@ -105,7 +105,7 @@ msn.login();
 
 System.out.println("Waiting for the response....");
 
-//��׽Ctrl+C�������Ա�ע��MSN�ĵ�¼
+//捕捉Ctrl+C的输入以便注销MSN的登录
 
 Runtime.getRuntime().addShutdownHook(new MSNDaemon());
 
@@ -113,7 +113,7 @@ Runtime.getRuntime().addShutdownHook(new MSNDaemon());
 
 /**
 
-* �û���ֹ����ִ��
+* 用户中止程序执行
 
 */
 
@@ -129,16 +129,17 @@ System.out.println("MSN Logout OK");
 
 /**
 
-* MSN��Ϣ�¼�������
+* MSN消息事件处理类
 
 * @author Liudong
 
-*/</CCID_CODE>
+*/
+</CCID_CODE>
 </PRE></TD>
                             </TR>
                           </TBODY>
                         </TABLE>
-                      </CCID_NOBR>
+                    </CCID_NOBR>
                     </CENTER>
                     <BR>
                     <P style="TEXT-INDENT: 2em">
@@ -160,7 +161,7 @@ this.messenger = messenger;
 
 /**
 
-* ĳ������������Ϣ
+* 某人正在输入信息
 
 */
 
@@ -174,13 +175,13 @@ String typingUser) {
 
 System.out.println(
 
-friend.getLoginName() + "����������Ϣ...");
+friend.getLoginName() + "正在输入信息...");
 
 }
 
 /**
 
-* �յ���Ϣ��ʱ��ִ�и÷���
+* 收到消息的时候执行该方法
 
 */
 
@@ -194,13 +195,13 @@ MimeMessage mime) {
 
 System.out.print(
 
-"���յ���Ϣ��" + friend.getFriendlyName() + "-&gt;");
+"接收到消息：" + friend.getFriendlyName() + "-&gt;");
 
 System.out.println(mime.getMessage());
 
 try {
 
-//������ͬ�Ļظ���Ϣ��������messenger.sendMessage(
+//发送相同的回复信息给发送者messenger.sendMessage(
 
 friend.getLoginName(), mime);
 
@@ -216,7 +217,7 @@ e.printStackTrace();
 
 /**
 
-* ��¼�ɹ���ִ�и÷���
+* 登录成功后执行该方法
 
 */
 
@@ -230,7 +231,7 @@ own.getLoginName() + " Login OK");
 
 /**
 
-* ��¼ʧ�ܺ�ִ�и÷���
+* 登录失败后执行该方法
 
 */
 
@@ -246,7 +247,7 @@ System.out.println(
 
 /**
 
-* ��������ʱִ�и÷���
+* 好友离线时执行该方法
 
 */
 
@@ -258,7 +259,7 @@ System.out.println("USER " + loginName + " Logout.");
 
 /**
 
-* ��������ʱִ�и÷���
+* 好友上线时执行该方法
 
 */
 
@@ -272,7 +273,7 @@ System.out.println(
 
 /**
 
-* ���˼���Ϊ����ʱִ��
+* 有人加我为好友时执行
 
 */
 
@@ -294,12 +295,13 @@ e.printStackTrace();
 
 }
 
-}</CCID_CODE>
+}
+</CCID_CODE>
 </PRE></TD>
                             </TR>
                           </TBODY>
                         </TABLE>
-                      </CCID_NOBR>
+                    </CCID_NOBR>
                     </CENTER>
                     <BR>
                     <P style="TEXT-INDENT: 2em">
@@ -311,7 +313,7 @@ align=center borderColorLight=black border=1>
                             <TR>
                               <TD class=code style="FONT-SIZE: 9pt" bgColor=#e6e6e6><PRE><CCID_CODE>/**
 
-* ���˰��ҴӺ����б���ɾ��ʱִ��
+* 有人把我从好友列表中删除时执行
 
 */
 
@@ -333,28 +335,30 @@ e.printStackTrace();
 
 }
 
-}</CCID_CODE>
+}
+</CCID_CODE>
 </PRE></TD>
                             </TR>
                           </TBODY>
                         </TABLE>
-                      </CCID_NOBR>
+                    </CCID_NOBR>
                     </CENTER>
                     <BR>
                     <P 
-style="TEXT-INDENT: 2em">�����������õĶ���MsnFriend�Լ�MimeMessage�ֱ�������ʾ�ҵĺ����Լ�MSN��Ϣ�⣬����������Ҫ�˽��Ҳ����MSNMessenger�Լ�MsnAdapter�ˡ���Ȼ��ǰ�������ǲ���Ҫ������������������ܣ������ļ�����ȵȡ���MSNMessenger 
-                      ��Ӧ��һ���ʺŵ�һ�ε�¼�Ự��
+style="TEXT-INDENT: 2em">除了两个常用的对象MsnFriend以及MimeMessage分别用来表示我的好友以及MSN信息外，其他我们需要了解的也就是MSNMessenger以及MsnAdapter了。当然了前提是我们不需要除了聊天外的其他功能，例如文件传输等等。类MSNMessenger 
+                      对应着一个帐号的一次登录会话。
                     <P 
-style="TEXT-INDENT: 2em">���ǽ�������Ҫ����MSNMessenger�����ǵ�¼���õ��ʺš����롢��¼��ĳ�ʼ״̬�Լ�������ô��������MSN�������Ͻ��յ����κ���Ϣ����msnm-lib�У�����MSN��Ϣ��ͨ��һ����MsnAdapter���������ģ�����ඨ������δ��������յ���Ϣ�����˼���Ϊ���ѵȵȵ��¼��������߿���������Щ�����Ա�������д����� </P>
+style="TEXT-INDENT: 2em">我们仅仅是需要告诉MSNMessenger类我们登录所用的帐号、密码、登录后的初始状态以及我们怎么来处理从MSN服务器上接收到的任何信息。在msnm-lib中，处理MSN信息是通过一个叫MsnAdapter类来处理的，这个类定义了如何处理例如收到消息、有人加我为好友等等的事件，开发者可以重载这些方法以便进行自行处理。 </P>
                     </SPAN></TD>
                 </TR>
               </TBODY>
-            </TABLE>
-            <!--EndFragment--></TD>
+            </TABLE><!--EndFragment--></TD>
         </TR>
       </TBODY>
     </TABLE>
   </DIV>
 </DIV>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
 </BODY>
 </HTML>

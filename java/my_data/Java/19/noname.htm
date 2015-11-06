@@ -1,7 +1,7 @@
-<html>
+锘�<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>用ServletFilter缓存页面图片及js</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>鐢⊿ervletFilter缂撳瓨椤甸潰鍥剧墖鍙妀s</title>
 </head>
 
 <body>
@@ -25,8 +25,8 @@
   &nbsp;&nbsp; try<br>
   &nbsp;&nbsp; {<br>
   &nbsp;&nbsp;&nbsp; String name = (String)names.nextElement();<br>
-  &nbsp;&nbsp;&nbsp; String value = config.getInitParameter( name );<br>
-  &nbsp;&nbsp;&nbsp; Integer expire = Integer.valueOf( value );<br>
+  &nbsp;&nbsp;&nbsp; String value = config.getInitParameter( name );<br>&nbsp;&nbsp;&nbsp; Integer expire =
+      Integer.valueOf( value );<br>
   &nbsp;&nbsp;&nbsp; expiresMap.put( name, expire );<br>
   &nbsp;&nbsp; }<br>
   &nbsp;&nbsp; catch( Exception ex)<br>
@@ -40,10 +40,10 @@
   &nbsp;{<br>
   &nbsp; HttpServletRequest req = (HttpServletRequest) request;<br>
   &nbsp; HttpServletResponse res = (HttpServletResponse) response;<br>
-  &nbsp; <br>
-  &nbsp; String uri = req.getRequestURI();<br>
+  &nbsp; <br>&nbsp; String uri =
+      req.getRequestURI();<br>
   &nbsp; String ext = null;<br>
-  &nbsp; int dot =&nbsp; uri.lastIndexOf(&quot;.&quot;);<br>
+  &nbsp; int dot =&nbsp; uri.lastIndexOf(".");<br>
   &nbsp; if( dot != -1 )<br>
   &nbsp; {<br>
   &nbsp;&nbsp; ext = uri.substring( dot+1 );<br>
@@ -70,17 +70,17 @@
   &nbsp;&nbsp; Integer expires = (Integer)expiresMap.get(ext);<br>
   &nbsp;&nbsp; if( expires != null )<br>
   &nbsp;&nbsp; {<br>
-  &nbsp;&nbsp;&nbsp; LogUtil.logDebug( uri + &quot;.Expires: &quot;+ expires.intValue());<br>
+  &nbsp;&nbsp;&nbsp; LogUtil.logDebug( uri + ".Expires: "+ expires.intValue());<br>
   &nbsp;&nbsp;&nbsp; if( expires.intValue() &gt; 0 )<br>
   &nbsp;&nbsp;&nbsp; {<br>
-  &nbsp;&nbsp;&nbsp;&nbsp; response.setHeader(&quot;Cache-Control&quot;,&quot;max-age=&quot;+expires.intValue()); 
+  &nbsp;&nbsp;&nbsp;&nbsp; response.setHeader("Cache-Control","max-age="+expires.intValue()); 
   //HTTP 1.1<br>
   &nbsp;&nbsp;&nbsp; }<br>
   &nbsp;&nbsp;&nbsp; else<br>
   &nbsp;&nbsp;&nbsp; {<br>
-  &nbsp;&nbsp;&nbsp;&nbsp; response.setHeader(&quot;Cache-Control&quot;,&quot;no-cache&quot;);<br>
-  &nbsp;&nbsp;&nbsp;&nbsp; response.setHeader(&quot;Pragma&quot;,&quot;no-cache&quot;); //HTTP 1.0<br>
-  &nbsp;&nbsp;&nbsp;&nbsp; response.setDateHeader (&quot;Expires&quot;, 0 );<br>
+  &nbsp;&nbsp;&nbsp;&nbsp; response.setHeader("Cache-Control","no-cache");<br>
+  &nbsp;&nbsp;&nbsp;&nbsp; response.setHeader("Pragma","no-cache"); //HTTP 1.0<br>
+  &nbsp;&nbsp;&nbsp;&nbsp; response.setDateHeader ("Expires", 0 );<br>
   &nbsp;&nbsp;&nbsp; }<br>
   &nbsp;&nbsp; }<br>
   &nbsp; }<br>
@@ -128,6 +128,7 @@
   &nbsp;&lt;url-pattern&gt;*.css&lt;/url-pattern&gt;<br>
   &nbsp; &lt;/filter-mapping&gt;<br>
   </font></p>
+<p><font size="2">&nbsp;</p></FONT>
 </span>
 </body>
 </html>

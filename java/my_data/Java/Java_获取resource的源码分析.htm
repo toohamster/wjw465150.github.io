@@ -1,9 +1,9 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>Java »ñÈ¡resourceµÄÔ´Âë·ÖÎö</title>
+<title>Java è·å–resourceçš„æºç åˆ†æ</title>
 <meta name="GENERATOR" content="WinCHM">
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
 html,body { 
 	/* Default Font */
@@ -19,65 +19,65 @@ html,body {
 style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/25px Helvetica, Tahoma, Arial, sans-serif; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><A 
 target=_self><SPAN style="TEXT-DECORATION: underline"><STRONG 
 style="FONT-WEIGHT: bold">java</STRONG></SPAN></A><SPAN 
-class=Apple-converted-space>&nbsp;</SPAN>ÖĞ»ñÈ¡ 
-resourceÒ»°ãÍ¨¹ıgetResource(),²»¹ÜÄãÊÇÍ¨¹ıclass»¹ÊÇclassloaderÀ´µ÷ÓÃ, Ê×ÏÈÎÒÃÇÀ´½²½²getResource(string 
-name)Õâ¸öname²ÎÊı£¬Í¨¹ıclassµ÷ÓÃgetResource(string name)·½·¨, name»áÏÈµ÷ÓÃresolveName£¨String 
-name£©½øĞĞ´¦Àí, Ô´Âë·½·¨ÈçÏÂ:</P>
+class=Apple-converted-space>&nbsp;</SPAN>ä¸­è·å– 
+resourceä¸€èˆ¬é€šè¿‡getResource(),ä¸ç®¡ä½ æ˜¯é€šè¿‡classè¿˜æ˜¯classloaderæ¥è°ƒç”¨, é¦–å…ˆæˆ‘ä»¬æ¥è®²è®²getResource(string 
+name)è¿™ä¸ªnameå‚æ•°ï¼Œé€šè¿‡classè°ƒç”¨getResource(string name)æ–¹æ³•, nameä¼šå…ˆè°ƒç”¨resolveNameï¼ˆString 
+nameï¼‰è¿›è¡Œå¤„ç†, æºç æ–¹æ³•å¦‚ä¸‹:</P>
 <DIV class=dp-highlighter 
 style="OVERFLOW: auto; WORD-WRAP: break-word; WIDTH: 679px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; WORD-BREAK: break-all; COLOR: rgb(0,0,0); PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; FONT: 12px/25px Monaco, 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Consolas, 'Courier New', monospace; PADDING-LEFT: 1px; MARGIN-LEFT: 9px; LETTER-SPACING: normal; PADDING-RIGHT: 1px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">
 <DIV class=bar>
 <DIV class=tools 
-style="FONT-WEIGHT: bold; COLOR: black; PADDING-BOTTOM: 3px; TEXT-ALIGN: left; PADDING-TOP: 3px; PADDING-LEFT: 3px; MARGIN: 0px; PADDING-RIGHT: 3px">Java´úÂë<SPAN 
+style="FONT-WEIGHT: bold; COLOR: black; PADDING-BOTTOM: 3px; TEXT-ALIGN: left; PADDING-TOP: 3px; PADDING-LEFT: 3px; MARGIN: 0px; PADDING-RIGHT: 3px">Javaä»£ç <SPAN 
 class=Apple-converted-space>&nbsp;</SPAN><EMBED 
 type=application/x-shockwave-flash 
 pluginspage=http://www.macromedia.com/go/getflashplayer height=15 width=14 
-src=http://flycars001.iteye.com/javascripts/syntaxhighlighter/clipboard_new.swf 
-allowscriptaccess="always" quality="high" 
-flashvars="clipboard=public%20java.net.URL%20getResource(String%20name)%20%7B%0Aname%20%3D%20resolveName(name)%3B%0AClassLoader%20cl%20%3D%20getClassLoader0()%3B%0Aif%20(cl%3D%3Dnull)%20%7B%0A%2F%2F%20A%20system%20class.%0Areturn%20ClassLoader.getSystemResource(name)%3B%0A%7D%0Areturn%20cl.getResource(name)%3B%0A%7D" 
-wmode="transparent">&nbsp;<A 
-onclick="code_favorites_do_favorite(this);return false;" title=ÊÕ²ØÕâ¶Î´úÂë 
+src="http://flycars001.iteye.com/javascripts/syntaxhighlighter/clipboard_new.swf" 
+wmode="transparent" flashvars="clipboard=public%20java.net.URL%20getResource(String%20name)%20%7B%0Aname%20%3D%20resolveName(name)%3B%0AClassLoader%20cl%20%3D%20getClassLoader0()%3B%0Aif%20(cl%3D%3Dnull)%20%7B%0A%2F%2F%20A%20system%20class.%0Areturn%20ClassLoader.getSystemResource(name)%3B%0A%7D%0Areturn%20cl.getResource(name)%3B%0A%7D" 
+quality="high" 
+allowscriptaccess="always">&nbsp;<A 
+onclick="code_favorites_do_favorite(this);return false;" title=æ”¶è—è¿™æ®µä»£ç  
 style="TEXT-DECORATION: underline; COLOR: rgb(16,138,198)" 
 href="javascript:void()"><IMG class=star 
 style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px" 
-alt=ÊÕ²Ø´úÂë src="http://flycars001.iteye.com/images/icon_star.png"></A></DIV></DIV>
+alt=æ”¶è—ä»£ç  src="http://flycars001.iteye.com/images/icon_star.png"></A></DIV></DIV>
 <OL class=dp-j 
 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1px solid; BORDER-RIGHT: rgb(209,215,220) 1px solid; BORDER-BOTTOM: rgb(209,215,220) 1px solid; COLOR: rgb(43,145,175); PADDING-BOTTOM: 2px; PADDING-TOP: 2px; PADDING-LEFT: 0px; MARGIN: 0px 0px 1px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 1.4em; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255)">
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black"><SPAN class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">public</SPAN><SPAN 
-  style="COLOR: black">&nbsp;java.net.URL&nbsp;getResource(String&nbsp;name)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;java.net.URL&nbsp;getResource(String&nbsp;name)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
-  style="COLOR: black">name&nbsp;=&nbsp;resolveName(name);&nbsp;&nbsp;</SPAN></LI>
+  style="COLOR: black">name&nbsp;=&nbsp;resolveName(name);&nbsp;&nbsp;</SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
-  style="COLOR: black">ClassLoader&nbsp;cl&nbsp;=&nbsp;getClassLoader0();&nbsp;&nbsp;</SPAN></LI>
+  style="COLOR: black">ClassLoader&nbsp;cl&nbsp;=&nbsp;getClassLoader0();&nbsp;&nbsp;</SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black"><SPAN class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">if</SPAN><SPAN 
   style="COLOR: black">&nbsp;(cl==</SPAN><SPAN class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">null</SPAN><SPAN 
-  style="COLOR: black">)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black"><SPAN class=comment 
   style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; WIDTH: auto; BORDER-BOTTOM: 0px; COLOR: rgb(0,130,0); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px">//&nbsp;A&nbsp;system&nbsp;class.</SPAN><SPAN 
-  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black"><SPAN class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">return</SPAN><SPAN 
-  style="COLOR: black">&nbsp;ClassLoader.getSystemResource(name);&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;ClassLoader.getSystemResource(name);&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
-  style="COLOR: black">}&nbsp;&nbsp;</SPAN></LI>
+  style="COLOR: black">}&nbsp;&nbsp;</SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black"><SPAN class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">return</SPAN><SPAN 
-  style="COLOR: black">&nbsp;cl.getResource(name);&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;cl.getResource(name);&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">}&nbsp;&nbsp;</SPAN></LI></OL></DIV>
@@ -87,81 +87,81 @@ style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(
 style="OVERFLOW: auto; WORD-WRAP: break-word; WIDTH: 679px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; WORD-BREAK: break-all; COLOR: rgb(0,0,0); PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; FONT: 12px/25px Monaco, 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Consolas, 'Courier New', monospace; PADDING-LEFT: 1px; MARGIN-LEFT: 9px; LETTER-SPACING: normal; PADDING-RIGHT: 1px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">
 <DIV class=bar>
 <DIV class=tools 
-style="FONT-WEIGHT: bold; COLOR: black; PADDING-BOTTOM: 3px; TEXT-ALIGN: left; PADDING-TOP: 3px; PADDING-LEFT: 3px; MARGIN: 0px; PADDING-RIGHT: 3px">Java´úÂë<SPAN 
+style="FONT-WEIGHT: bold; COLOR: black; PADDING-BOTTOM: 3px; TEXT-ALIGN: left; PADDING-TOP: 3px; PADDING-LEFT: 3px; MARGIN: 0px; PADDING-RIGHT: 3px">Javaä»£ç <SPAN 
 class=Apple-converted-space>&nbsp;</SPAN><EMBED 
 type=application/x-shockwave-flash 
 pluginspage=http://www.macromedia.com/go/getflashplayer height=15 width=14 
-src=http://flycars001.iteye.com/javascripts/syntaxhighlighter/clipboard_new.swf 
-allowscriptaccess="always" quality="high" 
-flashvars="clipboard=private%20String%20resolveName(String%20name)%20%7B%0Aif%20(name%20%3D%3D%20null)%20%7B%0Areturn%20name%3B%0A%7D%0Aif%20(!name.startsWith(%22%2F%22))%20%7B%0AClass%3C%3F%3E%20c%20%3D%20this%3B%0Awhile%20(c.isArray())%20%7B%0Ac%20%3D%20c.getComponentType()%3B%0A%7D%0AString%20baseName%20%3D%20c.getName()%3B%0Aint%20index%20%3D%20baseName.lastIndexOf('.')%3B%0Aif%20(index%20!%3D%20-1)%20%7B%0Aname%20%3D%20baseName.substring(0%2C%20index).replace('.'%2C%20'%2F')%0A%2B%22%2F%22%2Bname%3B%0A%7D%0A%7D%20else%20%7B%0Aname%20%3D%20name.substring(1)%3B%0A%7D%0Areturn%20name%3B%0A%7D" 
-wmode="transparent">&nbsp;<A 
-onclick="code_favorites_do_favorite(this);return false;" title=ÊÕ²ØÕâ¶Î´úÂë 
+src="http://flycars001.iteye.com/javascripts/syntaxhighlighter/clipboard_new.swf" 
+wmode="transparent" flashvars="clipboard=private%20String%20resolveName(String%20name)%20%7B%0Aif%20(name%20%3D%3D%20null)%20%7B%0Areturn%20name%3B%0A%7D%0Aif%20(!name.startsWith(%22%2F%22))%20%7B%0AClass%3C%3F%3E%20c%20%3D%20this%3B%0Awhile%20(c.isArray())%20%7B%0Ac%20%3D%20c.getComponentType()%3B%0A%7D%0AString%20baseName%20%3D%20c.getName()%3B%0Aint%20index%20%3D%20baseName.lastIndexOf('.')%3B%0Aif%20(index%20!%3D%20-1)%20%7B%0Aname%20%3D%20baseName.substring(0%2C%20index).replace('.'%2C%20'%2F')%0A%2B%22%2F%22%2Bname%3B%0A%7D%0A%7D%20else%20%7B%0Aname%20%3D%20name.substring(1)%3B%0A%7D%0Areturn%20name%3B%0A%7D" 
+quality="high" 
+allowscriptaccess="always">&nbsp;<A 
+onclick="code_favorites_do_favorite(this);return false;" title=æ”¶è—è¿™æ®µä»£ç  
 style="TEXT-DECORATION: underline; COLOR: rgb(16,138,198)" 
 href="javascript:void()"><IMG class=star 
 style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px" 
-alt=ÊÕ²Ø´úÂë src="http://flycars001.iteye.com/images/icon_star.png"></A></DIV></DIV>
+alt=æ”¶è—ä»£ç  src="http://flycars001.iteye.com/images/icon_star.png"></A></DIV></DIV>
 <OL class=dp-j 
 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1px solid; BORDER-RIGHT: rgb(209,215,220) 1px solid; BORDER-BOTTOM: rgb(209,215,220) 1px solid; COLOR: rgb(43,145,175); PADDING-BOTTOM: 2px; PADDING-TOP: 2px; PADDING-LEFT: 0px; MARGIN: 0px 0px 1px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 1.4em; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255)">
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black"><SPAN class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">private</SPAN><SPAN 
-  style="COLOR: black">&nbsp;String&nbsp;resolveName(String&nbsp;name)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;String&nbsp;resolveName(String&nbsp;name)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black"><SPAN class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">if</SPAN><SPAN 
   style="COLOR: black">&nbsp;(name&nbsp;==&nbsp;</SPAN><SPAN class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">null</SPAN><SPAN 
-  style="COLOR: black">)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black"><SPAN class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">return</SPAN><SPAN 
-  style="COLOR: black">&nbsp;name;&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;name;&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
-  style="COLOR: black">}&nbsp;&nbsp;</SPAN></LI>
+  style="COLOR: black">}&nbsp;&nbsp;</SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black"><SPAN class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">if</SPAN><SPAN 
   style="COLOR: black">&nbsp;(!name.startsWith(</SPAN><SPAN class=string 
   style="COLOR: blue">"/"</SPAN><SPAN 
-  style="COLOR: black">))&nbsp;{&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">))&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">Class&lt;?&gt;&nbsp;c&nbsp;=&nbsp;<SPAN class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">this</SPAN><SPAN 
-  style="COLOR: black">;&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">;&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black"><SPAN class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">while</SPAN><SPAN 
-  style="COLOR: black">&nbsp;(c.isArray())&nbsp;{&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;(c.isArray())&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
-  style="COLOR: black">c&nbsp;=&nbsp;c.getComponentType();&nbsp;&nbsp;</SPAN></LI>
+  style="COLOR: black">c&nbsp;=&nbsp;c.getComponentType();&nbsp;&nbsp;</SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
-  style="COLOR: black">}&nbsp;&nbsp;</SPAN></LI>
+  style="COLOR: black">}&nbsp;&nbsp;</SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
-  style="COLOR: black">String&nbsp;baseName&nbsp;=&nbsp;c.getName();&nbsp;&nbsp;</SPAN></LI>
+  style="COLOR: black">String&nbsp;baseName&nbsp;=&nbsp;c.getName();&nbsp;&nbsp;</SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black"><SPAN class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">int</SPAN><SPAN 
   style="COLOR: black">&nbsp;index&nbsp;=&nbsp;baseName.lastIndexOf(</SPAN><SPAN 
   class=string style="COLOR: blue">'.'</SPAN><SPAN 
-  style="COLOR: black">);&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">);&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black"><SPAN class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">if</SPAN><SPAN 
   style="COLOR: black">&nbsp;(index&nbsp;!=&nbsp;-</SPAN><SPAN class=number 
   style="COLOR: rgb(192,0,0)">1</SPAN><SPAN 
-  style="COLOR: black">)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">)&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">name&nbsp;=&nbsp;baseName.substring(<SPAN class=number 
@@ -169,84 +169,94 @@ style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1p
   style="COLOR: black">,&nbsp;index).replace(</SPAN><SPAN class=string 
   style="COLOR: blue">'.'</SPAN><SPAN style="COLOR: black">,&nbsp;</SPAN><SPAN 
   class=string style="COLOR: blue">'/'</SPAN><SPAN 
-  style="COLOR: black">)&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">)&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">+<SPAN class=string style="COLOR: blue">"/"</SPAN><SPAN 
-  style="COLOR: black">+name;&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">+name;&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
-  style="COLOR: black">}&nbsp;&nbsp;</SPAN></LI>
+  style="COLOR: black">}&nbsp;&nbsp;</SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">}&nbsp;<SPAN class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">else</SPAN><SPAN 
-  style="COLOR: black">&nbsp;{&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;{&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">name&nbsp;=&nbsp;name.substring(<SPAN class=number 
   style="COLOR: rgb(192,0,0)">1</SPAN><SPAN 
-  style="COLOR: black">);&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">);&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
-  style="COLOR: black">}&nbsp;&nbsp;</SPAN></LI>
+  style="COLOR: black">}&nbsp;&nbsp;</SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black"><SPAN class=keyword 
   style="FONT-WEIGHT: bold; COLOR: rgb(127,0,85)">return</SPAN><SPAN 
-  style="COLOR: black">&nbsp;name;&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">&nbsp;name;&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">}&nbsp;&nbsp;</SPAN></LI></OL></DIV>
 <P 
-style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/25px Helvetica, Tahoma, Arial, sans-serif; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;¡¡Í¨¹ı¹Û²ìÔ´Âë¿ÉÒÔÖªµÀ,class.getResource(string 
-name)£¬×îÖÕ»¹ÊÇÒªµ÷ÓÃ¸ÃclassµÄclassloaderµÄgetResource(string name)·½·¨,Ò²¾ÍÊÇËµ²»¹Üclass»¹ÊÇ</P>
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/25px Helvetica, Tahoma, Arial, sans-serif; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;ã€€é€šè¿‡è§‚å¯Ÿæºç å¯ä»¥çŸ¥é“,class.getResource(string 
+name)ï¼Œæœ€ç»ˆè¿˜æ˜¯è¦è°ƒç”¨è¯¥classçš„classloaderçš„getResource(string name)æ–¹æ³•,ä¹Ÿå°±æ˜¯è¯´ä¸ç®¡classè¿˜æ˜¯</P>
 <DIV class=dp-highlighter 
 style="OVERFLOW: auto; WORD-WRAP: break-word; WIDTH: 679px; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; WORD-BREAK: break-all; COLOR: rgb(0,0,0); PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; FONT: 12px/25px Monaco, 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Consolas, 'Courier New', monospace; PADDING-LEFT: 1px; MARGIN-LEFT: 9px; LETTER-SPACING: normal; PADDING-RIGHT: 1px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">
 <DIV class=bar>
 <DIV class=tools 
-style="FONT-WEIGHT: bold; COLOR: black; PADDING-BOTTOM: 3px; TEXT-ALIGN: left; PADDING-TOP: 3px; PADDING-LEFT: 3px; MARGIN: 0px; PADDING-RIGHT: 3px">Java´úÂë<SPAN 
+style="FONT-WEIGHT: bold; COLOR: black; PADDING-BOTTOM: 3px; TEXT-ALIGN: left; PADDING-TOP: 3px; PADDING-LEFT: 3px; MARGIN: 0px; PADDING-RIGHT: 3px">Javaä»£ç <SPAN 
 class=Apple-converted-space>&nbsp;</SPAN><EMBED 
 type=application/x-shockwave-flash 
 pluginspage=http://www.macromedia.com/go/getflashplayer height=15 width=14 
-src=http://flycars001.iteye.com/javascripts/syntaxhighlighter/clipboard_new.swf 
-allowscriptaccess="always" quality="high" 
-flashvars="clipboard=classloader%E5%8E%BB%E8%B0%83%E7%94%A8getResource(string%20name)%E6%96%B9%E6%B3%95%E6%9C%AC%E8%B4%A8%E8%BF%98%E6%98%AF%E4%B8%80%E6%A0%B7%E7%9A%84.%E4%BB%A5%E4%B8%8B%E7%BB%99%E5%87%BA%E5%87%A0%E4%B8%AA%E7%BB%93%E8%AE%BA%E5%85%88%3A%0AClass.getResource(%22%22)%20%20%20%20%E8%BF%94%E5%9B%9E%E7%9A%84%E6%98%AF%E5%BD%93%E5%89%8DClass%E8%BF%99%E4%B8%AA%E7%B1%BB%E6%89%80%E5%9C%A8%E5%8C%85%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%BA%E7%BD%AE%0AClass.getResource(%22%2F%22)%20%E8%BF%94%E5%9B%9E%E7%9A%84%E6%98%AFclasspath%E7%9A%84%E4%BD%8D%E7%BD%AE%0AgetClassLoader().getResource(%22%22)%20%20%E8%BF%94%E5%9B%9E%E7%9A%84%E6%98%AFclasspath%E7%9A%84%E4%BD%8D%E7%BD%AE%0AgetClassLoader().getResource(%22%2F%22)%20%20%E9%94%99%E8%AF%AF%E7%9A%84!!" 
-wmode="transparent">&nbsp;<A 
-onclick="code_favorites_do_favorite(this);return false;" title=ÊÕ²ØÕâ¶Î´úÂë 
+src="http://flycars001.iteye.com/javascripts/syntaxhighlighter/clipboard_new.swf" 
+wmode="transparent" flashvars="clipboard=classloader%E5%8E%BB%E8%B0%83%E7%94%A8getResource(string%20name)%E6%96%B9%E6%B3%95%E6%9C%AC%E8%B4%A8%E8%BF%98%E6%98%AF%E4%B8%80%E6%A0%B7%E7%9A%84.%E4%BB%A5%E4%B8%8B%E7%BB%99%E5%87%BA%E5%87%A0%E4%B8%AA%E7%BB%93%E8%AE%BA%E5%85%88%3A%0AClass.getResource(%22%22)%20%20%20%20%E8%BF%94%E5%9B%9E%E7%9A%84%E6%98%AF%E5%BD%93%E5%89%8DClass%E8%BF%99%E4%B8%AA%E7%B1%BB%E6%89%80%E5%9C%A8%E5%8C%85%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%BA%E7%BD%AE%0AClass.getResource(%22%2F%22)%20%E8%BF%94%E5%9B%9E%E7%9A%84%E6%98%AFclasspath%E7%9A%84%E4%BD%8D%E7%BD%AE%0AgetClassLoader().getResource(%22%22)%20%20%E8%BF%94%E5%9B%9E%E7%9A%84%E6%98%AFclasspath%E7%9A%84%E4%BD%8D%E7%BD%AE%0AgetClassLoader().getResource(%22%2F%22)%20%20%E9%94%99%E8%AF%AF%E7%9A%84!!" 
+quality="high" 
+allowscriptaccess="always">&nbsp;<A 
+onclick="code_favorites_do_favorite(this);return false;" title=æ”¶è—è¿™æ®µä»£ç  
 style="TEXT-DECORATION: underline; COLOR: rgb(16,138,198)" 
 href="javascript:void()"><IMG class=star 
 style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px" 
-alt=ÊÕ²Ø´úÂë src="http://flycars001.iteye.com/images/icon_star.png"></A></DIV></DIV>
+alt=æ”¶è—ä»£ç  src="http://flycars001.iteye.com/images/icon_star.png"></A></DIV></DIV>
 <OL class=dp-j 
 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 1em; BORDER-TOP: rgb(209,215,220) 1px solid; BORDER-RIGHT: rgb(209,215,220) 1px solid; BORDER-BOTTOM: rgb(209,215,220) 1px solid; COLOR: rgb(43,145,175); PADDING-BOTTOM: 2px; PADDING-TOP: 2px; PADDING-LEFT: 0px; MARGIN: 0px 0px 1px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 1.4em; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255)">
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black"><SPAN 
-  style="COLOR: black">classloaderÈ¥µ÷ÓÃgetResource(string&nbsp;name)·½·¨±¾ÖÊ»¹ÊÇÒ»ÑùµÄ.ÒÔÏÂ¸ø³ö¼¸¸ö½áÂÛÏÈ:&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">classloaderå»è°ƒç”¨getResource(string&nbsp;name)æ–¹æ³•æœ¬è´¨è¿˜æ˜¯ä¸€æ ·çš„.ä»¥ä¸‹ç»™å‡ºå‡ ä¸ªç»“è®ºå…ˆ:&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">Class.getResource(<SPAN class=string 
   style="COLOR: blue">""</SPAN><SPAN 
-  style="COLOR: black">)&nbsp;&nbsp;&nbsp;&nbsp;·µ»ØµÄÊÇµ±Ç°ClassÕâ¸öÀàËùÔÚ°ü¿ªÊ¼µÄÎªÖÃ&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">)&nbsp;&nbsp;&nbsp;&nbsp;è¿”å›çš„æ˜¯å½“å‰Classè¿™ä¸ªç±»æ‰€åœ¨åŒ…å¼€å§‹çš„ä¸ºç½®&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">Class.getResource(<SPAN class=string 
   style="COLOR: blue">"/"</SPAN><SPAN 
-  style="COLOR: black">)&nbsp;·µ»ØµÄÊÇclasspathµÄÎ»ÖÃ&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">)&nbsp;è¿”å›çš„æ˜¯classpathçš„ä½ç½®&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">getClassLoader().getResource(<SPAN class=string 
   style="COLOR: blue">""</SPAN><SPAN 
-  style="COLOR: black">)&nbsp;&nbsp;·µ»ØµÄÊÇclasspathµÄÎ»ÖÃ&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="COLOR: black">)&nbsp;&nbsp;è¿”å›çš„æ˜¯classpathçš„ä½ç½®&nbsp;&nbsp;</SPAN></SPAN>
   <LI 
   style="FONT-SIZE: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 10px; MARGIN: 0px 0px 0px 38px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(250,250,250)"><SPAN 
   style="COLOR: black">getClassLoader().getResource(<SPAN class=string 
   style="COLOR: blue">"/"</SPAN><SPAN 
-  style="COLOR: black">)&nbsp;&nbsp;´íÎóµÄ!!&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV>
+  style="COLOR: black">)&nbsp;&nbsp;é”™è¯¯çš„!!&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV>
 <P 
-style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/25px Helvetica, Tahoma, Arial, sans-serif; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;¡¡class.getResource(name)·½·¨±¾ÖÊ»¹ÊÇµ÷ÓÃclassloaderµÄgetResoure()·½·¨,Ö»ÊÇ 
-class.getResource(name)·½·¨»á¶Ôname×ö´¦Àí£¬Èç¹ûnameÒÔ"/"¿ªÍ·,Ôò½ØÈ¡"/"ºóÃæµÄÂ·¾¶_+ÏµÍ³ÀàÂ·¾¶ĞÎ³É×îÖÕ¾ø¶Ô 
-Â·¾¶,Èç¹ûname²»ÒÔ"/"¿ªÍ·,Ôò½«¸ÃclassÎÄ¼şµÄ°üÃûÂ·¾¶+nameĞÎ³É×îÖÕ¾ø¶ÔÂ·¾¶, name 
-µ½´ïclassloader.getResource()·½·¨Ö®Ç°±ØĞë²»ÒÔ/¿ªÍ·.</P></body>
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/25px Helvetica, Tahoma, Arial, sans-serif; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;ã€€class.getResource(name)æ–¹æ³•æœ¬è´¨è¿˜æ˜¯è°ƒç”¨classloaderçš„getResoure()æ–¹æ³•,åªæ˜¯ 
+class.getResource(name)æ–¹æ³•ä¼šå¯¹nameåšå¤„ç†ï¼Œå¦‚æœnameä»¥"/"å¼€å¤´,åˆ™æˆªå–"/"åé¢çš„è·¯å¾„_+ç³»ç»Ÿç±»è·¯å¾„å½¢æˆæœ€ç»ˆç»å¯¹ 
+è·¯å¾„,å¦‚æœnameä¸ä»¥"/"å¼€å¤´,åˆ™å°†è¯¥classæ–‡ä»¶çš„åŒ…åè·¯å¾„+nameå½¢æˆæœ€ç»ˆç»å¯¹è·¯å¾„, name 
+åˆ°è¾¾classloader.getResource()æ–¹æ³•ä¹‹å‰å¿…é¡»ä¸ä»¥/å¼€å¤´.</P>
+<P 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/25px Helvetica, Tahoma, Arial, sans-serif; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"> 
+ 
+  
+&nbsp;</P>
+<P 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/25px Helvetica, Tahoma, Arial, sans-serif; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"> 
+ 
+  
+&nbsp;</P></body>
 </html>

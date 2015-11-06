@@ -1,146 +1,154 @@
-<html>
-<title>java classLoader ÌåÏµ½á¹¹</title>
-<body>
-<!--StartFragment-->
-<h2>java classLoader ÌåÏµ½á¹¹</h2>
-<div class="meta">·¢±íÓÚ£º<span class="time">2009Äê6ÔÂ29ÈÕ</span> | ·ÖÀà£º<a href="http://blog.chenlb.com/category/tech/java" title="View all posts in java" rel="category tag">java</a> | ±êÇ©£º <a href="http://blog.chenlb.com/tag/architecture" rel="tag">architecture</a>, <a href="http://blog.chenlb.com/tag/classloader" rel="tag">classloader</a> | <span class="view">views(17,135)</span></div>
-<p><a href="http://creativecommons.org/licenses/by/3.0/deed.zh" rel="bookmark">°æÈ¨ĞÅÏ¢</a>: ¿ÉÒÔÈÎÒâ×ªÔØ, ×ªÔØÊ±ÇëÎñ±ØÒÔ³¬Á´½ÓĞÎÊ½±êÃ÷ÎÄÕÂ<b>Ô­ÎÄ³ö´¦</b>, ¼´ÏÂÃæµÄÉùÃ÷.</p>
+ï»¿<html>
+<title>java classLoader ä½“ç³»ç»“æ„</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body><!--StartFragment-->
+<h2>java classLoader ä½“ç³»ç»“æ„</h2>
+<div class="meta">å‘è¡¨äºï¼š<span class="time">2009å¹´6æœˆ29æ—¥</span> | åˆ†ç±»ï¼š<a href="http://blog.chenlb.com/category/tech/java" title="View all posts in java" rel="category tag">java</a> | æ ‡ç­¾ï¼š <a href="http://blog.chenlb.com/tag/architecture" rel="tag">architecture</a>, <a href="http://blog.chenlb.com/tag/classloader" rel="tag">classloader</a> | <span class="view">views(17,135)</span></div>
+<p><a href="http://creativecommons.org/licenses/by/3.0/deed.zh" rel="bookmark">ç‰ˆæƒä¿¡æ¯</a>: å¯ä»¥ä»»æ„è½¬è½½, è½¬è½½æ—¶è¯·åŠ¡å¿…ä»¥è¶…é“¾æ¥å½¢å¼æ ‡æ˜æ–‡ç« <b>åŸæ–‡å‡ºå¤„</b>, å³ä¸‹é¢çš„å£°æ˜.</p>
 <p> </p>
-<p>Ô­ÎÄ³ö´¦£º<a href="file:///C:/temp/maftemp-44770820/1344244749701_679/1344244735881_339/index.html#">http://blog.chenlb.com/2009/06/java-classloader-architecture.html</a></p>
+<p>åŸæ–‡å‡ºå¤„ï¼š<a href="file:///C:/temp/maftemp-44770820/1344244749701_679/1344244735881_339/index.html#">http://blog.chenlb.com/2009/06/java-classloader-architecture.html</a></p>
 <div class="content">
-  <p><strong>jvm classLoader architecture£º</strong></p>
+  <p><strong>jvm classLoader architectureï¼š</strong></p>
   <ol>
-    <li>Bootstrap ClassLoader/Æô¶¯Àà¼ÓÔØÆ÷ <br>
-      Ö÷Òª¸ºÔğjdk_home/libÄ¿Â¼ÏÂµÄºËĞÄ api »ò -Xbootclasspath Ñ¡ÏîÖ¸¶¨µÄjar°ü×°Èë¹¤×÷¡£</li>
-    <li>Extension ClassLoader/À©Õ¹Àà¼ÓÔØÆ÷ <br>
-      Ö÷Òª¸ºÔğjdk_home/lib/extÄ¿Â¼ÏÂµÄjar°ü»ò -Djava.ext.dirs Ö¸¶¨Ä¿Â¼ÏÂµÄjar°ü×°Èë¹¤×÷¡£</li>
-    <li>System ClassLoader/ÏµÍ³Àà¼ÓÔØÆ÷ <br>
-      Ö÷Òª¸ºÔğjava -classpath/-Djava.class.pathËùÖ¸µÄÄ¿Â¼ÏÂµÄÀàÓëjar°ü×°Èë¹¤×÷¡£</li>
-    <li>User Custom ClassLoader/ÓÃ»§×Ô¶¨ÒåÀà¼ÓÔØÆ÷(java.lang.ClassLoaderµÄ×ÓÀà) <br>
-      ÔÚ³ÌĞòÔËĞĞÆÚ¼ä, Í¨¹ıjava.lang.ClassLoaderµÄ×ÓÀà¶¯Ì¬¼ÓÔØclassÎÄ¼ş, ÌåÏÖjava¶¯Ì¬ÊµÊ±Àà×°ÈëÌØĞÔ¡£</li>
+    <li>Bootstrap ClassLoader/å¯åŠ¨ç±»åŠ è½½å™¨ <br>
+      ä¸»è¦è´Ÿè´£jdk_home/libç›®å½•ä¸‹çš„æ ¸å¿ƒ api æˆ– -Xbootclasspath 
+  é€‰é¡¹æŒ‡å®šçš„jaråŒ…è£…å…¥å·¥ä½œã€‚ 
+    <li>Extension ClassLoader/æ‰©å±•ç±»åŠ è½½å™¨ <br>
+      ä¸»è¦è´Ÿè´£jdk_home/lib/extç›®å½•ä¸‹çš„jaråŒ…æˆ– -Djava.ext.dirs 
+  æŒ‡å®šç›®å½•ä¸‹çš„jaråŒ…è£…å…¥å·¥ä½œã€‚ 
+    <li>System ClassLoader/ç³»ç»Ÿç±»åŠ è½½å™¨ <br>
+      ä¸»è¦è´Ÿè´£java -classpath/-Djava.class.pathæ‰€æŒ‡çš„ç›®å½•ä¸‹çš„ç±»ä¸jaråŒ…è£…å…¥å·¥ä½œã€‚ 
+    <li>User Custom ClassLoader/ç”¨æˆ·è‡ªå®šä¹‰ç±»åŠ è½½å™¨(java.lang.ClassLoaderçš„å­ç±») <br>
+      åœ¨ç¨‹åºè¿è¡ŒæœŸé—´, é€šè¿‡java.lang.ClassLoaderçš„å­ç±»åŠ¨æ€åŠ è½½classæ–‡ä»¶, ä½“ç°javaåŠ¨æ€å®æ—¶ç±»è£…å…¥ç‰¹æ€§ã€‚</li>
   </ol>
-  <p><strong>Àà¼ÓÔØÆ÷µÄÌØĞÔ£º</strong></p>
+  <p><strong>ç±»åŠ è½½å™¨çš„ç‰¹æ€§ï¼š</strong></p>
   <ol>
-    <li>Ã¿¸öClassLoader¶¼Î¬»¤ÁËÒ»·İ×Ô¼ºµÄÃû³Æ¿Õ¼ä£¬ Í¬Ò»¸öÃû³Æ¿Õ¼äÀï²»ÄÜ³öÏÖÁ½¸öÍ¬ÃûµÄÀà¡£</li>
-    <li>ÎªÁËÊµÏÖjava°²È«É³ÏäÄ£ĞÍ¶¥²ãµÄÀà¼ÓÔØÆ÷°²È«»úÖÆ, javaÄ¬ÈÏ²ÉÓÃÁË " Ë«Ç×Î¯ÅÉµÄ¼ÓÔØÁ´ " ½á¹¹¡£</li>
+    <li>æ¯ä¸ªClassLoaderéƒ½ç»´æŠ¤äº†ä¸€ä»½è‡ªå·±çš„åç§°ç©ºé—´ï¼Œ åŒä¸€ä¸ªåç§°ç©ºé—´é‡Œä¸èƒ½å‡ºç°ä¸¤ä¸ªåŒåçš„ç±»ã€‚ 
+    <li>ä¸ºäº†å®ç°javaå®‰å…¨æ²™ç®±æ¨¡å‹é¡¶å±‚çš„ç±»åŠ è½½å™¨å®‰å…¨æœºåˆ¶, javaé»˜è®¤é‡‡ç”¨äº† " åŒäº²å§”æ´¾çš„åŠ è½½é“¾ " ç»“æ„ã€‚</li>
   </ol>
-  <div id="attachment_1066" class="wp-caption alignnone" style="width: 177px"><img class="size-full wp-image-1066 " title="classloader-architecture" src="classloader-architecture.jpg" alt="classloader-architecture" height="281" width="167">
+  <div id="attachment_1066" class="wp-caption alignnone" style="WIDTH: 177px"><IMG title=classloader-architecture class  ="size-full wp-image-1066 " alt=classloader-architecture src="classloader-architecture.jpg" width=167 height=281 >
     <p class="wp-caption-text">classloader-architecture</p>
   </div>
-  <div id="attachment_1067" class="wp-caption alignnone" style="width: 353px"><img class="size-full wp-image-1067 " title="classloader-class-diagram" src="classloader-class-diagram.jpg" alt="classloader-class-diagram" height="465" width="343">
+  <div id="attachment_1067" class="wp-caption alignnone" style="WIDTH: 353px"><IMG title=classloader-class-diagram class  ="size-full wp-image-1067 " alt=classloader-class-diagram src="classloader-class-diagram.jpg" width=343 height=465 >
     <p class="wp-caption-text">classloader-class-diagram</p>
   </div>
-  <p>ÀàÍ¼ÖĞ£¬ BootstrapClassLoaderÊÇÒ»¸öµ¥¶ÀµÄjavaÀà£¬ ÆäÊµÔÚÕâÀï£¬ ²»Ó¦¸Ã½ĞËûÊÇÒ»¸öjavaÀà¡£ÒòÎª£¬ËüÒÑ¾­ÍêÈ«²»ÓÃjavaÊµÏÖÁË¡£ËüÊÇÔÚjvmÆô¶¯Ê±£¬ ¾Í±»¹¹ÔìÆğÀ´µÄ£¬ ¸ºÔğjavaÆ½Ì¨ºËĞÄ¿â¡£</p>
-  <p><strong>×Ô¶¨ÒåÀà¼ÓÔØÆ÷¼ÓÔØÒ»¸öÀàµÄ²½Öè</strong></p>
-  <div id="attachment_1068" class="wp-caption alignnone" style="width: 593px"><img class="size-full wp-image-1068 " title="classloader-load-class" src="classloader-load-class.jpg" alt="classloader-load-class" height="289" width="583">
+  <p>ç±»å›¾ä¸­ï¼Œ BootstrapClassLoaderæ˜¯ä¸€ä¸ªå•ç‹¬çš„javaç±»ï¼Œ å…¶å®åœ¨è¿™é‡Œï¼Œ ä¸åº”è¯¥å«ä»–æ˜¯ä¸€ä¸ªjavaç±»ã€‚å› ä¸ºï¼Œå®ƒå·²ç»å®Œå…¨ä¸ç”¨javaå®ç°äº†ã€‚å®ƒæ˜¯åœ¨jvmå¯åŠ¨æ—¶ï¼Œ å°±è¢«æ„é€ èµ·æ¥çš„ï¼Œ è´Ÿè´£javaå¹³å°æ ¸å¿ƒåº“ã€‚</p>
+  <p><strong>è‡ªå®šä¹‰ç±»åŠ è½½å™¨åŠ è½½ä¸€ä¸ªç±»çš„æ­¥éª¤</strong></p>
+  <div id="attachment_1068" class="wp-caption alignnone" style="WIDTH: 593px"><IMG title=classloader-load-class class  ="size-full wp-image-1068 " alt=classloader-load-class src="classloader-load-class.jpg" width=583 height=289 >
     <p class="wp-caption-text">classloader-load-class</p>
   </div>
-  <p><strong>ClassLoader Àà¼ÓÔØÂß¼­·ÖÎö£¬ ÒÔÏÂÂß¼­ÊÇ³ı BootstrapClassLoader ÍâµÄÀà¼ÓÔØÆ÷¼ÓÔØÁ÷³Ì£º</strong></p>
+  <p><strong>ClassLoader ç±»åŠ è½½é€»è¾‘åˆ†æï¼Œ ä»¥ä¸‹é€»è¾‘æ˜¯é™¤ BootstrapClassLoader å¤–çš„ç±»åŠ è½½å™¨åŠ è½½æµç¨‹ï¼š</strong></p>
   <div class="dp-highlighter">
     <div class="bar"></div>
-    <ol class="dp-j" start="1">
-      <li class="alt"><span><span class="comment">//&nbsp;¼ì²éÀàÊÇ·ñÒÑ±»×°ÔØ¹ı</span><span>&nbsp;&nbsp;</span></span></li>
-      <li class=""><span>Class&nbsp;c&nbsp;=&nbsp;findLoadedClass(name);&nbsp;&nbsp;</span></li>
-      <li class="alt"><span><span class="keyword">if</span><span>&nbsp;(c&nbsp;==&nbsp;</span><span class="keyword">null</span><span>&nbsp;)&nbsp;{&nbsp;&nbsp;</span></span></li>
-      <li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;Ö¸¶¨ÀàÎ´±»×°ÔØ¹ı</span><span>&nbsp;&nbsp;</span></span></li>
-      <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">try</span><span>&nbsp;{&nbsp;&nbsp;</span></span></li>
-      <li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>&nbsp;(parent&nbsp;!=&nbsp;</span><span class="keyword">null</span><span>&nbsp;)&nbsp;{&nbsp;&nbsp;</span></span></li>
-      <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;Èç¹û¸¸Àà¼ÓÔØÆ÷²»Îª¿Õ£¬&nbsp;ÔòÎ¯ÅÉ¸ø¸¸Àà¼ÓÔØ</span><span>&nbsp;&nbsp;</span></span></li>
-      <li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c&nbsp;=&nbsp;parent.loadClass(name,&nbsp;<span class="keyword">false</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li>
-      <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="keyword">else</span><span>&nbsp;{&nbsp;&nbsp;</span></span></li>
-      <li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;Èç¹û¸¸Àà¼ÓÔØÆ÷Îª¿Õ£¬&nbsp;ÔòÎ¯ÅÉ¸øÆô¶¯Àà¼ÓÔØ¼ÓÔØ</span><span>&nbsp;&nbsp;</span></span></li>
-      <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c&nbsp;=&nbsp;findBootstrapClass0(name);&nbsp;&nbsp;</span></li>
-      <li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li>
-      <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="keyword">catch</span><span>&nbsp;(ClassNotFoundException&nbsp;e)&nbsp;{&nbsp;&nbsp;</span></span></li>
-      <li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;Æô¶¯Àà¼ÓÔØÆ÷»ò¸¸Àà¼ÓÔØÆ÷Å×³öÒì³£ºó£¬&nbsp;µ±Ç°Àà¼ÓÔØÆ÷½«Æä</span><span>&nbsp;&nbsp;</span></span></li>
-      <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;²¶»ñ£¬&nbsp;²¢Í¨¹ıfindClass·½·¨£¬&nbsp;ÓÉ×ÔÉí¼ÓÔØ</span><span>&nbsp;&nbsp;</span></span></li>
-      <li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c&nbsp;=&nbsp;findClass(name);&nbsp;&nbsp;</span></li>
-      <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li>
-      <li class=""><span>}&nbsp;&nbsp;</span></li>
+    <ol class="dp-j" >
+      <li class="alt"><span><span class="comment">//&nbsp;æ£€æŸ¥ç±»æ˜¯å¦å·²è¢«è£…è½½è¿‡</span><span>&nbsp;&nbsp;</span></span>
+      <li ><span>Class&nbsp;c&nbsp;=&nbsp;findLoadedClass(name);&nbsp;&nbsp;</span>
+      <li class="alt"><span><span class="keyword">if</span><span>&nbsp;(c&nbsp;==&nbsp;</span><span class="keyword">null</span><span>&nbsp;)&nbsp;{&nbsp;&nbsp;</span></span>
+      <li ><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;æŒ‡å®šç±»æœªè¢«è£…è½½è¿‡</span><span>&nbsp;&nbsp;</span></span>
+      <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">try</span><span>&nbsp;{&nbsp;&nbsp;</span></span>
+      <li ><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>&nbsp;(parent&nbsp;!=&nbsp;</span><span class="keyword">null</span><span>&nbsp;)&nbsp;{&nbsp;&nbsp;</span></span>
+      <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;å¦‚æœçˆ¶ç±»åŠ è½½å™¨ä¸ä¸ºç©ºï¼Œ&nbsp;åˆ™å§”æ´¾ç»™çˆ¶ç±»åŠ è½½</span><span>&nbsp;&nbsp;</span></span>
+      <li ><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c&nbsp;=&nbsp;parent.loadClass(name,&nbsp;<span class="keyword">false</span><span>&nbsp;);&nbsp;&nbsp;</span></span>
+      <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="keyword">else</span><span>&nbsp;{&nbsp;&nbsp;</span></span>
+      <li ><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;å¦‚æœçˆ¶ç±»åŠ è½½å™¨ä¸ºç©ºï¼Œ&nbsp;åˆ™å§”æ´¾ç»™å¯åŠ¨ç±»åŠ è½½åŠ è½½</span><span>&nbsp;&nbsp;</span></span>
+      <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c&nbsp;=&nbsp;findBootstrapClass0(name);&nbsp;&nbsp;</span>
+      <li ><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span>
+      <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="keyword">catch</span><span>&nbsp;(ClassNotFoundException&nbsp;e)&nbsp;{&nbsp;&nbsp;</span></span>
+      <li ><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;å¯åŠ¨ç±»åŠ è½½å™¨æˆ–çˆ¶ç±»åŠ è½½å™¨æŠ›å‡ºå¼‚å¸¸åï¼Œ&nbsp;å½“å‰ç±»åŠ è½½å™¨å°†å…¶</span><span>&nbsp;&nbsp;</span></span>
+      <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;æ•è·ï¼Œ&nbsp;å¹¶é€šè¿‡findClassæ–¹æ³•ï¼Œ&nbsp;ç”±è‡ªèº«åŠ è½½</span><span>&nbsp;&nbsp;</span></span>
+      <li ><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c&nbsp;=&nbsp;findClass(name);&nbsp;&nbsp;</span>
+      <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span>
+      <li ><span>}&nbsp;&nbsp;</span></li>
     </ol>
   </div>
-  <p><strong>Ïß³ÌÉÏÏÂÎÄÀà¼ÓÔØÆ÷</strong><br>
-    javaÄ¬ÈÏµÄÏß³ÌÉÏÏÂÎÄÀà¼ÓÔØÆ÷ÊÇ ÏµÍ³Àà¼ÓÔØÆ÷(AppClassLoader)¡£</p>
+  <p><strong>çº¿ç¨‹ä¸Šä¸‹æ–‡ç±»åŠ è½½å™¨</strong><br>
+    javaé»˜è®¤çš„çº¿ç¨‹ä¸Šä¸‹æ–‡ç±»åŠ è½½å™¨æ˜¯ ç³»ç»Ÿç±»åŠ è½½å™¨(AppClassLoader)ã€‚</p>
   <div class="dp-highlighter">
     <div class="bar"></div>
-    <ol class="dp-j" start="1">
-      <li class="alt"><span><span class="comment">//&nbsp;Now&nbsp;create&nbsp;the&nbsp;class&nbsp;loader&nbsp;to&nbsp;use&nbsp;to&nbsp;launch&nbsp;the&nbsp;application</span><span>&nbsp;&nbsp;</span></span></li>
-      <li class=""><span><span class="keyword">try</span><span>&nbsp;{&nbsp;&nbsp;</span></span></li>
-      <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;loader&nbsp;=&nbsp;AppClassLoader.getAppClassLoader(extcl);&nbsp;&nbsp;</span></li>
-      <li class=""><span>}&nbsp;<span class="keyword">catch</span><span>&nbsp;(IOException&nbsp;e)&nbsp;{&nbsp;&nbsp;</span></span></li>
-      <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">throw</span><span>&nbsp;</span><span class="keyword">new</span><span>&nbsp;InternalError(&nbsp;&nbsp;</span></span></li>
-      <li class=""><span><span class="string">"Could&nbsp;not&nbsp;create&nbsp;application&nbsp;class&nbsp;loader"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li>
-      <li class="alt"><span>}&nbsp;&nbsp;&nbsp;</span></li>
-      <li class=""><span>&nbsp;&nbsp;</span></li>
-      <li class="alt"><span><span class="comment">//&nbsp;Also&nbsp;set&nbsp;the&nbsp;context&nbsp;class&nbsp;loader&nbsp;for&nbsp;the&nbsp;primordial&nbsp;thread.</span><span>&nbsp;&nbsp;</span></span></li>
-      <li class=""><span>Thread.currentThread().setContextClassLoader(loader);&nbsp;&nbsp;</span></li>
+    <ol class="dp-j" >
+      <li class="alt"><span><span class="comment">//&nbsp;Now&nbsp;create&nbsp;the&nbsp;class&nbsp;loader&nbsp;to&nbsp;use&nbsp;to&nbsp;launch&nbsp;the&nbsp;application</span><span>&nbsp;&nbsp;</span></span>
+      <li ><span><span class="keyword">try</span><span>&nbsp;{&nbsp;&nbsp;</span></span>
+      <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;loader&nbsp;=&nbsp;AppClassLoader.getAppClassLoader(extcl);&nbsp;&nbsp;</span>
+      <li ><span>}&nbsp;<span class="keyword">catch</span><span>&nbsp;(IOException&nbsp;e)&nbsp;{&nbsp;&nbsp;</span></span>
+      <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">throw</span><span>&nbsp;</span><span class="keyword">new</span><span>&nbsp;InternalError(&nbsp;&nbsp;</span></span>
+      <li ><span><span class="string">"Could&nbsp;not&nbsp;create&nbsp;application&nbsp;class&nbsp;loader"</span><span>&nbsp;);&nbsp;&nbsp;</span></span>
+      <li class="alt"><span>}&nbsp;&nbsp;&nbsp;</span>
+      <li ><span>&nbsp;&nbsp;</span>
+      <li class="alt"><span><span class="comment">//&nbsp;Also&nbsp;set&nbsp;the&nbsp;context&nbsp;class&nbsp;loader&nbsp;for&nbsp;the&nbsp;primordial&nbsp;thread.</span><span>&nbsp;&nbsp;</span></span>
+      <li ><span>Thread.currentThread().setContextClassLoader(loader);&nbsp;&nbsp;</span></li>
     </ol>
   </div>
-  <p>ÒÔÉÏ´úÂëÕª×Ôsun.misc.LaunchµÄÎŞ²Î¹¹Ôìº¯ÊıLaunch()¡£</p>
-  <p>Ê¹ÓÃÏß³ÌÉÏÏÂÎÄÀà¼ÓÔØÆ÷, ¿ÉÒÔÔÚÖ´ĞĞÏß³ÌÖĞ, Å×ÆúË«Ç×Î¯ÅÉ¼ÓÔØÁ´Ä£Ê½, Ê¹ÓÃÏß³ÌÉÏÏÂÎÄÀïµÄÀà¼ÓÔØÆ÷¼ÓÔØÀà.<br>
-    µäĞÍµÄÀı×ÓÓĞ, Í¨¹ıÏß³ÌÉÏÏÂÎÄÀ´¼ÓÔØµÚÈı·½¿âjndiÊµÏÖ, ¶ø²»ÒÀÀµÓÚË«Ç×Î¯ÅÉ.<br>
-    ´ó²¿·Öjava app·şÎñÆ÷(jboss, tomcat..)Ò²ÊÇ²ÉÓÃcontextClassLoaderÀ´´¦Àíweb·şÎñ¡£<br>
-    »¹ÓĞÒ»Ğ©²ÉÓÃ hotswap ÌØĞÔµÄ¿ò¼Ü, Ò²Ê¹ÓÃÁËÏß³ÌÉÏÏÂÎÄÀà¼ÓÔØÆ÷, ±ÈÈç seasar (full stack framework in japenese).</p>
-  <p>Ïß³ÌÉÏÏÂÎÄ´Ó¸ù±¾½â¾öÁËÒ»°ãÓ¦ÓÃ²»ÄÜÎ¥±³Ë«Ç×Î¯ÅÉÄ£Ê½µÄÎÊÌâ.<br>
-    Ê¹javaÀà¼ÓÔØÌåÏµÏÔµÃ¸üÁé»î.</p>
-  <p>Ëæ×Å¶àºËÊ±´úµÄÀ´ÁÙ, ÏàĞÅ¶àÏß³Ì¿ª·¢½«»áÔ½À´Ô½¶àµØ½øÈë³ÌĞòÔ±µÄÊµ¼Ê±àÂë¹ı³ÌÖĞ. Òò´Ë,<br>
-    ÔÚ±àĞ´»ù´¡ÉèÊ©Ê±£¬ Í¨¹ıÊ¹ÓÃÏß³ÌÉÏÏÂÎÄÀ´¼ÓÔØÀà, Ó¦¸ÃÊÇÒ»¸öºÜºÃµÄÑ¡Ôñ¡£</p>
-  <p>µ±È», ºÃ¶«Î÷¶¼ÓĞÀû±×. Ê¹ÓÃÏß³ÌÉÏÏÂÎÄ¼ÓÔØÀà, Ò²Òª×¢Òâ, ±£Ö¤¶à¸ùĞèÒªÍ¨ĞÅµÄÏß³Ì¼äµÄÀà¼ÓÔØÆ÷Ó¦¸ÃÊÇÍ¬Ò»¸ö,<br>
-    ·ÀÖ¹ÒòÎª²»Í¬µÄÀà¼ÓÔØÆ÷, µ¼ÖÂÀàĞÍ×ª»»Òì³£(ClassCastException)¡£</p>
-  <p><strong>ÎªÊ²Ã´ÒªÊ¹ÓÃÕâÖÖË«Ç×Î¯ÍĞÄ£Ê½ÄØ£¿</strong></p>
+  <p>ä»¥ä¸Šä»£ç æ‘˜è‡ªsun.misc.Launchçš„æ— å‚æ„é€ å‡½æ•°Launch()ã€‚</p>
+  <p>ä½¿ç”¨çº¿ç¨‹ä¸Šä¸‹æ–‡ç±»åŠ è½½å™¨, å¯ä»¥åœ¨æ‰§è¡Œçº¿ç¨‹ä¸­, æŠ›å¼ƒåŒäº²å§”æ´¾åŠ è½½é“¾æ¨¡å¼, ä½¿ç”¨çº¿ç¨‹ä¸Šä¸‹æ–‡é‡Œçš„ç±»åŠ è½½å™¨åŠ è½½ç±».<br>
+    å…¸å‹çš„ä¾‹å­æœ‰, é€šè¿‡çº¿ç¨‹ä¸Šä¸‹æ–‡æ¥åŠ è½½ç¬¬ä¸‰æ–¹åº“jndiå®ç°, è€Œä¸ä¾èµ–äºåŒäº²å§”æ´¾.<br>
+    å¤§éƒ¨åˆ†java appæœåŠ¡å™¨(jboss, tomcat..)ä¹Ÿæ˜¯é‡‡ç”¨contextClassLoaderæ¥å¤„ç†webæœåŠ¡ã€‚<br>
+    è¿˜æœ‰ä¸€äº›é‡‡ç”¨ hotswap ç‰¹æ€§çš„æ¡†æ¶, ä¹Ÿä½¿ç”¨äº†çº¿ç¨‹ä¸Šä¸‹æ–‡ç±»åŠ è½½å™¨, æ¯”å¦‚ seasar (full stack framework in japenese).</p>
+  <p>çº¿ç¨‹ä¸Šä¸‹æ–‡ä»æ ¹æœ¬è§£å†³äº†ä¸€èˆ¬åº”ç”¨ä¸èƒ½è¿èƒŒåŒäº²å§”æ´¾æ¨¡å¼çš„é—®é¢˜.<br>
+    ä½¿javaç±»åŠ è½½ä½“ç³»æ˜¾å¾—æ›´çµæ´».</p>
+  <p>éšç€å¤šæ ¸æ—¶ä»£çš„æ¥ä¸´, ç›¸ä¿¡å¤šçº¿ç¨‹å¼€å‘å°†ä¼šè¶Šæ¥è¶Šå¤šåœ°è¿›å…¥ç¨‹åºå‘˜çš„å®é™…ç¼–ç è¿‡ç¨‹ä¸­. å› æ­¤,<br>
+    åœ¨ç¼–å†™åŸºç¡€è®¾æ–½æ—¶ï¼Œ é€šè¿‡ä½¿ç”¨çº¿ç¨‹ä¸Šä¸‹æ–‡æ¥åŠ è½½ç±», åº”è¯¥æ˜¯ä¸€ä¸ªå¾ˆå¥½çš„é€‰æ‹©ã€‚</p>
+  <p>å½“ç„¶, å¥½ä¸œè¥¿éƒ½æœ‰åˆ©å¼Š. ä½¿ç”¨çº¿ç¨‹ä¸Šä¸‹æ–‡åŠ è½½ç±», ä¹Ÿè¦æ³¨æ„, ä¿è¯å¤šæ ¹éœ€è¦é€šä¿¡çš„çº¿ç¨‹é—´çš„ç±»åŠ è½½å™¨åº”è¯¥æ˜¯åŒä¸€ä¸ª,<br>
+    é˜²æ­¢å› ä¸ºä¸åŒçš„ç±»åŠ è½½å™¨, å¯¼è‡´ç±»å‹è½¬æ¢å¼‚å¸¸(ClassCastException)ã€‚</p>
+  <p><strong>ä¸ºä»€ä¹ˆè¦ä½¿ç”¨è¿™ç§åŒäº²å§”æ‰˜æ¨¡å¼å‘¢ï¼Ÿ</strong></p>
   <ol>
-    <li>ÒòÎªÕâÑù¿ÉÒÔ±ÜÃâÖØ¸´¼ÓÔØ£¬µ±¸¸Ç×ÒÑ¾­¼ÓÔØÁË¸ÃÀàµÄÊ±ºò£¬¾ÍÃ»ÓĞ±ØÒª×ÓClassLoaderÔÙ¼ÓÔØÒ»´Î¡£</li>
-    <li>¿¼ÂÇµ½°²È«ÒòËØ£¬ÎÒÃÇÊÔÏëÒ»ÏÂ£¬Èç¹û²»Ê¹ÓÃÕâÖÖÎ¯ÍĞÄ£Ê½£¬ÄÇÎÒÃÇ¾Í¿ÉÒÔËæÊ±Ê¹ÓÃ×Ô¶¨ÒåµÄStringÀ´¶¯Ì¬Ìæ´újavaºËĞÄapiÖĞ¶¨ÒåÀàĞÍ£¬Õâ
-      Ñù»á´æÔÚ·Ç³£´óµÄ°²È«Òş»¼£¬¶øË«Ç×Î¯ÍĞµÄ·½Ê½£¬¾Í¿ÉÒÔ±ÜÃâÕâÖÖÇé¿ö£¬ÒòÎªStringÒÑ¾­ÔÚÆô¶¯Ê±±»¼ÓÔØ£¬ËùÒÔÓÃ»§×Ô¶¨ÒåÀàÊÇÎŞ·¨¼ÓÔØÒ»¸ö×Ô¶¨ÒåµÄ
-      ClassLoader¡£</li>
+    <li>å› ä¸ºè¿™æ ·å¯ä»¥é¿å…é‡å¤åŠ è½½ï¼Œå½“çˆ¶äº²å·²ç»åŠ è½½äº†è¯¥ç±»çš„æ—¶å€™ï¼Œå°±æ²¡æœ‰å¿…è¦å­ClassLoaderå†åŠ è½½ä¸€æ¬¡ã€‚ 
+    <li>è€ƒè™‘åˆ°å®‰å…¨å› ç´ ï¼Œæˆ‘ä»¬è¯•æƒ³ä¸€ä¸‹ï¼Œå¦‚æœä¸ä½¿ç”¨è¿™ç§å§”æ‰˜æ¨¡å¼ï¼Œé‚£æˆ‘ä»¬å°±å¯ä»¥éšæ—¶ä½¿ç”¨è‡ªå®šä¹‰çš„Stringæ¥åŠ¨æ€æ›¿ä»£javaæ ¸å¿ƒapiä¸­å®šä¹‰ç±»å‹ï¼Œè¿™
+      æ ·ä¼šå­˜åœ¨éå¸¸å¤§çš„å®‰å…¨éšæ‚£ï¼Œè€ŒåŒäº²å§”æ‰˜çš„æ–¹å¼ï¼Œå°±å¯ä»¥é¿å…è¿™ç§æƒ…å†µï¼Œå› ä¸ºStringå·²ç»åœ¨å¯åŠ¨æ—¶è¢«åŠ è½½ï¼Œæ‰€ä»¥ç”¨æˆ·è‡ªå®šä¹‰ç±»æ˜¯æ— æ³•åŠ è½½ä¸€ä¸ªè‡ªå®šä¹‰çš„
+      ClassLoaderã€‚</li>
   </ol>
-  <p><strong>java¶¯Ì¬ÔØÈëclassµÄÁ½ÖÖ·½Ê½£º</strong> </p>
+  <p><strong>javaåŠ¨æ€è½½å…¥classçš„ä¸¤ç§æ–¹å¼ï¼š</strong> </p>
   <ol>
-    <li>implicitÒşÊ½,¼´ÀûÓÃÊµÀı»¯²ÅÔØÈëµÄÌØĞÔÀ´¶¯Ì¬ÔØÈëclass</li>
-    <li>explicitÏÔÊ½·½Ê½,ÓÖ·ÖÁ½ÖÖ·½Ê½:
+    <li>implicitéšå¼,å³åˆ©ç”¨å®ä¾‹åŒ–æ‰è½½å…¥çš„ç‰¹æ€§æ¥åŠ¨æ€è½½å…¥class 
+    <li>explicitæ˜¾å¼æ–¹å¼,åˆåˆ†ä¸¤ç§æ–¹å¼:
       <ol>
-        <li>java.lang.ClassµÄforName()·½·¨</li>
-        <li>java.lang.ClassLoaderµÄloadClass()·½·¨</li>
+        <li>java.lang.Classçš„forName()æ–¹æ³• 
+        <li>java.lang.ClassLoaderçš„loadClass()æ–¹æ³•</li>
       </ol>
     </li>
   </ol>
-  <p><strong>ÓÃClass.forName¼ÓÔØÀà</strong></p>
-  <p>Class.forNameÊ¹ÓÃµÄÊÇ±»µ÷ÓÃÕßµÄÀà¼ÓÔØÆ÷À´¼ÓÔØÀàµÄ¡£<br>
-    ÕâÖÖÌØĞÔ, Ö¤Ã÷ÁËjavaÀà¼ÓÔØÆ÷ÖĞµÄÃû³Æ¿Õ¼äÊÇÎ¨Ò»µÄ, ²»»áÏà»¥¸ÉÈÅ¡£<br>
-    ¼´ÔÚÒ»°ãÇé¿öÏÂ, ±£Ö¤Í¬Ò»¸öÀàÖĞËù¹ØÁªµÄÆäËûÀà¶¼ÊÇÓÉµ±Ç°ÀàµÄÀà¼ÓÔØÆ÷Ëù¼ÓÔØµÄ¡£</p>
+  <p><strong>ç”¨Class.forNameåŠ è½½ç±»</strong></p>
+  <p>Class.forNameä½¿ç”¨çš„æ˜¯è¢«è°ƒç”¨è€…çš„ç±»åŠ è½½å™¨æ¥åŠ è½½ç±»çš„ã€‚<br>
+    è¿™ç§ç‰¹æ€§, è¯æ˜äº†javaç±»åŠ è½½å™¨ä¸­çš„åç§°ç©ºé—´æ˜¯å”¯ä¸€çš„, ä¸ä¼šç›¸äº’å¹²æ‰°ã€‚<br>
+    å³åœ¨ä¸€èˆ¬æƒ…å†µä¸‹, ä¿è¯åŒä¸€ä¸ªç±»ä¸­æ‰€å…³è”çš„å…¶ä»–ç±»éƒ½æ˜¯ç”±å½“å‰ç±»çš„ç±»åŠ è½½å™¨æ‰€åŠ è½½çš„ã€‚</p>
   <div class="dp-highlighter">
     <div class="bar"></div>
-    <ol class="dp-j" start="1">
-      <li class="alt"><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;Class&nbsp;forName(String&nbsp;className)&nbsp;&nbsp;</span></span></li>
-      <li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">throws</span><span>&nbsp;ClassNotFoundException&nbsp;{&nbsp;&nbsp;</span></span></li>
-      <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;forName0(className,&nbsp;</span><span class="keyword">true</span><span>&nbsp;,&nbsp;ClassLoader.getCallerClassLoader());&nbsp;&nbsp;</span></span></li>
-      <li class=""><span>}&nbsp;&nbsp;&nbsp;</span></li>
-      <li class="alt"><span>&nbsp;&nbsp;</span></li>
-      <li class=""><span><span class="comment">/**&nbsp;Called&nbsp;after&nbsp;security&nbsp;checks&nbsp;have&nbsp;been&nbsp;made.&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li>
-      <li class="alt"><span><span class="keyword">private</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">native</span><span>&nbsp;Class&nbsp;forName0(String&nbsp;name,&nbsp;</span><span class="keyword">boolean</span><span>&nbsp;initialize,&nbsp;&nbsp;</span></span></li>
-      <li class=""><span>ClassLoader&nbsp;loader)&nbsp;&nbsp;</span></li>
+    <ol class="dp-j" >
+      <li class="alt"><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;Class&nbsp;forName(String&nbsp;className)&nbsp;&nbsp;</span></span>
+      <li ><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">throws</span><span>&nbsp;ClassNotFoundException&nbsp;{&nbsp;&nbsp;</span></span>
+      <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;forName0(className,&nbsp;</span><span class="keyword">true</span><span>&nbsp;,&nbsp;ClassLoader.getCallerClassLoader());&nbsp;&nbsp;</span></span>
+      <li ><span>}&nbsp;&nbsp;&nbsp;</span>
+      <li class="alt"><span>&nbsp;&nbsp;</span>
+      <li ><span><span class="comment">/**&nbsp;Called&nbsp;after&nbsp;security&nbsp;checks&nbsp;have&nbsp;been&nbsp;made.&nbsp;*/</span><span>&nbsp;&nbsp;</span></span>
+      <li class="alt"><span><span class="keyword">private</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">native</span><span>&nbsp;Class&nbsp;forName0(String&nbsp;name,&nbsp;</span><span class="keyword">boolean</span><span>&nbsp;initialize,&nbsp;&nbsp;</span></span>
+      <li ><span>ClassLoader&nbsp;loader)&nbsp;&nbsp;</span>
       <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">throws</span><span>&nbsp;ClassNotFoundException;&nbsp;&nbsp;</span></span></li>
     </ol>
   </div>
-  <p>ÉÏÃæÖĞ ClassLoader.getCallerClassLoader ¾ÍÊÇµÃµ½µ÷ÓÃµ±Ç°forName·½·¨µÄÀàµÄÀà¼ÓÔØÆ÷</p>
-  <p><strong>static¿éÔÚÊ²Ã´Ê±ºòÖ´ĞĞ? </strong></p>
+  <p>ä¸Šé¢ä¸­ ClassLoader.getCallerClassLoader å°±æ˜¯å¾—åˆ°è°ƒç”¨å½“å‰forNameæ–¹æ³•çš„ç±»çš„ç±»åŠ è½½å™¨</p>
+  <p><strong>staticå—åœ¨ä»€ä¹ˆæ—¶å€™æ‰§è¡Œ? </strong></p>
   <ul>
-    <li>µ±µ÷ÓÃforName(String)ÔØÈëclassÊ±Ö´ĞĞ,Èç¹ûµ÷ÓÃClassLoader.loadClass²¢²»»áÖ´ĞĞ.forName(String,false,ClassLoader)Ê±Ò²²»»áÖ´ĞĞ. </li>
-    <li>Èç¹ûÔØÈëClassÊ±Ã»ÓĞÖ´ĞĞstatic¿éÔòÔÚµÚÒ»´ÎÊµÀı»¯Ê±Ö´ĞĞ.±ÈÈçnew ,Class.newInstance()²Ù×÷ </li>
-    <li>static¿é½öÖ´ĞĞÒ»´Î</li>
+    <li>å½“è°ƒç”¨forName(String)è½½å…¥classæ—¶æ‰§è¡Œ,å¦‚æœè°ƒç”¨ClassLoader.loadClasså¹¶ä¸ä¼šæ‰§è¡Œ.forName(String,false,ClassLoader)æ—¶ä¹Ÿä¸ä¼šæ‰§è¡Œ. 
+
+    <li>å¦‚æœè½½å…¥Classæ—¶æ²¡æœ‰æ‰§è¡Œstaticå—åˆ™åœ¨ç¬¬ä¸€æ¬¡å®ä¾‹åŒ–æ—¶æ‰§è¡Œ.æ¯”å¦‚new 
+  ,Class.newInstance()æ“ä½œ 
+    <li>staticå—ä»…æ‰§è¡Œä¸€æ¬¡</li>
   </ul>
-  <p><strong>¸÷¸öjavaÀàÓÉÄÄĞ©classLoader¼ÓÔØ?</strong> </p>
+  <p><strong>å„ä¸ªjavaç±»ç”±å“ªäº›classLoaderåŠ è½½?</strong> </p>
   <ul>
-    <li>javaÀà¿ÉÒÔÍ¨¹ıÊµÀı.getClass.getClassLoader()µÃÖª</li>
-    <li>½Ó¿ÚÓÉAppClassLoader(System ClassLoader,¿ÉÒÔÓÉClassLoader.getSystemClassLoader()»ñµÃÊµÀı)ÔØÈë</li>
-    <li>ClassLoaderÀàÓÉbootstrap loaderÔØÈë</li>
+    <li>javaç±»å¯ä»¥é€šè¿‡å®ä¾‹.getClass.getClassLoader()å¾—çŸ¥ 
+    <li>æ¥å£ç”±AppClassLoader(System 
+  ClassLoader,å¯ä»¥ç”±ClassLoader.getSystemClassLoader()è·å¾—å®ä¾‹)è½½å…¥ 
+    <li>ClassLoaderç±»ç”±bootstrap loaderè½½å…¥</li>
   </ul>
-  <p><strong>NoClassDefFoundErrorºÍClassNotFoundException </strong></p>
+  <p><strong>NoClassDefFoundErrorå’ŒClassNotFoundException </strong></p>
   <ul>
-    <li>NoClassDefFoundError:µ±javaÔ´ÎÄ¼şÒÑ±àÒë³É.classÎÄ¼ş,µ«ÊÇClassLoaderÔÚÔËĞĞÆÚ¼äÔÚÆäËÑÑ°Â·¾¶loadÄ³¸öÀàÊ±,Ã»ÓĞÕÒµ½.classÎÄ¼şÔò±¨Õâ¸ö´í</li>
-    <li>ClassNotFoundException:ÊÔÍ¼Í¨¹ıÒ»¸öString±äÁ¿À´´´½¨Ò»¸öClassÀàÊ±²»³É¹¦ÔòÅ×³öÕâ¸öÒì³£</li>
+    <li>NoClassDefFoundError:å½“javaæºæ–‡ä»¶å·²ç¼–è¯‘æˆ.classæ–‡ä»¶,ä½†æ˜¯ClassLoaderåœ¨è¿è¡ŒæœŸé—´åœ¨å…¶æœå¯»è·¯å¾„loadæŸä¸ªç±»æ—¶,æ²¡æœ‰æ‰¾åˆ°.classæ–‡ä»¶åˆ™æŠ¥è¿™ä¸ªé”™ 
+
+    <li>ClassNotFoundException:è¯•å›¾é€šè¿‡ä¸€ä¸ªStringå˜é‡æ¥åˆ›å»ºä¸€ä¸ªClassç±»æ—¶ä¸æˆåŠŸåˆ™æŠ›å‡ºè¿™ä¸ªå¼‚å¸¸ 
+
+    <li></li>
   </ul>
-</div>
-<!--EndFragment-->
+</div><!--EndFragment-->
 </body>
 </htm>
