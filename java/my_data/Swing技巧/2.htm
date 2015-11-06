@@ -1,18 +1,18 @@
-<HTML>
+ï»¿<HTML>
 <HEAD>
-<META HTTP-EQUIV=Content-Type CONTENT=text/html; charset=gb2312>
-<title>JavaËõÂÔÍ¼Àà´øË®Ó¡£¨jpg,png£©</title>
+<META HTTP-EQUIV=Content-Type CONTENT=text/html; charset=UTF-8>
+<title>Javaç¼©ç•¥å›¾ç±»å¸¦æ°´å°ï¼ˆjpg,pngï¼‰</title>
 <style type="text/css">
 <!--
 .9t {
 	font-size: 9pt;
 	color: #000000;
-	font-family: "ËÎÌå";
+	font-family: "å®‹ä½“";
 }
 -->
 </style>
 </HEAD>
-<body bgcolor="#FFFFFF">
+<body bgcolor="#ffffff">
 <table width="90%" border="0" align="center" >
   <tr>
     <td><PRE class="9t">
@@ -36,20 +36,20 @@ import com.sun.image.codec.jpeg.JPEGImageEncoder;
 public class ImageHelper {
 
         /**
-         * Éú³ÉËõÂÔÍ¼ &lt;br/&gt;±£´æ:ImageIO.write(BufferedImage, imgType[jpg/png/...], File);
+         * ç”Ÿæˆç¼©ç•¥å›¾ &lt;br/&gt;ä¿å­˜:ImageIO.write(BufferedImage, imgType[jpg/png/...], File);
          * 
          * @param source
-         *            Ô­Í¼Æ¬
+         *            åŸå›¾ç‰‡
          * @param width
-         *            ËõÂÔÍ¼¿í
+         *            ç¼©ç•¥å›¾å®½
          * @param height
-         *            ËõÂÔÍ¼¸ß
+         *            ç¼©ç•¥å›¾é«˜
          * @param b
-         *            ÊÇ·ñµÈ±ÈËõ·Å
+         *            æ˜¯å¦ç­‰æ¯”ç¼©æ”¾
          * */
         public static BufferedImage Thumb(BufferedImage source, int width,
                         int height, boolean b) {
-                // targetW£¬targetH·Ö±ğ±íÊ¾Ä¿±ê³¤ºÍ¿í
+                // targetWï¼ŒtargetHåˆ†åˆ«è¡¨ç¤ºç›®æ ‡é•¿å’Œå®½
                 int type = source.getType();
                 BufferedImage target = null;
                 double sx = (double) width / source.getWidth();
@@ -83,23 +83,23 @@ public class ImageHelper {
         }
 
         /**
-         * Í¼Æ¬Ë®Ó¡
+         * å›¾ç‰‡æ°´å°
          * 
          * @param imgPath
-         *            ´ı´¦ÀíÍ¼Æ¬
+         *            å¾…å¤„ç†å›¾ç‰‡
          * @param markPath
-         *            Ë®Ó¡Í¼Æ¬
+         *            æ°´å°å›¾ç‰‡
          * @param x
-         *            Ë®Ó¡Î»ÓÚÍ¼Æ¬×óÉÏ½ÇµÄ x ×ø±êÖµ
+         *            æ°´å°ä½äºå›¾ç‰‡å·¦ä¸Šè§’çš„ x åæ ‡å€¼
          * @param y
-         *            Ë®Ó¡Î»ÓÚÍ¼Æ¬×óÉÏ½ÇµÄ y ×ø±êÖµ
+         *            æ°´å°ä½äºå›¾ç‰‡å·¦ä¸Šè§’çš„ y åæ ‡å€¼
          * @param alpha
-         *            Ë®Ó¡Í¸Ã÷¶È 0.1f ~ 1.0f
+         *            æ°´å°é€æ˜åº¦ 0.1f ~ 1.0f
          * */
         public static void waterMark(String imgPath, String markPath, int x, int y,
                         float alpha) {
                 try {
-                        // ¼ÓÔØ´ı´¦ÀíÍ¼Æ¬ÎÄ¼ş
+                        // åŠ è½½å¾…å¤„ç†å›¾ç‰‡æ–‡ä»¶
                         Image img = ImageIO.read(new File(imgPath));
 
                         BufferedImage image = new BufferedImage(img.getWidth(null), img
@@ -107,14 +107,14 @@ public class ImageHelper {
                         Graphics2D g = image.createGraphics();
                         g.drawImage(img, 0, 0, null);
 
-                        // ¼ÓÔØË®Ó¡Í¼Æ¬ÎÄ¼ş
+                        // åŠ è½½æ°´å°å›¾ç‰‡æ–‡ä»¶
                         Image src_biao = ImageIO.read(new File(markPath));
                         g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_ATOP,
                                         alpha));
                         g.drawImage(src_biao, x, y, null);
                         g.dispose();
 
-                        // ±£´æ´¦ÀíºóµÄÎÄ¼ş
+                        // ä¿å­˜å¤„ç†åçš„æ–‡ä»¶
                         FileOutputStream out = new FileOutputStream(imgPath);
                         JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(out);
                         encoder.encode(image);
@@ -125,28 +125,28 @@ public class ImageHelper {
         }
 
         /**
-         * ÎÄ×ÖË®Ó¡
+         * æ–‡å­—æ°´å°
          * 
          * @param imgPath
-         *            ´ı´¦ÀíÍ¼Æ¬
+         *            å¾…å¤„ç†å›¾ç‰‡
          * @param text
-         *            Ë®Ó¡ÎÄ×Ö
+         *            æ°´å°æ–‡å­—
          * @param font
-         *            Ë®Ó¡×ÖÌåĞÅÏ¢
+         *            æ°´å°å­—ä½“ä¿¡æ¯
          * @param color
-         *            Ë®Ó¡×ÖÌåÑÕÉ«
+         *            æ°´å°å­—ä½“é¢œè‰²
          * @param x
-         *            Ë®Ó¡Î»ÓÚÍ¼Æ¬×óÉÏ½ÇµÄ x ×ø±êÖµ
+         *            æ°´å°ä½äºå›¾ç‰‡å·¦ä¸Šè§’çš„ x åæ ‡å€¼
          * @param y
-         *            Ë®Ó¡Î»ÓÚÍ¼Æ¬×óÉÏ½ÇµÄ y ×ø±êÖµ
+         *            æ°´å°ä½äºå›¾ç‰‡å·¦ä¸Šè§’çš„ y åæ ‡å€¼
          * @param alpha
-         *            Ë®Ó¡Í¸Ã÷¶È 0.1f ~ 1.0f
+         *            æ°´å°é€æ˜åº¦ 0.1f ~ 1.0f
          */
 
         public static void textMark(String imgPath, String text, Font font,
                         Color color, int x, int y, float alpha) {
                 try {
-                        Font Dfont = (font == null) ? new Font("ËÎÌå", 20, 13) : font;
+                        Font Dfont = (font == null) ? new Font("å®‹ä½“", 20, 13) : font;
 
                         Image img = ImageIO.read(new File(imgPath));
 
@@ -174,5 +174,7 @@ public class ImageHelper {
 </PRE></td>
   </tr>
 </table>
-</Body>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+</body>
 </HTML>

@@ -1,14 +1,14 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
 <HEAD>
 <META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
-<TITLE>ÓÃJavaMailÔÚJSPÖĞ·¢Email</TITLE>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>ç”¨JavaMailåœ¨JSPä¸­å‘Email</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </HEAD>
 <BODY bgcolor="#e4ebf1">
-<P>JavaMailÊÇ¹Ù·½µÄ Java mail API£¬¿É²Î¿¼ http://java.sun.com/products/javamail/¡£ËäÈ»¸ÃAPI±È
-  sun.net.smtp.SmtpClient¸ü·á¸»»òÕßËµ¸ü¸´ÔÓ£¬µ«ËüÊÇ¿ÉÒÆÖ²µÄ¡£ÕâÀïÖØĞÂ´´½¨ÁËÒ»¸ö
-  MailSenderÀà£¬Ëü°üº¬ÁË JavaMail API¡£ÈçÏÂËùÊ¾£º<BR>
+<P>JavaMailæ˜¯å®˜æ–¹çš„ Java mail APIï¼Œå¯å‚è€ƒ http://java.sun.com/products/javamail/ã€‚è™½ç„¶è¯¥APIæ¯”
+  sun.net.smtp.SmtpClientæ›´ä¸°å¯Œæˆ–è€…è¯´æ›´å¤æ‚ï¼Œä½†å®ƒæ˜¯å¯ç§»æ¤çš„ã€‚è¿™é‡Œé‡æ–°åˆ›å»ºäº†ä¸€ä¸ª
+  MailSenderç±»ï¼Œå®ƒåŒ…å«äº† JavaMail APIã€‚å¦‚ä¸‹æ‰€ç¤ºï¼š<BR>
   <BR>
   <BR>
   // ms_ prefix is for MailSender class variables<BR>
@@ -31,11 +31,12 @@
   <BR>
   // set the host<BR>
   Properties props = new Properties();<BR>
-  props.put(&quot;mail.smtp.host&quot;, ms_strSMTPHost);<BR>
+  props.put("mail.smtp.host", ms_strSMTPHost);<BR>
   <BR>
   // create some properties and get the default
   Session<BR>
-  Session session = Session.getDefaultInstance(props,
+  Session session =
+     Session.getDefaultInstance(props,
   null);<BR>
   session.setDebug(ms_debugging);<BR>
   <BR>
@@ -62,8 +63,8 @@
   address = new InternetAddress[astrBCC.length];<BR>
   for (int i = 0; i astrBCC.length; ++i)<BR>
   {<BR>
-  eh.dbg(&quot;astrBCC[&quot; + i + &quot;]
-  is: '&quot; + astrBCC[i] + &quot;'&quot;);<BR>
+  eh.dbg("astrBCC[" + i + "]
+  is: '" + astrBCC[i] + "'");<BR>
   address[i] = new InternetAddress(astrBCC[i]);<BR>
   }<BR>
   ms_msg.setRecipients(Message.RecipientType.BCC,
@@ -94,14 +95,14 @@
   try {<BR>
   // set the content as plain text<BR>
   ms_msg.setContent(new String(ms_strbufMsg),
-  &quot;text/plain&quot;);<BR>
+  "text/plain");<BR>
   <BR>
   // and away<BR>
   Transport.send(ms_msg);<BR>
   } catch (Exception ex) {<BR>
-  System.out.println(&quot;Caught exception
-  in MailSender.ms_send: &quot; + ex);<BR>
-  }<BR>
-  <!-- #EndEditable --></P>
+  System.out.println("Caught exception
+  in MailSender.ms_send: " + ex);<BR>
+  }<BR><!-- #EndEditable --></P>
+<P>&nbsp;</P>
 </BODY>
 </HTML>

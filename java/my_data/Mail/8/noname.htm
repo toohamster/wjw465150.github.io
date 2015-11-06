@@ -1,52 +1,53 @@
-<html>
-<title>Javamail¶ÁÈ¡ÓÊ¼şÁĞ±í³öÏÖOutOfMemery</title>
-<body>
-<!--StartFragment-->
+ï»¿<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Javamailè¯»å–é‚®ä»¶åˆ—è¡¨å‡ºç°OutOfMemery</title>
+<body><!--StartFragment-->
 <div class="blog_title">
-  <h3><a href="http://ben-sin.iteye.com/blog/391608">Javamail¶ÁÈ¡ÓÊ¼şÁĞ±í³öÏÖOutOfMemery</a></h3>
-  ¹Ø¼ü×Ö: javamail outofmemery </div>
+  <h3><a href="http://ben-sin.iteye.com/blog/391608">Javamailè¯»å–é‚®ä»¶åˆ—è¡¨å‡ºç°OutOfMemery</a></h3>
+  å…³é”®å­—: javamail outofmemery </div>
 <div class="blog_content">
-  <p>ÓÃJavamail½âÎö¶à¸öÓÊ¼şµÄÊ±ºò£¬Èç¹û¸ö±ğÓÊ¼şµÄ¸½¼ş¹ı´ó£¬¾Í»áÔì³ÉOutOfMemeryµÄÇé¿ö£¬ÈçÏÂ</p>
+  <p>ç”¨Javamailè§£æå¤šä¸ªé‚®ä»¶çš„æ—¶å€™ï¼Œå¦‚æœä¸ªåˆ«é‚®ä»¶çš„é™„ä»¶è¿‡å¤§ï¼Œå°±ä¼šé€ æˆOutOfMemeryçš„æƒ…å†µï¼Œå¦‚ä¸‹</p>
   <p>&nbsp;</p>
-  <div id="" class="dp-highlighter">
+  <div class="dp-highlighter" >
     <div class="bar">
-      <div class="tools">Java´úÂë
-        <embed src="clipboard_new.swf" flashvars="clipboard=Exception%20in%20thread%20%22main%22%20java.lang.OutOfMemoryError%3A%20Java%20heap%20space%0A%09at%20java.util.Arrays.copyOf(Arrays.java%3A2786)%0A%09at%20java.io.ByteArrayOutputStream.write(ByteArrayOutputStream.java%3A71)%0A%09at%20com.sun.mail.pop3.Protocol.multilineCommand(Protocol.java%3A362)%0A%09at%20com.sun.mail.pop3.Protocol.retr(Protocol.java%3A237)%0A%09at%20com.sun.mail.pop3.POP3Message.getContentStream(POP3Message.java%3A115)%0A%09at%20javax.mail.internet.MimePartDataSource.getInputStream(MimePartDataSource.java%3A60)%0A%09at%20javax.mail.internet.MimeMultipart.parse(MimeMultipart.java%3A259)%0A%09at%20javax.mail.internet.MimeMultipart.getCount(MimeMultipart.java%3A159)%0A%09at%20com.gdcn.mail.util.Pop3Util.hasAttachment(Pop3Util.java%3A1148)%0A%09at%20com.gdcn.mail.util.Pop3Util.analysisMessage(Pop3Util.java%3A774)%0A%09at%20com.gdcn.mail.util.Pop3Util.getMessages(Pop3Util.java%3A561)%0A%09at%20com.gdcn.mail.util.Pop3Util.main(Pop3Util.java%3A1338)" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" width="14" height="15">
-      &nbsp;<a href="javascript:void()" title="ÊÕ²ØÕâ¶Î´úÂë" onClick="code_favorites_do_favorite(this);return false;"><img class="star" src="icon_star.png" alt="ÊÕ²Ø´úÂë"></a></div>
+      <div class="tools">Javaä»£ç 
+        <embed src="clipboard_new.swf" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" width="14" height="15" flashvars="clipboard=Exception%20in%20thread%20%22main%22%20java.lang.OutOfMemoryError%3A%20Java%20heap%20space%0A%09at%20java.util.Arrays.copyOf(Arrays.java%3A2786)%0A%09at%20java.io.ByteArrayOutputStream.write(ByteArrayOutputStream.java%3A71)%0A%09at%20com.sun.mail.pop3.Protocol.multilineCommand(Protocol.java%3A362)%0A%09at%20com.sun.mail.pop3.Protocol.retr(Protocol.java%3A237)%0A%09at%20com.sun.mail.pop3.POP3Message.getContentStream(POP3Message.java%3A115)%0A%09at%20javax.mail.internet.MimePartDataSource.getInputStream(MimePartDataSource.java%3A60)%0A%09at%20javax.mail.internet.MimeMultipart.parse(MimeMultipart.java%3A259)%0A%09at%20javax.mail.internet.MimeMultipart.getCount(MimeMultipart.java%3A159)%0A%09at%20com.gdcn.mail.util.Pop3Util.hasAttachment(Pop3Util.java%3A1148)%0A%09at%20com.gdcn.mail.util.Pop3Util.analysisMessage(Pop3Util.java%3A774)%0A%09at%20com.gdcn.mail.util.Pop3Util.getMessages(Pop3Util.java%3A561)%0A%09at%20com.gdcn.mail.util.Pop3Util.main(Pop3Util.java%3A1338)" quality="high" allowscriptaccess="always">
+      &nbsp;<A onclick="code_favorites_do_favorite(this);return false;" title=æ”¶è—è¿™æ®µä»£ç  href="javascript:void()" ><IMG class=star alt=æ”¶è—ä»£ç  src="icon_star.png"></A></div>
     </div>
-    <ol class="dp-j" start="1">
-      <li><span><span>Exception&nbsp;in&nbsp;thread&nbsp;</span><span class="string">"main"</span><span>&nbsp;java.lang.OutOfMemoryError:&nbsp;Java&nbsp;heap&nbsp;space&nbsp;&nbsp;</span></span></li>
-      <li><span>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;java.util.Arrays.copyOf(Arrays.java:<span class="number">2786</span><span>)&nbsp;&nbsp;</span></span></li>
-      <li><span>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;java.io.ByteArrayOutputStream.write(ByteArrayOutputStream.java:<span class="number">71</span><span>)&nbsp;&nbsp;</span></span></li>
-      <li><span>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.mail.pop3.Protocol.multilineCommand(Protocol.java:<span class="number">362</span><span>)&nbsp;&nbsp;</span></span></li>
-      <li><span>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.mail.pop3.Protocol.retr(Protocol.java:<span class="number">237</span><span>)&nbsp;&nbsp;</span></span></li>
-      <li><span>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.mail.pop3.POP3Message.getContentStream(POP3Message.java:<span class="number">115</span><span>)&nbsp;&nbsp;</span></span></li>
-      <li><span>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;javax.mail.internet.MimePartDataSource.getInputStream(MimePartDataSource.java:<span class="number">60</span><span>)&nbsp;&nbsp;</span></span></li>
-      <li><span>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;javax.mail.internet.MimeMultipart.parse(MimeMultipart.java:<span class="number">259</span><span>)&nbsp;&nbsp;</span></span></li>
-      <li><span>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;javax.mail.internet.MimeMultipart.getCount(MimeMultipart.java:<span class="number">159</span><span>)&nbsp;&nbsp;</span></span></li>
-      <li><span>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.gdcn.mail.util.Pop3Util.hasAttachment(Pop3Util.java:<span class="number">1148</span><span>)&nbsp;&nbsp;</span></span></li>
-      <li><span>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.gdcn.mail.util.Pop3Util.analysisMessage(Pop3Util.java:<span class="number">774</span><span>)&nbsp;&nbsp;</span></span></li>
-      <li><span>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.gdcn.mail.util.Pop3Util.getMessages(Pop3Util.java:<span class="number">561</span><span>)&nbsp;&nbsp;</span></span></li>
+    <ol class="dp-j" >
+      <li><span><span>Exception&nbsp;in&nbsp;thread&nbsp;</span><span class="string">"main"</span><span>&nbsp;java.lang.OutOfMemoryError:&nbsp;Java&nbsp;heap&nbsp;space&nbsp;&nbsp;</span></span>
+      <li><span>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;java.util.Arrays.copyOf(Arrays.java:<span class="number">2786</span><span>)&nbsp;&nbsp;</span></span>
+      <li><span>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;java.io.ByteArrayOutputStream.write(ByteArrayOutputStream.java:<span class="number">71</span><span>)&nbsp;&nbsp;</span></span>
+      <li><span>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.mail.pop3.Protocol.multilineCommand(Protocol.java:<span class="number">362</span><span>)&nbsp;&nbsp;</span></span>
+      <li><span>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.mail.pop3.Protocol.retr(Protocol.java:<span class="number">237</span><span>)&nbsp;&nbsp;</span></span>
+      <li><span>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.mail.pop3.POP3Message.getContentStream(POP3Message.java:<span class="number">115</span><span>)&nbsp;&nbsp;</span></span>
+      <li><span>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;javax.mail.internet.MimePartDataSource.getInputStream(MimePartDataSource.java:<span class="number">60</span><span>)&nbsp;&nbsp;</span></span>
+      <li><span>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;javax.mail.internet.MimeMultipart.parse(MimeMultipart.java:<span class="number">259</span><span>)&nbsp;&nbsp;</span></span>
+      <li><span>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;javax.mail.internet.MimeMultipart.getCount(MimeMultipart.java:<span class="number">159</span><span>)&nbsp;&nbsp;</span></span>
+      <li><span>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.gdcn.mail.util.Pop3Util.hasAttachment(Pop3Util.java:<span class="number">1148</span><span>)&nbsp;&nbsp;</span></span>
+      <li><span>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.gdcn.mail.util.Pop3Util.analysisMessage(Pop3Util.java:<span class="number">774</span><span>)&nbsp;&nbsp;</span></span>
+      <li><span>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.gdcn.mail.util.Pop3Util.getMessages(Pop3Util.java:<span class="number">561</span><span>)&nbsp;&nbsp;</span></span>
       <li><span>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.gdcn.mail.util.Pop3Util.main(Pop3Util.java:<span class="number">1338</span><span>)&nbsp;&nbsp;</span></span></li>
     </ol>
   </div>
   &nbsp;
-  <p>Ô­ÒòÊÇJavaMail»á½«ÕâĞ©Messages¶ÁÈëÄÚ´æ£¬ÓÉÓÚÕâĞ©ÓÊ¼ş°üº¬ÁË¸½¼şµÈµÈ£¬ËùÒÔ»áÔì³ÉÕâÑùµÄ½á¹û¡£</p>
+  <p>åŸå› æ˜¯JavaMailä¼šå°†è¿™äº›Messagesè¯»å…¥å†…å­˜ï¼Œç”±äºè¿™äº›é‚®ä»¶åŒ…å«äº†é™„ä»¶ç­‰ç­‰ï¼Œæ‰€ä»¥ä¼šé€ æˆè¿™æ ·çš„ç»“æœã€‚</p>
   <p>&nbsp;</p>
-  <p>ÍøÉÏºÜ¶à¶¼ËµÔö¼ÓJVM»òÕßTomcatµÈµÄÄÚ´æ£¬µ«ÊÇÕâÑùÈÔÈ»²»ÄÜ´ïµ½Ô¤ÆÚµÄĞ§¹û¡£»òÀ´²éÔÄÁËÏà¹ØµÄÎÄµµºÍÍøÉÏµÄ½á¹û£¬·¢ÏÖÁË½â¾öÕâ¸öÎÊÌâµÄ·½·¨£¬ÎÒÃÇÖ»ĞèÒªÔÚ½âÎöÍêÓÊ¼şÖ®ºóÔö¼ÓÕâ¾ä</p>
+  <p>ç½‘ä¸Šå¾ˆå¤šéƒ½è¯´å¢åŠ JVMæˆ–è€…Tomcatç­‰çš„å†…å­˜ï¼Œä½†æ˜¯è¿™æ ·ä»ç„¶ä¸èƒ½è¾¾åˆ°é¢„æœŸçš„æ•ˆæœã€‚æˆ–æ¥æŸ¥é˜…äº†ç›¸å…³çš„æ–‡æ¡£å’Œç½‘ä¸Šçš„ç»“æœï¼Œå‘ç°äº†è§£å†³è¿™ä¸ªé—®é¢˜çš„æ–¹æ³•ï¼Œæˆ‘ä»¬åªéœ€è¦åœ¨è§£æå®Œé‚®ä»¶ä¹‹åå¢åŠ è¿™å¥</p>
   <p>&nbsp;</p>
-  <div id="" class="dp-highlighter">
+  <div class="dp-highlighter" >
     <div class="bar">
-      <div class="tools">Java´úÂë
-        <embed src="about_blank" flashvars="clipboard=((POP3Message)%20message).invalidate(true)%3B" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" width="14" height="15">
-      &nbsp;<a href="javascript:void()" title="ÊÕ²ØÕâ¶Î´úÂë" onClick="code_favorites_do_favorite(this);return false;"><img class="star" src="icon_star.png" alt="ÊÕ²Ø´úÂë"></a></div>
+      <div class="tools">Javaä»£ç 
+        <embed src="about_blank" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" width="14" height="15" flashvars="clipboard=((POP3Message)%20message).invalidate(true)%3B" quality="high" allowscriptaccess="always">
+      &nbsp;<A onclick="code_favorites_do_favorite(this);return false;" title=æ”¶è—è¿™æ®µä»£ç  href="javascript:void()" ><IMG class=star alt=æ”¶è—ä»£ç  src="icon_star.png"></A></div>
     </div>
-    <ol class="dp-j" start="1">
+    <ol class="dp-j" >
       <li><span><span>((POP3Message)&nbsp;message).invalidate(</span><span class="keyword">true</span><span>);&nbsp;&nbsp;</span></span></li>
     </ol>
   </div>
   <p>&nbsp;</p>
-  <p>sunÓĞÕâÑùµÄ½âÎö</p>
+  <p>sunæœ‰è¿™æ ·çš„è§£æ</p>
   <p>http://java.sun.com/products/javamail/javadocs/com/sun/mail/pop3/POP3Message.html</p>
   <h3> invalidate</h3>
   <pre>public void <strong>invalidate</strong>
@@ -57,56 +58,56 @@
       If <code>invalidateHeaders</code> is true, invalidate the headers
       as well.
       <p>&nbsp;</p>
-    </dd>
     <dd>
       <dl>
-        <dt> <strong>Parameters:</strong> </dt>
+        <dt> <strong>Parameters:</strong>
         <dd> <code>invalidateHeaders</code> - invalidate the headers as well?</dd>
       </dl>
     </dd>
   </dl>
   <p>&nbsp;</p>
-  <p>ÕâÑù¾ÍºÜºÃµØ½«Ô­À´¶ÁÈ¡µÄmessage´ÓcacheÀïÃæ²Á³ıÁË</p>
+  <p>è¿™æ ·å°±å¾ˆå¥½åœ°å°†åŸæ¥è¯»å–çš„messageä»cacheé‡Œé¢æ“¦é™¤äº†</p>
 </div>
-<ins style="display:inline-table;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:468px"><ins id="aswift_0_anchor" style="display:block;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:468px">
-<iframe allowtransparency="true" hspace="0" marginwidth="0" marginheight="0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){i+='.call';setTimeout(h,0)}else if(h.match){i+='.nav';w.location.replace(h)}s.log&amp;&amp;s.log.push(i)}" vspace="0" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;" scrolling="no" width="468" frameborder="0" height="60"></iframe>
-</ins></ins>
+<INS style="BORDER-TOP: medium none; HEIGHT: 60px; BORDER-RIGHT: medium none; WIDTH: 468px; BORDER-BOTTOM: medium none; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: medium none; DISPLAY: inline-table; PADDING-RIGHT: 0px; VISIBILITY: visible"><INS id="aswift_0_anchor" style="BORDER-TOP: medium none; HEIGHT: 60px; BORDER-RIGHT: medium none; WIDTH: 468px; BORDER-BOTTOM: medium none; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: medium none; DISPLAY: block; PADDING-RIGHT: 0px; VISIBILITY: visible">
+<iframe marginwidth="0" marginheight="0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){i+='.call';setTimeout(h,0)}else if(h.match){i+='.nav';w.location.replace(h)}s.log&amp;&amp;s.log.push(i)}" id="aswift_0" name="aswift_0" style="POSITION: absolute; LEFT: 0px; TOP: 0px" scrolling="no" width="468" allowTransparency frameborder="0" height="60"></iframe></INS></INS>
 <div class="blog_nav">
-  <div class="pre_next"> <a href="http://ben-sin.iteye.com/blog/426435" class="next" title="Spring ¶¨Ê±Æ÷Ê¹ÓÃ ">Spring ¶¨Ê±Æ÷Ê¹ÓÃ </a> | <a href="http://ben-sin.iteye.com/blog/390938" class="pre" title="OracleÊ±¼ä²Ù×÷µÄÒ»¸öĞ¡¼¼ÇÉ">OracleÊ±¼ä²Ù×÷µÄÒ»¸öĞ¡¼¼ÇÉ</a> </div>
+  <div class="pre_next"> <a href="http://ben-sin.iteye.com/blog/426435" class="next" title="Spring å®šæ—¶å™¨ä½¿ç”¨ ">Spring å®šæ—¶å™¨ä½¿ç”¨ </a> | <a href="http://ben-sin.iteye.com/blog/390938" class="pre" title="Oracleæ—¶é—´æ“ä½œçš„ä¸€ä¸ªå°æŠ€å·§">Oracleæ—¶é—´æ“ä½œçš„ä¸€ä¸ªå°æŠ€å·§</a> </div>
 </div>
 <div class="blog_bottom">
   <ul>
-    <li>10:31</li>
-    <li>ä¯ÀÀ (750)</li>
-    <li><a href="http://ben-sin.iteye.com/blog/391608#comments">ÆÀÂÛ</a> (2)</li>
-    <li>·ÖÀà: <a href="http://ben-sin.iteye.com/category/65900">javamail</a></li>
-    <li class="last"><a href="http://www.iteye.com/wiki/topic/391608" target="_blank" class="more">Ïà¹ØÍÆ¼ö</a></li>
+    <li>10:31 
+    <li>æµè§ˆ (750) 
+    <li><a href="http://ben-sin.iteye.com/blog/391608#comments">è¯„è®º</a> (2) 
+    <li>åˆ†ç±»: <a href="http://ben-sin.iteye.com/category/65900">javamail</a>
+    <li class="last"><a href="http://www.iteye.com/wiki/topic/391608" target="_blank" class="more">ç›¸å…³æ¨è</a></li>
   </ul>
 </div>
 <div class="blog_comment">
-  <h5>ÆÀÂÛ</h5>
+  <h5>è¯„è®º</h5>
   <a id="comments" name="comments"></a>
   <div id="bc1390001">
-    <div class="comment_title"> 2 Â¥ <a href="http://ben-sin.iteye.com/" target="_blank">Ben.Sin</a> 2010-03-04&nbsp;&nbsp; <a href="http://ben-sin.iteye.com/blog/391608#" onClick="quote_comment(1390001);return false;">ÒıÓÃ</a> </div>
+    <div class="comment_title"> 2 æ¥¼ <a href="http://ben-sin.iteye.com/" target="_blank">Ben.Sin</a> 2010-03-04&nbsp;&nbsp; <a href="http://ben-sin.iteye.com/blog/391608#" onClick="quote_comment(1390001);return false;">å¼•ç”¨</a> </div>
     <div class="comment_content">
-      <div class="quote_title">ccxw1983 Ğ´µÀ</div>
-      <div class="quote_div">ÎÒÌíÁËÕâ¾ä´úÂë£¬»¹ÊÇ±¨´í£¬´úÂëÆ¬¶ÎÈçÏÂ£º<br>
+      <div class="quote_title">ccxw1983 å†™é“</div>
+      <div class="quote_div">æˆ‘æ·»äº†è¿™å¥ä»£ç ï¼Œè¿˜æ˜¯æŠ¥é”™ï¼Œä»£ç ç‰‡æ®µå¦‚ä¸‹ï¼š<br>
         messages = inbox.getMessages(i);<br>
         inbox.fetch(messages, profile);<br>
         messagei = messages[0];<br>
         ((POP3Message) messagei).invalidate(true);&nbsp; <br>
-        ²»ÖªÄãÊÇÈçºÎÉèÖÃµÄ£¬Çë´Í½Ì£¡<br>
-        ÎÒµÄ¸½¼şÓĞ32.7M¡£</div>
+        ä¸çŸ¥ä½ æ˜¯å¦‚ä½•è®¾ç½®çš„ï¼Œè¯·èµæ•™ï¼<br>
+        æˆ‘çš„é™„ä»¶æœ‰32.7Mã€‚</div>
       <br>
       <br>
       <br>
-      ²»ºÃÒâË¼£¬Ò»Ö±ÔÚÃ¦£¬Ã»Ê±¼äÀ´´òÀí£¬²»ÖªµÀÄãÕÒµ½´ğ°¸ÁËÃ»ÓĞ£¿<br>
+      ä¸å¥½æ„æ€ï¼Œä¸€ç›´åœ¨å¿™ï¼Œæ²¡æ—¶é—´æ¥æ‰“ç†ï¼Œä¸çŸ¥é“ä½ æ‰¾åˆ°ç­”æ¡ˆäº†æ²¡æœ‰ï¼Ÿ<br>
       <br>
-      ÎÒÊÇ²ÉÓÃFolder.open()µÄ·½Ê½·ÃÎÊµÄ£¬´óÖÂÒâË¼ÈçÏÂ<br>
+      æˆ‘æ˜¯é‡‡ç”¨Folder.open()çš„æ–¹å¼è®¿é—®çš„ï¼Œå¤§è‡´æ„æ€å¦‚ä¸‹<br>
       <br>
       Session session = this.getSession(pop3Server, mailAddress, password, port);<br>
       <br>
-      Store store = this.getStore(session, protocol);<br>
+      Store store =
+        
+         this.getStore(session, protocol);<br>
       // Connect to mail server<br>
       store.connect();<br>
       Folder folder = store.getFolder("INBOX");<br>
@@ -115,15 +116,16 @@
       &nbsp;&nbsp; messages = folder.getMessages(messageIds);<br>
       <br>
       &nbsp;&nbsp; for (Message message : messages) {<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // ½âÎöÓÊ¼ş²¿·ÖÊ¡ÂÔ¡£¡£¡£<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // è§£æé‚®ä»¶éƒ¨åˆ†çœç•¥ã€‚ã€‚ã€‚<br>
       <br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // ÊÍ·ÅÓÊ¼ş<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // é‡Šæ”¾é‚®ä»¶<br>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ((POP3Message) message).invalidate(true);<br>
       &nbsp;&nbsp; }<br>
       }<br>
     </div>
+    <div class="comment_content">
+    </div>
   </div>
-</div>
-<!--EndFragment-->
+</div><!--EndFragment-->
 </body>
 </htm>
