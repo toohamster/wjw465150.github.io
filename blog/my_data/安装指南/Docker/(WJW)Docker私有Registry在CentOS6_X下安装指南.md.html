@@ -1024,7 +1024,7 @@ cp /etc/pki/CA/cacert.pem /etc/docker/certs.d/docker.yy.com/ca-certificates.crt
 </code></pre>
 <h3 id="-27-">(2) 运行Image</h3>
 <pre><code class="brush: bash">mkdir -p /opt/registry
-docker run -d -e STORAGE_PATH=/registry -v /opt/registry:/registry -p 127.0.0.1:5000:5000 --name registry registry
+docker run --restart always -d -e STORAGE_PATH=/registry -v /opt/registry:/registry -p 127.0.0.1:5000:5000 --name registry registry
 </code></pre>
 <blockquote>
 <p>命令稍加解释一下:

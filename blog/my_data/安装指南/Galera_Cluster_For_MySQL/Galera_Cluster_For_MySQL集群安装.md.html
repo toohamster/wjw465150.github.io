@@ -789,12 +789,12 @@ mysql-5.1.73-3.el6_5.x86_64
 <pre><code class="brush: text">rpm --nodeps -ev mysql-libs-5.1.73-3.el6_5.x86_64
 rpm --nodeps -ev mysql-5.1.73-3.el6_5.x86_64
 </code></pre><p>创建目录: <code>mkdir -p /opt/tmp_galera/</code><br>复制文件:</p>
-<pre><code class="brush: text">boost-program-options-1.41.0-25.el6.x86_64.rpm
-galera-3-25.3.10-2.el6.x86_64.rpm
-mysql-wsrep-5.6-5.6.23-25.10.el6.x86_64.rpm
-mysql-wsrep-client-5.6-5.6.23-25.10.el6.x86_64.rpm
-mysql-wsrep-server-5.6-5.6.23-25.10.el6.x86_64.rpm
-nc-1.84-22.el6.x86_64.rpm
+<pre><code class="brush: text">boost-program-options-1.41.0-27.el6.x86_64.rpm
+galera-3-25.3.12-2.el6.x86_64.rpm
+mysql-wsrep-5.6-5.6.25-25.11.el6.x86_64.rpm
+mysql-wsrep-client-5.6-5.6.25-25.11.el6.x86_64.rpm
+mysql-wsrep-server-5.6-5.6.25-25.11.el6.x86_64.rpm
+nc-1.84-24.el6.x86_64.rpm
 nmap-5.51-4.el6.x86_64.rpm
 </code></pre><p>到<code>/opt/tmp_galera/</code></p>
 <p>安装依赖库:</p>
@@ -803,7 +803,7 @@ rpm -Uvh boost-program-options-*.rpm
 rpm -Uvh ./nmap-*.rpm
 rpm -Uvh ./nc-*.rpm
 </code></pre><p>安装galera<code>rpm -Uvh ./galera-*.rpm</code><br>安装mysql<code>rpm -Uvh ./mysql-wsrep-*.rpm</code><br>输出:</p>
-<pre><code class="brush: bash">warning: ./mysql-wsrep-5.6-5.6.23-25.10.el6.x86_64.rpm: Header V4 RSA/SHA1 Signature, key ID bc19ddba: NOKEY
+<pre><code class="brush: bash">warning: ./mysql-wsrep-5.6-5.6.25-25.11.el6.x86_64.rpm: Header V4 RSA/SHA1 Signature, key ID bc19ddba: NOKEY
 Preparing...                ########################################### [100%]
    1:mysql-wsrep-server-5.6 ########################################### [ 33%]
 warning: user mysql does not exist - using root
@@ -1262,11 +1262,11 @@ wsrep_node_address="192.168.1.87"
 <p>执行以下指令:</p>
 <pre><code class="brush: bash">service mysql stop
 
-rpm -ev mysql-wsrep-5.6-5.6.23-25.10.el6.x86_64
-rpm -ev mysql-wsrep-client-5.6-5.6.23-25.10.el6.x86_64
-rpm -ev mysql-wsrep-server-5.6-5.6.23-25.10.el6.x86_64
+rpm -ev mysql-wsrep-5.6-5.6.25-25.11.el6.x86_64
+rpm -ev mysql-wsrep-client-5.6-5.6.25-25.11.el6.x86_64
+rpm -ev mysql-wsrep-server-5.6-5.6.25-25.11.el6.x86_64
 
-rpm -ev galera-3-25.3.10-2.el6.x86_64
+rpm -ev galera-3-25.3.12-2.el6.x86_64
 
 rm -rf /var/lib/mysql/*
 rm -rf /etc/mysql/*

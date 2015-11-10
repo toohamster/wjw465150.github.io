@@ -745,7 +745,7 @@ SELINUXTYPE=targeted
 </code></pre>
 <blockquote>
 <ol>
-<li>修改grub的主配置文件/etc/grub.conf，设置default=0，表示第一个title下的内容为默认启动的kernel（一般新安装的内核在第一个位置）。</li>
+<li>修改grub的主配置文件/boot/grub/grub.conf，设置default=0，表示第一个title下的内容为默认启动的kernel（一般新安装的内核在第一个位置）。</li>
 <li>重启系统<code>reboot now</code>,</li>
 <li><p>然后执行<code>uname -r</code>,查看是否已经是3.10内核!</p>
 <blockquote>
@@ -760,16 +760,17 @@ SELINUXTYPE=targeted
 </ol>
 </blockquote>
 <h5 id="-8-">[X] 安装docker</h5>
-<pre><code class="brush: bash">yum install redhat-lsb
+<pre><code class="brush: bash">#yum install redhat-lsb
 
-yum install iptables
+#yum install iptables
 chkconfig ip6tables off
 chkconfig iptables off
 service ip6tables stop
 service iptables stop
 
-yum install device-mapper-libs
-yum install libcgroup*
+#yum install device-mapper-libs
+#yum install libcgroup*
+
 yum install docker-io
 </code></pre>
 <p>如果报错:<code>Error: Cannot retrieve metalink for repository: epel. Please verify its path and try again</code>  </p>
@@ -784,31 +785,7 @@ baseurl
 #mirrorlist
 
 然后执行: yum clean all
-</code></pre><pre><code class="brush: text">=============================================================================================================================================================================================================================================
- Package                                                       Arch                                                  Version                                                       Repository                                           Size
-=============================================================================================================================================================================================================================================
-Installing:
- docker-io                                                     x86_64                                                1.2.0-3.el6                                                   epel                                                4.2 M
-Installing for dependencies:
- lua-alt-getopt                                                noarch                                                0.7.0-1.el6                                                   epel                                                6.9 k
- lua-filesystem                                                x86_64                                                1.4.2-1.el6                                                   epel                                                 24 k
- lua-lxc                                                       x86_64                                                1.0.6-1.el6                                                   epel                                                 15 k
- lxc                                                           x86_64                                                1.0.6-1.el6                                                   epel                                                120 k
- lxc-libs                                                      x86_64                                                1.0.6-1.el6                                                   epel                                                248 k
-
-Transaction Summary
-=============================================================================================================================================================================================================================================
-Install       6 Package(s)
-
-Downloading Packages:
-(1/6): docker-io-1.2.0-3.el6.x86_64.rpm                                                                                                                                                                               | 4.2 MB     00:02
-(2/6): lua-alt-getopt-0.7.0-1.el6.noarch.rpm                                                                                                                                                                          | 6.9 kB     00:00
-(3/6): lua-filesystem-1.4.2-1.el6.x86_64.rpm                                                                                                                                                                          |  24 kB     00:00
-(4/6): lua-lxc-1.0.6-1.el6.x86_64.rpm                                                                                                                                                                                 |  15 kB     00:00
-(5/6): lxc-1.0.6-1.el6.x86_64.rpm                                                                                                                                                                                     | 120 kB     00:00
-(6/6): lxc-libs-1.0.6-1.el6.x86_64.rpm                                                                                                                                                                                | 248 kB     00:00
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-</code></pre><h4 id="-9-">rpm手工安装:</h4>
+</code></pre><h4 id="-9-">rpm手工安装(建议用yum安装,实在不行再用rpm):</h4>
 <p>先执行</p>
 <pre><code class="brush: bash">rpm --nodeps -ev $(rpm -qa | grep -i 'device-mapper-libs-')
 rpm --nodeps -ev $(rpm -qa | grep -i 'device-mapper-')
@@ -824,7 +801,7 @@ rpm -ivh ./lua-filesystem-1.4.2-1.el6.x86_64.rpm
 rpm -ivh ./lua-lxc-1.0.6-1.el6.x86_64.rpm
 rpm -ivh ./lxc-1.0.6-1.el6.x86_64.rpm
 #6.4版本以下需要 rpm -ivh ./libcgroup-0.40.rc1-5.el6.x86_64.rpm
-rpm -ivh ./docker-io-1.4.1-2.el6.x86_64.rpm
+rpm -ivh ./docker-io-1.7.1-3.el6.x86_64.rpm
 </code></pre>
 <h4 id="-10-">[X] 五、初步验证docker</h4>
 <p>  输入<code>docker -h</code>,如果有如下输出,就证明docker在形式上已经安装成功.</p>
