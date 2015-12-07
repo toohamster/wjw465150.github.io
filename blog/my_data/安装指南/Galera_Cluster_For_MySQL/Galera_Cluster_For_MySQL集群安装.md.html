@@ -780,7 +780,8 @@ baseurl=http://releases.galeracluster.com/centos/6/x86_64/
 <li>yum安装:<code>yum install galera-3 mysql-wsrep-5.6</code></li>
 </ul>
 <h3 id="-6-">(所有节点)rpm本地安装:</h3>
-<p>先删除系统自带的mysql:<code>rpm -qa | grep -i mysql</code>
+<ul>
+<li><p>先删除系统自带的mysql:<code>rpm -qa | grep -i mysql</code>
 输出:</p>
 <pre><code class="brush: text">root@pts/0 # rpm -qa | grep -i mysql
 mysql-libs-5.1.73-3.el6_5.x86_64
@@ -788,7 +789,8 @@ mysql-5.1.73-3.el6_5.x86_64
 </code></pre><p>然后执行: </p>
 <pre><code class="brush: text">rpm --nodeps -ev mysql-libs-5.1.73-3.el6_5.x86_64
 rpm --nodeps -ev mysql-5.1.73-3.el6_5.x86_64
-</code></pre><p>创建目录: <code>mkdir -p /opt/tmp_galera/</code><br>复制文件:</p>
+</code></pre></li>
+<li><p>创建目录: <code>mkdir -p /opt/tmp_galera/ &amp;&amp; cd /opt/tmp_galera/</code><br>复制文件:</p>
 <pre><code class="brush: text">boost-program-options-1.41.0-27.el6.x86_64.rpm
 galera-3-25.3.12-2.el6.x86_64.rpm
 mysql-wsrep-5.6-5.6.25-25.11.el6.x86_64.rpm
@@ -797,12 +799,18 @@ mysql-wsrep-server-5.6-5.6.25-25.11.el6.x86_64.rpm
 nc-1.84-24.el6.x86_64.rpm
 nmap-5.51-4.el6.x86_64.rpm
 </code></pre><p>到<code>/opt/tmp_galera/</code></p>
-<p>安装依赖库:</p>
-<pre><code class="brush: text">cd /opt/tmp_galera/
-rpm -Uvh boost-program-options-*.rpm
-rpm -Uvh ./nmap-*.rpm
-rpm -Uvh ./nc-*.rpm
-</code></pre><p>安装galera<code>rpm -Uvh ./galera-*.rpm</code><br>安装mysql<code>rpm -Uvh ./mysql-wsrep-*.rpm</code><br>输出:</p>
+</li>
+<li><p>依赖问题:</p>
+<blockquote>
+<p> 能联网的情况下,先执行<code>yum install galera-3 mysql-wsrep-5.6</code>命令,根据依赖列表来逐个rpm安装依赖!  </p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li>安装galera<code>rpm -Uvh ./galera-*.rpm</code>  </li>
+<li>安装mysql<code>rpm -Uvh ./mysql-wsrep-*.rpm</code>  </li>
+</ul>
+<p>输出:  </p>
 <pre><code class="brush: bash">warning: ./mysql-wsrep-5.6-5.6.25-25.11.el6.x86_64.rpm: Header V4 RSA/SHA1 Signature, key ID bc19ddba: NOKEY
 Preparing...                ########################################### [100%]
    1:mysql-wsrep-server-5.6 ########################################### [ 33%]
@@ -1075,7 +1083,7 @@ wsrep_node_address="192.168.1.85"
 <p> 如果:<code>wsrep_ready=ON,wsrep_cluster_size=1</code>,就说明一切正常    </p>
 </blockquote>
 </li>
-<li><p>注意: 如果集群启动以后,我们关闭了第1个节点,那么再次启动的时候必须执行<code>service mysql start --wsrep_cluster_address=gcomm://${集群中其他任一节点的地址}</code>  </p>
+<li><p>注意: 如果集群启动以后,我们关闭了第1个节点,那么再次启动的时候先修改"gcomm://"为其他节点的集群地址,例如<code>service mysql start --wsrep_cluster_address=gcomm://${集群中其他任一节点的地址}</code>  </p>
 </li>
 </ul>
 <h2 id="-11-">启动节点2:</h2>
@@ -1242,23 +1250,26 @@ wsrep_node_address="192.168.1.87"
 另外需要说明的是,gcomm://的值可以有多个,彼此间用逗号隔开,例:"gcomm://192.168.1.85:4567,192.168.1.86:4567"</li>
 </ol>
 <hr>
-<h2 id="-14-">监控:</h2>
-<h3 id="-15-">[+] 集群完整性检查:</h3>
+<h2 id="-14-">重启集群:</h2>
+<p>如果集群中的机器全部重启，如机房断电，第一台启动的服务器必须是<strong>wsrep_cluster_address为空</strong>的那个节点<code>wsrep_cluster_address="gcomm://"</code>  </p>
+<hr>
+<h2 id="-15-">监控:</h2>
+<h3 id="-16-">[+] 集群完整性检查:</h3>
 <p><code>wsrep_cluster_state_uuid</code>:在集群所有节点的值应该是相同的,有不同值的节点,说明其没有连接入集群.<br><code>wsrep_cluster_conf_id</code>:正常情况下所有节点上该值是一样的.如果值不同,说明该节点被临时"分区"了.当节点之间网络连接恢复的时候应该会恢复一样的值.<br><code>wsrep_cluster_size</code>:如果这个值跟预期的节点数一致,则所有的集群节点已经连接.<br><code>wsrep_cluster_status</code>:集群组成的状态.如果不为"Primary",说明出现"分区"或是"split-brain"状况.  </p>
-<h3 id="-16-">[+] 节点状态检查:</h3>
+<h3 id="-17-">[+] 节点状态检查:</h3>
 <p><code>wsrep_ready</code>: 该值为ON,则说明可以接受SQL负载.如果为Off,则需要检查wsrep_connected.<br><code>wsrep_connected</code>: 如果该值为Off,且wsrep_ready的值也为Off,则说明该节点没有连接到集群.<br><code>wsrep_local_state_comment</code>:如果wsrep_connected为On,但wsrep_ready为OFF,则可以从该项查看原因.  </p>
-<h3 id="-17-">[+] 复制健康检查:</h3>
+<h3 id="-18-">[+] 复制健康检查:</h3>
 <p><code>wsrep_flow_control_paused</code>:表示复制停止了多长时间.即表明集群因为Slave延迟而慢的程度.值为0~1,越靠近0越好,值为1表示复制完全停止.可优化wsrep_slave_threads的值来改善.<br><code>wsrep_cert_deps_distance</code>:有多少事务可以并行应用处理.wsrep_slave_threads设置的值不应该高出该值太多.<br><code>wsrep_flow_control_sent</code>:表示该节点已经停止复制了多少次.<br><code>wsrep_local_recv_queue_avg</code>:表示slave事务队列的平均长度.slave瓶颈的预兆.<br>最慢的节点的<code>wsrep_flow_control_sent</code>和<code>wsrep_local_recv_queue_avg</code>这两个值最高.这两个值较低的话,相对更好.  </p>
-<h3 id="-18-">[+] 检测慢网络问题:</h3>
+<h3 id="-19-">[+] 检测慢网络问题:</h3>
 <p><code>wsrep_local_send_queue_avg</code>:网络瓶颈的预兆.如果这个值比较高的话,可能存在网络瓶.  </p>
-<h3 id="-19-">[+] 冲突或死锁的数目:</h3>
+<h3 id="-20-">[+] 冲突或死锁的数目:</h3>
 <p><code>wsrep_last_committed</code>:最后提交的事务数目.<br><code>wsrep_local_cert_failures</code>和<code>wsrep_local_bf_aborts</code>:回滚,检测到的冲突数目.  </p>
-<h2 id="-20-">备注:</h2>
-<h3 id="-21-">[+] "gcomm://":</h3>
+<h2 id="-21-">备注:</h2>
+<h3 id="-22-">[+] "gcomm://":</h3>
 <p>"gcomm://"是特殊地址,仅仅是galera cluster初始化启动时候使用,再次启动时需要使用具体的ip地址</p>
-<h3 id="-22-">[+] 4567端口:</h3>
+<h3 id="-23-">[+] 4567端口:</h3>
 <p>wsrep默认使用4567端口,mysql启动后,除了检查mysql的3306端口外,还要检查此端口!</p>
-<h3 id="-23-">[+] 删除Galera:</h3>
+<h3 id="-24-">[+] 删除Galera:</h3>
 <p>执行以下指令:</p>
 <pre><code class="brush: bash">service mysql stop
 
