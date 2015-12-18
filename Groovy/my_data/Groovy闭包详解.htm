@@ -1,13 +1,13 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>Groovy闭包详解</title>
+<title>Groovy闂寘璇﹁В</title>
 <meta name="GENERATOR" content="WinCHM">
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style>
 html,body { 
 	/* Default Font */
-	font-family: 宋体, Arial, Helvetica, sans-serif;
+	font-family: 瀹嬩綋, Arial, Helvetica, sans-serif;
 	font-size: 10pt;
 }
 </style>
@@ -17,31 +17,31 @@ html,body {
 <body>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="FONT-SIZE: medium"><STRONG>闭包介绍</STRONG></SPAN></P>
+style="FONT-SIZE: medium"><STRONG>闂寘浠嬬粛</STRONG></SPAN></P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1、由{}包围起来的代码块就是闭包</P>
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1銆佺敱{}鍖呭洿璧锋潵鐨勪唬鐮佸潡灏辨槸闂寘</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp; 
-println{}&nbsp; //执行该行，结果如下：</P>
+println{}&nbsp; //鎵ц璇ヨ锛岀粨鏋滃涓嬶細</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;<SPAN 
 class=Apple-converted-space>&nbsp;</SPAN><A 
 style="COLOR: rgb(255,153,0); TEXT-DECORATION: none" 
 href="mailto:com.clat.GroovyTest$_run_closure1@10a2d43">com.clat.GroovyTest$_run_closure1@10a2d43</A></P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;符合格式：类$匿名内部类@hash 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;绗﹀悎鏍煎紡锛氱被$鍖垮悕鍐呴儴绫籃hash 
 code</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp; 
-结论：<SPAN class=Apple-converted-space>&nbsp;</SPAN><SPAN 
-style="COLOR: rgb(51,102,255)">闭包是一个匿名内部类的对象。</SPAN></P>
+缁撹锛�<SPAN class=Apple-converted-space>&nbsp;</SPAN><SPAN 
+style="COLOR: rgb(51,102,255)">闂寘鏄竴涓尶鍚嶅唴閮ㄧ被鐨勫璞°��</SPAN></P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="COLOR: rgb(0,0,0)">2、</SPAN>也可以给闭包取名字：</P>
+style="COLOR: rgb(0,0,0)">2銆�</SPAN>涔熷彲浠ョ粰闂寘鍙栧悕瀛楋細</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp; 
 def aClosure = {</P>
@@ -53,7 +53,7 @@ style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(
 }</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp; 
-println aClosuer&nbsp; //结果如下&nbsp;：</P>
+println aClosuer&nbsp; //缁撴灉濡備笅&nbsp;锛�</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;<SPAN 
 class=Apple-converted-space>&nbsp;</SPAN><A 
@@ -65,20 +65,20 @@ style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="FONT-SIZE: medium"><STRONG>调用闭包</STRONG></SPAN></P>
+style="FONT-SIZE: medium"><STRONG>璋冪敤闂寘</STRONG></SPAN></P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1、aClosure.call()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-//使用call()调用闭包</P>
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1銆乤Closure.call()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+//浣跨敤call()璋冪敤闂寘</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">2、aClosure()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//调用闭包的简写方式，类似于方法调用。</P>
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">2銆乤Closure()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//璋冪敤闂寘鐨勭畝鍐欐柟寮忥紝绫讳技浜庢柟娉曡皟鐢ㄣ��</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">结论：闭包是一个可执行的代码块。</P>
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">缁撹锛氶棴鍖呮槸涓�涓彲鎵ц鐨勪唬鐮佸潡銆�</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">3、闭包在调用的时候才会执行</P>
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">3銆侀棴鍖呭湪璋冪敤鐨勬椂鍊欐墠浼氭墽琛�</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">4、参数化闭包</P>
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">4銆佸弬鏁板寲闂寘</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp; 
 def bClosure = {</P>
@@ -96,10 +96,10 @@ style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(
 bClosure("clat")</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp; 
-bClosure "clat"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //结果输出三个： Hello clat</P>
+bClosure "clat"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //缁撴灉杈撳嚭涓変釜锛� Hello clat</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="COLOR: rgb(255,0,0)">it 是闭包的单个隐含参数。</SPAN></P>
+style="COLOR: rgb(255,0,0)">it 鏄棴鍖呯殑鍗曚釜闅愬惈鍙傛暟銆�</SPAN></P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
@@ -107,12 +107,12 @@ style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="COLOR: rgb(0,0,0)"><SPAN 
-style="FONT-SIZE: medium"><STRONG>闭包参数</STRONG></SPAN></SPAN></P>
+style="FONT-SIZE: medium"><STRONG>闂寘鍙傛暟</STRONG></SPAN></SPAN></P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="COLOR: rgb(0,0,0)">1、闭包使用显示参数</SPAN></P>
+style="COLOR: rgb(0,0,0)">1銆侀棴鍖呬娇鐢ㄦ樉绀哄弬鏁�</SPAN></P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="COLOR: rgb(0,0,0)">&nbsp;&nbsp;&nbsp; def cClosure = {name,address 
@@ -127,10 +127,10 @@ style="COLOR: rgb(0,0,0)">&nbsp;&nbsp;&nbsp; }</SPAN></P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="COLOR: rgb(0,0,0)">&nbsp;&nbsp;&nbsp;&nbsp; 
-cClosure("hello","clat")&nbsp;&nbsp; // 输出: hello, clat!</SPAN></P>
+cClosure("hello","clat")&nbsp;&nbsp; // 杈撳嚭: hello, clat!</SPAN></P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="COLOR: rgb(0,0,0)">2、闭包支持默认参数</SPAN></P>
+style="COLOR: rgb(0,0,0)">2銆侀棴鍖呮敮鎸侀粯璁ゅ弬鏁�</SPAN></P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="COLOR: rgb(0,0,0)">&nbsp;&nbsp;&nbsp; def dClosure = 
@@ -146,43 +146,43 @@ style="COLOR: rgb(0,0,0)">&nbsp;&nbsp;&nbsp; }</SPAN></P>
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
 style="COLOR: rgb(0,0,0)">&nbsp;&nbsp;&nbsp;&nbsp; 
 dClosure("hello")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-//输出hello, clat!</SPAN></P>
+//杈撳嚭hello, clat!</SPAN></P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="FONT-SIZE: medium"><STRONG>闭包作用域</STRONG></SPAN></P>
+style="FONT-SIZE: medium"><STRONG>闂寘浣滅敤鍩�</STRONG></SPAN></P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1、def 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1銆乨ef 
 name= "clat"</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
 def eClosure = {println name}</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eClosure()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-//输出: clat</P>
+//杈撳嚭: clat</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
-//闭包可以作为方法的参数</P>
+//闂寘鍙互浣滀负鏂规硶鐨勫弬鏁�</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def 
 aMethod(Closure closure){</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name="escaflone"; 
-closure()&nbsp;&nbsp; //这里的name只是方法的局部变量，闭包不能访问</P>
+closure()&nbsp;&nbsp; //杩欓噷鐨刵ame鍙槸鏂规硶鐨勫眬閮ㄥ彉閲忥紝闂寘涓嶈兘璁块棶</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-aMethod(eClosure)&nbsp;&nbsp;&nbsp; //输出: 
+aMethod(eClosure)&nbsp;&nbsp;&nbsp; //杈撳嚭: 
 clat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
@@ -192,24 +192,24 @@ def fClosure = {</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 name="Aldern"&nbsp;; eClosure()&nbsp;&nbsp; 
-//同样是闭包，能访问到name（其实就是可执行片段修改了外围的一个变量）</P>
+//鍚屾牱鏄棴鍖咃紝鑳借闂埌name锛堝叾瀹炲氨鏄彲鎵ц鐗囨淇敼浜嗗鍥寸殑涓�涓彉閲忥級</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 fClosure()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-//输出：Aldern</P>
+//杈撳嚭锛欰ldern</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="FONT-SIZE: medium"><STRONG>闭包可以返回值</STRONG></SPAN></P>
+style="FONT-SIZE: medium"><STRONG>闂寘鍙互杩斿洖鍊�</STRONG></SPAN></P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1、def 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1銆乨ef 
 gClosure={number -&gt;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
@@ -223,23 +223,23 @@ println gClosure(3)</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">闭包返回6，其中return 
-可以省略</P>
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">闂寘杩斿洖6锛屽叾涓璻eturn 
+鍙互鐪佺暐</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="FONT-SIZE: medium"><STRONG>闭包与集合、字符串</STRONG></SPAN></P>
+style="FONT-SIZE: medium"><STRONG>闂寘涓庨泦鍚堛�佸瓧绗︿覆</STRONG></SPAN></P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1、闭包在Groovy中频繁出现，但最常用于对一系列值上迭代，如列表/映射/范围/String/File</P>
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1銆侀棴鍖呭湪Groovy涓绻佸嚭鐜帮紝浣嗘渶甯哥敤浜庡涓�绯诲垪鍊间笂杩唬锛屽鍒楄〃/鏄犲皠/鑼冨洿/String/File</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">2、闭包可以用更简洁的方式对集合进行迭代，已经不需要Java的迭代器了</P>
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">2銆侀棴鍖呭彲浠ョ敤鏇寸畝娲佺殑鏂瑰紡瀵归泦鍚堣繘琛岃凯浠ｏ紝宸茬粡涓嶉渶瑕丣ava鐨勮凯浠ｅ櫒浜�</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">3、用each遍历list:</P>
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">3銆佺敤each閬嶅巻list:</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
 def nameList = ["clat","escaflone","Aldern"]</P>
@@ -254,18 +254,18 @@ style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(
 }</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
-输出 clat &nbsp;escaflone&nbsp; Aldern</P>
+杈撳嚭 clat &nbsp;escaflone&nbsp; Aldern</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="FONT-SIZE: medium"><STRONG>遍历Map,Range,GString</STRONG></SPAN></P>
+style="FONT-SIZE: medium"><STRONG>閬嶅巻Map,Range,GString</STRONG></SPAN></P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1、遍历Map:</P>
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1銆侀亶鍘哅ap:</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp; 
 def nameMap = [1:'clat',2:'escaflone',3:'Aldern']</P>
@@ -279,12 +279,12 @@ print name.key + ' ' + name.value + ' '</P>
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
 }</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">2、遍历Range</P>
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">2銆侀亶鍘哛ange</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
 (1..&lt;5).each{print it +'-'}&nbsp; // 1-2-3-4-</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">3、遍历GString</P>
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">3銆侀亶鍘咷String</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 'clat'.each{print it +'-'}&nbsp;&nbsp; //c-l-a-t-</P>
@@ -294,104 +294,104 @@ style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="FONT-SIZE: medium"><STRONG>闭包为参数的迭代集合的方法</STRONG></SPAN></P>
+style="FONT-SIZE: medium"><STRONG>闂寘涓哄弬鏁扮殑杩唬闆嗗悎鐨勬柟娉�</STRONG></SPAN></P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1、boolean<SPAN 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1銆乥oolean<SPAN 
 class=Apple-converted-space>&nbsp;</SPAN><SPAN 
 style="COLOR: rgb(255,0,0)">any</SPAN>(Closure clos)</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
-有一个集合元素满足闭包条件则返回true</P>
+鏈変竴涓泦鍚堝厓绱犳弧瓒抽棴鍖呮潯浠跺垯杩斿洖true</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">2、List<SPAN 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">2銆丩ist<SPAN 
 class=Apple-converted-space>&nbsp;</SPAN><SPAN 
 style="COLOR: rgb(0,0,255)">collect</SPAN>(Closure clos)</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
-把集合每个元素用闭包转换后返回列表</P>
+鎶婇泦鍚堟瘡涓厓绱犵敤闂寘杞崲鍚庤繑鍥炲垪琛�</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">3、List<SPAN 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">3銆丩ist<SPAN 
 class=Apple-converted-space>&nbsp;</SPAN><SPAN 
 style="COLOR: rgb(255,0,0)">clooect</SPAN>(Collection coll,Closure clos)</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
-把集合每个元素用闭包转换后放到coll中</P>
+鎶婇泦鍚堟瘡涓厓绱犵敤闂寘杞崲鍚庢斁鍒癱oll涓�</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">4、bollean<SPAN 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">4銆乥ollean<SPAN 
 class=Apple-converted-space>&nbsp;</SPAN><SPAN 
 style="COLOR: rgb(0,0,255)">every</SPAN>(Closure clos)</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
-判断是否每个元素都满足闭包条件</P>
+鍒ゆ柇鏄惁姣忎釜鍏冪礌閮芥弧瓒抽棴鍖呮潯浠�</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">5、List<SPAN 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">5銆丩ist<SPAN 
 class=Apple-converted-space>&nbsp;</SPAN><SPAN 
 style="COLOR: rgb(255,0,0)">findAll</SPAN>(Closure clos)</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
-从集合中找到满足闭包条件的所有元素</P>
+浠庨泦鍚堜腑鎵惧埌婊¤冻闂寘鏉′欢鐨勬墍鏈夊厓绱�</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">6、Object<SPAN 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">6銆丱bject<SPAN 
 class=Apple-converted-space>&nbsp;</SPAN><SPAN 
 style="COLOR: rgb(0,0,255)">find</SPAN>(Closure clos)</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
-从集合中找的满足闭包条件的第一个元素</P>
+浠庨泦鍚堜腑鎵剧殑婊¤冻闂寘鏉′欢鐨勭涓�涓厓绱�</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">7、int<SPAN 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">7銆乮nt<SPAN 
 class=Apple-converted-space>&nbsp;</SPAN><SPAN 
 style="COLOR: rgb(255,0,0)">findindexOf</SPAN>(Closure clos)</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
-从集合中找到满足闭包条件的第一个元素的索引</P>
+浠庨泦鍚堜腑鎵惧埌婊¤冻闂寘鏉′欢鐨勭涓�涓厓绱犵殑绱㈠紩</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">8、Object<SPAN 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">8銆丱bject<SPAN 
 class=Apple-converted-space>&nbsp;</SPAN><SPAN 
 style="COLOR: rgb(0,0,255)">inject</SPAN>(Object value,Closure clos)</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
-value 与 第一个元素传给闭包，结果值与第二个集合元素又传给闭包，类推。（可以用来求阶乘）</P>
+value 涓� 绗竴涓厓绱犱紶缁欓棴鍖咃紝缁撴灉鍊间笌绗簩涓泦鍚堝厓绱犲張浼犵粰闂寘锛岀被鎺ㄣ�傦紙鍙互鐢ㄦ潵姹傞樁涔橈級</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">9、void<SPAN 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">9銆乿oid<SPAN 
 class=Apple-converted-space>&nbsp;</SPAN><SPAN 
 style="COLOR: rgb(255,0,0)">reverseEach</SPAN>(Closure clos)</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
-反向迭代</P>
+鍙嶅悜杩唬</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">10、List<SPAN 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">10銆丩ist<SPAN 
 class=Apple-converted-space>&nbsp;</SPAN><SPAN 
 style="COLOR: rgb(0,0,255)">sort</SPAN>(Closure clos)</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
-排序集合</P>
+鎺掑簭闆嗗悎</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="FONT-SIZE: medium"><STRONG>find()方法</STRONG></SPAN></P>
+style="FONT-SIZE: medium"><STRONG>find()鏂规硶</STRONG></SPAN></P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1、def 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1銆乨ef 
 value = [1,3,5,7,9].find{element -&gt; element &gt;6}</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
 println "Found : ${value}"&nbsp;&nbsp;&nbsp; // Found : 7</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">2、value 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">2銆乿alue 
 = [1,3,5,7,9].find{element -&gt; element &gt;10}</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
 println "Found : ${value}"&nbsp;&nbsp;&nbsp; // Found: null</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">3、value 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">3銆乿alue 
 = ["Java":21 , "Groovy" :22 , "Grails" :25].find{lang -&gt;lang.value 
 &gt;21}</P>
 <P 
@@ -404,32 +404,32 @@ style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="FONT-SIZE: medium"><STRONG>findAll()方法</STRONG></SPAN></P>
+style="FONT-SIZE: medium"><STRONG>findAll()鏂规硶</STRONG></SPAN></P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1、def 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1銆乨ef 
 values= [1,3,5,7,9].findAll{element -&gt; element &gt;6}</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
 values.each{println it}</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
-// 输出:7</P>
+// 杈撳嚭:7</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 9</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">2、values=['Java':21,'Groovy':22,'Grails':25].findAll{lang 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">2銆乿alues=['Java':21,'Groovy':22,'Grails':25].findAll{lang 
 -&gt; lang.value &gt;21}</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
 values.each{prinln it}</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp; 
-//输出: Grails=25</P>
+//杈撳嚭: Grails=25</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 Groovy=22</P>
@@ -437,25 +437,25 @@ Groovy=22</P>
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="FONT-SIZE: medium"><STRONG>any()与every()</STRONG></SPAN></P>
+style="FONT-SIZE: medium"><STRONG>any()涓巈very()</STRONG></SPAN></P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1、def 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1銆乨ef 
 anyElement = [11,12,13,14].any{element -&gt; element &gt;12}</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp; 
 &nbsp;&nbsp;&nbsp;&nbsp; //true</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">2、def 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">2銆乨ef 
 allElement = [11,12,13,14].every{element -&gt; element &gt;10}</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 //true</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">3、def 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">3銆乨ef 
 anyLang= ['Java':21 ,'Groovy':22,'Grails':25].any{lang -&gt; 
 lang.value&gt;30}</P>
 <P 
@@ -467,23 +467,23 @@ style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="FONT-SIZE: medium"><STRONG>collect()方法</STRONG></SPAN></P>
+style="FONT-SIZE: medium"><STRONG>collect()鏂规硶</STRONG></SPAN></P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1、def 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1銆乨ef 
 list= [1,2,3,4].collect{element -&gt; return element*element}</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
 //&nbsp; [1,4,9,16]</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">2、list 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">2銆乴ist 
 = (0..&lt;5).collect{element -&gt; 2*element }</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
 // [0,2,4,6,8]</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">3、def 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">3銆乨ef 
 lang = ['Java':21,'Groovy':22,'Grails':25]</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
@@ -502,9 +502,9 @@ style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(
 prinltn "olderLang: ${olderLang}"</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-//结果输出&nbsp;&nbsp; 
+//缁撴灉杈撳嚭&nbsp;&nbsp; 
 lang:['Java':23,'Groovy':24,'Grails':27]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-//collect 会修改原数据</P>
+//collect 浼氫慨鏀瑰師鏁版嵁</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 list:[22,23,26]</P>
@@ -519,11 +519,11 @@ style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><STRONG><SPAN 
-style="FONT-SIZE: medium">inject()方法求阶乘</SPAN></STRONG></P>
+style="FONT-SIZE: medium">inject()鏂规硶姹傞樁涔�</SPAN></STRONG></P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1、def 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1銆乨ef 
 numList = [2,3,4,5]</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
@@ -531,9 +531,9 @@ factorial = numList.inject(1){<STRONG>previous</STRONG>, element -&gt;<SPAN
 class=Apple-converted-space>&nbsp;</SPAN><STRONG>previous</STRONG>*element}</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
-// 输出: 120</P>
+// 杈撳嚭: 120</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">2、numList 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">2銆乶umList 
 = [2,3,4,5]</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
@@ -544,7 +544,7 @@ style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(
 factorial = numList.inject(1,closure)</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
-// 输出 120</P>
+// 杈撳嚭 120</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
@@ -553,11 +553,11 @@ style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><STRONG><SPAN 
-style="FONT-SIZE: medium">闭包的其他特性</SPAN></STRONG></P>
+style="FONT-SIZE: medium">闂寘鐨勫叾浠栫壒鎬�</SPAN></STRONG></P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1、闭包可以嵌套。</P>
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">1銆侀棴鍖呭彲浠ュ祵濂椼��</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
 def outerClosure = {country -&gt;</P>
@@ -565,7 +565,7 @@ def outerClosure = {country -&gt;</P>
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 println country</P>
 <P 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//嵌套定义闭包，方法则不运行</P>
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//宓屽瀹氫箟闂寘锛屾柟娉曞垯涓嶈繍琛�</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 def innerClosure = {city -&gt;</P>
@@ -583,5 +583,5 @@ style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(
 }</P>
 <P 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp; 
-outerClosure('china') //先打印china 再打印shanghai</P></body>
-</html>
+outerClosure('china') //鍏堟墦鍗癱hina 鍐嶆墦鍗皊hanghai</P></body>
+</html>

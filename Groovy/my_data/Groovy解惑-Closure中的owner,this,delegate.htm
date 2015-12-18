@@ -1,13 +1,13 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>Groovy½â»ó-ClosureÖĞµÄowner,this,delegate</title>
+<title>Groovyè§£æƒ‘-Closureä¸­çš„owner,this,delegate</title>
 <meta name="GENERATOR" content="WinCHM">
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style>
 html,body { 
 	/* Default Font */
-	font-family: ËÎÌå, Arial, Helvetica, sans-serif;
+	font-family: å®‹ä½“, Arial, Helvetica, sans-serif;
 	font-size: 10pt;
 }
 </style>
@@ -19,18 +19,18 @@ html,body {
 style="MARGIN-BOTTOM: 10px; WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(75,75,75); FONT: bold 14px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><A 
 id=viewpost1_TitleUrl class=postTitle2 
 style="COLOR: rgb(26,139,200); TEXT-DECORATION: none" 
-href="http://www.blogjava.net/BlueSUN/archive/2007/12/23/169683.html">Groovy½â»ó¡ª¡ªclosureÖĞµÄowner</A></DIV>
+href="http://www.blogjava.net/BlueSUN/archive/2007/12/23/169683.html">Groovyè§£æƒ‘â€•â€•closureä¸­çš„owner</A></DIV>
 <P><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">ÔÚÉÏÆª¡¶</SPAN><A 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">åœ¨ä¸Šç¯‡ã€Š</SPAN><A 
 id=viewpost1_TitleUrl class=postTitle2 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(26,139,200); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; TEXT-DECORATION: none; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px" 
-href="http://www.blogjava.net/BlueSUN/archive/2007/12/22/169580.html">Groovy½â»ó¡ª¡ªclosureÖĞµÄdelegate</A><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">¡·ÖĞ£¬ÎÒ°ï´ó¼Ò½²½âÁËdelegateÊÇÊ²Ã´ÒÔ¼°Æä×÷ÓÃ¡£</SPAN><BR 
+href="http://www.blogjava.net/BlueSUN/archive/2007/12/22/169580.html">Groovyè§£æƒ‘â€•â€•closureä¸­çš„delegate</A><SPAN 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">ã€‹ä¸­ï¼Œæˆ‘å¸®å¤§å®¶è®²è§£äº†delegateæ˜¯ä»€ä¹ˆä»¥åŠå…¶ä½œç”¨ã€‚</SPAN><BR 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">±¾Æª½«½²½âÒ»ÏÂclosureÖĞµÄowner£¬ÒÔ¼°this,delegateÒÔ¼°ownerÈıÕß¼äµÄ¹ØÏµ¡£</SPAN><BR 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">æœ¬ç¯‡å°†è®²è§£ä¸€ä¸‹closureä¸­çš„ownerï¼Œä»¥åŠthis,delegateä»¥åŠownerä¸‰è€…é—´çš„å…³ç³»ã€‚</SPAN><BR 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><BR 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">ÏÈÈÃÎÒÃÇÀ´¿´¸öÀı×Ó£º</SPAN><BR 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">å…ˆè®©æˆ‘ä»¬æ¥çœ‹ä¸ªä¾‹å­ï¼š</SPAN><BR 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"></P>
 <DIV 
 style="BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WHITE-SPACE: normal; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(75,75,75); PADDING-BOTTOM: 4px; PADDING-TOP: 4px; FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; PADDING-LEFT: 4px; BORDER-LEFT: rgb(204,204,204) 1px solid; LETTER-SPACING: normal; PADDING-RIGHT: 5px; WIDTH: 809px; BACKGROUND-COLOR: rgb(238,238,238); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
@@ -65,7 +65,7 @@ style="COLOR: rgb(0,0,0)">&nbsp;</SPAN><SPAN
 style="COLOR: rgb(0,0,255)">new</SPAN><SPAN 
 style="COLOR: rgb(0,0,0)">&nbsp;OwnerDemo()<BR>ownerDemo.outerClosure()</SPAN></DIV>
 <P><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">ÔËĞĞ½á¹û£º</SPAN><BR 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">è¿è¡Œç»“æœï¼š</SPAN><BR 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"></P>
 <DIV 
 style="BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WHITE-SPACE: normal; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(75,75,75); PADDING-BOTTOM: 4px; PADDING-TOP: 4px; FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; PADDING-LEFT: 4px; BORDER-LEFT: rgb(204,204,204) 1px solid; LETTER-SPACING: normal; PADDING-RIGHT: 5px; WIDTH: 809px; BACKGROUND-COLOR: rgb(238,238,238); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
@@ -73,16 +73,16 @@ style="COLOR: rgb(0,0,0)">the owner of outerClosure: OwnerDemo@eccfe7<BR>the
 owner of innerClosure: OwnerDemo$_closure1@4745cf<BR>the owner of innestClosure: 
 OwnerDemo$_closure1_closure2@109dcbb<BR></SPAN></DIV>
 <P><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">×¢Òâ£ºOwnerDemo$_closure1Ö¸µÄÊÇouterClosureµÄÀàÃû£¬¶øOwnerDemo$_closure1_closure2Ö¸µÄÊÇinnerClosureµÄÀàÃû</SPAN><BR 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">æ³¨æ„ï¼šOwnerDemo$_closure1æŒ‡çš„æ˜¯outerClosureçš„ç±»åï¼Œè€ŒOwnerDemo$_closure1_closure2æŒ‡çš„æ˜¯innerClosureçš„ç±»å</SPAN><BR 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">Í¨¹ıÕâ¸öÀı×Ó£¬´ó¼Ò¾ÍÇå³şÁË£¬</SPAN><B 
-style="FONT-SIZE: 13px; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-VARIANT: normal; WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(75,75,75); FONT-STYLE: normal; LETTER-SPACING: normal; LINE-HEIGHT: 19px; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">closureµÄownerÒıÓÃµÄÊÇ¸ÃclosureµÄ¡®ÓµÓĞÕß¡¯</B><BR 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">é€šè¿‡è¿™ä¸ªä¾‹å­ï¼Œå¤§å®¶å°±æ¸…æ¥šäº†ï¼Œ</SPAN><B 
+style="FONT-SIZE: 13px; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-VARIANT: normal; WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(75,75,75); FONT-STYLE: normal; LETTER-SPACING: normal; LINE-HEIGHT: 19px; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">closureçš„ownerå¼•ç”¨çš„æ˜¯è¯¥closureçš„â€˜æ‹¥æœ‰è€…â€™</B><BR 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><BR 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><FONT style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px" color=#cc0000><B>ÄÇÃ´this, 
-delegateÒÔ¼°ownerÓĞÊ²Ã´¹ØÏµÄØ£¿<BR>ÒşÊ½±äÁ¿delegateµÄÄ¬ÈÏÖµÎªowner£¬<BR>Èç¹ûclosureÃ»ÓĞ¡®Ç¶Ì×¡¯ÔÚÆäËûclosureÖĞ£¬ÄÇÃ´¸ÃclosureµÄownerµÄÖµÎªthis£»<BR>·ñÔò¸ÃclosureµÄownerÒıÓÃµÄÊÇ¡®Ö±½Ó°üº¬¡¯¸ÃclosureµÄclosure</B></FONT><BR 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><FONT style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px" color=#cc0000><B>é‚£ä¹ˆthis, 
+delegateä»¥åŠowneræœ‰ä»€ä¹ˆå…³ç³»å‘¢ï¼Ÿ<BR>éšå¼å˜é‡delegateçš„é»˜è®¤å€¼ä¸ºownerï¼Œ<BR>å¦‚æœclosureæ²¡æœ‰â€˜åµŒå¥—â€™åœ¨å…¶ä»–closureä¸­ï¼Œé‚£ä¹ˆè¯¥closureçš„ownerçš„å€¼ä¸ºthisï¼›<BR>å¦åˆ™è¯¥closureçš„ownerå¼•ç”¨çš„æ˜¯â€˜ç›´æ¥åŒ…å«â€™è¯¥closureçš„closure</B></FONT><BR 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><BR 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">ÈÃÎÒÃÇÓÃÊÂÊµÀ´Ëµ»°°É£º</SPAN><BR 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">è®©æˆ‘ä»¬ç”¨äº‹å®æ¥è¯´è¯å§ï¼š</SPAN><BR 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"></P>
 <DIV 
 style="BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WHITE-SPACE: normal; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(75,75,75); PADDING-BOTTOM: 4px; PADDING-TOP: 4px; FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; PADDING-LEFT: 4px; BORDER-LEFT: rgb(204,204,204) 1px solid; LETTER-SPACING: normal; PADDING-RIGHT: 5px; WIDTH: 809px; BACKGROUND-COLOR: rgb(238,238,238); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
@@ -179,7 +179,7 @@ style="COLOR: rgb(0,0,0)">&nbsp;</SPAN><SPAN
 style="COLOR: rgb(0,0,0)">+</SPAN><SPAN 
 style="COLOR: rgb(0,0,0)">&nbsp;outerClosure<BR>outerClosure()</SPAN></DIV>
 <P><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">ÔËĞĞ½á¹û£º</SPAN><BR 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">è¿è¡Œç»“æœï¼š</SPAN><BR 
 style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"></P>
 <DIV 
 style="BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WHITE-SPACE: normal; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(75,75,75); PADDING-BOTTOM: 4px; PADDING-TOP: 4px; FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; PADDING-LEFT: 4px; BORDER-LEFT: rgb(204,204,204) 1px solid; LETTER-SPACING: normal; PADDING-RIGHT: 5px; WIDTH: 809px; BACKGROUND-COLOR: rgb(238,238,238); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN 
@@ -195,5 +195,5 @@ OwnerDemo$_closure1_closure2@1eb1db2<BR>the delegate of innestClosure:
 OwnerDemo$_closure1_closure2@1eb1db2<BR>this in the innestClosure: 
 OwnerDemo@8e7f54<BR><BR></SPAN></DIV>
 <P><SPAN 
-style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">´ó¼Ò¿ÉÒÔ´ÓÆäÖĞÖµµÄ¹ØÏµ¿´³öthis, 
-delegateÒÔ¼°ownerÈıÕßµÄ¹ØÏµÓëÎÒÃÇÖ®Ç°ËùËµµÄÏà·û¡¡:)</SPAN></P></body>
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(75,75,75); FONT: 13px/19px Verdana, Geneva, Arial, Helvetica, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">å¤§å®¶å¯ä»¥ä»å…¶ä¸­å€¼çš„å…³ç³»çœ‹å‡ºthis, 
+delegateä»¥åŠownerä¸‰è€…çš„å…³ç³»ä¸æˆ‘ä»¬ä¹‹å‰æ‰€è¯´çš„ç›¸ç¬¦ã€€:)</SPAN></P></body>

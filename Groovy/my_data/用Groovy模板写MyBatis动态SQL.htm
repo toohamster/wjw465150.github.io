@@ -1,9 +1,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>��Groovyģ��дMyBatis��̬SQL</title>
+<title>用Groovy模板写MyBatis动态SQL</title>
 <meta name="GENERATOR" content="WinCHM">
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style>
 html,body { 
 	/* Default Font */
@@ -16,17 +16,17 @@ html,body {
 
 <body>
 <H2 
-style="FONT-FAMILY: Arial; FONT-VARIANT: normal; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; FONT-STYLE: normal; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; LINE-HEIGHT: 26px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">MyBatis��̬SQL���</H2>
+style="FONT-FAMILY: Arial; FONT-VARIANT: normal; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; FONT-STYLE: normal; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; LINE-HEIGHT: 26px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">MyBatis动态SQL简介</H2>
 <P 
 style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><A 
 style="TEXT-DECORATION: none; COLOR: rgb(202,0,0)" 
-href="http://mybatis.github.io/mybatis-3/" target=_blank>MyBatis</A>�и�ǿ��Ĺ��ܣ�<A 
+href="http://mybatis.github.io/mybatis-3/" target=_blank>MyBatis</A>有个强大的功能，<A 
 style="TEXT-DECORATION: none; COLOR: rgb(202,0,0)" 
 href="http://mybatis.github.io/mybatis-3/dynamic-sql.html" 
-target=_blank>��̬SQL</A>������������ܣ�������<A 
+target=_blank>动态SQL</A>。有了这个功能，定义在<A 
 style="TEXT-DECORATION: none; COLOR: rgb(202,0,0)" 
 href="http://mybatis.github.io/mybatis-3/sqlmap-xml.html" 
-target=_blank>Mapper</A>���SQL��䣬�Ͳ����Ǿ�ֹ������ˣ����ǿ��Ը��ݴ���Ĳ�������̬������������MyBatis�ٷ��ĵ����һ��if�������ӣ�</P>
+target=_blank>Mapper</A>里的SQL语句，就不必是静止不变的了，而是可以根据传入的参数，动态调整。下面是MyBatis官方文档里的一个if语句的例子：</P>
 <P 
 style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"></P>
 <DIV class="dp-highlighter bg_html" 
@@ -43,16 +43,16 @@ onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" title=copy
 class=CopyToClipboard 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: url(http://static.blog.csdn.net/scripts/SyntaxHighlighter/styles/images/default/ico_copy.gif); BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: -2000px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="http://blog.csdn.net/zxhoo/article/details/36391817#">copy</A><A 
-title=��CODE�ϲ鿴����Ƭ 
+title=在CODE上查看代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 1px" 
-alt=��CODE�ϲ鿴����Ƭ src="https://code.csdn.net/assets/CODE_ico.png" width=12 
-height=12></A><A title=�������ҵĴ���Ƭ 
+alt=在CODE上查看代码片 src="https://code.csdn.net/assets/CODE_ico.png" width=12 
+height=12></A><A title=派生到我的代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603/fork" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 2px" 
-alt=�������ҵĴ���Ƭ src="https://code.csdn.net/assets/ico_fork.svg" width=12 
+alt=派生到我的代码片 src="https://code.csdn.net/assets/ico_fork.svg" width=12 
 height=12></A>
 <DIV 
 style="HEIGHT: 18px; WIDTH: 18px; POSITION: absolute; LEFT: 715px; Z-INDEX: 99; TOP: 581px"><EMBED 
@@ -92,7 +92,7 @@ style="LIST-STYLE-TYPE: decimal; BORDER-TOP: medium none; BORDER-RIGHT: medium n
   style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; COLOR: black; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">&nbsp;&nbsp;SELECT&nbsp;*&nbsp;FROM&nbsp;BLOG&nbsp;WHERE&nbsp;<SPAN 
   class=attribute 
   style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; COLOR: red; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">state</SPAN><SPAN 
-  style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; COLOR: black; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">&nbsp;=&nbsp;��ACTIVE��&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; COLOR: black; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">&nbsp;=&nbsp;‘ACTIVE’&nbsp;&nbsp;</SPAN></SPAN></LI>
   <LI class=alt 
   style="BORDER-TOP-STYLE: none; LIST-STYLE-TYPE: decimal-leading-zero; LIST-STYLE-POSITION: outside; BORDER-BOTTOM-STYLE: none; COLOR: ; PADDING-BOTTOM: 0px !important; PADDING-TOP: 0px !important; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px !important; MARGIN: 0px; BORDER-LEFT: rgb(108,226,108) 3px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 3px !important; BACKGROUND-COLOR: rgb(255,255,255)"><SPAN 
   style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; COLOR: black; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">&nbsp;&nbsp;<SPAN 
@@ -135,18 +135,18 @@ style="LIST-STYLE-TYPE: decimal; BORDER-TOP: medium none; BORDER-RIGHT: medium n
 <P 
 style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"></P>
 <P 
-style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">����<STRONG>if</STRONG>��ǩ���⣬MyBatis���ṩ��<STRONG>choose</STRONG>��<STRONG>when</STRONG>��<STRONG>otherwise</STRONG>��<STRONG>trim</STRONG>��<STRONG>where</STRONG>��<STRONG>set</STRONG>��<STRONG>foreach</STRONG>��<STRONG>bind</STRONG>�ȱ�ǩ��<BR></P>
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">除了<STRONG>if</STRONG>标签以外，MyBatis还提供了<STRONG>choose</STRONG>，<STRONG>when</STRONG>，<STRONG>otherwise</STRONG>，<STRONG>trim</STRONG>，<STRONG>where</STRONG>，<STRONG>set</STRONG>，<STRONG>foreach</STRONG>，<STRONG>bind</STRONG>等标签。<BR></P>
 <H2 
 style="FONT-FAMILY: Arial; FONT-VARIANT: normal; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; FONT-STYLE: normal; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; LINE-HEIGHT: 26px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><A 
-name=t1></A>Groovyģ��</H2>
+name=t1></A>Groovy模板</H2>
 <P 
-style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">���ڼ򵥵Ķ�̬SQL��MyBatis�ṩ��XML��ǩ�㹻���ˣ�д������XMLҲ������̫�ѿ������Ƕ��ڸ��ӵĶ�̬SQL��XML��ǩ���Ե�������������㡣�Ͼ���XML���ʺ��������ݣ�������if-else���߼����������Ǿ�������������ø���ǿ���<A 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">对于简单的动态SQL，MyBatis提供的XML标签足够用了，写出来的XML也不至于太难看。但是对于复杂的动态SQL，XML标签就显得心有余而力不足。毕竟，XML更适合描述数据，而不是if-else等逻辑。下面我们就来看看，如何用更加强大的<A 
 style="TEXT-DECORATION: none; COLOR: rgb(202,0,0)" 
 href="http://groovy.codehaus.org/Groovy+Templates" 
-target=_blank>Groovyģ��</A>��д��̬SQL���һὫ<A 
+target=_blank>Groovy模板</A>来写动态SQL。我会将<A 
 style="TEXT-DECORATION: none; COLOR: rgb(202,0,0)" 
 href="http://mybatis.github.io/mybatis-3/dynamic-sql.html" 
-target=_blank>MyBatis�ٷ��ĵ�</A>�еĶ�̬SQL����һһתΪGroovyģ����ʽ��<BR></P>
+target=_blank>MyBatis官方文档</A>中的动态SQL例子一一转为Groovy模板形式。<BR></P>
 <H2 
 style="FONT-FAMILY: Arial; FONT-VARIANT: normal; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; FONT-STYLE: normal; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; LINE-HEIGHT: 26px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><A 
 name=t2></A>if</H2>
@@ -168,16 +168,16 @@ onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" title=copy
 class=CopyToClipboard 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: url(http://static.blog.csdn.net/scripts/SyntaxHighlighter/styles/images/default/ico_copy.gif); BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: -2000px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="http://blog.csdn.net/zxhoo/article/details/36391817#">copy</A><A 
-title=��CODE�ϲ鿴����Ƭ 
+title=在CODE上查看代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 1px" 
-alt=��CODE�ϲ鿴����Ƭ src="https://code.csdn.net/assets/CODE_ico.png" width=12 
-height=12></A><A title=�������ҵĴ���Ƭ 
+alt=在CODE上查看代码片 src="https://code.csdn.net/assets/CODE_ico.png" width=12 
+height=12></A><A title=派生到我的代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603/fork" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 2px" 
-alt=�������ҵĴ���Ƭ src="https://code.csdn.net/assets/ico_fork.svg" width=12 
+alt=派生到我的代码片 src="https://code.csdn.net/assets/ico_fork.svg" width=12 
 height=12></A>
 <DIV 
 style="HEIGHT: 18px; WIDTH: 18px; POSITION: absolute; LEFT: 715px; Z-INDEX: 99; TOP: 940px"><EMBED 
@@ -217,7 +217,7 @@ style="LIST-STYLE-TYPE: decimal; BORDER-TOP: medium none; BORDER-RIGHT: medium n
   style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; COLOR: black; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">&nbsp;&nbsp;SELECT&nbsp;*&nbsp;FROM&nbsp;BLOG&nbsp;WHERE&nbsp;<SPAN 
   class=attribute 
   style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; COLOR: red; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">state</SPAN><SPAN 
-  style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; COLOR: black; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">&nbsp;=&nbsp;��ACTIVE��&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; COLOR: black; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">&nbsp;=&nbsp;‘ACTIVE’&nbsp;&nbsp;</SPAN></SPAN></LI>
   <LI class=alt 
   style="BORDER-TOP-STYLE: none; LIST-STYLE-TYPE: decimal-leading-zero; LIST-STYLE-POSITION: outside; BORDER-BOTTOM-STYLE: none; COLOR: ; PADDING-BOTTOM: 0px !important; PADDING-TOP: 0px !important; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px !important; MARGIN: 0px; BORDER-LEFT: rgb(108,226,108) 3px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 3px !important; BACKGROUND-COLOR: rgb(255,255,255)"><SPAN 
   style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; COLOR: black; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">&nbsp;&nbsp;<SPAN 
@@ -306,16 +306,16 @@ onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" title=copy
 class=CopyToClipboard 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: url(http://static.blog.csdn.net/scripts/SyntaxHighlighter/styles/images/default/ico_copy.gif); BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: -2000px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="http://blog.csdn.net/zxhoo/article/details/36391817#">copy</A><A 
-title=��CODE�ϲ鿴����Ƭ 
+title=在CODE上查看代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 1px" 
-alt=��CODE�ϲ鿴����Ƭ src="https://code.csdn.net/assets/CODE_ico.png" width=12 
-height=12></A><A title=�������ҵĴ���Ƭ 
+alt=在CODE上查看代码片 src="https://code.csdn.net/assets/CODE_ico.png" width=12 
+height=12></A><A title=派生到我的代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603/fork" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 2px" 
-alt=�������ҵĴ���Ƭ src="https://code.csdn.net/assets/ico_fork.svg" width=12 
+alt=派生到我的代码片 src="https://code.csdn.net/assets/ico_fork.svg" width=12 
 height=12></A>
 <DIV 
 style="HEIGHT: 18px; WIDTH: 18px; POSITION: absolute; LEFT: 715px; Z-INDEX: 99; TOP: 1197px"><EMBED 
@@ -429,16 +429,16 @@ onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" title=copy
 class=CopyToClipboard 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: url(http://static.blog.csdn.net/scripts/SyntaxHighlighter/styles/images/default/ico_copy.gif); BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: -2000px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="http://blog.csdn.net/zxhoo/article/details/36391817#">copy</A><A 
-title=��CODE�ϲ鿴����Ƭ 
+title=在CODE上查看代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 1px" 
-alt=��CODE�ϲ鿴����Ƭ src="https://code.csdn.net/assets/CODE_ico.png" width=12 
-height=12></A><A title=�������ҵĴ���Ƭ 
+alt=在CODE上查看代码片 src="https://code.csdn.net/assets/CODE_ico.png" width=12 
+height=12></A><A title=派生到我的代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603/fork" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 2px" 
-alt=�������ҵĴ���Ƭ src="https://code.csdn.net/assets/ico_fork.svg" width=12 
+alt=派生到我的代码片 src="https://code.csdn.net/assets/ico_fork.svg" width=12 
 height=12></A>
 <DIV 
 style="HEIGHT: 18px; WIDTH: 18px; POSITION: absolute; LEFT: 715px; Z-INDEX: 99; TOP: 1516px"><EMBED 
@@ -478,7 +478,7 @@ style="LIST-STYLE-TYPE: decimal; BORDER-TOP: medium none; BORDER-RIGHT: medium n
   style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; COLOR: black; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">&nbsp;&nbsp;SELECT&nbsp;*&nbsp;FROM&nbsp;BLOG&nbsp;WHERE&nbsp;<SPAN 
   class=attribute 
   style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; COLOR: red; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">state</SPAN><SPAN 
-  style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; COLOR: black; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">&nbsp;=&nbsp;��ACTIVE��&nbsp;&nbsp;</SPAN></SPAN></LI>
+  style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; COLOR: black; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">&nbsp;=&nbsp;‘ACTIVE’&nbsp;&nbsp;</SPAN></SPAN></LI>
   <LI class=alt 
   style="BORDER-TOP-STYLE: none; LIST-STYLE-TYPE: decimal-leading-zero; LIST-STYLE-POSITION: outside; BORDER-BOTTOM-STYLE: none; COLOR: ; PADDING-BOTTOM: 0px !important; PADDING-TOP: 0px !important; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px !important; MARGIN: 0px; BORDER-LEFT: rgb(108,226,108) 3px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 3px !important; BACKGROUND-COLOR: rgb(255,255,255)"><SPAN 
   style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; COLOR: black; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">&nbsp;&nbsp;<SPAN 
@@ -616,16 +616,16 @@ onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" title=copy
 class=CopyToClipboard 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: url(http://static.blog.csdn.net/scripts/SyntaxHighlighter/styles/images/default/ico_copy.gif); BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: -2000px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="http://blog.csdn.net/zxhoo/article/details/36391817#">copy</A><A 
-title=��CODE�ϲ鿴����Ƭ 
+title=在CODE上查看代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 1px" 
-alt=��CODE�ϲ鿴����Ƭ src="https://code.csdn.net/assets/CODE_ico.png" width=12 
-height=12></A><A title=�������ҵĴ���Ƭ 
+alt=在CODE上查看代码片 src="https://code.csdn.net/assets/CODE_ico.png" width=12 
+height=12></A><A title=派生到我的代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603/fork" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 2px" 
-alt=�������ҵĴ���Ƭ src="https://code.csdn.net/assets/ico_fork.svg" width=12 
+alt=派生到我的代码片 src="https://code.csdn.net/assets/ico_fork.svg" width=12 
 height=12></A>
 <DIV 
 style="HEIGHT: 18px; WIDTH: 18px; POSITION: absolute; LEFT: 715px; Z-INDEX: 99; TOP: 1863px"><EMBED 
@@ -725,7 +725,7 @@ style="LIST-STYLE-TYPE: decimal; BORDER-TOP: medium none; BORDER-RIGHT: medium n
 style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"></P>
 <H2 
 style="FONT-FAMILY: Arial; FONT-VARIANT: normal; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; FONT-STYLE: normal; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; LINE-HEIGHT: 26px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><A 
-name=t4></A>trim��where��set</H2>
+name=t4></A>trim，where，set</H2>
 <P 
 style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">xml</P>
 <P 
@@ -744,16 +744,16 @@ onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" title=copy
 class=CopyToClipboard 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: url(http://static.blog.csdn.net/scripts/SyntaxHighlighter/styles/images/default/ico_copy.gif); BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: -2000px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="http://blog.csdn.net/zxhoo/article/details/36391817#">copy</A><A 
-title=��CODE�ϲ鿴����Ƭ 
+title=在CODE上查看代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 1px" 
-alt=��CODE�ϲ鿴����Ƭ src="https://code.csdn.net/assets/CODE_ico.png" width=12 
-height=12></A><A title=�������ҵĴ���Ƭ 
+alt=在CODE上查看代码片 src="https://code.csdn.net/assets/CODE_ico.png" width=12 
+height=12></A><A title=派生到我的代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603/fork" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 2px" 
-alt=�������ҵĴ���Ƭ src="https://code.csdn.net/assets/ico_fork.svg" width=12 
+alt=派生到我的代码片 src="https://code.csdn.net/assets/ico_fork.svg" width=12 
 height=12></A>
 <DIV 
 style="HEIGHT: 18px; WIDTH: 18px; POSITION: absolute; LEFT: 715px; Z-INDEX: 99; TOP: 2200px"><EMBED 
@@ -931,16 +931,16 @@ onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" title=copy
 class=CopyToClipboard 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: url(http://static.blog.csdn.net/scripts/SyntaxHighlighter/styles/images/default/ico_copy.gif); BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: -2000px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="http://blog.csdn.net/zxhoo/article/details/36391817#">copy</A><A 
-title=��CODE�ϲ鿴����Ƭ 
+title=在CODE上查看代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 1px" 
-alt=��CODE�ϲ鿴����Ƭ src="https://code.csdn.net/assets/CODE_ico.png" width=12 
-height=12></A><A title=�������ҵĴ���Ƭ 
+alt=在CODE上查看代码片 src="https://code.csdn.net/assets/CODE_ico.png" width=12 
+height=12></A><A title=派生到我的代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603/fork" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 2px" 
-alt=�������ҵĴ���Ƭ src="https://code.csdn.net/assets/ico_fork.svg" width=12 
+alt=派生到我的代码片 src="https://code.csdn.net/assets/ico_fork.svg" width=12 
 height=12></A>
 <DIV 
 style="HEIGHT: 18px; WIDTH: 18px; POSITION: absolute; LEFT: 715px; Z-INDEX: 99; TOP: 2547px"><EMBED 
@@ -1094,16 +1094,16 @@ onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" title=copy
 class=CopyToClipboard 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: url(http://static.blog.csdn.net/scripts/SyntaxHighlighter/styles/images/default/ico_copy.gif); BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: -2000px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="http://blog.csdn.net/zxhoo/article/details/36391817#">copy</A><A 
-title=��CODE�ϲ鿴����Ƭ 
+title=在CODE上查看代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 1px" 
-alt=��CODE�ϲ鿴����Ƭ src="https://code.csdn.net/assets/CODE_ico.png" width=12 
-height=12></A><A title=�������ҵĴ���Ƭ 
+alt=在CODE上查看代码片 src="https://code.csdn.net/assets/CODE_ico.png" width=12 
+height=12></A><A title=派生到我的代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603/fork" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 2px" 
-alt=�������ҵĴ���Ƭ src="https://code.csdn.net/assets/ico_fork.svg" width=12 
+alt=派生到我的代码片 src="https://code.csdn.net/assets/ico_fork.svg" width=12 
 height=12></A>
 <DIV 
 style="HEIGHT: 18px; WIDTH: 18px; POSITION: absolute; LEFT: 715px; Z-INDEX: 99; TOP: 3010px"><EMBED 
@@ -1231,16 +1231,16 @@ onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" title=copy
 class=CopyToClipboard 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: url(http://static.blog.csdn.net/scripts/SyntaxHighlighter/styles/images/default/ico_copy.gif); BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: -2000px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="http://blog.csdn.net/zxhoo/article/details/36391817#">copy</A><A 
-title=��CODE�ϲ鿴����Ƭ 
+title=在CODE上查看代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 1px" 
-alt=��CODE�ϲ鿴����Ƭ src="https://code.csdn.net/assets/CODE_ico.png" width=12 
-height=12></A><A title=�������ҵĴ���Ƭ 
+alt=在CODE上查看代码片 src="https://code.csdn.net/assets/CODE_ico.png" width=12 
+height=12></A><A title=派生到我的代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603/fork" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 2px" 
-alt=�������ҵĴ���Ƭ src="https://code.csdn.net/assets/ico_fork.svg" width=12 
+alt=派生到我的代码片 src="https://code.csdn.net/assets/ico_fork.svg" width=12 
 height=12></A>
 <DIV 
 style="HEIGHT: 18px; WIDTH: 18px; POSITION: absolute; LEFT: 715px; Z-INDEX: 99; TOP: 3231px"><EMBED 
@@ -1329,16 +1329,16 @@ onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" title=copy
 class=CopyToClipboard 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: url(http://static.blog.csdn.net/scripts/SyntaxHighlighter/styles/images/default/ico_copy.gif); BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: -2000px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="http://blog.csdn.net/zxhoo/article/details/36391817#">copy</A><A 
-title=��CODE�ϲ鿴����Ƭ 
+title=在CODE上查看代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 1px" 
-alt=��CODE�ϲ鿴����Ƭ src="https://code.csdn.net/assets/CODE_ico.png" width=12 
-height=12></A><A title=�������ҵĴ���Ƭ 
+alt=在CODE上查看代码片 src="https://code.csdn.net/assets/CODE_ico.png" width=12 
+height=12></A><A title=派生到我的代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603/fork" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 2px" 
-alt=�������ҵĴ���Ƭ src="https://code.csdn.net/assets/ico_fork.svg" width=12 
+alt=派生到我的代码片 src="https://code.csdn.net/assets/ico_fork.svg" width=12 
 height=12></A>
 <DIV 
 style="HEIGHT: 18px; WIDTH: 18px; POSITION: absolute; LEFT: 715px; Z-INDEX: 99; TOP: 3460px"><EMBED 
@@ -1431,16 +1431,16 @@ onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" title=copy
 class=CopyToClipboard 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: url(http://static.blog.csdn.net/scripts/SyntaxHighlighter/styles/images/default/ico_copy.gif); BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: -2000px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="http://blog.csdn.net/zxhoo/article/details/36391817#">copy</A><A 
-title=��CODE�ϲ鿴����Ƭ 
+title=在CODE上查看代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 1px" 
-alt=��CODE�ϲ鿴����Ƭ src="https://code.csdn.net/assets/CODE_ico.png" width=12 
-height=12></A><A title=�������ҵĴ���Ƭ 
+alt=在CODE上查看代码片 src="https://code.csdn.net/assets/CODE_ico.png" width=12 
+height=12></A><A title=派生到我的代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603/fork" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 2px" 
-alt=�������ҵĴ���Ƭ src="https://code.csdn.net/assets/ico_fork.svg" width=12 
+alt=派生到我的代码片 src="https://code.csdn.net/assets/ico_fork.svg" width=12 
 height=12></A>
 <DIV 
 style="HEIGHT: 18px; WIDTH: 18px; POSITION: absolute; LEFT: 715px; Z-INDEX: 99; TOP: 3645px"><EMBED 
@@ -1488,9 +1488,9 @@ style="LIST-STYLE-TYPE: decimal; BORDER-TOP: medium none; BORDER-RIGHT: medium n
 style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"></P>
 <H2 
 style="FONT-FAMILY: Arial; FONT-VARIANT: normal; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; FONT-STYLE: normal; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; LINE-HEIGHT: 26px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><A 
-name=t7></A>ʵ��ԭ��</H2>
+name=t7></A>实现原理</H2>
 <P 
-style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">MyBatis��������㶨���������Զ���Ľű�����д��̬SQL����ֻҪʵ��<STRONG>LanguageDriver</STRONG>�ӿڣ����޸����þͿ����ˡ����Խ��Զ���LanguageDriver����ΪĬ�ϣ�������ʾ��</P>
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">MyBatis框架允许你定义插件，用自定义的脚本语言写动态SQL。你只要实现<STRONG>LanguageDriver</STRONG>接口，并修改配置就可以了。可以将自定义LanguageDriver设置为默认，如下所示：</P>
 <P 
 style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"></P>
 <DIV class="dp-highlighter bg_html" 
@@ -1507,16 +1507,16 @@ onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" title=copy
 class=CopyToClipboard 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: url(http://static.blog.csdn.net/scripts/SyntaxHighlighter/styles/images/default/ico_copy.gif); BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: -2000px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="http://blog.csdn.net/zxhoo/article/details/36391817#">copy</A><A 
-title=��CODE�ϲ鿴����Ƭ 
+title=在CODE上查看代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 1px" 
-alt=��CODE�ϲ鿴����Ƭ src="https://code.csdn.net/assets/CODE_ico.png" width=12 
-height=12></A><A title=�������ҵĴ���Ƭ 
+alt=在CODE上查看代码片 src="https://code.csdn.net/assets/CODE_ico.png" width=12 
+height=12></A><A title=派生到我的代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603/fork" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 2px" 
-alt=�������ҵĴ���Ƭ src="https://code.csdn.net/assets/ico_fork.svg" width=12 
+alt=派生到我的代码片 src="https://code.csdn.net/assets/ico_fork.svg" width=12 
 height=12></A>
 <DIV 
 style="HEIGHT: 18px; WIDTH: 18px; POSITION: absolute; LEFT: 715px; Z-INDEX: 99; TOP: 3918px"><EMBED 
@@ -1613,7 +1613,7 @@ style="LIST-STYLE-TYPE: decimal; BORDER-TOP: medium none; BORDER-RIGHT: medium n
   class=tag 
   style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; FONT-WEIGHT: bold; COLOR: rgb(153,51,0); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">&gt;</SPAN><SPAN 
   style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; COLOR: black; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV><SPAN 
-style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/26px Arial; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">Ҳ���Ե���Ϊ���������ã�������ʾ��</SPAN>
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px/26px Arial; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">也可以单独为语句进行设置，如下所示：</SPAN>
 <P 
 style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"></P>
 <P 
@@ -1632,16 +1632,16 @@ onclick="dp.sh.Toolbar.Command('CopyToClipboard',this);return false;" title=copy
 class=CopyToClipboard 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: url(http://static.blog.csdn.net/scripts/SyntaxHighlighter/styles/images/default/ico_copy.gif); BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: -2000px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="http://blog.csdn.net/zxhoo/article/details/36391817#">copy</A><A 
-title=��CODE�ϲ鿴����Ƭ 
+title=在CODE上查看代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 1px" 
-alt=��CODE�ϲ鿴����Ƭ src="https://code.csdn.net/assets/CODE_ico.png" width=12 
-height=12></A><A title=�������ҵĴ���Ƭ 
+alt=在CODE上查看代码片 src="https://code.csdn.net/assets/CODE_ico.png" width=12 
+height=12></A><A title=派生到我的代码片 
 style="FONT-SIZE: 9px; TEXT-DECORATION: none; BORDER-TOP: medium none; HEIGHT: 16px; BORDER-RIGHT: medium none; WIDTH: 16px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: no-repeat; BORDER-BOTTOM: medium none; BACKGROUND-POSITION: 0% 0%; COLOR: rgb(160,160,160); PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; MARGIN: 0px 10px 0px 0px; BORDER-LEFT: medium none; DISPLAY: inline-block; PADDING-RIGHT: 1px; TEXT-INDENT: 0px; background-size: initial; background-origin: initial; background-clip: initial" 
 href="https://code.csdn.net/snippets/413603/fork" target=_blank><IMG 
 style="MAX-WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; POSITION: relative; LEFT: 2px; BORDER-LEFT: medium none; TOP: 2px" 
-alt=�������ҵĴ���Ƭ src="https://code.csdn.net/assets/ico_fork.svg" width=12 
+alt=派生到我的代码片 src="https://code.csdn.net/assets/ico_fork.svg" width=12 
 height=12></A>
 <DIV 
 style="HEIGHT: 18px; WIDTH: 18px; POSITION: absolute; LEFT: 715px; Z-INDEX: 99; TOP: 4121px"><EMBED 
@@ -1695,8 +1695,8 @@ style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(
 style="FONT-FAMILY: Arial; FONT-VARIANT: normal; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; FONT-STYLE: normal; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; LINE-HEIGHT: 26px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><A 
 name=t8></A>GroovyTemplateLanguageDriver</H2>
 <P 
-style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">GroovyTemplateLanguageDriverʵ����LanguageDriver�ӿڣ������<A 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; FONT: 14px/26px Arial; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">GroovyTemplateLanguageDriver实现了LanguageDriver接口，代码见<A 
 style="TEXT-DECORATION: none; COLOR: rgb(202,0,0)" 
 href="https://github.com/zxh0/gratis" 
-target=_blank>github��Ŀ</A>��</P></body>
+target=_blank>github项目</A>。</P></body>
 </html>
