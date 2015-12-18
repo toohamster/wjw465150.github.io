@@ -47,7 +47,7 @@ d.add("43","39","Annotion-Generate equals and hashcode Methods with EqualsAndHas
 d.add("44","39","Annotion-Making a Class Immutable","my_data/Groovy专辑/Goodness/Annotion-Making a Class Immutable.htm");
 d.add("45","39","Annotion-Tuple Constructor Creation","my_data/Groovy专辑/Goodness/Annotion-Tuple Constructor Creation.htm");
 d.add("46","39","Annotion-Use Builder AST Transformation for Fluent API","my_data/Groovy专辑/Goodness/Annotion-Use Builder AST Transformation for Fluent API.htm");
-d.add("47","39","Annotion-Builder详细解释.htm","my_data/Groovy专辑/Goodness/Annotion-Builder详细解释.htm");
+d.add("47","39","Annotion-Builder详细解释","my_data/Groovy专辑/Goodness/Annotion-Builder详细解释.htm");
 d.add("48","39","Base-Padding Strings","my_data/Groovy专辑/Goodness/Base-Padding Strings.htm");
 d.add("49","39","Base-the Switch Statement","my_data/Groovy专辑/Goodness/Base-the Switch Statement.htm");
 d.add("50","39","Base-the With Method","my_data/Groovy专辑/Goodness/Base-the With Method.htm");
@@ -113,10 +113,11 @@ d.add("109","108","Galera_Cluster_For_MySQL集群安装","my_data/安装指南/G
 d.add("110","0","参考资料","");
 d.add("111","110","Linux资料","../Linux/index.html","","(view_linux)");
 d.add("112","110","Java资料","../java/index.html","","(view_java)");
-d.add("113","110","Redis指令大全","../redis/index.html","","(view_redis)");
-d.add("114","110","Git中文指南","../gitpro/index.html","","(view_git)");
-d.add("115","110","Hadoop资料","../Hadoop/index.html","","(view_hadoop)");
-d.add("116","110","HBase资料","../HBase/index.html","","(view_hbase)");
-d.add("117","110","Gradle资料","../Gradle/index.html","","(view_gradle)");
+d.add("113","110","Groovy指南","../Groovy/index.html","","(view_Groovy)");
+d.add("114","110","Redis指令大全","../redis/index.html","","(view_redis)");
+d.add("115","110","Git中文指南","../gitpro/index.html","","(view_git)");
+d.add("116","110","Hadoop资料","../Hadoop/index.html","","(view_hadoop)");
+d.add("117","110","HBase资料","../HBase/index.html","","(view_hbase)");
+d.add("118","110","Gradle资料","../Gradle/index.html","","(view_gradle)");
 document.write(d);
 //-->
