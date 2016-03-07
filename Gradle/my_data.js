@@ -47,5 +47,6 @@ d.add("43","0","(WJW)Maven项目秒变gradle项目","my_data/(WJW)Maven项目秒
 d.add("44","0","快速创建java项目框架","my_data/快速创建java项目框架.htm");
 d.add("45","0","Gradle的依赖管理(Repository&Dependency )","my_data/Gradle的依赖管理(Repository&Dependency_).htm");
 d.add("46","0","Standard project properties","my_data/Standard_project_properties.htm");
+d.add("47","0","使用Gradle 插件进行代码分析","my_data/使用Gradle插件进行代码分析/index.html");
 document.write(d);
 //-->
