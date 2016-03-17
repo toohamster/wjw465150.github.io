@@ -45,8 +45,9 @@ d.add("41","0","在 Eclipse 下利用 gradle 构建系统","my_data/在 Eclipse 
 d.add("42","0","(wjw)Gradle秘籍","my_data/(wjw)Gradle秘籍.md.html");
 d.add("43","0","(WJW)Maven项目秒变gradle项目","my_data/(WJW)Maven项目秒变gradle项目.htm");
 d.add("44","0","快速创建java项目框架","my_data/快速创建java项目框架.htm");
-d.add("45","0","Gradle的依赖管理(Repository&Dependency )","my_data/Gradle的依赖管理(Repository&Dependency_).htm");
-d.add("46","0","Standard project properties","my_data/Standard_project_properties.htm");
-d.add("47","0","使用Gradle 插件进行代码分析","my_data/使用Gradle插件进行代码分析/index.html");
+d.add("45","0","解决Gradle编译时出现： 编码GBK的不可映射字符","my_data/解决Gradle编译时出现：_编码GBK的不可映射字符.htm");
+d.add("46","0","Gradle的依赖管理(Repository&Dependency )","my_data/Gradle的依赖管理(Repository&Dependency_).htm");
+d.add("47","0","Standard project properties","my_data/Standard_project_properties.htm");
+d.add("48","0","使用Gradle 插件进行代码分析","my_data/使用Gradle插件进行代码分析/index.html");
 document.write(d);
 //-->
