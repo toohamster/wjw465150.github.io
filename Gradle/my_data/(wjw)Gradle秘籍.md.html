@@ -1,7 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>(wjw)Gradle秘籍.md</title>
+<title>(wjw)Gradle秘籍</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
 <!--
@@ -383,8 +383,34 @@ generated_toc={generate:function(){generate_from='0';generate_for='unset';tocpar
 </head>
 <body onload="load()">
 <div id='generated-toc'></div>
-<p><ul>
-<li><strong>帮助</strong>: gradle -h</p>
+<p>
+<UL dir=ltr>
+  <LI>
+  <div style="MARGIN-RIGHT: 0px"><strong 
+  >配置gradle环境</strong> </div></LI></UL>
+<BLOCKQUOTE style="MARGIN-RIGHT: 0px" dir=ltr>
+  <p style="MARGIN-RIGHT: 0px" dir=ltr><br 
+  >#1. 在"系统属性对话框里"要先设置环境变量和路径:<BR>set 
+  M2_HOME=e:\WJW_APP\PStart\Java\maven3<BR>set 
+  GRADLE_USER_HOME=z:\GRADLE_USER_HOME<BR>set 
+  path=%path%;C:\ProgramData\Oracle\Java\javapath;c:\Java\jdk1.8\bin;e:\WJW_APP\PStart\Java\gradle\bin</p>
+  <p style="MARGIN-RIGHT: 0px" dir=ltr>#2. 
+  在每个项目的"build.gradle"文件里设置:<BR>repositories {<BR>&nbsp;&nbsp;&nbsp; maven{ url 
+  "<A 
+  href="http://SVN:8081/nexus/content/groups/public">http://SVN:8081/nexus/content/groups/public</A>"}<BR>&nbsp;&nbsp;&nbsp; 
+  mavenCentral()<BR>&nbsp;&nbsp;&nbsp; mavenLocal()<BR>}<BR>#3. 
+  降低daemon的空闲时间<BR>修改%GRADLE_USER_HOME%\gradle.properties<BR>添加上-Dorg.gradle.daemon.idletimeout=300000</p>
+  <p style="MARGIN-RIGHT: 0px" dir=ltr 
+  >缺省值在gradle-launcher-2.2.1.jar文件里的org.gradle.launcher.daemon.configuration.DaemonParameters.class<BR>注意: 
+  org.gradle.launcher.daemon.configuration.GradleProperties.java文件里有gradle.properties的key名称!</p>
+  <p style="MARGIN-RIGHT: 0px" dir=ltr>#4. 
+  停止所有的daemon:<BR>cd /d "%~dp0"<BR>cd /d 
+  %GRADLE_USER_HOME%\wrapper\dists\gradle-2.2.1-bin\88n1whbyjvxg3s40jzz5ur27\gradle-2.2.1\bin<BR>.\gradle.bat 
+  --stop<BR></p></BLOCKQUOTE>
+<UL>
+  <LI><div><strong>帮助</strong>: gradle -h
+  </div></LI></UL>
+<p DESIGNTIMESP="30842"></p>
 
 <blockquote>
   <p><code>-?, -h, --help</code>          Shows this help message. <br>
@@ -410,7 +436,7 @@ generated_toc={generate:function(){generate_from='0';generate_for='unset';tocpar
   <code>-p, --project-dir</code>       Specifies the start directory for Gradle. Defaults to current directory. <br>
   <code>--parallel</code>              Build projects in parallel. Gradle will attempt to determine the optimal number of executor threads to use. [incubating] <br>
   <code>--parallel-threads</code>      Build projects in parallel, using the specified number of executor threads. [incubating] <br>
-  <code>--profile</code>               Profiles build execution time and generates a report in the <build_dir>/reports/profile directory. <br>
+  <code>--profile</code>               Profiles build execution time and generates a report in the <BUILD_dir>/reports/profile directory. <br>
   <code>--project-cache-dir</code>     Specifies the project-specific cache directory. Defaults to .gradle in the root project directory. <br>
   <code>-q, --quiet</code>             Log errors only. <br>
   <code>--recompile-scripts</code>     Force build script recompiling. <br>
@@ -422,35 +448,68 @@ generated_toc={generate:function(){generate_from='0';generate_for='unset';tocpar
   <code>--stop</code>                  Stops the Gradle daemon if it is running. <br>
   <code>-u, --no-search-upward</code>  Don't search in parent folders for a settings.gradle file. <br>
   <code>-v, --version</code>           Print version info. <br>
-  <code>-x, --exclude-task</code>      Specify a task to be excluded from execution.    </li>
-  </ul></p>
-  
-  <hr />
+  <code>-x, --exclude-task</code> 
+    Specify a task to be excluded from execution.</p>
 </blockquote>
+<P></P>
+  
+  <hr >
+
+<BLOCKQUOTE></BLOCKQUOTE>
 
 <p><ul>
-<li><p><strong>列出所有task</strong>: gradle tasks</p></p>
+<li><p><strong>列出所有task</strong>: gradle tasks</p>
+  <P></P>
 
-<hr /></li>
+<hr >
 <li><p><strong>跳过单元测试</strong>: gradle build -x test </p>
 
-<hr /></li>
+<hr >
 <li><p><strong>伪执行</strong>: 这种执行用在想要知道命令行中task的执行顺序，但又不真正执行task的时候，相当于“伪执行”。使用-m参数，如：gradle -m clean compile，将显示这个两个任务执行中涉及的任务，但又不会真正去执行它们。</p>
 
-<hr /></li>
+<hr >
 <li><p><strong>使用自定义的Maven仓库</strong> <br>
 在build.gradle配置文件里加上
 
 <blockquote>
-  </p></li>
-  </ul>
+    <P></P></blockquote></li></ul>
   <pre><code>  repositories {
     maven { url "http://wjwtest:8081/nexus/content/groups/public" }
     maven { url "http://repo.springsource.org/plugins-release" }
   }</code></pre>
-</blockquote>
+<BLOCKQUOTE></BLOCKQUOTE>
 
-<hr />
+<hr >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
