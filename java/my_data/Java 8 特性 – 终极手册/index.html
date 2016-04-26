@@ -1,0 +1,1098 @@
+<!DOCTYPE html><!--
+ ______________ 
+< TUICOOL.COM >
+ -------------- 
+        \   ^__^
+         \  (**)\__$__$__
+            (__)\       )\/\
+             U  ||------|
+                ||     ||
+--><html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="authenticity_token" name="csrf-param">
+<meta content="zWCmMpEik0e1/NI8IINBegNsvWrNYE0Z1nnzDJqHh0I=" name="csrf-token">
+    <title>
+            Java 8 特性 – 终极手册 - 推酷
+   </title>
+    <meta name="description" content="Java 8 特性 – 终极手册">
+  <link rel="shortcut icon" href="index_files/favicon.ico" type="image/x-icon">
+  <link href="http://static0.tuicool.com/images/icon114.png" rel="Bookmark">
+  <link rel="apple-touch-icon" sizes="57x57" href="urn:not-loaded:http://static1.tuicool.com/images/icon57.png"> 
+  <link rel="apple-touch-icon" sizes="72x72" href="urn:not-loaded:http://static2.tuicool.com/images/icon72.png">  
+  <link rel="apple-touch-icon" sizes="114x114" href="urn:not-loaded:http://static0.tuicool.com/images/icon114.png">    
+  <link rel="apple-touch-icon" sizes="144x144" href="urn:not-loaded:http://static1.tuicool.com/images/icon144.png">  
+  <link href="index_files/application-2cfd59154d46613c0d5f82142c1f6aa1.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="index_files/font-awesome.min.css" rel="stylesheet">
+  <script src="index_files/application-5c19f81d7795619188f5a2cb78fc7803.js" type="text/javascript"></script>
+
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="http://assets.tuicool.com/assets/font-awesome-ie7.min.css">
+  <![endif]--> 
+    <script type="text/javascript" src="index_files/tip.js"></script>
+  
+  <script type="text/javascript" src="index_files/spin.min.js"></script><style type="text/css"></style>
+<link rel="stylesheet" href="index_files/github.css">
+
+</head>
+<body class="  pace-done"><div class="pace  pace-inactive"><div data-progress="99" data-progress-text="100%" style="transform: translate3d(100%, 0px, 0px);" class="pace-progress">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+  
+  <div id="header" class="navbar-fixed-top">
+    <div class="container">
+      <div class="navbar">
+        <div class="navbar-inner">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
+            <span class="icon-bar"></span> 
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+          </a>
+          <a href="http://www.tuicool.com/" class="brand">推酷</a>        
+        <nav class="nav-collapse collapse">
+            <ul class="nav navbar primary-nav">                            
+              <li class="active">
+                <a href="http://www.tuicool.com/ah">
+                  文章
+                </a>
+              </li>              
+              <li class="">
+                <a href="http://www.tuicool.com/sites/hot">
+                  站点
+                </a>
+              </li>
+              <li class="">
+                <a href="http://www.tuicool.com/topics">
+                  主题
+                </a>
+              </li>
+              <li class="">
+                <a href="http://course.tuicool.com/">
+                  公开课
+                </a>
+              </li>
+              <li class="">
+                <a href="http://huodong.tuicool.com/">
+                  活动
+                </a>
+              </li>
+              <li class="">
+                <a href="http://www.tuicool.com/mobile">
+                  客户端
+                    <sup style="font-size:0.8em;color: #16A085;">荐</sup>
+                </a>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">周刊 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="http://www.tuicool.com/mags">编程狂人</a></li>
+                  <li><a href="http://www.tuicool.com/mags/design">设计匠艺</a></li> 
+                  <li><a href="http://www.tuicool.com/mags/startup">创业周刊</a></li> 
+                  <li><a href="http://www.tuicool.com/mags/tech">科技周刊</a></li>      
+                  <li><a href="http://www.tuicool.com/mags/guru">Guru Weekly</a></li> 
+                  <li><a href="http://www.tuicool.com/articles/weekly">一周拾遗</a></li>                  
+                </ul>
+              </li>
+              
+              </ul>
+            <form class="navbar-search pull-left" action="http://www.tuicool.com/search">
+              <input class="search-query span2" name="kw" placeholder="搜索" type="text">
+            </form>
+            <ul class="nav pull-right">
+                <li><a href="http://www.tuicool.com/login">登录</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+  </div>   
+</div>
+  <div id="flash_container" class="noPrint">    
+  </div>
+  
+  <div class="container-fluid">  
+      
+<div class="row-fluid article_row_fluid">
+    <div class="span8 contant article_detail_bg">
+        <h1>Java 8 特性 – 终极手册</h1>
+        <div class="article_meta">
+            <div style="margin-bottom: 5px;">
+            <span class="timestamp">时间 2016-04-23 10:55:06
+            </span>
+            <span class="from">
+                <i class="icon-globe"></i>
+                    <a class="cut cut28 from" href="http://www.tuicool.com/sites/ENVN7j" target="_blank">ImportNew
+                    </a>
+            </span>
+            </div>
+            <div class="source">
+                <i style="float:left;">原文</i>  
+                <a class="cut cut70" href="http://www.importnew.com/19345.html?utm_source=tuicool&amp;utm_medium=referral" style="display:inline-block;">http://www.importnew.com/19345.html</a>
+            </div>
+            <div>
+                <span>主题</span>
+                <a href="http://www.tuicool.com/topics/11070119" target="_blank">
+                    <span class="new-label">Java8</span>
+                </a>
+            </div>
+        </div>
+        <div class="article_body" id="nei">
+            <div> 
+ <p> 1． <strong>简介</strong> </p> 
+ <p> 毫无疑问，Java 8是自Java  5（2004年）发布以来Java语言最大的一次版本升级，Java 8带来了很多的新特性，比如编译器、类库、开发工具和JVM（Java虚拟机）。在这篇教程中我们将会学习这些新特性，并通过真实 <strong>例子</strong> 演示 <strong>说明它们适用的场景</strong> 。 </p> 
+ <p>本教程由下面几部分组成，它们分别涉及到Java平台某一特定方面的内容：</p> 
+ <ul> 
+  <li>语言</li> 
+  <li>编译器</li> 
+  <li>类库</li> 
+  <li>开发工具</li> 
+  <li>运行时（Java虚拟机）</li> 
+ </ul> 
+ <p> 2． <strong>Java</strong> <strong>的新特性</strong> </p> 
+ <p>总体来说，Java 8是一个大的版本升级。有人可能会说，Java 8的新特性非常令人期待，但是也要花费大量的时间去学习。这一节我们会讲到这些新特性。</p> 
+ <p> 2.1 Lambda <strong>表达式和函数式接口</strong> </p> 
+ <p>Lambda表达式（也叫做闭包）是Java 8中最大的也是期待已久的变化。它允许我们将一个函数当作方法的参数（传递函数），或者说把代码当作数据，这是每个函数式编程者熟悉的概念。很多基于JVM平台的语言一开始就支持Lambda表达式，但是Java程序员没有选择，只能使用匿名内部类来替代Lambda表达式。</p> 
+ <p>Lambda表达式的设计被讨论了很久，而且花费了很多的功夫来交流。不过最后取得了一个折中的办法，得到了一个新的简明并且紧凑的Lambda表达式结构。最简单的Lambda表达式可以用逗号分隔的参数列表、-&gt;符号和功能语句块来表示。示例如下：</p> 
+ <pre class="prettyprint cs">Arrays.asList( <span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"d"</span> ).forEach( e -&gt; System.<span class="keyword">out</span>.println( e ) );</pre> 
+ <p>请注意到编译器会根据上下文来推测参数的类型，或者你也可以显示地指定参数类型，只需要将类型包在括号里。举个例子：</p> 
+ <pre class="prettyprint cs">Arrays.asList( <span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"d"</span> ).forEach( ( String e ) -&gt; System.<span class="keyword">out</span>.println( e ) );</pre> 
+ <p>如果Lambda的功能语句块太复杂，我们可以用大括号包起来，跟普通的Java方法一样，如下：</p> 
+ <pre class="prettyprint php">String separator = <span class="string">","</span>;
+Arrays.asList( <span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"d"</span> ).<span class="keyword">forEach</span>(
+    ( String e ) -&gt; System.out.<span class="keyword">print</span>( e + separator ) );</pre> 
+ <p>Lambda表达式可能会引用类的成员或者局部变量（会被隐式地转变成final类型），下面两种写法的效果是一样的：</p> 
+ <pre class="prettyprint php">String separator = <span class="string">","</span>;
+Arrays.asList( <span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"d"</span> ).<span class="keyword">forEach</span>(
+    ( String e ) -&gt; System.out.<span class="keyword">print</span>( e + separator ) );</pre> 
+ <p>和</p> 
+ <pre class="prettyprint php"><span class="keyword">final</span> String separator = <span class="string">","</span>;
+Arrays.asList( <span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"d"</span> ).<span class="keyword">forEach</span>(
+    ( String e ) -&gt; System.out.<span class="keyword">print</span>( e + separator ) );</pre> 
+ <p>Lambda表达式可能会有返回值，编译器会根据上下文推断返回值的类型。如果lambda的语句块只有一行，不需要return关键字。下面两个写法是等价的：</p> 
+ <pre class="prettyprint perl">Arrays.asList( <span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"d"</span> ).<span class="keyword">sort</span>( ( e1, e2 ) -&gt; e1.compareTo( e2 ) );</pre> 
+ <p>和</p> 
+ <pre class="prettyprint perl">Arrays.asList( <span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"d"</span> ).<span class="keyword">sort</span>( ( e1, e2 ) -&gt; {
+    <span class="keyword">int</span> result = e1.compareTo( e2 );
+    <span class="keyword">return</span> result;
+} );</pre> 
+ <p>语言的设计者们思考了很多如何让现有的功能和lambda表达式友好兼容。于是就有了函数接口这个概念。函数接口是一种只有一个方法的接口，像这样地，函数接口可以隐式地转换成lambda表达式。</p> 
+ <p>java.lang.Runnable 和java.util.concurrent.Callable是函数接口两个最好的例子。但是在实践中，函数接口是非常脆弱的，只要有人在接口里添加多一个方法，那么这个接口就不是函数接口了，就会导致编译失败。Java 8提供了一个特殊的注解@FunctionalInterface来克服上面提到的脆弱性并且显示地表明函数接口的目的（java里所有现存的接口都已经加上了@FunctionalInterface）。让我们看看一个简单的函数接口定义：</p> 
+ <pre class="java"><span class="annotation">@FunctionalInterface</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Functional</span> {</span>
+    <span class="keyword">void</span> method();
+}</pre> 
+ <p>我们要记住默认的方法和静态方法（下一节会具体解释）不会违反函数接口的约定，例子如下：</p> 
+ <pre class="prettyprint java"><span class="annotation">@FunctionalInterface</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">FunctionalDefaultMethods</span> {</span>
+    <span class="keyword">void</span> method();
+
+    <span class="keyword">default</span> <span class="keyword">void</span> defaultMethod() {
+    }
+}</pre> 
+ <p> 支持Lambda是Java 8最大的卖点，他有巨大的潜力吸引越来越多的开发人员转到这个开发平台来，并且在纯Java里提供最新的函数式编程的概念。对于更多的细节，请参考 <a href="http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html" rel="nofollow,noindex" target="_blank">官方文档</a> 。 </p> 
+ <p> 2.2  <strong>接口的默认方法和静态方法</strong> </p> 
+ <p>Java 8增加了两个新的概念在接口声明的时候：默认和静态方法。默认方法和Trait有些类似，但是目标不一样。默认方法允许我们在接口里添加新的方法，而不会破坏实现这个接口的已有类的兼容性，也就是说不会强迫实现接口的类实现默认方法。</p> 
+ <p>默认方法和抽象方法的区别是抽象方法必须要被实现，默认方法不是。作为替代方式，接口可以提供一个默认的方法实现，所有这个接口的实现类都会通过继承得倒这个方法（如果有需要也可以重写这个方法），让我们来看看下面的例子：</p> 
+ <pre class="prettyprint java"><span class="keyword">private</span> <span class="class"><span class="keyword">interface</span> <span class="title">Defaulable</span> {</span>
+    <span class="comment">// Interfaces now allow default methods, the implementer may or</span>
+    <span class="comment">// may not implement (override) them.</span>
+    <span class="keyword">default</span> String notRequired() {
+        <span class="keyword">return</span> <span class="string">"Default implementation"</span>;
+    }
+}
+
+<span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">DefaultableImpl</span> <span class="keyword">implements</span> <span class="title">Defaulable</span> {</span>
+}
+
+<span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">OverridableImpl</span> <span class="keyword">implements</span> <span class="title">Defaulable</span> {</span>
+    <span class="annotation">@Override</span>
+    <span class="keyword">public</span> String notRequired() {
+        <span class="keyword">return</span> <span class="string">"Overridden implementation"</span>;
+    }
+}</pre> 
+ <p>接口Defaulable使用default关键字声明了一个默认方法notRequired()，类DefaultableImpl实现了Defaulable接口，没有对默认方法做任何修改。另外一个类OverridableImpl重写类默认实现，提供了自己的实现方法。</p> 
+ <p>Java 8 的另外一个有意思的新特性是接口里可以声明静态方法，并且可以实现。例子如下：</p> 
+ <pre class="prettyprint java"><span class="keyword">private</span> <span class="class"><span class="keyword">interface</span> <span class="title">DefaulableFactory</span> {</span>
+    <span class="comment">// Interfaces now allow static methods</span>
+    <span class="keyword">static</span> Defaulable create( Supplier&lt; Defaulable &gt; supplier ) {
+        <span class="keyword">return</span> supplier.get();
+    }
+}</pre> 
+ <p>下面是把接口的静态方法和默认方法放在一起的示例（::new 是构造方法引用，后面会有详细描述）：</p> 
+ <pre class="prettyprint cs"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main( String[] args ) {
+    Defaulable defaulable = DefaulableFactory.create( DefaultableImpl::<span class="keyword">new</span> );
+    System.<span class="keyword">out</span>.println( defaulable.notRequired() );
+
+    defaulable = DefaulableFactory.create( OverridableImpl::<span class="keyword">new</span> );
+    System.<span class="keyword">out</span>.println( defaulable.notRequired() );
+}</pre> 
+ <p>控制台的输出如下：</p> 
+ <p>Default implementationOverridden implementation </p> 
+ <p> JVM平台的接口的默认方法实现是很高效的，并且方法调用的字节码指令支持默认方法。默认方法使已经存在的接口可以修改而不会影响编译的过程。java.util.Collection中添加的额外方法就是最好的例子： <strong>stream()</strong> ,  <strong>parallelStream()</strong> ,  <strong>forEach()</strong> ,  <strong>removeIf()</strong> </p> 
+ <p> 虽然默认方法很强大，但是使用之前一定要仔细考虑是不是真的需要使用默认方法，因为在层级很复杂的情况下很容易引起模糊不清甚至变异错误。更多的详细信息请参考 <a href="http://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html" rel="nofollow,noindex" target="_blank">官方文档</a> 。 </p> 
+ <p> 2.3    <strong>方法引用</strong> </p> 
+ <p>方法引用提供了一个很有用的语义来直接访问类或者实例的已经存在的方法或者构造方法。结合Lambda表达式，方法引用使语法结构紧凑简明。不需要复杂的引用。</p> 
+ <p> 下面我们用 <strong>Car </strong> 这个类来做示例，Car这个类有不同的方法定义。让我们来看看java 8支持的4种方法引用。 </p> 
+ <pre class="prettyprint java"><span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Car</span> {</span>
+    <span class="keyword">public</span> <span class="keyword">static</span> Car create( <span class="keyword">final</span> Supplier&lt; Car &gt; supplier ) {
+        <span class="keyword">return</span> supplier.get();
+    }              
+
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> collide( <span class="keyword">final</span> Car car ) {
+        System.out.println( <span class="string">"Collided "</span> + car.toString() );
+    }
+
+    <span class="keyword">public</span> <span class="keyword">void</span> follow( <span class="keyword">final</span> Car another ) {
+        System.out.println( <span class="string">"Following the "</span> + another.toString() );
+    }
+
+    <span class="keyword">public</span> <span class="keyword">void</span> repair() {
+        System.out.println( <span class="string">"Repaired "</span> + <span class="keyword">this</span>.toString() );
+    }
+}</pre> 
+ <p> 第一种方法引用是构造方法引用，语法是： <strong>Class::new</strong> ，对于泛型来说语法是： <strong>Class&lt;T &gt;::new</strong> ，请注意构造方法没有参数: </p> 
+ <pre class="prettyprint php"><span class="keyword">final</span> Car car = Car.create( Car::<span class="keyword">new</span> );
+<span class="keyword">final</span> <span class="keyword">List</span>&lt; Car &gt; cars = Arrays.asList( car );</pre> 
+ <p> 第二种方法引用是静态方法引用，语法是： <strong>Class::static_method</strong> 请注意这个静态方法只支持一个类型为Car的参数。 </p> 
+ <pre class="css"><span class="tag">cars</span><span class="class">.forEach</span>( <span class="tag">Car</span><span class="pseudo">::collide</span> );</pre> 
+ <p> 第三种方法引用是类实例的方法引用，语法是： <strong>Class::method</strong> 请注意方法没有参数。 </p> 
+ <pre class="css"><span class="tag">cars</span><span class="class">.forEach</span>( <span class="tag">Car</span><span class="pseudo">::repair</span> );</pre> 
+ <p> 最后一种方法引用是引用特殊类的方法，语法是： <strong>instance::method</strong> <strong>，</strong> 请注意只接受Car类型的一个参数。 </p> 
+ <pre class="prettyprint php"><span class="keyword">final</span> Car police = Car.create( Car::<span class="keyword">new</span> );
+cars.<span class="keyword">forEach</span>( police::follow );</pre> 
+ <p> 运行这些例子我们将会在控制台得到如下信息（Car的实例可能会不一样）： <strong> </strong> </p> 
+ <div> 
+  <p>Collided com.javacodegeeks.java8.method.references.MethodReferences$Car@7a81197d</p> 
+  <p>Repaired com.javacodegeeks.java8.method.references.MethodReferences$Car@7a81197d</p> 
+  <p>Following the com.javacodegeeks.java8.method.references.MethodReferences$Car@7a81197d</p> 
+ </div> 
+ <p> 关于方法引用更多的示例和详细信息，请参考 <a href="http://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html" rel="nofollow,noindex" target="_blank">官方文档</a> </p> 
+ <p> 2.4    <strong>重复注释</strong> </p> 
+ <p> 自从Java 5支持注释以来，注释变得特别受欢迎因而被广泛使用。但是有一个限制，同一个地方的不能使用同一个注释超过一次。 Java 8打破了这个规则，引入了重复注释，允许相同注释在声明使用的时候重复使用超过一次。 <strong> </strong> </p> 
+ <p>重复注释本身需要被@Repeatable注释。实际上，他不是一个语言上的改变，只是编译器层面的改动，技术层面仍然是一样的。让我们来看看例子：</p> 
+ <pre class="prettyprint java"><span class="keyword">package</span> com.javacodegeeks.java8.repeatable.annotations;
+
+<span class="keyword">import</span> java.lang.annotation.ElementType;
+<span class="keyword">import</span> java.lang.annotation.Repeatable;
+<span class="keyword">import</span> java.lang.annotation.Retention;
+<span class="keyword">import</span> java.lang.annotation.RetentionPolicy;
+<span class="keyword">import</span> java.lang.annotation.Target;
+
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RepeatingAnnotations</span> {</span>
+    <span class="annotation">@Target</span>( ElementType.TYPE )
+    <span class="annotation">@Retention</span>( RetentionPolicy.RUNTIME )
+    <span class="keyword">public</span> <span class="annotation">@interface</span> Filters {
+        Filter[] value();
+    }
+
+    <span class="annotation">@Target</span>( ElementType.TYPE )
+    <span class="annotation">@Retention</span>( RetentionPolicy.RUNTIME )
+    <span class="annotation">@Repeatable</span>( Filters.<span class="class"><span class="keyword">class</span> )
+    <span class="title">public</span> @<span class="title">interface</span> <span class="title">Filter</span> {</span>
+        String value();
+    };
+
+    <span class="annotation">@Filter</span>( <span class="string">"filter1"</span> )
+    <span class="annotation">@Filter</span>( <span class="string">"filter2"</span> )
+    <span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Filterable</span> {</span>
+    }
+
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+        <span class="keyword">for</span>( Filter filter: Filterable.class.getAnnotationsByType( Filter.<span class="class"><span class="keyword">class</span> ) ) {</span>
+            System.out.println( filter.value() );
+        }
+    }
+}</pre> 
+ <p>我们可以看到，注释Filter被@Repeatable( Filters.class )注释。Filters 只是一个容器，它持有Filter, 编译器尽力向程序员隐藏它的存在。通过这样的方式，Filterable接口可以被Filter注释两次。</p> 
+ <p>另外，反射的API提供一个新方法getAnnotationsByType() 来返回重复注释的类型（请注意Filterable.class.getAnnotation( Filters.class )将会返回编译器注入的Filters实例）。</p> 
+ <p>程序的输出将会是这样：</p> 
+ <p>filter1filter2 </p> 
+ <p> 更多详细信息请参考 <a href="http://docs.oracle.com/javase/tutorial/java/annotations/repeating.html" rel="nofollow,noindex" target="_blank">官方文档</a> 。 </p> 
+ <p> 2.5    <strong>更好的类型推断</strong> </p> 
+ <p>Java 8在类型推断方面改进了很多，在很多情况下，编译器可以推断参数的类型，从而保持代码的整洁。让我们看看例子：</p> 
+ <p>package com.javacodegeeks.java8.type.inference;</p> 
+ <pre class="prettyprint java"><span class="keyword">package</span> com.javacodegeeks.java8.type.inference;
+
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Value</span>&lt;<span class="title">T</span>&gt; {</span>
+    <span class="keyword">public</span> <span class="keyword">static</span>&lt;T&gt; T defaultValue() {
+        <span class="keyword">return</span> <span class="keyword">null</span>;
+    }
+
+    <span class="keyword">public</span> T getOrDefault( T value, T defaultValue ) {
+        <span class="keyword">return</span> ( value != <span class="keyword">null</span> ) ? value : defaultValue;
+    }
+}</pre> 
+ <p>这里是Value&lt; String &gt;的用法</p> 
+ <pre class="prettyprint java"><span class="keyword">package</span> com.javacodegeeks.java8.type.inference;
+
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TypeInference</span> {</span>
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+        <span class="keyword">final</span> Value&lt;String&gt; value = <span class="keyword">new</span> Value&lt;&gt;();
+        value.getOrDefault( <span class="string">"22"</span>, Value.defaultValue() );
+    }
+}</pre> 
+ <p>参数Value.defaultValue()的类型被编译器推断出来，不需要显式地提供类型。在java 7, 相同的代码不会被编译，需要写成：Value.&lt; String &gt;defaultValue()</p> 
+ <p> 2.6    <strong>注解的扩展</strong> </p> 
+ <p>Java 8扩展了注解可以使用的范围，现在我们几乎可以在所有的地方：局部变量、泛型、超类和接口实现、甚至是方法的Exception声明。一些例子如下：</p> 
+ <pre class="prettyprint java"><span class="keyword">package</span> com.javacodegeeks.java8.annotations;
+
+<span class="keyword">import</span> java.lang.annotation.ElementType;
+<span class="keyword">import</span> java.lang.annotation.Retention;
+<span class="keyword">import</span> java.lang.annotation.RetentionPolicy;
+<span class="keyword">import</span> java.lang.annotation.Target;
+<span class="keyword">import</span> java.util.ArrayList;
+<span class="keyword">import</span> java.util.Collection;
+
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Annotations</span> {</span>
+    <span class="annotation">@Retention</span>( RetentionPolicy.RUNTIME )
+    <span class="annotation">@Target</span>( { ElementType.TYPE_USE, ElementType.TYPE_PARAMETER } )
+    <span class="keyword">public</span> <span class="annotation">@interface</span> NonEmpty {
+    }
+
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Holder</span>&lt; @<span class="title">NonEmpty</span> <span class="title">T</span> &gt; <span class="keyword">extends</span> @<span class="title">NonEmpty</span> <span class="title">Object</span> {</span>
+        <span class="keyword">public</span> <span class="keyword">void</span> method() <span class="keyword">throws</span> <span class="annotation">@NonEmpty</span> Exception {
+        }
+    }
+
+    <span class="annotation">@SuppressWarnings</span>( <span class="string">"unused"</span> )
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+        <span class="keyword">final</span> Holder&lt; String &gt; holder = <span class="keyword">new</span> <span class="annotation">@NonEmpty</span> Holder&lt; String &gt;();
+        <span class="annotation">@NonEmpty</span> Collection&lt; <span class="annotation">@NonEmpty</span> String &gt; strings = <span class="keyword">new</span> ArrayList&lt;&gt;();
+    }
+}</pre> 
+ <p> Java 8 新增加了两个注解的程序元素类型 <strong> ElementType. <em>TYPE_USE </em> </strong> 和 <strong> ElementType. <em>TYPE_PARAMETER </em> </strong> ，这两个新类型描述了可以使用注解的新场合。注解处理API（ <strong>Annotation Processing API</strong> ）也做了一些细微的改动，来识别这些新添加的注解类型。 </p> 
+ <p> 3． <strong>Java</strong> <strong>编译器的新特性</strong> </p> 
+ <p> 3.1  <strong>参数名字</strong> </p> 
+ <p> 很长时间以来，Java程序员想尽办法把参数名字保存在java字节码里，并且让这些参数名字在运行时可用。Java 8 终于把这个需求加入到了Java语言（使用反射API和 <strong>Parameter.getName()</strong> 方法）和字节码里（使用java编译命令javac的 <strong>–parameters</strong> 参数）。 </p> 
+ <pre class="prettyprint cs">package com.javacodegeeks.java8.parameter.names;
+
+import java.lang.reflect.Method;
+import java.lang.reflect.Parameter;
+
+<span class="keyword">public</span> <span class="keyword">class</span> ParameterNames {
+<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) throws Exception {
+Method method = ParameterNames.<span class="keyword">class</span>.getMethod( <span class="string">"main"</span>, String[].<span class="keyword">class</span> );
+<span class="keyword">for</span>( final Parameter parameter: method.getParameters() ) {
+System.<span class="keyword">out</span>.println( <span class="string">"Parameter: "</span> + parameter.getName() );
+}
+}
+}</pre> 
+ <p> 如果你编译这个class的时候没有添加参数 <strong>–parameters</strong> <strong>，</strong> 运行的时候你会得到这个结果： </p> 
+ <p>Parameter: arg0</p> 
+ <p> 编译的时候添加了 <strong>–parameters</strong> 参数的话，运行结果会不一样： </p> 
+ <p>Parameter: args</p> 
+ <p>对于有经验的Maven使用者，–parameters参数可以添加到maven-compiler-plugin的配置部分：</p> 
+ <div> 
+  <div> 
+   <p>&lt;plugin&gt;</p> 
+   <p>&lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</p> 
+   <p>&lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;</p> 
+   <p>&lt;version&gt;3.1&lt;/version&gt;</p> 
+   <p>&lt;configuration&gt;</p> 
+   <p>&lt;compilerArgument&gt;-parameters&lt;/compilerArgument&gt;</p> 
+   <p>&lt;source&gt;1.8&lt;/source&gt;</p> 
+   <p>&lt;target&gt;1.8&lt;/target&gt;</p> 
+   <p>&lt;/configuration&gt;</p> 
+  </div> 
+  <p> 最新版的 <strong> <span> <a href="http://res.importnew.com/eclipse" target="_blank" rel="nofollow,noindex">Eclipse</a> </span> Kepler SR2 </strong> 提供了编译设置项，如下图所示： </p> 
+ </div> 
+ <p> <img src="index_files/UfQj2m.png%21web.png" class="alignCenter"> </p> 
+ <p> Picture 1. Configuring Eclipse projects to support new Java 8 compiler  <strong>–parameters</strong> argument. </p> 
+ <p> 额外的，有一个方便的方法 <strong>Parameter.isNamePresent()</strong> 来验证参数名是不是可用。 </p> 
+ <p> 4． <strong>Java  </strong> <strong>库的新特性</strong> </p> 
+ <p>Java 8 新添加了很多类，并且扩展了很多现有的类来更好地支持现代并发、函数式编程、日期\时间等等。</p> 
+ <h4>4.1 Optional</h4> 
+ <p> 著名的 <a href="http://examples.javacodegeeks.com/java-basics/exceptions/java-lang-nullpointerexception-how-to-handle-null-pointer-exception/" rel="nofollow,noindex" target="_blank"> <strong>NullPointerException</strong> </a> 是引起系统失败最常见的原因。很久以前 <a href="http://code.google.com/p/guava-libraries/" rel="nofollow,noindex" target="_blank">Google Guava</a> 项目引入了 <strong>Optional</strong> 作为解决空指针异常的一种方式，不赞成代码被null检查的代码污染，期望程序员写整洁的代码。受 <a href="http://code.google.com/p/guava-libraries/" rel="nofollow,noindex" target="_blank">Google Guava</a> 的鼓励， <strong>Optional</strong> 现在是Java 8库的一部分。 </p> 
+ <p> Optional只是一个容器，它可以保存一些类型的值或者null。它提供很多有用的方法，所以没有理由不显式地检查null。请参照java 8的 <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" rel="nofollow,noindex" target="_blank">文档</a> 查看详细信息。 </p> 
+ <p> 让我们看看两个 <strong>Optional</strong> 用法的小例子：一个是允许为空的值，另外一个是不允许为空的值。 </p> 
+ <pre class="prettyprint cs">Optional&lt; String &gt; fullName = Optional.ofNullable( <span class="keyword">null</span> );
+System.<span class="keyword">out</span>.println( <span class="string">"Full Name is set? "</span> + fullName.isPresent() );        
+System.<span class="keyword">out</span>.println( <span class="string">"Full Name: "</span> + fullName.orElseGet( () -&gt; <span class="string">"[none]"</span> ) ); 
+System.<span class="keyword">out</span>.println( fullName.map( s -&gt; <span class="string">"Hey "</span> + s + <span class="string">"!"</span> ).orElse( <span class="string">"Hey Stranger!"</span> ) );</pre> 
+ <p>如果Optional实例有非空的值，方法 isPresent() 返回true否则返回false。方法orElseGet提供了回退机制，当Optional的值为空时接受一个方法返回默认值。map()方法转化Optional当前的值并且返回一个新的Optional实例。orElse方法和orElseGet类似，但是它不接受一个方法，而是接受一个默认值。上面代码运行结果如下：</p> 
+ <div> 
+  <p>Full Name is set? false</p> 
+  <p>Full Name: [none]</p> 
+  <p>Hey Stranger!</p> 
+ </div> 
+ <p>让我们大概看看另外一个例子。</p> 
+ <pre class="prettyprint cs">Optional&lt; String &gt; firstName = Optional.of( <span class="string">"Tom"</span> );
+System.<span class="keyword">out</span>.println( <span class="string">"First Name is set? "</span> + firstName.isPresent() );        
+System.<span class="keyword">out</span>.println( <span class="string">"First Name: "</span> + firstName.orElseGet( () -&gt; <span class="string">"[none]"</span> ) ); 
+System.<span class="keyword">out</span>.println( firstName.map( s -&gt; <span class="string">"Hey "</span> + s + <span class="string">"!"</span> ).orElse( <span class="string">"Hey Stranger!"</span> ) );
+System.<span class="keyword">out</span>.println();</pre> 
+ <p>输出如下：</p> 
+ <div> 
+  <p>First Name is set? true</p> 
+  <p>First Name: Tom</p> 
+  <p>Hey Tom!</p> 
+ </div> 
+ <p> 更多详细信息请参考 <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" rel="nofollow,noindex" target="_blank">官方文档</a> 。 </p> 
+ <h4>4.2 Stream</h4> 
+ <p> 新增加的Stream API ( <strong>java.util.stream</strong> )引入了在Java里可以工作的函数式编程。这是目前为止对java库最大的一次功能添加，希望程序员通过编写有效、整洁和简明的代码，能够大大提高生产率。 </p> 
+ <p>Stream API让集合处理简化了很多（我们后面会看到不仅限于Java集合类）。让我们从一个简单的类Task开始来看看Stream的用法。</p> 
+ <pre class="prettyprint java"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Streams</span> {</span>
+<span class="keyword">private</span> <span class="keyword">enum</span> Status {
+OPEN, CLOSED
+};
+
+<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">Task</span> {</span>
+<span class="keyword">private</span> <span class="keyword">final</span> Status status;
+<span class="keyword">private</span> <span class="keyword">final</span> Integer points;
+
+Task( <span class="keyword">final</span> Status status, <span class="keyword">final</span> Integer points ) {
+<span class="keyword">this</span>.status = status;
+<span class="keyword">this</span>.points = points;
+}
+
+<span class="keyword">public</span> Integer getPoints() {
+<span class="keyword">return</span> points;
+}
+
+<span class="keyword">public</span> Status getStatus() {
+<span class="keyword">return</span> status;
+}
+
+<span class="annotation">@Override</span>
+<span class="keyword">public</span> String toString() {
+<span class="keyword">return</span> String.format( <span class="string">"[%s, %d]"</span>, status, points );
+}
+}
+}</pre> 
+ <p>Task类有一个分数的概念（或者说是伪复杂度），其次是还有一个值可以为OPEN或CLOSED的状态.让我们引入一个Task的小集合作为演示例子：</p> 
+ <pre class="prettyprint java"><span class="keyword">final</span> Collection&lt; Task &gt; tasks = Arrays.asList(
+    <span class="keyword">new</span> Task( Status.OPEN, <span class="number">5</span> ),
+    <span class="keyword">new</span> Task( Status.OPEN, <span class="number">13</span> ),
+    <span class="keyword">new</span> Task( Status.CLOSED, <span class="number">8</span> ) 
+);</pre> 
+ <p>第一个问题是所有的开放的Task的点数是多少？在java 8 之前，通常的做法是用foreach迭代。但是Java8里头我们会用Stream。Stream是多个元素的序列，支持串行和并行操作。</p> 
+ <pre class="prettyprint cs"><span class="comment">// Calculate total points of all active tasks using sum()</span>
+final <span class="keyword">long</span> totalPointsOfOpenTasks = tasks
+    .stream()
+    .filter( task -&gt; task.getStatus() == Status.OPEN )
+    .mapToInt( Task::getPoints )
+    .sum();
+
+System.<span class="keyword">out</span>.println( <span class="string">"Total points: "</span> + totalPointsOfOpenTasks );</pre> 
+ <p>控制台的输出将会是：</p> 
+ <p>Total points: 18上面代码执行的流程是这样的，首先Task集合会被转化为Stream表示，然后filter操作会过滤掉所有关闭的Task，接下来使用Task::getPoints 方法取得每个Task实例的点数，mapToInt方法会把Task Stream转换成Integer Stream，最后使用Sum方法将所有的点数加起来得到最终的结果。 </p> 
+ <p>在我们看下一个例子之前，我们要记住一些关于Stream的说明。Stream操作被分为中间操作和终点操作。</p> 
+ <p>中间操作返回一个新的Stream。这些中间操作是延迟的，执行一个中间操作比如filter实际上不会真的做过滤操作，而是创建一个新的Stream，当这个新的Stream被遍历的时候，它里头会包含有原来Stream里符合过滤条件的元素。</p> 
+ <p>终点操作比如说forEach或者sum会遍历Stream从而产生最终结果或附带结果。终点操作执行完之后，Stream管道就被消费完了，不再可用。在几乎所有的情况下，终点操作都是即时完成对数据的遍历操作。</p> 
+ <p>Stream的另外一个价值是Stream创造性地支持并行处理。让我们看看下面这个例子，这个例子把所有task的点数加起来。</p> 
+ <pre class="prettyprint cs"><span class="comment">// Calculate total points of all tasks</span>
+final <span class="keyword">double</span> totalPoints = tasks
+   .stream()
+   .parallel()
+   .map( task -&gt; task.getPoints() ) <span class="comment">// or map( Task::getPoints ) </span>
+   .reduce( <span class="number">0</span>, Integer::sum );
+
+System.<span class="keyword">out</span>.println( <span class="string">"Total points (all tasks): "</span> + totalPoints );</pre> 
+ <p>这个例子跟上面那个非常像，除了这个例子里使用了parallel()方法       并且计算最终结果的时候使用了reduce方法。</p> 
+ <p>输出如下：</p> 
+ <p>Total points (all tasks): 26.0经常会有这个一个需求：我们需要按照某种准则来对集合中的元素进行分组。Stream也可以处理这样的需求，下面是一个例子： </p> 
+ <pre class="prettyprint php"><span class="comment">// Group tasks by their status</span>
+<span class="keyword">final</span> Map&lt; Status, <span class="keyword">List</span>&lt; Task &gt; &gt; map = tasks
+    .stream()
+    .collect( Collectors.groupingBy( Task::getStatus ) );
+System.out.println( map );</pre> 
+ <p>控制台的输出如下：</p> 
+ <p>{CLOSED=[[CLOSED, 8]], OPEN=[[OPEN, 5], [OPEN, 13]]}让我们来计算整个集合中每个task分数（或权重）的平均值来结束task的例子。 </p> 
+ <pre class="prettyprint cs"><span class="comment">// Calculate the weight of each tasks (as percent of total points) </span>
+final Collection&lt; String &gt; result = tasks
+    .stream()                                        <span class="comment">// Stream&lt; String &gt;</span>
+    .mapToInt( Task::getPoints )                     <span class="comment">// IntStream</span>
+    .asLongStream()                                  <span class="comment">// LongStream</span>
+    .mapToDouble( points -&gt; points / totalPoints )   <span class="comment">// DoubleStream</span>
+    .boxed()                                         <span class="comment">// Stream&lt; Double &gt;</span>
+    .mapToLong( weigth -&gt; ( <span class="keyword">long</span> )( weigth * <span class="number">100</span> ) ) <span class="comment">// LongStream</span>
+    .mapToObj( percentage -&gt; percentage + <span class="string">"%"</span> )      <span class="comment">// Stream&lt; String&gt; </span>
+    .collect( Collectors.toList() );                 <span class="comment">// List&lt; String &gt; </span>
+
+System.<span class="keyword">out</span>.println( result );</pre> 
+ <p>控制台输出如下：</p> 
+ <p>[19%, 50%, 30%]</p> 
+ <p>最后，就像前面提到的，Stream API不仅仅处理Java集合框架。像从文本文件中逐行读取数据这样典型的I/O操作也很适合用Stream API来处理。下面用一个例子来应证这一点。</p> 
+ <pre class="prettyprint cs">final Path path = <span class="keyword">new</span> File( filename ).toPath();
+<span class="keyword">try</span>( Stream&lt; String &gt; lines = Files.lines( path, StandardCharsets.UTF_8 ) ) {
+    lines.onClose( () -&gt; System.<span class="keyword">out</span>.println(<span class="string">"Done!"</span>) ).forEach( System.<span class="keyword">out</span>::println );
+}</pre> 
+ <p> Stream的方法 <strong>onClose</strong> 返回一个等价的有额外句柄的Stream，当Stream的close（）方法被调用的时候这个句柄会被执行。 </p> 
+ <p>Stream API、Lambda表达式还有接口默认方法和静态方法支持的方法引用，是Java 8对软件开发的现代范式的响应。</p> 
+ <p> 4.3 <strong>日期时间API</strong> <strong>（JSR310</strong> <strong>）</strong> </p> 
+ <p>  Java 8引入了新的日期时间API（JSR 310）改进了日期时间的管理。日期和时间管理一直是Java开发人员最痛苦的问题。java.util.Date和后来的java.util.Calendar一点也没有改变这个情况（甚至让人们更加迷茫）。 </p> 
+ <p> 因为上面这些原因，产生了 <a href="http://www.joda.org/joda-time/" rel="nofollow,noindex" target="_blank">Joda-Time</a> ，可以替换Java的日期时间API。 <a href="http://www.joda.org/joda-time/" rel="nofollow,noindex" target="_blank">Joda-Time</a> 深刻影响了 Java 8新的日期时间API，Java 8吸收了 <a href="http://www.joda.org/joda-time/" rel="nofollow,noindex" target="_blank">Joda-Time</a> 的精华。新的java.time包包含了所有关于日期、时间、日期时间、时区、Instant（跟日期类似但精确到纳秒）、duration（持续时间）和时钟操作的类。设计这些API的时候很认真地考虑了这些类的不变性（从java.util.Calendar吸取的痛苦教训）。如果需要修改时间对象，会返回一个新的实例。 </p> 
+ <p> 让我们看看一些关键的类和用法示例。第一个类是Clock，Clock使用时区来访问当前的instant, date和time。Clock类可以替换 <strong>System.currentTimeMillis()</strong> 和  <strong>TimeZone.getDefault()</strong> . </p> 
+ <pre class="prettyprint sql">// Get the system c<span class="operator"><span class="keyword">lock</span> <span class="keyword">as</span> UTC offset
+final Clock clock = Clock.systemUTC();</span>
+System.out.println( c<span class="operator"><span class="keyword">lock</span>.instant() );</span>
+System.out.println( c<span class="operator"><span class="keyword">lock</span>.millis() );</span></pre> 
+ <p>控制台输出如下：</p> 
+ <p>2014-04-12T15:19:29.282Z1397315969360 </p> 
+ <p>其他类我们看看LocalTime和LocalDate。LocalDate只保存有ISO-8601日期系统的日期部分，有时区信息，相应地，LocalTime只保存ISO-8601日期系统的时间部分，没有时区信息。LocalDate和LocalTime都可以从Clock对象创建。</p> 
+ <pre class="prettyprint sql">// Get the local date and local time
+final LocalDate date = LocalDate.now();
+final LocalDate dateFromC<span class="operator"><span class="keyword">lock</span> = LocalDate.now( clock );</span>
+
+System.out.println( date );
+System.out.println( dateFromC<span class="operator"><span class="keyword">lock</span> );</span>
+
+// Get the local date and local time
+final LocalTime time = LocalTime.now();
+final LocalTime timeFromC<span class="operator"><span class="keyword">lock</span> = LocalTime.now( clock );</span>
+
+System.out.println( time );
+System.out.println( timeFromC<span class="operator"><span class="keyword">lock</span> );</span></pre> 
+ <p>控制台输出如下：</p> 
+ <div> 
+  <p>2014-04-12</p> 
+  <p>2014-04-12</p> 
+  <p>11:25:54.568</p> 
+  <p>15:25:54.568</p> 
+ </div> 
+ <p>LocalDateTime类合并了LocalDate和LocalTime，它保存有ISO-8601日期系统的日期和时间，但是没有时区信息。让我们看一个简单的例子。</p> 
+ <pre class="prettyprint sql">// Get the local date/time
+final LocalDateTime datetime = LocalDateTime.now();
+final LocalDateTime datetimeFromC<span class="operator"><span class="keyword">lock</span> = LocalDateTime.now( clock );</span>
+
+System.out.println( datetime );
+System.out.println( datetimeFromC<span class="operator"><span class="keyword">lock</span> );</span></pre> 
+ <p>输出如下：</p> 
+ <p>2014-04-12T11:37:52.3092014-04-12T15:37:52.309 </p> 
+ <p>如果您需要一个类持有日期时间和时区信息，可以使用ZonedDateTime，它保存有ISO-8601日期系统的日期和时间，而且有时区信息。让我们看一些例子：</p> 
+ <pre class="prettyprint cs"><span class="comment">// Get the zoned date/time</span>
+final ZonedDateTime zonedDatetime = ZonedDateTime.now();
+final ZonedDateTime zonedDatetimeFromClock = ZonedDateTime.now( clock );
+final ZonedDateTime zonedDatetimeFromZone = ZonedDateTime.now( ZoneId.of( <span class="string">"America/Los_Angeles"</span> ) );
+
+System.<span class="keyword">out</span>.println( zonedDatetime );
+System.<span class="keyword">out</span>.println( zonedDatetimeFromClock );
+System.<span class="keyword">out</span>.println( zonedDatetimeFromZone );</pre> 
+ <div> 
+  <p>输出如下：</p> 
+  <p>2014-04-12T11:47:01.017-04:00[America/New_York]</p> 
+  <p>2014-04-12T15:47:01.017Z</p> 
+  <p>2014-04-12T08:47:01.017-07:00[America/Los_Angeles]</p> 
+ </div> 
+ <p>最后让我们看看Duration类，Duration持有的时间精确到纳秒。它让我们很容易计算两个日期中间的差异。让我们来看一下：</p> 
+ <pre class="prettyprint cs"><span class="comment">// Get duration between two dates</span>
+final LocalDateTime <span class="keyword">from</span> = LocalDateTime.of( <span class="number">2014</span>, Month.APRIL, <span class="number">16</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span> );
+final LocalDateTime to = LocalDateTime.of( <span class="number">2015</span>, Month.APRIL, <span class="number">16</span>, <span class="number">23</span>, <span class="number">59</span>, <span class="number">59</span> );
+
+final Duration duration = Duration.between( <span class="keyword">from</span>, to );
+System.<span class="keyword">out</span>.println( <span class="string">"Duration in days: "</span> + duration.toDays() );
+System.<span class="keyword">out</span>.println( <span class="string">"Duration in hours: "</span> + duration.toHours() );</pre> 
+ <p>上面的例子计算了两个日期（2014年4月16日和2014年5月16日）之间的持续时间（基于天数和小时）输出如下：</p> 
+ <p>Duration in days: 365Duration in hours: 8783 </p> 
+ <p> 对于Java 8的新日期时间的总体印象还是比较积极的。一部分是因为有经历实战的Joda-Time的基础，还有一部分是因为日期时间终于被认真对待而且听取了开发人员的声音。关于更多的详细信息，请参考 <a href="http://docs.oracle.com/javase/tutorial/datetime/index.html" rel="nofollow,noindex" target="_blank">官方文档</a> 。 </p> 
+ <p> 4.4    <strong>Nashorn javascript</strong> <strong>引擎</strong> </p> 
+ <p>Java 8提供了一个新的Nashorn javascript引擎，它允许我们在JVM上运行特定的javascript应用。Nashorn javascript引擎只是javax.script.ScriptEngine另一个实现，而且规则也一样，允许Java和JavaScript互相操作。这里有个小例子：</p> 
+ <pre class="prettyprint cs">ScriptEngineManager manager = <span class="keyword">new</span> ScriptEngineManager();
+ScriptEngine engine = manager.getEngineByName( <span class="string">"JavaScript"</span> );
+
+System.<span class="keyword">out</span>.println( engine.getClass().getName() );
+System.<span class="keyword">out</span>.println( <span class="string">"Result:"</span> + engine.eval( <span class="string">"function f() { return 1; }; f() + 1;"</span> ) );</pre> 
+ <p>输出如下：</p> 
+ <div> 
+  <p>jdk.nashorn.api.scripting.NashornScriptEngine</p> 
+  <p>Result: 2</p> 
+  <p> 4.5    <strong>Base64</strong> </p> 
+ </div> 
+ <p>对Base64的支持最终成了Java 8标准库的一部分，非常简单易用：</p> 
+ <pre class="prettyprint java"><span class="keyword">package</span> com.javacodegeeks.java8.base64;
+
+<span class="keyword">import</span> java.nio.charset.StandardCharsets;
+<span class="keyword">import</span> java.util.Base64;
+
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Base64s</span> {</span>
+<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+<span class="keyword">final</span> String text = <span class="string">"Base64 finally in Java 8!"</span>;
+
+<span class="keyword">final</span> String encoded = Base64
+.getEncoder()
+.encodeToString( text.getBytes( StandardCharsets.UTF_8 ) );
+System.out.println( encoded );
+
+<span class="keyword">final</span> String decoded = <span class="keyword">new</span> String(
+Base64.getDecoder().decode( encoded ),
+StandardCharsets.UTF_8 );
+System.out.println( decoded );
+}
+}</pre> 
+ <p>控制台输出的编码和解码的字符串</p> 
+ <p>QmFzZTY0IGZpbmFsbHkgaW4gSmF2YSA4IQ==Base64 finally in Java 8! </p> 
+ <p>新的Base64API也支持URL和MINE的编码解码。</p> 
+ <p> ( <strong> Base64. <em>getUrlEncoder</em> () </strong> /  <strong> Base64. <em>getUrlDecoder</em> () </strong> ,  <strong> Base64. <em>getMimeEncoder</em> () </strong> /  <strong> Base64. <em>getMimeDecoder</em> () </strong> ). </p> 
+ <p> 4.6    <strong>并行数组</strong> </p> 
+ <p> Java 8新增加了很多方法支持并行的数组处理。最重要的大概是 <strong>parallelSort()</strong> 这个方法显著地使排序在多核计算机上速度加快。下面的小例子演示了这个新的方法（ <strong>parallelXXX</strong> ）的行为。 </p> 
+ <pre class="prettyprint xml"><span class="tag">&lt;/<span class="title">pre</span>&gt;</span>
+<span class="tag">&lt;<span class="title">pre</span> <span class="attribute">class</span>=<span class="value">"brush:java"</span>&gt;</span>package com.javacodegeeks.java8.parallel.arrays;
+
+import java.util.Arrays;
+import java.util.concurrent.ThreadLocalRandom;
+
+public class ParallelArrays {
+    public static void main( String[] args ) {
+        long[] arrayOfLong = new long [ 20000 ];		
+
+        Arrays.parallelSetAll( arrayOfLong,
+            index -&gt; ThreadLocalRandom.current().nextInt( 1000000 ) );
+        Arrays.stream( arrayOfLong ).limit( 10 ).forEach(
+            i -&gt; System.out.print( i + " " ) );
+        System.out.println();
+
+        Arrays.parallelSort( arrayOfLong );
+        Arrays.stream( arrayOfLong ).limit( 10 ).forEach(
+            i -&gt; System.out.print( i + " " ) );
+        System.out.println();
+    }
+}<span class="tag">&lt;/<span class="title">pre</span>&gt;</span>
+<span class="tag">&lt;<span class="title">pre</span>&gt;</span></pre> 
+ <p> 这一小段代码使用 <strong> <em>parallelSetAll()</em> </strong> t方法填充这个长度是2000的数组，然后使用 <strong> <em>parallelSort()</em> </strong> 排序。这个程序输出了排序前和排序后的10个数字来验证数组真的已经被排序了。示例可能的输出如下（请注意这些数字是随机产生的） </p> 
+ <p>Unsorted: 591217 891976 443951 424479 766825 351964 242997 642839 119108 552378Sorted: 39 220 263 268 325 607 655 678 723 793 </p> 
+ <p> 4.7    <strong>并发</strong> </p> 
+ <p>在新增Stream机制与lambda的基础之上，在java.util.concurrent.ConcurrentHashMap中加入了一些新方法来支持聚集操作。同时也在java.util.concurrent.ForkJoinPool类中加入了一些新方法来支持共有资源池（common pool）（请查看我们关于Java 并发的免费课程）。</p> 
+ <p>新增的java.util.concurrent.locks.StampedLock类提供一直基于容量的锁，这种锁有三个模型来控制读写操作（它被认为是不太有名的java.util.concurrent.locks.ReadWriteLock类的替代者）。</p> 
+ <p>在java.util.concurrent.atomic包中还增加了下面这些类：</p> 
+ <ul> 
+  <li>DoubleAccumulator</li> 
+  <li>DoubleAdder</li> 
+  <li>LongAccumulator</li> 
+  <li>LongAdder</li> 
+ </ul> 
+ <p> 5.   <strong>新的工具</strong> </p> 
+ <p>Java 8 提供了一些新的命令行工具，在这节里我们将会介绍它们中最有趣的部分。</p> 
+ <p> 5.1  Nashorn <strong>引擎：jjs</strong> </p> 
+ <p>jjs是个基于Nashorn引擎的命令行工具。它接受一些JavaScript源代码为参数，并且执行这些源代码。例如，我们创建一个具有如下内容的func.js文件：</p> 
+ <pre class="prettyprint xml"><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+<span class="tag">&lt;<span class="title">pre</span>&gt;</span>
+function f() {
+return 1;
+};
+
+print( f() + 1 );</pre> 
+ <p>我们可以把这个文件作为参数传递给jjs使得这个文件可以在命令行中执行</p> 
+ <pre class="prettyprint xml"><span class="tag">&lt;<span class="title">span</span> <span class="attribute">style</span>=<span class="value">"font-size: 13px;"</span>&gt;</span>jjs func.js<span class="tag">&lt;/<span class="title">span</span>&gt;</span></pre> 
+ <p>输出结果如下</p> 
+ <p>2</p> 
+ <p> 更多的详细信息请参考 <a href="http://docs.oracle.com/javase/8/docs/technotes/tools/unix/jjs.html" rel="nofollow,noindex" target="_blank">官方文档</a> 。 </p> 
+ <p> 5.2  <strong>类依赖分析工具：jdeps</strong> </p> 
+ <p>Jdeps是一个功能强大的命令行工具，它可以帮我们显示出包层级或者类层级java类文件的依赖关系。它接受class文件、目录、jar文件作为输入，默认情况下，jdeps会输出到控制台。</p> 
+ <p> 作为例子，让我们看看现在很流行的Spring框架的库的依赖关系报告。为了让报告短一些，我们只分析一个jar: <strong>org.springframework.core-3.0.5.RELEASE.jar</strong> . </p> 
+ <p>jdeps org.springframework.core-3.0.5.RELEASE.jar 这个命令输出内容很多，我们只看其中的一部分，这些依赖关系根绝包来分组，如果依赖关系在classpath里找不到，就会显示not found.</p> 
+ <pre class="prettyprint xml"><span class="tag">&lt;/<span class="title">pre</span>&gt;</span>
+<span class="tag">&lt;<span class="title">pre</span> <span class="attribute">class</span>=<span class="value">"brush:java"</span>&gt;</span>org.springframework.core-3.0.5.RELEASE.jar -&gt; C:\Program Files\Java\jdk1.8.0\jre\lib\rt.jar
+   org.springframework.core (org.springframework.core-3.0.5.RELEASE.jar)
+      -&gt; java.io
+      -&gt; java.lang
+      -&gt; java.lang.annotation
+      -&gt; java.lang.ref
+      -&gt; java.lang.reflect
+      -&gt; java.util
+      -&gt; java.util.concurrent
+      -&gt; org.apache.commons.logging                         not found
+      -&gt; org.springframework.asm                            not found
+      -&gt; org.springframework.asm.commons                    not found
+   org.springframework.core.annotation (org.springframework.core-3.0.5.RELEASE.jar)
+      -&gt; java.lang
+      -&gt; java.lang.annotation
+      -&gt; java.lang.reflect
+      -&gt; java.util<span class="tag">&lt;/<span class="title">pre</span>&gt;</span>
+<span class="tag">&lt;<span class="title">pre</span>&gt;</span></pre> 
+ <p> 更多的详细信息请参考 <a href="http://docs.oracle.com/javase/8/docs/technotes/tools/unix/jdeps.html" rel="nofollow,noindex" target="_blank">官方文档</a> 。 </p> 
+ <p> 6.  <strong>JVM</strong> <strong>的新特性</strong> </p> 
+ <p> JVM内存永久区已经被metaspace替换（JEP 122）。JVM参数 <strong>-XX:PermSize</strong> 和 – <strong>XX:MaxPermSize</strong> 被 <strong>XX:MetaSpaceSize</strong> 和  <strong>-XX:MaxMetaspaceSize代替</strong> 。 </p> 
+ <p> 7.  <strong>结论</strong> </p> 
+ <p>更多展望：Java 8通过发布一些可以增加程序员生产力的特性来推进这个伟大的平台的进步。现在把生产环境迁移到Java 8还为时尚早，但是在接下来的几个月里，它会被大众慢慢的接受。毫无疑问，现在是时候让你的代码与Java 8兼容，并且在Java 8足够安全稳定的时候迁移到Java 8。</p> 
+ <p> 作为社区对Java 8的认可，最近Pivotal发布了 <a href="https://spring.io/blog/2014/03/27/spring-framework-4-0-3-released-with-java-8-support-now-production-ready" rel="nofollow,noindex" target="_blank">可在生产环境下支持Java 8的Spring Framework 4.0.3</a> 。 </p> 
+ <p> 如果你喜欢这篇文章，请 <a href="http://eepurl.com/xRlkj" rel="nofollow,noindex" target="_blank">订阅我们的邮件列表</a> 来查看每周的更新以及免费赠送的白皮书。对于更高级的教程，请查看我们的[JCG学院][ <a href="http://academy.javacodegeeks.com/" rel="nofollow,noindex" target="_blank">JCG</a> ]。 </p> 
+ <p>我们欢迎你对Java 8中激动人心的特性进行评论！</p> 
+ <p>   <strong>8. </strong> <strong>资源</strong> </p> 
+ <p>下面一些文章从不同层面上深度讨论了Java 8的特性：</p> 
+ <ul> 
+  <li> What’s New in JDK 8:  <a href="http://www.oracle.com/technetwork/java/javase/8-whats-new-2157071.html" rel="nofollow,noindex" target="_blank">http://www.oracle.com/technetwork/java/javase/8-whats-new-2157071.html</a> </li> 
+  <li> The Java Tutorials:  <a href="http://docs.oracle.com/javase/tutorial/" rel="nofollow,noindex" target="_blank">http://docs.oracle.com/javase/tutorial/</a> </li> 
+  <li> WildFly 8, JDK 8, NetBeans 8, Java EE 7:  <a href="http://blog.arungupta.me/2014/03/wildfly8-jdk8-netbeans8-javaee7-excellent-combo-enterprise-java/" rel="nofollow,noindex" target="_blank">http://blog.arungupta.me/2014/03/wildfly8-jdk8-netbeans8-javaee7-excellent-combo-enterprise-java/</a> </li> 
+  <li> Java 8 Tutorial:  <a href="http://winterbe.com/posts/2014/03/16/java-8-tutorial/" rel="nofollow,noindex" target="_blank">http://winterbe.com/posts/2014/03/16/java-8-tutorial/</a> </li> 
+  <li> JDK 8 Command-line Static Dependency Checker:  <a href="http://marxsoftware.blogspot.ca/2014/03/jdeps.html" rel="nofollow,noindex" target="_blank">http://marxsoftware.blogspot.ca/2014/03/jdeps.html</a> </li> 
+  <li> The Illuminating Javadoc of JDK 8:  <a href="http://marxsoftware.blogspot.ca/2014/03/illuminating-javadoc-of-jdk-8.html" rel="nofollow,noindex" target="_blank">http://marxsoftware.blogspot.ca/2014/03/illuminating-javadoc-of-jdk-8.html</a> </li> 
+  <li> The Dark Side of Java 8:  <a href="http://blog.jooq.org/2014/04/04/java-8-friday-the-dark-side-of-java-8/" rel="nofollow,noindex" target="_blank">http://blog.jooq.org/2014/04/04/java-8-friday-the-dark-side-of-java-8/</a> </li> 
+  <li> Installing Java™ 8 Support in Eclipse Kepler SR2:  <a href="http://www.eclipse.org/downloads/java8/" rel="nofollow,noindex" target="_blank">http://www.eclipse.org/downloads/java8/</a> </li> 
+  <li> Java 8:  <a href="http://www.baeldung.com/java8" rel="nofollow,noindex" target="_blank">http://www.baeldung.com/java8</a> </li> 
+  <li> Oracle Nashorn. A Next-Generation JavaScript Engine for the JVM:  <a href="http://www.oracle.com/technetwork/articles/java/jf14-nashorn-2126515.html" rel="nofollow,noindex" target="_blank">http://www.oracle.com/technetwork/articles/java/jf14-nashorn-2126515.html</a> </li> 
+ </ul> 
+</div>
+        </div>
+        <div class="article_social">
+         <div class="article_like">
+    <div class="circle circle-like" id="my_zan" data_id="muQNVnm">
+    </div>
+</div>
+        <div id="share_weixin_image">
+            <img src="index_files/qrcode.php.png" height="100px" width="100px">
+        </div>
+<div class="article_share_fav">
+    <div class="share" id="ckepop">
+        <span>分享</span>
+        <button class="share_weibo" id="share_weibo_id" title="分享到新浪微博"></button>
+        <button class="share_qq" id="share_qq_id" title="分享到QQ空间"></button>
+        <button class="share_weixin" id="share_weixin_id"></button>
+    </div>
+    <div class="fav_correct">
+        <button id="my_fav" data_id="muQNVnm">
+            <i class="icon icon-star-empty"></i> <span id="fav_tip">收藏</span>
+        </button>
+        <button id="article-correct" data_id="muQNVnm" uid="0">
+            <i class="icon icon-warning-sign"></i>
+            <span>纠错</span>
+        </button>
+    </div>
+</div>
+<script type="text/javascript"><!--
+/* Script removed by snapshot save */
+--></script>
+
+
+            <div class="bottom_ad huodong-detail-ad-banner clearfix">
+                  <a href="https://www.leangoo.com/?f=tc" target="_blank"><img class="sckemzqpowgrdtcrpdfv" src="index_files/leangoo700.jpg"></a>
+
+            </div>
+        </div>
+        <div id="site_articles" style="clear:both;">
+              <div class="article-part-title">
+                <span>推荐文章</span>
+              </div>
+          <ul class="side_article_list">
+                <li class="side_article_list_item">
+                    1.<a href="http://www.tuicool.com/articles/eI3yUv6" target="_blank" title="RxJava 教程第四部分：并发 之线程调度">
+                    RxJava 教程第四部分：并发 之线程调度
+                    </a>
+                </li>
+                <li class="side_article_list_item">
+                    2.<a href="http://www.tuicool.com/articles/AjaMNfj" target="_blank" title="Java高级：线程同步lock与unlock使用">
+                    Java高级：线程同步lock与unlock使用
+                    </a>
+                </li>
+                <li class="side_article_list_item">
+                    3.<a href="http://www.tuicool.com/articles/Qfiyyua" target="_blank" title="详解 Java 中的注解">
+                    详解 Java 中的注解
+                    </a>
+                </li>
+                <li class="side_article_list_item">
+                    4.<a href="http://www.tuicool.com/articles/JrQBNrv" target="_blank" title="JVM源码分析之JDK8下的僵尸(无法回收)类加载器">
+                    JVM源码分析之JDK8下的僵尸(无法回收)类加载器
+                    </a>
+                </li>
+                <li class="side_article_list_item">
+                    5.<a href="http://www.tuicool.com/articles/z6zYbe" target="_blank" title="Kryo简介及代码阅读笔记">
+                    Kryo简介及代码阅读笔记
+                    </a>
+                </li>
+                <li class="side_article_list_item">
+                    6.<a href="http://www.tuicool.com/articles/mMBNNfB" target="_blank" title="RxJava 教程第三部分：驯服数据流之 组合数据流">
+                    RxJava 教程第三部分：驯服数据流之 组合数据流
+                    </a>
+                </li>
+          </ul>
+        </div>
+        <div id="kan_articles"> <div class="article-part-title"> <span>相关推刊</span></div><ul class="kan-list">          <li class="kan-item">            <a href="http://www.tuicool.com/kans/2051058137" target="_blank" class="kan-item-head">              <small>刊主：边界依旧</small>              <img class="kan-cover" src="index_files/UfQj2m.png%21kan.png">            </a>            <span class="kan-detail">              <a href="http://www.tuicool.com/kans/2051058137" target="_blank">《默认推刊》</a>              <i class="kan-num">1442</i>            </span>          </li>                  <li class="kan-item">            <a href="http://www.tuicool.com/kans/543993905" target="_blank" class="kan-item-head">              <small>刊主：xby1993</small>              <img class="kan-cover" src="index_files/default_kan_cover.png">            </a>            <span class="kan-detail">              <a href="http://www.tuicool.com/kans/543993905" target="_blank">《java》</a>              <i class="kan-num">2</i>            </span>          </li>                  <li class="kan-item">            <a href="http://www.tuicool.com/kans/2937348249" target="_blank" class="kan-item-head">              <small>刊主：知秋</small>              <img class="kan-cover" src="index_files/qIZbu2q.jpg%21kan.jpg">            </a>            <span class="kan-detail">              <a href="http://www.tuicool.com/kans/2937348249" target="_blank">《Java收藏》</a>              <i class="kan-num">121</i>            </span>          </li>        </ul><i class="clearfix"></i></div>
+        <div id="article_weibo" style="display:none;">
+            <div class="article-part-title">
+                <span>相关微博</span>
+                <sub>
+                    <a href="http://www.tuicool.com/articles/weibo_list/muQNVnm" target="_blank">(<i id="weibo_num"></i>)</a> 
+               </sub>
+            </div>
+            <div class="related-weibo-list"></div>
+        </div>
+        <div class="comments">
+    <div class="comments-area">
+    <div class="comments-header">
+        <h5>我来评几句</h5>
+        <div class="alert comment-alert alert-error" style="display:none;">
+            错误
+        </div>
+            <textarea cols="60" rows="5" id="comment-body" placeholder="请输入评论内容..." style="resize: none;"></textarea>
+            <span class="btn btn-medium btn-submit" id="comment-submit">登录后评论</span>
+        <p style="margin-top: 5px;margin-left:10px;">
+            已发表评论数(<span class="comment_cnt">0</span>)
+        </p>
+    </div>
+    <div class="comments-list">
+        <div class="empty-cmts alert alert-success" style="display:none;">
+            没有更多评论了^^
+        </div>
+    </div>
+    <div class="more-comments" style="display:none;">
+        <a href="">更多评论</a>
+    </div>
+    <div class="load-fail" style="display:none;">
+        评论加载失败，<a href="javascript:void(0);">重新加载</a>
+    </div>
+    </div>
+</div>
+
+    </div>
+        <div class="span4 article_right_side">
+            <div class="right_top">
+    <div class="article_related_site article_detail_bg">
+    <h4 class="article-part-title">相关站点</h4>
+    <div class="article_related_site_body clearfix">
+        <div class="logo">
+            <img src="index_files/ENVN7j.png">
+        </div>
+        <div class="name">
+            <div>
+                <a href="http://www.tuicool.com/sites/ENVN7j" target="_blank"> ImportNew</a>
+            </div>
+            <div>
+                <div class="btn btn-success right_site_follow" id="my_follow" data_id="ENVN7j">＋订阅</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="right_site_articles" class="article_detail_bg">
+    <div class="article-part-title">
+        <span>热门文章</span>
+    </div>
+    <ul class="side_article_list">
+        <li class="side_article_list_item">
+            1.<a href="http://www.tuicool.com/articles/eI3yUv6" target="_blank" title="RxJava 教程第四部分：并发 之线程调度"> RxJava 教程第四部分：并发 之线程调度 </a>
+        </li>
+        <li class="side_article_list_item">
+            2.<a href="http://www.tuicool.com/articles/ZZvAJj" target="_blank" title="Java NIO 之 Channel 下"> Java NIO 之 Channel 下 </a>
+        </li>
+        <li class="side_article_list_item">
+            3.<a href="http://www.tuicool.com/articles/AjaMNfj" target="_blank" title="Java高级：线程同步lock与unlock使用"> Java高级：线程同步lock与unlock使用 </a>
+        </li>
+        <li class="side_article_list_item">
+            4.<a href="http://www.tuicool.com/articles/NZ3UFf" target="_blank" title="java类序列化与反序列化版本唯一号serialVersionUID 自动生成方法"> java类序列化与反序列化版本唯一号serialVersionUID 自动生成方法 </a>
+        </li>
+        <li class="side_article_list_item">
+            5.<a href="http://www.tuicool.com/articles/Qfiyyua" target="_blank" title="详解 Java 中的注解"> 详解 Java 中的注解 </a>
+        </li>
+    </ul>
+</div>
+<div class="right-ad">
+      <a href="https://www.leangoo.com/?f=tc" target="_blank"><img class="sckemzqpowgrdtcrpdfv" src="index_files/leangoo120.jpg"></a>
+
+</div>
+<div class="right-ad" style="margin-top: 5px">
+      <a href="http://www.jiankongbao.com/?f=tuicool" target="_blank"><img class="sckemzqpowgrdtcrpdfv" src="index_files/jiankongbao120.jpg"></a>
+
+</div>
+<div class="right-ad" style="margin-top: 5px">
+      <a href="https://www.teambition.com/?utm_source=tuicool&amp;utm_medium=banner01" target="_blank"><img class="sckemzqpowgrdtcrpdfv" src="index_files/teambition120.jpg"></a>
+
+</div>
+<div class="right-ad" style="margin-top: 0px">
+      <a href="http://www.opensns.cn/?f=tc" target="_blank"><img class="sckemzqpowgrdtcrpdfv" src="index_files/opensns120.jpg"></a>
+
+</div>
+<div class="right-ad" style="margin-top: 5px">
+      <a href="https://www.jpush.cn/?f=tc" target="_blank"><img class="sckemzqpowgrdtcrpdfv" src="index_files/jpush120.jpg"></a>
+
+</div>
+</div>
+
+<div class="operate_zone">
+    <div class="right-ad" style="margin-top: 5px">
+          <a href="http://click.aliyun.com/m/3714/" target="_blank"><img class="sckemzqpowgrdtcrpdfv" src="index_files/aliyun120.jpg"></a>
+
+    </div>
+        <div class="frd_pos">
+        <script async="" src="index_files/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-7054762349007490" data-ad-slot="5705695566"></ins>
+<script><!--
+/* Script removed by snapshot save */
+--></script>
+
+        </div>
+</div>
+         </div>
+</div>
+
+<div class="read-later-alert">
+</div>
+<div>
+   <a href="#add-article-to-kan" id="add-article-to-kan-btn" class="btn" data-toggle="modal" style="display:none;">添加到推刊</a>
+   <!-- add_article to kan -->
+<div id="add-article-to-kan" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <span class="add-title">收藏到推刊</span>
+    <a href="#new-kan" class="btn pull-right" data-toggle="modal">创建推刊</a>
+    <i class="clearfix"></i>
+  </div>
+  <div class="modal-body">
+    <ul id="add-kan-list">
+    </ul>
+  </div>
+  <div class="modal-footer">
+    <input value="muQNVnm" class="article-id" type="hidden"> 
+    <button class="btn btn-primary pull-left add-to-btn">  收 藏  </button>
+    <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+  </div>
+</div>
+<div class="add-article-to-kan-alert">
+  已收藏到推刊！
+</div>
+
+   <div id="new-kan" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-body">
+    <input name="name" id="new-kan-name" placeholder="推刊名(必填)" required="" data-validation-required-message="请填写推刊名" type="text">
+    <span class="new-ness-name">请填写推刊名</span>
+    <br>
+    <textarea name="desc" id="desc" rows="6" placeholder="推刊描述"></textarea>
+    <span class="new-ness-desc">描述不能大于100个字符!</span>
+    <br>
+    权限设置：<input name="type" value="1" checked="checked" type="radio"> 公开
+    <input name="type" value="0" type="radio"> 仅自己可见
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary pull-left create-kan-btn" disabled="disabled">创建</button>
+    <button class="btn dismiss-new-kan" data-dismiss="modal" aria-hidden="true">取消</button>
+  </div>
+</div>
+
+
+</div>
+<div id="article-correct-modal" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            ×
+        </button>
+        <h3>文章纠错</h3>
+    </div>
+    <div class="modal-body">
+        <input value="muQNVnm" id="article-correct-source" type="hidden">
+        <div>
+            <label for="article-correct-email">
+                邮箱地址
+            </label>
+            <input id="article-correct-email" class="input-large" type="email">
+        </div>
+        <div>
+            <label for="article-correct-select">
+                错误类型
+            </label>
+            <select id="article-correct-select">
+                <option selected="selected" value="正文不准确">正文不准确</option>
+                <option value="标题不准确">标题不准确</option>
+                <option value="排版有问题">排版有问题</option>
+                <option value="没有分页内容">没有分页内容</option>
+                <option value="图片无法显示">图片无法显示</option>
+                <option value="视频无法显示">视频无法显示</option>
+                <option value="与原文不一致">与原文不一致</option>
+            </select>
+        </div>
+        <div>
+            <label for="article-correct-other">
+                补充信息
+            </label>
+            <textarea id="article-correct-other" class="span6"></textarea>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary pull-right huodong_correct_submit" id="article-correct-submit">
+              提交  
+        </button>
+    </div>
+</div>
+
+<style type="text/css"><!--
+/* Effective stylesheet produced by snapshot save */
+.load-fail { display: none; }
+--></style>
+<script src="index_files/highlight.pack.js"></script>
+<script type="text/javascript"><!--
+/* Script removed by snapshot save */
+--></script>
+
+
+
+  
+
+  </div>
+
+    <div class="footer">
+    <div class="footer-inner">
+    <dl class="about-link site-link">
+        <dt>
+            网站相关
+        </dt>
+        <dd>
+            <a target="_blank" href="http://www.tuicool.com/about">关于我们</a>
+        </dd>
+        <dd>
+            <a target="_blank" href="http://www.tuicool.com/mobile">移动应用</a>
+        </dd>
+        <dd>
+            <a target="_blank" href="http://www.tuicool.com/bbs/go/issues">建议反馈</a>
+        </dd>
+    </dl>
+    <dl class="site-link follow-link">
+        <dt>
+            关注我们
+        </dt>
+        <dd>
+            <a target="_blank" href="http://e.weibo.com/tuicool2012"><img src="index_files/weibo-32.png">推酷网</a>
+        </dd>
+        <dd><img src="index_files/weixin-32.png">tuicool2012
+        </dd>
+    </dl>
+    <dl class="site-link links">
+        <dt>
+            友情链接
+        </dt>
+        <dd>
+                <a href="http://www.woshipm.com/" title="人人都是产品经理" target="_blank">人人都是产品经理</a>
+                <a href="http://www.pm265.com/" title="PM256" target="_blank">PM256</a>
+                <a href="http://www.yidonghua.com/" title="移动信息化" target="_blank">移动信息化</a>
+                <a href="http://www.snsiu.com/" title="行晓网" target="_blank">行晓网</a>
+                <a href="http://code4app.com/" title="Code4App" target="_blank">Code4App</a>
+                <a href="http://www.taskcity.com/" title="智城外包网" target="_blank">智城外包网</a>
+                <a href="http://www.huxiu.com/" title="虎嗅" target="_blank">虎嗅</a>
+                <a href="http://www.iterduo.com/" title="IT耳朵" target="_blank">IT耳朵</a>
+                <a href="http://www.iresearch.cn/" title="艾瑞网" target="_blank">艾瑞网</a>
+                <a href="http://mediaworks.caixin.com/" title="创媒工场" target="_blank">创媒工场</a>
+                <a href="http://www.managershare.com/" title="经理人分享" target="_blank">经理人分享</a>
+                <a href="http://www.shichangbu.com/" title="市场部网" target="_blank">市场部网</a>
+                <a href="http://www.ikanchai.com/" title="砍柴网" target="_blank">砍柴网</a>
+                <a href="http://www.cocoachina.com/" title="CocoaChina" target="_blank">CocoaChina</a>
+                <a href="http://www.ibeifeng.com/" title="北风网" target="_blank">北风网</a>
+                <a href="http://www.jiankongbao.com/" title="云智慧" target="_blank">云智慧</a>
+                <a href="http://www.wyzc.com/" title="我赢职场" target="_blank">我赢职场</a>
+                <a href="http://www.thebigdata.cn/" title="大数据时代" target="_blank">大数据时代</a>
+                <a href="http://www.qidic.com/" title="奇笛网" target="_blank">奇笛网</a>
+                <a href="http://www.cngulu.com/" title="咕噜网" target="_blank">咕噜网</a>
+                <a href="http://www.linuxdiyf.com/" title="红联linux" target="_blank">红联linux</a>
+                <a href="http://win10.ithome.com/" title="Win10之家" target="_blank">Win10之家</a>
+                <a href="http://www.niaogebiji.com/" title="鸟哥笔记" target="_blank">鸟哥笔记</a>
+                <a href="http://www.play.cn/" title="爱游戏" target="_blank">爱游戏</a>
+                <a href="http://www.investide.cn/" title="投资潮" target="_blank">投资潮</a>
+                <a href="http://www.31huiyi.com/" title="31会议网" target="_blank">31会议网</a>
+                <a href="https://www.jpush.cn/" title="极光推送" target="_blank">极光推送</a>
+                <a href="https://www.teambition.com/" title="Teambition" target="_blank">Teambition</a>
+                <a href="http://www.guigu.org/" title="硅谷网" target="_blank">硅谷网</a>
+                <a href="https://home.leangoo.com/" title="leangoo" target="_blank">leangoo</a>
+                <a href="https://www.huoban.com/" title="伙伴云表格" target="_blank">伙伴云表格</a>
+                <a href="http://www.zealer.com/" title="ZEALER中国" target="_blank">ZEALER中国</a>
+                <a href="http://www.opensns.cn/" title="OpenSNS" target="_blank">OpenSNS</a>
+            <a href="http://www.tuicool.com/links">更多链接&gt;&gt;</a>  
+        </dd>
+    </dl>
+    <div class="clear"></div>
+    </div>
+</div>
+
+<div style="display:none;">
+   <script src="index_files/stat.php.js" language="JavaScript"></script>
+</div>
+
+
+
+
+<div style="display: none;" title="返回顶部" class="return"></div></body></html>
