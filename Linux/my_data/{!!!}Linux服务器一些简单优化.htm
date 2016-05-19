@@ -7,9 +7,13 @@
 -->
 </style></HEAD>
 <body bgcolor="#ffffff">
-<table width="90%" border="0" align="center" ><tr><td>
-<PRE class="9t">
-Linux服务器一些简单优化
+<P>
+<TABLE 
+style="FONT-FAMILY: Simsun; WORD-SPACING: 0px; TEXT-TRANSFORM: none; WIDOWS: 1; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px" 
+width="90%" align=center border=0>
+  
+  <TR>
+    <TD><PRE class=9t>Linux服务器一些简单优化
 1、关闭不需要的服务 这样一个好处是减少内存和CPU时间的占用,另一个好处相对可以提高安全性 那么哪些服务是肯定要保留的呢?
 在linux机器上通常有四项服务是必须保留的
   iptables linux下强大的防火墙,只要机器需要连到网上,哪里离得开它
@@ -52,7 +56,7 @@ Linux服务器一些简单优化
   比如web服务器的页面上有多个小图片 如何进行设置呢？
   修改文件系统的配置文件：vi /etc/fstab
   在包含大量小文件的分区中使用noatime,nodiratime两项
-  例如： /dev/md5 /data/pics1 ext3 noatime,nodiratime 0 0 这样文件被访问时就不会再产生写磁盘的io
+  例如： /dev/md5 /data/pics1 ext3 noatime,nodiratime 0 0 这样文件被访问时就不会再产生写磁盘的io</PRE><PRE class=9t>  修改设置后只需要重新挂载文件系统、不需要重启就可以应用新设置： # mount -o remount /
 
 5,一定要让你的服务器运行在level 3上 做法： vi /etc/inittab id:3:initdefault: 让服务器运行X是没有必要的
 
@@ -60,11 +64,7 @@ Linux服务器一些简单优化
   X11Forwarding no //不进行x图形的转发
   UseDNS no //不对IP地址做反向的解析
 
-7,优化shell 修改命令history记录 # vi /etc/profile 找到 HISTSIZE=1000 改为 HISTSIZE=100 然后 source /etc/profile
- 
-</PRE>
-</td></tr></table>
-<P>&nbsp;</P>
+7,优化shell 修改命令history记录 # vi /etc/profile 找到 HISTSIZE=1000 改为 HISTSIZE=100 然后 source /etc/profile</PRE></TD></TR></TABLE></P>
 
 </body>
 </HTML>
