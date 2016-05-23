@@ -51,11 +51,12 @@ d.add("47","0","Gradle File dependencies","my_data/Gradle_File_dependencies.htm"
 d.add("48","0","Gradle 构建工具 介绍","my_data/Gradle_构建工具_介绍.htm");
 d.add("49","0","在 Eclipse 下利用 gradle 构建系统","my_data/在 Eclipse 下利用 gradle 构建系统.htm");
 d.add("50","0","(wjw)Gradle秘籍","my_data/(wjw)Gradle秘籍.md.html");
-d.add("51","0","(WJW)Maven项目秒变gradle项目","my_data/(WJW)Maven项目秒变gradle项目.htm");
-d.add("52","0","快速创建java项目框架","my_data/快速创建java项目框架.htm");
-d.add("53","0","解决Gradle编译时出现： 编码GBK的不可映射字符","my_data/解决Gradle编译时出现：_编码GBK的不可映射字符.htm");
-d.add("54","0","Gradle的依赖管理(Repository&Dependency )","my_data/Gradle的依赖管理(Repository&Dependency_).htm");
-d.add("55","0","Standard project properties","my_data/Standard_project_properties.htm");
-d.add("56","0","使用Gradle 插件进行代码分析","my_data/使用Gradle插件进行代码分析/index.html");
+d.add("51","0","Gradle&Git与代码规范利器Checkstyle的完美结合","my_data/Gradle&Git与代码规范利器Checkstyle的完美结合/Gradle&Git与代码规范利器Checkstyle的完美结合.htm");
+d.add("52","0","(WJW)Maven项目秒变gradle项目","my_data/(WJW)Maven项目秒变gradle项目.htm");
+d.add("53","0","快速创建java项目框架","my_data/快速创建java项目框架.htm");
+d.add("54","0","解决Gradle编译时出现： 编码GBK的不可映射字符","my_data/解决Gradle编译时出现：_编码GBK的不可映射字符.htm");
+d.add("55","0","Gradle的依赖管理(Repository&Dependency )","my_data/Gradle的依赖管理(Repository&Dependency_).htm");
+d.add("56","0","Standard project properties","my_data/Standard_project_properties.htm");
+d.add("57","0","使用Gradle 插件进行代码分析","my_data/使用Gradle插件进行代码分析/index.html");
 document.write(d);
 //-->
