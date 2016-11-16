@@ -58,5 +58,6 @@ d.add("54","0","解决Gradle编译时出现： 编码GBK的不可映射字符","
 d.add("55","0","Gradle的依赖管理(Repository&Dependency )","my_data/Gradle的依赖管理(Repository&Dependency_).htm");
 d.add("56","0","Standard project properties","my_data/Standard_project_properties.htm");
 d.add("57","0","使用Gradle 插件进行代码分析","my_data/使用Gradle插件进行代码分析/index.html");
+d.add("58","0","Netflix开源的Gradle插件集合","my_data/Netflix开源的Gradle插件集合.htm");
 document.write(d);
 //-->
