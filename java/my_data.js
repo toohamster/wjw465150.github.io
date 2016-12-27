@@ -9,7 +9,7 @@ d.add("5","0","Google Java Style 中文版","my_data/Google Java Style 中文版
 d.add("6","0","webloic resin tomcat 的远程调试的参数","my_data/webloic_resin_tomcat_的远程调试的参数.htm");
 d.add("7","0","为数据库表设计可扩展的字段","my_data/为数据库表设计可扩展的字段.htm");
 d.add("8","0","Java8","");
-d.add("9","8","Java 8 特性 – 终极手册","my_data/java8/Java 8 特性 – 终极手册/index.html");
+d.add("9","8","Java8特性–终极手册","my_data/Java8/Java8特性-终极手册.htm");
 d.add("10","8","Java Streams，第 1 部分: java.util.stream 库简介","my_data/Java8/Java_Streams，第_1_部分__java.util.stream_库简介.htm");
 d.add("11","8","高并发Java（10）：JDK8对并发的新支持","my_data/Java8/高并发Java（10）：JDK8对并发的新支持.htm");
 d.add("12","8","Java 8的Nashorn脚本引擎教程","my_data/Java8/Java_8的Nashorn脚本引擎教程.htm");
