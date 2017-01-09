@@ -1,0 +1,1608 @@
+<!DOCTYPE html><!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]--><!--[if IE 7 ]> <html lang="en" class="no-js ie7"> <![endif]--><!--[if IE 8 ]> <html lang="en" class="no-js ie8"> <![endif]--><!--[if IE 9 ]> <html lang="en" class="no-js ie9"> <![endif]--><!--[if (gt IE 9)|!(IE)]><!--><html dir="ltr" xmlns:wb="http://open.weibo.com/wb" class=" js rgba borderradius boxshadow textshadow opacity cssanimations cssgradients csstransitions fontface generatedcontent video audio js" lang="zh-CN"><!--<![endif]--><!-- BEGIN head --><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><div class="fit-vids-style">­<style><!--
+/* Effective stylesheet produced by snapshot save */
+--></style></div><script src="index_files/shares.php.js" charset="utf-8"></script><script src="index_files/id.php.js" charset="utf-8"></script>
+
+	<!-- Title -->
+	<title>Java 8简明教程 - ImportNew</title>
+	
+	<!-- Meta Tags -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Favicon & Mobileicon -->
+	<link rel="shortcut icon" href="urn:not-loaded:http://www.importnew.com/wp-content/uploads/2014/12/d02a42d9cb3dec9320e5f550278911c7.ico">
+	<link rel="apple-touch-icon" href="urn:not-loaded:http://www.importnew.com/wp-content/themes/jobbolev4blog/mobileicon.png">
+	
+	<!-- RSS, Atom & Pingbacks -->
+		<link rel="alternate" title="ImportNew RSS Feed" href="http://www.importnew.com/feed">
+		<link rel="alternate" title="RSS .92" href="http://www.importnew.com/feed/rss">
+	<link rel="alternate" title="Atom 0.3" href="http://www.importnew.com/feed/atom">
+	<link rel="pingback" href="http://www.importnew.com/xmlrpc.php">
+	
+	<!-- Theme Hook -->
+	<link rel="stylesheet" id="lightboxStyle-css" href="index_files/colorbox.css" type="text/css" media="screen">
+<link rel="stylesheet" id="core3.0-css" href="index_files/shCore.css" type="text/css" media="all">
+<link rel="stylesheet" id="core-Default3.0-css" href="index_files/shCoreDefault.css" type="text/css" media="all">
+<link rel="stylesheet" id="theme-Default3.0-css" href="index_files/shThemeDefault.css" type="text/css" media="all">
+<script type="text/javascript" src="index_files/jquery.js"></script>
+<script type="text/javascript" src="index_files/q2w3-fixed-widget.min.js"></script>
+<script type="text/javascript" src="index_files/modernizr.js"></script>
+<script type="text/javascript" src="index_files/comment-reply.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.importnew.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.importnew.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="一个正则式引发的血案" href="http://www.importnew.com/10308.html">
+<link rel="next" title="为什么在密码问题上char[]优先于String？" href="http://www.importnew.com/10281.html">
+<link rel="shortlink" href="http://www.importnew.com/?p=10360">
+
+<!-- All in One SEO Pack 1.6.15.2 by Michael Torbert of Semper Fi Web Design[465,492] -->
+<meta name="description" content="本教程将带领你一步一步地认识这门语言的新特性。通过简单明了的代码示例，你将会学习到如何使用默认接口方法，Lambda表达式，方法引用和重复注解。看完这篇教程后，你还将对最新推出的API有一定的了解，例如：流控制，函数式接口，map扩展和新的时间日期API等等。">
+<meta name="keywords" content="java,jdk 8">
+<link rel="canonical" href="#">
+<!-- /all in one seo pack -->
+
+<!-- Comment Rating plugin Version: 2.9.32 by Bob King, http://wealthynetizen.com/, dynamic comment voting & styling. --> 
+<style type="text/css" media="screen"><!--
+/* Effective stylesheet produced by snapshot save */
+.ckrating_highly_rated { background-color: rgb(255, 255, 204) ! important; }
+.ckrating_hotly_debated { background-color: rgb(255, 240, 245) ! important; }
+--></style>
+
+
+<!-- WP SyntaxHighlighter Ver.1.7.3 CSS for code Begin -->
+<style type="text/css"><!--
+/* Effective stylesheet produced by snapshot save */
+.syntaxhighlighter, .syntaxhighlighter a, .syntaxhighlighter div, .syntaxhighlighter code, .syntaxhighlighter table, .syntaxhighlighter table td, .syntaxhighlighter table tr, .syntaxhighlighter table tbody, .syntaxhighlighter table thead, .syntaxhighlighter table caption, .syntaxhighlighter textarea { font-size: 12px ! important; font-family: "Consolas","Bitstream Vera Sans Mono","Courier New",Courier,monospace ! important; }
+.syntaxhighlighter { overflow-y: hidden ! important; padding: 1px ! important; }
+--></style>
+<!-- WP SyntaxHighlighter Ver.1.7.3 CSS for code End -->
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="index_files/style.css" media="screen">
+	<!-- link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noticia+Text:400,700italic,700,400italic" media="screen" / -->
+	<style><!--
+/* Effective stylesheet produced by snapshot save */
+*::-moz-selection { background: rgb(0, 153, 204) none repeat scroll 0% 0%; }
+body { background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+a, .tabs ul.nav li a:hover, .tabs ul.nav li.active a, .dropcap, .toggle.hover .toggle-title, li.comment cite a:hover, h3.widget-title, .post-meta .meta-title:hover, .the-latest a:hover h4, .aw_socialcounter_widget li a:hover, .aw_tabbed_widget #tab-latest-comments a:hover { color: rgb(0, 153, 204); }
+a:hover { color: rgb(179, 0, 0); }
+input:focus, textarea:focus { border-color: rgb(0, 153, 204); }
+#searchsubmit, .highlight, .aw_tabbed_widget .tabs ul.nav li.active a, footer .aw_tabbed_widget .tabs ul.nav li.active a, #top .aw_tabbed_widget .tabs ul.nav li.active a, .aw_tabbed_widget .tabs ul.nav li a:hover, footer .aw_tabbed_widget .tabs ul.nav li a:hover, #top .aw_tabbed_widget .tabs ul.nav li a:hover, .aw_twitter_widget .twitter-icon, .testimonial-icon, #top-closed:hover, .flex-control-nav a:hover, .flex-control-nav a.flex-active { background-color: rgb(0, 153, 204); }
+.submit { background-color: rgb(0, 153, 204); border-color: rgb(0, 115, 153); }
+.submit:hover { background-color: rgb(179, 0, 0); border-color: rgb(134, 0, 0); }
+#searchsubmit:hover { background-color: rgb(179, 0, 0); }
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .aw_tabbed_widget .tabs ul.nav li a:hover, .tabs ul.nav li.active a { color: rgb(0, 153, 204); }
+}
+@media screen and (max-width: 767px) {
+  .tabs ul.nav li a:hover, .tabs ul.nav li.active a { color: rgb(0, 153, 204); }
+}
+--></style>
+		
+	<!--[if IE 8]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+    <![endif]-->
+
+	<!-- Links: RSS + Atom Syndication + Pingback etc. -->
+	<link rel="alternate" type="application/rss+xml" title="ImportNew RSS Feed" href="http://www.importnew.com/feed">
+	<link rel="alternate" type="text/xml" title="RSS .92" href="http://www.importnew.com/feed/rss">
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://www.importnew.com/feed/atom">
+	<link rel="pingback" href="http://www.importnew.com/xmlrpc.php">
+    <script src="index_files/wb.js" type="text/javascript" charset="utf-8"></script><script charset="UTF-8" src="index_files/query.js"></script>
+
+<!-- END head -->
+</head>
+
+<!-- BEGIN body -->
+<body class="single single-post postid-10360 single-format-standard gecko"><link href="index_files/jiathis_counter.css" rel="stylesheet" type="text/css"><link href="index_files/jiathis_share.css" rel="stylesheet" type="text/css"><iframe style="position: fixed; display: none; opacity: 0;" src="index_files/generated-content.html" frameborder="0"></iframe><div class="jiathis_style" style="position: absolute; z-index: 1000000000; display: none; top: 50%; left: 50%; overflow: auto;"></div><div class="jiathis_style" style="position: absolute; z-index: 1000000000; display: none; overflow: auto;"></div><iframe style="display: none;" src="index_files/jiathis_utility.html" frameborder="0"></iframe>
+
+		
+	
+	<!-- BEGIN #top-nav -->
+	<nav id="top-nav" class="menu-nav">
+		
+		<!-- BEGIN .container -->
+		<div class="container">
+
+			            <div class="grid-12">
+            </div>
+			<div class="clear"></div>
+		
+		</div>
+		<!-- END .container -->
+    
+	</nav>
+	<!-- END #top-nav -->
+	
+	  	
+	<!-- BEGIN #wrapper -->
+	<div id="wrapper" class="container">
+
+		<!-- BEGIN header -->
+		<header>
+		
+						
+			<div class="header-wrapper">
+								
+				<!-- BEGIN #logo -->
+				<div id="logo" class="leaderboard-true">
+				
+										<a href="http://www.importnew.com/"><img src="index_files/6c537425c9ad078efe656a346e5facec.png" alt="ImportNew" height="85" width="137"></a>
+									
+				</div>
+				<!-- END #logo -->
+				
+				<!-- BEGIN #leaderboard -->
+				<div id="leaderboard">
+				
+					<a href="http://blog.jobbole.com/106093/" target="_blank" class="external" rel="nofollow"><img src="index_files/bfdcef89gw1f9cf7deatvj20k802idgf.jpg" height="90" width="728"></a>				
+				</div>
+				<!-- END #leaderboard -->
+				
+				<div class="clear"></div>
+			
+			</div>
+			
+						
+			<div class="clear"></div>
+			
+			<!-- BEGIN #main-nav -->
+			<nav id="main-nav" class="grid-12 menu-nav">
+
+				<div class="menu-main-container"><ul id="main-nav-menu" class="menu sf-js-enabled"><li id="menu-item-14265" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14265"><a href="http://www.importnew.com/">首页</a></li>
+<li id="menu-item-14278" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-14278"><a href="http://www.importnew.com/all-posts">所有文章</a></li>
+<li id="menu-item-858" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-858"><a href="http://www.importnew.com/cat/news">资讯</a></li>
+<li id="menu-item-1120" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1120"><a href="http://www.importnew.com/cat/web-development">Web</a></li>
+<li id="menu-item-1923" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1923"><a href="http://www.importnew.com/cat/architecture">架构</a></li>
+<li id="menu-item-832" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-832"><a href="http://www.importnew.com/cat/basic">基础技术</a></li>
+<li id="menu-item-836" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-836"><a href="http://www.importnew.com/cat/books">书籍</a></li>
+<li id="menu-item-2183" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2183"><a href="http://www.importnew.com/cat/tutorial">教程</a></li>
+<li id="menu-item-20858" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20858"><a href="http://group.jobbole.com/category/tech/java/" class="external" rel="nofollow" target="_blank">Java小组</a></li>
+<li id="menu-item-20859" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20859"><a href="http://hao.jobbole.com/?catid=32" class="external" rel="nofollow" target="_blank">工具资源</a></li>
+</ul><select class="selectnav" id="selectnav1"><option value="" selected="selected">- 导航条 -</option><option value="http://www.importnew.com/">首页</option><option value="http://www.importnew.com/all-posts">所有文章</option><option value="http://www.importnew.com/cat/news">资讯</option><option value="http://www.importnew.com/cat/web-development">Web</option><option value="http://www.importnew.com/cat/architecture">架构</option><option value="http://www.importnew.com/cat/basic">基础技术</option><option value="http://www.importnew.com/cat/books">书籍</option><option value="http://www.importnew.com/cat/tutorial">教程</option><option value="http://group.jobbole.com/category/tech/java/">Java小组</option><option value="http://hao.jobbole.com/?catid=32">工具资源</option></select></div>				
+				<div class="clear"></div>
+            
+			</nav>
+			<!-- END #main-nav -->
+			
+			<div class="clear"></div>
+		
+		</header>
+		<!-- END header -->
+		
+		
+
+<!-- BEGIN .grid-8 -->
+<div class="grid-8">
+
+		
+	<!-- BEGIN .post -->
+<div class="post-10360 post type-post status-publish format-standard hentry category-basic tag-java tag-jdk-8 odd" id="post-10360">
+	
+	<!-- BEGIN .entry-header -->
+	<div class="entry-header">
+	
+				
+		<h1>Java 8简明教程</h1>
+		
+							
+	</div>
+	<!-- BEGIN .entry-header -->
+	
+	<!-- BEGIN .entry-meta -->
+	<div class="entry-meta">
+	
+		<p class="entry-meta-hide-on-mobile">2014/03/20 | 分类： <a href="http://www.importnew.com/cat/basic" title="查看 基础技术 中的全部文章" rel="category tag">基础技术</a> | <a href="#comments" title="《Java 8简明教程》上的评论">20  条评论</a>
+
+		 | 标签： <a href="http://www.importnew.com/tag/java">Java</a>, <a href="http://www.importnew.com/tag/jdk-8">JDK 8</a></p>
+<!-- JiaThis Button BEGIN -->
+<div class="jiathis_style" style="display: block; margin: 0 0px; clear: both;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_tsina" title="分享到微博"><span class="jiathis_txt jtico jtico_tsina"></span></a>
+<a class="jiathis_button_weixin" title="分享到微信"><span class="jiathis_txt jtico jtico_weixin"></span></a>
+<a class="jiathis_button_qzone" title="分享到QQ空间"><span class="jiathis_txt jtico jtico_qzone"></span></a>
+<a class="jiathis_button_fb" title="分享到Facebook"><span class="jiathis_txt jtico jtico_fb"></span></a>
+<a class="jiathis_button_renren" title="分享到人人网"><span class="jiathis_txt jtico jtico_renren"></span></a>
+<a class="jiathis_button_douban" title="分享到豆瓣"><span class="jiathis_txt jtico jtico_douban"></span></a>
+<a class="jiathis_button_readitlater"></a>
+<a class="jiathis_button_evernote" title="分享到印象笔记"><span class="jiathis_txt jtico jtico_evernote"></span></a>
+<a class="jiathis_button_ydnote" title="分享到有道云笔记"><span class="jiathis_txt jtico jtico_ydnote"></span></a>
+<a href="http://www.jiathis.com/share?uid=1745061" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"><span class="jiathis_button_expanded jiathis_counter jiathis_bubble_style" id="jiathis_counter_27" title="累计分享364次">364</span></a>
+</div>
+<!-- JiaThis Button END -->
+
+
+	</div>
+	<!-- END .entry-meta -->
+
+	<!-- BEGIN .entry -->
+	<div class="entry">
+
+        
+		<div class="copyright-area">本文由 <a href="http://www.importnew.com/">ImportNew</a> - <a href="http://www.importnew.com/author/huangxiaofei">黄小非</a> 翻译自 <a target="_blank" href="http://winterbe.com/posts/2014/03/16/java-8-tutorial/" class="external" rel="nofollow">winterbe</a>。欢迎加入<a href="http://group.jobbole.com/category/feedback/trans-team/" class="external" rel="nofollow" target="_blank">翻译小组</a>。转载请见文末要求。</div>
+<p>ImportNew注：有兴趣第一时间学习Java 8的Java开发者，欢迎围观《<a href="http://www.importnew.com/10420.html" target="_blank">征集参与Java 8原创系列文章作者</a>》。</p>
+<p>以下是《Java 8简明教程》的正文。</p>
+<h3><em>“Java并没有没落，人们很快就会发现这一点”</em></h3>
+<p>欢迎阅读我编写的<a href="https://jdk8.java.net/" target="_blank" class="external" rel="nofollow">Java 8</a>介绍。本教程将带领你一步一步地认识这门语言的新特性。通过简单明了的代码示例，你将会学习到如何使用默认接口方法，Lambda表达式，方法引用和重复注解。看完这篇教程后，你还将对最新推出的<a href="http://download.java.net/jdk8/docs/api/" target="_blank" class="external" rel="nofollow">API</a>有一定的了解，例如：流控制，函数式接口，map扩展和新的时间日期API等等。</p>
+<h3><span style="font-size: 1.17em;">允许在接口中有默认方法实现</span></h3>
+<p>Java 8 允许我们使用default关键字，为接口声明添加非抽象的方法实现。这个特性又被称为<strong>扩展方法</strong>。下面是我们的第一个例子：</p>
+<div><div id="highlighter_984845" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java keyword">interface</code> <code class="java plain">Formula {</code></div><div class="line number2 index1 alt1"><code class="java spaces">    </code><code class="java keyword">double</code> <code class="java plain">calculate(</code><code class="java keyword">int</code> <code class="java plain">a);</code></div><div class="line number3 index2 alt2"> </div><div class="line number4 index3 alt1"><code class="java spaces">    </code><code class="java keyword">default</code> <code class="java keyword">double</code> <code class="java plain">sqrt(</code><code class="java keyword">int</code> <code class="java plain">a) {</code></div><div class="line number5 index4 alt2"><code class="java spaces">        </code><code class="java keyword">return</code> <code class="java plain">Math.sqrt(a);</code></div><div class="line number6 index5 alt1"><code class="java spaces">    </code><code class="java plain">}</code></div><div class="line number7 index6 alt2"><code class="java plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>在接口Formula中，除了抽象方法caculate以外，还定义了一个默认方法sqrt。Formula的实现类只需要实现抽象方法caculate就可以了。默认方法sqrt可以直接使用。</p>
+<div><div id="highlighter_819822" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">Formula formula = </code><code class="java keyword">new</code> <code class="java plain">Formula() {</code></div><div class="line number2 index1 alt1"><code class="java spaces">    </code><code class="java color1">@Override</code></div><div class="line number3 index2 alt2"><code class="java spaces">    </code><code class="java keyword">public</code> <code class="java keyword">double</code> <code class="java plain">calculate(</code><code class="java keyword">int</code> <code class="java plain">a) {</code></div><div class="line number4 index3 alt1"><code class="java spaces">        </code><code class="java keyword">return</code> <code class="java plain">sqrt(a * </code><code class="java value">100</code><code class="java plain">);</code></div><div class="line number5 index4 alt2"><code class="java spaces">    </code><code class="java plain">}</code></div><div class="line number6 index5 alt1"><code class="java plain">};</code></div><div class="line number7 index6 alt2"> </div><div class="line number8 index7 alt1"><code class="java plain">formula.calculate(</code><code class="java value">100</code><code class="java plain">);     </code><code class="java comments">// 100.0</code></div><div class="line number9 index8 alt2"><code class="java plain">formula.sqrt(</code><code class="java value">16</code><code class="java plain">);           </code><code class="java comments">// 4.0</code></div></div></td></tr></tbody></table></div></div>
+<p>formula对象以匿名对象的形式实现了Formula接口。代码很啰嗦：用了6行代码才实现了一个简单的计算功能：a*100开平方根。我们在下一节会看到，Java 8 还有一种更加优美的方法，能够实现包含单个函数的对象。</p>
+<h3><span style="font-size: 1.17em;">Lambda表达式</span></h3>
+<p>让我们从最简单的例子开始，来学习如何对一个string列表进行排序。我们首先使用Java 8之前的方法来实现：</p>
+<div><div id="highlighter_674903" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">List&lt;String&gt; names = Arrays.asList(</code><code class="java string">"peter"</code><code class="java plain">, </code><code class="java string">"anna"</code><code class="java plain">, </code><code class="java string">"mike"</code><code class="java plain">, </code><code class="java string">"xenia"</code><code class="java plain">);</code></div><div class="line number2 index1 alt1"> </div><div class="line number3 index2 alt2"><code class="java plain">Collections.sort(names, </code><code class="java keyword">new</code> <code class="java plain">Comparator&lt;String&gt;() {</code></div><div class="line number4 index3 alt1"><code class="java spaces">    </code><code class="java color1">@Override</code></div><div class="line number5 index4 alt2"><code class="java spaces">    </code><code class="java keyword">public</code> <code class="java keyword">int</code> <code class="java plain">compare(String a, String b) {</code></div><div class="line number6 index5 alt1"><code class="java spaces">        </code><code class="java keyword">return</code> <code class="java plain">b.compareTo(a);</code></div><div class="line number7 index6 alt2"><code class="java spaces">    </code><code class="java plain">}</code></div><div class="line number8 index7 alt1"><code class="java plain">});</code></div></div></td></tr></tbody></table></div></div>
+<p>静态工具方法Collections.sort接受一个list，和一个Comparator接口作为输入参数，Comparator的实现类可以对输入的list中的元素进行比较。通常情况下，你可以直接用创建匿名Comparator对象，并把它作为参数传递给sort方法。</p>
+<p>除了创建匿名对象以外，Java 8 还提供了一种更简洁的方式，Lambda表达式。</p>
+<div><div id="highlighter_351619" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">Collections.sort(names, (String a, String b) -&gt; {</code></div><div class="line number2 index1 alt1"><code class="java spaces">    </code><code class="java keyword">return</code> <code class="java plain">b.compareTo(a);</code></div><div class="line number3 index2 alt2"><code class="java plain">});</code></div></div></td></tr></tbody></table></div></div>
+<p>你可以看到，这段代码就比之前的更加简短和易读。但是，它还可以更加简短：</p>
+<div><div id="highlighter_251950" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">Collections.sort(names, (String a, String b) -&gt; b.compareTo(a));</code></div></div></td></tr></tbody></table></div></div>
+<p>只要一行代码，包含了方法体。你甚至可以连大括号对{}和return关键字都省略不要。不过这还不是最短的写法：</p>
+<div><div id="highlighter_158238" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">Collections.sort(names, (a, b) -&gt; b.compareTo(a));</code></div></div></td></tr></tbody></table></div></div>
+<p>Java编译器能够自动识别参数的类型，所以你就可以省略掉类型不写。让我们再深入地研究一下lambda表达式的威力吧。</p>
+<h3><span style="font-size: 1.17em;">函数式接口</span></h3>
+<p>Lambda表达式如何匹配Java的类型系统？每一个lambda都能够通过一个特定的接口，与一个给定的类型进行匹配。一个所谓的函数式接口必须要有且仅有一个抽象方法声明。每个与之对应的lambda表达式必须要与抽象方法的声明相匹配。由于默认方法不是抽象的，因此你可以在你的函数式接口里任意添加默认方法。</p>
+<p>任意只包含一个抽象方法的接口，我们都可以用来做成lambda表达式。为了让你定义的接口满足要求，你应当在接口前加上@FunctionalInterface 标注。编译器会注意到这个标注，如果你的接口中定义了第二个抽象方法的话，编译器会抛出异常。</p>
+<p>举例：</p>
+<div><div id="highlighter_392441" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java color1">@FunctionalInterface</code></div><div class="line number2 index1 alt1"><code class="java keyword">interface</code> <code class="java plain">Converter&lt;F, T&gt; {</code></div><div class="line number3 index2 alt2"><code class="java spaces">    </code><code class="java plain">T convert(F from);</code></div><div class="line number4 index3 alt1"><code class="java plain">}</code></div><div class="line number5 index4 alt2"> </div><div class="line number6 index5 alt1"><code class="java plain">Converter&lt;String, Integer&gt; converter = (from) -&gt; Integer.valueOf(from);</code></div><div class="line number7 index6 alt2"><code class="java plain">Integer converted = converter.convert(</code><code class="java string">"123"</code><code class="java plain">);</code></div><div class="line number8 index7 alt1"><code class="java plain">System.out.println(converted);    </code><code class="java comments">// 123</code></div></div></td></tr></tbody></table></div></div>
+<p>注意，如果你不写@FunctionalInterface 标注，程序也是正确的。</p>
+<h3>方法和构造函数引用</h3>
+<p>上面的代码实例可以通过静态方法引用，使之更加简洁：</p>
+<div><div id="highlighter_497871" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">Converter&lt;String, Integer&gt; converter = Integer::valueOf;</code></div><div class="line number2 index1 alt1"><code class="java plain">Integer converted = converter.convert(</code><code class="java string">"123"</code><code class="java plain">);</code></div><div class="line number3 index2 alt2"><code class="java plain">System.out.println(converted);   </code><code class="java comments">// 123</code></div></div></td></tr></tbody></table></div></div>
+<p>Java 8 允许你通过::关键字获取方法或者构造函数的的引用。上面的例子就演示了如何引用一个静态方法。而且，我们还可以对一个对象的方法进行引用：</p>
+<div><div id="highlighter_325518" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java keyword">class</code> <code class="java plain">Something {</code></div><div class="line number2 index1 alt1"><code class="java spaces">    </code><code class="java plain">String startsWith(String s) {</code></div><div class="line number3 index2 alt2"><code class="java spaces">        </code><code class="java keyword">return</code> <code class="java plain">String.valueOf(s.charAt(</code><code class="java value">0</code><code class="java plain">));</code></div><div class="line number4 index3 alt1"><code class="java spaces">    </code><code class="java plain">}</code></div><div class="line number5 index4 alt2"><code class="java plain">}</code></div><div class="line number6 index5 alt1"> </div><div class="line number7 index6 alt2"><code class="java plain">Something something = </code><code class="java keyword">new</code> <code class="java plain">Something();</code></div><div class="line number8 index7 alt1"><code class="java plain">Converter&lt;String, String&gt; converter = something::startsWith;</code></div><div class="line number9 index8 alt2"><code class="java plain">String converted = converter.convert(</code><code class="java string">"Java"</code><code class="java plain">);</code></div><div class="line number10 index9 alt1"><code class="java plain">System.out.println(converted);    </code><code class="java comments">// "J"</code></div></div></td></tr></tbody></table></div></div>
+<p>让我们看看如何使用::关键字引用构造函数。首先我们定义一个示例bean，包含不同的构造方法：</p>
+<div><div id="highlighter_301751" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java keyword">class</code> <code class="java plain">Person {</code></div><div class="line number2 index1 alt1"><code class="java spaces">    </code><code class="java plain">String firstName;</code></div><div class="line number3 index2 alt2"><code class="java spaces">    </code><code class="java plain">String lastName;</code></div><div class="line number4 index3 alt1"> </div><div class="line number5 index4 alt2"><code class="java spaces">    </code><code class="java plain">Person() {}</code></div><div class="line number6 index5 alt1"> </div><div class="line number7 index6 alt2"><code class="java spaces">    </code><code class="java plain">Person(String firstName, String lastName) {</code></div><div class="line number8 index7 alt1"><code class="java spaces">        </code><code class="java keyword">this</code><code class="java plain">.firstName = firstName;</code></div><div class="line number9 index8 alt2"><code class="java spaces">        </code><code class="java keyword">this</code><code class="java plain">.lastName = lastName;</code></div><div class="line number10 index9 alt1"><code class="java spaces">    </code><code class="java plain">}</code></div><div class="line number11 index10 alt2"><code class="java plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>接下来，我们定义一个person工厂接口，用来创建新的person对象：</p>
+<div><div id="highlighter_317896" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java keyword">interface</code> <code class="java plain">PersonFactory&lt;P </code><code class="java keyword">extends</code> <code class="java plain">Person&gt; {</code></div><div class="line number2 index1 alt1"><code class="java spaces">    </code><code class="java plain">P create(String firstName, String lastName);</code></div><div class="line number3 index2 alt2"><code class="java plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>然后我们通过构造函数引用来把所有东西拼到一起，而不是像以前一样，通过手动实现一个工厂来这么做。</p>
+<div><div id="highlighter_28812" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">PersonFactory&lt;Person&gt; personFactory = Person::</code><code class="java keyword">new</code><code class="java plain">;</code></div><div class="line number2 index1 alt1"><code class="java plain">Person person = personFactory.create(</code><code class="java string">"Peter"</code><code class="java plain">, </code><code class="java string">"Parker"</code><code class="java plain">);</code></div></div></td></tr></tbody></table></div></div>
+<p>我们通过Person::new来创建一个Person类构造函数的引用。Java编译器会自动地选择合适的构造函数来匹配PersonFactory.create函数的签名，并选择正确的构造函数形式。</p>
+<h3><span style="font-size: 1.17em;">Lambda的范围</span></h3>
+<p>对于lambdab表达式外部的变量，其访问权限的粒度与匿名对象的方式非常类似。你能够访问局部对应的外部区域的局部final变量，以及成员变量和静态变量。</p>
+<h4>访问局部变量</h4>
+<p>我们可以访问lambda表达式外部的final局部变量：</p>
+<div><div id="highlighter_886402" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java keyword">final</code> <code class="java keyword">int</code> <code class="java plain">num = </code><code class="java value">1</code><code class="java plain">;</code></div><div class="line number2 index1 alt1"><code class="java plain">Converter&lt;Integer, String&gt; stringConverter =</code></div><div class="line number3 index2 alt2"><code class="java spaces">        </code><code class="java plain">(from) -&gt; String.valueOf(from + num);</code></div><div class="line number4 index3 alt1"> </div><div class="line number5 index4 alt2"><code class="java plain">stringConverter.convert(</code><code class="java value">2</code><code class="java plain">);     </code><code class="java comments">// 3</code></div></div></td></tr></tbody></table></div></div>
+<p>但是与匿名对象不同的是，变量num并不需要一定是final。下面的代码依然是合法的：</p>
+<div><div id="highlighter_667678" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java keyword">int</code> <code class="java plain">num = </code><code class="java value">1</code><code class="java plain">;</code></div><div class="line number2 index1 alt1"><code class="java plain">Converter&lt;Integer, String&gt; stringConverter =</code></div><div class="line number3 index2 alt2"><code class="java spaces">        </code><code class="java plain">(from) -&gt; String.valueOf(from + num);</code></div><div class="line number4 index3 alt1"> </div><div class="line number5 index4 alt2"><code class="java plain">stringConverter.convert(</code><code class="java value">2</code><code class="java plain">);     </code><code class="java comments">// 3</code></div></div></td></tr></tbody></table></div></div>
+<p>然而，num在编译的时候被隐式地当做final变量来处理。下面的代码就不合法：</p>
+<div><div id="highlighter_914336" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java keyword">int</code> <code class="java plain">num = </code><code class="java value">1</code><code class="java plain">;</code></div><div class="line number2 index1 alt1"><code class="java plain">Converter&lt;Integer, String&gt; stringConverter =</code></div><div class="line number3 index2 alt2"><code class="java spaces">        </code><code class="java plain">(from) -&gt; String.valueOf(from + num);</code></div><div class="line number4 index3 alt1"><code class="java plain">num = </code><code class="java value">3</code><code class="java plain">;</code></div></div></td></tr></tbody></table></div></div>
+<p>在lambda表达式内部企图改变num的值也是不允许的。</p>
+<h4>访问成员变量和静态变量</h4>
+<p>与局部变量不同，我们在lambda表达式的内部能获取到对成员变量或静态变量的读写权。这种访问行为在匿名对象里是非常典型的。</p>
+<div><div id="highlighter_731361" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java keyword">class</code> <code class="java plain">Lambda4 {</code></div><div class="line number2 index1 alt1"><code class="java spaces">    </code><code class="java keyword">static</code> <code class="java keyword">int</code> <code class="java plain">outerStaticNum;</code></div><div class="line number3 index2 alt2"><code class="java spaces">    </code><code class="java keyword">int</code> <code class="java plain">outerNum;</code></div><div class="line number4 index3 alt1"> </div><div class="line number5 index4 alt2"><code class="java spaces">    </code><code class="java keyword">void</code> <code class="java plain">testScopes() {</code></div><div class="line number6 index5 alt1"><code class="java spaces">        </code><code class="java plain">Converter&lt;Integer, String&gt; stringConverter1 = (from) -&gt; {</code></div><div class="line number7 index6 alt2"><code class="java spaces">            </code><code class="java plain">outerNum = </code><code class="java value">23</code><code class="java plain">;</code></div><div class="line number8 index7 alt1"><code class="java spaces">            </code><code class="java keyword">return</code> <code class="java plain">String.valueOf(from);</code></div><div class="line number9 index8 alt2"><code class="java spaces">        </code><code class="java plain">};</code></div><div class="line number10 index9 alt1"> </div><div class="line number11 index10 alt2"><code class="java spaces">        </code><code class="java plain">Converter&lt;Integer, String&gt; stringConverter2 = (from) -&gt; {</code></div><div class="line number12 index11 alt1"><code class="java spaces">            </code><code class="java plain">outerStaticNum = </code><code class="java value">72</code><code class="java plain">;</code></div><div class="line number13 index12 alt2"><code class="java spaces">            </code><code class="java keyword">return</code> <code class="java plain">String.valueOf(from);</code></div><div class="line number14 index13 alt1"><code class="java spaces">        </code><code class="java plain">};</code></div><div class="line number15 index14 alt2"><code class="java spaces">    </code><code class="java plain">}</code></div><div class="line number16 index15 alt1"><code class="java plain">}</code></div></div></td></tr></tbody></table></div></div>
+<h4>访问默认接口方法</h4>
+<p>还记得第一节里面formula的那个例子么？ 接口Formula定义了一个默认的方法sqrt，该方法能够访问formula所有的对象实例，包括匿名对象。这个对lambda表达式来讲则无效。</p>
+<p>默认方法无法在lambda表达式内部被访问。因此下面的代码是无法通过编译的：</p>
+<div><div id="highlighter_593314" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">Formula formula = (a) -&gt; sqrt( a * </code><code class="java value">100</code><code class="java plain">);</code></div></div></td></tr></tbody></table></div></div>
+<h3><span style="font-size: 1.17em;">内置函数式接口</span></h3>
+<p>JDK 1.8 API中包含了很多内置的函数式接口。有些是在以前版本的Java中大家耳熟能详的，例如Comparator接口，或者Runnable接口。对这些现成的接口进行实现，可以通过@FunctionalInterface 标注来启用Lambda功能支持。</p>
+<p>此外，Java 8 API 还提供了很多新的函数式接口，来降低程序员的工作负担。有些新的接口已经在<a href="https://code.google.com/p/guava-libraries/" target="_blank" class="external" rel="nofollow">Google Guava</a>库中很有名了。如果你对这些库很熟的话，你甚至闭上眼睛都能够想到，这些接口在类库的实现过程中起了多么大的作用。</p>
+<h4><span style="font-size: 1em;">Predicates</span></h4>
+<p>Predicate是一个布尔类型的函数，该函数只有一个输入参数。Predicate接口包含了多种默认方法，用于处理复杂的逻辑动词（and, or，negate）</p>
+<div><div id="highlighter_505636" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">Predicate&lt;String&gt; predicate = (s) -&gt; s.length() &gt; </code><code class="java value">0</code><code class="java plain">;</code></div><div class="line number2 index1 alt1"> </div><div class="line number3 index2 alt2"><code class="java plain">predicate.test(</code><code class="java string">"foo"</code><code class="java plain">);              </code><code class="java comments">// true</code></div><div class="line number4 index3 alt1"><code class="java plain">predicate.negate().test(</code><code class="java string">"foo"</code><code class="java plain">);     </code><code class="java comments">// false</code></div><div class="line number5 index4 alt2"> </div><div class="line number6 index5 alt1"><code class="java plain">Predicate&lt;Boolean&gt; nonNull = Objects::nonNull;</code></div><div class="line number7 index6 alt2"><code class="java plain">Predicate&lt;Boolean&gt; isNull = Objects::isNull;</code></div><div class="line number8 index7 alt1"> </div><div class="line number9 index8 alt2"><code class="java plain">Predicate&lt;String&gt; isEmpty = String::isEmpty;</code></div><div class="line number10 index9 alt1"><code class="java plain">Predicate&lt;String&gt; isNotEmpty = isEmpty.negate();</code></div></div></td></tr></tbody></table></div></div>
+<h4>Functions</h4>
+<p>Function接口接收一个参数，并返回单一的结果。默认方法可以将多个函数串在一起（compse, andThen）</p>
+<div><div id="highlighter_783783" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">Function&lt;String, Integer&gt; toInteger = Integer::valueOf;</code></div><div class="line number2 index1 alt1"><code class="java plain">Function&lt;String, String&gt; backToString = toInteger.andThen(String::valueOf);</code></div><div class="line number3 index2 alt2"> </div><div class="line number4 index3 alt1"><code class="java plain">backToString.apply(</code><code class="java string">"123"</code><code class="java plain">);     </code><code class="java comments">// "123"</code></div></div></td></tr></tbody></table></div></div>
+<h4>Suppliers</h4>
+<p>Supplier接口产生一个给定类型的结果。与Function不同的是，Supplier没有输入参数。</p>
+<div><div id="highlighter_999785" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">Supplier&lt;Person&gt; personSupplier = Person::</code><code class="java keyword">new</code><code class="java plain">;</code></div><div class="line number2 index1 alt1"><code class="java plain">personSupplier.get();   </code><code class="java comments">// new Person</code></div></div></td></tr></tbody></table></div></div>
+<h4>Consumers</h4>
+<p>Consumer代表了在一个输入参数上需要进行的操作。</p>
+<div><div id="highlighter_392764" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">Consumer&lt;Person&gt; greeter = (p) -&gt; System.out.println(</code><code class="java string">"Hello, "</code> <code class="java plain">+ p.firstName);</code></div><div class="line number2 index1 alt1"><code class="java plain">greeter.accept(</code><code class="java keyword">new</code> <code class="java plain">Person(</code><code class="java string">"Luke"</code><code class="java plain">, </code><code class="java string">"Skywalker"</code><code class="java plain">));</code></div></div></td></tr></tbody></table></div></div>
+<h4>Comparators</h4>
+<p>Comparator接口在早期的Java版本中非常著名。Java 8 为这个接口添加了不同的默认方法。</p>
+<div><div id="highlighter_914027" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">Comparator&lt;Person&gt; comparator = (p1, p2) -&gt; p1.firstName.compareTo(p2.firstName);</code></div><div class="line number2 index1 alt1"> </div><div class="line number3 index2 alt2"><code class="java plain">Person p1 = </code><code class="java keyword">new</code> <code class="java plain">Person(</code><code class="java string">"John"</code><code class="java plain">, </code><code class="java string">"Doe"</code><code class="java plain">);</code></div><div class="line number4 index3 alt1"><code class="java plain">Person p2 = </code><code class="java keyword">new</code> <code class="java plain">Person(</code><code class="java string">"Alice"</code><code class="java plain">, </code><code class="java string">"Wonderland"</code><code class="java plain">);</code></div><div class="line number5 index4 alt2"> </div><div class="line number6 index5 alt1"><code class="java plain">comparator.compare(p1, p2);             </code><code class="java comments">// &gt; 0</code></div><div class="line number7 index6 alt2"><code class="java plain">comparator.reversed().compare(p1, p2);  </code><code class="java comments">// &lt; 0</code></div></div></td></tr></tbody></table></div></div>
+<h4>Optionals</h4>
+<p>Optional不是一个函数式接口，而是一个精巧的工具接口，用来防止NullPointerEception产生。这个概念在下一节会显得很重要，所以我们在这里快速地浏览一下Optional的工作原理。</p>
+<p>Optional是一个简单的值容器，这个值可以是null，也可以是non-null。考虑到一个方法可能会返回一个non-null的值，也可能返回一个空值。为了不直接返回null，我们在Java 8中就返回一个Optional.</p>
+<div><div id="highlighter_419950" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">Optional&lt;String&gt; optional = Optional.of(</code><code class="java string">"bam"</code><code class="java plain">);</code></div><div class="line number2 index1 alt1"> </div><div class="line number3 index2 alt2"><code class="java plain">optional.isPresent();           </code><code class="java comments">// true</code></div><div class="line number4 index3 alt1"><code class="java plain">optional.get();                 </code><code class="java comments">// "bam"</code></div><div class="line number5 index4 alt2"><code class="java plain">optional.orElse(</code><code class="java string">"fallback"</code><code class="java plain">);    </code><code class="java comments">// "bam"</code></div><div class="line number6 index5 alt1"> </div><div class="line number7 index6 alt2"><code class="java plain">optional.ifPresent((s) -&gt; System.out.println(s.charAt(</code><code class="java value">0</code><code class="java plain">)));     </code><code class="java comments">// "b"</code></div></div></td></tr></tbody></table></div></div>
+<h3>Streams</h3>
+<p>java.util.Stream表示了某一种元素的序列，在这些元素上可以进行各种操作。Stream操作可以是中间操作，也可以是完结操作。完结操作会返回一个某种类型的值，而中间操作会返回流对象本身，并且你可以通过多次调用同一个流操作方法来将操作结果串起来（就像StringBuffer的append方法一样————译者注）。Stream是在一个源的基础上创建出来的，例如java.util.Collection中的list或者set（map不能作为Stream的源）。Stream操作往往可以通过顺序或者并行两种方式来执行。</p>
+<p>我们先了解一下序列流。首先，我们通过string类型的list的形式创建示例数据：</p>
+<div><div id="highlighter_35036" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">List&lt;String&gt; stringCollection = </code><code class="java keyword">new</code> <code class="java plain">ArrayList&lt;&gt;();</code></div><div class="line number2 index1 alt1"><code class="java plain">stringCollection.add(</code><code class="java string">"ddd2"</code><code class="java plain">);</code></div><div class="line number3 index2 alt2"><code class="java plain">stringCollection.add(</code><code class="java string">"aaa2"</code><code class="java plain">);</code></div><div class="line number4 index3 alt1"><code class="java plain">stringCollection.add(</code><code class="java string">"bbb1"</code><code class="java plain">);</code></div><div class="line number5 index4 alt2"><code class="java plain">stringCollection.add(</code><code class="java string">"aaa1"</code><code class="java plain">);</code></div><div class="line number6 index5 alt1"><code class="java plain">stringCollection.add(</code><code class="java string">"bbb3"</code><code class="java plain">);</code></div><div class="line number7 index6 alt2"><code class="java plain">stringCollection.add(</code><code class="java string">"ccc"</code><code class="java plain">);</code></div><div class="line number8 index7 alt1"><code class="java plain">stringCollection.add(</code><code class="java string">"bbb2"</code><code class="java plain">);</code></div><div class="line number9 index8 alt2"><code class="java plain">stringCollection.add(</code><code class="java string">"ddd1"</code><code class="java plain">);</code></div></div></td></tr></tbody></table></div></div>
+<p>Java 8中的Collections类的功能已经有所增强，你可以之直接通过调用Collections.stream()或者Collection.parallelStream()方法来创建一个流对象。下面的章节会解释这个最常用的操作。</p>
+<h4>Filter</h4>
+<p>Filter接受一个predicate接口类型的变量，并将所有流对象中的元素进行过滤。该操作是一个中间操作，因此它允许我们在返回结果的基础上再进行其他的流操作（forEach）。ForEach接受一个function接口类型的变量，用来执行对每一个元素的操作。ForEach是一个中止操作。它不返回流，所以我们不能再调用其他的流操作。</p>
+<div><div id="highlighter_181716" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">stringCollection</code></div><div class="line number2 index1 alt1"><code class="java spaces">    </code><code class="java plain">.stream()</code></div><div class="line number3 index2 alt2"><code class="java spaces">    </code><code class="java plain">.filter((s) -&gt; s.startsWith(</code><code class="java string">"a"</code><code class="java plain">))</code></div><div class="line number4 index3 alt1"><code class="java spaces">    </code><code class="java plain">.forEach(System.out::println);</code></div><div class="line number5 index4 alt2"> </div><div class="line number6 index5 alt1"><code class="java comments">// "aaa2", "aaa1"</code></div></div></td></tr></tbody></table></div></div>
+<h4>Sorted</h4>
+<p>Sorted是一个中间操作，能够返回一个排过序的流对象的视图。流对象中的元素会默认按照自然顺序进行排序，除非你自己指定一个Comparator接口来改变排序规则。</p>
+<div><div id="highlighter_47514" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">stringCollection</code></div><div class="line number2 index1 alt1"><code class="java spaces">    </code><code class="java plain">.stream()</code></div><div class="line number3 index2 alt2"><code class="java spaces">    </code><code class="java plain">.sorted()</code></div><div class="line number4 index3 alt1"><code class="java spaces">    </code><code class="java plain">.filter((s) -&gt; s.startsWith(</code><code class="java string">"a"</code><code class="java plain">))</code></div><div class="line number5 index4 alt2"><code class="java spaces">    </code><code class="java plain">.forEach(System.out::println);</code></div><div class="line number6 index5 alt1"> </div><div class="line number7 index6 alt2"><code class="java comments">// "aaa1", "aaa2"</code></div></div></td></tr></tbody></table></div></div>
+<p>一定要记住，sorted只是创建一个流对象排序的视图，而不会改变原来集合中元素的顺序。原来string集合中的元素顺序是没有改变的。</p>
+<div><div id="highlighter_690579" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">System.out.println(stringCollection);</code></div><div class="line number2 index1 alt1"><code class="java comments">// ddd2, aaa2, bbb1, aaa1, bbb3, ccc, bbb2, ddd1</code></div></div></td></tr></tbody></table></div></div>
+<h4>Map</h4>
+<p>map是一个对于流对象的中间操作，通过给定的方法，它能够把流对象中的每一个元素对应到另外一个对象上。下面的例子就演示了如何把每个string都转换成大写的string. 不但如此，你还可以把每一种对象映射成为其他类型。对于带泛型结果的流对象，具体的类型还要由传递给map的泛型方法来决定。</p>
+<div><div id="highlighter_119222" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">stringCollection</code></div><div class="line number2 index1 alt1"><code class="java spaces">    </code><code class="java plain">.stream()</code></div><div class="line number3 index2 alt2"><code class="java spaces">    </code><code class="java plain">.map(String::toUpperCase)</code></div><div class="line number4 index3 alt1"><code class="java spaces">    </code><code class="java plain">.sorted((a, b) -&gt; b.compareTo(a))</code></div><div class="line number5 index4 alt2"><code class="java spaces">    </code><code class="java plain">.forEach(System.out::println);</code></div><div class="line number6 index5 alt1"> </div><div class="line number7 index6 alt2"><code class="java comments">// "DDD2", "DDD1", "CCC", "BBB3", "BBB2", "AAA2", "AAA1"</code></div></div></td></tr></tbody></table></div></div>
+<h4>Match</h4>
+<p>匹配操作有多种不同的类型，都是用来判断某一种规则是否与流对象相互吻合的。所有的匹配操作都是终结操作，只返回一个boolean类型的结果。</p>
+<div><div id="highlighter_933683" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java keyword">boolean</code> <code class="java plain">anyStartsWithA = </code></div><div class="line number2 index1 alt1"><code class="java spaces">    </code><code class="java plain">stringCollection</code></div><div class="line number3 index2 alt2"><code class="java spaces">        </code><code class="java plain">.stream()</code></div><div class="line number4 index3 alt1"><code class="java spaces">        </code><code class="java plain">.anyMatch((s) -&gt; s.startsWith(</code><code class="java string">"a"</code><code class="java plain">));</code></div><div class="line number5 index4 alt2"> </div><div class="line number6 index5 alt1"><code class="java plain">System.out.println(anyStartsWithA);      </code><code class="java comments">// true</code></div><div class="line number7 index6 alt2"> </div><div class="line number8 index7 alt1"><code class="java keyword">boolean</code> <code class="java plain">allStartsWithA = </code></div><div class="line number9 index8 alt2"><code class="java spaces">    </code><code class="java plain">stringCollection</code></div><div class="line number10 index9 alt1"><code class="java spaces">        </code><code class="java plain">.stream()</code></div><div class="line number11 index10 alt2"><code class="java spaces">        </code><code class="java plain">.allMatch((s) -&gt; s.startsWith(</code><code class="java string">"a"</code><code class="java plain">));</code></div><div class="line number12 index11 alt1"> </div><div class="line number13 index12 alt2"><code class="java plain">System.out.println(allStartsWithA);      </code><code class="java comments">// false</code></div><div class="line number14 index13 alt1"> </div><div class="line number15 index14 alt2"><code class="java keyword">boolean</code> <code class="java plain">noneStartsWithZ = </code></div><div class="line number16 index15 alt1"><code class="java spaces">    </code><code class="java plain">stringCollection</code></div><div class="line number17 index16 alt2"><code class="java spaces">        </code><code class="java plain">.stream()</code></div><div class="line number18 index17 alt1"><code class="java spaces">        </code><code class="java plain">.noneMatch((s) -&gt; s.startsWith(</code><code class="java string">"z"</code><code class="java plain">));</code></div><div class="line number19 index18 alt2"> </div><div class="line number20 index19 alt1"><code class="java plain">System.out.println(noneStartsWithZ);      </code><code class="java comments">// true</code></div></div></td></tr></tbody></table></div></div>
+<h4>Count</h4>
+<p>Count是一个终结操作，它的作用是返回一个数值，用来标识当前流对象中包含的元素数量。</p>
+<div><div id="highlighter_589828" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java keyword">long</code> <code class="java plain">startsWithB = </code></div><div class="line number2 index1 alt1"><code class="java spaces">    </code><code class="java plain">stringCollection</code></div><div class="line number3 index2 alt2"><code class="java spaces">        </code><code class="java plain">.stream()</code></div><div class="line number4 index3 alt1"><code class="java spaces">        </code><code class="java plain">.filter((s) -&gt; s.startsWith(</code><code class="java string">"b"</code><code class="java plain">))</code></div><div class="line number5 index4 alt2"><code class="java spaces">        </code><code class="java plain">.count();</code></div><div class="line number6 index5 alt1"> </div><div class="line number7 index6 alt2"><code class="java plain">System.out.println(startsWithB);    </code><code class="java comments">// 3</code></div></div></td></tr></tbody></table></div></div>
+<h4>Reduce</h4>
+<p>该操作是一个终结操作，它能够通过某一个方法，对元素进行削减操作。该操作的结果会放在一个Optional变量里返回。</p>
+<div><div id="highlighter_923466" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">Optional&lt;String&gt; reduced =</code></div><div class="line number2 index1 alt1"><code class="java spaces">    </code><code class="java plain">stringCollection</code></div><div class="line number3 index2 alt2"><code class="java spaces">        </code><code class="java plain">.stream()</code></div><div class="line number4 index3 alt1"><code class="java spaces">        </code><code class="java plain">.sorted()</code></div><div class="line number5 index4 alt2"><code class="java spaces">        </code><code class="java plain">.reduce((s1, s2) -&gt; s1 + </code><code class="java string">"#"</code> <code class="java plain">+ s2);</code></div><div class="line number6 index5 alt1"> </div><div class="line number7 index6 alt2"><code class="java plain">reduced.ifPresent(System.out::println);</code></div><div class="line number8 index7 alt1"><code class="java comments">// "aaa1#aaa2#bbb1#bbb2#bbb3#ccc#ddd1#ddd2"</code></div></div></td></tr></tbody></table></div></div>
+<h3>Parallel Streams</h3>
+<p>像上面所说的，流操作可以是顺序的，也可以是并行的。顺序操作通过单线程执行，而并行操作则通过多线程执行。</p>
+<p>下面的例子就演示了如何使用并行流进行操作来提高运行效率，代码非常简单。</p>
+<p>首先我们创建一个大的list，里面的元素都是唯一的：</p>
+<div><div id="highlighter_435623" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java keyword">int</code> <code class="java plain">max = </code><code class="java value">1000000</code><code class="java plain">;</code></div><div class="line number2 index1 alt1"><code class="java plain">List&lt;String&gt; values = </code><code class="java keyword">new</code> <code class="java plain">ArrayList&lt;&gt;(max);</code></div><div class="line number3 index2 alt2"><code class="java keyword">for</code> <code class="java plain">(</code><code class="java keyword">int</code> <code class="java plain">i = </code><code class="java value">0</code><code class="java plain">; i &lt; max; i++) {</code></div><div class="line number4 index3 alt1"><code class="java spaces">    </code><code class="java plain">UUID uuid = UUID.randomUUID();</code></div><div class="line number5 index4 alt2"><code class="java spaces">    </code><code class="java plain">values.add(uuid.toString());</code></div><div class="line number6 index5 alt1"><code class="java plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>现在，我们测量一下对这个集合进行排序所使用的时间。</p>
+<h4>顺序排序</h4>
+<div><div id="highlighter_287347" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java keyword">long</code> <code class="java plain">t0 = System.nanoTime();</code></div><div class="line number2 index1 alt1"> </div><div class="line number3 index2 alt2"><code class="java keyword">long</code> <code class="java plain">count = values.stream().sorted().count();</code></div><div class="line number4 index3 alt1"><code class="java plain">System.out.println(count);</code></div><div class="line number5 index4 alt2"> </div><div class="line number6 index5 alt1"><code class="java keyword">long</code> <code class="java plain">t1 = System.nanoTime();</code></div><div class="line number7 index6 alt2"> </div><div class="line number8 index7 alt1"><code class="java keyword">long</code> <code class="java plain">millis = TimeUnit.NANOSECONDS.toMillis(t1 - t0);</code></div><div class="line number9 index8 alt2"><code class="java plain">System.out.println(String.format(</code><code class="java string">"sequential sort took: %d ms"</code><code class="java plain">, millis));</code></div><div class="line number10 index9 alt1"> </div><div class="line number11 index10 alt2"><code class="java comments">// sequential sort took: 899 ms</code></div></div></td></tr></tbody></table></div></div>
+<h4>并行排序</h4>
+<div><div id="highlighter_253167" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java keyword">long</code> <code class="java plain">t0 = System.nanoTime();</code></div><div class="line number2 index1 alt1"> </div><div class="line number3 index2 alt2"><code class="java keyword">long</code> <code class="java plain">count = values.parallelStream().sorted().count();</code></div><div class="line number4 index3 alt1"><code class="java plain">System.out.println(count);</code></div><div class="line number5 index4 alt2"> </div><div class="line number6 index5 alt1"><code class="java keyword">long</code> <code class="java plain">t1 = System.nanoTime();</code></div><div class="line number7 index6 alt2"> </div><div class="line number8 index7 alt1"><code class="java keyword">long</code> <code class="java plain">millis = TimeUnit.NANOSECONDS.toMillis(t1 - t0);</code></div><div class="line number9 index8 alt2"><code class="java plain">System.out.println(String.format(</code><code class="java string">"parallel sort took: %d ms"</code><code class="java plain">, millis));</code></div><div class="line number10 index9 alt1"> </div><div class="line number11 index10 alt2"><code class="java comments">// parallel sort took: 472 ms</code></div></div></td></tr></tbody></table></div></div>
+<p>如你所见，所有的代码段几乎都相同，唯一的不同就是把stream()改成了parallelStream(), 结果并行排序快了50%。</p>
+<h3>Map</h3>
+<p>正如前面已经提到的那样，map是不支持流操作的。而更新后的map现在则支持多种实用的新方法，来完成常规的任务。</p>
+<div><div id="highlighter_316373" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">Map&lt;Integer, String&gt; map = </code><code class="java keyword">new</code> <code class="java plain">HashMap&lt;&gt;();</code></div><div class="line number2 index1 alt1"> </div><div class="line number3 index2 alt2"><code class="java keyword">for</code> <code class="java plain">(</code><code class="java keyword">int</code> <code class="java plain">i = </code><code class="java value">0</code><code class="java plain">; i &lt; </code><code class="java value">10</code><code class="java plain">; i++) {</code></div><div class="line number4 index3 alt1"><code class="java spaces">    </code><code class="java plain">map.putIfAbsent(i, </code><code class="java string">"val"</code> <code class="java plain">+ i);</code></div><div class="line number5 index4 alt2"><code class="java plain">}</code></div><div class="line number6 index5 alt1"> </div><div class="line number7 index6 alt2"><code class="java plain">map.forEach((id, val) -&gt; System.out.println(val));</code></div></div></td></tr></tbody></table></div></div>
+<p>上面的代码风格是完全自解释的：putIfAbsent避免我们将null写入；forEach接受一个消费者对象，从而将操作实施到每一个map中的值上。</p>
+<p>下面的这个例子展示了如何使用函数来计算map的编码</p>
+<div><div id="highlighter_367866" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">map.computeIfPresent(</code><code class="java value">3</code><code class="java plain">, (num, val) -&gt; val + num);</code></div><div class="line number2 index1 alt1"><code class="java plain">map.get(</code><code class="java value">3</code><code class="java plain">);             </code><code class="java comments">// val33</code></div><div class="line number3 index2 alt2"> </div><div class="line number4 index3 alt1"><code class="java plain">map.computeIfPresent(</code><code class="java value">9</code><code class="java plain">, (num, val) -&gt; </code><code class="java keyword">null</code><code class="java plain">);</code></div><div class="line number5 index4 alt2"><code class="java plain">map.containsKey(</code><code class="java value">9</code><code class="java plain">);     </code><code class="java comments">// false</code></div><div class="line number6 index5 alt1"> </div><div class="line number7 index6 alt2"><code class="java plain">map.computeIfAbsent(</code><code class="java value">23</code><code class="java plain">, num -&gt; </code><code class="java string">"val"</code> <code class="java plain">+ num);</code></div><div class="line number8 index7 alt1"><code class="java plain">map.containsKey(</code><code class="java value">23</code><code class="java plain">);    </code><code class="java comments">// true</code></div><div class="line number9 index8 alt2"> </div><div class="line number10 index9 alt1"><code class="java plain">map.computeIfAbsent(</code><code class="java value">3</code><code class="java plain">, num -&gt; </code><code class="java string">"bam"</code><code class="java plain">);</code></div><div class="line number11 index10 alt2"><code class="java plain">map.get(</code><code class="java value">3</code><code class="java plain">);             </code><code class="java comments">// val33</code></div></div></td></tr></tbody></table></div></div>
+<p>接下来，我们将学习，当给定一个key值时，如何把一个实例从对应的key中移除：</p>
+<p> </p>
+<div><div id="highlighter_959199" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">map.remove(</code><code class="java value">3</code><code class="java plain">, </code><code class="java string">"val3"</code><code class="java plain">);</code></div><div class="line number2 index1 alt1"><code class="java plain">map.get(</code><code class="java value">3</code><code class="java plain">);             </code><code class="java comments">// val33</code></div><div class="line number3 index2 alt2"> </div><div class="line number4 index3 alt1"><code class="java plain">map.remove(</code><code class="java value">3</code><code class="java plain">, </code><code class="java string">"val33"</code><code class="java plain">);</code></div><div class="line number5 index4 alt2"><code class="java plain">map.get(</code><code class="java value">3</code><code class="java plain">);             </code><code class="java comments">// null</code></div></div></td></tr></tbody></table></div></div>
+<p>另一个有用的方法：</p>
+<div><div id="highlighter_279257" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">map.getOrDefault(</code><code class="java value">42</code><code class="java plain">, </code><code class="java string">"not found"</code><code class="java plain">);  </code><code class="java comments">// not found</code></div></div></td></tr></tbody></table></div></div>
+<p>将map中的实例合并也是非常容易的：</p>
+<div><div id="highlighter_647373" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">map.merge(</code><code class="java value">9</code><code class="java plain">, </code><code class="java string">"val9"</code><code class="java plain">, (value, newValue) -&gt; value.concat(newValue));</code></div><div class="line number2 index1 alt1"><code class="java plain">map.get(</code><code class="java value">9</code><code class="java plain">);             </code><code class="java comments">// val9</code></div><div class="line number3 index2 alt2"> </div><div class="line number4 index3 alt1"><code class="java plain">map.merge(</code><code class="java value">9</code><code class="java plain">, </code><code class="java string">"concat"</code><code class="java plain">, (value, newValue) -&gt; value.concat(newValue));</code></div><div class="line number5 index4 alt2"><code class="java plain">map.get(</code><code class="java value">9</code><code class="java plain">);             </code><code class="java comments">// val9concat</code></div></div></td></tr></tbody></table></div></div>
+<p>合并操作先看map中是否没有特定的key/value存在，如果是，则把key/value存入map，否则merging函数就会被调用，对现有的数值进行修改。</p>
+<h3>时间日期API</h3>
+<p>Java 8 包含了全新的时间日期API，这些功能都放在了java.time包下。新的时间日期API是基于Joda-Time库开发的，但是也不尽相同。下面的例子就涵盖了大多数新的API的重要部分。</p>
+<h4>Clock</h4>
+<p>Clock提供了对当前时间和日期的访问功能。Clock是对当前时区敏感的，并可用于替代System.currentTimeMillis()方法来获取当前的毫秒时间。当前时间线上的时刻可以用Instance类来表示。Instance也能够用于创建原先的java.util.Date对象。</p>
+<div><div id="highlighter_80872" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">Clock clock = Clock.systemDefaultZone();</code></div><div class="line number2 index1 alt1"><code class="java keyword">long</code> <code class="java plain">millis = clock.millis();</code></div><div class="line number3 index2 alt2"> </div><div class="line number4 index3 alt1"><code class="java plain">Instant instant = clock.instant();</code></div><div class="line number5 index4 alt2"><code class="java plain">Date legacyDate = Date.from(instant);   </code><code class="java comments">// legacy java.util.Date</code></div></div></td></tr></tbody></table></div></div>
+<h4>Timezones</h4>
+<p>时区类可以用一个ZoneId来表示。时区类的对象可以通过静态工厂方法方便地获取。时区类还定义了一个偏移量，用来在当前时刻或某时间与目标时区时间之间进行转换。</p>
+<div><div id="highlighter_703572" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">System.out.println(ZoneId.getAvailableZoneIds());</code></div><div class="line number2 index1 alt1"><code class="java comments">// prints all available timezone ids</code></div><div class="line number3 index2 alt2"> </div><div class="line number4 index3 alt1"><code class="java plain">ZoneId zone1 = ZoneId.of(</code><code class="java string">"Europe/Berlin"</code><code class="java plain">);</code></div><div class="line number5 index4 alt2"><code class="java plain">ZoneId zone2 = ZoneId.of(</code><code class="java string">"Brazil/East"</code><code class="java plain">);</code></div><div class="line number6 index5 alt1"><code class="java plain">System.out.println(zone1.getRules());</code></div><div class="line number7 index6 alt2"><code class="java plain">System.out.println(zone2.getRules());</code></div><div class="line number8 index7 alt1"> </div><div class="line number9 index8 alt2"><code class="java comments">// ZoneRules[currentStandardOffset=+01:00]</code></div><div class="line number10 index9 alt1"><code class="java comments">// ZoneRules[currentStandardOffset=-03:00]</code></div></div></td></tr></tbody></table></div></div>
+<h4>LocalTime</h4>
+<p>本地时间类表示一个没有指定时区的时间，例如，10 p.m.或者17：30:15，下面的例子会用上面的例子定义的时区创建两个本地时间对象。然后我们会比较两个时间，并计算它们之间的小时和分钟的不同。</p>
+<div><div id="highlighter_271828" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">LocalTime now1 = LocalTime.now(zone1);</code></div><div class="line number2 index1 alt1"><code class="java plain">LocalTime now2 = LocalTime.now(zone2);</code></div><div class="line number3 index2 alt2"> </div><div class="line number4 index3 alt1"><code class="java plain">System.out.println(now1.isBefore(now2));  </code><code class="java comments">// false</code></div><div class="line number5 index4 alt2"> </div><div class="line number6 index5 alt1"><code class="java keyword">long</code> <code class="java plain">hoursBetween = ChronoUnit.HOURS.between(now1, now2);</code></div><div class="line number7 index6 alt2"><code class="java keyword">long</code> <code class="java plain">minutesBetween = ChronoUnit.MINUTES.between(now1, now2);</code></div><div class="line number8 index7 alt1"> </div><div class="line number9 index8 alt2"><code class="java plain">System.out.println(hoursBetween);       </code><code class="java comments">// -3</code></div><div class="line number10 index9 alt1"><code class="java plain">System.out.println(minutesBetween);     </code><code class="java comments">// -239</code></div></div></td></tr></tbody></table></div></div>
+<p>LocalTime是由多个工厂方法组成，其目的是为了简化对时间对象实例的创建和操作，包括对时间字符串进行解析的操作。</p>
+<div><div id="highlighter_101292" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">LocalTime late = LocalTime.of(</code><code class="java value">23</code><code class="java plain">, </code><code class="java value">59</code><code class="java plain">, </code><code class="java value">59</code><code class="java plain">);</code></div><div class="line number2 index1 alt1"><code class="java plain">System.out.println(late);       </code><code class="java comments">// 23:59:59</code></div><div class="line number3 index2 alt2"> </div><div class="line number4 index3 alt1"><code class="java plain">DateTimeFormatter germanFormatter =</code></div><div class="line number5 index4 alt2"><code class="java spaces">    </code><code class="java plain">DateTimeFormatter</code></div><div class="line number6 index5 alt1"><code class="java spaces">        </code><code class="java plain">.ofLocalizedTime(FormatStyle.SHORT)</code></div><div class="line number7 index6 alt2"><code class="java spaces">        </code><code class="java plain">.withLocale(Locale.GERMAN);</code></div><div class="line number8 index7 alt1"> </div><div class="line number9 index8 alt2"><code class="java plain">LocalTime leetTime = LocalTime.parse(</code><code class="java string">"13:37"</code><code class="java plain">, germanFormatter);</code></div><div class="line number10 index9 alt1"><code class="java plain">System.out.println(leetTime);   </code><code class="java comments">// 13:37</code></div></div></td></tr></tbody></table></div></div>
+<h4>LocalDate</h4>
+<p>本地时间表示了一个独一无二的时间，例如：2014-03-11。这个时间是不可变的，与LocalTime是同源的。下面的例子演示了如何通过加减日，月，年等指标来计算新的日期。记住，每一次操作都会返回一个新的时间对象。</p>
+<div><div id="highlighter_493387" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">LocalDate today = LocalDate.now();</code></div><div class="line number2 index1 alt1"><code class="java plain">LocalDate tomorrow = today.plus(</code><code class="java value">1</code><code class="java plain">, ChronoUnit.DAYS);</code></div><div class="line number3 index2 alt2"><code class="java plain">LocalDate yesterday = tomorrow.minusDays(</code><code class="java value">2</code><code class="java plain">);</code></div><div class="line number4 index3 alt1"> </div><div class="line number5 index4 alt2"><code class="java plain">LocalDate independenceDay = LocalDate.of(</code><code class="java value">2014</code><code class="java plain">, Month.JULY, </code><code class="java value">4</code><code class="java plain">);</code></div><div class="line number6 index5 alt1"><code class="java plain">DayOfWeek dayOfWeek = independenceDay.getDayOfWeek();</code></div><div class="line number7 index6 alt2"><code class="java plain">System.out.println(dayOfWeek);    </code><code class="java comments">// FRIDAY&lt;span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 13px; line-height: 19px;"&gt;Parsing a LocalDate from a string is just as simple as parsing a LocalTime:&lt;/span&gt;</code></div></div></td></tr></tbody></table></div></div>
+<p>解析字符串并形成LocalDate对象，这个操作和解析LocalTime一样简单。</p>
+<div><div id="highlighter_197727" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">DateTimeFormatter germanFormatter =</code></div><div class="line number2 index1 alt1"><code class="java spaces">    </code><code class="java plain">DateTimeFormatter</code></div><div class="line number3 index2 alt2"><code class="java spaces">        </code><code class="java plain">.ofLocalizedDate(FormatStyle.MEDIUM)</code></div><div class="line number4 index3 alt1"><code class="java spaces">        </code><code class="java plain">.withLocale(Locale.GERMAN);</code></div><div class="line number5 index4 alt2"> </div><div class="line number6 index5 alt1"><code class="java plain">LocalDate xmas = LocalDate.parse(</code><code class="java string">"24.12.2014"</code><code class="java plain">, germanFormatter);</code></div><div class="line number7 index6 alt2"><code class="java plain">System.out.println(xmas);   </code><code class="java comments">// 2014-12-24</code></div></div></td></tr></tbody></table></div></div>
+<h4>LocalDateTime</h4>
+<p>LocalDateTime表示的是日期-时间。它将刚才介绍的日期对象和时间对象结合起来，形成了一个对象实例。LocalDateTime是不可变的，与LocalTime和LocalDate的工作原理相同。我们可以通过调用方法来获取日期时间对象中特定的数据域。</p>
+<div><div id="highlighter_716289" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">LocalDateTime sylvester = LocalDateTime.of(</code><code class="java value">2014</code><code class="java plain">, Month.DECEMBER, </code><code class="java value">31</code><code class="java plain">, </code><code class="java value">23</code><code class="java plain">, </code><code class="java value">59</code><code class="java plain">, </code><code class="java value">59</code><code class="java plain">);</code></div><div class="line number2 index1 alt1"> </div><div class="line number3 index2 alt2"><code class="java plain">DayOfWeek dayOfWeek = sylvester.getDayOfWeek();</code></div><div class="line number4 index3 alt1"><code class="java plain">System.out.println(dayOfWeek);      </code><code class="java comments">// WEDNESDAY</code></div><div class="line number5 index4 alt2"> </div><div class="line number6 index5 alt1"><code class="java plain">Month month = sylvester.getMonth();</code></div><div class="line number7 index6 alt2"><code class="java plain">System.out.println(month);          </code><code class="java comments">// DECEMBER</code></div><div class="line number8 index7 alt1"> </div><div class="line number9 index8 alt2"><code class="java keyword">long</code> <code class="java plain">minuteOfDay = sylvester.getLong(ChronoField.MINUTE_OF_DAY);</code></div><div class="line number10 index9 alt1"><code class="java plain">System.out.println(minuteOfDay);    </code><code class="java comments">// 1439</code></div></div></td></tr></tbody></table></div></div>
+<p>如果再加上的时区信息，LocalDateTime能够被转换成Instance实例。Instance能够被转换成以前的java.util.Date对象。</p>
+<div><div id="highlighter_8926" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">Instant instant = sylvester</code></div><div class="line number2 index1 alt1"><code class="java spaces">        </code><code class="java plain">.atZone(ZoneId.systemDefault())</code></div><div class="line number3 index2 alt2"><code class="java spaces">        </code><code class="java plain">.toInstant();</code></div><div class="line number4 index3 alt1"> </div><div class="line number5 index4 alt2"><code class="java plain">Date legacyDate = Date.from(instant);</code></div><div class="line number6 index5 alt1"><code class="java plain">System.out.println(legacyDate);     </code><code class="java comments">// Wed Dec 31 23:59:59 CET 2014</code></div></div></td></tr></tbody></table></div></div>
+<p>格式化日期-时间对象就和格式化日期对象或者时间对象一样。除了使用预定义的格式以外，我们还可以创建自定义的格式化对象，然后匹配我们自定义的格式。</p>
+<div><div id="highlighter_417878" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">DateTimeFormatter formatter =</code></div><div class="line number2 index1 alt1"><code class="java spaces">    </code><code class="java plain">DateTimeFormatter</code></div><div class="line number3 index2 alt2"><code class="java spaces">        </code><code class="java plain">.ofPattern(</code><code class="java string">"MMM dd, yyyy - HH:mm"</code><code class="java plain">);</code></div><div class="line number4 index3 alt1"> </div><div class="line number5 index4 alt2"><code class="java plain">LocalDateTime parsed = LocalDateTime.parse(</code><code class="java string">"Nov 03, 2014 - 07:13"</code><code class="java plain">, formatter);</code></div><div class="line number6 index5 alt1"><code class="java plain">String string = formatter.format(parsed);</code></div><div class="line number7 index6 alt2"><code class="java plain">System.out.println(string);     </code><code class="java comments">// Nov 03, 2014 - 07:13</code></div></div></td></tr></tbody></table></div></div>
+<p>不同于java.text.NumberFormat，新的DateTimeFormatter类是不可变的，也是线程安全的。</p>
+<p>更多的细节，请看<a href="http://download.java.net/jdk8/docs/api/java/time/format/DateTimeFormatter.html" class="external" rel="nofollow" target="_blank">这里</a></p>
+<p> </p>
+<h3><span style="font-size: 1.17em;">Annotations</span></h3>
+<p>Java 8中的注解是可重复的。让我们直接深入看看例子，弄明白它是什么意思。</p>
+<p>首先，我们定义一个包装注解，它包括了一个实际注解的数组</p>
+<div><div id="highlighter_218033" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java color2">@interface</code> <code class="java plain">Hints {</code></div><div class="line number2 index1 alt1"><code class="java spaces">    </code><code class="java plain">Hint[] value();</code></div><div class="line number3 index2 alt2"><code class="java plain">}</code></div><div class="line number4 index3 alt1"> </div><div class="line number5 index4 alt2"><code class="java color1">@Repeatable</code><code class="java plain">(Hints.</code><code class="java keyword">class</code><code class="java plain">)</code></div><div class="line number6 index5 alt1"><code class="java color2">@interface</code> <code class="java plain">Hint {</code></div><div class="line number7 index6 alt2"><code class="java spaces">    </code><code class="java plain">String value();</code></div><div class="line number8 index7 alt1"><code class="java plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>只要在前面加上注解名：@Repeatable，Java 8 允许我们对同一类型使用多重注解，</p>
+<p>变体1：使用注解容器（老方法）</p>
+<div><div id="highlighter_908430" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java color1">@Hints</code><code class="java plain">({</code><code class="java color1">@Hint</code><code class="java plain">(</code><code class="java string">"hint1"</code><code class="java plain">), </code><code class="java color1">@Hint</code><code class="java plain">(</code><code class="java string">"hint2"</code><code class="java plain">)})</code></div><div class="line number2 index1 alt1"><code class="java keyword">class</code> <code class="java plain">Person {}</code></div></div></td></tr></tbody></table></div></div>
+<p>变体2：使用可重复注解（新方法）</p>
+<div><div id="highlighter_244845" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java color1">@Hint</code><code class="java plain">(</code><code class="java string">"hint1"</code><code class="java plain">)</code></div><div class="line number2 index1 alt1"><code class="java color1">@Hint</code><code class="java plain">(</code><code class="java string">"hint2"</code><code class="java plain">)</code></div><div class="line number3 index2 alt2"><code class="java keyword">class</code> <code class="java plain">Person {}</code></div></div></td></tr></tbody></table></div></div>
+<p>使用变体2，Java编译器能够在内部自动对@Hint进行设置。这对于通过反射来读取注解信息来说，是非常重要的。</p>
+<div><div id="highlighter_669961" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">Hint hint = Person.</code><code class="java keyword">class</code><code class="java plain">.getAnnotation(Hint.</code><code class="java keyword">class</code><code class="java plain">);</code></div><div class="line number2 index1 alt1"><code class="java plain">System.out.println(hint);                   </code><code class="java comments">// null</code></div><div class="line number3 index2 alt2"> </div><div class="line number4 index3 alt1"><code class="java plain">Hints hints1 = Person.</code><code class="java keyword">class</code><code class="java plain">.getAnnotation(Hints.</code><code class="java keyword">class</code><code class="java plain">);</code></div><div class="line number5 index4 alt2"><code class="java plain">System.out.println(hints1.value().length);  </code><code class="java comments">// 2</code></div><div class="line number6 index5 alt1"> </div><div class="line number7 index6 alt2"><code class="java plain">Hint[] hints2 = Person.</code><code class="java keyword">class</code><code class="java plain">.getAnnotationsByType(Hint.</code><code class="java keyword">class</code><code class="java plain">);</code></div><div class="line number8 index7 alt1"><code class="java plain">System.out.println(hints2.length);          </code><code class="java comments">// 2</code></div></div></td></tr></tbody></table></div></div>
+<p>尽管我们绝对不会在Person类上声明@Hints注解，但是它的信息仍然可以通过getAnnotation(Hints.class)来读取。并且，getAnnotationsByType方法会更方便，因为它赋予了所有@Hints注解标注的方法直接的访问权限。</p>
+<div><div id="highlighter_68124" class="syntaxhighlighter notranslate java"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java color1">@Target</code><code class="java plain">({ElementType.TYPE_PARAMETER, ElementType.TYPE_USE})</code></div><div class="line number2 index1 alt1"><code class="java color2">@interface</code> <code class="java plain">MyAnnotation {}</code></div></div></td></tr></tbody></table></div></div>
+<h3>先到这里</h3>
+<p>我的Java 8编程指南就到此告一段落。当然，还有很多内容需要进一步研究和说明。这就需要靠读者您来对JDK 8进行探究了，例如：Arrays.parallelSort, StampedLock和CompletableFuture等等 ———— 我这里只是举几个例子而已。</p>
+<p>我希望这个博文能够对您有所帮助，也希望您阅读愉快。完整的教程源代码放在了<a href="https://github.com/winterbe/java8-tutorial" class="external" rel="nofollow" target="_blank">GitHub</a>上。您可以尽情地<a href="https://github.com/winterbe/java8-tutorial/fork" class="external" rel="nofollow" target="_blank">fork</a>，并请通过<a href="https://twitter.com/benontherun" class="external" rel="nofollow" target="_blank">Twitter</a>告诉我您的反馈。</p>
+
+        
+        原文链接： <a target="_blank" href="http://winterbe.com/posts/2014/03/16/java-8-tutorial/" class="external" rel="nofollow">winterbe</a>    翻译： <a href="http://www.importnew.com/"> ImportNew.com </a> - <a href="http://www.importnew.com/author/huangxiaofei">黄小非</a><br>译文链接： <a href="#">http://www.importnew.com/10360.html</a><br>[ <span style="color:#ff0000"><b>转载请保留原文出处、译者和译文链接。</b></span>]<br><br>
+        <!-- BEGIN #author-bio -->
+
+<div id="author-bio">
+	
+	<h3 class="widget-title">
+	关于作者： <a href="http://www.importnew.com/author/huangxiaofei">黄小非</a>
+	</h3>
+	<div class="alignleft">
+		<a href="http://www.importnew.com/author/huangxiaofei">
+			<img src="index_files/13.thumbnail.jpg" alt="黄小非" class="photo" height="80" width="56">		</a>
+	</div>
+	<p>码农级科学家，半吊子艺术爱好者，逻辑和原则控。（新浪微博：<a href="http://weibo.com/huangxiaofei2002" class="external" rel="nofollow" target="_blank"><b>@黄小非</b></a>）</p>
+	<p>
+		<a style="text-decoration: none;" href="http://www.importnew.com/author/huangxiaofei">查看黄小非的更多文章 &gt;&gt; </a>
+	</p>
+	<div class="clear"></div>
+	
+</div>
+
+<!-- END #author-bio -->
+	</div>
+	<!-- END .entry -->
+
+
+<!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_24x24">
+<a class="jiathis_button_tsina" title="分享到微博"><span class="jiathis_txt jtico jtico_tsina"></span></a>
+<a class="jiathis_button_weixin" title="分享到微信"><span class="jiathis_txt jtico jtico_weixin"></span></a>
+<a class="jiathis_button_qzone" title="分享到QQ空间"><span class="jiathis_txt jtico jtico_qzone"></span></a>
+<a class="jiathis_button_fb" title="分享到Facebook"><span class="jiathis_txt jtico jtico_fb"></span></a>
+<a class="jiathis_button_renren" title="分享到人人网"><span class="jiathis_txt jtico jtico_renren"></span></a>
+<a class="jiathis_button_douban" title="分享到豆瓣"><span class="jiathis_txt jtico jtico_douban"></span></a>
+<a class="jiathis_button_googleplus" title="分享到Google+"><span class="jiathis_txt jtico jtico_googleplus"></span></a>
+<a class="jiathis_button_readitlater"></a>
+<a class="jiathis_button_evernote" title="分享到印象笔记"><span class="jiathis_txt jtico jtico_evernote"></span></a>
+<a class="jiathis_button_ydnote" title="分享到有道云笔记"><span class="jiathis_txt jtico jtico_ydnote"></span></a>
+<a href="http://www.jiathis.com/share?uid=1745061" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis external" target="_blank" rel="nofollow"></a>
+<a class="jiathis_counter_style"><span class="jiathis_button_expanded jiathis_counter jiathis_bubble_style" id="jiathis_counter_59" title="累计分享364次">364</span></a>
+</div>
+
+
+<script type="text/javascript"><!--
+/* Script removed by snapshot save */
+--></script>
+<script type="text/javascript" src="index_files/jia.js" charset="utf-8"></script><script type="text/javascript" src="index_files/plugin.client.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+<br><br>
+<div id="text-13">			<div class="textwidget"><p><a href="http://blog.jobbole.com/106093/" target="_blank" class="external" rel="nofollow"><img src="index_files/bfdcef89gw1f9cf7iwi24j20h802sjrz.jpg"></a></p>
+</div>
+		</div>
+</div>
+<!-- END .post -->	
+	
+<script type="text/javascript"><!--
+/* Script removed by snapshot save */
+--></script>
+<h3 class="related_post_title">相关文章</h3><ul class="related_post wp_rp" style="visibility:visible;"><li position="0"><a href="http://www.importnew.com/11725.html">8张图理解Java</a></li><li position="1"><a href="http://www.importnew.com/22633.html">Google Java编程风格指南</a></li><li position="2"><a href="http://www.importnew.com/22064.html">我的Java后端书架 (2016年暖冬4.0版)</a></li><li position="3"><a href="http://www.importnew.com/22019.html">也谈IO模型</a></li><li position="4"><a href="http://www.importnew.com/21839.html">用Java做音乐识别软件</a></li><li position="5"><a href="http://www.importnew.com/21828.html">JAVA程序员必知的一些事</a></li><li position="6"><a href="http://www.importnew.com/21832.html">Java对象初始化顺序</a></li><li position="7"><a href="http://www.importnew.com/21756.html">JAVA要死了吗？不！我来告诉你为什么！</a></li><li position="8"><a href="http://www.importnew.com/21527.html">每个程序员都必读的10篇文章</a></li><li position="9"><a href="http://www.importnew.com/21510.html">关于Java的10个谎言 </a></li></ul>
+
+			
+	
+<!-- BEGIN #respond -->
+<div id="respond">
+
+	<h3 class="widget-title">发表评论</h3>
+	
+	<!-- BEGIN .cancel-comment-reply -->
+	<p class="cancel-comment-reply">
+		
+		<a rel="nofollow" id="cancel-comment-reply-link" href="#respond" style="display:none;">点击这里取消回复。</a>		
+	</p>
+	<!-- END .cancel-comment-reply -->
+
+		
+	<!-- BEGIN #comment-form -->
+	<form action="http://www.importnew.com/wp-comments-post.php" method="post" id="comment-form">
+		
+		<fieldset>
+		
+			<legend class="none">Comment form</legend>
+			
+			<!-- BEGIN .container -->
+			<div class="container">
+			
+							
+				<div class="grid-4 margin-20">
+					<label for="author">Name<span class="red">*</span></label>
+				</div>
+				
+				<div class="grid-4 margin-20">
+					<div class="input-wrapper"><input name="author" id="author" tabindex="1" size="30" class="required" placeholder="姓名" type="text"></div>
+				</div>
+				<div class="clear"></div>
+				
+				<div class="grid-4 margin-20">
+					<label for="email">邮箱<span class="red">*</span></label>
+				</div>
+				
+				<div class="grid-4 margin-20">
+					<div class="input-wrapper"><input name="email" id="email" tabindex="2" size="30" class="required email" placeholder="请填写邮箱" type="email"></div>
+				</div>
+				<div class="clear"></div>
+				
+				<div class="grid-4 margin-20">
+					<label for="url">网站 (请以 http://开头)</label>
+				</div>
+				
+				<div class="grid-4 margin-20">
+					<div class="input-wrapper"><input name="url" id="url" tabindex="3" size="30" placeholder="请填写网站地址" type="url"></div>
+				</div>
+				<div class="clear"></div>
+				
+								
+				<div class="grid-8 margin-20">
+					<label for="comment" class="none margin-20">评论内容<span class="red">*</span></label>
+					<div class="input-wrapper"><textarea name="comment" id="comment" rows="20" cols="30" class="required" tabindex="4" onkeydown="if(event.ctrlKey &amp;&amp; event.keyCode==13){document.getElementById('comment-form-submit').click(); return false;}" placeholder="请填写评论内容"></textarea></div>
+				</div>
+				<div class="clear"></div>
+				
+			</div>
+			<!-- END .container -->
+			
+			<p>(<span class="red">*</span>) 表示必填项</p>
+			<p></p><div class="submit-wrapper"><a id="comment-form-submit" class="submit">提交评论</a></div><p></p>
+			<input name="comment_post_ID" value="10360" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+			<p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="b23d995089" type="hidden"></p>			
+		</fieldset>
+		
+	</form>
+	<!-- END #comment-form -->
+	
+	
+</div>
+<!-- END #respond -->
+
+	<h3 id="comments" class="widget-title">20 条评论</h3>
+	
+	<!-- BEGIN .commentlist -->
+	<ol class="commentlist">
+	
+				<li class="comment even thread-even depth-1 parent ckrating_hotly_debated" id="comment-21205">
+				<div id="div-comment-21205" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn">小麦</cite> <span class="says">说道：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="#comment-21205">
+			2014/03/21 上午 9:47</a>		</div>
+
+		<div style="background-color:#FFF0F5 !important"><p>接口中有方法实现不就成了抽象类了么？</p>
+</div><p>Hot debate. What do you think? <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="up-21205" src="index_files/1_14_up.png" alt="Thumb up" onclick="" title="赞同"> <span id="karma-21205-up" style="font-size:12px; color:#009933;">9</span> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="down-21205" src="index_files/1_14_down.png" alt="Thumb down" onclick="" title="反对"> <span id="karma-21205-down" style="font-size:12px; color:#990033;">7</span></p>
+		<div class="reply">
+		<a class="comment-reply-link" href="http://www.importnew.com/10360.html?replytocom=21205#respond" onclick="" div-comment-21205",="" "21205",="" "respond",="" "10360")"="">回复</a>		</div>
+				</div>
+		<ul class="children">
+		<li class="comment odd alt depth-2" id="comment-21337">
+				<div id="div-comment-21337" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn">caiyun</cite> <span class="says">说道：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="#comment-21337">
+			2014/03/21 下午 5:50</a>		</div>
+
+		<p>所以它有一个新的概念, 函数式接口(概念自行看), 可以用于lambda表达式.</p>
+<p> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="up-21337" src="index_files/1_14_up.png" alt="Thumb up" onclick="" title="赞同"> <span id="karma-21337-up" style="font-size:12px; color:#009933;">0</span> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="down-21337" src="index_files/1_14_down.png" alt="Thumb down" onclick="" title="反对"> <span id="karma-21337-down" style="font-size:12px; color:#990033;">2</span></p>
+		<div class="reply">
+		<a class="comment-reply-link" href="http://www.importnew.com/10360.html?replytocom=21337#respond" onclick="" div-comment-21337",="" "21337",="" "respond",="" "10360")"="">回复</a>		</div>
+				</div>
+		</li>
+</ul>
+</li>
+		<li class="comment even thread-odd thread-alt depth-1 parent" id="comment-21209">
+				<div id="div-comment-21209" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn">jay</cite> <span class="says">说道：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="#comment-21209">
+			2014/03/21 上午 10:44</a>		</div>
+
+		<p>“map.computeIfAbsent(3, num -&gt; “bam”);<br>
+map.get(3);             // val33”<br>
+map.get(3)应该是bam吧</p>
+<p> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="up-21209" src="index_files/1_14_up.png" alt="Thumb up" onclick="" title="赞同"> <span id="karma-21209-up" style="font-size:12px; color:#009933;">1</span> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="down-21209" src="index_files/1_14_down.png" alt="Thumb down" onclick="" title="反对"> <span id="karma-21209-down" style="font-size:12px; color:#990033;">2</span></p>
+		<div class="reply">
+		<a class="comment-reply-link" href="http://www.importnew.com/10360.html?replytocom=21209#respond" onclick="" div-comment-21209",="" "21209",="" "respond",="" "10360")"="">回复</a>		</div>
+				</div>
+		<ul class="children">
+		<li class="comment odd alt depth-2" id="comment-21335">
+				<div id="div-comment-21335" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn">caiyun</cite> <span class="says">说道：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="#comment-21335">
+			2014/03/21 下午 5:47</a>		</div>
+
+		<p>computeIfAbsent 这个方法 先会判断key为3是否存在,不存在,才会设置值的.</p>
+<p> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="up-21335" src="index_files/1_14_up.png" alt="Thumb up" onclick="" title="赞同"> <span id="karma-21335-up" style="font-size:12px; color:#009933;">2</span> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="down-21335" src="index_files/1_14_down.png" alt="Thumb down" onclick="" title="反对"> <span id="karma-21335-down" style="font-size:12px; color:#990033;">0</span></p>
+		<div class="reply">
+		<a class="comment-reply-link" href="http://www.importnew.com/10360.html?replytocom=21335#respond" onclick="" div-comment-21335",="" "21335",="" "respond",="" "10360")"="">回复</a>		</div>
+				</div>
+		</li>
+</ul>
+</li>
+		<li class="comment even thread-even depth-1 parent" id="comment-21240">
+				<div id="div-comment-21240" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn">mrfanr</cite> <span class="says">说道：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="#comment-21240">
+			2014/03/21 下午 1:02</a>		</div>
+
+		<p>接口中的方法实现， 解决了什么问题呢？ 求指教</p>
+<p> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="up-21240" src="index_files/1_14_up.png" alt="Thumb up" onclick="" title="赞同"> <span id="karma-21240-up" style="font-size:12px; color:#009933;">1</span> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="down-21240" src="index_files/1_14_down.png" alt="Thumb down" onclick="" title="反对"> <span id="karma-21240-down" style="font-size:12px; color:#990033;">0</span></p>
+		<div class="reply">
+		<a class="comment-reply-link" href="http://www.importnew.com/10360.html?replytocom=21240#respond" onclick="" div-comment-21240",="" "21240",="" "respond",="" "10360")"="">回复</a>		</div>
+				</div>
+		<ul class="children">
+		<li class="comment odd alt depth-2 parent" id="comment-21253">
+				<div id="div-comment-21253" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn">Lorin</cite> <span class="says">说道：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="#comment-21253">
+			2014/03/21 下午 2:09</a>		</div>
+
+		<p>我想是多继承的时候有用，从接口继承过来的函数不用重新定义。<br>
+或者不用为了一个函数去一层一层继承下来</p>
+<p> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="up-21253" src="index_files/1_14_up.png" alt="Thumb up" onclick="" title="赞同"> <span id="karma-21253-up" style="font-size:12px; color:#009933;">2</span> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="down-21253" src="index_files/1_14_down.png" alt="Thumb down" onclick="" title="反对"> <span id="karma-21253-down" style="font-size:12px; color:#990033;">1</span></p>
+		<div class="reply">
+		<a class="comment-reply-link" href="http://www.importnew.com/10360.html?replytocom=21253#respond" onclick="" div-comment-21253",="" "21253",="" "respond",="" "10360")"="">回复</a>		</div>
+				</div>
+		<ul class="children">
+		<li class="comment even depth-3" id="comment-22330">
+				<div id="div-comment-22330" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn"><a href="http://tankle.github.io/" rel="external nofollow" class="url external" target="_blank">Jason</a></cite> <span class="says">说道：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="#comment-22330">
+			2014/03/25 下午 3:12</a>		</div>
+
+		<p>也方便移植。在接口中添加新方法，有了默认的实现，以前继承自该接口的类还是可以使用，就不会出现编译错误了。</p>
+<p> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="up-22330" src="index_files/1_14_up.png" alt="Thumb up" onclick="" title="赞同"> <span id="karma-22330-up" style="font-size:12px; color:#009933;">0</span> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="down-22330" src="index_files/1_14_down.png" alt="Thumb down" onclick="" title="反对"> <span id="karma-22330-down" style="font-size:12px; color:#990033;">0</span></p>
+		<div class="reply">
+		<a class="comment-reply-link" href="http://www.importnew.com/10360.html?replytocom=22330#respond" onclick="" div-comment-22330",="" "22330",="" "respond",="" "10360")"="">回复</a>		</div>
+				</div>
+		</li>
+</ul>
+</li>
+		<li class="comment odd alt depth-2" id="comment-22268">
+				<div id="div-comment-22268" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn"><a href="http://blog.iyestin.com/" rel="external nofollow" class="url external" target="_blank">Yestin</a></cite> <span class="says">说道：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="#comment-22268">
+			2014/03/25 下午 12:24</a>		</div>
+
+		<p>我觉得主要还是为了能够扩展Java的特性，对Lambda表达式提供更广泛支持。比如可以看到迭代器接口中新增了foreach等方法，而之前各种对于迭代器的实现类并没有写这个方法的实现，为了让代价最小，只能在不破坏现有实现的基础上，让接口自己提供一个默认的新的方法实现。同时这些新增的方法大多都是为了更方便的使用Lambda表达式而新增的。</p>
+<p> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="up-22268" src="index_files/1_14_up.png" alt="Thumb up" onclick="" title="赞同"> <span id="karma-22268-up" style="font-size:12px; color:#009933;">0</span> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="down-22268" src="index_files/1_14_down.png" alt="Thumb down" onclick="" title="反对"> <span id="karma-22268-down" style="font-size:12px; color:#990033;">0</span></p>
+		<div class="reply">
+		<a class="comment-reply-link" href="http://www.importnew.com/10360.html?replytocom=22268#respond" onclick="" div-comment-22268",="" "22268",="" "respond",="" "10360")"="">回复</a>		</div>
+				</div>
+		</li>
+</ul>
+</li>
+		<li class="comment even thread-odd thread-alt depth-1 ckrating_highly_rated" id="comment-21285">
+				<div id="div-comment-21285" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn">hrj</cite> <span class="says">说道：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="#comment-21285">
+			2014/03/21 下午 3:06</a>		</div>
+
+		<div style="background-color:#FFFFCC !important"><p>java 要不像java了。</p>
+</div><p>Well-loved. Like or Dislike: <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="up-21285" src="index_files/1_14_up.png" alt="Thumb up" onclick="" title="赞同"> <span id="karma-21285-up" style="font-size:12px; color:#009933;">21</span> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="down-21285" src="index_files/1_14_down.png" alt="Thumb down" onclick="" title="反对"> <span id="karma-21285-down" style="font-size:12px; color:#990033;">2</span></p>
+		<div class="reply">
+		<a class="comment-reply-link" href="http://www.importnew.com/10360.html?replytocom=21285#respond" onclick="" div-comment-21285",="" "21285",="" "respond",="" "10360")"="">回复</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-even depth-1" id="comment-21314">
+				<div id="div-comment-21314" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn">kent kwan</cite> <span class="says">说道：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="#comment-21314">
+			2014/03/21 下午 4:30</a>		</div>
+
+		<p>接口中的静态方法主要是用来支持lambda表达式的</p>
+<p> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="up-21314" src="index_files/1_14_up.png" alt="Thumb up" onclick="" title="赞同"> <span id="karma-21314-up" style="font-size:12px; color:#009933;">0</span> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="down-21314" src="index_files/1_14_down.png" alt="Thumb down" onclick="" title="反对"> <span id="karma-21314-down" style="font-size:12px; color:#990033;">3</span></p>
+		<div class="reply">
+		<a class="comment-reply-link" href="http://www.importnew.com/10360.html?replytocom=21314#respond" onclick="" div-comment-21314",="" "21314",="" "respond",="" "10360")"="">回复</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-21636">
+				<div id="div-comment-21636" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn">qalong</cite> <span class="says">说道：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="#comment-21636">
+			2014/03/22 下午 4:37</a>		</div>
+
+		<p>int num = 1;<br>
+Converter stringConverter =<br>
+        (from) -&gt; String.valueOf(from + num);<br>
+num = 3;<br>
+这段应该是这样吧<br>
+int num = 1;<br>
+Converter stringConverter = (from) -&gt;<br>
+｛<br>
+String.valueOf(from + num);<br>
+num = 3;<br>
+｝</p>
+<p> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="up-21636" src="index_files/1_14_up.png" alt="Thumb up" onclick="" title="赞同"> <span id="karma-21636-up" style="font-size:12px; color:#009933;">0</span> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="down-21636" src="index_files/1_14_down.png" alt="Thumb down" onclick="" title="反对"> <span id="karma-21636-down" style="font-size:12px; color:#990033;">0</span></p>
+		<div class="reply">
+		<a class="comment-reply-link" href="http://www.importnew.com/10360.html?replytocom=21636#respond" onclick="" div-comment-21636",="" "21636",="" "respond",="" "10360")"="">回复</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-even depth-1" id="comment-21938">
+				<div id="div-comment-21938" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn">Elgs</cite> <span class="says">说道：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="#comment-21938">
+			2014/03/24 上午 2:15</a>		</div>
+
+		<p>这还是Java吗？</p>
+<p> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="up-21938" src="index_files/1_14_up.png" alt="Thumb up" onclick="" title="赞同"> <span id="karma-21938-up" style="font-size:12px; color:#009933;">0</span> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="down-21938" src="index_files/1_14_down.png" alt="Thumb down" onclick="" title="反对"> <span id="karma-21938-down" style="font-size:12px; color:#990033;">0</span></p>
+		<div class="reply">
+		<a class="comment-reply-link" href="http://www.importnew.com/10360.html?replytocom=21938#respond" onclick="" div-comment-21938",="" "21938",="" "respond",="" "10360")"="">回复</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-22249">
+				<div id="div-comment-22249" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn"><a href="http://www.jm47.com/" rel="external nofollow" class="url external" target="_blank">jiamao</a></cite> <span class="says">说道：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="#comment-22249">
+			2014/03/25 上午 10:46</a>		</div>
+
+		<p>这是C#<br>
+么？</p>
+<p> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="up-22249" src="index_files/1_14_up.png" alt="Thumb up" onclick="" title="赞同"> <span id="karma-22249-up" style="font-size:12px; color:#009933;">0</span> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="down-22249" src="index_files/1_14_down.png" alt="Thumb down" onclick="" title="反对"> <span id="karma-22249-down" style="font-size:12px; color:#990033;">0</span></p>
+		<div class="reply">
+		<a class="comment-reply-link" href="http://www.importnew.com/10360.html?replytocom=22249#respond" onclick="" div-comment-22249",="" "22249",="" "respond",="" "10360")"="">回复</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-even depth-1" id="comment-22379">
+				<div id="div-comment-22379" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn">天外的星星</cite> <span class="says">说道：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="#comment-22379">
+			2014/03/25 下午 9:16</a>		</div>
+
+		<p>貌似错了几处啊！那个map.putIfAbsent() 不是为了防止插入null的，computeIfPresent()的介绍也有些问题！</p>
+<p> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="up-22379" src="index_files/1_14_up.png" alt="Thumb up" onclick="" title="赞同"> <span id="karma-22379-up" style="font-size:12px; color:#009933;">0</span> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="down-22379" src="index_files/1_14_down.png" alt="Thumb down" onclick="" title="反对"> <span id="karma-22379-down" style="font-size:12px; color:#990033;">0</span></p>
+		<div class="reply">
+		<a class="comment-reply-link" href="http://www.importnew.com/10360.html?replytocom=22379#respond" onclick="" div-comment-22379",="" "22379",="" "respond",="" "10360")"="">回复</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-22580">
+				<div id="div-comment-22580" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn">小刀</cite> <span class="says">说道：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="#comment-22580">
+			2014/03/26 下午 4:19</a>		</div>
+
+		<p>一直在用IBM内部的Eclipse</p>
+<p> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="up-22580" src="index_files/1_14_up.png" alt="Thumb up" onclick="" title="赞同"> <span id="karma-22580-up" style="font-size:12px; color:#009933;">0</span> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="down-22580" src="index_files/1_14_down.png" alt="Thumb down" onclick="" title="反对"> <span id="karma-22580-down" style="font-size:12px; color:#990033;">0</span></p>
+		<div class="reply">
+		<a class="comment-reply-link" href="http://www.importnew.com/10360.html?replytocom=22580#respond" onclick="" div-comment-22580",="" "22580",="" "respond",="" "10360")"="">回复</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-even depth-1" id="comment-22874">
+				<div id="div-comment-22874" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn">returnerchen</cite> <span class="says">说道：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="#comment-22874">
+			2014/03/27 上午 10:37</a>		</div>
+
+		<p>阿里巴巴工作java，有兴趣请把简历发到邮箱 <a href="mailto:peihec@gmail.com">peihec@gmail.com</a>,欢迎大家相互推荐。</p>
+<p> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="up-22874" src="index_files/1_14_up.png" alt="Thumb up" onclick="" title="赞同"> <span id="karma-22874-up" style="font-size:12px; color:#009933;">0</span> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="down-22874" src="index_files/1_14_down.png" alt="Thumb down" onclick="" title="反对"> <span id="karma-22874-down" style="font-size:12px; color:#990033;">0</span></p>
+		<div class="reply">
+		<a class="comment-reply-link" href="http://www.importnew.com/10360.html?replytocom=22874#respond" onclick="" div-comment-22874",="" "22874",="" "respond",="" "10360")"="">回复</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-27330">
+				<div id="div-comment-27330" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn">niqingyang</cite> <span class="says">说道：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="#comment-27330">
+			2014/04/15 下午 2:48</a>		</div>
+
+		<p>感觉Java越来越不优雅了，越来越不像Java了，不知道Java的设计者会作何感想？Oracle要毁了Java么？语法怎么看怎么不爽！</p>
+<p> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="up-27330" src="index_files/1_14_up.png" alt="Thumb up" onclick="" title="赞同"> <span id="karma-27330-up" style="font-size:12px; color:#009933;">1</span> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="down-27330" src="index_files/1_14_down.png" alt="Thumb down" onclick="" title="反对"> <span id="karma-27330-down" style="font-size:12px; color:#990033;">0</span></p>
+		<div class="reply">
+		<a class="comment-reply-link" href="http://www.importnew.com/10360.html?replytocom=27330#respond" onclick="" div-comment-27330",="" "27330",="" "respond",="" "10360")"="">回复</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-even depth-1" id="comment-49427">
+				<div id="div-comment-49427" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn">菜鸟</cite> <span class="says">说道：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="#comment-49427">
+			2014/07/07 下午 5:19</a>		</div>
+
+		<p>你好，我myEclipse10.7.1上用jdk1.8的新功能不好好事，我把jdk1.8都导进去了这是为啥还用装插件么？</p>
+<p> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="up-49427" src="index_files/1_14_up.png" alt="Thumb up" onclick="" title="赞同"> <span id="karma-49427-up" style="font-size:12px; color:#009933;">0</span> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="down-49427" src="index_files/1_14_down.png" alt="Thumb down" onclick="" title="反对"> <span id="karma-49427-down" style="font-size:12px; color:#990033;">0</span></p>
+		<div class="reply">
+		<a class="comment-reply-link" href="http://www.importnew.com/10360.html?replytocom=49427#respond" onclick="" div-comment-49427",="" "49427",="" "respond",="" "10360")"="">回复</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-59129">
+				<div id="div-comment-59129" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn">yinshuwei</cite> <span class="says">说道：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="#comment-59129">
+			2014/07/29 下午 1:18</a>		</div>
+
+		<p>并行排序的结果不对</p>
+<p> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="up-59129" src="index_files/1_14_up.png" alt="Thumb up" onclick="" title="赞同"> <span id="karma-59129-up" style="font-size:12px; color:#009933;">0</span> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="down-59129" src="index_files/1_14_down.png" alt="Thumb down" onclick="" title="反对"> <span id="karma-59129-down" style="font-size:12px; color:#990033;">0</span></p>
+		<div class="reply">
+		<a class="comment-reply-link" href="http://www.importnew.com/10360.html?replytocom=59129#respond" onclick="" div-comment-59129",="" "59129",="" "respond",="" "10360")"="">回复</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-even depth-1" id="comment-283183">
+				<div id="div-comment-283183" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn">jiangzx</cite> <span class="says">说道：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="#comment-283183">
+			2015/01/22 下午 2:58</a>		</div>
+
+		<p>谢谢楼主的贡献，也谢谢原作者详细的讲解！</p>
+<p> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="up-283183" src="index_files/1_14_up.png" alt="Thumb up" onclick="" title="赞同"> <span id="karma-283183-up" style="font-size:12px; color:#009933;">0</span> <img style="padding: 0px; border: none; cursor: pointer;" onmouseover="" onmouseout="" id="down-283183" src="index_files/1_14_down.png" alt="Thumb down" onclick="" title="反对"> <span id="karma-283183-down" style="font-size:12px; color:#990033;">0</span></p>
+		<div class="reply">
+		<a class="comment-reply-link" href="http://www.importnew.com/10360.html?replytocom=283183#respond" onclick="" div-comment-283183",="" "283183",="" "respond",="" "10360")"="">回复</a>		</div>
+				</div>
+		</li>
+	
+	</ol>
+
+	<!-- END .commentlist -->
+
+		
+ 
+
+
+
+		
+				
+	<!-- BEGIN .navigation -->
+	<div class="navigation margin-20">
+	
+		<div class="alignleft"><a href="http://www.importnew.com/10308.html" rel="prev">« 一个正则式引发的血案</a></div>
+		<div class="alignright"><a href="http://www.importnew.com/10281.html" rel="next">为什么在密码问题上char[]优先于String？ »</a></div>
+		<div class="clear"></div>
+
+	</div>
+	<!-- END .navigation -->
+	
+		
+</div>
+<!-- END .grid-8 -->
+
+<!-- BEGIN #sidebar -->
+<div id="sidebar" class="grid-4">
+
+	<div id="search-3" class="widget widget_search"><!-- BEGIN #searchform -->
+<form method="get" id="searchform" action="http://www.importnew.com/">
+
+	<label class="none" for="s">Search for:</label>
+	<div class="input-wrapper"><input name="s" id="s" placeholder="Search" type="text"></div>
+	<input id="searchsubmit" value="Search" type="submit">
+	
+</form>
+<!-- END #searchform --></div><div id="text-14" class="widget widget_text">			<div class="textwidget"><p><a href="http://blog.jobbole.com/84342/?utm_source=www.importnew.com&amp;utm_medium=rightBanner-1&amp;utm_content=2015.9.16" target="_blank" class="external" rel="nofollow"><img src="index_files/e5298966gw1evyjrd4iqcj208c03c0t0.jpg"></a></p>
+</div>
+		</div><div id="aw_tabbed_widget-2" class="widget aw_tabbed_widget"><div class="tabs"><ul class="nav clearfix"><li class="active"><a id="link-most-discussed" href="#tab-most-discussed" title="本周热门文章">本周热门文章</a></li><li><a id="link-latest-comments" href="#tab-latest-comments" title="本月热门">本月热门</a></li><li><a id="link-tags" href="#tab-tags" title="热门标签">热门标签</a></li></ul><div id="tab-most-discussed" class="tab" style="display: block;"><div class="floated-thumb">							
+							
+							<!-- BEGIN .post-meta -->
+							<div class="post-meta ">
+							
+								<p>
+								    <span class="numb">0</span>
+								    <a class="meta-title" target="_blank" href="http://www.importnew.com/22971.html" title="Lock 那点事儿">Lock 那点事儿</a><br>
+								</p>
+									
+							</div>
+							<!-- END .post-meta -->
+							
+							<div class="clear"></div>
+							
+													
+							
+							<!-- BEGIN .post-meta -->
+							<div class="post-meta ">
+							
+								<p>
+								    <span class="numb">1</span>
+								    <a class="meta-title" target="_blank" href="http://www.importnew.com/22908.html" title="在Spring MVC中使用Apache Shiro安全框架">在Spring MVC中使用Apache Shi...</a><br>
+								</p>
+									
+							</div>
+							<!-- END .post-meta -->
+							
+							<div class="clear"></div>
+							
+													
+							
+							<!-- BEGIN .post-meta -->
+							<div class="post-meta ">
+							
+								<p>
+								    <span class="numb">2</span>
+								    <a class="meta-title" target="_blank" href="http://www.importnew.com/22977.html" title="理解Compressed Sparse Column Format (CSC)">理解Compressed Sparse Column Fo...</a><br>
+								</p>
+									
+							</div>
+							<!-- END .post-meta -->
+							
+							<div class="clear"></div>
+							
+													
+							
+							<!-- BEGIN .post-meta -->
+							<div class="post-meta ">
+							
+								<p>
+								    <span class="numb">3</span>
+								    <a class="meta-title" target="_blank" href="http://www.importnew.com/22952.html" title="Apache HttpClient 没有设置time out导致应用长时间阻塞的问题">Apache HttpClient 没有设置time ...</a><br>
+								</p>
+									
+							</div>
+							<!-- END .post-meta -->
+							
+							<div class="clear"></div>
+							
+													
+							
+							<!-- BEGIN .post-meta -->
+							<div class="post-meta ">
+							
+								<p>
+								    <span class="numb">4</span>
+								    <a class="meta-title" target="_blank" href="http://www.importnew.com/22956.html" title="写程序很难之去除字符串的空白字符">写程序很难之去除字符串的空白字符</a><br>
+								</p>
+									
+							</div>
+							<!-- END .post-meta -->
+							
+							<div class="clear"></div>
+							
+													
+							
+							<!-- BEGIN .post-meta -->
+							<div class="post-meta ">
+							
+								<p>
+								    <span class="numb">5</span>
+								    <a class="meta-title" target="_blank" href="http://www.importnew.com/22983.html" title="统计分析工程的依赖项">统计分析工程的依赖项</a><br>
+								</p>
+									
+							</div>
+							<!-- END .post-meta -->
+							
+							<div class="clear"></div>
+							
+													
+							
+							<!-- BEGIN .post-meta -->
+							<div class="post-meta ">
+							
+								<p>
+								    <span class="numb">6</span>
+								    <a class="meta-title" target="_blank" href="http://www.importnew.com/22987.html" title="Jackson 通过自定义注解来控制json key的格式">Jackson 通过自定义注解来控制json ...</a><br>
+								</p>
+									
+							</div>
+							<!-- END .post-meta -->
+							
+							<div class="clear"></div>
+							
+													
+							
+							<!-- BEGIN .post-meta -->
+							<div class="post-meta ">
+							
+								<p>
+								    <span class="numb">7</span>
+								    <a class="meta-title" target="_blank" href="http://www.importnew.com/22992.html" title="利用github搭建个人maven仓库">利用github搭建个人maven仓库</a><br>
+								</p>
+									
+							</div>
+							<!-- END .post-meta -->
+							
+							<div class="clear"></div>
+							
+													
+							
+							<!-- BEGIN .post-meta -->
+							<div class="post-meta ">
+							
+								<p>
+								    <span class="numb">8</span>
+								    <a class="meta-title" target="_blank" href="http://www.importnew.com/22996.html" title="JVM内存管理--GC算法精解（五分钟让你彻底明白标记/清除算法）">JVM内存管理--GC算法精解（五...</a><br>
+								</p>
+									
+							</div>
+							<!-- END .post-meta -->
+							
+							<div class="clear"></div>
+							
+													
+							
+							<!-- BEGIN .post-meta -->
+							<div class="post-meta ">
+							
+								<p>
+								    <span class="numb">9</span>
+								    <a class="meta-title" target="_blank" href="http://www.importnew.com/23001.html" title="基于dropwizard/metrics ，kafka，zabbix构建应用统计数据收集展示系统">基于dropwizard/metrics ，kafka，zab...</a><br>
+								</p>
+									
+							</div>
+							<!-- END .post-meta -->
+							
+							<div class="clear"></div>
+							
+						</div></div><div id="tab-latest-comments" class="tab" style="display: none;"><div class="floated-thumb">							
+											
+							<!-- BEGIN .post-meta -->
+							<div class="post-meta ">
+							
+								<p>
+								    <span class="numb">0</span>
+								    <a class="meta-title" target="_blank" href="http://www.importnew.com/22914.html" title="Mybatis的ResultMap的使用">Mybatis的ResultMap的使用</a><br>
+								</p>
+									
+							</div>
+							<!-- END .post-meta -->
+							
+							<div class="clear"></div>
+							
+													
+											
+							<!-- BEGIN .post-meta -->
+							<div class="post-meta ">
+							
+								<p>
+								    <span class="numb">1</span>
+								    <a class="meta-title" target="_blank" href="http://www.importnew.com/22705.html" title="ThreadPoolExecutor使用错误导致死锁">ThreadPoolExecutor使用错误导致...</a><br>
+								</p>
+									
+							</div>
+							<!-- END .post-meta -->
+							
+							<div class="clear"></div>
+							
+													
+											
+							<!-- BEGIN .post-meta -->
+							<div class="post-meta ">
+							
+								<p>
+								    <span class="numb">2</span>
+								    <a class="meta-title" target="_blank" href="http://www.importnew.com/22732.html" title="谈谈互联网后端基础设施">谈谈互联网后端基础设施</a><br>
+								</p>
+									
+							</div>
+							<!-- END .post-meta -->
+							
+							<div class="clear"></div>
+							
+													
+											
+							<!-- BEGIN .post-meta -->
+							<div class="post-meta ">
+							
+								<p>
+								    <span class="numb">3</span>
+								    <a class="meta-title" target="_blank" href="http://www.importnew.com/22890.html" title="Quartz 入门详解">Quartz 入门详解</a><br>
+								</p>
+									
+							</div>
+							<!-- END .post-meta -->
+							
+							<div class="clear"></div>
+							
+													
+											
+							<!-- BEGIN .post-meta -->
+							<div class="post-meta ">
+							
+								<p>
+								    <span class="numb">4</span>
+								    <a class="meta-title" target="_blank" href="http://www.importnew.com/22971.html" title="Lock 那点事儿">Lock 那点事儿</a><br>
+								</p>
+									
+							</div>
+							<!-- END .post-meta -->
+							
+							<div class="clear"></div>
+							
+													
+											
+							<!-- BEGIN .post-meta -->
+							<div class="post-meta ">
+							
+								<p>
+								    <span class="numb">5</span>
+								    <a class="meta-title" target="_blank" href="http://www.importnew.com/22757.html" title="Spring Cache">Spring Cache</a><br>
+								</p>
+									
+							</div>
+							<!-- END .post-meta -->
+							
+							<div class="clear"></div>
+							
+													
+											
+							<!-- BEGIN .post-meta -->
+							<div class="post-meta ">
+							
+								<p>
+								    <span class="numb">6</span>
+								    <a class="meta-title" target="_blank" href="http://www.importnew.com/22783.html" title="MyBatis（1）：MyBatis入门">MyBatis（1）：MyBatis入门</a><br>
+								</p>
+									
+							</div>
+							<!-- END .post-meta -->
+							
+							<div class="clear"></div>
+							
+													
+											
+							<!-- BEGIN .post-meta -->
+							<div class="post-meta ">
+							
+								<p>
+								    <span class="numb">7</span>
+								    <a class="meta-title" target="_blank" href="http://www.importnew.com/22821.html" title="几种简单的负载均衡算法及其Java代码实现">几种简单的负载均衡算法及其Java代...</a><br>
+								</p>
+									
+							</div>
+							<!-- END .post-meta -->
+							
+							<div class="clear"></div>
+							
+													
+											
+							<!-- BEGIN .post-meta -->
+							<div class="post-meta ">
+							
+								<p>
+								    <span class="numb">8</span>
+								    <a class="meta-title" target="_blank" href="http://www.importnew.com/22859.html" title="spring核心框架体系结构">spring核心框架体系结构</a><br>
+								</p>
+									
+							</div>
+							<!-- END .post-meta -->
+							
+							<div class="clear"></div>
+							
+													
+											
+							<!-- BEGIN .post-meta -->
+							<div class="post-meta ">
+							
+								<p>
+								    <span class="numb">9</span>
+								    <a class="meta-title" target="_blank" href="http://www.importnew.com/22863.html" title="单点登录原理与简单实现">单点登录原理与简单实现</a><br>
+								</p>
+									
+							</div>
+							<!-- END .post-meta -->
+							
+							<div class="clear"></div>
+							
+						</div></div><div id="tab-tags" class="tab" style="display: none;"><p><a href="http://www.importnew.com/tag/android23days" class="tag-link-240" title="8 个话题" style="font-size: 9.12px;">android23days</a>
+<a href="http://www.importnew.com/tag/android" class="tag-link-36" title="64 个话题" style="font-size: 18.752px;">Android开发</a>
+<a href="http://www.importnew.com/tag/aop" class="tag-link-204" title="15 个话题" style="font-size: 11.92px;">AOP</a>
+<a href="http://www.importnew.com/tag/api" class="tag-link-308" title="6 个话题" style="font-size: 8px;">API</a>
+<a href="http://www.importnew.com/tag/arraylist" class="tag-link-314" title="7 个话题" style="font-size: 8.56px;">ArrayList</a>
+<a href="http://www.importnew.com/tag/concurrenthashmap" class="tag-link-355" title="10 个话题" style="font-size: 10.128px;">ConcurrentHashMap</a>
+<a href="http://www.importnew.com/tag/controller" class="tag-link-797" title="7 个话题" style="font-size: 8.56px;">Controller</a>
+<a href="http://www.importnew.com/tag/eclipse" class="tag-link-81" title="27 个话题" style="font-size: 14.72px;">Eclipse</a>
+<a href="http://www.importnew.com/tag/gc" class="tag-link-87" title="36 个话题" style="font-size: 16.064px;">GC</a>
+<a href="http://www.importnew.com/tag/guava" class="tag-link-554" title="11 个话题" style="font-size: 10.576px;">Guava</a>
+<a href="http://www.importnew.com/tag/hadoop" class="tag-link-140" title="13 个话题" style="font-size: 11.36px;">Hadoop</a>
+<a href="http://www.importnew.com/tag/hashmap" class="tag-link-284" title="28 个话题" style="font-size: 14.832px;">HashMap</a>
+<a href="http://www.importnew.com/tag/hashset" class="tag-link-60" title="9 个话题" style="font-size: 9.68px;">HashSet</a>
+<a href="http://www.importnew.com/tag/hbase" class="tag-link-128" title="14 个话题" style="font-size: 11.696px;">HBase</a>
+<a href="http://www.importnew.com/tag/hibernate" class="tag-link-109" title="12 个话题" style="font-size: 10.912px;">Hibernate</a>
+<a href="http://www.importnew.com/tag/intellij" class="tag-link-213" title="8 个话题" style="font-size: 9.12px;">IntelliJ</a>
+<a href="http://www.importnew.com/tag/io" class="tag-link-70" title="11 个话题" style="font-size: 10.576px;">io</a>
+<a href="http://www.importnew.com/tag/java" class="tag-link-35" title="126 个话题" style="font-size: 22px;">Java</a>
+<a href="http://www.importnew.com/tag/java-8" class="tag-link-50" title="32 个话题" style="font-size: 15.504px;">java 8</a>
+<a href="http://www.importnew.com/tag/java8" class="tag-link-354" title="32 个话题" style="font-size: 15.504px;">java8</a>
+<a href="http://www.importnew.com/tag/java9" class="tag-link-436" title="8 个话题" style="font-size: 9.12px;">Java9</a>
+<a href="http://www.importnew.com/tag/javaee" class="tag-link-379" title="6 个话题" style="font-size: 8px;">javaee</a>
+<a href="http://www.importnew.com/tag/javaee%e4%b8%8emaven%e6%95%99%e7%a8%8b" class="tag-link-462" title="7 个话题" style="font-size: 8.56px;">JavaEE与Maven教程</a>
+<a href="http://www.importnew.com/tag/java-gc" class="tag-link-115" title="6 个话题" style="font-size: 8px;">Java GC</a>
+<a href="http://www.importnew.com/tag/java-nio" class="tag-link-750" title="13 个话题" style="font-size: 11.36px;">Java NIO</a>
+<a href="http://www.importnew.com/tag/java%e4%b9%b1%e7%a0%81" class="tag-link-807" title="8 个话题" style="font-size: 9.12px;">Java乱码</a>
+<a href="http://www.importnew.com/tag/java%e7%bc%96%e7%a8%8b%e5%85%a5%e9%97%a8" class="tag-link-639" title="24 个话题" style="font-size: 14.16px;">Java编程入门</a>
+<a href="http://www.importnew.com/tag/java%e8%99%9a%e6%8b%9f%e6%9c%ba" class="tag-link-671" title="7 个话题" style="font-size: 8.56px;">java虚拟机</a>
+<a href="http://www.importnew.com/tag/jdbc" class="tag-link-122" title="15 个话题" style="font-size: 11.92px;">JDBC</a>
+<a href="http://www.importnew.com/tag/jdk" class="tag-link-44" title="10 个话题" style="font-size: 10.128px;">JDK</a>
+<a href="http://www.importnew.com/tag/jpa" class="tag-link-161" title="8 个话题" style="font-size: 9.12px;">JPA</a>
+<a href="http://www.importnew.com/tag/jsoup" class="tag-link-703" title="9 个话题" style="font-size: 9.68px;">Jsoup</a>
+<a href="http://www.importnew.com/tag/junit" class="tag-link-337" title="7 个话题" style="font-size: 8.56px;">JUnit</a>
+<a href="http://www.importnew.com/tag/jvm" class="tag-link-80" title="93 个话题" style="font-size: 20.544px;">JVM</a>
+<a href="http://www.importnew.com/tag/lambda" class="tag-link-92" title="8 个话题" style="font-size: 9.12px;">Lambda</a>
+<a href="http://www.importnew.com/tag/linkedhashmap" class="tag-link-306" title="6 个话题" style="font-size: 8px;">LinkedHashMap</a>
+<a href="http://www.importnew.com/tag/mapreduce" class="tag-link-106" title="7 个话题" style="font-size: 8.56px;">MapReduce</a>
+<a href="http://www.importnew.com/tag/maven" class="tag-link-385" title="14 个话题" style="font-size: 11.696px;">maven</a>
+<a href="http://www.importnew.com/tag/mybatis" class="tag-link-820" title="12 个话题" style="font-size: 10.912px;">Mybatis</a>
+<a href="http://www.importnew.com/tag/netty" class="tag-link-130" title="16 个话题" style="font-size: 12.256px;">Netty</a>
+<a href="http://www.importnew.com/tag/nio" class="tag-link-69" title="16 个话题" style="font-size: 12.256px;">nio</a>
+<a href="http://www.importnew.com/tag/nio2-0" class="tag-link-116" title="6 个话题" style="font-size: 8px;">NIO2.0</a>
+<a href="http://www.importnew.com/tag/oracle" class="tag-link-153" title="9 个话题" style="font-size: 9.68px;">oracle</a>
+<a href="http://www.importnew.com/tag/orm" class="tag-link-451" title="10 个话题" style="font-size: 10.128px;">ORM</a>
+<a href="http://www.importnew.com/tag/restful" class="tag-link-196" title="9 个话题" style="font-size: 9.68px;">RESTful</a>
+<a href="http://www.importnew.com/tag/scala" class="tag-link-89" title="17 个话题" style="font-size: 12.592px;">Scala</a>
+<a href="http://www.importnew.com/tag/scala-tutorial" class="tag-link-155" title="6 个话题" style="font-size: 8px;">Scala tutorial</a>
+<a href="http://www.importnew.com/tag/servlet" class="tag-link-320" title="8 个话题" style="font-size: 9.12px;">Servlet</a>
+<a href="http://www.importnew.com/tag/socket" class="tag-link-559" title="11 个话题" style="font-size: 10.576px;">Socket</a>
+<a href="http://www.importnew.com/tag/solr" class="tag-link-429" title="8 个话题" style="font-size: 9.12px;">solr</a>
+<a href="http://www.importnew.com/tag/spring" class="tag-link-53" title="125 个话题" style="font-size: 22px;">Spring</a>
+<a href="http://www.importnew.com/tag/spring4" class="tag-link-771" title="8 个话题" style="font-size: 9.12px;">Spring4</a>
+<a href="http://www.importnew.com/tag/springmvc" class="tag-link-614" title="20 个话题" style="font-size: 13.264px;">SpringMVC</a>
+<a href="http://www.importnew.com/tag/spring-mvc" class="tag-link-443" title="11 个话题" style="font-size: 10.576px;">Spring MVC</a>
+<a href="http://www.importnew.com/tag/string" class="tag-link-252" title="30 个话题" style="font-size: 15.168px;">String</a>
+<a href="http://www.importnew.com/tag/synchronized" class="tag-link-737" title="7 个话题" style="font-size: 8.56px;">synchronized</a>
+<a href="http://www.importnew.com/tag/threadlocal" class="tag-link-376" title="12 个话题" style="font-size: 10.912px;">ThreadLocal</a>
+<a href="http://www.importnew.com/tag/tomcat" class="tag-link-225" title="18 个话题" style="font-size: 12.816px;">Tomcat</a>
+<a href="http://www.importnew.com/tag/volatile" class="tag-link-433" title="9 个话题" style="font-size: 9.68px;">volatile</a>
+<a href="http://www.importnew.com/tag/%e4%ba%8b%e5%8a%a1" class="tag-link-339" title="9 个话题" style="font-size: 9.68px;">事务</a>
+<a href="http://www.importnew.com/tag/%e4%bc%98%e5%8c%96" class="tag-link-171" title="6 个话题" style="font-size: 8px;">优化</a>
+<a href="http://www.importnew.com/tag/%e4%be%9d%e8%b5%96%e6%b3%a8%e5%85%a5" class="tag-link-293" title="6 个话题" style="font-size: 8px;">依赖注入</a>
+<a href="http://www.importnew.com/tag/%e5%86%85%e5%ad%98%e6%b3%84%e9%9c%b2" class="tag-link-124" title="6 个话题" style="font-size: 8px;">内存泄露</a>
+<a href="http://www.importnew.com/tag/%e5%86%85%e5%ad%98%e7%ae%a1%e7%90%86" class="tag-link-273" title="17 个话题" style="font-size: 12.592px;">内存管理</a>
+<a href="http://www.importnew.com/tag/%e5%8f%82%e6%95%b0%e5%a4%aa%e5%a4%9a%e6%80%8e%e4%b9%88%e5%8a%9e" class="tag-link-470" title="8 个话题" style="font-size: 9.12px;">参数太多怎么办</a>
+<a href="http://www.importnew.com/tag/%e5%8f%8d%e5%b0%84" class="tag-link-301" title="7 个话题" style="font-size: 8.56px;">反射</a>
+<a href="http://www.importnew.com/tag/%e5%9e%83%e5%9c%be%e5%9b%9e%e6%94%b6" class="tag-link-575" title="14 个话题" style="font-size: 11.696px;">垃圾回收</a>
+<a href="http://www.importnew.com/tag/%e5%9f%ba%e7%a1%80%e6%8a%80%e6%9c%af" class="tag-link-58" title="64 个话题" style="font-size: 18.752px;">基础技术</a>
+<a href="http://www.importnew.com/tag/%e5%a4%9a%e7%ba%bf%e7%a8%8b" class="tag-link-46" title="22 个话题" style="font-size: 13.712px;">多线程</a>
+<a href="http://www.importnew.com/tag/%e5%ad%97%e7%ac%a6%e4%b8%b2" class="tag-link-636" title="8 个话题" style="font-size: 9.12px;">字符串</a>
+<a href="http://www.importnew.com/tag/%e5%ad%97%e8%8a%82%e7%a0%81" class="tag-link-38" title="6 个话题" style="font-size: 8px;">字节码</a>
+<a href="http://www.importnew.com/tag/%e5%b7%a5%e5%85%b7" class="tag-link-126" title="6 个话题" style="font-size: 8px;">工具</a>
+<a href="http://www.importnew.com/tag/%e5%b9%b6%e5%8f%91" class="tag-link-401" title="40 个话题" style="font-size: 16.512px;">并发</a>
+<a href="http://www.importnew.com/tag/%e5%b9%b6%e5%8f%91%e7%bc%96%e7%a8%8b" class="tag-link-64" title="25 个话题" style="font-size: 14.272px;">并发编程</a>
+<a href="http://www.importnew.com/tag/%e5%ba%8f%e5%88%97%e5%8c%96" class="tag-link-298" title="10 个话题" style="font-size: 10.128px;">序列化</a>
+<a href="http://www.importnew.com/tag/%e5%bc%82%e5%b8%b8" class="tag-link-83" title="6 个话题" style="font-size: 8px;">异常</a>
+<a href="http://www.importnew.com/tag/%e5%bc%82%e5%b8%b8%e5%a4%84%e7%90%86" class="tag-link-214" title="15 个话题" style="font-size: 11.92px;">异常处理</a>
+<a href="http://www.importnew.com/tag/%e6%80%a7%e8%83%bd" class="tag-link-47" title="16 个话题" style="font-size: 12.256px;">性能</a>
+<a href="http://www.importnew.com/tag/%e6%80%a7%e8%83%bd%e4%bc%98%e5%8c%96" class="tag-link-88" title="16 个话题" style="font-size: 12.256px;">性能优化</a>
+<a href="http://www.importnew.com/tag/%e6%80%a7%e8%83%bd%e8%b0%83%e4%bc%98" class="tag-link-282" title="9 个话题" style="font-size: 9.68px;">性能调优</a>
+<a href="http://www.importnew.com/tag/%e6%8e%92%e5%ba%8f" class="tag-link-368" title="6 个话题" style="font-size: 8px;">排序</a>
+<a href="http://www.importnew.com/tag/%e6%95%99%e7%a8%8b" class="tag-link-156" title="17 个话题" style="font-size: 12.592px;">教程</a>
+<a href="http://www.importnew.com/tag/%e6%95%b0%e7%bb%84" class="tag-link-375" title="6 个话题" style="font-size: 8px;">数组</a>
+<a href="http://www.importnew.com/tag/%e6%97%a5%e5%bf%97" class="tag-link-29" title="10 个话题" style="font-size: 10.128px;">日志</a>
+<a href="http://www.importnew.com/tag/%e6%9e%b6%e6%9e%84" class="tag-link-139" title="8 个话题" style="font-size: 9.12px;">架构</a>
+<a href="http://www.importnew.com/tag/%e6%ad%bb%e9%94%81" class="tag-link-343" title="6 个话题" style="font-size: 8px;">死锁</a>
+<a href="http://www.importnew.com/tag/%e6%b3%9b%e5%9e%8b" class="tag-link-246" title="14 个话题" style="font-size: 11.696px;">泛型</a>
+<a href="http://www.importnew.com/tag/%e6%b3%a8%e8%a7%a3" class="tag-link-360" title="10 个话题" style="font-size: 10.128px;">注解</a>
+<a href="http://www.importnew.com/tag/%e6%b5%8b%e8%af%95" class="tag-link-237" title="8 个话题" style="font-size: 9.12px;">测试</a>
+<a href="http://www.importnew.com/tag/%e6%b8%b8%e6%88%8f" class="tag-link-184" title="9 个话题" style="font-size: 9.68px;">游戏</a>
+<a href="http://www.importnew.com/tag/%e7%ae%97%e6%b3%95" class="tag-link-270" title="7 个话题" style="font-size: 8.56px;">算法</a>
+<a href="http://www.importnew.com/tag/%e7%ba%bf%e7%a8%8b" class="tag-link-374" title="10 个话题" style="font-size: 10.128px;">线程</a>
+<a href="http://www.importnew.com/tag/%e7%ba%bf%e7%a8%8b%e6%b1%a0" class="tag-link-297" title="12 个话题" style="font-size: 10.912px;">线程池</a>
+<a href="http://www.importnew.com/tag/%e7%bc%93%e5%ad%98" class="tag-link-353" title="7 个话题" style="font-size: 8.56px;">缓存</a>
+<a href="http://www.importnew.com/tag/%e8%99%9a%e6%8b%9f%e6%9c%ba" class="tag-link-685" title="11 个话题" style="font-size: 10.576px;">虚拟机</a>
+<a href="http://www.importnew.com/tag/%e8%a1%8c%e4%b8%9a%e8%b5%84%e8%ae%af" class="tag-link-129" title="6 个话题" style="font-size: 8px;">行业资讯</a>
+<a href="http://www.importnew.com/tag/%e8%ae%be%e8%ae%a1%e6%a8%a1%e5%bc%8f" class="tag-link-30" title="41 个话题" style="font-size: 16.624px;">设计模式</a>
+<a href="http://www.importnew.com/tag/%e8%b5%84%e8%ae%af" class="tag-link-108" title="9 个话题" style="font-size: 9.68px;">资讯</a>
+<a href="http://www.importnew.com/tag/%e9%9d%a2%e8%af%95" class="tag-link-31" title="19 个话题" style="font-size: 13.04px;">面试</a>
+<a href="http://www.importnew.com/tag/%e9%9d%a2%e8%af%95%e9%a2%98" class="tag-link-27" title="11 个话题" style="font-size: 10.576px;">面试题</a></p></div></div></div><div id="text-18" class="widget widget_text">			<div class="textwidget"><p><a href="http://date.jobbole.com/?utm_source=www.importnew.com&amp;utm_medium=rightBanner-2&amp;utm_content=2015.9.16" target="_blank" class="external" rel="nofollow"><img src="index_files/bfdcef89gw1esk2g5dvq1j208c03cglu.jpg"></a></p>
+</div>
+		</div><div id="recent_comments_widget-2" class="widget recent_comments_widget">		<h3 class="widget-title">最新评论</h3>
+		<ul>
+		
+					
+			<li id="rc-comment-538754" class="rc-item rc-comment rc-clearfix">
+				<img class="rc-avatar rc-left" alt="" src="index_files/cb962c0fddc4ba5282bbf2996f3ee0d2.png" height="32" width="32">
+				<div class="rc-info">
+				Re:
+				<a class="rc-post" target="_blank" href="http://www.importnew.com/22122.html#comment-538754" rel="nofollow">Netty SSL性能调优</a>
+				</div>
+				<div class="rc-timestamp"></div>
+				<div class="rc-excerpt">
+				感谢，在后续的使用中会注意，说不定真的不用加班。								<span class="rc-reviewer"> 从此寂静无声</span>
+								</div>
+			</li>
+			
+						
+			<li id="rc-comment-538752" class="rc-item rc-comment rc-clearfix">
+				<img class="rc-avatar rc-left" alt="" src="index_files/cb962c0fddc4ba5282bbf2996f3ee0d2.png" height="32" width="32">
+				<div class="rc-info">
+				Re:
+				<a class="rc-post" target="_blank" href="http://www.importnew.com/22914.html#comment-538752" rel="nofollow">Mybatis的ResultMap的使用</a>
+				</div>
+				<div class="rc-timestamp"></div>
+				<div class="rc-excerpt">
+				Orm的resultmap只不过做了个数据映射，要讲解透彻还是要看jdbc规范定义的resultma...								<span class="rc-reviewer"> 田睿</span>
+								</div>
+			</li>
+			
+						
+			<li id="rc-comment-538689" class="rc-item rc-comment rc-clearfix">
+				<img class="rc-avatar rc-left" alt="" src="index_files/cb962c0fddc4ba5282bbf2996f3ee0d2.png" height="32" width="32">
+				<div class="rc-info">
+				Re:
+				<a class="rc-post" target="_blank" href="http://www.importnew.com/22868.html#comment-538689" rel="nofollow">spring + redis 实现数据的缓存</a>
+				</div>
+				<div class="rc-timestamp"></div>
+				<div class="rc-excerpt">
+				不错 学习了								<span class="rc-reviewer"> Herb</span>
+								</div>
+			</li>
+			
+						
+			<li id="rc-comment-538679" class="rc-item rc-comment rc-clearfix">
+				<img class="rc-avatar rc-left" alt="" src="index_files/cb962c0fddc4ba5282bbf2996f3ee0d2.png" height="32" width="32">
+				<div class="rc-info">
+				Re:
+				<a class="rc-post" target="_blank" href="http://www.importnew.com/22971.html#comment-538679" rel="nofollow">Lock 那点事儿</a>
+				</div>
+				<div class="rc-timestamp"></div>
+				<div class="rc-excerpt">
+				具体的结果根据测试环境会有差别，可以参照一下思路，给出自己的判断哦								<span class="rc-reviewer"> 唐尤华</span>
+								</div>
+			</li>
+			
+						
+			<li id="rc-comment-538499" class="rc-item rc-comment rc-clearfix">
+				<img class="rc-avatar rc-left" alt="" src="index_files/cb962c0fddc4ba5282bbf2996f3ee0d2.png" height="32" width="32">
+				<div class="rc-info">
+				Re:
+				<a class="rc-post" target="_blank" href="http://www.importnew.com/22971.html#comment-538499" rel="nofollow">Lock 那点事儿</a>
+				</div>
+				<div class="rc-timestamp"></div>
+				<div class="rc-excerpt">
+				测试结果  怎么跟描述的不一样呢   用JDK自带的平均时间75秒  架构师的60秒  直接加关键字...								<span class="rc-reviewer"> 黑水</span>
+								</div>
+			</li>
+			
+						
+			<li id="rc-comment-538348" class="rc-item rc-comment rc-clearfix">
+				<img class="rc-avatar rc-left" alt="" src="index_files/cb962c0fddc4ba5282bbf2996f3ee0d2.png" height="32" width="32">
+				<div class="rc-info">
+				Re:
+				<a class="rc-post" target="_blank" href="http://www.importnew.com/22821.html#comment-538348" rel="nofollow">几种简单的负载均衡算法及其Jav...</a>
+				</div>
+				<div class="rc-timestamp"></div>
+				<div class="rc-excerpt">
+				谢谢，学习了，以前没了解过这方面的东西，看了您的介绍之后，又学到知识了								<span class="rc-reviewer"> 猫头</span>
+								</div>
+			</li>
+			
+						
+			<li id="rc-comment-538282" class="rc-item rc-comment rc-clearfix">
+				<img class="rc-avatar rc-left" alt="" src="index_files/cb962c0fddc4ba5282bbf2996f3ee0d2.png" height="32" width="32">
+				<div class="rc-info">
+				Re:
+				<a class="rc-post" target="_blank" href="http://www.importnew.com/22914.html#comment-538282" rel="nofollow">Mybatis的ResultMap的使用</a>
+				</div>
+				<div class="rc-timestamp"></div>
+				<div class="rc-excerpt">
+				感谢提醒，已更新								<span class="rc-reviewer"> 唐尤华</span>
+								</div>
+			</li>
+			
+						
+			<li id="rc-comment-538281" class="rc-item rc-comment rc-clearfix">
+				<img class="rc-avatar rc-left" alt="" src="index_files/cb962c0fddc4ba5282bbf2996f3ee0d2.png" height="32" width="32">
+				<div class="rc-info">
+				Re:
+				<a class="rc-post" target="_blank" href="http://www.importnew.com/22890.html#comment-538281" rel="nofollow">Quartz 入门详解</a>
+				</div>
+				<div class="rc-timestamp"></div>
+				<div class="rc-excerpt">
+				没错，sleep 10s后把调度的任务结束了。配图和代码有点小出入，恭喜你发现了彩蛋。								<span class="rc-reviewer"> 唐尤华</span>
+								</div>
+			</li>
+			
+					
+		</ul>
+        </div><div id="text-19" class="widget widget_text">			<div class="textwidget"><p><a href="http://fanyi.jobbole.com/" target="_blank" class="external" rel="nofollow"><img src="index_files/bfdcef89gw1esnyzyrczej208c03cgm3.jpg"></a></p>
+</div>
+		</div>	
+	<!-- BEGIN .container -->
+	<div class="container">
+	
+		<!-- BEGIN .grid-2 -->
+		<div class="grid-2">
+			
+						
+		</div>
+		<!-- END .grid-2 -->
+		
+		<!-- BEGIN .grid-2 -->
+		<div class="grid-2">
+			
+						
+		</div>
+		<!-- END .grid-2 -->
+		
+		<div class="clear"></div>
+			
+	</div>
+	<!-- END .container -->
+
+</div>
+<!-- END #sidebar -->
+<div class="clear"></div>	
+
+
+</div>
+<!-- END #wrapper -->
+
+<!-- BEGIN footer -->
+<footer>
+
+	<!-- BEGIN .container -->
+	<div class="container">
+		
+		<!-- BEGIN .grid-4 -->
+		<div class="grid-4">
+			
+			<div id="text-15" class="widget widget_text"><h3 class="widget-title">关于ImportNew</h3>			<div class="textwidget"><p>ImportNew 专注于 Java 技术分享。于2012年11月11日 11:11正式上线。是的，这是一个很特别的时刻 :) </p>
+<p>ImportNew 由两个 Java 关键字 import 和 new 组成，意指：Java 开发者学习新知识的网站。 import 可认为是学习和吸收， new 则可认为是新知识、新技术圈子和新朋友……</p>
+<div id="aw_socialcounter_widget-2" class="widget aw_socialcounter_widget">
+<ul>
+<li>
+<a target="_blank" href="http://weibo.com/importnew" class="external" rel="nofollow"><img class="alignleft" src="index_files/sina_32.png" alt="关注我们的新浪微博" title="关注我们的新浪微博"></a><p></p>
+<div class="view-rss"><a target="_blank" href="http://www.importnew.com/feed/" class="rss-link"><img class="alignleft" src="index_files/rss_32.png" alt="RSS订阅" title="RSS订阅"></a></div>
+</li>
+</ul>
+</div>
+</div>
+		</div>			
+		</div>
+		<!-- END .grid-4 -->
+		
+		<!-- BEGIN .grid-4 -->
+		<div class="grid-4">
+			
+			<div id="text-17" class="widget widget_text"><h3 class="widget-title">联系我们</h3>			<div class="textwidget"><p>Email：<a href="mailto:ImportNew.com@gmail.com">ImportNew.com@gmail.com</a><br>
+新浪微博：<a href="http://weibo.com/importnew" target="_blank" class="external" rel="nofollow">@ImportNew</a><br>
+推荐微信号<br>
+<img src="index_files/ImportNew_weixin.png" height="110" width="100"><img src="index_files/android_weixin.png" height="110" width="100"><img src="index_files/Linux_weixin.png" height="110" width="100"></p>
+<p>反馈建议：ImportNew.com@gmail.com<br>
+广告与商务合作QQ：2302462408 </p>
+</div>
+		</div>			
+		</div>
+		<!-- END .grid-4 -->
+		
+		<!-- BEGIN .grid-4 -->
+		<div class="grid-4">
+			
+			<div id="text-16" class="widget widget_text"><h3 class="widget-title">推荐关注</h3>			<div class="textwidget"><p><a href="http://group.jobbole.com/?utm_source=www.importnew.com&amp;utm_medium=bottomText" target="_blank" class="external" rel="nofollow">小组</a> – 好的话题、有启发的回复、值得信赖的圈子<br>
+<a href="http://top.jobbole.com/?utm_source=www.importnew.com&amp;utm_medium=bottomText" target="_blank" class="external" rel="nofollow">头条</a> – 写了文章？看干货？去头条！<br>
+<a href="http://date.jobbole.com/?utm_source=www.importnew.com&amp;utm_medium=bottomText" target="_blank" class="external" rel="nofollow">相亲</a> – 为IT单身男女服务的征婚传播平台<br>
+<a href="http://hao.jobbole.com/?utm_source=www.importnew.com&amp;utm_medium=bottomText" target="_blank" class="external" rel="nofollow">资源</a> – 优秀的工具资源导航<br>
+<a href="http://fanyi.jobbole.com/?utm_source=www.importnew.com&amp;utm_medium=bottomText" target="_blank" class="external" rel="nofollow">翻译</a> – 活跃 &amp; 专业的翻译小组<br>
+<a href="http://blog.jobbole.com/?utm_source=www.importnew.com&amp;utm_medium=bottomText" target="_blank" class="external" rel="nofollow">博客</a> – 国内外的精选博客文章<br>
+<a href="http://design.jobbole.com/?utm_source=www.importnew.com&amp;utm_medium=bottomText" target="_blank" class="external" rel="nofollow">设计</a> – UI,网页，交互和用户体验<br>
+<a href="http://web.jobbole.com/?utm_source=www.importnew.com&amp;utm_medium=bottomText" target="_blank" class="external" rel="nofollow">前端</a> – JavaScript, HTML5, CSS<br>
+<a href="http://android.jobbole.com/?utm_source=www.importnew.com&amp;utm_medium=bottomText" target="_blank" class="external" rel="nofollow">安卓</a> – 专注Android技术分享<br>
+<a href="http://ios.jobbole.com/?utm_source=www.importnew.com&amp;utm_medium=bottomText" target="_blank" class="external" rel="nofollow">iOS</a> – 专注iOS技术分享<br>
+<a href="http://www.importnew.com/?utm_source=www.importnew.com&amp;utm_medium=bottomText" target="_blank">Java</a> – 专注Java技术分享<br>
+<a href="http://python.jobbole.com/?utm_source=www.importnew.com&amp;utm_medium=bottomText" target="_blank" class="external" rel="nofollow">Python</a> – 专注Python技术分享</p>
+</div>
+		</div>			
+		</div>
+		<!-- END .grid-4 -->
+		
+		<div class="clear"></div>
+	
+	</div>
+	<!-- END .container -->
+
+	<!-- BEGIN #bottom -->
+	<div id="bottom">
+	
+		<!-- BEGIN .container -->
+		<div class="container">
+		
+			<!-- BEGIN .grid-12 -->
+			<div class="grid-12">
+	
+				<p>© 2017 ImportNew</p>
+			
+			</div>
+			<!-- END .grid-12 -->
+			
+			<div class="clear"></div>
+						
+		</div>
+		<!-- END .container -->
+		
+	</div>
+	<!-- END #bottom -->
+	
+</footer>
+<!-- END footer -->
+
+
+	
+<!-- Lightbox Plus v2.3 - 2011.08.11 - Message: 0-->
+<script type="text/javascript"><!--
+/* Script removed by snapshot save */
+--></script>
+
+<!-- WP SyntaxHighlighter Ver.1.7.3 Begin -->
+<script type="text/javascript" src="index_files/shCore.js"></script>
+<script type="text/javascript" src="index_files/shLegacy.js"></script>
+<script type="text/javascript" src="index_files/shAutoloader.js"></script>
+<script type="text/javascript" src="index_files/shBrushAppleScript.js"></script>
+<script type="text/javascript" src="index_files/shBrushAS3.js"></script>
+<script type="text/javascript" src="index_files/shBrushBash.js"></script>
+<script type="text/javascript" src="index_files/shBrushColdFusion.js"></script>
+<script type="text/javascript" src="index_files/shBrushCpp.js"></script>
+<script type="text/javascript" src="index_files/shBrushCSharp.js"></script>
+<script type="text/javascript" src="index_files/shBrushCss.js"></script>
+<script type="text/javascript" src="index_files/shBrushDelphi.js"></script>
+<script type="text/javascript" src="index_files/shBrushDiff.js"></script>
+<script type="text/javascript" src="index_files/shBrushErlang.js"></script>
+<script type="text/javascript" src="index_files/shBrushGroovy.js"></script>
+<script type="text/javascript" src="index_files/shBrushJava.js"></script>
+<script type="text/javascript" src="index_files/shBrushJavaFX.js"></script>
+<script type="text/javascript" src="index_files/shBrushJScript.js"></script>
+<script type="text/javascript" src="index_files/shBrushPerl.js"></script>
+<script type="text/javascript" src="index_files/shBrushPhp.js"></script>
+<script type="text/javascript" src="index_files/shBrushPlain.js"></script>
+<script type="text/javascript" src="index_files/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="index_files/shBrushPython.js"></script>
+<script type="text/javascript" src="index_files/shBrushRuby.js"></script>
+<script type="text/javascript" src="index_files/shBrushSass.js"></script>
+<script type="text/javascript" src="index_files/shBrushScala.js"></script>
+<script type="text/javascript" src="index_files/shBrushSql.js"></script>
+<script type="text/javascript" src="index_files/shBrushVb.js"></script>
+<script type="text/javascript" src="index_files/shBrushXml.js"></script>
+<script type="text/javascript"><!--
+/* Script removed by snapshot save */
+--></script>
+<!-- WP SyntaxHighlighter Ver.1.7.3 End -->
+<link rel="stylesheet" id="wp_rp_scrollup-css" href="index_files/scrollup.css" type="text/css" media="all">
+<script type="text/javascript" src="index_files/ck-karma.js"></script>
+<script type="text/javascript" src="index_files/jquery.colorbox-min.js"></script>
+<script type="text/javascript"><!--
+/* Script removed by snapshot save */
+--></script>
+<script type="text/javascript" src="index_files/postviews-cache.js"></script>
+<script type="text/javascript" src="index_files/ready.js"></script>
+<script type="text/javascript" src="index_files/easing.js"></script>
+<script type="text/javascript" src="index_files/superfish.js"></script>
+<script type="text/javascript" src="index_files/validate.js"></script>
+<script type="text/javascript" src="index_files/touchwipe.js"></script>
+<script type="text/javascript" src="index_files/caroufredsel.js"></script>
+<script type="text/javascript" src="index_files/flexslider.js"></script>
+<script type="text/javascript" src="index_files/jplayer.js"></script>
+<script type="text/javascript" src="index_files/fitvids.js"></script>
+<script type="text/javascript" src="index_files/selectnav.js"></script>
+<script type="text/javascript" src="index_files/effects.js"></script>
+<script type="text/javascript" src="index_files/scrollup.js"></script>
+
+
+<div id="full-btm" style="position:fixed; left:50%; top:550px;  z-index:100; text-align:center; cursor:pointer;">
+<a><img src="index_files/back-btm.png" alt="跳到底部" title="跳到底部" width="20" border="0"></a>
+</div>
+
+<script type="text/javascript"><!--
+/* Script removed by snapshot save */
+--></script>
+
+<div id="full-top" style="position:fixed; left:50%; top:520px; margin-left:495px; z-index:100; text-align:center; cursor:pointer;">
+<a><img src="index_files/back-top.png" alt="返回顶部" title="返回顶部" width="20" border="0"></a>
+</div>
+
+<script type="text/javascript"><!--
+/* Script removed by snapshot save */
+--></script>
+
+<!-- script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','/_assets/js/analytics.js','ga');
+
+    ga('create', 'UA-15621043-1', 'jobbole.com');
+    ga('send', 'pageview');
+
+</script -->
+
+
+
+
+
+
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" style="padding-bottom: 50px; padding-right: 50px; display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxLoadedContent" style="width: 0px; height: 0px; overflow: hidden; float: left;"></div><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><div id="cboxNext" style="float: left;"></div><div id="cboxPrevious" style="float: left;"></div><div id="cboxSlideshow" style="float: left;"></div><div id="cboxClose" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div></body><!-- END body --></html>
+<!-- END html -->
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+ Served from: importnew.com @ 2017-01-09 17:25:08 by W3 Total Cache -->
