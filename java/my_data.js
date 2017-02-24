@@ -15,7 +15,7 @@ d.add("11","8","Java Streams，第 1 部分: java.util.stream 库简介","my_dat
 d.add("12","8","高并发Java（10）：JDK8对并发的新支持","my_data/Java8/高并发Java（10）：JDK8对并发的新支持.htm");
 d.add("13","8","Java 8的Nashorn脚本引擎教程","my_data/Java8/Java_8的Nashorn脚本引擎教程.htm");
 d.add("14","0","JVM","");
-d.add("15","14","JAVA应用CPU占用100%|内存泄漏分析总结","my_data/JVM/JAVA应用CPU占用100%_内存泄漏分析总结.htm");
+d.add("15","14","JAVA应用CPU占用100%|内存泄漏分析总结","my_data/JVM/JAVA应用CPU占满_内存泄漏分析总结.htm");
 d.add("16","14","JDK自带工具之排查问题示例","my_data/JVM/JDK自带工具之排查问题示例.htm");
 d.add("17","14","简单实用的Java应用调优指南","my_data/JVM/简单实用的Java应用调优指南.htm");
 d.add("18","14","JVM工程师为你分析常见Java故障案例","my_data/JVM/JVM工程师为你分析常见Java故障案例/index.html");
