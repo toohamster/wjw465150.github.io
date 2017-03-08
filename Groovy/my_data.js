@@ -41,7 +41,7 @@ d.add("37","25","Navigating Deeply Nested XML","my_data/秘诀/Navigating_Deeply
 d.add("38","25","Parsing an XML Document with Namespaces","my_data/秘诀/Parsing_an_XML_Document_with_Namespaces.htm");
 d.add("39","25","Creating Namespaced XML Using MarkupBuilder","my_data/秘诀/Creating_Namespaced_XML_Using_MarkupBuilder.htm");
 d.add("40","25","Understanding the Difference Between MarkupBuilder and StreamingMarkupBuilder","my_data/秘诀/Understanding_the_Difference_Between_MarkupBuilder_and_StreamingMarkupBuilder.htm");
-d.add("41","25","Creating Parts of the XML Document Separately","my_data/秘诀/_Creating_Parts_of_the_XML_Document_Separately.htm");
+d.add("41","25","Creating Parts of the XML Document Separately","my_data/秘诀/Creating_Parts_of_the_XML_Document_Separately.htm");
 d.add("42","25","Creating HTML on the Fly","my_data/秘诀/Creating_HTML_on_the_Fly.htm");
 d.add("43","25","Making an HTTP GET Request","my_data/秘诀/Making_an_HTTP_GET_Request.htm");
 d.add("44","25","Making an HTTP POST Request","my_data/秘诀/Making_an_HTTP_POST_Request.htm");
