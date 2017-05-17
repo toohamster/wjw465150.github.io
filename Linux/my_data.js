@@ -190,6 +190,6 @@ d.add("186","0","linux sar命令详解","my_data/linux sar命令详解/index.htm
 d.add("187","0","linux开机自动启动VirtualBox虚拟机","my_data/linux开机自动启动VirtualBox虚拟机.htm");
 d.add("188","0","svn hook（强制要求提交注释必须多于X个字）","my_data/svn_hook（强制要求提交注释必须多于X个字）.htm");
 d.add("189","0","如何利用多核CPU来加速你的Linux命令 — awk, sed, bzip2, grep, wc等","my_data/如何利用多核CPU来加速你的Linux命令_—_awk,_sed,_bzip2,_grep,_wc等.htm");
-d.add("190","0","Fixed Top","my_data/模板/fixedtop.htm");
+d.add("190","0","Linux 性能分析工具汇总合集","my_data/Linux 性能分析工具汇总合集/index.html");
 document.write(d);
 //-->
