@@ -17,9 +17,9 @@ html,body {
 <body>
 <P>apply plugin: 'java'<BR>apply plugin: 'eclipse'<BR>apply plugin: 'maven'</P>
 <P>group = 'io.soabase.exhibitor'<BR>ext {<BR>&nbsp; buildName = 
-"exhibitor-core"<BR>}<BR>version = '1.7.0'<BR>sourceCompatibility = 
-1.6<BR>targetCompatibility = 1.6<BR>[compileJava, 
-compileTestJava]*.options*.encoding = 'UTF-8'</P>
+"exhibitor-core"<BR>}<BR>version =   '1.7.0'<BR>sourceCompatibility = 
+1.6<BR>targetCompatibility = 1.6<BR>[compileJava, compileTestJava]*.options*.encoding = 
+  'UTF-8'</P>
 <P>repositories {<BR>&nbsp; mavenLocal()<BR>&nbsp; maven{ url "<A 
 href="http://SVN:8081/nexus/content/groups/public">http://SVN:8081/nexus/content/groups/public</A>"}<BR>&nbsp; 
 mavenCentral()<BR>&nbsp; jcenter()<BR>}</P>
@@ -54,13 +54,18 @@ name: 'curator-test', version:'2.7.1'<BR>&nbsp;&nbsp;&nbsp; testCompile group:
 testCompile group: 'org.testng', name: 'testng', 
 version:'6.1.1'<BR>&nbsp;&nbsp;&nbsp; testCompile group: 'com.pszymczyk.consul', 
 name: 'embedded-consul', version:'0.3.1'<BR>}</P>
-<P>uploadArchives {<BR>&nbsp; repositories.mavenDeployer {<BR>&nbsp;&nbsp;&nbsp; 
+<P>uploadArchives {<BR>&nbsp; 
+repositories.mavenDeployer {</P>
+<P>&nbsp;&nbsp;&nbsp; def mvnUsername = 
+project.findProperty("mvnUsername") ?: ""<BR>&nbsp;&nbsp;&nbsp; def mvnPassword 
+= project.findProperty("mvnPassword") ?: ""<BR>  <BR>&nbsp;&nbsp;&nbsp; 
 repository(url: "<A 
 href="http://svn:8081/nexus/content/repositories/releases/">http://svn:8081/nexus/content/repositories/releases/</A>") 
-{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; authentication(userName: "wangjunwei", 
-password: "wjwwzx2013")<BR>&nbsp;&nbsp;&nbsp; }<BR>&nbsp;&nbsp;&nbsp; 
-<BR>&nbsp;&nbsp;&nbsp; pom.groupId = "${project.group}"<BR>&nbsp;&nbsp;&nbsp; 
-pom.artifactId = "${project.buildName}"<BR>&nbsp;&nbsp;&nbsp; pom.version = 
+{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+authentication(userName: mvnUsername, password: 
+mvnPassword)<BR>&nbsp;&nbsp;&nbsp; }<BR>&nbsp;&nbsp;&nbsp; 
+<BR>&nbsp;&nbsp;&nbsp; pom.groupId = "${project.group}"<BR>&nbsp;&nbsp;&nbsp; pom.artifactId = 
+  "${project.buildName}"<BR>&nbsp;&nbsp;&nbsp; pom.version = 
 "${project.version}"<BR>&nbsp;&nbsp;&nbsp; pom.project 
 {<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; name 
 project.name<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; packaging 
