@@ -15,7 +15,7 @@ d.add("11","0","JVM默认时区影响因素","my_data/JVM默认时区影响因�
 d.add("12","0","IntelliJ IDEA 2017.1 JDK 8 性能调优","my_data/IntelliJ_IDEA_2017.1_JDK_8_性能调优.htm");
 d.add("13","0","Java8","");
 d.add("14","13","JDK7新特性","my_data/Java8/JDK7新特性.htm");
-d.add("15","13","java7 invokedynamic命令深入研究","my_data/Java8/java7invokedynamic命令深入研究/java7 invokedynamic命令深入研究.html");
+d.add("15","13","Java 8 动态类型语言Lambda表达式实现原理分析","my_data/Java8/Java_8_动态类型语言Lambda表达式实现原理分析.htm");
 d.add("16","13","Invokedynamic：Java的秘密武器","my_data/Java8/Invokedynamic：Java的秘密武器.htm");
 d.add("17","13","泛型中? super T和? extends T的区别","my_data/Java8/泛型中_super_T和_extends_T的区别.htm");
 d.add("18","13","Java8特性之Lambda、方法引用和Streams","my_data/Java8/Java笔记——Java8特性之Lambda、方法引用和Streams - Fndroid - 博客园 (292).html");
